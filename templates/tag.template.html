@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>#{{TAG_NAME}} · buenosdia.com</title>
+  <meta name="description" content="Publicaciones etiquetadas con {{TAG_NAME}}." />
+  {{ADSENSE_HEAD}}
+  <link rel="stylesheet" href="/css/site.css" />
+</head>
+<body>
+  <header class="top">
+    <div class="brand">
+      <div class="logo">BD</div>
+      <div>
+        <div class="small">BUENOSDIA.COM</div>
+        <div class="name">Etiqueta: {{TAG_NAME}}</div>
+      </div>
+    </div>
+
+    <nav class="nav">
+      <a class="btn" href="/">Inicio</a>
+      <a class="btn btn2" href="/contacto/">Contacto</a>
+    </nav>
+  </header>
+
+  <main class="single">
+    <div class="card">
+      <div class="card-h">Etiqueta: {{TAG_NAME}}</div>
+      <div class="card-b">
+        {{POSTS_LIST}}
+      </div>
+    </div>
+  </main>
+
+  <footer class="foot">
+    <div>Hecho con <b>VOz</b>, para <b>VOS</b>.</div>
+    <div class="muted">Diseñado en {{YEAR}} · buenosdia.com</div>
+  </footer>
+</body>
+</html>

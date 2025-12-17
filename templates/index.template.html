@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>{{SITE_TITLE}}</title>
+  <meta name="description" content="{{SITE_DESCRIPTION}}" />
+  {{ADSENSE_HEAD}}
+  <link rel="stylesheet" href="/css/site.css" />
+</head>
+<body>
+  <header class="top">
+    <div class="brand">
+      <div class="logo">BD</div>
+      <div>
+        <div class="small">BUENOSDIA.COM</div>
+        <div class="name">Buenos días de verdad</div>
+      </div>
+    </div>
+
+    <nav class="nav">
+      <a class="btn" href="/">Inicio</a>
+      <a class="btn btn2" href="/contacto/">Contacto</a>
+
+      <div class="social">
+        <a href="https://instagram.com/TU_USUARIO" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://facebook.com/TU_PAGINA" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://tiktok.com/@TU_USUARIO" target="_blank" rel="noopener">TikTok</a>
+        <a href="https://pinterest.com/TU_USUARIO" target="_blank" rel="noopener">Pinterest</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- CATEGORÍAS: UNA SOLA VEZ (sin duplicado) -->
+  <div class="cats">
+    <div class="cats-scroll">
+      {{CATEGORIES}}
+    </div>
+  </div>
+
+  <main class="grid">
+    <section class="hero">
+      <div class="k">TEXTOS PARA MAÑANAS REALES</div>
+      <h1>Este no es el típico blog de frases.</h1>
+      <p>Hecho para abrir rápido, leer fácil y sentir que te hablan a vos. Subís un post y aparece solo: home, categorías y etiquetas.</p>
+    </section>
+
+    <section class="left">
+      <div class="card">
+        <div class="card-h">
+          <div>Últimas publicaciones</div>
+          <div class="muted">{{POSTS_COUNT}} publicaciones</div>
+        </div>
+        <div class="card-b">
+          {{POSTS_LIST}}
+        </div>
+      </div>
+    </section>
+
+    <aside class="right">
+      <div class="card">
+        <div class="card-h">Etiquetas (top)</div>
+        <div class="card-b">
+          {{TAGS_LIST}}
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-h">Hecho simple</div>
+        <div class="card-b">
+          <div class="muted">Blanco. Minimal. Rápido. Humano. Sin humo.</div>
+        </div>
+      </div>
+    </aside>
+  </main>
+
+  <footer class="foot">
+    <div>Hecho con <b>VOz</b>, para <b>VOS</b>.</div>
+    <div class="muted">Diseñado en {{YEAR}} · buenosdia.com</div>
+  </footer>
+</body>
+</html>
