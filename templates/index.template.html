@@ -2,81 +2,85 @@
 <html lang="es">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>{{SITE_TITLE}}</title>
-  <meta name="description" content="{{SITE_DESCRIPTION}}" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   {{ADSENSE_HEAD}}
+
+  <title>{{SITE_TITLE}}</title>
+  <meta name="description" content="{{SITE_TAGLINE}}" />
+  <meta name="robots" content="index,follow" />
   <link rel="stylesheet" href="/css/site.css" />
 </head>
 <body>
   <header class="top">
-    <div class="brand">
-      <div class="logo">BD</div>
-      <div>
-        <div class="small">BUENOSDIA.COM</div>
-        <div class="name">Buenos días de verdad</div>
-      </div>
+    <div class="wrap topbar">
+      <a class="brand" href="/">
+        <div class="logo">BD</div>
+        <div class="brandtxt">
+          <div class="brandmini">{{SITE_BRAND}}</div>
+          <div class="brandname">{{SITE_TITLE}}</div>
+        </div>
+      </a>
+
+      <nav class="nav">
+        <a class="navbtn" href="/">Inicio</a>
+        <a class="navbtn primary" href="/contacto/">Contacto</a>
+        <div class="social">
+          <a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://www.facebook.com/" target="_blank" rel="noopener">Facebook</a>
+          <a href="https://www.tiktok.com/" target="_blank" rel="noopener">TikTok</a>
+          <a href="https://www.pinterest.com/" target="_blank" rel="noopener">Pinterest</a>
+        </div>
+      </nav>
     </div>
 
-    <nav class="nav">
-      <a class="btn" href="/">Inicio</a>
-      <a class="btn btn2" href="/contacto/">Contacto</a>
-
-      <div class="social">
-        <a href="https://instagram.com/TU_USUARIO" target="_blank" rel="noopener">Instagram</a>
-        <a href="https://facebook.com/TU_PAGINA" target="_blank" rel="noopener">Facebook</a>
-        <a href="https://tiktok.com/@TU_USUARIO" target="_blank" rel="noopener">TikTok</a>
-        <a href="https://pinterest.com/TU_USUARIO" target="_blank" rel="noopener">Pinterest</a>
-      </div>
-    </nav>
+    <div class="wrap pills" aria-label="categorías">
+      {{CATEGORIES_PILLS}}
+    </div>
   </header>
 
-  <!-- CATEGORÍAS: UNA SOLA VEZ (sin duplicado) -->
-  <div class="cats">
-    <div class="cats-scroll">
-      {{CATEGORIES}}
-    </div>
-  </div>
-
-  <main class="grid">
+  <main class="wrap grid">
     <section class="hero">
-      <div class="k">TEXTOS PARA MAÑANAS REALES</div>
+      <div class="kicker">TEXTOS PARA MAÑANAS REALES</div>
       <h1>Este no es el típico blog de frases.</h1>
-      <p>Hecho para abrir rápido, leer fácil y sentir que te hablan a vos. Subís un post y aparece solo: home, categorías y etiquetas.</p>
+      <p class="lead">{{SITE_TAGLINE}}</p>
     </section>
 
-    <section class="left">
-      <div class="card">
-        <div class="card-h">
-          <div>Últimas publicaciones</div>
-          <div class="muted">{{POSTS_COUNT}} publicaciones</div>
+    <section class="maincol">
+      <div class="panel">
+        <div class="panelhead">
+          <h2>Últimas publicaciones</h2>
+          <div class="muted"><b>{{POSTS_COUNT}}</b> publicaciones</div>
         </div>
-        <div class="card-b">
-          {{POSTS_LIST}}
+        <div class="cards">
+          {{POSTS_GRID}}
         </div>
       </div>
     </section>
 
-    <aside class="right">
-      <div class="card">
-        <div class="card-h">Etiquetas (top)</div>
-        <div class="card-b">
+    <aside class="side">
+      <div class="panel">
+        <div class="panelhead">
+          <h3>Etiquetas (top)</h3>
+        </div>
+        <div class="tags">
           {{TAGS_LIST}}
         </div>
       </div>
 
-      <div class="card">
-        <div class="card-h">Hecho simple</div>
-        <div class="card-b">
-          <div class="muted">Blanco. Minimal. Rápido. Humano. Sin humo.</div>
+      <div class="panel">
+        <div class="panelhead">
+          <h3>Hecho simple</h3>
         </div>
+        <p class="muted">Blanco. Minimal. Rápido. Humano. Sin humo.</p>
       </div>
     </aside>
   </main>
 
   <footer class="foot">
-    <div>Hecho con <b>VOz</b>, para <b>VOS</b>.</div>
-    <div class="muted">Diseñado en {{YEAR}} · buenosdia.com</div>
+    <div class="wrap footin">
+      <div>Hecho con <b>VOz</b>, para <b>VOS</b>.</div>
+      <div class="muted">Diseñado en {{YEAR}} · buenosdia.com</div>
+    </div>
   </footer>
 </body>
 </html>

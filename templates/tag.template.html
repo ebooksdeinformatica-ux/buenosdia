@@ -2,40 +2,54 @@
 <html lang="es">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>#{{TAG_NAME}} · buenosdia.com</title>
-  <meta name="description" content="Publicaciones etiquetadas con {{TAG_NAME}}." />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   {{ADSENSE_HEAD}}
+
+  <title>#{{TAG_NAME}} · {{SITE_TITLE}}</title>
+  <meta name="description" content="Publicaciones con la etiqueta {{TAG_NAME}} en {{SITE_TITLE}}." />
+  <meta name="robots" content="index,follow" />
   <link rel="stylesheet" href="/css/site.css" />
 </head>
 <body>
   <header class="top">
-    <div class="brand">
-      <div class="logo">BD</div>
-      <div>
-        <div class="small">BUENOSDIA.COM</div>
-        <div class="name">Etiqueta: {{TAG_NAME}}</div>
-      </div>
+    <div class="wrap topbar">
+      <a class="brand" href="/">
+        <div class="logo">BD</div>
+        <div class="brandtxt">
+          <div class="brandmini">{{SITE_BRAND}}</div>
+          <div class="brandname">{{SITE_TITLE}}</div>
+        </div>
+      </a>
+
+      <nav class="nav">
+        <a class="navbtn" href="/">Inicio</a>
+        <a class="navbtn primary" href="/contacto/">Contacto</a>
+      </nav>
     </div>
 
-    <nav class="nav">
-      <a class="btn" href="/">Inicio</a>
-      <a class="btn btn2" href="/contacto/">Contacto</a>
-    </nav>
+    <div class="wrap pills">
+      {{CATEGORIES_PILLS}}
+    </div>
   </header>
 
-  <main class="single">
-    <div class="card">
-      <div class="card-h">Etiqueta: {{TAG_NAME}}</div>
-      <div class="card-b">
+  <main class="wrap one">
+    <section class="panel">
+      <div class="panelhead">
+        <h1># {{TAG_NAME}}</h1>
+        <div class="muted">Etiqueta</div>
+      </div>
+
+      <div class="list">
         {{POSTS_LIST}}
       </div>
-    </div>
+    </section>
   </main>
 
   <footer class="foot">
-    <div>Hecho con <b>VOz</b>, para <b>VOS</b>.</div>
-    <div class="muted">Diseñado en {{YEAR}} · buenosdia.com</div>
+    <div class="wrap footin">
+      <div>Hecho con <b>VOz</b>, para <b>VOS</b>.</div>
+      <div class="muted">Diseñado en {{YEAR}} · buenosdia.com</div>
+    </div>
   </footer>
 </body>
 </html>
