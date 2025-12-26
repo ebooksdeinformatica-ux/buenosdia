@@ -1,0 +1,21 @@
+name: Netlify Monthly Rebuild
+
+on:
+  schedule:
+    # 09:15 Argentina (UTC-3) = 12:15 UTC
+    - cron: "15 12 1 * *"
+  workflow_dispatch:
+
+jobs:
+  trigger-netlify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Netlify build hook
+        env:
+          NETLIFY_BUILD_HOOK: ${{ secrets.NETLIFY_BUILD_HOOK }}
+        run: |
+          if [ -z "$NETLIFY_BUILD_HOOK" ]; then
+            echo "Missing secret NETLIFY_BUILD_HOOK"
+            exit 1
+          fi
+          curl -X POST -d {} "$NETLIFY_BUILD_HOOK"
