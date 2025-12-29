@@ -1,6 +1,5 @@
 {
-  "name": "buenosdia-site",
-  "version": "1.0.0",
+  "name": "buenosdia",
   "private": true,
   "type": "module",
   "scripts": {
