@@ -18,4 +18,4 @@ jobs:
             echo "Missing secret NETLIFY_BUILD_HOOK"
             exit 1
           fi
-          curl -X POST -d {} "$NETLIFY_BUILD_HOOK"
+          curl -X POST -d '{}' "$NETLIFY_BUILD_HOOK"
