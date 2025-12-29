@@ -1,64 +1,82 @@
-// build.mjs (ESM)
-// Genera dist/ completo desde templates + estructura posts/
-// - Home: /index.html
-// - Categorías: /posts/<categoria>/index.html
-// - Tags: /tags/<tag>/index.html (si hay tags)
-// - Contacto: /contacto/index.html
-// - Copia assets: /css /js /img /posts /ads.txt
-// - SEO: canonical + OG/Twitter auto + sitemap premium + robots.txt
-// - AdSense: inyecta snippet en head
+#!/usr/bin/env node
+/**
+ * BuenosDia.com - build.mjs (robusto)
+ * - Genera dist/ con HTML listo (sin {{placeholders}})
+ * - Copia assets (css/img/js) a dist/
+ * - OG/Twitter + canonical automáticos
+ * - Sitemap.xml "premium" + robots.txt
+ * - Categorías y tags se arman leyendo /posts
+ *
+ * Convención de posts soportada:
+ *  A) /posts/<categoria>/<slug>/index.html
+ *  B) /posts/<categoria>/<slug>.html
+ *  C) /posts/<categoria>/index.html (solo para que GitHub "vea" carpeta; NO se toma como post)
+ */
 
-import fs from "fs";
-import path from "path";
+import fs from "node:fs";
+import fsp from "node:fs/promises";
+import path from "node:path";
+import crypto from "node:crypto";
 
 const ROOT = process.cwd();
 const DIST = path.join(ROOT, "dist");
-const TEMPLATES = path.join(ROOT, "templates");
+const TEMPLATES_DIR = path.join(ROOT, "templates");
+const POSTS_DIR = path.join(ROOT, "posts");
 
 const SITE = {
-  url: "https://buenosdia.com",
-  brandMini: "BUENOSDIAS.COM",
-  title: "Buenos días de verdad",
+  domain: "buenosdia.com",
+  baseUrl: "https://buenosdia.com",
+  brandMini: "BUENOSDIA.COM",
+  siteTitle: "Buenos días de verdad",
   tagline: "Hecho para abrir rápido, leer fácil y sentir que te hablan a vos. Sin humo.",
-  year: new Date().getFullYear(),
-  // AdSense: lo pediste tal cual
-  adsenseHead: `<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7756135514831267" crossorigin="anonymous"></script>`,
-  // Imagen OG default (la generamos después, dejá este path)
-  ogImage: "/img/og-default.webp",
+  year: "2025",
+  defaultOgImage: "/img/og.webp", // si no existe, igual no rompe
+  twitterSite: "", // opcional: "@tuCuenta"
+  twitterCreator: "", // opcional
+  adsenseHead: process.env.ADSENSE_HEAD || "", // pegás el <script ...> acá como variable Netlify
 };
 
-const ensureDir = (p) => fs.mkdirSync(p, { recursive: true });
-
-const cleanDist = () => {
-  fs.rmSync(DIST, { recursive: true, force: true });
-  ensureDir(DIST);
+// ========= helpers =========
+const exists = async (p) => {
+  try { await fsp.access(p); return true; } catch { return false; }
 };
 
-const readText = (p) => fs.readFileSync(p, "utf8");
-const writeText = (p, s) => {
-  ensureDir(path.dirname(p));
-  fs.writeFileSync(p, s, "utf8");
+const ensureDir = async (p) => fsp.mkdir(p, { recursive: true });
+
+const readText = async (p) => fsp.readFile(p, "utf8");
+
+const writeText = async (p, s) => {
+  await ensureDir(path.dirname(p));
+  await fsp.writeFile(p, s, "utf8");
 };
 
-const exists = (p) => fs.existsSync(p);
-
-const copyDir = (src, dest) => {
-  if (!exists(src)) return;
-  ensureDir(dest);
-  for (const entry of fs.readdirSync(src, { withFileTypes: true })) {
-    const s = path.join(src, entry.name);
-    const d = path.join(dest, entry.name);
-    if (entry.isDirectory()) copyDir(s, d);
-    else fs.copyFileSync(s, d);
+const copyDir = async (src, dest) => {
+  if (!(await exists(src))) return;
+  await ensureDir(dest);
+  const entries = await fsp.readdir(src, { withFileTypes: true });
+  for (const e of entries) {
+    const from = path.join(src, e.name);
+    const to = path.join(dest, e.name);
+    if (e.isDirectory()) await copyDir(from, to);
+    else await fsp.copyFile(from, to);
   }
 };
 
-const escapeHtml = (s) =>
+const stripHtml = (html) =>
+  html
+    .replace(/<script[\s\S]*?<\/script>/gi, " ")
+    .replace(/<style[\s\S]*?<\/style>/gi, " ")
+    .replace(/<[^>]+>/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+
+const htmlEscape = (s) =>
   String(s)
     .replaceAll("&", "&amp;")
     .replaceAll("<", "&lt;")
     .replaceAll(">", "&gt;")
-    .replaceAll('"', "&quot;");
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#039;");
 
 const slugToTitle = (slug) =>
   slug
@@ -67,401 +85,474 @@ const slugToTitle = (slug) =>
     .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
     .join(" ");
 
-const normalize = (s) =>
+const normalizeSlug = (s) =>
   s
     .toLowerCase()
-    .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "")
-    .replace(/[^a-z0-9\s-]/g, " ")
-    .replace(/\s+/g, " ")
-    .trim();
+    .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
 
-const uniqBy = (arr, keyFn) => {
-  const seen = new Set();
-  const out = [];
-  for (const x of arr) {
-    const k = keyFn(x);
-    if (seen.has(k)) continue;
-    seen.add(k);
-    out.push(x);
-  }
-  return out;
-};
-
-function buildSocialMeta({ pageUrl, title, description, imageUrl }) {
-  const canonical = pageUrl;
-  const ogImg = imageUrl || `${SITE.url}${SITE.ogImage}`;
-  const t = escapeHtml(title);
-  const d = escapeHtml(description);
-
-  return [
-    `<link rel="canonical" href="${canonical}" />`,
-    `<meta property="og:type" content="website" />`,
-    `<meta property="og:site_name" content="${escapeHtml(SITE.title)}" />`,
-    `<meta property="og:url" content="${canonical}" />`,
-    `<meta property="og:title" content="${t}" />`,
-    `<meta property="og:description" content="${d}" />`,
-    `<meta property="og:image" content="${ogImg}" />`,
-    `<meta name="twitter:card" content="summary_large_image" />`,
-    `<meta name="twitter:title" content="${t}" />`,
-    `<meta name="twitter:description" content="${d}" />`,
-    `<meta name="twitter:image" content="${ogImg}" />`,
-  ].join("\n  ");
+function mdDate(d = new Date()) {
+  // YYYY-MM-DD
+  const y = d.getUTCFullYear();
+  const m = String(d.getUTCMonth() + 1).padStart(2, "0");
+  const day = String(d.getUTCDate()).padStart(2, "0");
+  return `${y}-${m}-${day}`;
 }
 
-function render(template, vars) {
-  let out = template;
-  for (const [k, v] of Object.entries(vars)) {
+function sha1(s) {
+  return crypto.createHash("sha1").update(s).digest("hex");
+}
+
+function buildSocialMeta({ url, title, description, image }) {
+  const canonical = `<link rel="canonical" href="${htmlEscape(url)}" />`;
+  const og = [
+    `<meta property="og:type" content="website" />`,
+    `<meta property="og:site_name" content="${htmlEscape(SITE.siteTitle)}" />`,
+    `<meta property="og:url" content="${htmlEscape(url)}" />`,
+    `<meta property="og:title" content="${htmlEscape(title)}" />`,
+    `<meta property="og:description" content="${htmlEscape(description)}" />`,
+    image ? `<meta property="og:image" content="${htmlEscape(image)}" />` : "",
+  ].filter(Boolean).join("\n  ");
+
+  const tw = [
+    `<meta name="twitter:card" content="summary_large_image" />`,
+    SITE.twitterSite ? `<meta name="twitter:site" content="${htmlEscape(SITE.twitterSite)}" />` : "",
+    SITE.twitterCreator ? `<meta name="twitter:creator" content="${htmlEscape(SITE.twitterCreator)}" />` : "",
+    `<meta name="twitter:title" content="${htmlEscape(title)}" />`,
+    `<meta name="twitter:description" content="${htmlEscape(description)}" />`,
+    image ? `<meta name="twitter:image" content="${htmlEscape(image)}" />` : "",
+  ].filter(Boolean).join("\n  ");
+
+  return `${canonical}\n  ${og}\n  ${tw}`;
+}
+
+function renderTemplate(tpl, map) {
+  let out = tpl;
+  for (const [k, v] of Object.entries(map)) {
     out = out.replaceAll(`{{${k}}}`, v ?? "");
   }
   return out;
 }
 
-// Detecta categorías por carpetas en /posts/<categoria>/
-function scanCategories() {
-  const postsRoot = path.join(ROOT, "posts");
-  if (!exists(postsRoot)) return [];
+// ========= load templates =========
+async function loadTemplates() {
+  const files = {
+    index: path.join(TEMPLATES_DIR, "index.template.html"),
+    category: path.join(TEMPLATES_DIR, "category.template.html"),
+    tag: path.join(TEMPLATES_DIR, "tag.template.html"),
+    contact: path.join(TEMPLATES_DIR, "contact.template.html"),
+  };
 
-  const cats = fs
-    .readdirSync(postsRoot, { withFileTypes: true })
-    .filter((d) => d.isDirectory())
-    .map((d) => d.name)
-    // IMPORTANTÍSIMO: dedupe por slug normalizado (evita duplicados raros)
-    .map((slug) => ({
-      slug: normalize(slug).replaceAll(" ", "-"),
-      realFolder: slug,
-    }));
+  const missing = [];
+  for (const [k, p] of Object.entries(files)) if (!(await exists(p))) missing.push(`${k}: ${p}`);
+  if (missing.length) {
+    throw new Error("Faltan templates:\n" + missing.join("\n"));
+  }
 
-  // si tenías carpetas con acentos/espacios, esto evita que aparezcan dobles:
-  const uniq = uniqBy(cats, (c) => c.slug);
-  return uniq.sort((a, b) => a.slug.localeCompare(b.slug));
+  return {
+    index: await readText(files.index),
+    category: await readText(files.category),
+    tag: await readText(files.tag),
+    contact: await readText(files.contact),
+  };
 }
 
-// Escanea posts reales dentro de /posts/<cat>/<post>/index.html
-function scanPosts(categories) {
-  const all = [];
-  for (const c of categories) {
-    const catPath = path.join(ROOT, "posts", c.realFolder);
-    if (!exists(catPath)) continue;
+// ========= scan posts =========
+async function scanPosts() {
+  const posts = [];
 
-    const children = fs.readdirSync(catPath, { withFileTypes: true });
-    for (const ch of children) {
-      if (!ch.isDirectory()) continue;
-      const postFolder = path.join(catPath, ch.name);
-      const indexHtml = path.join(postFolder, "index.html");
-      if (!exists(indexHtml)) continue;
+  if (!(await exists(POSTS_DIR))) return posts;
 
-      // mini metadata desde <title> y meta description si existe
-      const html = readText(indexHtml);
-      const titleMatch = html.match(/<title>([\s\S]*?)<\/title>/i);
-      const descMatch = html.match(/<meta\s+name=["']description["']\s+content=["']([\s\S]*?)["']\s*\/?>/i);
+  const cats = await fsp.readdir(POSTS_DIR, { withFileTypes: true });
+  for (const c of cats) {
+    if (!c.isDirectory()) continue;
+    const catSlug = c.name;
+    const catDir = path.join(POSTS_DIR, catSlug);
 
-      const title = (titleMatch?.[1] || slugToTitle(ch.name)).trim();
-      const description = (descMatch?.[1] || "").trim();
+    const entries = await fsp.readdir(catDir, { withFileTypes: true });
 
-      const urlPath = `/posts/${c.slug}/${ch.name}/`;
-      all.push({
-        categorySlug: c.slug,
-        categoryName: slugToTitle(c.slug),
-        postSlug: ch.name,
-        title,
-        description,
-        urlPath,
-        // lastmod: mtime del archivo
-        lastmod: fs.statSync(indexHtml).mtime,
-      });
+    for (const e of entries) {
+      // ignora el index.html "placeholder" de la categoría
+      if (e.isFile() && e.name.toLowerCase() === "index.html") continue;
+
+      // A) carpeta con index.html
+      if (e.isDirectory()) {
+        const slug = e.name;
+        const p = path.join(catDir, slug, "index.html");
+        if (await exists(p)) {
+          posts.push(await parsePostFile(p, catSlug, slug));
+        }
+        continue;
+      }
+
+      // B) html directo
+      if (e.isFile() && e.name.toLowerCase().endsWith(".html")) {
+        const slug = e.name.replace(/\.html$/i, "");
+        const p = path.join(catDir, e.name);
+        posts.push(await parsePostFile(p, catSlug, slug));
+      }
     }
   }
 
-  // últimos primero
-  all.sort((a, b) => b.lastmod - a.lastmod);
-  return all;
+  // orden por fecha (si existe) o por título
+  posts.sort((a, b) => (b.dateISO || "").localeCompare(a.dateISO || "") || a.title.localeCompare(b.title));
+  return posts;
 }
 
-// Tags: si más adelante agregás tags en data-tags="a,b,c" dentro del HTML del post
-function scanTags(posts) {
-  const tagMap = new Map();
-  for (const p of posts) {
-    const postIndex = path.join(ROOT, "posts", p.categorySlug, p.postSlug, "index.html");
-    // OJO: si el folder real difiere, no usamos esto; por eso tags se mantiene simple por ahora
-  }
-  // sin tags por defecto
-  return { tags: [], tagToPosts: new Map() };
-}
+async function parsePostFile(filePath, categorySlug, slug) {
+  const html = await readText(filePath);
 
-function buildCategoryDescription(catSlug, catPosts) {
-  // “SEO premium” sin IA externa: arma una descripción humana a partir de títulos/temas
-  if (!catPosts.length) return "";
+  // title del <title> o H1
+  const titleMatch = html.match(/<title[^>]*>([\s\S]*?)<\/title>/i);
+  let title = titleMatch?.[1]?.trim() || "";
 
-  const bag = [];
-  for (const p of catPosts.slice(0, 10)) {
-    bag.push(...normalize(p.title).split(" "));
+  if (!title) {
+    const h1 = html.match(/<h1[^>]*>([\s\S]*?)<\/h1>/i);
+    title = h1?.[1]?.replace(/<[^>]+>/g, "").trim() || slugToTitle(slug);
   }
 
-  const stop = new Set([
-    "de","la","el","y","a","en","un","una","para","por","con","sin","que","como","del","los","las","al",
-    "hoy","manana","mañana","real","reales","verdad","buenos","dias","día",
-  ]);
-
-  const freq = new Map();
-  for (const w of bag) {
-    if (!w || w.length < 4) continue;
-    if (stop.has(w)) continue;
-    freq.set(w, (freq.get(w) || 0) + 1);
+  // description: primer párrafo o recorte texto
+  let description = "";
+  const p1 = html.match(/<p[^>]*>([\s\S]*?)<\/p>/i);
+  description = p1?.[1]?.replace(/<[^>]+>/g, "").trim() || "";
+  if (!description) {
+    const txt = stripHtml(html);
+    description = txt.slice(0, 160);
   }
+  description = description.replace(/\s+/g, " ").trim();
 
-  const top = [...freq.entries()].sort((a,b)=>b[1]-a[1]).slice(0, 6).map(([w])=>w);
+  // tags: buscá meta keywords o data-tags="a,b"
+  let tags = [];
+  const kw = html.match(/<meta\s+name=["']keywords["']\s+content=["']([^"']+)["']/i)?.[1];
+  if (kw) tags = kw.split(",").map((t) => t.trim()).filter(Boolean);
 
-  const human = [
-    `Esta categoría es para cuando ${catSlug.replaceAll("-", " ")} te toca de cerca.`,
-    `Textos cortos, directos, sin careta: para arrancar el día con algo real.`,
-    top.length ? `Si venís buscando temas como ${top.join(", ")}, acá vas a encontrar de lo tuyo.` : `Acá juntamos lo que importa, sin humo.`,
-  ].join(" ");
+  const dataTags = html.match(/data-tags=["']([^"']+)["']/i)?.[1];
+  if (dataTags) tags = [...new Set([...tags, ...dataTags.split(",").map((t) => t.trim())])];
 
-  return human;
+  tags = tags.map(normalizeSlug).filter(Boolean).slice(0, 25);
+
+  // date: meta article:published_time o data-date
+  let dateISO = "";
+  const d1 = html.match(/data-date=["']([^"']+)["']/i)?.[1];
+  if (d1) dateISO = d1.slice(0, 10);
+
+  const urlPath = `/posts/${categorySlug}/${slug}/`;
+  return {
+    id: sha1(filePath),
+    filePath,
+    categorySlug,
+    categoryName: slugToTitle(categorySlug),
+    slug,
+    title,
+    description,
+    tags,
+    dateISO,
+    urlPath,
+  };
 }
 
-function buildCategoryKeywords(catSlug, catPosts) {
-  const base = ["buenosdia.com", "mañanas reales", "texto humano", "sin humo", catSlug.replaceAll("-", " ")];
-  const extra = [];
-  for (const p of catPosts.slice(0, 8)) extra.push(...normalize(p.title).split(" "));
-  const freq = new Map();
-  for (const w of extra) {
-    if (!w || w.length < 4) continue;
-    freq.set(w, (freq.get(w) || 0) + 1);
+// ========= build pages =========
+function categoriesBar(categories) {
+  // chips tipo “pill”
+  return categories
+    .map((c) => `<a class="chip" href="/posts/${c.slug}/">${htmlEscape(c.name)}</a>`)
+    .join("\n      ");
+}
+
+function postsGrid(posts, limit = 12) {
+  const list = posts.slice(0, limit);
+  if (!list.length) {
+    return `<div class="muted">Todavía no hay publicaciones. Subí tu primer post en <code>/posts/&lt;categoria&gt;/&lt;post&gt;/index.html</code>.</div>`;
   }
-  const top = [...freq.entries()].sort((a,b)=>b[1]-a[1]).slice(0, 10).map(([w])=>w);
-  return [...new Set([...base, ...top])].join(", ");
-}
-
-function formatDateISO(d) {
-  const x = new Date(d);
-  return x.toISOString();
-}
-
-function buildSitemap(urlEntries) {
-  const urls = urlEntries
-    .map((u) => {
+  return list
+    .map((p) => {
       return `
-  <url>
-    <loc>${u.loc}</loc>
-    <lastmod>${u.lastmod}</lastmod>
-    <changefreq>${u.changefreq}</changefreq>
-    <priority>${u.priority}</priority>
-  </url>`.trim();
+      <article class="post">
+        <a class="posttitle" href="${p.urlPath}">${htmlEscape(p.title)}</a>
+        <div class="postmeta">
+          <span class="pill">${htmlEscape(p.categoryName)}</span>
+          ${p.dateISO ? `<span class="muted">${htmlEscape(p.dateISO)}</span>` : ""}
+        </div>
+        <p class="postdesc">${htmlEscape(p.description)}</p>
+      </article>
+      `.trim();
     })
     .join("\n");
-
-  return `<?xml version="1.0" encoding="UTF-8"?>
-<urlset
-  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${urls}
-</urlset>
-`;
 }
 
-function buildRobots() {
-  return `User-agent: *
-Allow: /
-
-Sitemap: ${SITE.url}/sitemap.xml
-`;
+function tagsList(tags, limit = 12) {
+  const list = tags.slice(0, limit);
+  if (!list.length) return `<div class="muted">Todavía no hay etiquetas.</div>`;
+  return list
+    .map((t) => `<a class="tag" href="/tags/${t.slug}/">${htmlEscape(t.label)}</a>`)
+    .join("\n");
 }
 
-function pillLink(href, label) {
-  return `<a class="pill" href="${href}">${escapeHtml(label)}</a>`;
+// “Molde” para descripción de categoría (simple, humano, sin IA externa)
+function generateCategoryDescription(categoryName, postsInCat) {
+  if (!postsInCat.length) return "";
+
+  const sample = postsInCat.slice(0, 6).map((p) => stripHtml(p.title + " " + p.description)).join(" ");
+  const words = sample
+    .toLowerCase()
+    .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+    .replace(/[^a-z0-9\s]/g, " ")
+    .split(/\s+/)
+    .filter((w) => w.length >= 4 && !["para","pero","porque","cuando","donde","desde","hasta","esto","esta","este","estos","estas","como","con","sin","sobre","entre","algo","hoy","ayer","todo","toda","todos","todas"].includes(w));
+
+  const freq = new Map();
+  for (const w of words) freq.set(w, (freq.get(w) || 0) + 1);
+
+  const top = [...freq.entries()].sort((a,b) => b[1]-a[1]).slice(0, 8).map(([w]) => w);
+  const k = top.slice(0, 5).join(", ");
+
+  // Visible (humano, tu onda)
+  const visible =
+    `Si caíste acá, es porque <b>${htmlEscape(categoryName)}</b> te está rozando algo. ` +
+    `Acá no hay “motivación de taza”: hay textos cortos, honestos, para atravesar la mañana sin fingir. ` +
+    `Si estás con la cabeza llena o el pecho apretado, entrá igual. Capaz encontrás una frase, una idea, ` +
+    `o ese empujoncito mínimo que te deja seguir.`;
+
+  // Meta description ideal ~150-160 chars
+  const meta =
+    `Textos reales de ${categoryName}: mañana, emoción, energía y foco sin humo. Lectura rápida, humana y directa. (${k}).`;
+
+  // Keywords
+  const keywords = [...new Set([normalizeSlug(categoryName), ...top].filter(Boolean))].slice(0, 18).join(", ");
+
+  return { visible, meta: meta.slice(0, 160), keywords };
 }
 
-function postCard(p) {
-  const desc = p.description ? `<p class="muted">${escapeHtml(p.description)}</p>` : `<p class="muted">Entrar →</p>`;
-  return `
-  <article class="card">
-    <a class="cardlink" href="${p.urlPath}">
-      <div class="cardtitle">${escapeHtml(p.title)}</div>
-      ${desc}
-      <div class="cardmeta">Categoría: ${escapeHtml(p.categoryName)}</div>
-    </a>
-  </article>`.trim();
-}
+async function build() {
+  const templates = await loadTemplates();
 
-function buildHome({ categories, posts }) {
-  const tpl = readText(path.join(TEMPLATES, "index.template.html"));
+  // reset dist
+  await fsp.rm(DIST, { recursive: true, force: true });
+  await ensureDir(DIST);
 
-  const catsHtml = categories.map((c) => pillLink(`/posts/${c.slug}/`, slugToTitle(c.slug))).join("\n      ");
+  // copy assets
+  await copyDir(path.join(ROOT, "css"), path.join(DIST, "css"));
+  await copyDir(path.join(ROOT, "img"), path.join(DIST, "img"));
+  await copyDir(path.join(ROOT, "js"), path.join(DIST, "js"));
 
-  const latest = posts.slice(0, 12);
-  const postsGrid = latest.length
-    ? latest.map(postCard).join("\n")
-    : `<div class="empty">Todavía no hay publicaciones. Subí tu primer post en <code>/posts/&lt;categoria&gt;/&lt;post&gt;/index.html</code>.</div>`;
+  // scan posts
+  const posts = await scanPosts();
 
-  const pageTitle = `${SITE.title} · ${SITE.brandMini}`;
-  const pageDesc = SITE.tagline;
-
-  const socialMeta = buildSocialMeta({
-    pageUrl: `${SITE.url}/`,
-    title: pageTitle,
-    description: pageDesc,
-    imageUrl: `${SITE.url}${SITE.ogImage}`,
-  });
-
-  const html = render(tpl, {
-    PAGE_TITLE: escapeHtml(pageTitle),
-    PAGE_DESCRIPTION: escapeHtml(pageDesc),
-    SOCIAL_META: socialMeta,
-    ADSENSE_HEAD: SITE.adsenseHead,
-    SITE_BRAND: escapeHtml(SITE.brandMini),
-    SITE_TITLE: escapeHtml(SITE.title),
-    SITE_TAGLINE: escapeHtml(SITE.tagline),
-    CATEGORIES_PILLS: catsHtml,
-    POSTS_COUNT: String(posts.length),
-    POSTS_GRID: postsGrid,
-    TAGS_LIST: `<div class="empty">Todavía no hay etiquetas.</div>`,
-    YEAR: String(SITE.year),
-  });
-
-  writeText(path.join(DIST, "index.html"), html);
-}
-
-function buildCategoryPages({ categories, posts }) {
-  const tpl = readText(path.join(TEMPLATES, "category.template.html"));
-
-  for (const c of categories) {
-    const catPosts = posts.filter((p) => p.categorySlug === c.slug);
-
-    const catTitle = slugToTitle(c.slug);
-    const descVisible = buildCategoryDescription(c.slug, catPosts);
-    const keywords = buildCategoryKeywords(c.slug, catPosts);
-
-    const listHtml = catPosts.length
-      ? catPosts.map(postCard).join("\n")
-      : `<div class="empty">Todavía no hay posts en <b>${escapeHtml(catTitle)}</b>.</div>`;
-
-    const catsHtml = categories.map((x) => pillLink(`/posts/${x.slug}/`, slugToTitle(x.slug))).join("\n      ");
-
-    const pageTitle = `${catTitle} · ${SITE.title}`;
-    const metaDesc = descVisible || `Posts de ${catTitle} en buenosdia.com. Textos reales, humanos, sin humo.`;
-    const socialMeta = buildSocialMeta({
-      pageUrl: `${SITE.url}/posts/${c.slug}/`,
-      title: pageTitle,
-      description: metaDesc,
-      imageUrl: `${SITE.url}${SITE.ogImage}`,
-    });
-
-    const out = render(tpl, {
-      PAGE_TITLE: escapeHtml(pageTitle),
-      PAGE_DESCRIPTION: escapeHtml(metaDesc),
-      PAGE_KEYWORDS: escapeHtml(keywords),
-      SOCIAL_META: socialMeta,
-      ADSENSE_HEAD: SITE.adsenseHead,
-      SITE_BRAND: escapeHtml(SITE.brandMini),
-      SITE_TITLE: escapeHtml(SITE.title),
-      SITE_TAGLINE: escapeHtml(SITE.tagline),
-      CATEGORIES_PILLS: catsHtml,
-      CATEGORY_TITLE: escapeHtml(catTitle),
-      CATEGORY_DESC: escapeHtml(descVisible),
-      POSTS_COUNT: String(catPosts.length),
-      POSTS_GRID: listHtml,
-      YEAR: String(SITE.year),
-    });
-
-    writeText(path.join(DIST, "posts", c.slug, "index.html"), out);
-  }
-}
-
-function buildContact() {
-  const tpl = readText(path.join(TEMPLATES, "contact.template.html"));
-
-  const pageTitle = `Contacto · ${SITE.title}`;
-  const pageDesc = `Contacto de ${SITE.title}.`;
-
-  const socialMeta = buildSocialMeta({
-    pageUrl: `${SITE.url}/contacto/`,
-    title: pageTitle,
-    description: pageDesc,
-    imageUrl: `${SITE.url}${SITE.ogImage}`,
-  });
-
-  const html = render(tpl, {
-    PAGE_TITLE: escapeHtml(pageTitle),
-    PAGE_DESCRIPTION: escapeHtml(pageDesc),
-    SOCIAL_META: socialMeta,
-    ADSENSE_HEAD: SITE.adsenseHead,
-    SITE_BRAND: escapeHtml(SITE.brandMini),
-    SITE_TITLE: escapeHtml(SITE.title),
-    YEAR: String(SITE.year),
-  });
-
-  writeText(path.join(DIST, "contacto", "index.html"), html);
-}
-
-function buildSitemapAndRobots({ categories, posts }) {
-  const entries = [];
-
-  const now = new Date();
-
-  // Home
-  entries.push({
-    loc: `${SITE.url}/`,
-    lastmod: formatDateISO(now),
-    changefreq: "daily",
-    priority: "1.0",
-  });
-
-  // Contact
-  entries.push({
-    loc: `${SITE.url}/contacto/`,
-    lastmod: formatDateISO(now),
-    changefreq: "monthly",
-    priority: "0.4",
-  });
-
-  // Categories
-  for (const c of categories) {
-    entries.push({
-      loc: `${SITE.url}/posts/${c.slug}/`,
-      lastmod: formatDateISO(now),
-      changefreq: "weekly",
-      priority: "0.7",
-    });
-  }
-
-  // Posts
+  // categories data
+  const catMap = new Map();
   for (const p of posts) {
-    entries.push({
-      loc: `${SITE.url}${p.urlPath}`,
-      lastmod: formatDateISO(p.lastmod),
-      changefreq: "monthly",
-      priority: "0.6",
-    });
+    if (!catMap.has(p.categorySlug)) {
+      catMap.set(p.categorySlug, { slug: p.categorySlug, name: slugToTitle(p.categorySlug), posts: [] });
+    }
+    catMap.get(p.categorySlug).posts.push(p);
   }
 
-  writeText(path.join(DIST, "sitemap.xml"), buildSitemap(entries));
-  writeText(path.join(DIST, "robots.txt"), buildRobots());
+  // IMPORTANT: también incluir categorías aunque no tengan posts (carpetas existentes)
+  if (await exists(POSTS_DIR)) {
+    const cats = await fsp.readdir(POSTS_DIR, { withFileTypes: true });
+    for (const c of cats) {
+      if (!c.isDirectory()) continue;
+      if (!catMap.has(c.name)) catMap.set(c.name, { slug: c.name, name: slugToTitle(c.name), posts: [] });
+    }
+  }
+
+  const categories = [...catMap.values()].sort((a, b) => a.name.localeCompare(b.name));
+  const catBarHtml = categoriesBar(categories);
+
+  // tags data
+  const tagMap = new Map();
+  for (const p of posts) {
+    for (const t of p.tags) {
+      if (!tagMap.has(t)) tagMap.set(t, { slug: t, label: slugToTitle(t) , posts: [] });
+      tagMap.get(t).posts.push(p);
+    }
+  }
+  const tags = [...tagMap.values()].sort((a, b) => b.posts.length - a.posts.length);
+
+  // ===== index =====
+  const indexUrl = `${SITE.baseUrl}/`;
+  const indexTitle = SITE.siteTitle;
+  const indexDesc = SITE.tagline;
+
+  const socialMetaIndex = buildSocialMeta({
+    url: indexUrl,
+    title: indexTitle,
+    description: indexDesc,
+    image: `${SITE.baseUrl}${SITE.defaultOgImage}`,
+  });
+
+  const indexHtml = renderTemplate(templates.index, {
+    SITE_BRAND: htmlEscape(SITE.brandMini),
+    SITE_TITLE: htmlEscape(SITE.siteTitle),
+    SITE_TAGLINE: htmlEscape(SITE.tagline),
+    CATEGORIES_BAR: catBarHtml,
+    POSTS_COUNT: String(posts.length),
+    POSTS_GRID: postsGrid(posts, 12),
+    TAGS_LIST: tagsList(tags, 14),
+    SOCIAL_META: socialMetaIndex,
+    ADSENSE_HEAD: SITE.adsenseHead || "",
+  });
+
+  await writeText(path.join(DIST, "index.html"), indexHtml);
+
+  // ===== categories pages =====
+  for (const c of categories) {
+    const desc = generateCategoryDescription(c.name, c.posts);
+    const catUrlPath = `/posts/${c.slug}/`;
+    const catUrl = `${SITE.baseUrl}${catUrlPath}`;
+
+    const pageTitle = `${c.name} — ${SITE.siteTitle}`;
+    const pageDescription = desc?.meta || `Publicaciones de ${c.name} en ${SITE.siteTitle}.`;
+    const pageKeywords = desc?.keywords || normalizeSlug(c.name);
+
+    const socialMeta = buildSocialMeta({
+      url: catUrl,
+      title: pageTitle,
+      description: pageDescription,
+      image: `${SITE.baseUrl}${SITE.defaultOgImage}`,
+    });
+
+    const listHtml = (c.posts.length ? c.posts : [])
+      .map((p) => `<a class="row" href="${p.urlPath}"><span>${htmlEscape(p.title)}</span><span class="muted">${htmlEscape(p.description)}</span></a>`)
+      .join("\n");
+
+    const out = renderTemplate(templates.category, {
+      SITE_BRAND: htmlEscape(SITE.brandMini),
+      SITE_TITLE: htmlEscape(SITE.siteTitle),
+      SITE_TAGLINE: htmlEscape(SITE.tagline),
+      CATEGORIES_BAR: catBarHtml,
+
+      CATEGORY_NAME: htmlEscape(c.name),
+      CATEGORY_DESCRIPTION_VISIBLE: desc?.visible || "",
+      CATEGORY_POSTS_COUNT: String(c.posts.length),
+      CATEGORY_POSTS_LIST: c.posts.length ? listHtml : `<div class="muted">Todavía no hay publicaciones en esta categoría.</div>`,
+
+      PAGE_TITLE: htmlEscape(pageTitle),
+      PAGE_DESCRIPTION: htmlEscape(pageDescription),
+      PAGE_KEYWORDS: htmlEscape(pageKeywords),
+
+      SOCIAL_META: socialMeta,
+      ADSENSE_HEAD: SITE.adsenseHead || "",
+    });
+
+    await writeText(path.join(DIST, "posts", c.slug, "index.html"), out);
+  }
+
+  // ===== tags pages =====
+  for (const t of tags) {
+    const tagUrlPath = `/tags/${t.slug}/`;
+    const tagUrl = `${SITE.baseUrl}${tagUrlPath}`;
+
+    const pageTitle = `Etiqueta: ${t.label} — ${SITE.siteTitle}`;
+    const pageDescription = `Publicaciones con la etiqueta ${t.label} en ${SITE.siteTitle}.`;
+    const pageKeywords = `${t.slug}, etiquetas, ${normalizeSlug(SITE.siteTitle)}`;
+
+    const socialMeta = buildSocialMeta({
+      url: tagUrl,
+      title: pageTitle,
+      description: pageDescription,
+      image: `${SITE.baseUrl}${SITE.defaultOgImage}`,
+    });
+
+    const listHtml = t.posts
+      .slice(0, 80)
+      .map((p) => `<a class="row" href="${p.urlPath}"><span>${htmlEscape(p.title)}</span><span class="muted">${htmlEscape(p.categoryName)}</span></a>`)
+      .join("\n");
+
+    const out = renderTemplate(templates.tag, {
+      SITE_BRAND: htmlEscape(SITE.brandMini),
+      SITE_TITLE: htmlEscape(SITE.siteTitle),
+      SITE_TAGLINE: htmlEscape(SITE.tagline),
+      CATEGORIES_BAR: catBarHtml,
+
+      TAG_NAME: htmlEscape(t.label),
+      TAG_POSTS_COUNT: String(t.posts.length),
+      TAG_POSTS_LIST: listHtml || `<div class="muted">Todavía no hay publicaciones con esta etiqueta.</div>`,
+
+      PAGE_TITLE: htmlEscape(pageTitle),
+      PAGE_DESCRIPTION: htmlEscape(pageDescription),
+      PAGE_KEYWORDS: htmlEscape(pageKeywords),
+
+      SOCIAL_META: socialMeta,
+      ADSENSE_HEAD: SITE.adsenseHead || "",
+    });
+
+    await writeText(path.join(DIST, "tags", t.slug, "index.html"), out);
+  }
+
+  // ===== contact page =====
+  {
+    const urlPath = `/contacto/`;
+    const url = `${SITE.baseUrl}${urlPath}`;
+    const pageTitle = `Contacto — ${SITE.siteTitle}`;
+    const pageDescription = `Contacto y mensajes para ${SITE.siteTitle}.`;
+    const socialMeta = buildSocialMeta({
+      url,
+      title: pageTitle,
+      description: pageDescription,
+      image: `${SITE.baseUrl}${SITE.defaultOgImage}`,
+    });
+
+    const out = renderTemplate(templates.contact, {
+      SITE_BRAND: htmlEscape(SITE.brandMini),
+      SITE_TITLE: htmlEscape(SITE.siteTitle),
+      SITE_TAGLINE: htmlEscape(SITE.tagline),
+      CATEGORIES_BAR: catBarHtml,
+
+      PAGE_TITLE: htmlEscape(pageTitle),
+      PAGE_DESCRIPTION: htmlEscape(pageDescription),
+      PAGE_KEYWORDS: htmlEscape("contacto, mensajes, buenosdia"),
+
+      SOCIAL_META: socialMeta,
+      ADSENSE_HEAD: SITE.adsenseHead || "",
+    });
+
+    await writeText(path.join(DIST, "contacto", "index.html"), out);
+  }
+
+  // ===== robots.txt =====
+  await writeText(
+    path.join(DIST, "robots.txt"),
+    `User-agent: *\nAllow: /\nSitemap: ${SITE.baseUrl}/sitemap.xml\n`
+  );
+
+  // ===== sitemap.xml (premium simple) =====
+  const urls = [];
+  const now = mdDate(new Date());
+
+  // core pages
+  urls.push({ loc: `${SITE.baseUrl}/`, lastmod: now });
+  urls.push({ loc: `${SITE.baseUrl}/contacto/`, lastmod: now });
+
+  // category + tag
+  for (const c of categories) urls.push({ loc: `${SITE.baseUrl}/posts/${c.slug}/`, lastmod: now });
+  for (const t of tags) urls.push({ loc: `${SITE.baseUrl}/tags/${t.slug}/`, lastmod: now });
+
+  // posts (solo si existen)
+  for (const p of posts) urls.push({ loc: `${SITE.baseUrl}${p.urlPath}`, lastmod: p.dateISO || now });
+
+  const sitemap =
+    `<?xml version="1.0" encoding="UTF-8"?>\n` +
+    `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` +
+    urls
+      .map(
+        (u) =>
+          `  <url>\n` +
+          `    <loc>${htmlEscape(u.loc)}</loc>\n` +
+          `    <lastmod>${htmlEscape(u.lastmod)}</lastmod>\n` +
+          `  </url>`
+      )
+      .join("\n") +
+    `\n</urlset>\n`;
+
+  await writeText(path.join(DIST, "sitemap.xml"), sitemap);
+
+  console.log(`OK ✅ dist generado. Posts: ${posts.length} | Categorías: ${categories.length} | Tags: ${tags.length}`);
 }
 
-function main() {
-  cleanDist();
-
-  // 1) Copiar assets al dist
-  copyDir(path.join(ROOT, "css"), path.join(DIST, "css"));
-  copyDir(path.join(ROOT, "js"), path.join(DIST, "js"));
-  copyDir(path.join(ROOT, "img"), path.join(DIST, "img"));
-  copyDir(path.join(ROOT, "posts"), path.join(DIST, "posts"));
-  if (exists(path.join(ROOT, "ads.txt"))) fs.copyFileSync(path.join(ROOT, "ads.txt"), path.join(DIST, "ads.txt"));
-
-  // 2) Escanear contenido
-  const categories = scanCategories();
-  const posts = scanPosts(categories);
-
-  // 3) Páginas
-  buildHome({ categories, posts });
-  buildCategoryPages({ categories, posts });
-  buildContact();
-
-  // 4) SEO infra
-  buildSitemapAndRobots({ categories, posts });
-
-  console.log(`OK: dist generado. Categorías=${categories.length} Posts=${posts.length}`);
-}
-
-main();
+build().catch((err) => {
+  console.error("BUILD FAILED ❌");
+  console.error(err?.stack || err);
+  process.exit(1);
+});
