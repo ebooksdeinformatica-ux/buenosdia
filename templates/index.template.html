@@ -1,101 +1,88 @@
 <!doctype html>
 <html lang="es">
-<!-- SEO básico -->
-<link rel="canonical" href="https://buenosdia.com{{URL}}" />
-
-<meta name="description" content="{{META_DESCRIPTION}}" />
-<meta name="keywords" content="{{META_KEYWORDS}}" />
-<meta name="author" content="buenosdia.com" />
-
-<!-- Open Graph -->
-<meta property="og:type" content="article" />
-<meta property="og:title" content="{{OG_TITLE}}" />
-<meta property="og:description" content="{{OG_DESCRIPTION}}" />
-<meta property="og:url" content="https://buenosdia.com{{URL}}" />
-<meta property="og:image" content="https://buenosdia.com/img/og-default.webp" />
-<meta property="og:site_name" content="Buenos días de verdad" />
-
-<!-- Twitter -->
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="{{OG_TITLE}}" />
-<meta name="twitter:description" content="{{OG_DESCRIPTION}}" />
-<meta name="twitter:image" content="https://buenosdia.com/img/og-default.webp" />
-
-<!-- Favicon -->
-<link rel="icon" href="/favicon.ico" />
-<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>{{SITE_TITLE}}</title>
+  <meta name="description" content="{{SITE_TAGLINE}}">
+  {{SOCIAL_META}}
+  {{ADSENSE_HEAD}}
+  <link rel="stylesheet" href="/css/site.css">
+</head>
 <body>
-  <header class="top">
-    <div class="wrap topbar">
-      <a class="brand" href="/">
+<header class="top">
+  <div class="wrap">
+    <div class="topbar">
+      <div class="brand">
         <div class="logo">BD</div>
-        <div class="brandtxt">
+        <div>
           <div class="brandmini">{{SITE_BRAND}}</div>
           <div class="brandname">{{SITE_TITLE}}</div>
         </div>
-      </a>
-
+      </div>
       <nav class="nav">
-        <a class="navbtn" href="/">Inicio</a>
-        <a class="navbtn primary" href="/contacto/">Contacto</a>
-        <div class="social">
-          <a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a>
-          <a href="https://www.facebook.com/" target="_blank" rel="noopener">Facebook</a>
-          <a href="https://www.tiktok.com/" target="_blank" rel="noopener">TikTok</a>
-          <a href="https://www.pinterest.com/" target="_blank" rel="noopener">Pinterest</a>
-        </div>
+        <a class="navbtn primary" href="/">Inicio</a>
+        <a class="navbtn" href="/contacto/">Contacto</a>
       </nav>
+      <div class="social">
+        <a href="https://instagram.com/" rel="noopener" target="_blank">Instagram</a>
+        <a href="https://facebook.com/" rel="noopener" target="_blank">Facebook</a>
+        <a href="https://tiktok.com/" rel="noopener" target="_blank">TikTok</a>
+        <a href="https://pinterest.com/" rel="noopener" target="_blank">Pinterest</a>
+      </div>
     </div>
-
-    <div class="wrap pills" aria-label="categorías">
-      {{CATEGORIES_PILLS}}
+    <div class="pills">
+      {{CATEGORIES_BAR}}
     </div>
-  </header>
+  </div>
+</header>
 
-  <main class="wrap grid">
-    <section class="hero">
+<main class="wrap">
+  <section class="grid">
+    <div class="hero">
       <div class="kicker">TEXTOS PARA MAÑANAS REALES</div>
       <h1>Este no es el típico blog de frases.</h1>
-      <p class="lead">{{SITE_TAGLINE}}</p>
-    </section>
+      <p class="lead">Hecho para abrir rápido, leer fácil y sentir que te hablan a vos. Sin humo.</p>
+    </div>
 
-    <section class="maincol">
-      <div class="panel">
-        <div class="panelhead">
-          <h2>Últimas publicaciones</h2>
-          <div class="muted"><b>{{POSTS_COUNT}}</b> publicaciones</div>
-        </div>
-        <div class="cards">
-          {{POSTS_GRID}}
-        </div>
+    <section class="panel">
+      <div class="panelhead">
+        <h2>Últimas publicaciones</h2>
+        <span class="muted">{{POSTS_COUNT}} publicaciones</span>
+      </div>
+      <div class="cards">
+        {{POSTS_GRID}}
       </div>
     </section>
 
-    <aside class="side">
-      <div class="panel">
-        <div class="panelhead">
-          <h3>Etiquetas (top)</h3>
-        </div>
-        <div class="tags">
-          {{TAGS_LIST}}
-        </div>
+    <aside class="panel soft">
+      <div class="panelhead">
+        <h3>Etiquetas (top)</h3>
       </div>
-
-      <div class="panel">
-        <div class="panelhead">
-          <h3>Hecho simple</h3>
-        </div>
-        <p class="muted">Blanco. Minimal. Rápido. Humano. Sin humo.</p>
+      <div class="tags">
+        {{TAGS_LIST}}
       </div>
     </aside>
-  </main>
+  </section>
 
-  <footer class="foot">
-    <div class="wrap footin">
-      <div>Hecho con <b>VOz</b>, para <b>VOS</b>.</div>
-      <div class="muted">Diseñado en {{YEAR}} · buenosdia.com</div>
+  <section class="one">
+    <div class="panel">
+      <div class="panelhead">
+        <h3>Hecho simple</h3>
+      </div>
+      <p class="muted">Blanco. Minimal. Rápido. Humano. Sin humo.</p>
+      <p><b>Hecho con VOZ, para VOS.</b><br>Diseñado en {{YEAR}} · buenosdia.com</p>
     </div>
-  </footer>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap footin">
+    <div class="muted">© {{YEAR}} {{SITE_TITLE}}</div>
+    <div class="muted">Buenos días de verdad.</div>
+  </div>
+</footer>
+
+<script src="/js/site.js" defer></script>
 </body>
 </html>

@@ -1,91 +1,53 @@
 <!doctype html>
 <html lang="es">
-<!-- SEO básico -->
-<link rel="canonical" href="https://buenosdia.com{{URL}}" />
-
-<meta name="description" content="{{META_DESCRIPTION}}" />
-<meta name="keywords" content="{{META_KEYWORDS}}" />
-<meta name="author" content="buenosdia.com" />
-
-<!-- Open Graph -->
-<meta property="og:type" content="article" />
-<meta property="og:title" content="{{OG_TITLE}}" />
-<meta property="og:description" content="{{OG_DESCRIPTION}}" />
-<meta property="og:url" content="https://buenosdia.com{{URL}}" />
-<meta property="og:image" content="https://buenosdia.com/img/og-default.webp" />
-<meta property="og:site_name" content="Buenos días de verdad" />
-
-<!-- Twitter -->
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="{{OG_TITLE}}" />
-<meta name="twitter:description" content="{{OG_DESCRIPTION}}" />
-<meta name="twitter:image" content="https://buenosdia.com/img/og-default.webp" />
-
-<!-- Favicon -->
-<link rel="icon" href="/favicon.ico" />
-<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>{{CATEGORY_NAME}} — {{SITE_TITLE}}</title>
+  <meta name="description" content="{{CATEGORY_DESCRIPTION_META}}">
+  {{SOCIAL_META}}
+  {{ADSENSE_HEAD}}
+  <link rel="stylesheet" href="/css/site.css">
+</head>
 <body>
-  <header class="top">
-    <div class="wrap topbar">
-      <a class="brand" href="/">
+<header class="top">
+  <div class="wrap">
+    <div class="topbar">
+      <div class="brand">
         <div class="logo">BD</div>
-        <div class="brandtxt">
+        <div>
           <div class="brandmini">{{SITE_BRAND}}</div>
-          <div class="brandname">{{SITE_TITLE}}</div>
+          <div class="brandname"><a href="/">{{SITE_TITLE}}</a></div>
         </div>
-      </a>
-
+      </div>
       <nav class="nav">
-        <a class="navbtn" href="/">Inicio</a>
+        <a class="navbtn primary" href="/">Inicio</a>
         <a class="navbtn" href="/contacto/">Contacto</a>
-        <a class="navlink" href="/privacidad/">Privacidad</a>
-        <a class="navlink" href="/cookies/">Cookies</a>
       </nav>
     </div>
+    <div class="pills">{{CATEGORIES_BAR}}</div>
+  </div>
+</header>
 
-    <div class="wrap chips">
-      {{CATEGORIES_BAR}}
+<main class="wrap one">
+  <div class="panel">
+    <div class="panelhead">
+      <h2>{{CATEGORY_NAME}}</h2>
+      <span class="muted">{{CATEGORY_POSTS_COUNT}} publicaciones</span>
     </div>
-  </header>
-
-  <main class="wrap page">
-    <section class="hero">
-      <div class="heromini">CATEGORÍA</div>
-      <h1 class="herotitle">{{CATEGORY_NAME}}</h1>
-      <div class="herodesc">
-        {{CATEGORY_DESCRIPTION_VISIBLE}}
-      </div>
-    </section>
-
-    <section class="grid">
-      <div class="card">
-        <div class="cardhead">
-          <h2>Publicaciones</h2>
-          <div class="muted">{{CATEGORY_POSTS_COUNT}} publicaciones</div>
-        </div>
-
-        <div class="list">
-          {{CATEGORY_POSTS_LIST}}
-        </div>
-      </div>
-
-      <aside class="side">
-        <div class="card">
-          <h3>¿Qué es esta categoría?</h3>
-          <p class="muted">
-            Si te pegó el título, entrá. Si te pegó el texto… quedate un rato.
-          </p>
-        </div>
-      </aside>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="wrap footrow">
-      <div>Hecho con <b>VOz</b>, para <b>VOS</b>.</div>
-      <div>Diseñado en 2025 · buenosdia.com</div>
+    <div>{{CATEGORY_DESCRIPTION_VISIBLE}}</div>
+    <div class="list" style="margin-top:12px">
+      {{CATEGORY_POSTS_LIST}}
     </div>
-  </footer>
+  </div>
+</main>
+
+<footer class="foot">
+  <div class="wrap footin">
+    <div class="muted">© {{YEAR}} {{SITE_TITLE}}</div>
+    <div class="muted">buenosdia.com</div>
+  </div>
+</footer>
+<script src="/js/site.js" defer></script>
 </body>
 </html>
