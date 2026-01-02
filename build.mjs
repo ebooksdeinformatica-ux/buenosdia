@@ -22,12 +22,24 @@ const SRC_TEMPLATES = path.join(ROOT, "templates");
 const SRC_DATA = path.join(ROOT, "data");
 const DIST = path.join(ROOT, "dist");
 
+const RAW_SITE_URL = (process.env.SITE_URL || "https://buenosdia.com").replace(/\/+$/,"");
+const BASE_PATH = (process.env.BASE_PATH || "").trim().replace(/\/+$/,"");
 const SITE = {
   name: "BUENOSDIA.COM",
-  url: (process.env.SITE_URL || "https://buenosdia.com").replace(/\/+$/,""),
+  origin: RAW_SITE_URL,
+  basePath: BASE_PATH,
+  // url = origin + basePath (si existe)
+  url: (RAW_SITE_URL + (BASE_PATH ? BASE_PATH : "")),
   lang: "es-AR",
   author: "buenosdia.com",
 };
+
+function withBase(p){
+  if (!p) return p;
+  if (!p.startsWith("/")) return (SITE.basePath ? `${SITE.basePath}/` : "/") + p;
+  return (SITE.basePath ? `${SITE.basePath}${p}` : p);
+}
+
 
 const NOW = new Date();
 const YEAR = String(NOW.getFullYear());
@@ -190,14 +202,14 @@ function ensureTemplates() {
 <meta property="og:type" content="website">
 <meta property="og:url" content="{{CANONICAL}}">
 <meta name="twitter:card" content="summary">
-<link rel="stylesheet" href="/css/site.css">
+<link rel="stylesheet" href="{{BASE}}/css/site.css">
 </head>
 <body>
 <header class="top">
-  <a class="brand" href="/"><span class="logo">BD</span> <strong>BUENOSDIA.COM</strong></a>
+  <a class="brand" href="{{BASE}}/"><span class="logo">BD</span> <strong>BUENOSDIA.COM</strong></a>
   <nav class="nav">
-    <a href="/">Inicio</a>
-    <a href="/contacto/">Contacto</a>
+    <a href="{{BASE}}/">Inicio</a>
+    <a href="{{BASE}}/contacto/">Contacto</a>
   </nav>
   <div class="social">
     <a href="#" rel="nofollow">Instagram</a>
@@ -238,7 +250,7 @@ function ensureTemplates() {
     <p>Diseñado en {{YEAR}} — buenosdia.com</p>
   </footer>
 </main>
-<script src="/js/site.js" defer></script>
+<script src="{{BASE}}/js/site.js" defer></script>
 </body>
 </html>`,
 
@@ -256,14 +268,14 @@ function ensureTemplates() {
 <meta property="og:type" content="website">
 <meta property="og:url" content="{{CANONICAL}}">
 <meta name="twitter:card" content="summary">
-<link rel="stylesheet" href="/css/site.css">
+<link rel="stylesheet" href="{{BASE}}/css/site.css">
 </head>
 <body>
 <header class="top">
-  <a class="brand" href="/"><span class="logo">BD</span> <strong>BUENOSDIA.COM</strong></a>
+  <a class="brand" href="{{BASE}}/"><span class="logo">BD</span> <strong>BUENOSDIA.COM</strong></a>
   <nav class="nav">
-    <a href="/">Inicio</a>
-    <a href="/contacto/">Contacto</a>
+    <a href="{{BASE}}/">Inicio</a>
+    <a href="{{BASE}}/contacto/">Contacto</a>
   </nav>
 </header>
 
@@ -281,7 +293,7 @@ function ensureTemplates() {
     <p>Diseñado en {{YEAR}} — buenosdia.com</p>
   </footer>
 </main>
-<script src="/js/site.js" defer></script>
+<script src="{{BASE}}/js/site.js" defer></script>
 </body>
 </html>`,
 
@@ -293,14 +305,14 @@ function ensureTemplates() {
 <title>{{TITLE}}</title>
 <meta name="description" content="{{DESCRIPTION}}">
 <link rel="canonical" href="{{CANONICAL}}">
-<link rel="stylesheet" href="/css/site.css">
+<link rel="stylesheet" href="{{BASE}}/css/site.css">
 </head>
 <body>
 <header class="top">
-  <a class="brand" href="/"><span class="logo">BD</span> <strong>BUENOSDIA.COM</strong></a>
+  <a class="brand" href="{{BASE}}/"><span class="logo">BD</span> <strong>BUENOSDIA.COM</strong></a>
   <nav class="nav">
-    <a href="/">Inicio</a>
-    <a href="/contacto/">Contacto</a>
+    <a href="{{BASE}}/">Inicio</a>
+    <a href="{{BASE}}/contacto/">Contacto</a>
   </nav>
 </header>
 
@@ -324,13 +336,13 @@ function ensureTemplates() {
 <title>{{TITLE}}</title>
 <meta name="description" content="{{DESCRIPTION}}">
 <link rel="canonical" href="{{CANONICAL}}">
-<link rel="stylesheet" href="/css/site.css">
+<link rel="stylesheet" href="{{BASE}}/css/site.css">
 </head>
 <body>
 <header class="top">
-  <a class="brand" href="/"><span class="logo">BD</span> <strong>BUENOSDIA.COM</strong></a>
+  <a class="brand" href="{{BASE}}/"><span class="logo">BD</span> <strong>BUENOSDIA.COM</strong></a>
   <nav class="nav">
-    <a href="/">Inicio</a>
+    <a href="{{BASE}}/">Inicio</a>
   </nav>
 </header>
 <main class="wrap">
@@ -364,12 +376,13 @@ function loadTemplates() {
 function replaceAll(template, map) {
   let out = template;
   const compatMap = { ...map };
+  if (!('BASE' in compatMap)) compatMap.BASE = SITE.basePath;
   if (map.CATEGORIES_PILLS && !map.CATEGORIES_BAR) compatMap.CATEGORIES_BAR = map.CATEGORIES_PILLS;
   for (const [k, v] of Object.entries(compatMap)) {
-    const re = new RegExp(`\\{\\{${k}\\}\\}`, "g");
+    const re = new RegExp(`\{\{${k}\}\}`, "g");
     out = out.replace(re, String(v ?? ""));
   }
-  out = out.replace(/\\{\\{[A-Z0-9_]+\\}\\}/g, "");
+  out = out.replace(/\{\{[A-Z0-9_]+\}\}/g, "");
   return out;
 }
 
@@ -433,7 +446,7 @@ function displayCategory(cat, cfg) {
 
 function buildPills(categories, cfg) {
   return categories.map(cat => {
-    const href = `/categories/${encodeURIComponent(cat)}/`;
+    const href = withBase(`/categories/${encodeURIComponent(cat)}/`);
     return `<a class="pill" href="${href}">${escapeHtml(displayCategory(cat, cfg))}</a>`;
   }).join("");
 }
@@ -456,7 +469,7 @@ function renderTopTags(posts, limit=20) {
   const top = [...counts.entries()].sort((a,b)=>b[1]-a[1]).slice(0, limit);
   if (!top.length) return `<p>Todavía no hay etiquetas.</p>`;
   return `<div class="tagcloud">` + top.map(([t,c]) => {
-    const href = `/tags/${encodeURIComponent(slugify(t))}/`;
+    const href = withBase(`/tags/${encodeURIComponent(slugify(t))}/`);
     return `<a class="tag" href="${href}">${escapeHtml(t)} <span class="muted">(${c})</span></a>`;
   }).join(" ") + `</div>`;
 }
@@ -497,9 +510,9 @@ function renderCategoryBlocks(categories, posts, cfg) {
       ? `<ul class="mini">${chosen.map(p=>`<li><a href="${p.url}">${escapeHtml(p.title)}</a></li>`).join("")}</ul>`
       : `<p class="muted">Todavía no hay posts en esta categoría.</p>`;
     return `<div class="catblock">
-      <div class="cathead"><a href="/categories/${encodeURIComponent(cat)}/">${escapeHtml(displayCategory(cat, cfg))}</a> <span class="muted">(${catPosts.length})</span></div>
+      <div class="cathead"><a href="${withBase(`/categories/${encodeURIComponent(cat)}/`)}">${escapeHtml(displayCategory(cat, cfg))}</a> <span class="muted">(${catPosts.length})</span></div>
       ${list}
-      <div class="more"><a href="/categories/${encodeURIComponent(cat)}/">Ver más</a></div>
+      <div class="more"><a href="${withBase(`/categories/${encodeURIComponent(cat)}/`)}">Ver más</a></div>
     </div>`;
   }).join("");
 
@@ -828,6 +841,10 @@ function main() {
   writeText(path.join(DIST, "sitemap.xml"), buildSitemap(sitemapUrls));
   writeText(path.join(DIST, "robots.txt"), buildRobots());
   writeText(path.join(DIST, "categories.json"), JSON.stringify(categoryMeta, null, 2));
+
+  // GitHub Pages: CNAME (dominio propio)
+  const cd = (process.env.CUSTOM_DOMAIN || "").trim();
+  if (cd) writeText(path.join(DIST, "CNAME"), cd + "\n");
 
   console.log(`✅ Build OK: ${posts.length} posts | ${categories.length} categories | ${tagMap.size} tags`);
   console.log(`🔎 SEO: /sitemap.xml y /robots.txt regenerados`);
