@@ -560,6 +560,67 @@ function makeInlineInterlinkParagraph(relTwo) {
   return `<p class="intext-links">Si hoy venís con lo puesto, capaz te pega leer <a href="${a.url}">${escapeHtml(a.title)}</a> y después caer en <a href="${b.url}">${escapeHtml(b.title)}</a>. No es obligación. Es compañía.</p>`;
 }
 
+
+function escapeRegExp(s){ return String(s).replace(/[.*+?^${}()|[\]\\]/g, "\\$&"); }
+
+function linkKeywordInHtml(html, keyword, url, max=1){
+  if (!keyword || !url) return { html, used: 0 };
+  const kw = String(keyword).trim();
+  if (!kw) return { html, used: 0 };
+
+  // Split by existing <a ...>...</a> blocks so we don't nest links
+  const parts = html.split(/(<a\b[\s\S]*?<\/a>)/ig);
+  let used = 0;
+
+  const kwRe = new RegExp(`\\b${escapeRegExp(kw)}\\b`, "i");
+
+  function replaceInTextNodes(segment){
+    // Replace only inside text nodes between tags: >TEXT<
+    return segment.replace(/>([^<]+)</g, (m0, txt) => {
+      if (used >= max) return m0;
+      if (!kwRe.test(txt)) return m0;
+
+      const newTxt = txt.replace(kwRe, (hit) => {
+        if (used >= max) return hit;
+        used += 1;
+        return `<a href="${url}">${hit}</a>`;
+      });
+      return `>${newTxt}<`;
+    });
+  }
+
+  const out = parts.map(p => {
+    if (/^<a\b/i.test(p)) return p;
+    if (used >= max) return p;
+    return replaceInTextNodes(p);
+  }).join("");
+
+  return { html: out, used };
+}
+
+function linkTwoInternalKeywords(html, post, relTwo){
+  if (!relTwo || relTwo.length < 2) return { html, linked: 0 };
+
+  const text = cleanHtmlToText(html);
+  const kws = topKeywords([`${post.title} ${post.excerpt} ${post.description} ${text}`], 12);
+
+  // pick 2 keywords that actually appear
+  const lower = text.toLowerCase();
+  const pick = [];
+  for (const k of kws) {
+    if (pick.length >= 2) break;
+    if (!k || k.length < 4) continue;
+    if (lower.includes(String(k).toLowerCase())) pick.push(k);
+  }
+  if (pick.length < 2) return { html, linked: 0 };
+
+  let r1 = linkKeywordInHtml(html, pick[0], relTwo[0].url, 1);
+  let r2 = linkKeywordInHtml(r1.html, pick[1], relTwo[1].url, 1);
+
+  return { html: r2.html, linked: r1.used + r2.used };
+}
+
+
 function makeTeInteresaBlock(relPosts) {
   if (!relPosts.length) return "";
   return `<div class="teinteresa">
@@ -603,8 +664,18 @@ function injectAutoSeoAndLinks(html, post, allPosts) {
   }
 
   const rel = relatedPostsFor(post, allPosts, 8);
-  const paragraph = makeInlineInterlinkParagraph(rel);
 
+// ✅ Interlink dentro de párrafos existentes: linkea 2 palabras clave del texto hacia 2 posts relacionados
+let linked = 0;
+if (rel.length >= 2) {
+  const res = linkTwoInternalKeywords(html, post, rel.slice(0,2));
+  html = res.html;
+  linked = res.linked;
+}
+
+// Fallback seguro: si no pudo linkear 2 palabras, insertamos el párrafo inline (backup)
+if (linked < 2) {
+  const paragraph = makeInlineInterlinkParagraph(rel);
   if (paragraph && !html.includes('class="intext-links"')) {
     if (/<p[^>]*>[\s\S]*?<\/p>/i.test(html)) {
       html = html.replace(/(<p[^>]*>[\s\S]*?<\/p>)/i, `$1\n${paragraph}`);
@@ -612,9 +683,10 @@ function injectAutoSeoAndLinks(html, post, allPosts) {
       html = html.replace(/<body[^>]*>/i, match => `${match}\n${paragraph}`);
     }
   }
+}
 
-  const teInteresa = makeTeInteresaBlock(rel);
-  if (/\{\{TE_INTERESA\}\}|\{\{RELATED_POSTS\}\}|<!--\s*TE_INTERESA\s*-->/i.test(html)) {
+const teInteresa = makeTeInteresaBlock(rel);
+if (/\{\{TE_INTERESA\}\}|\{\{RELATED_POSTS\}\}|<!--\s*TE_INTERESA\s*-->/i.test(html)) {
     html = html
       .replace(/\{\{TE_INTERESA\}\}/gi, teInteresa)
       .replace(/\{\{RELATED_POSTS\}\}/gi, teInteresa)
