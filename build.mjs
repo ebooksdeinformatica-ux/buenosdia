@@ -35,8 +35,8 @@ const SITE = {
 };
 
 const BRAND = {
-  title: process.env.SITE_TITLE || "BuenosDías2560",
-  brand: process.env.SITE_BRAND || "BUENOSDIAS2560",
+  title: process.env.SITE_TITLE || "BuenosDia",
+  brand: process.env.SITE_BRAND || "BD",
   tagline: process.env.SITE_TAGLINE || "Buenos días de verdad.",
 };
 
@@ -825,6 +825,21 @@ function main() {
     if (exists(src)) { ensureDir(dst); copyDir(src, dst); }
   }
 
+  // Copy favicons to root for maximum compatibility (some browsers look for /favicon.ico)
+  const favs = [
+    "favicon.ico",
+    "favicon.svg",
+    "apple-touch-icon.png",
+    "favicon-32x32.png",
+    "favicon-16x16.png"
+  ];
+  for (const f of favs) {
+    const src = path.join(DIST, "img", f);
+    const dst = path.join(DIST, f);
+    if (exists(src)) fs.copyFileSync(src, dst);
+  }
+
+
   const posts = scanPosts();
   const cfg = readCategoriesConfig();
   const categories = buildCategoryList(posts, cfg);
@@ -865,7 +880,7 @@ function main() {
     SITE_TAGLINE: BRAND.tagline,
     SOCIAL_META: buildSocialMeta("Contacto — " + BRAND.title, "Contacto directo con buenosdia.com", `${SITE.url}/contacto/`),
     ADSENSE_HEAD: "",
-    TITLE: "Contacto — buenosdia.com",
+    TITLE: `Contacto — ${BRAND.title}`,
     DESCRIPTION: "Contacto directo con buenosdia.com",
     CANONICAL: `${SITE.url}/contacto/`,
     CATEGORIES_PILLS: pills,
@@ -882,7 +897,7 @@ function main() {
     const catPosts = posts.filter(p => p.category === cat);
     const pretty = displayCategory(cat, cfg);
     const seoDesc = (cfg && cfg[cat] && cfg[cat].description) ? cfg[cat].description : buildCategorySeoDescription(pretty, catPosts);
-    const catTitle = `${pretty} — buenosdia.com`;
+    const catTitle = `${pretty} — ${BRAND.title}`;
     const canonical = `${SITE.url}/categories/${encodeURIComponent(cat)}/`;
 
     categoryMeta[cat] = { name: cat, display: pretty, description: seoDesc, count: catPosts.length, updatedAt: NOW.toISOString() };
@@ -927,7 +942,7 @@ function main() {
 
   for (const [k, obj] of tagMap.entries()) {
     const canonical = `${SITE.url}/tags/${encodeURIComponent(k)}/`;
-    const title = `${obj.tag} — etiquetas — buenosdia.com`;
+    const title = `${obj.tag} — etiquetas — ${BRAND.title}`;
     const desc = `Lecturas que tocan: ${obj.tag}. ${obj.posts.length} publicaciones, sin humo.`;
     const html = replaceAll(tpl.tag, {
       LANG: SITE.lang,
