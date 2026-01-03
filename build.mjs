@@ -16,12 +16,6 @@
 import fs from "node:fs";
 import path from "node:path";
 
-// CLI flags (cross-platform)
-// - --sync-root : after generating /dist, copy the built site into repository root
-//   so GitHub Pages can serve it when configured as: main /(root)
-const CLI_ARGS = new Set(process.argv.slice(2));
-const SYNC_TO_ROOT = CLI_ARGS.has("--sync-root") || CLI_ARGS.has("--sync");
-
 const ROOT = process.cwd();
 const SRC_POSTS = path.join(ROOT, "posts");
 const SRC_TEMPLATES = path.join(ROOT, "templates");
@@ -729,17 +723,6 @@ function copyDir(src, dst) {
   }
 }
 
-// Copy the built site from /dist to repo root.
-// This is useful when GitHub Pages is set to "Deploy from a branch" and folder "/(root)".
-function syncDistToRoot() {
-  for (const ent of fs.readdirSync(DIST, { withFileTypes: true })) {
-    const a = path.join(DIST, ent.name);
-    const b = path.join(ROOT, ent.name);
-    if (ent.isDirectory()) copyDir(a, b);
-    else fs.copyFileSync(a, b);
-  }
-}
-
 function copyPostsAuto(posts) {
   if (!exists(SRC_POSTS)) return;
   const dstRoot = path.join(DIST, "posts");
@@ -859,15 +842,9 @@ function main() {
   writeText(path.join(DIST, "robots.txt"), buildRobots());
   writeText(path.join(DIST, "categories.json"), JSON.stringify(categoryMeta, null, 2));
 
-  // Avoid Jekyll processing on GitHub Pages
-  writeText(path.join(DIST, ".nojekyll"), "");
-
   // GitHub Pages: CNAME (dominio propio)
   const cd = (process.env.CUSTOM_DOMAIN || "").trim();
   if (cd) writeText(path.join(DIST, "CNAME"), cd + "\n");
-
-  // Optional: sync output to repo root for GitHub Pages (main /(root))
-  if (SYNC_TO_ROOT) syncDistToRoot();
 
   console.log(`✅ Build OK: ${posts.length} posts | ${categories.length} categories | ${tagMap.size} tags`);
   console.log(`🔎 SEO: /sitemap.xml y /robots.txt regenerados`);
