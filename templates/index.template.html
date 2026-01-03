@@ -3,26 +3,32 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>{{SITE_TITLE}}</title>
-  <meta name="description" content="{{SITE_TAGLINE}}">
+  <title>{{TITLE}}</title>
+  <meta name="description" content="{{DESCRIPTION}}">
   {{SOCIAL_META}}
   {{ADSENSE_HEAD}}
-  <link rel="stylesheet" href="/css/site.css">
+  <link rel="stylesheet" href="{{BASE}}/css/site.css">
+  <link rel="icon" href="{{BASE}}/img/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="{{BASE}}/img/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{BASE}}/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{BASE}}/img/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{BASE}}/img/apple-touch-icon.png">
+  <meta name="theme-color" content="#ffffff">
 </head>
 <body>
 <header class="top">
   <div class="wrap">
     <div class="topbar">
       <div class="brand">
-        <div class="logo">BD</div>
+        <img class="logoimg" src="{{BASE}}/img/logo.svg" alt="{{SITE_TITLE}}">
         <div>
           <div class="brandmini">{{SITE_BRAND}}</div>
           <div class="brandname">{{SITE_TITLE}}</div>
         </div>
       </div>
       <nav class="nav">
-        <a class="navbtn primary" href="/">Inicio</a>
-        <a class="navbtn" href="/contacto/">Contacto</a>
+        <a class="navbtn primary" href="{{BASE}}/">Inicio</a>
+        <a class="navbtn" href="{{BASE}}/contacto/">Contacto</a>
       </nav>
       <div class="social">
         <a href="https://instagram.com/" rel="noopener" target="_blank">Instagram</a>
@@ -63,6 +69,15 @@
         {{TAGS_LIST}}
       </div>
     </aside>
+
+    <section class="panel" style="grid-column:1 / -1">
+      <div class="panelhead">
+        <h2>Categorías</h2>
+        <span class="muted">{{CATEGORIES_COUNT}} categorías</span>
+      </div>
+      {{CATEGORY_BLOCKS}}
+    </section>
+
   </section>
 
   <section class="one">
@@ -83,6 +98,6 @@
   </div>
 </footer>
 
-<script src="/js/site.js" defer></script>
+<script src="{{BASE}}/js/site.js" defer></script>
 </body>
 </html>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="80" viewBox="0 0 320 80">
+  <defs>
+    <style>
+      .s{stroke:#0b1220;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;fill:none}
+      .t1{font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;font-weight:900;font-size:28px;fill:#0b1220}
+      .t2{font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;font-weight:700;font-size:12px;letter-spacing:.2em;fill:#64748b}
+    </style>
+  </defs>
+  <!-- Sun mark -->
+  <g transform="translate(40,40)">
+    <circle r="14" class="s"/>
+    <line x1="0" y1="-26" x2="0" y2="-18" class="s"/>
+    <line x1="18.4" y1="-18.4" x2="12.7" y2="-12.7" class="s"/>
+    <line x1="26" y1="0" x2="18" y2="0" class="s"/>
+    <line x1="18.4" y1="18.4" x2="12.7" y2="12.7" class="s"/>
+    <line x1="0" y1="26" x2="0" y2="18" class="s"/>
+    <line x1="-18.4" y1="18.4" x2="-12.7" y2="12.7" class="s"/>
+    <line x1="-26" y1="0" x2="-18" y2="0" class="s"/>
+    <line x1="-18.4" y1="-18.4" x2="-12.7" y2="-12.7" class="s"/>
+    <line x1="-20" y1="16" x2="20" y2="16" class="s"/>
+  </g>
+  <text x="80" y="40" class="t2">BUENOSDIAS2560</text>
+  <text x="80" y="64" class="t1">buenosdia.com</text>
+</svg>

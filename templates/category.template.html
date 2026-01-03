@@ -7,22 +7,28 @@
   <meta name="description" content="{{CATEGORY_DESCRIPTION_META}}">
   {{SOCIAL_META}}
   {{ADSENSE_HEAD}}
-  <link rel="stylesheet" href="/css/site.css">
+  <link rel="stylesheet" href="{{BASE}}/css/site.css">
+  <link rel="icon" href="{{BASE}}/img/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="{{BASE}}/img/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{BASE}}/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{BASE}}/img/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{BASE}}/img/apple-touch-icon.png">
+  <meta name="theme-color" content="#ffffff">
 </head>
 <body>
 <header class="top">
   <div class="wrap">
     <div class="topbar">
       <div class="brand">
-        <div class="logo">BD</div>
+        <img class="logoimg" src="{{BASE}}/img/logo.svg" alt="{{SITE_TITLE}}">
         <div>
           <div class="brandmini">{{SITE_BRAND}}</div>
-          <div class="brandname"><a href="/">{{SITE_TITLE}}</a></div>
+          <div class="brandname"><a href="{{BASE}}/">{{SITE_TITLE}}</a></div>
         </div>
       </div>
       <nav class="nav">
-        <a class="navbtn primary" href="/">Inicio</a>
-        <a class="navbtn" href="/contacto/">Contacto</a>
+        <a class="navbtn primary" href="{{BASE}}/">Inicio</a>
+        <a class="navbtn" href="{{BASE}}/contacto/">Contacto</a>
       </nav>
     </div>
     <div class="pills">{{CATEGORIES_BAR}}</div>
@@ -48,6 +54,6 @@
     <div class="muted">buenosdia.com</div>
   </div>
 </footer>
-<script src="/js/site.js" defer></script>
+<script src="{{BASE}}/js/site.js" defer></script>
 </body>
 </html>
