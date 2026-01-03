@@ -23,12 +23,6 @@ code{background:var(--soft);border:1px solid var(--line);padding:2px 6px;border-
   display:grid;place-items:center;
   font-weight:900;background:#fff
 }
-
-.logoimg{
-  width:40px;height:40px;
-  display:block;
-}
-
 .brandmini{font-size:12px;letter-spacing:.12em;color:var(--muted)}
 .brandname{font-weight:900;font-size:18px;line-height:1.1}
 
@@ -151,3 +145,5 @@ code{background:var(--soft);border:1px solid var(--line);padding:2px 6px;border-
 /* BUENOSDIAS2560 v4 additions */
 .intext-links{margin-top:10px}
 .intext-links a{text-decoration:underline}
+
+.logo img{width:22px;height:22px;display:block}

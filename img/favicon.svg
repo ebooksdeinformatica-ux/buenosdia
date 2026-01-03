@@ -1,22 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
-  <defs>
-    <style>
-      .s{stroke:#0b1220;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;fill:none}
-    </style>
-  </defs>
-  <g transform="translate(32,30)">
-    <circle r="12" class="s"/>
-    <!-- rays -->
-    <line x1="0" y1="-28" x2="0" y2="-18" class="s"/>
-    <line x1="20" y1="-20" x2="14" y2="-14" class="s"/>
-    <line x1="28" y1="0" x2="18" y2="0" class="s"/>
-    <line x1="20" y1="20" x2="14" y2="14" class="s"/>
-    <line x1="0" y1="28" x2="0" y2="18" class="s"/>
-    <line x1="-20" y1="20" x2="-14" y2="14" class="s"/>
-    <line x1="-28" y1="0" x2="-18" y2="0" class="s"/>
-    <line x1="-20" y1="-20" x2="-14" y2="-14" class="s"/>
-    <!-- horizon -->
-    <line x1="-22" y1="16" x2="22" y2="16" class="s"/>
-  </g>
+<rect x="1" y="1" width="62" height="62" rx="31" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
+<text x="32" y="40" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="24" font-weight="800" fill="#0b1220">BD</text>
 </svg>

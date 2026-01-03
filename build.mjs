@@ -25,35 +25,14 @@ const DIST = path.join(ROOT, "dist");
 const RAW_SITE_URL = (process.env.SITE_URL || "https://buenosdia.com").replace(/\/+$/,"");
 const BASE_PATH = (process.env.BASE_PATH || "").trim().replace(/\/+$/,"");
 const SITE = {
-  name: "BUENOSDIA.COM",
+  name: "BuenosDia",
   origin: RAW_SITE_URL,
   basePath: BASE_PATH,
   // url = origin + basePath (si existe)
   url: (RAW_SITE_URL + (BASE_PATH ? BASE_PATH : "")),
   lang: "es-AR",
-  author: "buenosdia.com",
+  author: "BuenosDia",
 };
-
-const BRAND = {
-  title: process.env.SITE_TITLE || "BuenosDia",
-  brand: process.env.SITE_BRAND || "BD",
-  tagline: process.env.SITE_TAGLINE || "Buenos días de verdad.",
-};
-
-function buildSocialMeta(title, description, canonical){
-  const t = escapeHtml(title);
-  const d = escapeHtml(description);
-  const c = canonical;
-  return [
-    `<meta property="og:title" content="${t}">`,
-    `<meta property="og:description" content="${d}">`,
-    `<meta property="og:type" content="website">`,
-    `<meta property="og:url" content="${c}">`,
-    `<meta name="twitter:card" content="summary">`,
-    `<meta name="twitter:title" content="${t}">`,
-    `<meta name="twitter:description" content="${d}">`,
-  ].join("\n");
-}
 
 function withBase(p){
   if (!p) return p;
@@ -399,6 +378,8 @@ function replaceAll(template, map) {
   const compatMap = { ...map };
   if (!('BASE' in compatMap)) compatMap.BASE = SITE.basePath;
   if (map.CATEGORIES_PILLS && !map.CATEGORIES_BAR) compatMap.CATEGORIES_BAR = map.CATEGORIES_PILLS;
+  if (map.LATEST_POSTS && !map.POSTS_GRID) compatMap.POSTS_GRID = map.LATEST_POSTS;
+  if (map.TOP_TAGS && !map.TAGS_LIST) compatMap.TAGS_LIST = map.TOP_TAGS;
   for (const [k, v] of Object.entries(compatMap)) {
     const re = new RegExp(`\{\{${k}\}\}`, "g");
     out = out.replace(re, String(v ?? ""));
@@ -493,61 +474,6 @@ function renderTopTags(posts, limit=20) {
     const href = withBase(`/tags/${encodeURIComponent(slugify(t))}/`);
     return `<a class="tag" href="${href}">${escapeHtml(t)} <span class="muted">(${c})</span></a>`;
   }).join(" ") + `</div>`;
-}
-
-function formatDateAR(dt){
-  try{
-    const d = new Date(dt);
-    const dd = String(d.getDate()).padStart(2,"0");
-    const mm = String(d.getMonth()+1).padStart(2,"0");
-    const yy = d.getFullYear();
-    return `${dd}/${mm}/${yy}`;
-  }catch{ return ""; }
-}
-
-function renderPostGrid(posts, cfg){
-  if (!posts.length) return `<div class="empty">Todavía no hay publicaciones.</div>`;
-  return posts.map(p => {
-    const cat = displayCategory(p.category, cfg);
-    const meta = `${escapeHtml(cat)} · ${formatDateAR(p.lastmod)}`;
-    const d = (p.excerpt || p.description || "").trim();
-    const desc = d ? escapeHtml(d.slice(0, 150)) + (d.length>150 ? "…" : "") : "";
-    return `<article class="card">
-      <a class="card-link" href="${p.url}">
-        <div class="meta">${meta}</div>
-        <div class="title">${escapeHtml(p.title)}</div>
-        ${desc ? `<div class="desc">${desc}</div>` : ``}
-      </a>
-    </article>`;
-  }).join("");
-}
-
-function renderTagList(posts, limit=24){
-  const counts = new Map();
-  for (const p of posts) for (const t of (p.tags||[])) counts.set(t, (counts.get(t)||0)+1);
-  const top = [...counts.entries()].sort((a,b)=>b[1]-a[1]).slice(0, limit);
-  if (!top.length) return `<div class="empty">Todavía no hay etiquetas.</div>`;
-  return top.map(([t,c]) => {
-    const href = withBase(`/tags/${encodeURIComponent(slugify(t))}/`);
-    return `<a class="tag" href="${href}"><span class="tagname">${escapeHtml(t)}</span><span class="tagcount">${c}</span></a>`;
-  }).join("");
-}
-
-function renderListItems(posts, cfg){
-  if (!posts.length) return `<div class="empty">Todavía no hay publicaciones.</div>`;
-  return posts.map(p => {
-    const cat = displayCategory(p.category, cfg);
-    const meta = `${escapeHtml(cat)} · ${formatDateAR(p.lastmod)}`;
-    const d = (p.excerpt || p.description || "").trim();
-    const desc = d ? escapeHtml(d.slice(0, 160)) + (d.length>160 ? "…" : "") : "";
-    return `<div class="list-item">
-      <a href="${p.url}">
-        <div class="meta">${meta}</div>
-        <div class="title">${escapeHtml(p.title)}</div>
-        ${desc ? `<div class="desc">${desc}</div>` : ``}
-      </a>
-    </div>`;
-  }).join("");
 }
 
 function seededShuffle(arr, seedStr) {
@@ -722,7 +648,7 @@ function makeTeInteresaBlock(relPosts) {
 
 function injectAutoSeoAndLinks(html, post, allPosts) {
   const canonical = post.url;
-  const title = post.title || BRAND.title || "buenosdia.com";
+  const title = post.title || "buenosdia.com";
   const firstP = extractFirstParagraphText(html);
   const desc = extractMeta(html, "description") || sentenceSummaries(firstP || cleanHtmlToText(html), 160);
   const kw = extractMeta(html, "keywords") || topKeywords([`${title} ${firstP} ${desc}`], 10).join(", ");
@@ -825,65 +751,34 @@ function main() {
     if (exists(src)) { ensureDir(dst); copyDir(src, dst); }
   }
 
-  // Copy favicons to root for maximum compatibility (some browsers look for /favicon.ico)
-  const favs = [
-    "favicon.ico",
-    "favicon.svg",
-    "apple-touch-icon.png",
-    "favicon-32x32.png",
-    "favicon-16x16.png"
-  ];
-  for (const f of favs) {
-    const src = path.join(DIST, "img", f);
-    const dst = path.join(DIST, f);
-    if (exists(src)) fs.copyFileSync(src, dst);
-  }
-
-
   const posts = scanPosts();
   const cfg = readCategoriesConfig();
   const categories = buildCategoryList(posts, cfg);
   const pills = buildPills(categories, cfg);
 
   const latest = posts.slice(0, 15);
-  const homeTitle = `${BRAND.title} — ${BRAND.tagline}`;
+  const homeTitle = "BuenosDia — Textos para mañanas reales";
   const homeDesc = "Textos cortos, reales y humanos para abrir el día. Hecho para leer rápido y sentir que te hablan a vos. Sin humo.";
   const homeHtml = replaceAll(tpl.index, {
     LANG: SITE.lang,
-    BASE: SITE.basePath,
-    SITE_TITLE: BRAND.title,
-    SITE_BRAND: BRAND.brand,
-    SITE_TAGLINE: BRAND.tagline,
-    SOCIAL_META: buildSocialMeta(homeTitle, homeDesc, `${SITE.url}/`),
-    ADSENSE_HEAD: "",
     TITLE: homeTitle,
     DESCRIPTION: homeDesc,
     KEYWORDS: "buenos días, textos, mañana, motivación real, ansiedad, ánimo, esperanza",
     CANONICAL: `${SITE.url}/`,
     CATEGORIES_PILLS: pills,
-    POSTS_COUNT: posts.length,
-    POSTS_GRID: renderPostGrid(latest, cfg),
-    TAGS_LIST: renderTagList(posts, 24),
-    CATEGORIES_COUNT: categories.length,
     LATEST_POSTS: renderPostList(latest),
     TOP_TAGS: renderTopTags(posts),
     CATEGORY_BLOCKS: renderCategoryBlocks(categories, posts, cfg),
+    POSTS_COUNT: posts.length,
     YEAR,
   });
   writeText(path.join(DIST, "index.html"), homeHtml);
 
   const contactHtml = replaceAll(tpl.contact, {
     LANG: SITE.lang,
-    BASE: SITE.basePath,
-    SITE_TITLE: BRAND.title,
-    SITE_BRAND: BRAND.brand,
-    SITE_TAGLINE: BRAND.tagline,
-    SOCIAL_META: buildSocialMeta("Contacto — " + BRAND.title, "Contacto directo con buenosdia.com", `${SITE.url}/contacto/`),
-    ADSENSE_HEAD: "",
-    TITLE: `Contacto — ${BRAND.title}`,
+    TITLE: "Contacto — BuenosDia",
     DESCRIPTION: "Contacto directo con buenosdia.com",
     CANONICAL: `${SITE.url}/contacto/`,
-    CATEGORIES_PILLS: pills,
     YEAR,
   });
   writeText(path.join(DIST, "contacto", "index.html"), contactHtml);
@@ -897,35 +792,21 @@ function main() {
     const catPosts = posts.filter(p => p.category === cat);
     const pretty = displayCategory(cat, cfg);
     const seoDesc = (cfg && cfg[cat] && cfg[cat].description) ? cfg[cat].description : buildCategorySeoDescription(pretty, catPosts);
-    const catTitle = `${pretty} — ${BRAND.title}`;
+    const catTitle = `${pretty} — buenosdia.com`;
     const canonical = `${SITE.url}/categories/${encodeURIComponent(cat)}/`;
 
     categoryMeta[cat] = { name: cat, display: pretty, description: seoDesc, count: catPosts.length, updatedAt: NOW.toISOString() };
 
     const html = replaceAll(tpl.category, {
       LANG: SITE.lang,
-      BASE: SITE.basePath,
-      SITE_TITLE: BRAND.title,
-      SITE_BRAND: BRAND.brand,
-      SITE_TAGLINE: BRAND.tagline,
-      SOCIAL_META: buildSocialMeta(catTitle, seoDesc, canonical),
-      ADSENSE_HEAD: "",
       TITLE: catTitle,
       DESCRIPTION: seoDesc,
       KEYWORDS: [pretty, ...topKeywords(catPosts.map(p => `${p.title} ${p.excerpt} ${p.description}`), 8)].join(", "),
       CANONICAL: canonical,
       CATEGORIES_PILLS: pills,
-    POSTS_COUNT: posts.length,
-    POSTS_GRID: renderPostGrid(latest, cfg),
-    TAGS_LIST: renderTagList(posts, 24),
-    CATEGORIES_COUNT: categories.length,
       H1: pretty.toUpperCase(),
       CATEGORY_SEO_DESCRIPTION: seoDesc,
-      CATEGORY_NAME: pretty,
-      CATEGORY_POSTS_COUNT: catPosts.length,
-      CATEGORY_DESCRIPTION_META: seoDesc,
-      CATEGORY_DESCRIPTION_VISIBLE: `<p class="muted">${escapeHtml(seoDesc)}</p>`,
-      CATEGORY_POSTS_LIST: renderListItems(catPosts, cfg),
+      POST_LIST: renderPostList(catPosts),
       YEAR,
     });
 
@@ -942,24 +823,15 @@ function main() {
 
   for (const [k, obj] of tagMap.entries()) {
     const canonical = `${SITE.url}/tags/${encodeURIComponent(k)}/`;
-    const title = `${obj.tag} — etiquetas — ${BRAND.title}`;
+    const title = `${obj.tag} — etiquetas — buenosdia.com`;
     const desc = `Lecturas que tocan: ${obj.tag}. ${obj.posts.length} publicaciones, sin humo.`;
     const html = replaceAll(tpl.tag, {
       LANG: SITE.lang,
-      BASE: SITE.basePath,
-      SITE_TITLE: BRAND.title,
-      SITE_BRAND: BRAND.brand,
-      SITE_TAGLINE: BRAND.tagline,
-      SOCIAL_META: buildSocialMeta(title, desc, canonical),
-      ADSENSE_HEAD: "",
       TITLE: title,
       DESCRIPTION: desc,
       CANONICAL: canonical,
       H1: `Etiqueta: ${obj.tag}`,
-      CATEGORIES_PILLS: pills,
-      TAG_NAME: obj.tag,
-      TAG_POSTS_COUNT: obj.posts.length,
-      TAG_POSTS_LIST: renderListItems(obj.posts, cfg),
+      POST_LIST: renderPostList(obj.posts),
       YEAR,
     });
     writeText(path.join(DIST, "tags", k, "index.html"), html);

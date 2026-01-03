@@ -3,36 +3,31 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>#{{TAG_NAME}} — {{SITE_TITLE}}</title>
-  <meta name="description" content="Publicaciones etiquetadas con {{TAG_NAME}} en {{SITE_TITLE}}.">
+  <title>#{{TAG_NAME}} — BuenosDia</title>
+  <meta name="description" content="Publicaciones etiquetadas con {{TAG_NAME}} en BuenosDia.">
   {{SOCIAL_META}}
   {{ADSENSE_HEAD}}
-  <link rel="stylesheet" href="{{BASE}}/css/site.css">
-  <!-- favicon (root fallback) -->
-  <link rel="icon" href="{{BASE}}/favicon.ico" sizes="any">
-  <link rel="icon" type="image/svg+xml" href="{{BASE}}/favicon.svg">
-  <link rel="apple-touch-icon" sizes="180x180" href="{{BASE}}/apple-touch-icon.png">
   <link rel="icon" href="{{BASE}}/img/favicon.ico" sizes="any">
-  <link rel="icon" type="image/svg+xml" href="{{BASE}}/img/favicon.svg">
-  <link rel="icon" type="image/png" sizes="32x32" href="{{BASE}}/img/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="{{BASE}}/img/favicon-16x16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="{{BASE}}/img/apple-touch-icon.png">
+  <link rel="icon" href="{{BASE}}/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="{{BASE}}/img/apple-touch-icon.png">
   <meta name="theme-color" content="#ffffff">
+
+  <link rel="stylesheet" href="/css/site.css">
 </head>
 <body>
 <header class="top">
   <div class="wrap">
     <div class="topbar">
       <div class="brand">
-        <img class="logoimg" src="{{BASE}}/img/logo.svg" alt="{{SITE_TITLE}}">
+        <div class="logo"><img src="{{BASE}}/img/logo.svg" alt="BuenosDia" width="22" height="22"></div>
         <div>
           <div class="brandmini">{{SITE_BRAND}}</div>
-          <div class="brandname"><a href="{{BASE}}/">{{SITE_TITLE}}</a></div>
+          <div class="brandname"><a href="/">BuenosDia</a></div>
         </div>
       </div>
       <nav class="nav">
-        <a class="navbtn primary" href="{{BASE}}/">Inicio</a>
-        <a class="navbtn" href="{{BASE}}/contacto/">Contacto</a>
+        <a class="navbtn primary" href="/">Inicio</a>
+        <a class="navbtn" href="/contacto/">Contacto</a>
       </nav>
     </div>
     <div class="pills">{{CATEGORIES_BAR}}</div>
@@ -53,10 +48,10 @@
 
 <footer class="foot">
   <div class="wrap footin">
-    <div class="muted">© {{YEAR}} {{SITE_TITLE}}</div>
+    <div class="muted">© {{YEAR}} BuenosDia</div>
     <div class="muted">buenosdia.com</div>
   </div>
 </footer>
-<script src="{{BASE}}/js/site.js" defer></script>
+<script src="/js/site.js" defer></script>
 </body>
 </html>

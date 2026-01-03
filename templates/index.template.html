@@ -5,34 +5,31 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>{{TITLE}}</title>
   <meta name="description" content="{{DESCRIPTION}}">
+  <meta name="keywords" content="{{KEYWORDS}}">
+  <link rel="canonical" href="{{CANONICAL}}">
   {{SOCIAL_META}}
   {{ADSENSE_HEAD}}
-  <link rel="stylesheet" href="{{BASE}}/css/site.css">
-  <!-- favicon (root fallback) -->
-  <link rel="icon" href="{{BASE}}/favicon.ico" sizes="any">
-  <link rel="icon" type="image/svg+xml" href="{{BASE}}/favicon.svg">
-  <link rel="apple-touch-icon" sizes="180x180" href="{{BASE}}/apple-touch-icon.png">
   <link rel="icon" href="{{BASE}}/img/favicon.ico" sizes="any">
-  <link rel="icon" type="image/svg+xml" href="{{BASE}}/img/favicon.svg">
-  <link rel="icon" type="image/png" sizes="32x32" href="{{BASE}}/img/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="{{BASE}}/img/favicon-16x16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="{{BASE}}/img/apple-touch-icon.png">
+  <link rel="icon" href="{{BASE}}/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="{{BASE}}/img/apple-touch-icon.png">
   <meta name="theme-color" content="#ffffff">
+
+  <link rel="stylesheet" href="/css/site.css">
 </head>
 <body>
 <header class="top">
   <div class="wrap">
     <div class="topbar">
       <div class="brand">
-        <img class="logoimg" src="{{BASE}}/img/logo.svg" alt="{{SITE_TITLE}}">
+        <div class="logo"><img src="{{BASE}}/img/logo.svg" alt="BuenosDia" width="22" height="22"></div>
         <div>
           <div class="brandmini">{{SITE_BRAND}}</div>
-          <div class="brandname">{{SITE_TITLE}}</div>
+          <div class="brandname">BuenosDia</div>
         </div>
       </div>
       <nav class="nav">
-        <a class="navbtn primary" href="{{BASE}}/">Inicio</a>
-        <a class="navbtn" href="{{BASE}}/contacto/">Contacto</a>
+        <a class="navbtn primary" href="/">Inicio</a>
+        <a class="navbtn" href="/contacto/">Contacto</a>
       </nav>
       <div class="social">
         <a href="https://instagram.com/" rel="noopener" target="_blank">Instagram</a>
@@ -73,15 +70,6 @@
         {{TAGS_LIST}}
       </div>
     </aside>
-
-    <section class="panel" style="grid-column:1 / -1">
-      <div class="panelhead">
-        <h2>Categorías</h2>
-        <span class="muted">{{CATEGORIES_COUNT}} categorías</span>
-      </div>
-      {{CATEGORY_BLOCKS}}
-    </section>
-
   </section>
 
   <section class="one">
@@ -97,11 +85,11 @@
 
 <footer class="foot">
   <div class="wrap footin">
-    <div class="muted">© {{YEAR}} {{SITE_TITLE}}</div>
+    <div class="muted">© {{YEAR}} BuenosDia</div>
     <div class="muted">Buenos días de verdad.</div>
   </div>
 </footer>
 
-<script src="{{BASE}}/js/site.js" defer></script>
+<script src="/js/site.js" defer></script>
 </body>
 </html>
