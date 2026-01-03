@@ -1,0 +1,147 @@
+:root{
+  --bg:#ffffff;
+  --fg:#0b1220;
+  --muted:#64748b;
+  --line:#e5e7eb;
+  --soft:#f8fafc;
+}
+
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif}
+a{color:inherit;text-decoration:none}
+code{background:var(--soft);border:1px solid var(--line);padding:2px 6px;border-radius:8px}
+
+.wrap{max-width:1100px;margin:0 auto;padding:0 16px}
+
+.top{border-bottom:1px solid var(--line);background:#fff}
+.topbar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 0}
+
+.brand{display:flex;align-items:center;gap:12px}
+.logo{
+  width:40px;height:40px;border-radius:999px;
+  border:1px solid var(--line);
+  display:grid;place-items:center;
+  font-weight:900;background:#fff
+}
+.brandmini{font-size:12px;letter-spacing:.12em;color:var(--muted)}
+.brandname{font-weight:900;font-size:18px;line-height:1.1}
+
+.nav{display:flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:flex-end}
+.navbtn{
+  border:1px solid var(--line);
+  padding:8px 14px;border-radius:999px;
+  font-weight:700;background:#fff;
+}
+.navbtn.primary{background:var(--soft)}
+.social{display:flex;gap:10px;align-items:center}
+.social a{font-size:12px;color:var(--muted)}
+.social a:hover{color:var(--fg)}
+
+.pills{
+  display:flex;gap:10px;overflow:auto;
+  padding:10px 0 14px;
+  scrollbar-width:thin;
+}
+.pill{
+  white-space:nowrap;
+  border:1px solid var(--line);
+  background:#fff;
+  padding:8px 14px;border-radius:999px;
+  font-weight:700;color:#111827;
+}
+.pill:hover{background:var(--soft)}
+
+.grid{
+  display:grid;
+  grid-template-columns: 1.6fr .9fr;
+  gap:16px;
+  padding:18px 0 26px;
+}
+
+.hero{
+  grid-column:1 / -1;
+  border:1px solid var(--line);
+  border-radius:18px;
+  padding:18px 18px 16px;
+  background:#fff;
+}
+.kicker{font-size:12px;letter-spacing:.14em;color:var(--muted);margin-bottom:8px}
+.hero h1{margin:0 0 8px;font-size:42px;letter-spacing:-.02em}
+.lead{margin:0;color:#334155}
+
+.panel{
+  border:1px solid var(--line);
+  border-radius:18px;
+  background:#fff;
+  padding:14px;
+}
+.panel.soft{background:var(--soft)}
+.panelhead{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:10px}
+.panelhead h2,.panelhead h3{margin:0;font-size:16px}
+.muted{color:var(--muted)}
+
+.cards{display:grid;gap:10px}
+.card{
+  border:1px solid var(--line);
+  border-radius:14px;
+  background:#fff;
+}
+.card:hover{background:var(--soft)}
+.card-link{display:block;padding:12px}
+.meta{font-size:12px;color:var(--muted);letter-spacing:.04em}
+.title{font-weight:900;margin-top:4px;line-height:1.2}
+.desc{margin-top:6px;color:#334155}
+
+.tags{display:flex;flex-direction:column;gap:8px}
+.tag{
+  display:flex;align-items:center;justify-content:space-between;
+  border:1px solid var(--line);
+  border-radius:12px;
+  padding:10px 10px;
+  background:#fff;
+}
+.tag:hover{background:var(--soft)}
+.tagname{color:#0b1220;font-weight:700}
+.tagcount{
+  font-size:12px;color:var(--muted);
+  border:1px solid var(--line);
+  background:#fff;
+  padding:2px 8px;border-radius:999px;
+}
+
+.one{padding:18px 0 26px}
+.list{display:flex;flex-direction:column;gap:8px}
+.list-item{
+  border:1px solid var(--line);
+  border-radius:12px;
+  padding:10px 12px;
+  background:#fff;
+}
+.list-item:hover{background:var(--soft)}
+
+.empty{color:var(--muted);padding:8px 2px}
+
+.foot{border-top:1px solid var(--line);background:#fff}
+.footin{display:flex;justify-content:space-between;gap:12px;padding:16px 0;flex-wrap:wrap}
+
+@media (max-width:900px){
+  .grid{grid-template-columns:1fr}
+  .hero h1{font-size:34px}
+  .social{display:none}
+}
+
+
+/* BUENOSDIAS2560 v3 additions */
+.catgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-top:10px}
+.catblock{border:1px solid rgba(0,0,0,.08);border-radius:14px;padding:12px;background:#fff}
+.cathead{display:flex;justify-content:space-between;align-items:baseline;gap:8px;margin-bottom:8px}
+.cathead a{font-weight:700}
+.mini{margin:0;padding-left:18px}
+.mini li{margin:6px 0}
+.more{margin-top:10px}
+.teinteresa{margin-top:18px;padding-top:10px;border-top:1px solid rgba(0,0,0,.08)}
+
+
+/* BUENOSDIAS2560 v4 additions */
+.intext-links{margin-top:10px}
+.intext-links a{text-decoration:underline}

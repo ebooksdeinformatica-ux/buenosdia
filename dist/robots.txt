@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://buenosdia.com/sitemap.xml
