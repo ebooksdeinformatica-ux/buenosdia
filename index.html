@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Buenos Días | Frases, reflexiones y palabras para empezar el día</title>
   <meta name="description" content="Frases de buenos días, reflexiones cortas y textos humanos para empezar la mañana con fuerza, calma y verdad.">
   <meta name="keywords" content="buenos días, frases de buenos días, reflexiones, mensajes de buenos días, textos cortos, motivación">
@@ -14,34 +14,66 @@
   <meta property="og:url" content="https://www.buenosdia.com/">
   <meta property="og:site_name" content="Buenos Días">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
   <header class="site-header">
-    <div class="wrap">
-      <h1 class="logo"><a href="/">Buenos Días</a></h1>
-      <p class="subtitle">Frases, pensamientos y mañanas reales</p>
+    <div class="container header-inner">
+      <div>
+        <a href="/" class="brand">Buenos Días</a>
+        <p class="brand-subtitle">Frases, reflexiones y mañanas reales</p>
+      </div>
+
+      <nav class="top-nav">
+        <a href="/">Inicio</a>
+        <a href="#posts">Publicaciones</a>
+        <a href="#tags">Etiquetas</a>
+      </nav>
     </div>
   </header>
 
-  <main class="wrap">
-    <section class="hero">
-      <h2>Textos para esas mañanas que a veces cuestan</h2>
-      <p>
-        No todas las mañanas llegan suaves. Algunas caen como una piedra.
-        Y otras, aunque no traigan nada especial, igual necesitan una chispa.
-        Este espacio es para eso: palabras simples, humanas y sinceras.
-      </p>
+  <main class="container main-layout">
+    <section class="content-area">
+      <section class="hero">
+        <span class="eyebrow">Palabras para empezar distinto</span>
+        <h1>Textos para esas mañanas que a veces cuestan</h1>
+        <p class="hero-text">
+          No todas las mañanas llegan suaves. Algunas pesan. Otras apenas se sostienen.
+          Este espacio está hecho para eso: textos breves, humanos y sinceros, para acompañar
+          el inicio del día con algo de aire, claridad y verdad.
+        </p>
+      </section>
+
+      <section id="posts" class="posts-section">
+        <div class="section-heading">
+          <h2>Últimas publicaciones</h2>
+          <p>Los textos más recientes se muestran primero.</p>
+        </div>
+
+        <div id="posts-container" class="posts-list"></div>
+      </section>
     </section>
 
-    <section class="posts-section">
-      <div id="posts-container" class="posts-grid"></div>
-    </section>
+    <aside class="sidebar">
+      <div class="sidebar-box" id="tags">
+        <h3>Etiquetas</h3>
+        <div id="tag-cloud" class="tag-cloud"></div>
+      </div>
+
+      <div class="sidebar-box">
+        <h3>Más adelante</h3>
+        <p>
+          Esta zona ya queda preparada para sumar categorías, destacados,
+          recomendados o bloques de AdSense sin romper el diseño.
+        </p>
+      </div>
+    </aside>
   </main>
 
   <footer class="site-footer">
-    <div class="wrap">
+    <div class="container footer-inner">
       <p>© Buenos Días</p>
+      <p class="footer-note">Textos simples para mañanas reales.</p>
     </div>
   </footer>
 
