@@ -24,15 +24,15 @@
 
   <style>
     :root{
-      --bg:#f7f3ec;
-      --paper:#fffdf9;
+      --bg:#ffffff;
+      --paper:#ffffff;
       --text:#1f1a17;
       --muted:#6c6259;
-      --line:#e8ddd2;
+      --line:#e9e2d9;
       --accent:#8b5e3c;
       --accent-dark:#6f472b;
-      --soft:#f1e7dc;
-      --shadow:0 10px 30px rgba(40,25,10,.08);
+      --soft:#f8f2eb;
+      --shadow:0 10px 26px rgba(40,25,10,.06);
       --radius:18px;
       --max:860px;
     }
@@ -42,7 +42,7 @@
     body{
       margin:0;
       font-family:Arial, Helvetica, sans-serif;
-      background:linear-gradient(180deg,#f6f1ea 0%, #fbf8f3 100%);
+      background:var(--bg);
       color:var(--text);
       line-height:1.75;
     }
@@ -52,7 +52,7 @@
       top:0;
       z-index:20;
       backdrop-filter:blur(10px);
-      background:rgba(255,253,249,.88);
+      background:rgba(255,255,255,.95);
       border-bottom:1px solid rgba(139,94,60,.10);
     }
 
@@ -113,8 +113,8 @@
       position:absolute;
       inset:0;
       background:
-        radial-gradient(circle at top right, rgba(139,94,60,.08), transparent 32%),
-        radial-gradient(circle at bottom left, rgba(139,94,60,.06), transparent 28%);
+        radial-gradient(circle at top right, rgba(139,94,60,.05), transparent 32%),
+        radial-gradient(circle at bottom left, rgba(139,94,60,.04), transparent 28%);
       pointer-events:none;
     }
 
@@ -123,7 +123,7 @@
       font-size:.85rem;
       color:var(--accent-dark);
       background:var(--soft);
-      border:1px solid #eadbca;
+      border:1px solid #eedfce;
       padding:7px 11px;
       border-radius:999px;
       margin-bottom:14px;
@@ -160,7 +160,7 @@
     }
 
     .meta span{
-      background:#faf4ed;
+      background:#fbf7f2;
       border:1px solid var(--line);
       padding:7px 11px;
       border-radius:999px;
@@ -197,9 +197,12 @@
       cursor:pointer;
       font-weight:700;
       font-size:.95rem;
+      transition:transform .15s ease, opacity .15s ease, background .15s ease;
     }
 
     .share-btn:hover{
+      transform:translateY(-1px);
+      opacity:.95;
       background:var(--accent-dark);
     }
 
@@ -225,7 +228,7 @@
       margin:26px 0;
       padding:18px 18px 18px 20px;
       border-left:4px solid var(--accent);
-      background:#fbf4ec;
+      background:#fcf7f1;
       border-radius:14px;
       color:#3e332b;
       font-size:1.08rem;
@@ -248,7 +251,7 @@
       display:inline-block;
       text-decoration:none;
       color:var(--accent-dark);
-      background:#faf4ed;
+      background:#fbf7f2;
       border:1px solid var(--line);
       padding:9px 12px;
       border-radius:999px;
@@ -267,9 +270,16 @@
       text-decoration:none;
       color:var(--text);
       border:1px solid var(--line);
-      background:#fffaf4;
+      background:#fffdfa;
       border-radius:16px;
       padding:16px;
+      transition:transform .15s ease, border-color .15s ease, box-shadow .15s ease;
+    }
+
+    .related:hover{
+      transform:translateY(-2px);
+      border-color:#d9c1ab;
+      box-shadow:var(--shadow);
     }
 
     .related strong{
@@ -282,7 +292,7 @@
     .faq details{
       border:1px solid var(--line);
       border-radius:14px;
-      background:#fffaf4;
+      background:#fffdfa;
       padding:14px 16px;
       margin-bottom:12px;
     }
@@ -303,6 +313,7 @@
       padding:28px 18px 50px;
       color:var(--muted);
       text-align:center;
+      background:#fff;
     }
 
     .footer-links{
@@ -316,7 +327,7 @@
     .footer-links a{
       color:var(--accent-dark);
       text-decoration:none;
-      background:#faf4ed;
+      background:#fbf7f2;
       border:1px solid var(--line);
       padding:8px 12px;
       border-radius:999px;
@@ -384,7 +395,6 @@
       <div class="meta">
         <span>Lectura: 4 min</span>
         <span>Publicado: 17/03/2026</span>
-        <span>Slug SEO listo</span>
       </div>
     </section>
 
