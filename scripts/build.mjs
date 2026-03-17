@@ -94,6 +94,7 @@ fs.writeFileSync(POSTS_JSON, JSON.stringify(exportedPosts, null, 2), 'utf8');
 
 patchIndexHtml();
 renderTagPages(tagMap);
+write404Page(tagMap);
 writeSitemap(posts, tagMap);
 
 console.log(`Generados ${posts.length} posts, ${Object.keys(tagMap).length} páginas de etiquetas, data/posts.json y sitemap.xml.`);
@@ -245,6 +246,19 @@ function renderTagPages(tagMap) {
 </html>`;
 
     fs.writeFileSync(path.join(TAGS_DIR, `${tag.slug}.html`), pageHtml, 'utf8');
+
+    const aliasVariants = new Set([
+      normalizeTag(tag.name),
+      String(tag.name || '').trim().toLowerCase()
+    ]);
+
+    for (const variant of aliasVariants) {
+      const aliasName = `${variant}.html`;
+      const aliasPath = path.join(TAGS_DIR, aliasName);
+      if (!variant || variant === tag.slug || variant.includes('/') || fs.existsSync(aliasPath)) continue;
+      const aliasHtml = `<!doctype html><html lang="es"><head><meta charset="utf-8"><meta http-equiv="refresh" content="0; url=/tags/${tag.slug}.html"><link rel="canonical" href="${SITE_URL}/tags/${tag.slug}.html"><script>window.location.replace('/tags/${tag.slug}.html')</script></head><body><p>Redirigiendo a <a href="/tags/${tag.slug}.html">/tags/${tag.slug}.html</a>…</p></body></html>`;
+      fs.writeFileSync(aliasPath, aliasHtml, 'utf8');
+    }
   }
 }
 
@@ -335,6 +349,88 @@ function patchIndexHtml() {
   }
 
   fs.writeFileSync(indexPath, html, 'utf8');
+}
+
+
+
+function write404Page(tagMap) {
+  const knownTags = Object.values(tagMap).map(tag => tag.slug).sort();
+  const knownTagVariants = {};
+  for (const tag of Object.values(tagMap)) {
+    const variants = new Set([
+      tag.slug,
+      normalizeText(tag.name),
+      normalizeText(tag.name).replace(/\s+/g, '-'),
+      String(tag.name || '').toLowerCase().trim()
+    ]);
+    for (const variant of variants) {
+      const key = slugify(variant);
+      if (key) knownTagVariants[key] = tag.slug;
+    }
+  }
+
+  const html = `<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Página no encontrada | buenosdia.com</title>
+  <meta name="robots" content="noindex,follow">
+  <style>${sharedTagPageCss()}</style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <a class="brand" href="/">buenosdia.com</a>
+      <nav>
+        <a href="/">Inicio</a>
+        <a href="/#publicaciones">Publicaciones</a>
+        <a href="/tags/">Etiquetas</a>
+      </nav>
+    </header>
+    <main>
+      <section class="hero">
+        <p class="eyebrow">404</p>
+        <h1>Esta página no existe</h1>
+        <p id="message">Estamos revisando si el enlace corresponde a una etiqueta con un slug mal formado.</p>
+      </section>
+      <section class="card">
+        <p><a class="read-link" href="/">Volver al inicio</a></p>
+      </section>
+    </main>
+  </div>
+  <script>
+    const knownTagVariants = ${JSON.stringify(knownTagVariants)};
+    const message = document.getElementById('message');
+
+    function slugify(str) {
+      return String(str || '')
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .toLowerCase()
+        .replace(/[^a-z0-9\s-]/g, ' ')
+        .trim()
+        .replace(/\s+/g, '-')
+        .replace(/-+/g, '-')
+        .replace(/^-|-$/g, '');
+    }
+
+    const path = window.location.pathname || '/';
+    const tagMatch = path.match(/^\/tags\/(.+?)(?:\.html)?$/i);
+    if (tagMatch) {
+      const decoded = decodeURIComponent(tagMatch[1]);
+      const candidate = slugify(decoded);
+      const canonical = knownTagVariants[candidate];
+      if (canonical) {
+        message.textContent = 'Redirigiendo a la etiqueta correcta…';
+        window.location.replace('/tags/' + canonical + '.html');
+      }
+    }
+  </script>
+</body>
+</html>`;
+
+  fs.writeFileSync(path.join(ROOT, '404.html'), html, 'utf8');
 }
 
 function writeSitemap(posts, tagMap) {
