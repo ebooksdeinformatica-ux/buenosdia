@@ -5,6 +5,9 @@ on:
     paths:
       - 'post/*.html'
       - '.github/workflows/build-site.yml'
+      - 'assets/js/main.js'
+      - 'assets/css/style.css'
+      - 'index.html'
   workflow_dispatch:
 
 permissions:
@@ -27,6 +30,7 @@ jobs:
           from datetime import datetime
           from pathlib import Path
           from html import escape
+          from urllib.parse import quote
 
           SITE_URL = "https://www.buenosdia.com"
           SITE_NAME = "Buenos Días"
@@ -66,7 +70,7 @@ jobs:
               body = text[block_match.end():].strip()
               return meta, body
 
-          def slug_to_url(slug):
+          def slug_to_full_url(slug):
               return f"{SITE_URL}/posts/{slug}.html"
 
           def build_keywords(tags, title):
@@ -86,8 +90,8 @@ jobs:
               description = meta["DESCRIPTION"].strip() or title
               date = meta["DATE"].strip() or "2000-01-01"
               tags = [t.strip() for t in meta["TAGS"].split(",") if t.strip()]
-              url = f"posts/{slug}.html"
-              full_url = slug_to_url(slug)
+              url = f"/posts/{slug}.html"
+              full_url = slug_to_full_url(slug)
 
               source_posts.append({
                   "slug": slug,
@@ -125,6 +129,20 @@ jobs:
                   f'<span class="post-tag">{escape(tag)}</span>' for tag in tags
               ) + '</div>'
 
+          def whatsapp_url(title, full_url):
+              text = f"{title} {full_url}"
+              return f"https://wa.me/?text={quote(text)}"
+
+          def telegram_url(title, full_url):
+              return f"https://t.me/share/url?url={quote(full_url)}&text={quote(title)}"
+
+          def facebook_url(full_url):
+              return f"https://www.facebook.com/sharer/sharer.php?u={quote(full_url)}"
+
+          def x_url(title, full_url):
+              text = f"{title}"
+              return f"https://twitter.com/intent/tweet?text={quote(text)}&url={quote(full_url)}"
+
           for post in source_posts:
               related = related_posts_for(post, source_posts)
 
@@ -134,7 +152,7 @@ jobs:
                   for rel in related:
                       items.append(
                           f'''
-                          <a class="related-link" href="/{escape(rel["url"])}">
+                          <a class="related-link" href="{escape(rel["url"])}">
                             <strong>{escape(rel["title"])}</strong>
                             <span>{escape(rel["description"])}</span>
                           </a>
@@ -149,6 +167,20 @@ jobs:
                     </div>
                   </section>
                   '''
+
+              share_html = f'''
+              <section class="share-box">
+                <h2>Compartir</h2>
+                <div class="share-actions">
+                  <a class="share-btn" href="{whatsapp_url(post["title"], post["full_url"])}" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+                  <a class="share-btn" href="{telegram_url(post["title"], post["full_url"])}" target="_blank" rel="noopener noreferrer">Telegram</a>
+                  <a class="share-btn" href="{facebook_url(post["full_url"])}" target="_blank" rel="noopener noreferrer">Facebook</a>
+                  <a class="share-btn" href="{x_url(post["title"], post["full_url"])}" target="_blank" rel="noopener noreferrer">X</a>
+                  <button type="button" class="copy-link-btn" data-link="{escape(post["full_url"])}">Copiar enlace</button>
+                  <button type="button" class="native-share-btn" data-title="{escape(post["title"])}" data-text="{escape(post["description"])}" data-url="{escape(post["full_url"])}">Compartir</button>
+                </div>
+              </section>
+              '''
 
               final_html = f'''<!DOCTYPE html>
           <html lang="es">
@@ -193,6 +225,7 @@ jobs:
                 <div class="post-content">
                   {post["body_html"]}
                 </div>
+                {share_html}
                 {related_html}
               </article>
             </main>
@@ -203,6 +236,43 @@ jobs:
                 <p class="footer-note">Textos simples para mañanas reales.</p>
               </div>
             </footer>
+
+            <script>
+              document.querySelectorAll('.copy-link-btn').forEach(btn => {{
+                btn.addEventListener('click', async () => {{
+                  const link = btn.getAttribute('data-link');
+                  try {{
+                    await navigator.clipboard.writeText(link);
+                    btn.textContent = 'Enlace copiado';
+                    setTimeout(() => btn.textContent = 'Copiar enlace', 1600);
+                  }} catch (e) {{
+                    alert('No se pudo copiar el enlace.');
+                  }}
+                }});
+              }});
+
+              document.querySelectorAll('.native-share-btn').forEach(btn => {{
+                btn.addEventListener('click', async () => {{
+                  const title = btn.getAttribute('data-title');
+                  const text = btn.getAttribute('data-text');
+                  const url = btn.getAttribute('data-url');
+
+                  if (navigator.share) {{
+                    try {{
+                      await navigator.share({{ title, text, url }});
+                    }} catch (e) {{}}
+                  }} else {{
+                    try {{
+                      await navigator.clipboard.writeText(url);
+                      btn.textContent = 'Enlace copiado';
+                      setTimeout(() => btn.textContent = 'Compartir', 1600);
+                    }} catch (e) {{
+                      alert('Tu navegador no soporta compartir directo.');
+                    }}
+                  }}
+                }});
+              }});
+            </script>
           </body>
           </html>
           '''
@@ -214,7 +284,7 @@ jobs:
               posts_json.append({
                   "title": post["title"],
                   "description": post["description"],
-                  "url": "/" + post["url"],
+                  "url": post["url"],
                   "slug": post["slug"],
                   "date": post["date"],
                   "tags": post["tags"]
