@@ -113,7 +113,7 @@ fetch('data/posts.json')
                   return `
                     <button
                       type="button"
-                      class="post-tag post-tag-btn${isActive ? ' is-active' : ''}"
+                      class="post-tag-btn${isActive ? ' is-active' : ''}"
                       data-tag="${escapeHtml(tag)}"
                     >
                       ${escapeHtml(tag)}
