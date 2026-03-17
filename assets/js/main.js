@@ -40,13 +40,9 @@ fetch('data/posts.json')
 
     const uniqueTags = [...new Set(allTags.map(tag => tag.trim()).filter(Boolean))].sort();
 
-    if (uniqueTags.length === 0) {
-      tagCloud.innerHTML = '<span>Sin etiquetas todavía</span>';
-    } else {
-      tagCloud.innerHTML = uniqueTags
-        .map(tag => `<span>${tag}</span>`)
-        .join('');
-    }
+    tagCloud.innerHTML = uniqueTags.length
+      ? uniqueTags.map(tag => `<span>${tag}</span>`).join('')
+      : '<span>Sin etiquetas todavía</span>';
   })
   .catch(error => {
     console.error(error);
