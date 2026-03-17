@@ -1,0 +1,32 @@
+name: Autogenerar index data y sitemap
+
+on:
+  push:
+    branches: [ "main" ]
+
+permissions:
+  contents: write
+
+jobs:
+  build-data:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Generar posts.json y sitemap.xml
+        run: node scripts/build.mjs
+
+      - name: Commit cambios generados
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/posts.json sitemap.xml
+          git diff --cached --quiet || git commit -m "Auto-update posts data and sitemap"
+          git push
