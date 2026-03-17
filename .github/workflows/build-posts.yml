@@ -1,0 +1,75 @@
+name: Build posts.json
+
+on:
+  push:
+    paths:
+      - 'posts/*.html'
+      - '.github/workflows/build-posts.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-posts-json:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Generate posts.json from posts folder
+        run: |
+          python <<'PY'
+          import os, re, json
+
+          posts_dir = 'posts'
+          output_file = 'data/posts.json'
+          posts = []
+
+          os.makedirs('data', exist_ok=True)
+
+          for filename in os.listdir(posts_dir):
+              if not filename.endswith('.html'):
+                  continue
+
+              path = os.path.join(posts_dir, filename)
+
+              with open(path, 'r', encoding='utf-8') as f:
+                  content = f.read()
+
+              title_match = re.search(r'TITLE:\s*(.+)', content)
+              desc_match = re.search(r'DESCRIPTION:\s*(.+)', content)
+              date_match = re.search(r'DATE:\s*(.+)', content)
+              tags_match = re.search(r'TAGS:\s*(.+)', content)
+
+              title = title_match.group(1).strip() if title_match else filename.replace('.html', '')
+              description = desc_match.group(1).strip() if desc_match else ''
+              date = date_match.group(1).strip() if date_match else '2000-01-01'
+              tags_raw = tags_match.group(1).strip() if tags_match else ''
+              tags = [tag.strip() for tag in tags_raw.split(',') if tag.strip()]
+
+              slug = filename[:-5]
+
+              posts.append({
+                  "title": title,
+                  "description": description,
+                  "url": f"posts/{filename}",
+                  "slug": slug,
+                  "date": date,
+                  "tags": tags
+              })
+
+          posts.sort(key=lambda x: x["date"], reverse=True)
+
+          with open(output_file, 'w', encoding='utf-8') as f:
+              json.dump(posts, f, ensure_ascii=False, indent=2)
+          PY
+
+      - name: Commit updated posts.json
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/posts.json
+          git diff --cached --quiet || git commit -m "Auto-update posts.json"
+          git push
