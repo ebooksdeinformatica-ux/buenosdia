@@ -12,7 +12,9 @@
       "vinculos reales",
       "buenos dias",
       "mananas tristes",
-      "presencia emocional"
+      "presencia emocional",
+      "amistad",
+      "emociones"
     ],
     "date": "2026-03-17",
     "slug": "cuando-los-amigos-se-bajan-del-barco-por-las-noches",
@@ -55,7 +57,11 @@
       "tristeza",
       "paz interior",
       "mananas grises",
-      "sentirse en paz"
+      "sentirse en paz",
+      "buenosdia com",
+      "inicio",
+      "publicaciones",
+      "etiquetas"
     ],
     "date": "2026-03-17",
     "slug": "dia-de-lluvia-sin-vacios-por-dentro",
@@ -68,6 +74,12 @@
         "slug": "manana-feliz-sin-nada-con-mil-problemas"
       },
       {
+        "title": "Días en los que solo tengo que esperar porque no me queda otra",
+        "description": "Hay días en los que no queda otra que esperar. Esta reflexión acompaña esos momentos de pausa forzada, incertidumbre y resistencia silencios…",
+        "url": "/posts/dias-en-los-que-solo-tengo-que-esperar-porque-no-me-queda-otra.html",
+        "slug": "dias-en-los-que-solo-tengo-que-esperar-porque-no-me-queda-otra"
+      },
+      {
         "title": "Cuando los amigos se bajan del barco por las noches",
         "description": "Hay noches en las que duele más la ausencia de los que estaban cerca que cualquier problema en sí. Y aun así, la mañana llega, incluso cuand…",
         "url": "/posts/cuando-los-amigos-se-bajan-del-barco-por-las-noches.html",
@@ -78,12 +90,6 @@
         "description": "Hay mañanas en las que no duele empezar de cero, sino mirar todo lo que una vez funcionó y ya no está. Aun así, volver a levantar algo roto…",
         "url": "/posts/levantar-proyectos-que-algun-dia-funcionaron-y-hoy-no-los-tienes.html",
         "slug": "levantar-proyectos-que-algun-dia-funcionaron-y-hoy-no-los-tienes"
-      },
-      {
-        "title": "Días en los que solo tengo que esperar porque no me queda otra",
-        "description": "Hay días en los que no queda otra que esperar. Esta reflexión acompaña esos momentos de pausa forzada, incertidumbre y resistencia silencios…",
-        "url": "/posts/dias-en-los-que-solo-tengo-que-esperar-porque-no-me-queda-otra.html",
-        "slug": "dias-en-los-que-solo-tengo-que-esperar-porque-no-me-queda-otra"
       }
     ]
   },
@@ -98,7 +104,11 @@
       "paciencia",
       "pausa en la vida",
       "resistencia emocional",
-      "fuerza interior"
+      "fuerza interior",
+      "buenosdia com",
+      "inicio",
+      "publicaciones",
+      "etiquetas"
     ],
     "date": "2026-03-17",
     "slug": "dias-en-los-que-solo-tengo-que-esperar-porque-no-me-queda-otra",
@@ -111,6 +121,12 @@
         "slug": "manana-feliz-sin-nada-con-mil-problemas"
       },
       {
+        "title": "Día de lluvia sin vacíos por dentro",
+        "description": "Hay días de lluvia en los que afuera todo parece gris, pero adentro no tiene por qué sentirse vacío. Una reflexión íntima para sostenerse co…",
+        "url": "/posts/dia-de-lluvia-sin-vacios-por-dentro.html",
+        "slug": "dia-de-lluvia-sin-vacios-por-dentro"
+      },
+      {
         "title": "Cuando los amigos se bajan del barco por las noches",
         "description": "Hay noches en las que duele más la ausencia de los que estaban cerca que cualquier problema en sí. Y aun así, la mañana llega, incluso cuand…",
         "url": "/posts/cuando-los-amigos-se-bajan-del-barco-por-las-noches.html",
@@ -121,12 +137,6 @@
         "description": "Hay mañanas en las que no duele empezar de cero, sino mirar todo lo que una vez funcionó y ya no está. Aun así, volver a levantar algo roto…",
         "url": "/posts/levantar-proyectos-que-algun-dia-funcionaron-y-hoy-no-los-tienes.html",
         "slug": "levantar-proyectos-que-algun-dia-funcionaron-y-hoy-no-los-tienes"
-      },
-      {
-        "title": "Día de lluvia sin vacíos por dentro",
-        "description": "Hay días de lluvia en los que afuera todo parece gris, pero adentro no tiene por qué sentirse vacío. Una reflexión íntima para sostenerse co…",
-        "url": "/posts/dia-de-lluvia-sin-vacios-por-dentro.html",
-        "slug": "dia-de-lluvia-sin-vacios-por-dentro"
       }
     ]
   },
@@ -142,7 +152,10 @@
       "proyectos caidos",
       "mananas dificiles",
       "buenos dias",
-      "seguir adelante"
+      "seguir adelante",
+      "proyectos",
+      "reconstruccion",
+      "motivacion"
     ],
     "date": "2026-03-17",
     "slug": "levantar-proyectos-que-algun-dia-funcionaron-y-hoy-no-los-tienes",
@@ -185,18 +198,16 @@
       "seguir adelante",
       "esperanza",
       "motivacion real",
-      "fuerza interior"
+      "fuerza interior",
+      "buenosdia com",
+      "inicio",
+      "publicaciones",
+      "etiquetas"
     ],
     "date": "2026-03-17",
     "slug": "manana-feliz-sin-nada-con-mil-problemas",
     "url": "/posts/manana-feliz-sin-nada-con-mil-problemas.html",
     "related": [
-      {
-        "title": "Levantar proyectos que algún día funcionaron y hoy no los tienes",
-        "description": "Hay mañanas en las que no duele empezar de cero, sino mirar todo lo que una vez funcionó y ya no está. Aun así, volver a levantar algo roto…",
-        "url": "/posts/levantar-proyectos-que-algun-dia-funcionaron-y-hoy-no-los-tienes.html",
-        "slug": "levantar-proyectos-que-algun-dia-funcionaron-y-hoy-no-los-tienes"
-      },
       {
         "title": "Días en los que solo tengo que esperar porque no me queda otra",
         "description": "Hay días en los que no queda otra que esperar. Esta reflexión acompaña esos momentos de pausa forzada, incertidumbre y resistencia silencios…",
@@ -204,16 +215,22 @@
         "slug": "dias-en-los-que-solo-tengo-que-esperar-porque-no-me-queda-otra"
       },
       {
-        "title": "Cuando los amigos se bajan del barco por las noches",
-        "description": "Hay noches en las que duele más la ausencia de los que estaban cerca que cualquier problema en sí. Y aun así, la mañana llega, incluso cuand…",
-        "url": "/posts/cuando-los-amigos-se-bajan-del-barco-por-las-noches.html",
-        "slug": "cuando-los-amigos-se-bajan-del-barco-por-las-noches"
+        "title": "Levantar proyectos que algún día funcionaron y hoy no los tienes",
+        "description": "Hay mañanas en las que no duele empezar de cero, sino mirar todo lo que una vez funcionó y ya no está. Aun así, volver a levantar algo roto…",
+        "url": "/posts/levantar-proyectos-que-algun-dia-funcionaron-y-hoy-no-los-tienes.html",
+        "slug": "levantar-proyectos-que-algun-dia-funcionaron-y-hoy-no-los-tienes"
       },
       {
         "title": "Día de lluvia sin vacíos por dentro",
         "description": "Hay días de lluvia en los que afuera todo parece gris, pero adentro no tiene por qué sentirse vacío. Una reflexión íntima para sostenerse co…",
         "url": "/posts/dia-de-lluvia-sin-vacios-por-dentro.html",
         "slug": "dia-de-lluvia-sin-vacios-por-dentro"
+      },
+      {
+        "title": "Cuando los amigos se bajan del barco por las noches",
+        "description": "Hay noches en las que duele más la ausencia de los que estaban cerca que cualquier problema en sí. Y aun así, la mañana llega, incluso cuand…",
+        "url": "/posts/cuando-los-amigos-se-bajan-del-barco-por-las-noches.html",
+        "slug": "cuando-los-amigos-se-bajan-del-barco-por-las-noches"
       }
     ]
   }
