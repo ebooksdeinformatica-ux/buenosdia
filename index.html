@@ -252,7 +252,8 @@
 
         posts.sort((a, b) => (b.date || '').localeCompare(a.date || ''));
 
-        postsList.innerHTML = posts.map(post =>                     '<article class="post-card">' +
+        postsList.innerHTML = posts.map(post =>
+          '<article class="post-card">' +
             '<h3>' + escapeHtml(post.title || 'Sin título') + '</h3>' +
             '<p>' + escapeHtml(post.description || 'Sin descripción.') + '</p>' +
             '<div class="tags">' +
@@ -265,7 +266,9 @@
         const counts = {};
         posts.forEach(post => {
           (post.tags || []).forEach(tag => {
-            counts[tag] = (counts[tag] || 0) + 1;
+            const key = String(tag || '').trim();
+            if (!key) return;
+            counts[key] = (counts[key] || 0) + 1;
           });
         });
 
@@ -299,7 +302,8 @@
         .replace(/[^a-z0-9s-]/g, ' ')
         .trim()
         .replace(/s+/g, '-')
-        .replace(/-+/g, '-');
+        .replace(/-+/g, '-')
+        .replace(/^-|-$/g, '');
     }
 
     loadPosts();
