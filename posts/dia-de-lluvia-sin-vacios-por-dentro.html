@@ -1,0 +1,630 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Día de lluvia sin vacíos por dentro | buenosdia.com</title>
+  <meta name="description" content="Hay días de lluvia en los que afuera todo parece gris, pero adentro no tiene por qué sentirse vacío. Una reflexión íntima para sostenerse con calma y verdad.">
+  <meta name="keywords" content="día de lluvia, lluvia y emociones, reflexión de buenos días, calma interior, tristeza, paz interior, mañanas grises, sentirse en paz">
+  <meta name="author" content="buenosdia.com">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <link rel="canonical" href="https://www.buenosdia.com/posts/dia-de-lluvia-sin-vacios-por-dentro.html">
+
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="es_AR">
+  <meta property="og:site_name" content="buenosdia.com">
+  <meta property="og:title" content="Día de lluvia sin vacíos por dentro">
+  <meta property="og:description" content="No toda mañana gris tiene que sentirse rota. A veces la lluvia también puede acompañar una calma rara, profunda y verdadera.">
+  <meta property="og:url" content="https://www.buenosdia.com/posts/dia-de-lluvia-sin-vacios-por-dentro.html">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Día de lluvia sin vacíos por dentro">
+  <meta name="twitter:description" content="Una reflexión para esas mañanas de lluvia en las que no querés ruido, solo un poco de verdad y calma.">
+
+  <style>
+    :root{
+      --bg:#ffffff;
+      --paper:#ffffff;
+      --text:#1f1a17;
+      --muted:#6c6259;
+      --line:#e9e2d9;
+      --accent:#8b5e3c;
+      --accent-dark:#6f472b;
+      --soft:#f8f2eb;
+      --shadow:0 10px 26px rgba(40,25,10,.06);
+      --radius:18px;
+      --max:860px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Arial, Helvetica, sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.75;
+    }
+
+    header{
+      position:sticky;
+      top:0;
+      z-index:20;
+      backdrop-filter:blur(10px);
+      background:rgba(255,255,255,.95);
+      border-bottom:1px solid rgba(139,94,60,.10);
+    }
+
+    .topbar{
+      max-width:1100px;
+      margin:0 auto;
+      padding:14px 18px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+    }
+
+    .brand{
+      color:var(--accent-dark);
+      font-weight:800;
+      letter-spacing:.2px;
+      text-decoration:none;
+      font-size:1.05rem;
+    }
+
+    .topnav{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+
+    .topnav a{
+      text-decoration:none;
+      color:var(--muted);
+      font-size:.95rem;
+      padding:8px 12px;
+      border-radius:999px;
+    }
+
+    .topnav a:hover{
+      background:var(--soft);
+      color:var(--accent-dark);
+    }
+
+    main{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:30px 18px 70px;
+    }
+
+    .hero{
+      background:var(--paper);
+      border:1px solid var(--line);
+      border-radius:26px;
+      box-shadow:var(--shadow);
+      padding:34px 24px;
+      overflow:hidden;
+      position:relative;
+    }
+
+    .hero::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:
+        radial-gradient(circle at top right, rgba(139,94,60,.05), transparent 32%),
+        radial-gradient(circle at bottom left, rgba(139,94,60,.04), transparent 28%);
+      pointer-events:none;
+    }
+
+    .eyebrow{
+      display:inline-block;
+      font-size:.85rem;
+      color:var(--accent-dark);
+      background:var(--soft);
+      border:1px solid #eedfce;
+      padding:7px 11px;
+      border-radius:999px;
+      margin-bottom:14px;
+      position:relative;
+      z-index:1;
+    }
+
+    h1{
+      margin:0 0 14px;
+      font-size:clamp(2rem,5vw,3.2rem);
+      line-height:1.12;
+      letter-spacing:-.02em;
+      position:relative;
+      z-index:1;
+    }
+
+    .lead{
+      font-size:1.08rem;
+      color:#3f362f;
+      margin:0;
+      position:relative;
+      z-index:1;
+    }
+
+    .meta{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:20px;
+      color:var(--muted);
+      font-size:.95rem;
+      position:relative;
+      z-index:1;
+    }
+
+    .meta span{
+      background:#fbf7f2;
+      border:1px solid var(--line);
+      padding:7px 11px;
+      border-radius:999px;
+    }
+
+    .card{
+      margin-top:22px;
+      background:var(--paper);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:24px;
+    }
+
+    .share-title,.section-title{
+      margin:0 0 12px;
+      font-size:1.05rem;
+      color:var(--accent-dark);
+    }
+
+    .share-wrap{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+    }
+
+    .share-btn{
+      appearance:none;
+      border:none;
+      background:var(--accent);
+      color:#fff;
+      padding:12px 15px;
+      border-radius:12px;
+      cursor:pointer;
+      font-weight:700;
+      font-size:.95rem;
+      transition:transform .15s ease, opacity .15s ease, background .15s ease;
+    }
+
+    .share-btn:hover{
+      transform:translateY(-1px);
+      opacity:.95;
+      background:var(--accent-dark);
+    }
+
+    article{
+      margin-top:22px;
+      background:var(--paper);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:28px 24px;
+    }
+
+    article p{
+      margin:0 0 18px;
+      font-size:1.08rem;
+    }
+
+    article strong{
+      color:var(--accent-dark);
+    }
+
+    blockquote{
+      margin:26px 0;
+      padding:18px 18px 18px 20px;
+      border-left:4px solid var(--accent);
+      background:#fcf7f1;
+      border-radius:14px;
+      color:#3e332b;
+      font-size:1.08rem;
+    }
+
+    .mini-break{
+      height:1px;
+      background:linear-gradient(90deg, transparent, var(--line), transparent);
+      margin:24px 0;
+    }
+
+    .tags{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:10px;
+    }
+
+    .tag{
+      display:inline-block;
+      text-decoration:none;
+      color:var(--accent-dark);
+      background:#fbf7f2;
+      border:1px solid var(--line);
+      padding:9px 12px;
+      border-radius:999px;
+      font-size:.92rem;
+    }
+
+    .tag:hover{
+      background:var(--soft);
+    }
+
+    .links-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:14px;
+      margin-top:12px;
+    }
+
+    .related{
+      display:block;
+      text-decoration:none;
+      color:var(--text);
+      border:1px solid var(--line);
+      background:#fffdfa;
+      border-radius:16px;
+      padding:16px;
+      min-height:100%;
+      transition:transform .15s ease, border-color .15s ease, box-shadow .15s ease;
+    }
+
+    .related:hover{
+      transform:translateY(-2px);
+      border-color:#d9c1ab;
+      box-shadow:var(--shadow);
+    }
+
+    .related strong{
+      display:block;
+      margin-bottom:7px;
+      color:var(--accent-dark);
+      line-height:1.35;
+    }
+
+    .faq details{
+      border:1px solid var(--line);
+      border-radius:14px;
+      background:#fffdfa;
+      padding:14px 16px;
+      margin-bottom:12px;
+    }
+
+    .faq summary{
+      cursor:pointer;
+      font-weight:700;
+      color:var(--accent-dark);
+    }
+
+    .faq p{
+      margin:12px 0 0;
+      color:#433831;
+    }
+
+    footer{
+      border-top:1px solid var(--line);
+      padding:28px 18px 50px;
+      color:var(--muted);
+      text-align:center;
+      background:#fff;
+    }
+
+    .footer-links{
+      display:flex;
+      justify-content:center;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-bottom:12px;
+    }
+
+    .footer-links a{
+      color:var(--accent-dark);
+      text-decoration:none;
+      background:#fbf7f2;
+      border:1px solid var(--line);
+      padding:8px 12px;
+      border-radius:999px;
+    }
+
+    .copy-msg{
+      margin-top:10px;
+      color:var(--muted);
+      font-size:.92rem;
+      min-height:22px;
+    }
+
+    @media (max-width:700px){
+      .topnav{display:none}
+      .hero,.card,article{padding:20px 16px}
+      article p{font-size:1.03rem}
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Article",
+    "headline":"Día de lluvia sin vacíos por dentro",
+    "description":"Hay días de lluvia en los que afuera todo parece gris, pero adentro no tiene por qué sentirse vacío. Una reflexión íntima para sostenerse con calma y verdad.",
+    "author":{"@type":"Organization","name":"buenosdia.com"},
+    "publisher":{
+      "@type":"Organization",
+      "name":"buenosdia.com",
+      "logo":{"@type":"ImageObject","url":"https://www.buenosdia.com/logo.png"}
+    },
+    "mainEntityOfPage":{
+      "@type":"WebPage",
+      "@id":"https://www.buenosdia.com/posts/dia-de-lluvia-sin-vacios-por-dentro.html"
+    },
+    "datePublished":"2026-03-17",
+    "dateModified":"2026-03-17",
+    "inLanguage":"es-AR"
+  }
+  </script>
+</head>
+<body>
+
+  <header>
+    <div class="topbar">
+      <a class="brand" href="/">buenosdia.com</a>
+      <nav class="topnav" aria-label="Navegación principal">
+        <a href="/#inicio">Inicio</a>
+        <a href="/#publicaciones">Publicaciones</a>
+        <a href="/#etiquetas">Etiquetas</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="eyebrow">Buenos días reales · Lluvia y calma</div>
+      <h1>Día de lluvia sin vacíos por dentro</h1>
+      <p class="lead">
+        Hay mañanas grises que no vienen a romperte. Vienen a bajar el ruido.
+        A poner el mundo un poco más lento. Y a recordarte que no todo lo callado
+        tiene que sentirse vacío.
+      </p>
+
+      <div class="meta">
+        <span>Lectura: 4 min</span>
+        <span>Publicado: 17/03/2026</span>
+      </div>
+    </section>
+
+    <section class="card" aria-labelledby="compartir-post">
+      <h2 id="compartir-post" class="share-title">Compartir esta publicación</h2>
+      <div class="share-wrap">
+        <button class="share-btn" onclick="shareWhatsApp()">WhatsApp</button>
+        <button class="share-btn" onclick="shareTelegram()">Telegram</button>
+        <button class="share-btn" onclick="shareFacebook()">Facebook</button>
+        <button class="share-btn" onclick="shareX()">X</button>
+        <button class="share-btn" onclick="copyLink()">Copiar enlace</button>
+        <button class="share-btn" onclick="copyForInstagram()">Copiar texto para Instagram</button>
+        <button class="share-btn" onclick="nativeShare()">Compartir</button>
+      </div>
+      <div class="copy-msg" id="copyMsg" aria-live="polite"></div>
+    </section>
+
+    <article>
+      <p>
+        Hay días de lluvia que no se viven como tristeza. Se viven como una pausa.
+        Como si el cielo bajara un poco la voz para que adentro puedas escucharte mejor.
+        No todo lo gris tiene que doler. No toda mañana mojada viene con peso.
+      </p>
+
+      <p>
+        A veces la lluvia acompaña. No exige nada. No empuja. No apura.
+        Solo cae. Y en esa forma simple de estar, también te deja estar a vos.
+        Sin actuar, sin rendir, sin tener que demostrar energía cuando no la sentís.
+      </p>
+
+      <blockquote>
+        Hay silencios que no vacían: ordenan.
+      </blockquote>
+
+      <p>
+        Quizás por eso algunos días nublados se sienten más sinceros que los soleados.
+        Porque no prometen alegría inmediata. No te obligan a ponerte bien.
+        Solo te dan un clima donde podés existir más despacio, más cerca de lo que realmente te pasa.
+      </p>
+
+      <p>
+        Un día de lluvia no tiene por qué abrir un pozo.
+        También puede abrir una calma.
+        Una especie de refugio mínimo donde no hace falta tanto ruido,
+        donde una taza caliente, una ventana empañada o una música baja alcanzan.
+      </p>
+
+      <div class="mini-break"></div>
+
+      <p>
+        Estar en paz no siempre se siente luminoso. A veces se siente gris claro.
+        Tranquilo. Sin euforia. Sin vacío. Como una habitación ordenada por dentro,
+        aunque afuera el mundo siga húmedo, lento y silencioso.
+      </p>
+
+      <p>
+        Hay personas a las que la lluvia les recuerda pérdidas.
+        Y a otras, les devuelve profundidad.
+        Les da una textura distinta para pensar, para escribir, para quedarse quietas
+        sin sentirse mal por eso.
+      </p>
+
+      <blockquote>
+        No toda quietud es tristeza. A veces también es descanso del alma.
+      </blockquote>
+
+      <p>
+        Si hoy llueve y vos no te sentís roto, no te preguntes por qué.
+        Disfrutalo. Hay mañanas así, raras y lindas, donde el cielo está cerrado
+        pero adentro no falta nada.
+      </p>
+
+      <p>
+        Tal vez no sea felicidad ruidosa.
+        Tal vez no sea motivación de cartel.
+        Pero es algo mejor que eso:
+        una presencia serena.
+      </p>
+
+      <p>
+        Un día de lluvia sin vacíos por dentro
+        también puede ser una buena forma de empezar.
+      </p>
+    </article>
+
+    <section class="card" aria-labelledby="tags-post">
+      <h2 id="tags-post" class="section-title">Etiquetas</h2>
+      <div class="tags">
+        <a class="tag" href="/#etiquetas">día de lluvia</a>
+        <a class="tag" href="/#etiquetas">lluvia y emociones</a>
+        <a class="tag" href="/#etiquetas">reflexión de buenos días</a>
+        <a class="tag" href="/#etiquetas">calma interior</a>
+        <a class="tag" href="/#etiquetas">mañanas grises</a>
+        <a class="tag" href="/#etiquetas">paz interior</a>
+      </div>
+    </section>
+
+    <section class="card" aria-labelledby="interlinks-post">
+      <h2 id="interlinks-post" class="section-title">Seguí leyendo</h2>
+      <div class="links-grid">
+        <a class="related" href="/posts/manana-feliz-sin-nada-con-mil-problemas.html">
+          <strong>Una mañana feliz pero sin nada y con mil problemas</strong>
+          <span>Para cuando el día pesa desde temprano y aun así decidís seguir.</span>
+        </a>
+
+        <a class="related" href="/posts/dias-en-los-que-solo-tengo-que-esperar-porque-no-me-queda-otra.html">
+          <strong>Días en los que solo tengo que esperar porque no me queda otra</strong>
+          <span>Una reflexión para esas pausas forzadas donde no queda más que sostenerse.</span>
+        </a>
+
+        <a class="related" href="/posts/levantar-proyectos-que-algun-dia-funcionaron-y-hoy-no-los-tienes.html">
+          <strong>Levantar proyectos que algún día funcionaron y hoy no los tenés</strong>
+          <span>Volver a creer en algo que una vez supiste construir también es una forma de renacer.</span>
+        </a>
+
+        <a class="related" href="/posts/cuando-los-amigos-se-bajan-del-barco-por-las-noches.html">
+          <strong>Cuando los amigos se bajan del barco por las noches</strong>
+          <span>Sobre ausencias que duelen más cuando el mundo ya venía en silencio.</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="card faq" aria-labelledby="faq-post">
+      <h2 id="faq-post" class="section-title">Preguntas frecuentes</h2>
+
+      <details>
+        <summary>¿Este texto sirve para compartir en un día de lluvia?</summary>
+        <p>
+          Sí. Está pensado para acompañar mañanas grises desde un lugar sereno, sin dramatizar
+          ni forzar optimismo artificial.
+        </p>
+      </details>
+
+      <details>
+        <summary>¿Por qué relacionar la lluvia con la paz interior?</summary>
+        <p>
+          Porque no siempre la lluvia trae tristeza. A veces ayuda a bajar el ritmo,
+          ordenar pensamientos y habitar el día con más calma.
+        </p>
+      </details>
+
+      <details>
+        <summary>¿Este contenido encaja con el estilo de buenosdia.com?</summary>
+        <p>
+          Sí. Mantiene un tono humano, íntimo y respirado, ideal para personas que buscan
+          textos reales para empezar el día sin frases vacías.
+        </p>
+      </details>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-links">
+      <a href="/">Inicio</a>
+      <a href="/#publicaciones">Publicaciones</a>
+      <a href="/#etiquetas">Etiquetas</a>
+    </div>
+    <div>© 2026 buenosdia.com — mañanas reales, palabras que acompañan.</div>
+  </footer>
+
+  <script>
+    const pageTitle = document.title;
+    const pageUrl = window.location.href;
+    const shareText = "Día de lluvia sin vacíos por dentro — " + pageUrl;
+    const instaText = "Día de lluvia sin vacíos por dentro\n\nNo toda mañana gris viene a romperte. A veces también trae una calma rara y verdadera.\n\n" + pageUrl;
+
+    function openShare(url){
+      window.open(url, "_blank", "noopener,noreferrer,width=700,height=600");
+    }
+
+    function setMsg(text){
+      document.getElementById("copyMsg").textContent = text;
+    }
+
+    function shareWhatsApp(){
+      openShare("https://wa.me/?text=" + encodeURIComponent(shareText));
+    }
+
+    function shareTelegram(){
+      openShare("https://t.me/share/url?url=" + encodeURIComponent(pageUrl) + "&text=" + encodeURIComponent(pageTitle));
+    }
+
+    function shareFacebook(){
+      openShare("https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(pageUrl));
+    }
+
+    function shareX(){
+      openShare("https://x.com/intent/post?text=" + encodeURIComponent(shareText));
+    }
+
+    async function copyLink(){
+      try{
+        await navigator.clipboard.writeText(pageUrl);
+        setMsg("Enlace copiado.");
+      }catch(e){
+        setMsg("No se pudo copiar el enlace.");
+      }
+    }
+
+    async function copyForInstagram(){
+      try{
+        await navigator.clipboard.writeText(instaText);
+        setMsg("Texto copiado para pegar en Instagram.");
+      }catch(e){
+        setMsg("No se pudo copiar el texto.");
+      }
+    }
+
+    async function nativeShare(){
+      if(navigator.share){
+        try{
+          await navigator.share({
+            title: pageTitle,
+            text: "Leé esta reflexión en buenosdia.com",
+            url: pageUrl
+          });
+          setMsg("Contenido compartido.");
+        }catch(e){
+          setMsg("");
+        }
+      }else{
+        copyLink();
+      }
+    }
+  </script>
+</body>
+</html>
