@@ -72,6 +72,7 @@ fetch('data/posts.json')
           const tag = button.getAttribute('data-tag');
           activeTag = tag;
           renderAll();
+          document.getElementById('posts').scrollIntoView({ behavior: 'smooth', block: 'start' });
         });
       });
     }
