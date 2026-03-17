@@ -1,75 +1,257 @@
-name: Build posts.json
+name: Build full site
 
 on:
   push:
     paths:
-      - 'posts/*.html'
-      - '.github/workflows/build-posts.yml'
+      - 'post/*.html'
+      - '.github/workflows/build-site.yml'
   workflow_dispatch:
 
 permissions:
   contents: write
 
 jobs:
-  build-posts-json:
+  build-site:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
 
-      - name: Generate posts.json from posts folder
+      - name: Build posts, index data, sitemap and robots
         run: |
           python <<'PY'
-          import os, re, json
+          import os
+          import re
+          import json
+          from datetime import datetime
+          from pathlib import Path
+          from html import escape
 
-          posts_dir = 'posts'
-          output_file = 'data/posts.json'
-          posts = []
+          SITE_URL = "https://www.buenosdia.com"
+          SITE_NAME = "Buenos Días"
+          SITE_DESC = "Frases, reflexiones y mañanas reales."
 
-          os.makedirs('data', exist_ok=True)
+          source_dir = Path("post")
+          output_dir = Path("posts")
+          data_dir = Path("data")
+          sitemap_file = Path("sitemap.xml")
+          robots_file = Path("robots.txt")
 
-          for filename in os.listdir(posts_dir):
-              if not filename.endswith('.html'):
-                  continue
+          output_dir.mkdir(exist_ok=True)
+          data_dir.mkdir(exist_ok=True)
+          source_dir.mkdir(exist_ok=True)
 
-              path = os.path.join(posts_dir, filename)
+          for old_file in output_dir.glob("*.html"):
+              old_file.unlink()
 
-              with open(path, 'r', encoding='utf-8') as f:
-                  content = f.read()
+          def parse_meta(text):
+              meta = {
+                  "TITLE": "",
+                  "DESCRIPTION": "",
+                  "DATE": "2000-01-01",
+                  "TAGS": ""
+              }
 
-              title_match = re.search(r'TITLE:\s*(.+)', content)
-              desc_match = re.search(r'DESCRIPTION:\s*(.+)', content)
-              date_match = re.search(r'DATE:\s*(.+)', content)
-              tags_match = re.search(r'TAGS:\s*(.+)', content)
+              block_match = re.search(r'<!--(.*?)-->', text, re.DOTALL)
+              if not block_match:
+                  return meta, text
 
-              title = title_match.group(1).strip() if title_match else filename.replace('.html', '')
-              description = desc_match.group(1).strip() if desc_match else ''
-              date = date_match.group(1).strip() if date_match else '2000-01-01'
-              tags_raw = tags_match.group(1).strip() if tags_match else ''
-              tags = [tag.strip() for tag in tags_raw.split(',') if tag.strip()]
+              block = block_match.group(1)
+              for key in meta.keys():
+                  match = re.search(rf'{key}:\s*(.+)', block)
+                  if match:
+                      meta[key] = match.group(1).strip()
 
-              slug = filename[:-5]
+              body = text[block_match.end():].strip()
+              return meta, body
 
-              posts.append({
+          def slug_to_url(slug):
+              return f"{SITE_URL}/posts/{slug}.html"
+
+          def build_keywords(tags, title):
+              parts = [t.strip() for t in tags if t.strip()]
+              parts.append(title)
+              parts.append("buenos días")
+              return ", ".join(dict.fromkeys(parts))
+
+          source_posts = []
+
+          for src in sorted(source_dir.glob("*.html")):
+              raw = src.read_text(encoding="utf-8")
+              meta, body_html = parse_meta(raw)
+
+              slug = src.stem
+              title = meta["TITLE"].strip() or slug.replace("-", " ").title()
+              description = meta["DESCRIPTION"].strip() or title
+              date = meta["DATE"].strip() or "2000-01-01"
+              tags = [t.strip() for t in meta["TAGS"].split(",") if t.strip()]
+              url = f"posts/{slug}.html"
+              full_url = slug_to_url(slug)
+
+              source_posts.append({
+                  "slug": slug,
                   "title": title,
                   "description": description,
-                  "url": f"posts/{filename}",
-                  "slug": slug,
                   "date": date,
-                  "tags": tags
+                  "tags": tags,
+                  "url": url,
+                  "full_url": full_url,
+                  "body_html": body_html
               })
 
-          posts.sort(key=lambda x: x["date"], reverse=True)
+          source_posts.sort(key=lambda x: x["date"], reverse=True)
 
-          with open(output_file, 'w', encoding='utf-8') as f:
-              json.dump(posts, f, ensure_ascii=False, indent=2)
+          def related_posts_for(post, all_posts, limit=3):
+              scored = []
+              current_tags = set(t.lower() for t in post["tags"])
+
+              for other in all_posts:
+                  if other["slug"] == post["slug"]:
+                      continue
+
+                  other_tags = set(t.lower() for t in other["tags"])
+                  score = len(current_tags.intersection(other_tags))
+                  if score > 0:
+                      scored.append((score, other["date"], other))
+
+              scored.sort(key=lambda x: (x[0], x[1]), reverse=True)
+              return [item[2] for item in scored[:limit]]
+
+          def render_tags(tags):
+              if not tags:
+                  return ""
+              return '<div class="post-meta">' + "".join(
+                  f'<span class="post-tag">{escape(tag)}</span>' for tag in tags
+              ) + '</div>'
+
+          for post in source_posts:
+              related = related_posts_for(post, source_posts)
+
+              related_html = ""
+              if related:
+                  items = []
+                  for rel in related:
+                      items.append(
+                          f'''
+                          <a class="related-link" href="/{escape(rel["url"])}">
+                            <strong>{escape(rel["title"])}</strong>
+                            <span>{escape(rel["description"])}</span>
+                          </a>
+                          '''
+                      )
+
+                  related_html = f'''
+                  <section class="related-posts">
+                    <h2>Seguí leyendo</h2>
+                    <div class="related-links">
+                      {"".join(items)}
+                    </div>
+                  </section>
+                  '''
+
+              final_html = f'''<!DOCTYPE html>
+          <html lang="es">
+          <head>
+            <meta charset="UTF-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <title>{escape(post["title"])} | {SITE_NAME}</title>
+            <meta name="description" content="{escape(post["description"])}">
+            <meta name="keywords" content="{escape(build_keywords(post["tags"], post["title"]))}">
+            <meta name="author" content="{SITE_NAME}">
+            <link rel="canonical" href="{escape(post["full_url"])}">
+            <meta property="og:title" content="{escape(post["title"])}">
+            <meta property="og:description" content="{escape(post["description"])}">
+            <meta property="og:type" content="article">
+            <meta property="og:url" content="{escape(post["full_url"])}">
+            <meta property="og:site_name" content="{SITE_NAME}">
+            <meta name="twitter:card" content="summary_large_image">
+            <link rel="stylesheet" href="../assets/css/style.css" />
+          </head>
+          <body>
+            <header class="site-header">
+              <div class="container header-inner">
+                <div>
+                  <a href="/" class="brand">{SITE_NAME}</a>
+                  <p class="brand-subtitle">{SITE_DESC}</p>
+                </div>
+
+                <nav class="top-nav">
+                  <a href="/">Inicio</a>
+                  <a href="/#posts">Publicaciones</a>
+                  <a href="/#tags">Etiquetas</a>
+                </nav>
+              </div>
+            </header>
+
+            <main class="container" style="padding: 40px 0 60px;">
+              <article class="post-card" style="max-width: 820px; margin: 0 auto;">
+                <p class="eyebrow">Reflexión de la mañana</p>
+                <h1>{escape(post["title"])}</h1>
+                <p class="post-description" style="font-size:1.05rem; margin-bottom:26px;">{escape(post["description"])}</p>
+                {render_tags(post["tags"])}
+                <div class="post-content">
+                  {post["body_html"]}
+                </div>
+                {related_html}
+              </article>
+            </main>
+
+            <footer class="site-footer">
+              <div class="container footer-inner">
+                <p>© {SITE_NAME}</p>
+                <p class="footer-note">Textos simples para mañanas reales.</p>
+              </div>
+            </footer>
+          </body>
+          </html>
+          '''
+
+              (output_dir / f'{post["slug"]}.html').write_text(final_html, encoding="utf-8")
+
+          posts_json = []
+          for post in source_posts:
+              posts_json.append({
+                  "title": post["title"],
+                  "description": post["description"],
+                  "url": "/" + post["url"],
+                  "slug": post["slug"],
+                  "date": post["date"],
+                  "tags": post["tags"]
+              })
+
+          (data_dir / "posts.json").write_text(
+              json.dumps(posts_json, ensure_ascii=False, indent=2),
+              encoding="utf-8"
+          )
+
+          sitemap_urls = [f"{SITE_URL}/"]
+          sitemap_urls.extend(post["full_url"] for post in source_posts)
+
+          sitemap_lines = ['<?xml version="1.0" encoding="UTF-8"?>']
+          sitemap_lines.append('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">')
+
+          today = datetime.utcnow().strftime("%Y-%m-%d")
+
+          for url in sitemap_urls:
+              sitemap_lines.append("  <url>")
+              sitemap_lines.append(f"    <loc>{escape(url)}</loc>")
+              sitemap_lines.append(f"    <lastmod>{today}</lastmod>")
+              sitemap_lines.append("  </url>")
+
+          sitemap_lines.append("</urlset>")
+          sitemap_file.write_text("\n".join(sitemap_lines), encoding="utf-8")
+
+          robots_file.write_text(
+              "User-agent: *\nAllow: /\n\nSitemap: https://www.buenosdia.com/sitemap.xml\n",
+              encoding="utf-8"
+          )
           PY
 
-      - name: Commit updated posts.json
+      - name: Commit generated files
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/posts.json
-          git diff --cached --quiet || git commit -m "Auto-update posts.json"
+          git add posts data/posts.json sitemap.xml robots.txt
+          git diff --cached --quiet || git commit -m "Auto-build site"
           git push
