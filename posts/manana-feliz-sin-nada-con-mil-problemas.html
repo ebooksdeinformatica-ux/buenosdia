@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Manana Feliz Sin Nada Con Mil Problemas | Buenos Días</title>
+  <meta name="description" content="Manana Feliz Sin Nada Con Mil Problemas">
+  <meta name="keywords" content="Manana Feliz Sin Nada Con Mil Problemas, buenos días">
+  <meta name="author" content="Buenos Días">
+  <link rel="canonical" href="https://www.buenosdia.com/posts/manana-feliz-sin-nada-con-mil-problemas.html">
+  <meta property="og:title" content="Manana Feliz Sin Nada Con Mil Problemas">
+  <meta property="og:description" content="Manana Feliz Sin Nada Con Mil Problemas">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.buenosdia.com/posts/manana-feliz-sin-nada-con-mil-problemas.html">
+  <meta property="og:site_name" content="Buenos Días">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div>
+        <a href="/" class="brand">Buenos Días</a>
+        <p class="brand-subtitle">Frases, reflexiones y mañanas reales.</p>
+      </div>
+
+      <nav class="top-nav">
+        <a href="/">Inicio</a>
+        <a href="/#posts">Publicaciones</a>
+        <a href="/#tags">Etiquetas</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container" style="padding: 40px 0 60px;">
+    <article class="post-card" style="max-width: 820px; margin: 0 auto;">
+      <p class="eyebrow">Reflexión de la mañana</p>
+      <h1>Manana Feliz Sin Nada Con Mil Problemas</h1>
+      <p class="post-description" style="font-size:1.05rem; margin-bottom:26px;">Manana Feliz Sin Nada Con Mil Problemas</p>
+      
+      <div class="post-content">
+        </body>
+</html>
+      </div>
+      
+    <section class="share-box">
+      <h2>Compartir</h2>
+      <div class="share-actions">
+        <a class="share-btn" href="https://wa.me/?text=Manana%20Feliz%20Sin%20Nada%20Con%20Mil%20Problemas%20https%3A//www.buenosdia.com/posts/manana-feliz-sin-nada-con-mil-problemas.html" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        <a class="share-btn" href="https://t.me/share/url?url=https%3A//www.buenosdia.com/posts/manana-feliz-sin-nada-con-mil-problemas.html&text=Manana%20Feliz%20Sin%20Nada%20Con%20Mil%20Problemas" target="_blank" rel="noopener noreferrer">Telegram</a>
+        <a class="share-btn" href="https://www.facebook.com/sharer/sharer.php?u=https%3A//www.buenosdia.com/posts/manana-feliz-sin-nada-con-mil-problemas.html" target="_blank" rel="noopener noreferrer">Facebook</a>
+        <a class="share-btn" href="https://twitter.com/intent/tweet?text=Manana%20Feliz%20Sin%20Nada%20Con%20Mil%20Problemas&url=https%3A//www.buenosdia.com/posts/manana-feliz-sin-nada-con-mil-problemas.html" target="_blank" rel="noopener noreferrer">X</a>
+        <button type="button" class="copy-link-btn" data-link="https://www.buenosdia.com/posts/manana-feliz-sin-nada-con-mil-problemas.html">Copiar enlace</button>
+        <button type="button" class="native-share-btn" data-title="Manana Feliz Sin Nada Con Mil Problemas" data-text="Manana Feliz Sin Nada Con Mil Problemas" data-url="https://www.buenosdia.com/posts/manana-feliz-sin-nada-con-mil-problemas.html">Compartir</button>
+      </div>
+    </section>
+    
+      
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© Buenos Días</p>
+      <p class="footer-note">Textos simples para mañanas reales.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.copy-link-btn').forEach(btn => {
+      btn.addEventListener('click', async () => {
+        const link = btn.getAttribute('data-link');
+        try {
+          await navigator.clipboard.writeText(link);
+          btn.textContent = 'Enlace copiado';
+          setTimeout(() => btn.textContent = 'Copiar enlace', 1600);
+        } catch (e) {
+          alert('No se pudo copiar el enlace.');
+        }
+      });
+    });
+
+    document.querySelectorAll('.native-share-btn').forEach(btn => {
+      btn.addEventListener('click', async () => {
+        const title = btn.getAttribute('data-title');
+        const text = btn.getAttribute('data-text');
+        const url = btn.getAttribute('data-url');
+
+        if (navigator.share) {
+          try {
+            await navigator.share({ title, text, url });
+          } catch (e) {}
+        } else {
+          try {
+            await navigator.clipboard.writeText(url);
+            btn.textContent = 'Enlace copiado';
+            setTimeout(() => btn.textContent = 'Compartir', 1600);
+          } catch (e) {
+            alert('Tu navegador no soporta compartir directo.');
+          }
+        }
+      });
+    });
+  </script>
+</body>
+</html>

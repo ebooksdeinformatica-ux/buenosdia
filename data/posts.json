@@ -1,15 +1,10 @@
 [
   {
-    "title": "Cuando la mañana pesa, pero seguís",
-    "description": "Hay días que arrancan torcidos, pero aun así te levantás. Y eso también vale.",
-    "url": "posts/cuando-la-manana-pesa-pero-seguis.html",
-    "slug": "cuando-la-manana-pesa-pero-seguis",
-    "date": "2026-03-17",
-    "tags": [
-      "buenos días",
-      "reflexión",
-      "mañana",
-      "seguir"
-    ]
+    "title": "Manana Feliz Sin Nada Con Mil Problemas",
+    "description": "Manana Feliz Sin Nada Con Mil Problemas",
+    "url": "/posts/manana-feliz-sin-nada-con-mil-problemas.html",
+    "slug": "manana-feliz-sin-nada-con-mil-problemas",
+    "date": "2000-01-01",
+    "tags": []
   }
 ]
