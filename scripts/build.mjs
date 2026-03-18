@@ -246,19 +246,6 @@ function renderTagPages(tagMap) {
 </html>`;
 
     fs.writeFileSync(path.join(TAGS_DIR, `${tag.slug}.html`), pageHtml, 'utf8');
-
-    const aliasVariants = new Set([
-      normalizeTag(tag.name),
-      String(tag.name || '').trim().toLowerCase()
-    ]);
-
-    for (const variant of aliasVariants) {
-      const aliasName = `${variant}.html`;
-      const aliasPath = path.join(TAGS_DIR, aliasName);
-      if (!variant || variant === tag.slug || variant.includes('/') || fs.existsSync(aliasPath)) continue;
-      const aliasHtml = `<!doctype html><html lang="es"><head><meta charset="utf-8"><meta http-equiv="refresh" content="0; url=/tags/${tag.slug}.html"><link rel="canonical" href="${SITE_URL}/tags/${tag.slug}.html"><script>window.location.replace('/tags/${tag.slug}.html')</script></head><body><p>Redirigiendo a <a href="/tags/${tag.slug}.html">/tags/${tag.slug}.html</a>…</p></body></html>`;
-      fs.writeFileSync(aliasPath, aliasHtml, 'utf8');
-    }
   }
 }
 
@@ -357,12 +344,7 @@ function write404Page(tagMap) {
   const knownTags = Object.values(tagMap).map(tag => tag.slug).sort();
   const knownTagVariants = {};
   for (const tag of Object.values(tagMap)) {
-    const variants = new Set([
-      tag.slug,
-      normalizeText(tag.name),
-      normalizeText(tag.name).replace(/\s+/g, '-'),
-      String(tag.name || '').toLowerCase().trim()
-    ]);
+    const variants = new Set([tag.slug, tag.name, normalizeTag(tag.name)]);
     for (const variant of variants) {
       const key = slugify(variant);
       if (key) knownTagVariants[key] = tag.slug;
