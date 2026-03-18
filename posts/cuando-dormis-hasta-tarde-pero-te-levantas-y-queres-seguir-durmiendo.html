@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Cuando dormís hasta tarde pero te levantás y querés seguir durmiendo | buenosdia.com</title>
-  <meta name="description" content="Hay días en los que dormís, pero no descansás. Te levantás tarde y aún así el cuerpo pide seguir. Una reflexión sobre ese cansancio profundo que no se va con horas de sueño.">
-  <meta name="keywords" content="cansancio extremo, sueño acumulado, dormir y no descansar, fatiga mental, agotamiento, dormir mucho y seguir cansado, mañanas pesadas, falta de energia, buenos dias reales">
+  <meta name="description" content="Hay días en los que dormís, pero no descansás. Te levantás tarde y aun así el cuerpo pide seguir. Una reflexión honesta sobre ese cansancio profundo que no se va con horas de sueño.">
+  <meta name="keywords" content="cansancio extremo, sueño acumulado, dormir y no descansar, fatiga mental, agotamiento, dormir mucho y seguir cansado, mañanas pesadas, falta de energía, buenos días reales">
   <meta name="author" content="buenosdia.com">
   <meta name="robots" content="index,follow,max-image-preview:large">
   <link rel="canonical" href="https://www.buenosdia.com/posts/cuando-dormis-hasta-tarde-pero-te-levantas-y-queres-seguir-durmiendo.html">
@@ -22,7 +22,6 @@
   <meta name="twitter:title" content="Cuando dormís hasta tarde pero te levantás y querés seguir durmiendo">
   <meta name="twitter:description" content="Hay cansancios que no se van durmiendo. Solo se sienten.">
 
-  <!-- MISMO STYLE EXACTO DEL SITIO -->
   <style>
     :root{
       --bg:#ffffff;
@@ -64,22 +63,27 @@
       display:flex;
       align-items:center;
       justify-content:space-between;
+      gap:12px;
     }
 
     .brand{
       color:var(--accent-dark);
       font-weight:800;
+      letter-spacing:.2px;
       text-decoration:none;
+      font-size:1.05rem;
     }
 
     .topnav{
       display:flex;
       gap:10px;
+      flex-wrap:wrap;
     }
 
     .topnav a{
       text-decoration:none;
       color:var(--muted);
+      font-size:.95rem;
       padding:8px 12px;
       border-radius:999px;
     }
@@ -96,225 +100,30 @@
     }
 
     .hero{
+      background:var(--paper);
       border:1px solid var(--line);
       border-radius:26px;
       box-shadow:var(--shadow);
       padding:34px 24px;
+      overflow:hidden;
+      position:relative;
+    }
+
+    .hero::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:
+        radial-gradient(circle at top right, rgba(139,94,60,.05), transparent 32%),
+        radial-gradient(circle at bottom left, rgba(139,94,60,.04), transparent 28%);
+      pointer-events:none;
     }
 
     .eyebrow{
+      display:inline-block;
       font-size:.85rem;
       color:var(--accent-dark);
       background:var(--soft);
+      border:1px solid #eedfce;
       padding:7px 11px;
-      border-radius:999px;
-      margin-bottom:14px;
-      display:inline-block;
-    }
-
-    h1{
-      font-size:clamp(2rem,5vw,3rem);
-      margin:0 0 14px;
-    }
-
-    .lead{
-      color:#3f362f;
-    }
-
-    .meta{
-      margin-top:20px;
-      color:var(--muted);
-    }
-
-    .card, article{
-      margin-top:22px;
-      border:1px solid var(--line);
-      border-radius:var(--radius);
-      box-shadow:var(--shadow);
-      padding:24px;
-    }
-
-    .share-btn{
-      background:var(--accent);
-      color:#fff;
-      border:none;
-      padding:12px;
-      border-radius:10px;
-      cursor:pointer;
-      font-weight:700;
-    }
-
-    article p{
-      margin-bottom:18px;
-    }
-
-    blockquote{
-      border-left:4px solid var(--accent);
-      padding-left:14px;
-      background:#fcf7f1;
-      border-radius:10px;
-      padding:14px;
-    }
-
-    .tags{
-      display:flex;
-      flex-wrap:wrap;
-      gap:10px;
-    }
-
-    .tag{
-      background:#fbf7f2;
-      border:1px solid var(--line);
-      padding:8px 12px;
-      border-radius:999px;
-      text-decoration:none;
-      color:var(--accent-dark);
-    }
-
-    footer{
-      border-top:1px solid var(--line);
-      padding:30px;
-      text-align:center;
-    }
-  </style>
-
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"Article",
-    "headline":"Cuando dormís hasta tarde pero te levantás y querés seguir durmiendo",
-    "description":"Hay días en los que dormís, pero no descansás. Te levantás tarde y aún así el cuerpo pide seguir.",
-    "author":{"@type":"Organization","name":"buenosdia.com"},
-    "publisher":{"@type":"Organization","name":"buenosdia.com"},
-    "mainEntityOfPage":{"@type":"WebPage","@id":"https://www.buenosdia.com/posts/cuando-dormis-hasta-tarde-pero-te-levantas-y-queres-seguir-durmiendo.html"},
-    "datePublished":"2026-03-18",
-    "dateModified":"2026-03-18"
-  }
-  </script>
-</head>
-
-<body>
-
-<header>
-  <div class="topbar">
-    <a class="brand" href="/">buenosdia.com</a>
-    <nav class="topnav">
-      <a href="/#inicio">Inicio</a>
-      <a href="/#publicaciones">Publicaciones</a>
-      <a href="/tags/">Etiquetas</a>
-    </nav>
-  </div>
-</header>
-
-<main>
-
-<section class="hero">
-  <div class="eyebrow">Buenos días reales · Cansancio profundo</div>
-  <h1>Cuando dormís hasta tarde pero te levantás y querés seguir durmiendo</h1>
-  <p class="lead">
-    Dormiste. Bastante. Pero no alcanzó. Te levantás igual, y lo único que querés es volver a cerrar los ojos como si nada hubiera cambiado.
-  </p>
-
-  <div class="meta">
-    <span>Lectura: 5 min</span>
-    <span>Publicado: 18/03/2026</span>
-  </div>
-</section>
-
-<section class="card">
-  <h2>Compartir</h2>
-  <button class="share-btn" onclick="navigator.share({title:document.title,url:location.href})">Compartir</button>
-</section>
-
-<article>
-
-<p>Hay un tipo de cansancio que no se arregla durmiendo. Ese es el más complicado. Porque no tiene lógica simple. Dormís ocho horas, nueve, diez… y aun así te levantás con el cuerpo pesado, la cabeza lenta y una sensación rara de que no terminaste de descansar nunca.</p>
-
-<p>No es sueño solamente. Es otra cosa. Es acumulación. Es desgaste. Es ruido interno. Es todo lo que venís cargando sin darte cuenta, o dándote cuenta pero sin poder frenarlo del todo.</p>
-
-<blockquote>
-Dormir no siempre es descansar. A veces es solo apagar por un rato algo que sigue corriendo por dentro.
-</blockquote>
-
-<p>Y cuando te levantás así, no hay café que alcance, no hay ducha que reactive del todo. Hay una parte tuya que sigue queriendo quedarse. Que no quiere arrancar. Que no tiene ganas de enfrentarse al día porque todavía no terminó de procesar el anterior.</p>
-
-<p>Eso genera culpa también. Porque pensás: “pero si dormí un montón, ¿por qué estoy así?”. Y empezás a exigirte más de lo que podés dar en ese momento. Y ahí se arma el combo perfecto: cansancio + autoexigencia.</p>
-
-<p>Hay días en los que uno no necesita más horas de sueño. Necesita otra cosa. Bajar un poco el ruido. Aflojar la cabeza. Soltar tensión. Parar de empujarse como si fuera obligatorio rendir siempre igual.</p>
-
-<p>Porque no lo es.</p>
-
-<p>Hay mañanas en las que levantarse ya es suficiente. Literalmente. No todo tiene que ser productivo, ni eficiente, ni perfecto. A veces el cuerpo solo está tratando de ponerse en eje otra vez.</p>
-
-<p>Y eso lleva tiempo.</p>
-
-<p>Capaz hoy te levantaste tarde y aun así querías seguir durmiendo. No porque seas vago. No porque no tengas objetivos. Sino porque hay algo en vos que todavía no terminó de descansar de verdad.</p>
-
-<p>Y eso no se soluciona a la fuerza.</p>
-
-<p>Se atraviesa. De a poco.</p>
-
-<p>Con menos castigo. Con más comprensión. Con pequeños movimientos. Con pasos cortos.</p>
-
-<p>Porque incluso en esos días, los más pesados, los más lentos… también hay vida.</p>
-
-</article>
-
-<section class="card">
-  <h2>Etiquetas</h2>
-  <div class="tags">
-    <a class="tag" href="/tags/cansancio.html">cansancio</a>
-    <a class="tag" href="/tags/agotamiento.html">agotamiento</a>
-    <a class="tag" href="/tags/sueno.html">sueño</a>
-    <a class="tag" href="/tags/fatiga.html">fatiga</a>
-  </div>
-</section>
-
-    <section class="card" aria-labelledby="interlinks-post">
-      <h2 id="interlinks-post" class="section-title">Seguí leyendo</h2>
-      <div class="links-grid">
-        <a class="related" href="/posts/levantar-proyectos-que-algun-dia-funcionaron-y-hoy-no-los-tienes.html">
-          <strong>Levantar proyectos que algún día funcionaron y hoy no los tienes</strong>
-          <span>Hay mañanas en las que no duele empezar de cero, sino mirar todo lo que una vez funcionó y ya no está. Aun así, volver a levantar…</span>
-        </a>
-
-        <a class="related" href="/posts/cuando-los-amigos-se-bajan-del-barco-por-las-noches.html">
-          <strong>Cuando los amigos se bajan del barco por las noches</strong>
-          <span>Hay noches en las que duele más la ausencia de los que estaban cerca que cualquier problema en sí. Y aun así, la mañana llega, inc…</span>
-        </a>
-
-        <a class="related" href="/posts/dias-en-los-que-solo-tengo-que-esperar-porque-no-me-queda-otra.html">
-          <strong>Días en los que solo tengo que esperar porque no me queda otra</strong>
-          <span>Hay días en los que no queda otra que esperar. Esta reflexión acompaña esos momentos de pausa forzada, incertidumbre y resistencia…</span>
-        </a>
-
-        <a class="related" href="/posts/manana-feliz-sin-nada-con-mil-problemas.html">
-          <strong>Una mañana feliz pero sin nada y con mil problemas</strong>
-          <span>Hay mañanas en las que no tenés nada resuelto, pero igual seguís. Una reflexión honesta sobre empezar el día con problemas, cansan…</span>
-        </a>
-      </div>
-    </section>
-
-    <section class="card faq"
-  <h2>Preguntas frecuentes</h2>
-
-  <details>
-    <summary>¿Por qué sigo cansado aunque duerma mucho?</summary>
-    <p>Porque el cansancio no siempre es físico. Puede ser mental o emocional.</p>
-  </details>
-
-  <details>
-    <summary>¿Es normal no querer levantarse incluso después de dormir?</summary>
-    <p>Sí. Muchas veces es señal de sobrecarga o estrés acumulado.</p>
-  </details>
-
-</section>
-
-</main>
-
-<footer>
-  <div>© 2026 buenosdia.com</div>
-</footer>
-
-</body>
-</html>
+      border
