@@ -1,214 +1,434 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <title>Levantar proyectos que algún día funcionaron y hoy no los tienes | buenosdia.com</title>
-  <meta name="description" content="Hay mañanas en las que no duele empezar de cero, sino mirar todo lo que una vez funcionó y ya no está. Aun así, volver a levantar algo roto también puede ser una forma de seguir vivo." />
-  <meta name="keywords" content="levantar proyectos, empezar de nuevo, reconstrucción personal, volver a empezar, motivación real, proyectos caídos, mañanas difíciles, buenos días, seguir adelante" />
-  <meta name="author" content="buenosdia.com" />
-  <meta name="robots" content="index,follow" />
-  <link rel="canonical" href="https://buenosdia.com/posts/levantar-proyectos-que-algun-dia-funcionaron-y-hoy-no-los-tienes.html" />
+  <meta name="description" content="Hay mañanas en las que no duele empezar de cero, sino mirar todo lo que una vez funcionó y ya no está. Aun así, volver a levantar algo roto también puede ser una forma de seguir vivo.">
+  <meta name="keywords" content="levantar proyectos, empezar de nuevo, reconstrucción personal, volver a empezar, motivación real, proyectos caídos, mañanas difíciles, buenos días, seguir adelante">
+  <meta name="author" content="buenosdia.com">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <link rel="canonical" href="https://www.buenosdia.com/posts/levantar-proyectos-que-algun-dia-funcionaron-y-hoy-no-los-tienes.html">
 
-  <meta property="og:type" content="article" />
-  <meta property="og:title" content="Levantar proyectos que algún día funcionaron y hoy no los tienes" />
-  <meta property="og:description" content="A veces no pesa empezar de cero: pesa recordar que una vez ya lo habías logrado. Y aun así, se puede volver." />
-  <meta property="og:url" content="https://buenosdia.com/posts/levantar-proyectos-que-algun-dia-funcionaron-y-hoy-no-los-tienes.html" />
-  <meta property="og:site_name" content="buenosdia.com" />
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="es_AR">
+  <meta property="og:site_name" content="buenosdia.com">
+  <meta property="og:title" content="Levantar proyectos que algún día funcionaron y hoy no los tienes">
+  <meta property="og:description" content="A veces no pesa empezar de cero: pesa recordar que una vez ya lo habías logrado. Y aun así, se puede volver.">
+  <meta property="og:url" content="https://www.buenosdia.com/posts/levantar-proyectos-que-algun-dia-funcionaron-y-hoy-no-los-tienes.html">
 
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Levantar proyectos que algún día funcionaron y hoy no los tienes" />
-  <meta name="twitter:description" content="Hay mañanas en las que reconstruirse también significa volver a creer en algo que una vez ya habías levantado." />
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Levantar proyectos que algún día funcionaron y hoy no los tienes">
+  <meta name="twitter:description" content="Hay mañanas en las que reconstruirse también significa volver a creer en algo que una vez ya habías levantado.">
 
   <style>
     :root{
       --bg:#ffffff;
-      --text:#111111;
-      --muted:#666666;
-      --soft:#f5f5f5;
-      --line:#e7e7e7;
-      --accent:#1a73e8;
+      --paper:#ffffff;
+      --text:#1f1a17;
+      --muted:#6c6259;
+      --line:#e9e2d9;
+      --accent:#8b5e3c;
+      --accent-dark:#6f472b;
+      --soft:#f8f2eb;
+      --shadow:0 10px 26px rgba(40,25,10,.06);
+      --radius:18px;
+      --max:860px;
     }
+
     *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
     body{
       margin:0;
       font-family:Arial, Helvetica, sans-serif;
       background:var(--bg);
       color:var(--text);
-      line-height:1.8;
+      line-height:1.75;
     }
+
     header{
-      border-bottom:1px solid var(--line);
-      background:#fff;
       position:sticky;
       top:0;
       z-index:20;
+      backdrop-filter:blur(10px);
+      background:rgba(255,255,255,.95);
+      border-bottom:1px solid rgba(139,94,60,.10);
     }
+
     .topbar{
-      max-width:900px;
+      max-width:1100px;
       margin:0 auto;
-      padding:16px 20px;
+      padding:14px 18px;
       display:flex;
       align-items:center;
       justify-content:space-between;
       gap:12px;
     }
+
     .brand{
-      font-size:1.1rem;
-      font-weight:700;
-      color:var(--text);
+      color:var(--accent-dark);
+      font-weight:800;
+      letter-spacing:.2px;
       text-decoration:none;
+      font-size:1.05rem;
     }
-    .menu-btn{
-      border:1px solid var(--line);
-      background:#fff;
-      padding:8px 12px;
-      border-radius:10px;
-      cursor:pointer;
-      font-size:.95rem;
-    }
-    .nav-links{
-      display:none;
-      max-width:900px;
-      margin:0 auto;
-      padding:0 20px 16px;
+
+    .topnav{
+      display:flex;
       gap:10px;
       flex-wrap:wrap;
     }
-    .nav-links a{
+
+    .topnav a{
       text-decoration:none;
       color:var(--muted);
-      border:1px solid var(--line);
+      font-size:.95rem;
       padding:8px 12px;
       border-radius:999px;
-      font-size:.92rem;
     }
-    .nav-links.show{display:flex}
+
+    .topnav a:hover{
+      background:var(--soft);
+      color:var(--accent-dark);
+    }
+
     main{
-      max-width:900px;
+      max-width:var(--max);
       margin:0 auto;
-      padding:34px 20px 60px;
+      padding:30px 18px 70px;
     }
-    article{
-      max-width:760px;
-      margin:0 auto;
+
+    .hero{
+      background:var(--paper);
+      border:1px solid var(--line);
+      border-radius:26px;
+      box-shadow:var(--shadow);
+      padding:34px 24px;
+      overflow:hidden;
+      position:relative;
     }
+
+    .hero::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:
+        radial-gradient(circle at top right, rgba(139,94,60,.05), transparent 32%),
+        radial-gradient(circle at bottom left, rgba(139,94,60,.04), transparent 28%);
+      pointer-events:none;
+    }
+
+    .eyebrow{
+      display:inline-block;
+      font-size:.85rem;
+      color:var(--accent-dark);
+      background:var(--soft);
+      border:1px solid #eedfce;
+      padding:7px 11px;
+      border-radius:999px;
+      margin-bottom:14px;
+      position:relative;
+      z-index:1;
+    }
+
     h1{
-      font-size:2rem;
-      line-height:1.25;
       margin:0 0 14px;
-      letter-spacing:-0.02em;
+      font-size:clamp(2rem,5vw,3.2rem);
+      line-height:1.12;
+      letter-spacing:-.02em;
+      position:relative;
+      z-index:1;
     }
+
     .lead{
       font-size:1.08rem;
-      color:#333;
-      margin:0 0 28px;
+      color:#3f362f;
+      margin:0;
+      position:relative;
+      z-index:1;
     }
-    p{
-      margin:0 0 18px;
-      font-size:1.04rem;
+
+    .meta{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:20px;
+      color:var(--muted);
+      font-size:.95rem;
+      position:relative;
+      z-index:1;
     }
-    .share-box,.faq-box,.tags-box,.copy-box{
-      margin-top:36px;
-      padding:20px;
+
+    .meta span{
+      background:#fbf7f2;
       border:1px solid var(--line);
-      border-radius:18px;
-      background:#fff;
+      padding:7px 11px;
+      border-radius:999px;
     }
-    .share-box h2,.faq-box h2,.tags-box h2{
-      margin:0 0 14px;
-      font-size:1.25rem;
+
+    .card{
+      margin-top:22px;
+      background:var(--paper);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:24px;
     }
-    .share-buttons{
+
+    .share-title,.section-title{
+      margin:0 0 12px;
+      font-size:1.05rem;
+      color:var(--accent-dark);
+    }
+
+    .share-wrap{
       display:flex;
       flex-wrap:wrap;
       gap:10px;
     }
-    .share-buttons a,.share-buttons button,.copy-btn{
+
+    .share-btn{
+      appearance:none;
       border:none;
-      background:var(--soft);
-      color:var(--text);
-      text-decoration:none;
-      padding:11px 14px;
+      background:var(--accent);
+      color:#fff;
+      padding:12px 15px;
       border-radius:12px;
       cursor:pointer;
+      font-weight:700;
       font-size:.95rem;
+      transition:transform .15s ease, opacity .15s ease, background .15s ease;
     }
+
+    .share-btn:hover{
+      transform:translateY(-1px);
+      opacity:.95;
+      background:var(--accent-dark);
+    }
+
+    article{
+      margin-top:22px;
+      background:var(--paper);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:28px 24px;
+    }
+
+    article p{
+      margin:0 0 18px;
+      font-size:1.08rem;
+    }
+
+    article strong{
+      color:var(--accent-dark);
+    }
+
+    blockquote{
+      margin:26px 0;
+      padding:18px 18px 18px 20px;
+      border-left:4px solid var(--accent);
+      background:#fcf7f1;
+      border-radius:14px;
+      color:#3e332b;
+      font-size:1.08rem;
+    }
+
+    .mini-break{
+      height:1px;
+      background:linear-gradient(90deg, transparent, var(--line), transparent);
+      margin:24px 0;
+    }
+
     .tags{
       display:flex;
       flex-wrap:wrap;
       gap:10px;
+      margin-top:10px;
     }
-    .tags a{
+
+    .tag{
+      display:inline-block;
       text-decoration:none;
-      color:var(--text);
-      background:var(--soft);
-      border-radius:999px;
+      color:var(--accent-dark);
+      background:#fbf7f2;
+      border:1px solid var(--line);
       padding:9px 12px;
+      border-radius:999px;
       font-size:.92rem;
     }
-    .faq-item{
-      margin-bottom:18px;
+
+    .tag:hover{
+      background:var(--soft);
     }
-    .faq-item h3{
-      margin:0 0 8px;
-      font-size:1rem;
-      line-height:1.45;
+
+    .links-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:14px;
+      margin-top:12px;
     }
-    .faq-item p{
-      margin:0;
-      color:#333;
-      font-size:.98rem;
+
+    .related{
+      display:block;
+      text-decoration:none;
+      color:var(--text);
+      border:1px solid var(--line);
+      background:#fffdfa;
+      border-radius:16px;
+      padding:16px;
+      min-height:100%;
+      transition:transform .15s ease, border-color .15s ease, box-shadow .15s ease;
     }
+
+    .related:hover{
+      transform:translateY(-2px);
+      border-color:#d9c1ab;
+      box-shadow:var(--shadow);
+    }
+
+    .related strong{
+      display:block;
+      margin-bottom:7px;
+      color:var(--accent-dark);
+      line-height:1.35;
+    }
+
+    .faq details{
+      border:1px solid var(--line);
+      border-radius:14px;
+      background:#fffdfa;
+      padding:14px 16px;
+      margin-bottom:12px;
+    }
+
+    .faq summary{
+      cursor:pointer;
+      font-weight:700;
+      color:var(--accent-dark);
+    }
+
+    .faq p{
+      margin:12px 0 0;
+      color:#433831;
+    }
+
     footer{
       border-top:1px solid var(--line);
-      padding:30px 20px 50px;
+      padding:28px 18px 50px;
+      color:var(--muted);
+      text-align:center;
       background:#fff;
     }
-    .footer-wrap{
-      max-width:900px;
-      margin:0 auto;
-      color:var(--muted);
-      font-size:.95rem;
-    }
+
     .footer-links{
       display:flex;
+      justify-content:center;
       flex-wrap:wrap;
       gap:10px;
-      margin-top:14px;
+      margin-bottom:12px;
     }
+
     .footer-links a{
-      color:var(--muted);
+      color:var(--accent-dark);
       text-decoration:none;
+      background:#fbf7f2;
       border:1px solid var(--line);
       padding:8px 12px;
       border-radius:999px;
     }
+
+    .copy-msg{
+      margin-top:10px;
+      color:var(--muted);
+      font-size:.92rem;
+      min-height:22px;
+    }
+
+    @media (max-width:700px){
+      .topnav{display:none}
+      .hero,.card,article{padding:20px 16px}
+      article p{font-size:1.03rem}
+    }
   </style>
+
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Levantar proyectos que algún día funcionaron y hoy no los tienes",
+  "description": "Hay mañanas en las que no duele empezar de cero, sino mirar todo lo que una vez funcionó y ya no está. Aun así, volver a levantar algo roto también puede ser una forma de seguir vivo.",
+  "author": {
+    "@type": "Organization",
+    "name": "buenosdia.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "buenosdia.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.buenosdia.com/logo.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.buenosdia.com/posts/levantar-proyectos-que-algun-dia-funcionaron-y-hoy-no-los-tienes.html"
+  },
+  "datePublished": "2026-03-17",
+  "dateModified": "2026-03-17",
+  "inLanguage": "es-AR"
+}
+  </script>
 </head>
 <body>
+
   <header>
     <div class="topbar">
       <a class="brand" href="/">buenosdia.com</a>
-      <button class="menu-btn" onclick="toggleMenu()">☰ Menú</button>
+      <nav class="topnav" aria-label="Navegación principal">
+        <a href="/#inicio">Inicio</a>
+        <a href="/#publicaciones">Publicaciones</a>
+        <a href="/tags/">Etiquetas</a>
+      </nav>
     </div>
-    <nav id="navLinks" class="nav-links">
-      <a href="/">Inicio</a>
-      <a href="/tags/motivacion.html">Motivación</a>
-      <a href="/tags/mananas-dificiles.html">Mañanas difíciles</a>
-      <a href="/tags/esperanza.html">Esperanza</a>
-      <a href="/tags/reconstruccion.html">Reconstrucción</a>
-    </nav>
   </header>
 
   <main>
-    <article>
+    <section class="hero">
+      <div class="eyebrow">Buenos días reales · Reflexión</div>
       <h1>Levantar proyectos que algún día funcionaron y hoy no los tienes</h1>
-      <p class="lead">Hay mañanas en las que no duele empezar de cero, sino mirar todo lo que una vez funcionó y ya no está. Y sin embargo, hasta volver a levantar algo roto puede ser una manera de seguir vivo.</p>
+      <p class="lead">
+        Hay mañanas en las que no duele empezar de cero, sino mirar todo lo que una vez funcionó y ya no está. Y sin embargo, hasta volver a levantar algo roto puede ser una manera de seguir vivo.
+      </p>
 
+      <div class="meta">
+        <span>Lectura: 5 min</span>
+        <span>Publicado: 17/03/2026 </span>
+      </div>
+    </section>
+
+    <section class="card" aria-labelledby="compartir-post">
+      <h2 id="compartir-post" class="share-title">Compartir esta publicación</h2>
+      <div class="share-wrap">
+        <button class="share-btn" onclick="shareWhatsApp()">WhatsApp</button>
+        <button class="share-btn" onclick="shareTelegram()">Telegram</button>
+        <button class="share-btn" onclick="shareFacebook()">Facebook</button>
+        <button class="share-btn" onclick="shareX()">X</button>
+        <button class="share-btn" onclick="copyLink()">Copiar enlace</button>
+        <button class="share-btn" onclick="copyForInstagram()">Copiar texto para Instagram</button>
+        <button class="share-btn" onclick="nativeShare()">Compartir</button>
+      </div>
+      <div class="copy-msg" id="copyMsg" aria-live="polite"></div>
+    </section>
+
+    <article>
       <p>Hay mañanas raras. No son tristes del todo, pero tampoco livianas. Son esas en las que uno abre los ojos y recuerda algo que había levantado con sus manos, con su cabeza, con sus ganas. Algo que caminó. Algo que alguna vez dio señales de futuro. Algo que, por un tiempo, te hizo sentir encaminado. Y hoy ya no está. O quedó frenado. O se rompió. O simplemente se fue apagando mientras vos tratabas de sostener otras cosas al mismo tiempo.</p>
 
       <p>Lo más difícil de volver a empezar no siempre es el trabajo nuevo. A veces lo peor es saber que ya habías llegado a un lugar que costó muchísimo. Porque cuando uno ya pasó por ese esfuerzo, ya conoce la cocina interna de todo. Ya sabe las noches largas, el desgaste, la presión, la fe que hay que ponerle a algo cuando todavía no devuelve nada. Entonces reconstruir no es solo hacer de nuevo. Es hacerlo con memoria. Y la memoria a veces pesa más que la tarea.</p>
+
+
+      <div class="mini-break"></div>
 
       <p>Hay un cansancio que no viene de lo que estás haciendo hoy. Viene de lo que ya hiciste antes. De haber peleado una etapa entera, de haber logrado levantar algo, y después verlo caerse o quedarse atrás. Ese tipo de cansancio es raro porque no siempre se ve. No hace ruido. Pero te cambia la forma de mirar una idea nueva. Ya no soñás inocente. Soñás sabiendo que las cosas también pueden romperse.</p>
 
@@ -217,6 +437,9 @@
       <p>A veces reconstruirse no tiene nada de épico. No hay música, no hay brillo, no hay una escena inspiradora. Hay sueño acumulado, bronca vieja, pestañas abiertas, ideas a medio hacer, papeles, recuerdos, silencios. Hay una persona tratando de reunir pedazos de sí misma para ver si todavía puede darle forma a algo. Y eso también cuenta como avance, aunque no se vea lindo en una frase de internet.</p>
 
       <p>Porque hay renacimientos que no entran con euforia. Vuelven despacio. Con miedo. Con vergüenza. Con poca energía. Con menos ayuda que antes. Con más experiencia y menos ingenuidad. Pero vuelven. Y eso ya es muchísimo. No porque el dolor desaparezca, sino porque incluso con todo ese peso encima, hay algo tuyo que sigue queriendo moverse.</p>
+
+
+      <div class="mini-break"></div>
 
       <p>Capaz hoy no estás levantando solamente un proyecto. Capaz estás levantando tu confianza. Tu vínculo con el futuro. Tu capacidad de creer otra vez en lo que hacés. Tu manera de mirarte a vos mismo sin reducirte a la caída. Y eso tarda. Mucho más de lo que admiten los discursos rápidos.</p>
 
@@ -229,135 +452,140 @@
       <p>Capaz esta mañana no arrancó con entusiasmo. Capaz arrancó con memoria, comparación, bronca y preguntas. Pero incluso ahí, incluso en ese lugar roto, sigue habiendo movimiento posible. A veces todo vuelve a arrancar cuando dejás de mirar solamente lo que se cayó y empezás a notar lo que todavía sigue vivo dentro tuyo.</p>
 
       <p>Y si todavía te quedó eso, aunque sea poco, aunque esté cansado, entonces no terminó nada.</p>
-
-      <div class="copy-box">
-        <button class="copy-btn" onclick="copyArticle()">Copiar publicación</button>
-      </div>
-
-      <section class="share-box">
-        <h2>Compartir</h2>
-        <div class="share-buttons">
-          <a id="waShare" target="_blank" rel="noopener">WhatsApp</a>
-          <a id="tgShare" target="_blank" rel="noopener">Telegram</a>
-          <a id="fbShare" target="_blank" rel="noopener">Facebook</a>
-          <a id="xShare" target="_blank" rel="noopener">X</a>
-          <button onclick="copyLink()">Copiar enlace</button>
-          <button onclick="nativeShare()">Compartir</button>
-        </div>
-      </section>
-
-      <section class="tags-box">
-        <h2>Etiquetas</h2>
-        <div class="tags">
-          <a href="/tags/proyectos.html">proyectos</a>
-          <a href="/tags/volver-a-empezar.html">volver a empezar</a>
-          <a href="/tags/reconstruccion.html">reconstrucción</a>
-          <a href="/tags/motivacion.html">motivación</a>
-          <a href="/tags/mananas-dificiles.html">mañanas difíciles</a>
-          <a href="/tags/esperanza.html">esperanza</a>
-        </div>
-      </section>
-
-      <section class="faq-box">
-        <h2>Preguntas frecuentes</h2>
-
-        <div class="faq-item">
-          <h3>¿Es normal sentir más cansancio al volver a empezar algo que ya había funcionado?</h3>
-          <p>Sí. Porque no se trata solo de arrancar otra vez, sino de cargar también con la memoria de la caída, del esfuerzo pasado y de la decepción.</p>
-        </div>
-
-        <div class="faq-item">
-          <h3>¿Cómo seguir cuando da bronca haber perdido lo que una vez funcionó?</h3>
-          <p>Primero aceptando esa bronca sin maquillarla. Después conviene enfocarse en lo que de tu capacidad sigue vivo hoy, no en copiar exactamente el pasado.</p>
-        </div>
-
-        <div class="faq-item">
-          <h3>¿Volver a levantar un proyecto significa hacerlo igual que antes?</h3>
-          <p>No. Muchas veces la mejor reconstrucción nace justamente de hacer algo nuevo con más experiencia, más realismo y más resistencia.</p>
-        </div>
-      </section>
     </article>
+
+    <section class="card" aria-labelledby="tags-post">
+      <h2 id="tags-post" class="section-title">Etiquetas</h2>
+      <div class="tags">
+        <a class="tag" href="/tags/proyectos.html">proyectos</a>
+        <a class="tag" href="/tags/volver-a-empezar.html">volver a empezar</a>
+        <a class="tag" href="/tags/reconstruccion.html">reconstrucción</a>
+        <a class="tag" href="/tags/motivacion.html">motivación</a>
+        <a class="tag" href="/tags/mananas-dificiles.html">mañanas difíciles</a>
+        <a class="tag" href="/tags/esperanza.html">esperanza</a>
+      </div>
+    </section>
+
+    <section class="card" aria-labelledby="interlinks-post">
+      <h2 id="interlinks-post" class="section-title">Seguí leyendo</h2>
+      <div class="links-grid">
+        <a class="related" href="/posts/manana-feliz-sin-nada-con-mil-problemas.html">
+          <strong>Una mañana feliz pero sin nada y con mil problemas</strong>
+          <span>Hay mañanas en las que no tenés nada resuelto, pero igual seguís. Una reflexión honesta sobre empezar el día con problemas, cansancio y una pe…</span>
+        </a>
+
+        <a class="related" href="/posts/dias-en-los-que-solo-tengo-que-esperar-porque-no-me-queda-otra.html">
+          <strong>Días en los que solo tengo que esperar porque no me queda otra</strong>
+          <span>Hay días en los que no queda otra que esperar. Esta reflexión acompaña esos momentos de pausa forzada, incertidumbre y resistencia silenciosa…</span>
+        </a>
+
+        <a class="related" href="/posts/cuando-los-amigos-se-bajan-del-barco-por-las-noches.html">
+          <strong>Cuando los amigos se bajan del barco por las noches</strong>
+          <span>Hay noches en las que duele más la ausencia de los que estaban cerca que cualquier problema en sí. Y aun así, la mañana llega, incluso cuando…</span>
+        </a>
+
+        <a class="related" href="/posts/dia-de-lluvia-sin-vacios-por-dentro.html">
+          <strong>Día de lluvia sin vacíos por dentro</strong>
+          <span>Hay días de lluvia en los que afuera todo parece gris, pero adentro no tiene por qué sentirse vacío. Una reflexión íntima para sostenerse con…</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="card faq" aria-labelledby="faq-post">
+      <h2 id="faq-post" class="section-title">Preguntas frecuentes</h2>
+
+      <details>
+        <summary>¿Es normal sentir más cansancio al volver a empezar algo que ya había funcionado?</summary>
+        <p>
+          Sí. Porque no se trata solo de arrancar otra vez, sino de cargar también con la memoria de la caída, del esfuerzo pasado y de la decepción.
+        </p>
+      </details>
+
+      <details>
+        <summary>¿Cómo seguir cuando da bronca haber perdido lo que una vez funcionó?</summary>
+        <p>
+          Primero aceptando esa bronca sin maquillarla. Después conviene enfocarse en lo que de tu capacidad sigue vivo hoy, no en copiar exactamente el pasado.
+        </p>
+      </details>
+
+      <details>
+        <summary>¿Volver a levantar un proyecto significa hacerlo igual que antes?</summary>
+        <p>
+          No. Muchas veces la mejor reconstrucción nace justamente de hacer algo nuevo con más experiencia, más realismo y más resistencia.
+        </p>
+      </details>
+    </section>
   </main>
 
   <footer>
-    <div class="footer-wrap">
-      <strong>buenosdia.com</strong>
-      <div class="footer-links">
-        <a href="/">Inicio</a>
-        <a href="/tags/esperanza.html">Esperanza</a>
-        <a href="/tags/motivacion.html">Motivación</a>
-        <a href="/tags/mananas-dificiles.html">Mañanas difíciles</a>
-        <a href="/tags/reconstruccion.html">Reconstrucción</a>
-      </div>
+    <div class="footer-links">
+      <a href="/">Inicio</a>
+      <a href="/#publicaciones">Publicaciones</a>
+      <a href="/tags/">Etiquetas</a>
     </div>
+    <div>© 2026 buenosdia.com — mañanas reales, palabras que acompañan.</div>
   </footer>
 
   <script>
-    function toggleMenu() {
-      document.getElementById('navLinks').classList.toggle('show');
-    }
-
-    const pageUrl = window.location.href;
     const pageTitle = document.title;
+    const pageUrl = window.location.href;
+    const shareText = "Levantar proyectos que alg\u00fan d\u00eda funcionaron y hoy no los tienes \u2014 " + pageUrl;
+    const instaText = "Levantar proyectos que alg\u00fan d\u00eda funcionaron y hoy no los tienes\\n\\nHay ma\u00f1anas en las que no duele empezar de cero, sino mirar todo lo que una vez funcion\u00f3 y ya no est\u00e1. Aun as\u00ed, volver a levantar algo roto tambi\u00e9n puede ser una forma de seguir vivo.\\n\\nhttps://www.buenosdia.com/posts/levantar-proyectos-que-algun-dia-funcionaron-y-hoy-no-los-tienes.html";
 
-    document.getElementById('waShare').href = `https://wa.me/?text=${encodeURIComponent(pageTitle + ' ' + pageUrl)}`;
-    document.getElementById('tgShare').href = `https://t.me/share/url?url=${encodeURIComponent(pageUrl)}&text=${encodeURIComponent(pageTitle)}`;
-    document.getElementById('fbShare').href = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(pageUrl)}`;
-    document.getElementById('xShare').href = `https://twitter.com/intent/tweet?url=${encodeURIComponent(pageUrl)}&text=${encodeURIComponent(pageTitle)}`;
-
-    function copyLink() {
-      navigator.clipboard.writeText(pageUrl);
-      alert('Enlace copiado');
+    function openShare(url){
+      window.open(url, "_blank", "noopener,noreferrer,width=700,height=600");
     }
 
-    async function nativeShare() {
-      if (navigator.share) {
-        try {
-          await navigator.share({ title: pageTitle, url: pageUrl });
-        } catch (e) {}
-      } else {
+    function setMsg(text){
+      document.getElementById("copyMsg").textContent = text;
+    }
+
+    function shareWhatsApp(){
+      openShare("https://wa.me/?text=" + encodeURIComponent(shareText));
+    }
+
+    function shareTelegram(){
+      openShare("https://t.me/share/url?url=" + encodeURIComponent(pageUrl) + "&text=" + encodeURIComponent(pageTitle));
+    }
+
+    function shareFacebook(){
+      openShare("https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(pageUrl));
+    }
+
+    function shareX(){
+      openShare("https://x.com/intent/post?text=" + encodeURIComponent(shareText));
+    }
+
+    async function copyLink(){
+      try{
+        await navigator.clipboard.writeText(pageUrl);
+        setMsg("Enlace copiado.");
+      }catch(e){
+        setMsg("No se pudo copiar el enlace.");
+      }
+    }
+
+    async function copyForInstagram(){
+      try{
+        await navigator.clipboard.writeText(instaText);
+        setMsg("Texto copiado para pegar en Instagram.");
+      }catch(e){
+        setMsg("No se pudo copiar el texto.");
+      }
+    }
+
+    async function nativeShare(){
+      if(navigator.share){
+        try{
+          await navigator.share({ title: pageTitle, text: pageTitle, url: pageUrl });
+          setMsg("Publicación compartida.");
+        }catch(e){
+          setMsg("");
+        }
+      }else{
         copyLink();
       }
     }
-
-    function copyArticle() {
-      const article = document.querySelector('article').innerText;
-      navigator.clipboard.writeText(article);
-      alert('Publicación copiada');
-    }
-  </script>
-
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"FAQPage",
-    "mainEntity":[
-      {
-        "@type":"Question",
-        "name":"¿Es normal sentir más cansancio al volver a empezar algo que ya había funcionado?",
-        "acceptedAnswer":{
-          "@type":"Answer",
-          "text":"Sí. Porque no se trata solo de arrancar otra vez, sino de cargar también con la memoria de la caída, del esfuerzo pasado y de la decepción."
-        }
-      },
-      {
-        "@type":"Question",
-        "name":"¿Cómo seguir cuando da bronca haber perdido lo que una vez funcionó?",
-        "acceptedAnswer":{
-          "@type":"Answer",
-          "text":"Primero aceptando esa bronca sin maquillarla. Después conviene enfocarse en lo que de tu capacidad sigue vivo hoy, no en copiar exactamente el pasado."
-        }
-      },
-      {
-        "@type":"Question",
-        "name":"¿Volver a levantar un proyecto significa hacerlo igual que antes?",
-        "acceptedAnswer":{
-          "@type":"Answer",
-          "text":"No. Muchas veces la mejor reconstrucción nace justamente de hacer algo nuevo con más experiencia, más realismo y más resistencia."
-        }
-      }
-    ]
-  }
   </script>
 </body>
 </html>

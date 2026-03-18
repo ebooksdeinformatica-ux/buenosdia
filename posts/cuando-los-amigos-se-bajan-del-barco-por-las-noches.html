@@ -1,214 +1,434 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <title>Cuando los amigos se bajan del barco por las noches | buenosdia.com</title>
-  <meta name="description" content="Hay noches en las que duele más la ausencia de los que estaban cerca que cualquier problema en sí. Y aun así, la mañana llega, incluso cuando uno siente que tuvo que sostenerse solo." />
-  <meta name="keywords" content="amigos, soledad, abandono, decepción, noches difíciles, seguir adelante, vínculos reales, buenos días, mañanas tristes, presencia emocional" />
-  <meta name="author" content="buenosdia.com" />
-  <meta name="robots" content="index,follow" />
-  <link rel="canonical" href="https://buenosdia.com/posts/cuando-los-amigos-se-bajan-del-barco-por-las-noches.html" />
+  <meta name="description" content="Hay noches en las que duele más la ausencia de los que estaban cerca que cualquier problema en sí. Y aun así, la mañana llega, incluso cuando uno siente que tuvo que sostenerse solo.">
+  <meta name="keywords" content="amigos, soledad, abandono, decepción, noches difíciles, seguir adelante, vínculos reales, buenos días, mañanas tristes, presencia emocional">
+  <meta name="author" content="buenosdia.com">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <link rel="canonical" href="https://www.buenosdia.com/posts/cuando-los-amigos-se-bajan-del-barco-por-las-noches.html">
 
-  <meta property="og:type" content="article" />
-  <meta property="og:title" content="Cuando los amigos se bajan del barco por las noches" />
-  <meta property="og:description" content="No siempre duele la noche en sí. A veces duele más descubrir quién no estuvo cuando más hacía falta." />
-  <meta property="og:url" content="https://buenosdia.com/posts/cuando-los-amigos-se-bajan-del-barco-por-las-noches.html" />
-  <meta property="og:site_name" content="buenosdia.com" />
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="es_AR">
+  <meta property="og:site_name" content="buenosdia.com">
+  <meta property="og:title" content="Cuando los amigos se bajan del barco por las noches">
+  <meta property="og:description" content="No siempre duele la noche en sí. A veces duele más descubrir quién no estuvo cuando más hacía falta.">
+  <meta property="og:url" content="https://www.buenosdia.com/posts/cuando-los-amigos-se-bajan-del-barco-por-las-noches.html">
 
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Cuando los amigos se bajan del barco por las noches" />
-  <meta name="twitter:description" content="Hay ausencias que no solo duelen: también revelan. Y a veces esa verdad es la parte más difícil de atravesar." />
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Cuando los amigos se bajan del barco por las noches">
+  <meta name="twitter:description" content="Hay ausencias que no solo duelen: también revelan. Y a veces esa verdad es la parte más difícil de atravesar.">
 
   <style>
     :root{
       --bg:#ffffff;
-      --text:#111111;
-      --muted:#666666;
-      --soft:#f5f5f5;
-      --line:#e7e7e7;
-      --accent:#1a73e8;
+      --paper:#ffffff;
+      --text:#1f1a17;
+      --muted:#6c6259;
+      --line:#e9e2d9;
+      --accent:#8b5e3c;
+      --accent-dark:#6f472b;
+      --soft:#f8f2eb;
+      --shadow:0 10px 26px rgba(40,25,10,.06);
+      --radius:18px;
+      --max:860px;
     }
+
     *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
     body{
       margin:0;
       font-family:Arial, Helvetica, sans-serif;
       background:var(--bg);
       color:var(--text);
-      line-height:1.8;
+      line-height:1.75;
     }
+
     header{
-      border-bottom:1px solid var(--line);
-      background:#fff;
       position:sticky;
       top:0;
       z-index:20;
+      backdrop-filter:blur(10px);
+      background:rgba(255,255,255,.95);
+      border-bottom:1px solid rgba(139,94,60,.10);
     }
+
     .topbar{
-      max-width:900px;
+      max-width:1100px;
       margin:0 auto;
-      padding:16px 20px;
+      padding:14px 18px;
       display:flex;
       align-items:center;
       justify-content:space-between;
       gap:12px;
     }
+
     .brand{
-      font-size:1.1rem;
-      font-weight:700;
-      color:var(--text);
+      color:var(--accent-dark);
+      font-weight:800;
+      letter-spacing:.2px;
       text-decoration:none;
+      font-size:1.05rem;
     }
-    .menu-btn{
-      border:1px solid var(--line);
-      background:#fff;
-      padding:8px 12px;
-      border-radius:10px;
-      cursor:pointer;
-      font-size:.95rem;
-    }
-    .nav-links{
-      display:none;
-      max-width:900px;
-      margin:0 auto;
-      padding:0 20px 16px;
+
+    .topnav{
+      display:flex;
       gap:10px;
       flex-wrap:wrap;
     }
-    .nav-links a{
+
+    .topnav a{
       text-decoration:none;
       color:var(--muted);
-      border:1px solid var(--line);
+      font-size:.95rem;
       padding:8px 12px;
       border-radius:999px;
-      font-size:.92rem;
     }
-    .nav-links.show{display:flex}
+
+    .topnav a:hover{
+      background:var(--soft);
+      color:var(--accent-dark);
+    }
+
     main{
-      max-width:900px;
+      max-width:var(--max);
       margin:0 auto;
-      padding:34px 20px 60px;
+      padding:30px 18px 70px;
     }
-    article{
-      max-width:760px;
-      margin:0 auto;
+
+    .hero{
+      background:var(--paper);
+      border:1px solid var(--line);
+      border-radius:26px;
+      box-shadow:var(--shadow);
+      padding:34px 24px;
+      overflow:hidden;
+      position:relative;
     }
+
+    .hero::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:
+        radial-gradient(circle at top right, rgba(139,94,60,.05), transparent 32%),
+        radial-gradient(circle at bottom left, rgba(139,94,60,.04), transparent 28%);
+      pointer-events:none;
+    }
+
+    .eyebrow{
+      display:inline-block;
+      font-size:.85rem;
+      color:var(--accent-dark);
+      background:var(--soft);
+      border:1px solid #eedfce;
+      padding:7px 11px;
+      border-radius:999px;
+      margin-bottom:14px;
+      position:relative;
+      z-index:1;
+    }
+
     h1{
-      font-size:2rem;
-      line-height:1.25;
       margin:0 0 14px;
-      letter-spacing:-0.02em;
+      font-size:clamp(2rem,5vw,3.2rem);
+      line-height:1.12;
+      letter-spacing:-.02em;
+      position:relative;
+      z-index:1;
     }
+
     .lead{
       font-size:1.08rem;
-      color:#333;
-      margin:0 0 28px;
+      color:#3f362f;
+      margin:0;
+      position:relative;
+      z-index:1;
     }
-    p{
-      margin:0 0 18px;
-      font-size:1.04rem;
+
+    .meta{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:20px;
+      color:var(--muted);
+      font-size:.95rem;
+      position:relative;
+      z-index:1;
     }
-    .share-box,.faq-box,.tags-box,.copy-box{
-      margin-top:36px;
-      padding:20px;
+
+    .meta span{
+      background:#fbf7f2;
       border:1px solid var(--line);
-      border-radius:18px;
-      background:#fff;
+      padding:7px 11px;
+      border-radius:999px;
     }
-    .share-box h2,.faq-box h2,.tags-box h2{
-      margin:0 0 14px;
-      font-size:1.25rem;
+
+    .card{
+      margin-top:22px;
+      background:var(--paper);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:24px;
     }
-    .share-buttons{
+
+    .share-title,.section-title{
+      margin:0 0 12px;
+      font-size:1.05rem;
+      color:var(--accent-dark);
+    }
+
+    .share-wrap{
       display:flex;
       flex-wrap:wrap;
       gap:10px;
     }
-    .share-buttons a,.share-buttons button,.copy-btn{
+
+    .share-btn{
+      appearance:none;
       border:none;
-      background:var(--soft);
-      color:var(--text);
-      text-decoration:none;
-      padding:11px 14px;
+      background:var(--accent);
+      color:#fff;
+      padding:12px 15px;
       border-radius:12px;
       cursor:pointer;
+      font-weight:700;
       font-size:.95rem;
+      transition:transform .15s ease, opacity .15s ease, background .15s ease;
     }
+
+    .share-btn:hover{
+      transform:translateY(-1px);
+      opacity:.95;
+      background:var(--accent-dark);
+    }
+
+    article{
+      margin-top:22px;
+      background:var(--paper);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:28px 24px;
+    }
+
+    article p{
+      margin:0 0 18px;
+      font-size:1.08rem;
+    }
+
+    article strong{
+      color:var(--accent-dark);
+    }
+
+    blockquote{
+      margin:26px 0;
+      padding:18px 18px 18px 20px;
+      border-left:4px solid var(--accent);
+      background:#fcf7f1;
+      border-radius:14px;
+      color:#3e332b;
+      font-size:1.08rem;
+    }
+
+    .mini-break{
+      height:1px;
+      background:linear-gradient(90deg, transparent, var(--line), transparent);
+      margin:24px 0;
+    }
+
     .tags{
       display:flex;
       flex-wrap:wrap;
       gap:10px;
+      margin-top:10px;
     }
-    .tags a{
+
+    .tag{
+      display:inline-block;
       text-decoration:none;
-      color:var(--text);
-      background:var(--soft);
-      border-radius:999px;
+      color:var(--accent-dark);
+      background:#fbf7f2;
+      border:1px solid var(--line);
       padding:9px 12px;
+      border-radius:999px;
       font-size:.92rem;
     }
-    .faq-item{
-      margin-bottom:18px;
+
+    .tag:hover{
+      background:var(--soft);
     }
-    .faq-item h3{
-      margin:0 0 8px;
-      font-size:1rem;
-      line-height:1.45;
+
+    .links-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:14px;
+      margin-top:12px;
     }
-    .faq-item p{
-      margin:0;
-      color:#333;
-      font-size:.98rem;
+
+    .related{
+      display:block;
+      text-decoration:none;
+      color:var(--text);
+      border:1px solid var(--line);
+      background:#fffdfa;
+      border-radius:16px;
+      padding:16px;
+      min-height:100%;
+      transition:transform .15s ease, border-color .15s ease, box-shadow .15s ease;
     }
+
+    .related:hover{
+      transform:translateY(-2px);
+      border-color:#d9c1ab;
+      box-shadow:var(--shadow);
+    }
+
+    .related strong{
+      display:block;
+      margin-bottom:7px;
+      color:var(--accent-dark);
+      line-height:1.35;
+    }
+
+    .faq details{
+      border:1px solid var(--line);
+      border-radius:14px;
+      background:#fffdfa;
+      padding:14px 16px;
+      margin-bottom:12px;
+    }
+
+    .faq summary{
+      cursor:pointer;
+      font-weight:700;
+      color:var(--accent-dark);
+    }
+
+    .faq p{
+      margin:12px 0 0;
+      color:#433831;
+    }
+
     footer{
       border-top:1px solid var(--line);
-      padding:30px 20px 50px;
+      padding:28px 18px 50px;
+      color:var(--muted);
+      text-align:center;
       background:#fff;
     }
-    .footer-wrap{
-      max-width:900px;
-      margin:0 auto;
-      color:var(--muted);
-      font-size:.95rem;
-    }
+
     .footer-links{
       display:flex;
+      justify-content:center;
       flex-wrap:wrap;
       gap:10px;
-      margin-top:14px;
+      margin-bottom:12px;
     }
+
     .footer-links a{
-      color:var(--muted);
+      color:var(--accent-dark);
       text-decoration:none;
+      background:#fbf7f2;
       border:1px solid var(--line);
       padding:8px 12px;
       border-radius:999px;
     }
+
+    .copy-msg{
+      margin-top:10px;
+      color:var(--muted);
+      font-size:.92rem;
+      min-height:22px;
+    }
+
+    @media (max-width:700px){
+      .topnav{display:none}
+      .hero,.card,article{padding:20px 16px}
+      article p{font-size:1.03rem}
+    }
   </style>
+
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Cuando los amigos se bajan del barco por las noches",
+  "description": "Hay noches en las que duele más la ausencia de los que estaban cerca que cualquier problema en sí. Y aun así, la mañana llega, incluso cuando uno siente que tuvo que sostenerse solo.",
+  "author": {
+    "@type": "Organization",
+    "name": "buenosdia.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "buenosdia.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.buenosdia.com/logo.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.buenosdia.com/posts/cuando-los-amigos-se-bajan-del-barco-por-las-noches.html"
+  },
+  "datePublished": "2026-03-17",
+  "dateModified": "2026-03-17",
+  "inLanguage": "es-AR"
+}
+  </script>
 </head>
 <body>
+
   <header>
     <div class="topbar">
       <a class="brand" href="/">buenosdia.com</a>
-      <button class="menu-btn" onclick="toggleMenu()">☰ Menú</button>
+      <nav class="topnav" aria-label="Navegación principal">
+        <a href="/#inicio">Inicio</a>
+        <a href="/#publicaciones">Publicaciones</a>
+        <a href="/tags/">Etiquetas</a>
+      </nav>
     </div>
-    <nav id="navLinks" class="nav-links">
-      <a href="/">Inicio</a>
-      <a href="/tags/amistad.html">Amistad</a>
-      <a href="/tags/soledad.html">Soledad</a>
-      <a href="/tags/noches-dificiles.html">Noches difíciles</a>
-      <a href="/tags/emociones.html">Emociones</a>
-    </nav>
   </header>
 
   <main>
-    <article>
+    <section class="hero">
+      <div class="eyebrow">Buenos días reales · Vínculos</div>
       <h1>Cuando los amigos se bajan del barco por las noches</h1>
-      <p class="lead">Hay noches en las que duele más la ausencia de los que estaban cerca que cualquier problema en sí. Y aun así, la mañana llega, incluso cuando uno siente que tuvo que sostenerse solo.</p>
+      <p class="lead">
+        Hay noches en las que duele más la ausencia de los que estaban cerca que cualquier problema en sí. Y aun así, la mañana llega, incluso cuando uno siente que tuvo que sostenerse solo.
+      </p>
 
+      <div class="meta">
+        <span>Lectura: 5 min</span>
+        <span>Publicado: 17/03/2026 </span>
+      </div>
+    </section>
+
+    <section class="card" aria-labelledby="compartir-post">
+      <h2 id="compartir-post" class="share-title">Compartir esta publicación</h2>
+      <div class="share-wrap">
+        <button class="share-btn" onclick="shareWhatsApp()">WhatsApp</button>
+        <button class="share-btn" onclick="shareTelegram()">Telegram</button>
+        <button class="share-btn" onclick="shareFacebook()">Facebook</button>
+        <button class="share-btn" onclick="shareX()">X</button>
+        <button class="share-btn" onclick="copyLink()">Copiar enlace</button>
+        <button class="share-btn" onclick="copyForInstagram()">Copiar texto para Instagram</button>
+        <button class="share-btn" onclick="nativeShare()">Compartir</button>
+      </div>
+      <div class="copy-msg" id="copyMsg" aria-live="polite"></div>
+    </section>
+
+    <article>
       <p>Hay noches que no son oscuras por falta de luz. Son oscuras por falta de gente. Por falta de respuesta. Por falta de esa presencia que uno pensó que estaba. Y ahí se empieza a entender algo duro: no todo el mundo se queda cuando el clima cambia. Muchos están para la risa, para el plan, para el envión, para la parte cómoda. Pero cuando la noche se pone pesada de verdad, cuando la cabeza se llena y el alma se inclina, más de uno se baja del barco sin hacer ruido.</p>
 
       <p>Eso duele de una forma rara. No solo por la ausencia en sí, sino por lo que revela. Porque no se rompe únicamente el momento: se rompe una idea. La idea que vos tenías de ese vínculo. Pensabas que había profundidad y quizás había costumbre. Pensabas que había código y tal vez había comodidad. Pensabas que había alguien firme del otro lado, y lo que había era presencia mientras todo estuviera liviano.</p>
+
+
+      <div class="mini-break"></div>
 
       <p>Lo más crudo de esas horas no es solamente estar solo. Es sentirte dejado solo. Que no es lo mismo. Porque una cosa es elegir el silencio para descansar o pensar, y otra muy distinta es necesitar una mano y descubrir que del otro lado hay hueco. Ese vacío tiene un peso especial. No hace ruido, pero aplasta. Te obliga a revisar nombres, historias, mensajes, gestos y recuerdos enteros.</p>
 
@@ -217,6 +437,9 @@
       <p>No todo el mundo sabe quedarse en la noche ajena. Esa es una verdad incómoda. Y sin embargo, aunque duela, también ordena. Porque hay decepciones que rompen, sí, pero también acomodan el mapa. Te muestran con más claridad dónde estabas parado de verdad. Te ayudan a dejar de idealizar lealtades que quizás nunca existieron como vos las imaginabas.</p>
 
       <p>La noche tiene eso. Saca disfraces. Cuando todo está bien, muchos parecen cercanos. Cuando todo pesa, se limpia la foto. Quedan menos. Y a veces no queda nadie. Y aunque eso sea triste, también trae información importante. Porque si no queda nadie, entonces tal vez era hora de empezar a construir vínculos más reales, más hondos, menos sostenidos por costumbre y más sostenidos por verdad.</p>
+
+
+      <div class="mini-break"></div>
 
       <p>No siempre se habla de esta tristeza porque pareciera que admitirla fuera debilidad. Como si esperar humanidad de un amigo fuera demasiado. Como si necesitar presencia en una mala noche te hiciera frágil. Y no. A veces lo más humano del mundo es querer que alguien te sostenga un poco cuando vos ya venís aguantando demasiado.</p>
 
@@ -229,135 +452,140 @@
       <p>Pero incluso desde ahí conviene recordar algo: que te hayan soltado no significa que no valgas compañía. Significa que algunos no sabían darla. Y esa diferencia es enorme. No te midas por la ausencia ajena. Medite por lo que descubriste, por cómo atravesaste la noche, por lo que aprendiste a ver y por la clase de presencia que vos sí sabés ofrecer.</p>
 
       <p>A veces perder amigos en la noche no es solamente perder. A veces también es dejar de sostener ficciones. Y por más que eso duela, después de un tiempo también libera.</p>
-
-      <div class="copy-box">
-        <button class="copy-btn" onclick="copyArticle()">Copiar publicación</button>
-      </div>
-
-      <section class="share-box">
-        <h2>Compartir</h2>
-        <div class="share-buttons">
-          <a id="waShare" target="_blank" rel="noopener">WhatsApp</a>
-          <a id="tgShare" target="_blank" rel="noopener">Telegram</a>
-          <a id="fbShare" target="_blank" rel="noopener">Facebook</a>
-          <a id="xShare" target="_blank" rel="noopener">X</a>
-          <button onclick="copyLink()">Copiar enlace</button>
-          <button onclick="nativeShare()">Compartir</button>
-        </div>
-      </section>
-
-      <section class="tags-box">
-        <h2>Etiquetas</h2>
-        <div class="tags">
-          <a href="/tags/amistad.html">amistad</a>
-          <a href="/tags/soledad.html">soledad</a>
-          <a href="/tags/noches-dificiles.html">noches difíciles</a>
-          <a href="/tags/emociones.html">emociones</a>
-          <a href="/tags/abandono.html">abandono</a>
-          <a href="/tags/seguir-adelante.html">seguir adelante</a>
-        </div>
-      </section>
-
-      <section class="faq-box">
-        <h2>Preguntas frecuentes</h2>
-
-        <div class="faq-item">
-          <h3>¿Por qué duele tanto cuando los amigos no están en un mal momento?</h3>
-          <p>Porque no duele solo la ausencia puntual, sino lo que esa ausencia revela sobre el vínculo. Muchas veces lo que se rompe es la imagen que tenías de esa amistad.</p>
-        </div>
-
-        <div class="faq-item">
-          <h3>¿Está mal esperar apoyo emocional de los amigos?</h3>
-          <p>No. Esperar escucha, presencia o acompañamiento en momentos difíciles es una necesidad humana normal. Otra cosa es exigir perfección, pero esperar humanidad no está mal.</p>
-        </div>
-
-        <div class="faq-item">
-          <h3>¿Cómo seguir después de sentir abandono o decepción?</h3>
-          <p>Conviene aceptar primero lo que dolió sin minimizarlo. Después, usar esa experiencia para mirar mejor tus vínculos y dejar de invertir tanto en relaciones que no tienen profundidad real.</p>
-        </div>
-      </section>
     </article>
+
+    <section class="card" aria-labelledby="tags-post">
+      <h2 id="tags-post" class="section-title">Etiquetas</h2>
+      <div class="tags">
+        <a class="tag" href="/tags/amistad.html">amistad</a>
+        <a class="tag" href="/tags/soledad.html">soledad</a>
+        <a class="tag" href="/tags/noches-dificiles.html">noches difíciles</a>
+        <a class="tag" href="/tags/emociones.html">emociones</a>
+        <a class="tag" href="/tags/abandono.html">abandono</a>
+        <a class="tag" href="/tags/seguir-adelante.html">seguir adelante</a>
+      </div>
+    </section>
+
+    <section class="card" aria-labelledby="interlinks-post">
+      <h2 id="interlinks-post" class="section-title">Seguí leyendo</h2>
+      <div class="links-grid">
+        <a class="related" href="/posts/levantar-proyectos-que-algun-dia-funcionaron-y-hoy-no-los-tienes.html">
+          <strong>Levantar proyectos que algún día funcionaron y hoy no los tienes</strong>
+          <span>Hay mañanas en las que no duele empezar de cero, sino mirar todo lo que una vez funcionó y ya no está. Aun así, volver a levantar algo roto ta…</span>
+        </a>
+
+        <a class="related" href="/posts/manana-feliz-sin-nada-con-mil-problemas.html">
+          <strong>Una mañana feliz pero sin nada y con mil problemas</strong>
+          <span>Hay mañanas en las que no tenés nada resuelto, pero igual seguís. Una reflexión honesta sobre empezar el día con problemas, cansancio y una pe…</span>
+        </a>
+
+        <a class="related" href="/posts/dias-en-los-que-solo-tengo-que-esperar-porque-no-me-queda-otra.html">
+          <strong>Días en los que solo tengo que esperar porque no me queda otra</strong>
+          <span>Hay días en los que no queda otra que esperar. Esta reflexión acompaña esos momentos de pausa forzada, incertidumbre y resistencia silenciosa…</span>
+        </a>
+
+        <a class="related" href="/posts/dia-de-lluvia-sin-vacios-por-dentro.html">
+          <strong>Día de lluvia sin vacíos por dentro</strong>
+          <span>Hay días de lluvia en los que afuera todo parece gris, pero adentro no tiene por qué sentirse vacío. Una reflexión íntima para sostenerse con…</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="card faq" aria-labelledby="faq-post">
+      <h2 id="faq-post" class="section-title">Preguntas frecuentes</h2>
+
+      <details>
+        <summary>¿Por qué duele tanto cuando los amigos no están en un mal momento?</summary>
+        <p>
+          Porque no duele solo la ausencia puntual, sino lo que esa ausencia revela sobre el vínculo. Muchas veces lo que se rompe es la imagen que tenías de esa amistad.
+        </p>
+      </details>
+
+      <details>
+        <summary>¿Está mal esperar apoyo emocional de los amigos?</summary>
+        <p>
+          No. Esperar escucha, presencia o acompañamiento en momentos difíciles es una necesidad humana normal. Otra cosa es exigir perfección, pero esperar humanidad no está mal.
+        </p>
+      </details>
+
+      <details>
+        <summary>¿Cómo seguir después de sentir abandono o decepción?</summary>
+        <p>
+          Conviene aceptar primero lo que dolió sin minimizarlo. Después, usar esa experiencia para mirar mejor tus vínculos y dejar de invertir tanto en relaciones que no tienen profundidad real.
+        </p>
+      </details>
+    </section>
   </main>
 
   <footer>
-    <div class="footer-wrap">
-      <strong>buenosdia.com</strong>
-      <div class="footer-links">
-        <a href="/">Inicio</a>
-        <a href="/tags/amistad.html">Amistad</a>
-        <a href="/tags/soledad.html">Soledad</a>
-        <a href="/tags/emociones.html">Emociones</a>
-        <a href="/tags/noches-dificiles.html">Noches difíciles</a>
-      </div>
+    <div class="footer-links">
+      <a href="/">Inicio</a>
+      <a href="/#publicaciones">Publicaciones</a>
+      <a href="/tags/">Etiquetas</a>
     </div>
+    <div>© 2026 buenosdia.com — mañanas reales, palabras que acompañan.</div>
   </footer>
 
   <script>
-    function toggleMenu() {
-      document.getElementById('navLinks').classList.toggle('show');
-    }
-
-    const pageUrl = window.location.href;
     const pageTitle = document.title;
+    const pageUrl = window.location.href;
+    const shareText = "Cuando los amigos se bajan del barco por las noches \u2014 " + pageUrl;
+    const instaText = "Cuando los amigos se bajan del barco por las noches\\n\\nHay noches en las que duele m\u00e1s la ausencia de los que estaban cerca que cualquier problema en s\u00ed. Y aun as\u00ed, la ma\u00f1ana llega, incluso cuando uno siente que tuvo que sostenerse solo.\\n\\nhttps://www.buenosdia.com/posts/cuando-los-amigos-se-bajan-del-barco-por-las-noches.html";
 
-    document.getElementById('waShare').href = `https://wa.me/?text=${encodeURIComponent(pageTitle + ' ' + pageUrl)}`;
-    document.getElementById('tgShare').href = `https://t.me/share/url?url=${encodeURIComponent(pageUrl)}&text=${encodeURIComponent(pageTitle)}`;
-    document.getElementById('fbShare').href = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(pageUrl)}`;
-    document.getElementById('xShare').href = `https://twitter.com/intent/tweet?url=${encodeURIComponent(pageUrl)}&text=${encodeURIComponent(pageTitle)}`;
-
-    function copyLink() {
-      navigator.clipboard.writeText(pageUrl);
-      alert('Enlace copiado');
+    function openShare(url){
+      window.open(url, "_blank", "noopener,noreferrer,width=700,height=600");
     }
 
-    async function nativeShare() {
-      if (navigator.share) {
-        try {
-          await navigator.share({ title: pageTitle, url: pageUrl });
-        } catch (e) {}
-      } else {
+    function setMsg(text){
+      document.getElementById("copyMsg").textContent = text;
+    }
+
+    function shareWhatsApp(){
+      openShare("https://wa.me/?text=" + encodeURIComponent(shareText));
+    }
+
+    function shareTelegram(){
+      openShare("https://t.me/share/url?url=" + encodeURIComponent(pageUrl) + "&text=" + encodeURIComponent(pageTitle));
+    }
+
+    function shareFacebook(){
+      openShare("https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(pageUrl));
+    }
+
+    function shareX(){
+      openShare("https://x.com/intent/post?text=" + encodeURIComponent(shareText));
+    }
+
+    async function copyLink(){
+      try{
+        await navigator.clipboard.writeText(pageUrl);
+        setMsg("Enlace copiado.");
+      }catch(e){
+        setMsg("No se pudo copiar el enlace.");
+      }
+    }
+
+    async function copyForInstagram(){
+      try{
+        await navigator.clipboard.writeText(instaText);
+        setMsg("Texto copiado para pegar en Instagram.");
+      }catch(e){
+        setMsg("No se pudo copiar el texto.");
+      }
+    }
+
+    async function nativeShare(){
+      if(navigator.share){
+        try{
+          await navigator.share({ title: pageTitle, text: pageTitle, url: pageUrl });
+          setMsg("Publicación compartida.");
+        }catch(e){
+          setMsg("");
+        }
+      }else{
         copyLink();
       }
     }
-
-    function copyArticle() {
-      const article = document.querySelector('article').innerText;
-      navigator.clipboard.writeText(article);
-      alert('Publicación copiada');
-    }
-  </script>
-
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"FAQPage",
-    "mainEntity":[
-      {
-        "@type":"Question",
-        "name":"¿Por qué duele tanto cuando los amigos no están en un mal momento?",
-        "acceptedAnswer":{
-          "@type":"Answer",
-          "text":"Porque no duele solo la ausencia puntual, sino lo que esa ausencia revela sobre el vínculo. Muchas veces lo que se rompe es la imagen que tenías de esa amistad."
-        }
-      },
-      {
-        "@type":"Question",
-        "name":"¿Está mal esperar apoyo emocional de los amigos?",
-        "acceptedAnswer":{
-          "@type":"Answer",
-          "text":"No. Esperar escucha, presencia o acompañamiento en momentos difíciles es una necesidad humana normal. Otra cosa es exigir perfección, pero esperar humanidad no está mal."
-        }
-      },
-      {
-        "@type":"Question",
-        "name":"¿Cómo seguir después de sentir abandono o decepción?",
-        "acceptedAnswer":{
-          "@type":"Answer",
-          "text":"Conviene aceptar primero lo que dolió sin minimizarlo. Después, usar esa experiencia para mirar mejor tus vínculos y dejar de invertir tanto en relaciones que no tienen profundidad real."
-        }
-      }
-    ]
-  }
   </script>
 </body>
 </html>
