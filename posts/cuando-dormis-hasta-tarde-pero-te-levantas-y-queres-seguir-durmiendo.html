@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Cuando dormís hasta tarde pero te levantás y querés seguir durmiendo | buenosdia.com</title>
-  <meta name="description" content="Hay días en los que dormís, pero no descansás. Te levantás tarde y aun así el cuerpo pide seguir. Una reflexión honesta sobre ese cansancio profundo que no se va con horas de sueño.">
-  <meta name="keywords" content="cansancio extremo, sueño acumulado, dormir y no descansar, fatiga mental, agotamiento, dormir mucho y seguir cansado, mañanas pesadas, falta de energía, buenos días reales">
+  <meta name="description" content="Hay días en los que dormís muchas horas, pero igual te levantás con el cuerpo pesado y la cabeza lenta. Una reflexión honesta sobre ese cansancio que no se va ni durmiendo.">
+  <meta name="keywords" content="cansancio, agotamiento, dormir y seguir cansado, sueño acumulado, fatiga mental, mañanas pesadas, falta de energía, buenos días reales, cansancio emocional, despertar sin ganas">
   <meta name="author" content="buenosdia.com">
   <meta name="robots" content="index,follow,max-image-preview:large">
   <link rel="canonical" href="https://www.buenosdia.com/posts/cuando-dormis-hasta-tarde-pero-te-levantas-y-queres-seguir-durmiendo.html">
@@ -20,7 +20,7 @@
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Cuando dormís hasta tarde pero te levantás y querés seguir durmiendo">
-  <meta name="twitter:description" content="Hay cansancios que no se van durmiendo. Solo se sienten.">
+  <meta name="twitter:description" content="Hay cansancios que no se van durmiendo. Solo cambian de forma y te acompañan hasta la mañana.">
 
   <style>
     :root{
@@ -126,4 +126,495 @@
       background:var(--soft);
       border:1px solid #eedfce;
       padding:7px 11px;
-      border
+      border-radius:999px;
+      margin-bottom:14px;
+      position:relative;
+      z-index:1;
+    }
+
+    h1{
+      margin:0 0 14px;
+      font-size:clamp(2rem,5vw,3.2rem);
+      line-height:1.12;
+      letter-spacing:-.02em;
+      position:relative;
+      z-index:1;
+    }
+
+    .lead{
+      font-size:1.08rem;
+      color:#3f362f;
+      margin:0;
+      position:relative;
+      z-index:1;
+    }
+
+    .meta{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:20px;
+      color:var(--muted);
+      font-size:.95rem;
+      position:relative;
+      z-index:1;
+    }
+
+    .meta span{
+      background:#fbf7f2;
+      border:1px solid var(--line);
+      padding:7px 11px;
+      border-radius:999px;
+    }
+
+    .card{
+      margin-top:22px;
+      background:var(--paper);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:24px;
+    }
+
+    .share-title,.section-title{
+      margin:0 0 12px;
+      font-size:1.05rem;
+      color:var(--accent-dark);
+    }
+
+    .share-wrap{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+    }
+
+    .share-btn{
+      appearance:none;
+      border:none;
+      background:var(--accent);
+      color:#fff;
+      padding:12px 15px;
+      border-radius:12px;
+      cursor:pointer;
+      font-weight:700;
+      font-size:.95rem;
+      transition:transform .15s ease, opacity .15s ease, background .15s ease;
+    }
+
+    .share-btn:hover{
+      transform:translateY(-1px);
+      opacity:.95;
+      background:var(--accent-dark);
+    }
+
+    article{
+      margin-top:22px;
+      background:var(--paper);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:28px 24px;
+    }
+
+    article p{
+      margin:0 0 18px;
+      font-size:1.08rem;
+    }
+
+    article strong{
+      color:var(--accent-dark);
+    }
+
+    blockquote{
+      margin:26px 0;
+      padding:18px 18px 18px 20px;
+      border-left:4px solid var(--accent);
+      background:#fcf7f1;
+      border-radius:14px;
+      color:#3e332b;
+      font-size:1.08rem;
+    }
+
+    .mini-break{
+      height:1px;
+      background:linear-gradient(90deg, transparent, var(--line), transparent);
+      margin:24px 0;
+    }
+
+    .tags{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:10px;
+    }
+
+    .tag{
+      display:inline-block;
+      text-decoration:none;
+      color:var(--accent-dark);
+      background:#fbf7f2;
+      border:1px solid var(--line);
+      padding:9px 12px;
+      border-radius:999px;
+      font-size:.92rem;
+    }
+
+    .tag:hover{
+      background:var(--soft);
+    }
+
+    .links-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:14px;
+      margin-top:12px;
+    }
+
+    .related{
+      display:block;
+      text-decoration:none;
+      color:var(--text);
+      border:1px solid var(--line);
+      background:#fffdfa;
+      border-radius:16px;
+      padding:16px;
+      min-height:100%;
+      transition:transform .15s ease, border-color .15s ease, box-shadow .15s ease;
+    }
+
+    .related:hover{
+      transform:translateY(-2px);
+      border-color:#d9c1ab;
+      box-shadow:var(--shadow);
+    }
+
+    .related strong{
+      display:block;
+      margin-bottom:7px;
+      color:var(--accent-dark);
+      line-height:1.35;
+    }
+
+    .faq details{
+      border:1px solid var(--line);
+      border-radius:14px;
+      background:#fffdfa;
+      padding:14px 16px;
+      margin-bottom:12px;
+    }
+
+    .faq summary{
+      cursor:pointer;
+      font-weight:700;
+      color:var(--accent-dark);
+    }
+
+    .faq p{
+      margin:12px 0 0;
+      color:#433831;
+    }
+
+    footer{
+      border-top:1px solid var(--line);
+      padding:28px 18px 50px;
+      color:var(--muted);
+      text-align:center;
+      background:#fff;
+    }
+
+    .footer-links{
+      display:flex;
+      justify-content:center;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-bottom:12px;
+    }
+
+    .footer-links a{
+      color:var(--accent-dark);
+      text-decoration:none;
+      background:#fbf7f2;
+      border:1px solid var(--line);
+      padding:8px 12px;
+      border-radius:999px;
+    }
+
+    .copy-msg{
+      margin-top:10px;
+      color:var(--muted);
+      font-size:.92rem;
+      min-height:22px;
+    }
+
+    @media (max-width:700px){
+      .topnav{display:none}
+      .hero,.card,article{padding:20px 16px}
+      article p{font-size:1.03rem}
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Article",
+    "headline":"Cuando dormís hasta tarde pero te levantás y querés seguir durmiendo",
+    "description":"Hay días en los que dormís muchas horas, pero igual te levantás con el cuerpo pesado y la cabeza lenta. Una reflexión honesta sobre ese cansancio que no se va ni durmiendo.",
+    "author":{"@type":"Organization","name":"buenosdia.com"},
+    "publisher":{
+      "@type":"Organization",
+      "name":"buenosdia.com",
+      "logo":{"@type":"ImageObject","url":"https://www.buenosdia.com/logo.png"}
+    },
+    "mainEntityOfPage":{
+      "@type":"WebPage",
+      "@id":"https://www.buenosdia.com/posts/cuando-dormis-hasta-tarde-pero-te-levantas-y-queres-seguir-durmiendo.html"
+    },
+    "datePublished":"2026-03-18",
+    "dateModified":"2026-03-18",
+    "inLanguage":"es-AR"
+  }
+  </script>
+</head>
+<body>
+
+  <header>
+    <div class="topbar">
+      <a class="brand" href="/">buenosdia.com</a>
+      <nav class="topnav" aria-label="Navegación principal">
+        <a href="/#inicio">Inicio</a>
+        <a href="/#publicaciones">Publicaciones</a>
+        <a href="/tags/">Etiquetas</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="eyebrow">Buenos días reales · Cansancio profundo</div>
+      <h1>Cuando dormís hasta tarde pero te levantás y querés seguir durmiendo</h1>
+      <p class="lead">
+        Hay días en los que no importa cuántas horas dormiste. Te levantás igual con esa pesadez rara, como si el cuerpo hubiera descansado a medias y la cabeza siguiera atrapada en algo que no terminó de soltar.
+      </p>
+
+      <div class="meta">
+        <span>Lectura: 4 min</span>
+        <span>Publicado: 18/03/2026</span>
+      </div>
+    </section>
+
+    <section class="card" aria-labelledby="compartir-post">
+      <h2 id="compartir-post" class="share-title">Compartir esta publicación</h2>
+      <div class="share-wrap">
+        <button class="share-btn" onclick="shareWhatsApp()">WhatsApp</button>
+        <button class="share-btn" onclick="shareTelegram()">Telegram</button>
+        <button class="share-btn" onclick="shareFacebook()">Facebook</button>
+        <button class="share-btn" onclick="shareX()">X</button>
+        <button class="share-btn" onclick="copyLink()">Copiar enlace</button>
+        <button class="share-btn" onclick="copyForInstagram()">Copiar texto para Instagram</button>
+        <button class="share-btn" onclick="nativeShare()">Compartir</button>
+      </div>
+      <div class="copy-msg" id="copyMsg" aria-live="polite"></div>
+    </section>
+
+    <article>
+      <p>
+        Hay un cansancio que no se arregla durmiendo. Ese es el más raro y el más pesado.
+        Porque vos cumpliste con lo básico: te acostaste, dormiste, dejaste pasar horas.
+        Y sin embargo, cuando abrís los ojos, la sensación sigue ahí. El cuerpo tarda.
+        La mente no arranca. Y adentro todavía queda una parte que solo quiere seguir acostada.
+      </p>
+
+      <p>
+        Eso desconcierta bastante. Porque uno piensa que dormir debería alcanzar.
+        Que después de cierto número de horas todo tendría que acomodarse solo.
+        Pero no siempre. A veces el problema no era sueño solamente.
+        A veces era desgaste, saturación, ruido mental, preocupación acumulada o una tristeza callada
+        que siguió trabajando mientras vos intentabas descansar.
+      </p>
+
+      <blockquote>
+        Hay mañanas en las que uno no se despierta: apenas vuelve.
+      </blockquote>
+
+      <p>
+        Lo difícil de estos días es que arrancan con una especie de niebla.
+        No una niebla afuera, sino adentro.
+        Te levantás, sí. Pero sin impulso. Sin ganas.
+        Como si hubieras salido de la cama antes de tiempo, incluso después de haber dormido de más.
+      </p>
+
+      <p>
+        Encima aparece la culpa. Esa voz que te dice que no puede ser,
+        que ya dormiste suficiente, que ya tendrías que estar bien, activo, presente.
+        Y esa voz no ayuda en nada.
+        Solo empeora una mañana que ya venía pesada.
+      </p>
+
+      <div class="mini-break"></div>
+
+      <p>
+        Hay días en los que el cuerpo pide más cama, pero en realidad está pidiendo otra cosa.
+        Menos carga. Menos exigencia. Menos ruido.
+        Un poco de tregua.
+        No siempre se necesita más sueño. A veces se necesita bajar la presión con la que uno viene viviendo.
+      </p>
+
+      <p>
+        Dormir mucho y seguir cansado no te hace flojo.
+        Tampoco significa automáticamente que estés haciendo todo mal.
+        Muchas veces es una señal de acumulación.
+        De venir sosteniendo demasiado durante demasiado tiempo.
+        Y el cuerpo, cuando no puede explicarlo, lo muestra así:
+        con pesadez, con lentitud, con falta de arranque.
+      </p>
+
+      <p>
+        Hay mañanas en las que levantarse ya es un trabajo suficiente.
+        Y aunque desde afuera parezca poco, desde adentro cuesta.
+        Porque no es solo abrir los ojos:
+        es tratar de volver a la realidad cuando todavía sentís que te quedó algo sin descansar.
+      </p>
+
+      <blockquote>
+        No todo cansancio se cura con horas. Algunos piden silencio, pausa y aire.
+      </blockquote>
+
+      <p>
+        Si hoy te pasó eso, no te maltrates más de la cuenta.
+        No conviertas esa pesadez en una acusación.
+        Tal vez no estás desganado. Tal vez estás cargado.
+        Y entre una cosa y la otra hay una diferencia enorme.
+      </p>
+
+      <p>
+        Quizás el día no arranque con energía.
+        Bueno. Que arranque con verdad.
+        A veces eso sirve más.
+        Porque desde ahí, aunque sea lento, aunque sea de a poco,
+        igual se puede seguir.
+      </p>
+
+      <p>
+        Hay mañanas en las que querés seguir durmiendo no porque no quieras vivir el día,
+        sino porque todavía no lograste salir del peso que traías de antes.
+        Y entender eso ya cambia bastante la forma en la que te tratás.
+      </p>
+
+      <p>
+        Capaz hoy no necesitás empujarte más.
+        Capaz hoy necesitás empezar despacio.
+        Y eso también cuenta como empezar.
+      </p>
+    </article>
+
+    <section class="card" aria-labelledby="tags-post">
+      <h2 id="tags-post" class="section-title">Etiquetas</h2>
+      <div class="tags">
+        <a class="tag" href="/tags/cansancio.html">cansancio</a>
+        <a class="tag" href="/tags/agotamiento.html">agotamiento</a>
+        <a class="tag" href="/tags/fatiga-mental.html">fatiga mental</a>
+        <a class="tag" href="/tags/sueno-acumulado.html">sueño acumulado</a>
+        <a class="tag" href="/tags/mananas-pesadas.html">mañanas pesadas</a>
+        <a class="tag" href="/tags/cansancio-emocional.html">cansancio emocional</a>
+      </div>
+    </section>
+
+    <section class="card faq" aria-labelledby="faq-post">
+      <h2 id="faq-post" class="section-title">Preguntas frecuentes</h2>
+
+      <details>
+        <summary>¿Por qué me levanto cansado aunque haya dormido muchas horas?</summary>
+        <p>
+          Porque no todo cansancio es solo físico. Muchas veces hay agotamiento mental, estrés acumulado o carga emocional, y eso también pesa al despertar.
+        </p>
+      </details>
+
+      <details>
+        <summary>¿Es normal querer seguir durmiendo incluso después de haber descansado bastante?</summary>
+        <p>
+          Sí. Puede pasar cuando venís saturado, mal dormido hace varios días o con la cabeza muy exigida. No siempre se resuelve en una sola noche.
+        </p>
+      </details>
+
+      <details>
+        <summary>¿Cómo encarar el día cuando me levanto así de pesado?</summary>
+        <p>
+          Conviene empezar más despacio, sin castigarte tanto. A veces no hace falta rendir perfecto: alcanza con volver a entrar al día de a poco y con menos presión.
+        </p>
+      </details>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-links">
+      <a href="/">Inicio</a>
+      <a href="/#publicaciones">Publicaciones</a>
+      <a href="/tags/">Etiquetas</a>
+    </div>
+    <div>© 2026 buenosdia.com — mañanas reales, palabras que acompañan.</div>
+  </footer>
+
+  <script>
+    const pageTitle = document.title;
+    const pageUrl = window.location.href;
+    const shareText = "Cuando dormís hasta tarde pero te levantás y querés seguir durmiendo — " + pageUrl;
+    const instaText = "Cuando dormís hasta tarde pero te levantás y querés seguir durmiendo\\n\\nHay días en los que no importa cuántas horas dormiste. Te levantás igual con esa pesadez rara, como si el cuerpo hubiera descansado a medias y la cabeza siguiera atrapada en algo que no terminó de soltar.\\n\\nhttps://www.buenosdia.com/posts/cuando-dormis-hasta-tarde-pero-te-levantas-y-queres-seguir-durmiendo.html";
+
+    function openShare(url){
+      window.open(url, "_blank", "noopener,noreferrer,width=700,height=600");
+    }
+
+    function setMsg(text){
+      document.getElementById("copyMsg").textContent = text;
+    }
+
+    function shareWhatsApp(){
+      openShare("https://wa.me/?text=" + encodeURIComponent(shareText));
+    }
+
+    function shareTelegram(){
+      openShare("https://t.me/share/url?url=" + encodeURIComponent(pageUrl) + "&text=" + encodeURIComponent(pageTitle));
+    }
+
+    function shareFacebook(){
+      openShare("https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(pageUrl));
+    }
+
+    function shareX(){
+      openShare("https://x.com/intent/post?text=" + encodeURIComponent(shareText));
+    }
+
+    async function copyLink(){
+      try{
+        await navigator.clipboard.writeText(pageUrl);
+        setMsg("Enlace copiado.");
+      }catch(e){
+        setMsg("No se pudo copiar el enlace.");
+      }
+    }
+
+    async function copyForInstagram(){
+      try{
+        await navigator.clipboard.writeText(instaText);
+        setMsg("Texto copiado para pegar en Instagram.");
+      }catch(e){
+        setMsg("No se pudo copiar el texto.");
+      }
+    }
+
+    async function nativeShare(){
+      if(navigator.share){
+        try{
+          await navigator.share({ title: pageTitle, text: pageTitle, url: pageUrl });
+          setMsg("Publicación compartida.");
+        }catch(e){
+          setMsg("");
+        }
+
+      }else{
+        copyLink();
+      }
+    }
+  </script>
+</body>
+</html>
