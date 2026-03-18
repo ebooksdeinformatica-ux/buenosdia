@@ -27,6 +27,6 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/posts.json sitemap.xml
-          git diff --cached --quiet || git commit -m "Auto-update posts data and sitemap"
+          git add posts/*.html data/posts.json tags/*.html sitemap.xml index.html 404.html
+          git diff --cached --quiet || git commit -m "Auto-update site data, tags and related posts"
           git push
