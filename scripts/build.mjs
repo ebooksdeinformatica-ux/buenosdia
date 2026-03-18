@@ -80,6 +80,7 @@ const exportedPosts = posts.map(post => ({
   title: post.title,
   description: post.description,
   tags: post.tags,
+  tagSlugs: Object.fromEntries((post.tags || []).map(tag => [tag, slugify(tag)])),
   date: post.date,
   slug: post.slug,
   url: post.url,
@@ -257,7 +258,10 @@ function patchIndexHtml() {
   html = html.replace('<a href="#etiquetas">Etiquetas</a>', '<a href="/tags/">Etiquetas</a>');
 
   const scriptRegex = /<script>[\s\S]*?loadPosts\(\);\s*<\/script>/i;
+  const tagSlugMap = JSON.stringify(Object.fromEntries(Object.values(tagMap).map(tag => [normalizeTag(tag.name), tag.slug])));
   const script = `<script>
+    const TAG_SLUG_MAP = ${tagSlugMap};
+
     async function loadPosts() {
       const postsList = document.getElementById('postsList');
       const tagCloud = document.getElementById('tagCloud');
@@ -279,7 +283,7 @@ function patchIndexHtml() {
             '<h3>' + escapeHtml(post.title || 'Sin título') + '</h3>' +
             '<p>' + escapeHtml(post.description || 'Sin descripción.') + '</p>' +
             '<div class="tags">' +
-              ((post.tags || []).slice(0, 6).map(tag => '<a class="tag" href="/tags/' + slugify(tag) + '.html">' + escapeHtml(tag) + '</a>').join('')) +
+              ((post.tags || []).slice(0, 6).map(tag => '<a class="tag" href="' + tagHref(tag, post.tagSlugs) + '">' + escapeHtml(tag) + '</a>').join('')) +
             '</div>' +
             '<a class="read-link" href="' + post.url + '">Leer publicación →</a>' +
           '</article>'
@@ -299,8 +303,10 @@ function patchIndexHtml() {
           .slice(0, 30);
 
         tagCloud.innerHTML = sortedTags.length
-          ? sortedTags.map(([tag, count]) => '<a class="tag" href="/tags/' + slugify(tag) + '.html" title="Ver publicaciones con la etiqueta ' + escapeHtml(tag) + '">' + escapeHtml(tag) + ' (' + count + ')</a>').join('')
+          ? sortedTags.map(([tag, count]) => '<a class="tag" href="' + tagHref(tag) + '" title="Ver publicaciones con la etiqueta ' + escapeHtml(tag) + '">' + escapeHtml(tag) + ' (' + count + ')</a>').join('')
           : '<div class="empty">Todavía no hay etiquetas.</div>';
+
+        sanitizeTagLinks(document);
       } catch (err) {
         postsList.innerHTML = '<div class="empty">No se pudieron cargar las publicaciones.</div>';
         tagCloud.innerHTML = '<div class="empty">No se pudieron cargar las etiquetas.</div>';
@@ -316,21 +322,42 @@ function patchIndexHtml() {
         .replaceAll("'", '&#039;');
     }
 
-    function slugify(str) {
-      return String(str)
+    function normalizeTag(str) {
+      return String(str || '')
         .normalize('NFD')
         .replace(/[\u0300-\u036f]/g, '')
         .toLowerCase()
         .replace(/[^a-z0-9\s-]/g, ' ')
         .trim()
+        .replace(/\s+/g, ' ');
+    }
+
+    function slugify(str) {
+      return normalizeTag(str)
         .replace(/\s+/g, '-')
         .replace(/-+/g, '-')
         .replace(/^-|-$/g, '');
     }
 
+    function tagHref(tag, perPostMap) {
+      const raw = String(tag || '').trim();
+      const fromPost = perPostMap && perPostMap[raw];
+      const normalized = normalizeTag(raw);
+      const mapped = TAG_SLUG_MAP[normalized];
+      const slug = fromPost || mapped || slugify(raw);
+      return '/tags/' + slug + '.html';
+    }
+
+    function sanitizeTagLinks(root) {
+      root.querySelectorAll('a[href*="/tags/"]').forEach(a => {
+        const text = (a.textContent || '').replace(/\(\d+\)\s*$/, '').trim();
+        if (!text || a.getAttribute('href') === '/tags/') return;
+        a.setAttribute('href', tagHref(text));
+      });
+    }
+
     loadPosts();
   </script>`;
-
   if (scriptRegex.test(html)) {
     html = html.replace(scriptRegex, script);
   }

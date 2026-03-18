@@ -236,6 +236,8 @@
   </div>
 
   <script>
+    const TAG_SLUG_MAP = {"amigos":"amigos","soledad":"soledad","abandono":"abandono","decepcion":"decepcion","noches dificiles":"noches-dificiles","seguir adelante":"seguir-adelante","vinculos reales":"vinculos-reales","buenos dias":"buenos-dias","mananas tristes":"mananas-tristes","presencia emocional":"presencia-emocional","amistad":"amistad","emociones":"emociones","levantar proyectos":"levantar-proyectos","empezar de nuevo":"empezar-de-nuevo","reconstruccion personal":"reconstruccion-personal","volver a empezar":"volver-a-empezar","motivacion real":"motivacion-real","proyectos caidos":"proyectos-caidos","mananas dificiles":"mananas-dificiles","proyectos":"proyectos","reconstruccion":"reconstruccion","motivacion":"motivacion","esperanza":"esperanza","dia de lluvia":"dia-de-lluvia","lluvia y emociones":"lluvia-y-emociones","reflexion de buenos dias":"reflexion-de-buenos-dias","calma interior":"calma-interior","tristeza":"tristeza","paz interior":"paz-interior","mananas grises":"mananas-grises","sentirse en paz":"sentirse-en-paz","esperar":"esperar","incertidumbre":"incertidumbre","dias dificiles":"dias-dificiles","paciencia":"paciencia","pausa en la vida":"pausa-en-la-vida","resistencia emocional":"resistencia-emocional","fuerza interior":"fuerza-interior","manana feliz":"manana-feliz","problemas de la vida":"problemas-de-la-vida","empezar el dia":"empezar-el-dia"};
+
     async function loadPosts() {
       const postsList = document.getElementById('postsList');
       const tagCloud = document.getElementById('tagCloud');
@@ -257,7 +259,7 @@
             '<h3>' + escapeHtml(post.title || 'Sin título') + '</h3>' +
             '<p>' + escapeHtml(post.description || 'Sin descripción.') + '</p>' +
             '<div class="tags">' +
-              ((post.tags || []).slice(0, 6).map(tag => '<a class="tag" href="/tags/' + slugify(tag) + '.html">' + escapeHtml(tag) + '</a>').join('')) +
+              ((post.tags || []).slice(0, 6).map(tag => '<a class="tag" href="' + tagHref(tag, post.tagSlugs) + '">' + escapeHtml(tag) + '</a>').join('')) +
             '</div>' +
             '<a class="read-link" href="' + post.url + '">Leer publicación →</a>' +
           '</article>'
@@ -277,8 +279,10 @@
           .slice(0, 30);
 
         tagCloud.innerHTML = sortedTags.length
-          ? sortedTags.map(([tag, count]) => '<a class="tag" href="/tags/' + slugify(tag) + '.html" title="Ver publicaciones con la etiqueta ' + escapeHtml(tag) + '">' + escapeHtml(tag) + ' (' + count + ')</a>').join('')
+          ? sortedTags.map(([tag, count]) => '<a class="tag" href="' + tagHref(tag) + '" title="Ver publicaciones con la etiqueta ' + escapeHtml(tag) + '">' + escapeHtml(tag) + ' (' + count + ')</a>').join('')
           : '<div class="empty">Todavía no hay etiquetas.</div>';
+
+        sanitizeTagLinks(document);
       } catch (err) {
         postsList.innerHTML = '<div class="empty">No se pudieron cargar las publicaciones.</div>';
         tagCloud.innerHTML = '<div class="empty">No se pudieron cargar las etiquetas.</div>';
@@ -294,16 +298,38 @@
         .replaceAll("'", '&#039;');
     }
 
-    function slugify(str) {
-      return String(str)
+    function normalizeTag(str) {
+      return String(str || '')
         .normalize('NFD')
         .replace(/[̀-ͯ]/g, '')
         .toLowerCase()
         .replace(/[^a-z0-9s-]/g, ' ')
         .trim()
+        .replace(/s+/g, ' ');
+    }
+
+    function slugify(str) {
+      return normalizeTag(str)
         .replace(/s+/g, '-')
         .replace(/-+/g, '-')
         .replace(/^-|-$/g, '');
+    }
+
+    function tagHref(tag, perPostMap) {
+      const raw = String(tag || '').trim();
+      const fromPost = perPostMap && perPostMap[raw];
+      const normalized = normalizeTag(raw);
+      const mapped = TAG_SLUG_MAP[normalized];
+      const slug = fromPost || mapped || slugify(raw);
+      return '/tags/' + slug + '.html';
+    }
+
+    function sanitizeTagLinks(root) {
+      root.querySelectorAll('a[href*="/tags/"]').forEach(a => {
+        const text = (a.textContent || '').replace(/(d+)s*$/, '').trim();
+        if (!text || a.getAttribute('href') === '/tags/') return;
+        a.setAttribute('href', tagHref(text));
+      });
     }
 
     loadPosts();
