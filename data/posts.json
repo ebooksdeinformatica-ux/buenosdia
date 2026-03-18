@@ -30,7 +30,7 @@
       "amistad": "amistad",
       "emociones": "emociones"
     },
-    "date": "2026-03-18",
+    "date": "2026-03-17",
     "slug": "cuando-los-amigos-se-bajan-del-barco-por-las-noches",
     "url": "/posts/cuando-los-amigos-se-bajan-del-barco-por-las-noches.html",
     "related": [
@@ -41,79 +41,16 @@
         "slug": "levantar-proyectos-que-algun-dia-funcionaron-y-hoy-no-los-tienes"
       },
       {
-        "title": "Una mañana feliz pero sin nada y con mil problemas",
-        "description": "Hay mañanas en las que no tenés nada resuelto, pero igual seguís. Una reflexión honesta sobre empezar el día con problemas, cansancio y una…",
-        "url": "/posts/manana-feliz-sin-nada-con-mil-problemas.html",
-        "slug": "manana-feliz-sin-nada-con-mil-problemas"
-      },
-      {
         "title": "Días en los que solo tengo que esperar porque no me queda otra",
         "description": "Hay días en los que no queda otra que esperar. Esta reflexión acompaña esos momentos de pausa forzada, incertidumbre y resistencia silencios…",
         "url": "/posts/dias-en-los-que-solo-tengo-que-esperar-porque-no-me-queda-otra.html",
         "slug": "dias-en-los-que-solo-tengo-que-esperar-porque-no-me-queda-otra"
       },
       {
-        "title": "Día de lluvia sin vacíos por dentro",
-        "description": "Hay días de lluvia en los que afuera todo parece gris, pero adentro no tiene por qué sentirse vacío. Una reflexión íntima para sostenerse co…",
-        "url": "/posts/dia-de-lluvia-sin-vacios-por-dentro.html",
-        "slug": "dia-de-lluvia-sin-vacios-por-dentro"
-      }
-    ]
-  },
-  {
-    "title": "Levantar proyectos que algún día funcionaron y hoy no los tienes",
-    "description": "Hay mañanas en las que no duele empezar de cero, sino mirar todo lo que una vez funcionó y ya no está. Aun así, volver a levantar algo roto también puede ser una forma de seguir vivo.",
-    "tags": [
-      "levantar proyectos",
-      "empezar de nuevo",
-      "reconstruccion personal",
-      "volver a empezar",
-      "motivacion real",
-      "proyectos caidos",
-      "mananas dificiles",
-      "buenos dias",
-      "seguir adelante",
-      "proyectos",
-      "reconstruccion",
-      "motivacion",
-      "esperanza"
-    ],
-    "tagSlugs": {
-      "levantar proyectos": "levantar-proyectos",
-      "empezar de nuevo": "empezar-de-nuevo",
-      "reconstruccion personal": "reconstruccion-personal",
-      "volver a empezar": "volver-a-empezar",
-      "motivacion real": "motivacion-real",
-      "proyectos caidos": "proyectos-caidos",
-      "mananas dificiles": "mananas-dificiles",
-      "buenos dias": "buenos-dias",
-      "seguir adelante": "seguir-adelante",
-      "proyectos": "proyectos",
-      "reconstruccion": "reconstruccion",
-      "motivacion": "motivacion",
-      "esperanza": "esperanza"
-    },
-    "date": "2026-03-18",
-    "slug": "levantar-proyectos-que-algun-dia-funcionaron-y-hoy-no-los-tienes",
-    "url": "/posts/levantar-proyectos-que-algun-dia-funcionaron-y-hoy-no-los-tienes.html",
-    "related": [
-      {
-        "title": "Cuando los amigos se bajan del barco por las noches",
-        "description": "Hay noches en las que duele más la ausencia de los que estaban cerca que cualquier problema en sí. Y aun así, la mañana llega, incluso cuand…",
-        "url": "/posts/cuando-los-amigos-se-bajan-del-barco-por-las-noches.html",
-        "slug": "cuando-los-amigos-se-bajan-del-barco-por-las-noches"
-      },
-      {
         "title": "Una mañana feliz pero sin nada y con mil problemas",
         "description": "Hay mañanas en las que no tenés nada resuelto, pero igual seguís. Una reflexión honesta sobre empezar el día con problemas, cansancio y una…",
         "url": "/posts/manana-feliz-sin-nada-con-mil-problemas.html",
         "slug": "manana-feliz-sin-nada-con-mil-problemas"
-      },
-      {
-        "title": "Días en los que solo tengo que esperar porque no me queda otra",
-        "description": "Hay días en los que no queda otra que esperar. Esta reflexión acompaña esos momentos de pausa forzada, incertidumbre y resistencia silencios…",
-        "url": "/posts/dias-en-los-que-solo-tengo-que-esperar-porque-no-me-queda-otra.html",
-        "slug": "dias-en-los-que-solo-tengo-que-esperar-porque-no-me-queda-otra"
       },
       {
         "title": "Día de lluvia sin vacíos por dentro",
@@ -163,16 +100,16 @@
         "slug": "cuando-los-amigos-se-bajan-del-barco-por-las-noches"
       },
       {
-        "title": "Levantar proyectos que algún día funcionaron y hoy no los tienes",
-        "description": "Hay mañanas en las que no duele empezar de cero, sino mirar todo lo que una vez funcionó y ya no está. Aun así, volver a levantar algo roto…",
-        "url": "/posts/levantar-proyectos-que-algun-dia-funcionaron-y-hoy-no-los-tienes.html",
-        "slug": "levantar-proyectos-que-algun-dia-funcionaron-y-hoy-no-los-tienes"
-      },
-      {
         "title": "Días en los que solo tengo que esperar porque no me queda otra",
         "description": "Hay días en los que no queda otra que esperar. Esta reflexión acompaña esos momentos de pausa forzada, incertidumbre y resistencia silencios…",
         "url": "/posts/dias-en-los-que-solo-tengo-que-esperar-porque-no-me-queda-otra.html",
         "slug": "dias-en-los-que-solo-tengo-que-esperar-porque-no-me-queda-otra"
+      },
+      {
+        "title": "Levantar proyectos que algún día funcionaron y hoy no los tienes",
+        "description": "Hay mañanas en las que no duele empezar de cero, sino mirar todo lo que una vez funcionó y ya no está. Aun así, volver a levantar algo roto…",
+        "url": "/posts/levantar-proyectos-que-algun-dia-funcionaron-y-hoy-no-los-tienes.html",
+        "slug": "levantar-proyectos-que-algun-dia-funcionaron-y-hoy-no-los-tienes"
       }
     ]
   },
@@ -220,6 +157,69 @@
         "description": "Hay mañanas en las que no duele empezar de cero, sino mirar todo lo que una vez funcionó y ya no está. Aun así, volver a levantar algo roto…",
         "url": "/posts/levantar-proyectos-que-algun-dia-funcionaron-y-hoy-no-los-tienes.html",
         "slug": "levantar-proyectos-que-algun-dia-funcionaron-y-hoy-no-los-tienes"
+      },
+      {
+        "title": "Día de lluvia sin vacíos por dentro",
+        "description": "Hay días de lluvia en los que afuera todo parece gris, pero adentro no tiene por qué sentirse vacío. Una reflexión íntima para sostenerse co…",
+        "url": "/posts/dia-de-lluvia-sin-vacios-por-dentro.html",
+        "slug": "dia-de-lluvia-sin-vacios-por-dentro"
+      }
+    ]
+  },
+  {
+    "title": "Levantar proyectos que algún día funcionaron y hoy no los tienes",
+    "description": "Hay mañanas en las que no duele empezar de cero, sino mirar todo lo que una vez funcionó y ya no está. Aun así, volver a levantar algo roto también puede ser una forma de seguir vivo.",
+    "tags": [
+      "levantar proyectos",
+      "empezar de nuevo",
+      "reconstruccion personal",
+      "volver a empezar",
+      "motivacion real",
+      "proyectos caidos",
+      "mananas dificiles",
+      "buenos dias",
+      "seguir adelante",
+      "proyectos",
+      "reconstruccion",
+      "motivacion",
+      "esperanza"
+    ],
+    "tagSlugs": {
+      "levantar proyectos": "levantar-proyectos",
+      "empezar de nuevo": "empezar-de-nuevo",
+      "reconstruccion personal": "reconstruccion-personal",
+      "volver a empezar": "volver-a-empezar",
+      "motivacion real": "motivacion-real",
+      "proyectos caidos": "proyectos-caidos",
+      "mananas dificiles": "mananas-dificiles",
+      "buenos dias": "buenos-dias",
+      "seguir adelante": "seguir-adelante",
+      "proyectos": "proyectos",
+      "reconstruccion": "reconstruccion",
+      "motivacion": "motivacion",
+      "esperanza": "esperanza"
+    },
+    "date": "2026-03-17",
+    "slug": "levantar-proyectos-que-algun-dia-funcionaron-y-hoy-no-los-tienes",
+    "url": "/posts/levantar-proyectos-que-algun-dia-funcionaron-y-hoy-no-los-tienes.html",
+    "related": [
+      {
+        "title": "Cuando los amigos se bajan del barco por las noches",
+        "description": "Hay noches en las que duele más la ausencia de los que estaban cerca que cualquier problema en sí. Y aun así, la mañana llega, incluso cuand…",
+        "url": "/posts/cuando-los-amigos-se-bajan-del-barco-por-las-noches.html",
+        "slug": "cuando-los-amigos-se-bajan-del-barco-por-las-noches"
+      },
+      {
+        "title": "Una mañana feliz pero sin nada y con mil problemas",
+        "description": "Hay mañanas en las que no tenés nada resuelto, pero igual seguís. Una reflexión honesta sobre empezar el día con problemas, cansancio y una…",
+        "url": "/posts/manana-feliz-sin-nada-con-mil-problemas.html",
+        "slug": "manana-feliz-sin-nada-con-mil-problemas"
+      },
+      {
+        "title": "Días en los que solo tengo que esperar porque no me queda otra",
+        "description": "Hay días en los que no queda otra que esperar. Esta reflexión acompaña esos momentos de pausa forzada, incertidumbre y resistencia silencios…",
+        "url": "/posts/dias-en-los-que-solo-tengo-que-esperar-porque-no-me-queda-otra.html",
+        "slug": "dias-en-los-que-solo-tengo-que-esperar-porque-no-me-queda-otra"
       },
       {
         "title": "Día de lluvia sin vacíos por dentro",
