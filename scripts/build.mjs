@@ -325,16 +325,16 @@ function patchIndexHtml() {
     function normalizeTag(str) {
       return String(str || '')
         .normalize('NFD')
-        .replace(/[\u0300-\u036f]/g, '')
+        .replace(/[\\u0300-\\u036f]/g, '')
         .toLowerCase()
-        .replace(/[^a-z0-9\s-]/g, ' ')
+        .replace(/[^a-z0-9\\s-]/g, ' ')
         .trim()
-        .replace(/\s+/g, ' ');
+        .replace(/\\s+/g, ' ');
     }
 
     function slugify(str) {
       return normalizeTag(str)
-        .replace(/\s+/g, '-')
+        .replace(/\\s+/g, '-')
         .replace(/-+/g, '-')
         .replace(/^-|-$/g, '');
     }
@@ -350,7 +350,7 @@ function patchIndexHtml() {
 
     function sanitizeTagLinks(root) {
       root.querySelectorAll('a[href*="/tags/"]').forEach(a => {
-        const text = (a.textContent || '').replace(/\(\d+\)\s*$/, '').trim();
+        const text = (a.textContent || '').replace(/\\(\\d+\\)\\s*$/, '').trim();
         if (!text || a.getAttribute('href') === '/tags/') return;
         a.setAttribute('href', tagHref(text));
       });
@@ -415,17 +415,17 @@ function write404Page(tagMap) {
     function slugify(str) {
       return String(str || '')
         .normalize('NFD')
-        .replace(/[\u0300-\u036f]/g, '')
+        .replace(/[\\u0300-\\u036f]/g, '')
         .toLowerCase()
-        .replace(/[^a-z0-9\s-]/g, ' ')
+        .replace(/[^a-z0-9\\s-]/g, ' ')
         .trim()
-        .replace(/\s+/g, '-')
+        .replace(/\\s+/g, '-')
         .replace(/-+/g, '-')
         .replace(/^-|-$/g, '');
     }
 
     const path = window.location.pathname || '/';
-    const tagMatch = path.match(/^\/tags\/(.+?)(?:\.html)?$/i);
+    const tagMatch = path.match(/^\\/tags\\/(.+?)(?:\\.html)?$/i);
     if (tagMatch) {
       const decoded = decodeURIComponent(tagMatch[1]);
       const candidate = slugify(decoded);
@@ -528,7 +528,7 @@ function strip(str) {
     .replace(/&amp;/g, '&')
     .replace(/&quot;/g, '"')
     .replace(/&#039;/g, "'")
-    .replace(/\s+/g, ' ')
+    .replace(/\\s+/g, ' ')
     .trim();
 }
 

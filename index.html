@@ -301,16 +301,16 @@
     function normalizeTag(str) {
       return String(str || '')
         .normalize('NFD')
-        .replace(/[̀-ͯ]/g, '')
+        .replace(/[\u0300-\u036f]/g, '')
         .toLowerCase()
-        .replace(/[^a-z0-9s-]/g, ' ')
+        .replace(/[^a-z0-9\s-]/g, ' ')
         .trim()
-        .replace(/s+/g, ' ');
+        .replace(/\s+/g, ' ');
     }
 
     function slugify(str) {
       return normalizeTag(str)
-        .replace(/s+/g, '-')
+        .replace(/\s+/g, '-')
         .replace(/-+/g, '-')
         .replace(/^-|-$/g, '');
     }
@@ -326,7 +326,7 @@
 
     function sanitizeTagLinks(root) {
       root.querySelectorAll('a[href*="/tags/"]').forEach(a => {
-        const text = (a.textContent || '').replace(/(d+)s*$/, '').trim();
+        const text = (a.textContent || '').replace(/\(\d+\)\s*$/, '').trim();
         if (!text || a.getAttribute('href') === '/tags/') return;
         a.setAttribute('href', tagHref(text));
       });

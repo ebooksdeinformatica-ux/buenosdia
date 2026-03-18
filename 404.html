@@ -35,17 +35,17 @@
     function slugify(str) {
       return String(str || '')
         .normalize('NFD')
-        .replace(/[̀-ͯ]/g, '')
+        .replace(/[\u0300-\u036f]/g, '')
         .toLowerCase()
-        .replace(/[^a-z0-9s-]/g, ' ')
+        .replace(/[^a-z0-9\s-]/g, ' ')
         .trim()
-        .replace(/s+/g, '-')
+        .replace(/\s+/g, '-')
         .replace(/-+/g, '-')
         .replace(/^-|-$/g, '');
     }
 
     const path = window.location.pathname || '/';
-    const tagMatch = path.match(/^/tags/(.+?)(?:.html)?$/i);
+    const tagMatch = path.match(/^\/tags\/(.+?)(?:\.html)?$/i);
     if (tagMatch) {
       const decoded = decodeURIComponent(tagMatch[1]);
       const candidate = slugify(decoded);
