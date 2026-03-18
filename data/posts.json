@@ -1,7 +1,7 @@
 [
   {
     "title": "Cuando dormís hasta tarde pero te levantás y querés seguir durmiendo",
-    "description": "Hay días en los que dormís, pero no descansás. Te levantás tarde y aún así el cuerpo pide seguir. Una reflexión sobre ese cansancio profundo que no se va con horas de sueño.",
+    "description": "Hay días en los que dormís, pero no descansás. Te levantás tarde y aun así el cuerpo pide seguir. Una reflexión honesta sobre ese cansancio profundo que no se va con horas de sueño.",
     "tags": [
       "cansancio extremo",
       "sueno acumulado",
@@ -29,6 +29,12 @@
     "url": "/posts/cuando-dormis-hasta-tarde-pero-te-levantas-y-queres-seguir-durmiendo.html",
     "related": [
       {
+        "title": "Una mañana feliz pero sin nada y con mil problemas",
+        "description": "Hay mañanas en las que no tenés nada resuelto, pero igual seguís. Una reflexión honesta sobre empezar el día con problemas, cansancio y una…",
+        "url": "/posts/manana-feliz-sin-nada-con-mil-problemas.html",
+        "slug": "manana-feliz-sin-nada-con-mil-problemas"
+      },
+      {
         "title": "Levantar proyectos que algún día funcionaron y hoy no los tienes",
         "description": "Hay mañanas en las que no duele empezar de cero, sino mirar todo lo que una vez funcionó y ya no está. Aun así, volver a levantar algo roto…",
         "url": "/posts/levantar-proyectos-que-algun-dia-funcionaron-y-hoy-no-los-tienes.html",
@@ -45,12 +51,6 @@
         "description": "Hay días en los que no queda otra que esperar. Esta reflexión acompaña esos momentos de pausa forzada, incertidumbre y resistencia silencios…",
         "url": "/posts/dias-en-los-que-solo-tengo-que-esperar-porque-no-me-queda-otra.html",
         "slug": "dias-en-los-que-solo-tengo-que-esperar-porque-no-me-queda-otra"
-      },
-      {
-        "title": "Una mañana feliz pero sin nada y con mil problemas",
-        "description": "Hay mañanas en las que no tenés nada resuelto, pero igual seguís. Una reflexión honesta sobre empezar el día con problemas, cansancio y una…",
-        "url": "/posts/manana-feliz-sin-nada-con-mil-problemas.html",
-        "slug": "manana-feliz-sin-nada-con-mil-problemas"
       }
     ]
   },
@@ -277,10 +277,10 @@
         "slug": "dias-en-los-que-solo-tengo-que-esperar-porque-no-me-queda-otra"
       },
       {
-        "title": "Cuando dormís hasta tarde pero te levantás y querés seguir durmiendo",
-        "description": "Hay días en los que dormís, pero no descansás. Te levantás tarde y aún así el cuerpo pide seguir. Una reflexión sobre ese cansancio profundo…",
-        "url": "/posts/cuando-dormis-hasta-tarde-pero-te-levantas-y-queres-seguir-durmiendo.html",
-        "slug": "cuando-dormis-hasta-tarde-pero-te-levantas-y-queres-seguir-durmiendo"
+        "title": "Día de lluvia sin vacíos por dentro",
+        "description": "Hay días de lluvia en los que afuera todo parece gris, pero adentro no tiene por qué sentirse vacío. Una reflexión íntima para sostenerse co…",
+        "url": "/posts/dia-de-lluvia-sin-vacios-por-dentro.html",
+        "slug": "dia-de-lluvia-sin-vacios-por-dentro"
       }
     ]
   },
