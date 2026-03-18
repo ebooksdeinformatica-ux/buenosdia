@@ -1,39 +1,35 @@
 [
   {
     "title": "Cuando dormís hasta tarde pero te levantás y querés seguir durmiendo",
-    "description": "Hay días en los que dormís, pero no descansás. Te levantás tarde y aun así el cuerpo pide seguir. Una reflexión honesta sobre ese cansancio profundo que no se va con horas de sueño.",
+    "description": "Hay días en los que dormís muchas horas, pero igual te levantás con el cuerpo pesado y la cabeza lenta. Una reflexión honesta sobre ese cansancio que no se va ni durmiendo.",
     "tags": [
-      "cansancio extremo",
-      "sueno acumulado",
-      "dormir y no descansar",
-      "fatiga mental",
+      "cansancio",
       "agotamiento",
-      "dormir mucho y seguir cansado",
+      "dormir y seguir cansado",
+      "sueno acumulado",
+      "fatiga mental",
       "mananas pesadas",
       "falta de energia",
-      "buenos dias reales"
+      "buenos dias reales",
+      "cansancio emocional",
+      "despertar sin ganas"
     ],
     "tagSlugs": {
-      "cansancio extremo": "cansancio-extremo",
-      "sueno acumulado": "sueno-acumulado",
-      "dormir y no descansar": "dormir-y-no-descansar",
-      "fatiga mental": "fatiga-mental",
+      "cansancio": "cansancio",
       "agotamiento": "agotamiento",
-      "dormir mucho y seguir cansado": "dormir-mucho-y-seguir-cansado",
+      "dormir y seguir cansado": "dormir-y-seguir-cansado",
+      "sueno acumulado": "sueno-acumulado",
+      "fatiga mental": "fatiga-mental",
       "mananas pesadas": "mananas-pesadas",
       "falta de energia": "falta-de-energia",
-      "buenos dias reales": "buenos-dias-reales"
+      "buenos dias reales": "buenos-dias-reales",
+      "cansancio emocional": "cansancio-emocional",
+      "despertar sin ganas": "despertar-sin-ganas"
     },
     "date": "2026-03-18",
     "slug": "cuando-dormis-hasta-tarde-pero-te-levantas-y-queres-seguir-durmiendo",
     "url": "/posts/cuando-dormis-hasta-tarde-pero-te-levantas-y-queres-seguir-durmiendo.html",
     "related": [
-      {
-        "title": "Una mañana feliz pero sin nada y con mil problemas",
-        "description": "Hay mañanas en las que no tenés nada resuelto, pero igual seguís. Una reflexión honesta sobre empezar el día con problemas, cansancio y una…",
-        "url": "/posts/manana-feliz-sin-nada-con-mil-problemas.html",
-        "slug": "manana-feliz-sin-nada-con-mil-problemas"
-      },
       {
         "title": "Levantar proyectos que algún día funcionaron y hoy no los tienes",
         "description": "Hay mañanas en las que no duele empezar de cero, sino mirar todo lo que una vez funcionó y ya no está. Aun así, volver a levantar algo roto…",
@@ -45,6 +41,12 @@
         "description": "Hay noches en las que duele más la ausencia de los que estaban cerca que cualquier problema en sí. Y aun así, la mañana llega, incluso cuand…",
         "url": "/posts/cuando-los-amigos-se-bajan-del-barco-por-las-noches.html",
         "slug": "cuando-los-amigos-se-bajan-del-barco-por-las-noches"
+      },
+      {
+        "title": "Una mañana feliz pero sin nada y con mil problemas",
+        "description": "Hay mañanas en las que no tenés nada resuelto, pero igual seguís. Una reflexión honesta sobre empezar el día con problemas, cansancio y una…",
+        "url": "/posts/manana-feliz-sin-nada-con-mil-problemas.html",
+        "slug": "manana-feliz-sin-nada-con-mil-problemas"
       },
       {
         "title": "Días en los que solo tengo que esperar porque no me queda otra",
@@ -96,6 +98,12 @@
         "slug": "levantar-proyectos-que-algun-dia-funcionaron-y-hoy-no-los-tienes"
       },
       {
+        "title": "Cuando dormís hasta tarde pero te levantás y querés seguir durmiendo",
+        "description": "Hay días en los que dormís muchas horas, pero igual te levantás con el cuerpo pesado y la cabeza lenta. Una reflexión honesta sobre ese cans…",
+        "url": "/posts/cuando-dormis-hasta-tarde-pero-te-levantas-y-queres-seguir-durmiendo.html",
+        "slug": "cuando-dormis-hasta-tarde-pero-te-levantas-y-queres-seguir-durmiendo"
+      },
+      {
         "title": "Días en los que solo tengo que esperar porque no me queda otra",
         "description": "Hay días en los que no queda otra que esperar. Esta reflexión acompaña esos momentos de pausa forzada, incertidumbre y resistencia silencios…",
         "url": "/posts/dias-en-los-que-solo-tengo-que-esperar-porque-no-me-queda-otra.html",
@@ -106,12 +114,6 @@
         "description": "Hay mañanas en las que no tenés nada resuelto, pero igual seguís. Una reflexión honesta sobre empezar el día con problemas, cansancio y una…",
         "url": "/posts/manana-feliz-sin-nada-con-mil-problemas.html",
         "slug": "manana-feliz-sin-nada-con-mil-problemas"
-      },
-      {
-        "title": "Día de lluvia sin vacíos por dentro",
-        "description": "Hay días de lluvia en los que afuera todo parece gris, pero adentro no tiene por qué sentirse vacío. Una reflexión íntima para sostenerse co…",
-        "url": "/posts/dia-de-lluvia-sin-vacios-por-dentro.html",
-        "slug": "dia-de-lluvia-sin-vacios-por-dentro"
       }
     ]
   },
@@ -155,16 +157,16 @@
         "slug": "cuando-los-amigos-se-bajan-del-barco-por-las-noches"
       },
       {
+        "title": "Cuando dormís hasta tarde pero te levantás y querés seguir durmiendo",
+        "description": "Hay días en los que dormís muchas horas, pero igual te levantás con el cuerpo pesado y la cabeza lenta. Una reflexión honesta sobre ese cans…",
+        "url": "/posts/cuando-dormis-hasta-tarde-pero-te-levantas-y-queres-seguir-durmiendo.html",
+        "slug": "cuando-dormis-hasta-tarde-pero-te-levantas-y-queres-seguir-durmiendo"
+      },
+      {
         "title": "Días en los que solo tengo que esperar porque no me queda otra",
         "description": "Hay días en los que no queda otra que esperar. Esta reflexión acompaña esos momentos de pausa forzada, incertidumbre y resistencia silencios…",
         "url": "/posts/dias-en-los-que-solo-tengo-que-esperar-porque-no-me-queda-otra.html",
         "slug": "dias-en-los-que-solo-tengo-que-esperar-porque-no-me-queda-otra"
-      },
-      {
-        "title": "Levantar proyectos que algún día funcionaron y hoy no los tienes",
-        "description": "Hay mañanas en las que no duele empezar de cero, sino mirar todo lo que una vez funcionó y ya no está. Aun así, volver a levantar algo roto…",
-        "url": "/posts/levantar-proyectos-que-algun-dia-funcionaron-y-hoy-no-los-tienes.html",
-        "slug": "levantar-proyectos-que-algun-dia-funcionaron-y-hoy-no-los-tienes"
       }
     ]
   },
@@ -214,10 +216,10 @@
         "slug": "levantar-proyectos-que-algun-dia-funcionaron-y-hoy-no-los-tienes"
       },
       {
-        "title": "Día de lluvia sin vacíos por dentro",
-        "description": "Hay días de lluvia en los que afuera todo parece gris, pero adentro no tiene por qué sentirse vacío. Una reflexión íntima para sostenerse co…",
-        "url": "/posts/dia-de-lluvia-sin-vacios-por-dentro.html",
-        "slug": "dia-de-lluvia-sin-vacios-por-dentro"
+        "title": "Cuando dormís hasta tarde pero te levantás y querés seguir durmiendo",
+        "description": "Hay días en los que dormís muchas horas, pero igual te levantás con el cuerpo pesado y la cabeza lenta. Una reflexión honesta sobre ese cans…",
+        "url": "/posts/cuando-dormis-hasta-tarde-pero-te-levantas-y-queres-seguir-durmiendo.html",
+        "slug": "cuando-dormis-hasta-tarde-pero-te-levantas-y-queres-seguir-durmiendo"
       }
     ]
   },
@@ -271,16 +273,16 @@
         "slug": "manana-feliz-sin-nada-con-mil-problemas"
       },
       {
+        "title": "Cuando dormís hasta tarde pero te levantás y querés seguir durmiendo",
+        "description": "Hay días en los que dormís muchas horas, pero igual te levantás con el cuerpo pesado y la cabeza lenta. Una reflexión honesta sobre ese cans…",
+        "url": "/posts/cuando-dormis-hasta-tarde-pero-te-levantas-y-queres-seguir-durmiendo.html",
+        "slug": "cuando-dormis-hasta-tarde-pero-te-levantas-y-queres-seguir-durmiendo"
+      },
+      {
         "title": "Días en los que solo tengo que esperar porque no me queda otra",
         "description": "Hay días en los que no queda otra que esperar. Esta reflexión acompaña esos momentos de pausa forzada, incertidumbre y resistencia silencios…",
         "url": "/posts/dias-en-los-que-solo-tengo-que-esperar-porque-no-me-queda-otra.html",
         "slug": "dias-en-los-que-solo-tengo-que-esperar-porque-no-me-queda-otra"
-      },
-      {
-        "title": "Día de lluvia sin vacíos por dentro",
-        "description": "Hay días de lluvia en los que afuera todo parece gris, pero adentro no tiene por qué sentirse vacío. Una reflexión íntima para sostenerse co…",
-        "url": "/posts/dia-de-lluvia-sin-vacios-por-dentro.html",
-        "slug": "dia-de-lluvia-sin-vacios-por-dentro"
       }
     ]
   },
@@ -324,16 +326,16 @@
         "slug": "dias-en-los-que-solo-tengo-que-esperar-porque-no-me-queda-otra"
       },
       {
+        "title": "Cuando dormís hasta tarde pero te levantás y querés seguir durmiendo",
+        "description": "Hay días en los que dormís muchas horas, pero igual te levantás con el cuerpo pesado y la cabeza lenta. Una reflexión honesta sobre ese cans…",
+        "url": "/posts/cuando-dormis-hasta-tarde-pero-te-levantas-y-queres-seguir-durmiendo.html",
+        "slug": "cuando-dormis-hasta-tarde-pero-te-levantas-y-queres-seguir-durmiendo"
+      },
+      {
         "title": "Cuando los amigos se bajan del barco por las noches",
         "description": "Hay noches en las que duele más la ausencia de los que estaban cerca que cualquier problema en sí. Y aun así, la mañana llega, incluso cuand…",
         "url": "/posts/cuando-los-amigos-se-bajan-del-barco-por-las-noches.html",
         "slug": "cuando-los-amigos-se-bajan-del-barco-por-las-noches"
-      },
-      {
-        "title": "Día de lluvia sin vacíos por dentro",
-        "description": "Hay días de lluvia en los que afuera todo parece gris, pero adentro no tiene por qué sentirse vacío. Una reflexión íntima para sostenerse co…",
-        "url": "/posts/dia-de-lluvia-sin-vacios-por-dentro.html",
-        "slug": "dia-de-lluvia-sin-vacios-por-dentro"
       }
     ]
   }
