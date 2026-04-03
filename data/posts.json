@@ -43,16 +43,69 @@
         "slug": "cuando-dormis-hasta-tarde-pero-te-levantas-y-queres-seguir-durmiendo"
       },
       {
+        "title": "De sentirme hundido a volver a tener motivación",
+        "description": "Un texto sobre el paso lento y real entre sentirse muy abajo y empezar a recuperar motivación sin chamuyo.",
+        "url": "/posts/de-sentirme-hundido-a-volver-a-tener-motivacion.html",
+        "slug": "de-sentirme-hundido-a-volver-a-tener-motivacion"
+      },
+      {
         "title": "Me activo por las noches para hacer todo",
         "description": "Cuando cae la noche recién aparece la energía. Un texto para quienes sienten que viven mejor cuando el mundo se apaga un poco.",
         "url": "/posts/me-activo-por-las-noches-para-hacer-todo.html",
         "slug": "me-activo-por-las-noches-para-hacer-todo"
+      }
+    ]
+  },
+  {
+    "title": "De sentirme hundido a volver a tener motivación",
+    "description": "Un texto sobre el paso lento y real entre sentirse muy abajo y empezar a recuperar motivación sin chamuyo.",
+    "tags": [
+      "motivacion real",
+      "sentirme hundido",
+      "volver a empezar",
+      "esperanza",
+      "dias dificiles",
+      "fuerza interior",
+      "seguir adelante",
+      "reconstruccion personal"
+    ],
+    "tagSlugs": {
+      "motivacion real": "motivacion-real",
+      "sentirme hundido": "sentirme-hundido",
+      "volver a empezar": "volver-a-empezar",
+      "esperanza": "esperanza",
+      "dias dificiles": "dias-dificiles",
+      "fuerza interior": "fuerza-interior",
+      "seguir adelante": "seguir-adelante",
+      "reconstruccion personal": "reconstruccion-personal"
+    },
+    "date": "2026-04-03",
+    "slug": "de-sentirme-hundido-a-volver-a-tener-motivacion",
+    "url": "/posts/de-sentirme-hundido-a-volver-a-tener-motivacion.html",
+    "related": [
+      {
+        "title": "Levantar proyectos que algún día funcionaron y hoy no los tienes",
+        "description": "Hay mañanas en las que no duele empezar de cero, sino mirar todo lo que una vez funcionó y ya no está. Aun así, volver a levantar algo roto…",
+        "url": "/posts/levantar-proyectos-que-algun-dia-funcionaron-y-hoy-no-los-tienes.html",
+        "slug": "levantar-proyectos-que-algun-dia-funcionaron-y-hoy-no-los-tienes"
       },
       {
-        "title": "Cuando los amigos se bajan del barco por las noches",
-        "description": "Hay noches en las que duele más la ausencia de los que estaban cerca que cualquier problema en sí. Y aun así, la mañana llega, incluso cuand…",
-        "url": "/posts/cuando-los-amigos-se-bajan-del-barco-por-las-noches.html",
-        "slug": "cuando-los-amigos-se-bajan-del-barco-por-las-noches"
+        "title": "Días que empiezan después de las 5 de la tarde",
+        "description": "Hay días en los que recién arrancás cuando el sol ya se fue. Un texto honesto sobre sentirse fuera de horario, vivir a contramano y aun así…",
+        "url": "/posts/dias-que-empiezan-despues-de-las-5-de-la-tarde.html",
+        "slug": "dias-que-empiezan-despues-de-las-5-de-la-tarde"
+      },
+      {
+        "title": "Una mañana feliz pero sin nada y con mil problemas",
+        "description": "Hay mañanas en las que no tenés nada resuelto, pero igual seguís. Una reflexión honesta sobre empezar el día con problemas, cansancio y una…",
+        "url": "/posts/manana-feliz-sin-nada-con-mil-problemas.html",
+        "slug": "manana-feliz-sin-nada-con-mil-problemas"
+      },
+      {
+        "title": "De día mi cerebro está en hold",
+        "description": "Hay días en los que la cabeza no arranca hasta tarde. Un texto real sobre bloqueo mental, lentitud y esa sensación de vivir en pausa mientra…",
+        "url": "/posts/de-dia-mi-cerebro-esta-en-hold.html",
+        "slug": "de-dia-mi-cerebro-esta-en-hold"
       }
     ]
   },
@@ -214,10 +267,10 @@
         "slug": "dias-que-empiezan-despues-de-las-5-de-la-tarde"
       },
       {
-        "title": "Me activo por las noches para hacer todo",
-        "description": "Cuando cae la noche recién aparece la energía. Un texto para quienes sienten que viven mejor cuando el mundo se apaga un poco.",
-        "url": "/posts/me-activo-por-las-noches-para-hacer-todo.html",
-        "slug": "me-activo-por-las-noches-para-hacer-todo"
+        "title": "De sentirme hundido a volver a tener motivación",
+        "description": "Un texto sobre el paso lento y real entre sentirse muy abajo y empezar a recuperar motivación sin chamuyo.",
+        "url": "/posts/de-sentirme-hundido-a-volver-a-tener-motivacion.html",
+        "slug": "de-sentirme-hundido-a-volver-a-tener-motivacion"
       }
     ]
   },
@@ -316,10 +369,10 @@
         "slug": "manana-feliz-sin-nada-con-mil-problemas"
       },
       {
-        "title": "Días en los que solo tengo que esperar porque no me queda otra",
-        "description": "Hay días en los que no queda otra que esperar. Esta reflexión acompaña esos momentos de pausa forzada, incertidumbre y resistencia silencios…",
-        "url": "/posts/dias-en-los-que-solo-tengo-que-esperar-porque-no-me-queda-otra.html",
-        "slug": "dias-en-los-que-solo-tengo-que-esperar-porque-no-me-queda-otra"
+        "title": "De sentirme hundido a volver a tener motivación",
+        "description": "Un texto sobre el paso lento y real entre sentirse muy abajo y empezar a recuperar motivación sin chamuyo.",
+        "url": "/posts/de-sentirme-hundido-a-volver-a-tener-motivacion.html",
+        "slug": "de-sentirme-hundido-a-volver-a-tener-motivacion"
       }
     ]
   },
@@ -585,6 +638,12 @@
     "url": "/posts/levantar-proyectos-que-algun-dia-funcionaron-y-hoy-no-los-tienes.html",
     "related": [
       {
+        "title": "De sentirme hundido a volver a tener motivación",
+        "description": "Un texto sobre el paso lento y real entre sentirse muy abajo y empezar a recuperar motivación sin chamuyo.",
+        "url": "/posts/de-sentirme-hundido-a-volver-a-tener-motivacion.html",
+        "slug": "de-sentirme-hundido-a-volver-a-tener-motivacion"
+      },
+      {
         "title": "Cuando los amigos se bajan del barco por las noches",
         "description": "Hay noches en las que duele más la ausencia de los que estaban cerca que cualquier problema en sí. Y aun así, la mañana llega, incluso cuand…",
         "url": "/posts/cuando-los-amigos-se-bajan-del-barco-por-las-noches.html",
@@ -601,12 +660,6 @@
         "description": "Hay días en los que dormís muchas horas, pero igual te levantás con el cuerpo pesado y la cabeza lenta. Una reflexión honesta sobre ese cans…",
         "url": "/posts/cuando-dormis-hasta-tarde-pero-te-levantas-y-queres-seguir-durmiendo.html",
         "slug": "cuando-dormis-hasta-tarde-pero-te-levantas-y-queres-seguir-durmiendo"
-      },
-      {
-        "title": "Me levanté con las ganas que no tenía hace cinco días",
-        "description": "Un texto sobre esa mañana rara y hermosa en la que volvés a sentir ganas después de varios días apagado.",
-        "url": "/posts/me-levante-con-las-ganas-que-no-tenia-hace-cinco-dias.html",
-        "slug": "me-levante-con-las-ganas-que-no-tenia-hace-cinco-dias"
       }
     ]
   },
@@ -650,16 +703,16 @@
         "slug": "me-levante-con-las-ganas-que-no-tenia-hace-cinco-dias"
       },
       {
+        "title": "De sentirme hundido a volver a tener motivación",
+        "description": "Un texto sobre el paso lento y real entre sentirse muy abajo y empezar a recuperar motivación sin chamuyo.",
+        "url": "/posts/de-sentirme-hundido-a-volver-a-tener-motivacion.html",
+        "slug": "de-sentirme-hundido-a-volver-a-tener-motivacion"
+      },
+      {
         "title": "Días en los que solo tengo que esperar porque no me queda otra",
         "description": "Hay días en los que no queda otra que esperar. Esta reflexión acompaña esos momentos de pausa forzada, incertidumbre y resistencia silencios…",
         "url": "/posts/dias-en-los-que-solo-tengo-que-esperar-porque-no-me-queda-otra.html",
         "slug": "dias-en-los-que-solo-tengo-que-esperar-porque-no-me-queda-otra"
-      },
-      {
-        "title": "Días que empiezan después de las 5 de la tarde",
-        "description": "Hay días en los que recién arrancás cuando el sol ya se fue. Un texto honesto sobre sentirse fuera de horario, vivir a contramano y aun así…",
-        "url": "/posts/dias-que-empiezan-despues-de-las-5-de-la-tarde.html",
-        "slug": "dias-que-empiezan-despues-de-las-5-de-la-tarde"
       }
     ]
   }
