@@ -82,7 +82,7 @@ const exportedPosts = posts.map(post => ({
   title: post.title,
   description: post.description,
   tags: post.tags,
-  tagSlugs: Object.fromEntries((post.tags || []).map(tag => [tag, slugify(tag)])),
+  tagSlugs: Object.fromEntries((post.tags || []).map(tag => [tag, (tagMap[slugify(tag)] && tagMap[slugify(tag)].slug) || slugify(tag)])),
   date: post.date,
   slug: post.slug,
   url: post.url,
@@ -292,12 +292,47 @@ function patchIndexHtml() {
   if (!fs.existsSync(indexPath)) return;
   let html = fs.readFileSync(indexPath, 'utf8');
 
-  html = html.replace('<a href="#etiquetas">Etiquetas</a>', '<a href="/tags/">Etiquetas</a>');
-  html = html.replace('<a href="#publicaciones">Publicaciones</a>', '<a href="https://www.buenosdia.com/#publicaciones">Publicaciones</a>');
-  html = html.replace('<a href="/tags/">Etiquetas</a>\n      </nav>', `<a href="/tags/">Etiquetas</a>\n        <a href="${CONTACT_URL}" target="_blank" rel="noopener noreferrer">Contacto</a>\n      </nav>`);
-  html = html.replace('</div>\n        </section>\n      </main>', '</div>\n          <div class="load-more-wrap">\n            <button id="loadMoreBtn" class="load-more" type="button" hidden>Ver más publicaciones</button>\n          </div>\n          <div id="postsSentinel" aria-hidden="true"></div>\n        </section>\n      </main>');
-  html = html.replace(/<footer>[\s\S]*?<\/footer>/i, `<div class="contact-strip">Contacto: <a href="${CONTACT_URL}" target="_blank" rel="noopener noreferrer">${CONTACT_HANDLE}</a></div>\n\n    <footer>\n      © 2026 buenosdia.com — mañanas reales, palabras que acompañan. ·\n      <a href="${CONTACT_URL}" target="_blank" rel="noopener noreferrer">Contacto</a>\n    </footer>`);
-  html = html.replace('.empty{\n      padding:18px;\n      border:1px dashed var(--line);\n      border-radius:16px;\n      color:var(--muted);\n      background:#fff;\n    }\n    footer{', '.empty{\n      padding:18px;\n      border:1px dashed var(--line);\n      border-radius:16px;\n      color:var(--muted);\n      background:#fff;\n    }\n    .load-more-wrap{display:flex;justify-content:center;margin-top:18px}\n    .load-more{border:1px solid var(--line);background:var(--card);color:var(--text);border-radius:999px;padding:12px 18px;font-size:1rem;cursor:pointer;box-shadow:var(--shadow)}\n    .load-more[hidden]{display:none}\n    .contact-strip{margin-top:18px;padding:18px 20px;background:var(--card);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);color:var(--muted)}\n    .contact-strip a{color:var(--text);font-weight:700;text-decoration:none}\n    .contact-strip a:hover{text-decoration:underline}\n    footer{');
+  html = html.replace(/<a href="#etiquetas">Etiquetas<\/a>/i, '<a href="/tags/">Etiquetas</a>');
+  html = html.replace(/<a href="#publicaciones">Publicaciones<\/a>/i, '<a href="https://www.buenosdia.com/#publicaciones">Publicaciones</a>');
+
+  html = html.replace(/<nav>[\s\S]*?<\/nav>/i, `<nav>
+        <a href="#inicio">Inicio</a>
+        <a href="https://www.buenosdia.com/#publicaciones">Publicaciones</a>
+        <a href="/tags/">Etiquetas</a>
+        <a href="${CONTACT_URL}" target="_blank" rel="noopener noreferrer">Contacto</a>
+      </nav>`);
+
+  const publicacionesRegex = /<section id="publicaciones">[\s\S]*?<\/section>/i;
+  const publicacionesMatch = html.match(publicacionesRegex);
+  if (publicacionesMatch) {
+    let section = publicacionesMatch[0];
+    section = section.replace(/\s*<div class="load-more-wrap">[\s\S]*?<\/div>/g, '');
+    section = section.replace(/\s*<div id="postsSentinel" aria-hidden="true"><\/div>/g, '');
+    section = section.replace(
+      /(<div id="postsList">[\s\S]*?<\/div>)/i,
+      `$1
+          <div class="load-more-wrap">
+            <button id="loadMoreBtn" class="load-more" type="button" hidden>Ver más publicaciones</button>
+          </div>
+          <div id="postsSentinel" aria-hidden="true"></div>`
+    );
+    html = html.replace(publicacionesRegex, section);
+  }
+
+  html = html.replace(/<div class="contact-strip">[\s\S]*?<\/div>/gi, '');
+  html = html.replace(/<footer>[\s\S]*?<\/footer>/i, `<div class="contact-strip">Contacto: <a href="${CONTACT_URL}" target="_blank" rel="noopener noreferrer">${CONTACT_HANDLE}</a></div>
+
+    <footer>
+      © 2026 buenosdia.com — mañanas reales, palabras que acompañan. ·
+      <a href="${CONTACT_URL}" target="_blank" rel="noopener noreferrer">Contacto</a>
+    </footer>`);
+
+  if (!/\.load-more-wrap\{/i.test(html)) {
+    html = html.replace(
+      '.empty{\n      padding:18px;\n      border:1px dashed var(--line);\n      border-radius:16px;\n      color:var(--muted);\n      background:#fff;\n    }\n    footer{',
+      '.empty{\n      padding:18px;\n      border:1px dashed var(--line);\n      border-radius:16px;\n      color:var(--muted);\n      background:#fff;\n    }\n    .load-more-wrap{display:flex;justify-content:center;margin-top:18px}\n    .load-more{border:1px solid var(--line);background:var(--card);color:var(--text);border-radius:999px;padding:12px 18px;font-size:1rem;cursor:pointer;box-shadow:var(--shadow)}\n    .load-more[hidden]{display:none}\n    .contact-strip{margin-top:18px;padding:18px 20px;background:var(--card);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);color:var(--muted)}\n    .contact-strip a{color:var(--text);font-weight:700;text-decoration:none}\n    .contact-strip a:hover{text-decoration:underline}\n    footer{'
+    );
+  }
 
   const scriptRegex = /<script>[\s\S]*?loadPosts\(\);\s*<\/script>/i;
   const tagSlugMap = JSON.stringify(Object.fromEntries(Object.values(tagMap).map(tag => [normalizeTag(tag.name), tag.slug])));
@@ -458,7 +493,6 @@ function patchIndexHtml() {
 
   fs.writeFileSync(indexPath, html, 'utf8');
 }
-
 
 
 function write404Page(tagMap) {
