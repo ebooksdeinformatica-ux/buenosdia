@@ -1,5 +1,166 @@
 [
   {
+    "title": "Cómo desactivar el chip rutinario cuando te comparás con otra gente",
+    "description": "Compararse con la rutina de los demás puede volverte más automático y más injusto con vos. Un texto sobre cortar ese chip y volver a tu propio ritmo.",
+    "tags": [
+      "compararse con otra gente",
+      "chip rutinario",
+      "rutina mental",
+      "comparacion",
+      "volver al propio ritmo",
+      "vida real",
+      "propio ritmo",
+      "autoboicot",
+      "mente cotidiana"
+    ],
+    "tagSlugs": {
+      "compararse con otra gente": "compararse-con-otra-gente",
+      "chip rutinario": "chip-rutinario",
+      "rutina mental": "rutina-mental",
+      "comparacion": "comparacion",
+      "volver al propio ritmo": "volver-al-propio-ritmo",
+      "vida real": "vida-real",
+      "propio ritmo": "propio-ritmo",
+      "autoboicot": "autoboicot",
+      "mente cotidiana": "mente-cotidiana"
+    },
+    "date": "2026-04-03",
+    "slug": "como-desactivar-el-chip-rutinario-cuando-te-comparas-con-otra-gente",
+    "url": "/posts/como-desactivar-el-chip-rutinario-cuando-te-comparas-con-otra-gente.html",
+    "related": [
+      {
+        "title": "Cómo influye la rutina de los demás en la rutina de uno",
+        "description": "La rutina ajena también se mete en la nuestra: horarios, ritmos, exigencias y comparaciones. Un texto sobre cómo eso nos afecta más de lo qu…",
+        "url": "/posts/como-influye-la-rutina-de-los-demas-en-la-rutina-de-uno.html",
+        "slug": "como-influye-la-rutina-de-los-demas-en-la-rutina-de-uno"
+      },
+      {
+        "title": "La gente con el chip rutinario metido en la cabeza",
+        "description": "Hay personas que viven en piloto automático sin preguntarse qué más podrían hacer con su vida. Un texto sobre rutina, obediencia interna y p…",
+        "url": "/posts/la-gente-con-el-chip-rutinario-metido-en-la-cabeza.html",
+        "slug": "la-gente-con-el-chip-rutinario-metido-en-la-cabeza"
+      },
+      {
+        "title": "Cuando los amigos se bajan del barco por las noches",
+        "description": "Hay noches en las que duele más la ausencia de los que estaban cerca que cualquier problema en sí. Y aun así, la mañana llega, incluso cuand…",
+        "url": "/posts/cuando-los-amigos-se-bajan-del-barco-por-las-noches.html",
+        "slug": "cuando-los-amigos-se-bajan-del-barco-por-las-noches"
+      },
+      {
+        "title": "Levantar proyectos que algún día funcionaron y hoy no los tienes",
+        "description": "Hay mañanas en las que no duele empezar de cero, sino mirar todo lo que una vez funcionó y ya no está. Aun así, volver a levantar algo roto…",
+        "url": "/posts/levantar-proyectos-que-algun-dia-funcionaron-y-hoy-no-los-tienes.html",
+        "slug": "levantar-proyectos-que-algun-dia-funcionaron-y-hoy-no-los-tienes"
+      }
+    ]
+  },
+  {
+    "title": "Cómo elegir el momento justo para actuar ciertas cosas",
+    "description": "No todo se hace en cualquier instante. A veces elegir bien el momento cambia más que la fuerza. Un texto sobre timing, cabeza y acción.",
+    "tags": [
+      "elegir el momento justo",
+      "momento para actuar",
+      "timing personal",
+      "accion consciente",
+      "decisiones del dia",
+      "claridad mental",
+      "movimiento real",
+      "vida practica"
+    ],
+    "tagSlugs": {
+      "elegir el momento justo": "elegir-el-momento-justo",
+      "momento para actuar": "momento-para-actuar",
+      "timing personal": "timing-personal",
+      "accion consciente": "accion-consciente",
+      "decisiones del dia": "decisiones-del-dia",
+      "claridad mental": "claridad-mental",
+      "movimiento real": "movimiento-real",
+      "vida practica": "vida-practica"
+    },
+    "date": "2026-04-03",
+    "slug": "como-elegir-el-momento-justo-para-actuar-ciertas-cosas",
+    "url": "/posts/como-elegir-el-momento-justo-para-actuar-ciertas-cosas.html",
+    "related": [
+      {
+        "title": "Días que empiezan después de las 5 de la tarde",
+        "description": "Hay días en los que recién arrancás cuando el sol ya se fue. Un texto honesto sobre sentirse fuera de horario, vivir a contramano y aun así…",
+        "url": "/posts/dias-que-empiezan-despues-de-las-5-de-la-tarde.html",
+        "slug": "dias-que-empiezan-despues-de-las-5-de-la-tarde"
+      },
+      {
+        "title": "Cómo influye la rutina de los demás en la rutina de uno",
+        "description": "La rutina ajena también se mete en la nuestra: horarios, ritmos, exigencias y comparaciones. Un texto sobre cómo eso nos afecta más de lo qu…",
+        "url": "/posts/como-influye-la-rutina-de-los-demas-en-la-rutina-de-uno.html",
+        "slug": "como-influye-la-rutina-de-los-demas-en-la-rutina-de-uno"
+      },
+      {
+        "title": "Me activo por las noches para hacer todo",
+        "description": "Cuando cae la noche recién aparece la energía. Un texto para quienes sienten que viven mejor cuando el mundo se apaga un poco.",
+        "url": "/posts/me-activo-por-las-noches-para-hacer-todo.html",
+        "slug": "me-activo-por-las-noches-para-hacer-todo"
+      },
+      {
+        "title": "Una mañana feliz pero sin nada y con mil problemas",
+        "description": "Hay mañanas en las que no tenés nada resuelto, pero igual seguís. Una reflexión honesta sobre empezar el día con problemas, cansancio y una…",
+        "url": "/posts/manana-feliz-sin-nada-con-mil-problemas.html",
+        "slug": "manana-feliz-sin-nada-con-mil-problemas"
+      }
+    ]
+  },
+  {
+    "title": "Cómo influye la rutina de los demás en la rutina de uno",
+    "description": "La rutina ajena también se mete en la nuestra: horarios, ritmos, exigencias y comparaciones. Un texto sobre cómo eso nos afecta más de lo que parece.",
+    "tags": [
+      "rutina de los demas",
+      "rutina propia",
+      "comparacion social",
+      "horarios ajenos",
+      "vida cotidiana",
+      "influencia externa",
+      "orden mental",
+      "chip rutinario"
+    ],
+    "tagSlugs": {
+      "rutina de los demas": "rutina-de-los-demas",
+      "rutina propia": "rutina-propia",
+      "comparacion social": "comparacion-social",
+      "horarios ajenos": "horarios-ajenos",
+      "vida cotidiana": "vida-cotidiana",
+      "influencia externa": "influencia-externa",
+      "orden mental": "orden-mental",
+      "chip rutinario": "chip-rutinario"
+    },
+    "date": "2026-04-03",
+    "slug": "como-influye-la-rutina-de-los-demas-en-la-rutina-de-uno",
+    "url": "/posts/como-influye-la-rutina-de-los-demas-en-la-rutina-de-uno.html",
+    "related": [
+      {
+        "title": "Cómo desactivar el chip rutinario cuando te comparás con otra gente",
+        "description": "Compararse con la rutina de los demás puede volverte más automático y más injusto con vos. Un texto sobre cortar ese chip y volver a tu prop…",
+        "url": "/posts/como-desactivar-el-chip-rutinario-cuando-te-comparas-con-otra-gente.html",
+        "slug": "como-desactivar-el-chip-rutinario-cuando-te-comparas-con-otra-gente"
+      },
+      {
+        "title": "Días que empiezan después de las 5 de la tarde",
+        "description": "Hay días en los que recién arrancás cuando el sol ya se fue. Un texto honesto sobre sentirse fuera de horario, vivir a contramano y aun así…",
+        "url": "/posts/dias-que-empiezan-despues-de-las-5-de-la-tarde.html",
+        "slug": "dias-que-empiezan-despues-de-las-5-de-la-tarde"
+      },
+      {
+        "title": "Cómo elegir el momento justo para actuar ciertas cosas",
+        "description": "No todo se hace en cualquier instante. A veces elegir bien el momento cambia más que la fuerza. Un texto sobre timing, cabeza y acción.",
+        "url": "/posts/como-elegir-el-momento-justo-para-actuar-ciertas-cosas.html",
+        "slug": "como-elegir-el-momento-justo-para-actuar-ciertas-cosas"
+      },
+      {
+        "title": "Me activo por las noches para hacer todo",
+        "description": "Cuando cae la noche recién aparece la energía. Un texto para quienes sienten que viven mejor cuando el mundo se apaga un poco.",
+        "url": "/posts/me-activo-por-las-noches-para-hacer-todo.html",
+        "slug": "me-activo-por-las-noches-para-hacer-todo"
+      }
+    ]
+  },
+  {
     "title": "Cómo la plata puede motivar o desmotivar",
     "description": "La plata puede empujarte a moverte, pero también puede aplastarte cuando falta o cuando se vuelve obsesión. Un texto real sobre esa contradicción.",
     "tags": [
@@ -214,6 +375,118 @@
     ]
   },
   {
+    "title": "Cómo sobrevivir día a día con tu mente para estar bien",
+    "description": "A veces el trabajo más difícil del día no está afuera sino adentro. Un texto real sobre convivir con la propia mente sin romperse.",
+    "tags": [
+      "sobrevivir dia a dia",
+      "mente",
+      "estar bien",
+      "salud mental cotidiana",
+      "convivir con uno mismo",
+      "pensamientos",
+      "equilibrio interno",
+      "dias reales"
+    ],
+    "tagSlugs": {
+      "sobrevivir dia a dia": "sobrevivir-dia-a-dia",
+      "mente": "mente",
+      "estar bien": "estar-bien",
+      "salud mental cotidiana": "salud-mental-cotidiana",
+      "convivir con uno mismo": "convivir-con-uno-mismo",
+      "pensamientos": "pensamientos",
+      "equilibrio interno": "equilibrio-interno",
+      "dias reales": "dias-reales"
+    },
+    "date": "2026-04-03",
+    "slug": "como-sobrevivir-dia-a-dia-con-tu-mente-para-estar-bien",
+    "url": "/posts/como-sobrevivir-dia-a-dia-con-tu-mente-para-estar-bien.html",
+    "related": [
+      {
+        "title": "De día mi cerebro está en hold",
+        "description": "Hay días en los que la cabeza no arranca hasta tarde. Un texto real sobre bloqueo mental, lentitud y esa sensación de vivir en pausa mientra…",
+        "url": "/posts/de-dia-mi-cerebro-esta-en-hold.html",
+        "slug": "de-dia-mi-cerebro-esta-en-hold"
+      },
+      {
+        "title": "Por qué no puedo dormir por las noches",
+        "description": "Un texto honesto sobre esas noches en las que el cuerpo quiere dormir pero la cabeza no se apaga.",
+        "url": "/posts/por-que-no-puedo-dormir-por-las-noches.html",
+        "slug": "por-que-no-puedo-dormir-por-las-noches"
+      },
+      {
+        "title": "Por qué a veces querés dormir en varias etapas durante el día",
+        "description": "Hay días en los que el sueño no viene de una sola vez, sino en partes. Un texto sobre cansancio, mente saturada y esa necesidad de dormir po…",
+        "url": "/posts/por-que-a-veces-queres-dormir-en-varias-etapas-durante-el-dia.html",
+        "slug": "por-que-a-veces-queres-dormir-en-varias-etapas-durante-el-dia"
+      },
+      {
+        "title": "Cuando dormís hasta tarde pero te levantás y querés seguir durmiendo",
+        "description": "Hay días en los que dormís muchas horas, pero igual te levantás con el cuerpo pesado y la cabeza lenta. Una reflexión honesta sobre ese cans…",
+        "url": "/posts/cuando-dormis-hasta-tarde-pero-te-levantas-y-queres-seguir-durmiendo.html",
+        "slug": "cuando-dormis-hasta-tarde-pero-te-levantas-y-queres-seguir-durmiendo"
+      }
+    ]
+  },
+  {
+    "title": "Cuando durante el día te dan ganas de hablar con una chica",
+    "description": "Hay días en los que no falta trabajo ni cosas para hacer, pero igual aparece esa necesidad de hablar con una chica y sentir una conexión real.",
+    "tags": [
+      "ganas de hablar con una chica",
+      "necesidad de conectar",
+      "vinculos reales",
+      "deseo de hablar",
+      "emociones del dia",
+      "rutina emocional",
+      "ganas de hablar",
+      "amor confuso",
+      "presencia emocional",
+      "deseo de conectar",
+      "mananas reales"
+    ],
+    "tagSlugs": {
+      "ganas de hablar con una chica": "ganas-de-hablar-con-una-chica",
+      "necesidad de conectar": "necesidad-de-conectar",
+      "vinculos reales": "vinculos-reales",
+      "deseo de hablar": "deseo-de-hablar",
+      "emociones del dia": "emociones-del-dia",
+      "rutina emocional": "rutina-emocional",
+      "ganas de hablar": "ganas-de-hablar",
+      "amor confuso": "amor-confuso",
+      "presencia emocional": "presencia-emocional",
+      "deseo de conectar": "deseo-de-conectar",
+      "mananas reales": "mananas-reales"
+    },
+    "date": "2026-04-03",
+    "slug": "cuando-durante-el-dia-te-dan-ganas-de-hablar-con-una-chica",
+    "url": "/posts/cuando-durante-el-dia-te-dan-ganas-de-hablar-con-una-chica.html",
+    "related": [
+      {
+        "title": "Cuando los amigos se bajan del barco por las noches",
+        "description": "Hay noches en las que duele más la ausencia de los que estaban cerca que cualquier problema en sí. Y aun así, la mañana llega, incluso cuand…",
+        "url": "/posts/cuando-los-amigos-se-bajan-del-barco-por-las-noches.html",
+        "slug": "cuando-los-amigos-se-bajan-del-barco-por-las-noches"
+      },
+      {
+        "title": "La soledad no siempre es tan soledad",
+        "description": "Hay momentos de soledad que no están tan vacíos como parecen. Un texto real sobre el silencio, la presencia interna y lo que aparece cuando…",
+        "url": "/posts/la-soledad-no-siempre-es-tan-soledad.html",
+        "slug": "la-soledad-no-siempre-es-tan-soledad"
+      },
+      {
+        "title": "Cuando salís a caminar por la tarde y no hay nadie, pero no te sentís solo",
+        "description": "Hay tardes en las que salís a caminar, no hay nadie alrededor y sin embargo no te sentís mal. Una reflexión sobre esa soledad rara que tambi…",
+        "url": "/posts/cuando-salis-a-caminar-por-la-tarde-y-no-hay-nadie-pero-no-te-sentis-solo.html",
+        "slug": "cuando-salis-a-caminar-por-la-tarde-y-no-hay-nadie-pero-no-te-sentis-solo"
+      },
+      {
+        "title": "Días que empiezan después de las 5 de la tarde",
+        "description": "Hay días en los que recién arrancás cuando el sol ya se fue. Un texto honesto sobre sentirse fuera de horario, vivir a contramano y aun así…",
+        "url": "/posts/dias-que-empiezan-despues-de-las-5-de-la-tarde.html",
+        "slug": "dias-que-empiezan-despues-de-las-5-de-la-tarde"
+      }
+    ]
+  },
+  {
     "title": "Cuando los amigos solo están si hay plata de por medio",
     "description": "Hay vínculos que parecen cercanos hasta que se termina la plata. Un texto sobre amistades interesadas y la claridad dolorosa que eso deja.",
     "tags": [
@@ -263,6 +536,59 @@
         "description": "Hay mañanas en las que no duele empezar de cero, sino mirar todo lo que una vez funcionó y ya no está. Aun así, volver a levantar algo roto…",
         "url": "/posts/levantar-proyectos-que-algun-dia-funcionaron-y-hoy-no-los-tienes.html",
         "slug": "levantar-proyectos-que-algun-dia-funcionaron-y-hoy-no-los-tienes"
+      }
+    ]
+  },
+  {
+    "title": "Cuando salís a caminar por la tarde y no hay nadie, pero no te sentís solo",
+    "description": "Hay tardes en las que salís a caminar, no hay nadie alrededor y sin embargo no te sentís mal. Una reflexión sobre esa soledad rara que también puede traer paz.",
+    "tags": [
+      "caminar por la tarde",
+      "soledad",
+      "paz interior",
+      "silencio",
+      "calles vacias",
+      "calma interior",
+      "estar con uno mismo",
+      "presencia emocional"
+    ],
+    "tagSlugs": {
+      "caminar por la tarde": "caminar-por-la-tarde",
+      "soledad": "soledad",
+      "paz interior": "paz-interior",
+      "silencio": "silencio",
+      "calles vacias": "calles-vacias",
+      "calma interior": "calma-interior",
+      "estar con uno mismo": "estar-con-uno-mismo",
+      "presencia emocional": "presencia-emocional"
+    },
+    "date": "2026-04-03",
+    "slug": "cuando-salis-a-caminar-por-la-tarde-y-no-hay-nadie-pero-no-te-sentis-solo",
+    "url": "/posts/cuando-salis-a-caminar-por-la-tarde-y-no-hay-nadie-pero-no-te-sentis-solo.html",
+    "related": [
+      {
+        "title": "La soledad no siempre es tan soledad",
+        "description": "Hay momentos de soledad que no están tan vacíos como parecen. Un texto real sobre el silencio, la presencia interna y lo que aparece cuando…",
+        "url": "/posts/la-soledad-no-siempre-es-tan-soledad.html",
+        "slug": "la-soledad-no-siempre-es-tan-soledad"
+      },
+      {
+        "title": "Me activo por las noches para hacer todo",
+        "description": "Cuando cae la noche recién aparece la energía. Un texto para quienes sienten que viven mejor cuando el mundo se apaga un poco.",
+        "url": "/posts/me-activo-por-las-noches-para-hacer-todo.html",
+        "slug": "me-activo-por-las-noches-para-hacer-todo"
+      },
+      {
+        "title": "Cuando los amigos se bajan del barco por las noches",
+        "description": "Hay noches en las que duele más la ausencia de los que estaban cerca que cualquier problema en sí. Y aun así, la mañana llega, incluso cuand…",
+        "url": "/posts/cuando-los-amigos-se-bajan-del-barco-por-las-noches.html",
+        "slug": "cuando-los-amigos-se-bajan-del-barco-por-las-noches"
+      },
+      {
+        "title": "La tristeza cuando no hay plata, y aun así hay gente contenta",
+        "description": "No tener plata duele, pero también existe gente que, aun en esa falta, encuentra motivos para estar bien. Un texto real sobre esa contradicc…",
+        "url": "/posts/la-tristeza-cuando-no-hay-plata-y-aun-asi-hay-gente-contenta.html",
+        "slug": "la-tristeza-cuando-no-hay-plata-y-aun-asi-hay-gente-contenta"
       }
     ]
   },
@@ -522,6 +848,12 @@
         "slug": "cuando-los-amigos-se-bajan-del-barco-por-las-noches"
       },
       {
+        "title": "Cuando salís a caminar por la tarde y no hay nadie, pero no te sentís solo",
+        "description": "Hay tardes en las que salís a caminar, no hay nadie alrededor y sin embargo no te sentís mal. Una reflexión sobre esa soledad rara que tambi…",
+        "url": "/posts/cuando-salis-a-caminar-por-la-tarde-y-no-hay-nadie-pero-no-te-sentis-solo.html",
+        "slug": "cuando-salis-a-caminar-por-la-tarde-y-no-hay-nadie-pero-no-te-sentis-solo"
+      },
+      {
         "title": "Me activo por las noches para hacer todo",
         "description": "Cuando cae la noche recién aparece la energía. Un texto para quienes sienten que viven mejor cuando el mundo se apaga un poco.",
         "url": "/posts/me-activo-por-las-noches-para-hacer-todo.html",
@@ -532,12 +864,6 @@
         "description": "No tener plata duele, pero también existe gente que, aun en esa falta, encuentra motivos para estar bien. Un texto real sobre esa contradicc…",
         "url": "/posts/la-tristeza-cuando-no-hay-plata-y-aun-asi-hay-gente-contenta.html",
         "slug": "la-tristeza-cuando-no-hay-plata-y-aun-asi-hay-gente-contenta"
-      },
-      {
-        "title": "Cuando los amigos solo están si hay plata de por medio",
-        "description": "Hay vínculos que parecen cercanos hasta que se termina la plata. Un texto sobre amistades interesadas y la claridad dolorosa que eso deja.",
-        "url": "/posts/cuando-los-amigos-solo-estan-si-hay-plata.html",
-        "slug": "cuando-los-amigos-solo-estan-si-hay-plata"
       }
     ]
   },
@@ -593,6 +919,59 @@
         "description": "Volver después de una depresión grande no es volver igual. Un texto real sobre reconstruirse sin apuro, sin teatro y sin exigirse milagros.",
         "url": "/posts/como-recomponerse-despues-de-una-depresion-grande.html",
         "slug": "como-recomponerse-despues-de-una-depresion-grande"
+      }
+    ]
+  },
+  {
+    "title": "Las ganas que vienen solas cuando empezás a programarte el cerebro",
+    "description": "A veces las ganas de hacer cosas no llegan por magia, sino por ir reprogramando la mente de a poco. Un texto sobre impulso, enfoque y reconstrucción interna.",
+    "tags": [
+      "programarse el cerebro",
+      "motivacion real",
+      "enfoque mental",
+      "reconstruccion personal",
+      "ganas de hacer",
+      "habitos mentales",
+      "seguir adelante",
+      "volver a empezar"
+    ],
+    "tagSlugs": {
+      "programarse el cerebro": "programarse-el-cerebro",
+      "motivacion real": "motivacion-real",
+      "enfoque mental": "enfoque-mental",
+      "reconstruccion personal": "reconstruccion-personal",
+      "ganas de hacer": "ganas-de-hacer",
+      "habitos mentales": "habitos-mentales",
+      "seguir adelante": "seguir-adelante",
+      "volver a empezar": "volver-a-empezar"
+    },
+    "date": "2026-04-03",
+    "slug": "las-ganas-que-vienen-solas-cuando-empezas-a-programarte-el-cerebro",
+    "url": "/posts/las-ganas-que-vienen-solas-cuando-empezas-a-programarte-el-cerebro.html",
+    "related": [
+      {
+        "title": "Levantar proyectos que algún día funcionaron y hoy no los tienes",
+        "description": "Hay mañanas en las que no duele empezar de cero, sino mirar todo lo que una vez funcionó y ya no está. Aun así, volver a levantar algo roto…",
+        "url": "/posts/levantar-proyectos-que-algun-dia-funcionaron-y-hoy-no-los-tienes.html",
+        "slug": "levantar-proyectos-que-algun-dia-funcionaron-y-hoy-no-los-tienes"
+      },
+      {
+        "title": "De sentirme hundido a volver a tener motivación",
+        "description": "Un texto sobre el paso lento y real entre sentirse muy abajo y empezar a recuperar motivación sin chamuyo.",
+        "url": "/posts/de-sentirme-hundido-a-volver-a-tener-motivacion.html",
+        "slug": "de-sentirme-hundido-a-volver-a-tener-motivacion"
+      },
+      {
+        "title": "Cómo recomponerse después de una depresión grande",
+        "description": "Volver después de una depresión grande no es volver igual. Un texto real sobre reconstruirse sin apuro, sin teatro y sin exigirse milagros.",
+        "url": "/posts/como-recomponerse-despues-de-una-depresion-grande.html",
+        "slug": "como-recomponerse-despues-de-una-depresion-grande"
+      },
+      {
+        "title": "La gente con el chip rutinario metido en la cabeza",
+        "description": "Hay personas que viven en piloto automático sin preguntarse qué más podrían hacer con su vida. Un texto sobre rutina, obediencia interna y p…",
+        "url": "/posts/la-gente-con-el-chip-rutinario-metido-en-la-cabeza.html",
+        "slug": "la-gente-con-el-chip-rutinario-metido-en-la-cabeza"
       }
     ]
   },
@@ -748,16 +1127,16 @@
         "slug": "dias-que-empiezan-despues-de-las-5-de-la-tarde"
       },
       {
+        "title": "Cuando durante el día te dan ganas de hablar con una chica",
+        "description": "Hay días en los que no falta trabajo ni cosas para hacer, pero igual aparece esa necesidad de hablar con una chica y sentir una conexión rea…",
+        "url": "/posts/cuando-durante-el-dia-te-dan-ganas-de-hablar-con-una-chica.html",
+        "slug": "cuando-durante-el-dia-te-dan-ganas-de-hablar-con-una-chica"
+      },
+      {
         "title": "La tristeza cuando no hay plata, y aun así hay gente contenta",
         "description": "No tener plata duele, pero también existe gente que, aun en esa falta, encuentra motivos para estar bien. Un texto real sobre esa contradicc…",
         "url": "/posts/la-tristeza-cuando-no-hay-plata-y-aun-asi-hay-gente-contenta.html",
         "slug": "la-tristeza-cuando-no-hay-plata-y-aun-asi-hay-gente-contenta"
-      },
-      {
-        "title": "Cuando dormís hasta tarde pero te levantás y querés seguir durmiendo",
-        "description": "Hay días en los que dormís muchas horas, pero igual te levantás con el cuerpo pesado y la cabeza lenta. Una reflexión honesta sobre ese cans…",
-        "url": "/posts/cuando-dormis-hasta-tarde-pero-te-levantas-y-queres-seguir-durmiendo.html",
-        "slug": "cuando-dormis-hasta-tarde-pero-te-levantas-y-queres-seguir-durmiendo"
       }
     ]
   },
@@ -811,6 +1190,112 @@
         "description": "A veces los ratos más vacíos del día son los que más ayudan a ordenar ideas y avanzar. Un texto sobre aprovechar esos huecos sin romantizarl…",
         "url": "/posts/trabajar-en-momentos-vacios-nos-ayuda.html",
         "slug": "trabajar-en-momentos-vacios-nos-ayuda"
+      }
+    ]
+  },
+  {
+    "title": "Por qué a veces querés dormir en varias etapas durante el día",
+    "description": "Hay días en los que el sueño no viene de una sola vez, sino en partes. Un texto sobre cansancio, mente saturada y esa necesidad de dormir por etapas.",
+    "tags": [
+      "dormir en varias etapas",
+      "sueno fragmentado",
+      "cansancio mental",
+      "dormir de dia",
+      "agotamiento",
+      "descanso irregular",
+      "mente cansada",
+      "rutina del sueno"
+    ],
+    "tagSlugs": {
+      "dormir en varias etapas": "dormir-en-varias-etapas",
+      "sueno fragmentado": "sueno-fragmentado",
+      "cansancio mental": "cansancio-mental",
+      "dormir de dia": "dormir-de-dia",
+      "agotamiento": "agotamiento",
+      "descanso irregular": "descanso-irregular",
+      "mente cansada": "mente-cansada",
+      "rutina del sueno": "rutina-del-sueno"
+    },
+    "date": "2026-04-03",
+    "slug": "por-que-a-veces-queres-dormir-en-varias-etapas-durante-el-dia",
+    "url": "/posts/por-que-a-veces-queres-dormir-en-varias-etapas-durante-el-dia.html",
+    "related": [
+      {
+        "title": "Cuando dormís hasta tarde pero te levantás y querés seguir durmiendo",
+        "description": "Hay días en los que dormís muchas horas, pero igual te levantás con el cuerpo pesado y la cabeza lenta. Una reflexión honesta sobre ese cans…",
+        "url": "/posts/cuando-dormis-hasta-tarde-pero-te-levantas-y-queres-seguir-durmiendo.html",
+        "slug": "cuando-dormis-hasta-tarde-pero-te-levantas-y-queres-seguir-durmiendo"
+      },
+      {
+        "title": "Días que empiezan después de las 5 de la tarde",
+        "description": "Hay días en los que recién arrancás cuando el sol ya se fue. Un texto honesto sobre sentirse fuera de horario, vivir a contramano y aun así…",
+        "url": "/posts/dias-que-empiezan-despues-de-las-5-de-la-tarde.html",
+        "slug": "dias-que-empiezan-despues-de-las-5-de-la-tarde"
+      },
+      {
+        "title": "Me activo por las noches para hacer todo",
+        "description": "Cuando cae la noche recién aparece la energía. Un texto para quienes sienten que viven mejor cuando el mundo se apaga un poco.",
+        "url": "/posts/me-activo-por-las-noches-para-hacer-todo.html",
+        "slug": "me-activo-por-las-noches-para-hacer-todo"
+      },
+      {
+        "title": "Por qué no puedo dormir por las noches",
+        "description": "Un texto honesto sobre esas noches en las que el cuerpo quiere dormir pero la cabeza no se apaga.",
+        "url": "/posts/por-que-no-puedo-dormir-por-las-noches.html",
+        "slug": "por-que-no-puedo-dormir-por-las-noches"
+      }
+    ]
+  },
+  {
+    "title": "Por qué los feriados pueden ser tristes o alegres según cada persona",
+    "description": "Un feriado puede sentirse como alivio, vacío, descanso o tristeza según la vida de cada uno. Un texto real sobre por qué no todos vivimos igual esos días.",
+    "tags": [
+      "feriados tristes",
+      "feriados alegres",
+      "dias especiales",
+      "descanso emocional",
+      "tiempo libre",
+      "soledad en feriados",
+      "rutina rota",
+      "emociones reales"
+    ],
+    "tagSlugs": {
+      "feriados tristes": "feriados-tristes",
+      "feriados alegres": "feriados-alegres",
+      "dias especiales": "dias-especiales",
+      "descanso emocional": "descanso-emocional",
+      "tiempo libre": "tiempo-libre",
+      "soledad en feriados": "soledad-en-feriados",
+      "rutina rota": "rutina-rota",
+      "emociones reales": "emociones-reales"
+    },
+    "date": "2026-04-03",
+    "slug": "por-que-los-feriados-pueden-ser-tristes-o-alegres-segun-cada-persona",
+    "url": "/posts/por-que-los-feriados-pueden-ser-tristes-o-alegres-segun-cada-persona.html",
+    "related": [
+      {
+        "title": "Cómo se siente la gente que no entrena nunca",
+        "description": "No entrenar ni de día, ni de tarde, ni de noche también deja marcas. Un texto sobre el cuerpo quieto, la energía rara y lo que pasa cuando u…",
+        "url": "/posts/como-se-siente-la-gente-que-no-entrena-nunca.html",
+        "slug": "como-se-siente-la-gente-que-no-entrena-nunca"
+      },
+      {
+        "title": "Por qué no puedo dormir por las noches",
+        "description": "Un texto honesto sobre esas noches en las que el cuerpo quiere dormir pero la cabeza no se apaga.",
+        "url": "/posts/por-que-no-puedo-dormir-por-las-noches.html",
+        "slug": "por-que-no-puedo-dormir-por-las-noches"
+      },
+      {
+        "title": "Me activo por las noches para hacer todo",
+        "description": "Cuando cae la noche recién aparece la energía. Un texto para quienes sienten que viven mejor cuando el mundo se apaga un poco.",
+        "url": "/posts/me-activo-por-las-noches-para-hacer-todo.html",
+        "slug": "me-activo-por-las-noches-para-hacer-todo"
+      },
+      {
+        "title": "Cómo se siente el cuerpo después de entrenar por la tarde",
+        "description": "Entrenar por la tarde deja una mezcla rara de cansancio, alivio y cabeza más limpia. Un texto real sobre esa sensación de haber movido el dí…",
+        "url": "/posts/como-se-siente-el-cuerpo-despues-de-entrenar-por-la-tarde.html",
+        "slug": "como-se-siente-el-cuerpo-despues-de-entrenar-por-la-tarde"
       }
     ]
   },
@@ -1192,16 +1677,16 @@
         "slug": "manana-feliz-sin-nada-con-mil-problemas"
       },
       {
+        "title": "Cuando salís a caminar por la tarde y no hay nadie, pero no te sentís solo",
+        "description": "Hay tardes en las que salís a caminar, no hay nadie alrededor y sin embargo no te sentís mal. Una reflexión sobre esa soledad rara que tambi…",
+        "url": "/posts/cuando-salis-a-caminar-por-la-tarde-y-no-hay-nadie-pero-no-te-sentis-solo.html",
+        "slug": "cuando-salis-a-caminar-por-la-tarde-y-no-hay-nadie-pero-no-te-sentis-solo"
+      },
+      {
         "title": "La tristeza cuando no hay plata, y aun así hay gente contenta",
         "description": "No tener plata duele, pero también existe gente que, aun en esa falta, encuentra motivos para estar bien. Un texto real sobre esa contradicc…",
         "url": "/posts/la-tristeza-cuando-no-hay-plata-y-aun-asi-hay-gente-contenta.html",
         "slug": "la-tristeza-cuando-no-hay-plata-y-aun-asi-hay-gente-contenta"
-      },
-      {
-        "title": "Cuando los amigos se bajan del barco por las noches",
-        "description": "Hay noches en las que duele más la ausencia de los que estaban cerca que cualquier problema en sí. Y aun así, la mañana llega, incluso cuand…",
-        "url": "/posts/cuando-los-amigos-se-bajan-del-barco-por-las-noches.html",
-        "slug": "cuando-los-amigos-se-bajan-del-barco-por-las-noches"
       }
     ]
   },
