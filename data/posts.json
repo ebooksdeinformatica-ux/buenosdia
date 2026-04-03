@@ -96,16 +96,16 @@
         "slug": "dias-que-empiezan-despues-de-las-5-de-la-tarde"
       },
       {
+        "title": "Nunca dejes tirado un proyecto que alguna vez funcionó",
+        "description": "Hay proyectos que hoy están apagados, pero un día tuvieron vida real. Un texto sobre volver a mirarlos antes de darlos por muertos.",
+        "url": "/posts/nunca-dejes-tirado-un-proyecto-que-alguna-vez-funciono.html",
+        "slug": "nunca-dejes-tirado-un-proyecto-que-alguna-vez-funciono"
+      },
+      {
         "title": "Una mañana feliz pero sin nada y con mil problemas",
         "description": "Hay mañanas en las que no tenés nada resuelto, pero igual seguís. Una reflexión honesta sobre empezar el día con problemas, cansancio y una…",
         "url": "/posts/manana-feliz-sin-nada-con-mil-problemas.html",
         "slug": "manana-feliz-sin-nada-con-mil-problemas"
-      },
-      {
-        "title": "De día mi cerebro está en hold",
-        "description": "Hay días en los que la cabeza no arranca hasta tarde. Un texto real sobre bloqueo mental, lentitud y esa sensación de vivir en pausa mientra…",
-        "url": "/posts/de-dia-mi-cerebro-esta-en-hold.html",
-        "slug": "de-dia-mi-cerebro-esta-en-hold"
       }
     ]
   },
@@ -322,6 +322,57 @@
         "description": "Hay días en los que la cabeza no arranca hasta tarde. Un texto real sobre bloqueo mental, lentitud y esa sensación de vivir en pausa mientra…",
         "url": "/posts/de-dia-mi-cerebro-esta-en-hold.html",
         "slug": "de-dia-mi-cerebro-esta-en-hold"
+      }
+    ]
+  },
+  {
+    "title": "Nunca dejes tirado un proyecto que alguna vez funcionó",
+    "description": "Hay proyectos que hoy están apagados, pero un día tuvieron vida real. Un texto sobre volver a mirarlos antes de darlos por muertos.",
+    "tags": [
+      "proyectos",
+      "levantar proyectos",
+      "proyectos caidos",
+      "volver a empezar",
+      "motivacion real",
+      "reconstruccion personal",
+      "seguir adelante"
+    ],
+    "tagSlugs": {
+      "proyectos": "proyectos",
+      "levantar proyectos": "levantar-proyectos",
+      "proyectos caidos": "proyectos-caidos",
+      "volver a empezar": "volver-a-empezar",
+      "motivacion real": "motivacion-real",
+      "reconstruccion personal": "reconstruccion-personal",
+      "seguir adelante": "seguir-adelante"
+    },
+    "date": "2026-04-03",
+    "slug": "nunca-dejes-tirado-un-proyecto-que-alguna-vez-funciono",
+    "url": "/posts/nunca-dejes-tirado-un-proyecto-que-alguna-vez-funciono.html",
+    "related": [
+      {
+        "title": "Levantar proyectos que algún día funcionaron y hoy no los tienes",
+        "description": "Hay mañanas en las que no duele empezar de cero, sino mirar todo lo que una vez funcionó y ya no está. Aun así, volver a levantar algo roto…",
+        "url": "/posts/levantar-proyectos-que-algun-dia-funcionaron-y-hoy-no-los-tienes.html",
+        "slug": "levantar-proyectos-que-algun-dia-funcionaron-y-hoy-no-los-tienes"
+      },
+      {
+        "title": "De sentirme hundido a volver a tener motivación",
+        "description": "Un texto sobre el paso lento y real entre sentirse muy abajo y empezar a recuperar motivación sin chamuyo.",
+        "url": "/posts/de-sentirme-hundido-a-volver-a-tener-motivacion.html",
+        "slug": "de-sentirme-hundido-a-volver-a-tener-motivacion"
+      },
+      {
+        "title": "Cuando los amigos se bajan del barco por las noches",
+        "description": "Hay noches en las que duele más la ausencia de los que estaban cerca que cualquier problema en sí. Y aun así, la mañana llega, incluso cuand…",
+        "url": "/posts/cuando-los-amigos-se-bajan-del-barco-por-las-noches.html",
+        "slug": "cuando-los-amigos-se-bajan-del-barco-por-las-noches"
+      },
+      {
+        "title": "Me levanté con las ganas que no tenía hace cinco días",
+        "description": "Un texto sobre esa mañana rara y hermosa en la que volvés a sentir ganas después de varios días apagado.",
+        "url": "/posts/me-levante-con-las-ganas-que-no-tenia-hace-cinco-dias.html",
+        "slug": "me-levante-con-las-ganas-que-no-tenia-hace-cinco-dias"
       }
     ]
   },
@@ -638,6 +689,12 @@
     "url": "/posts/levantar-proyectos-que-algun-dia-funcionaron-y-hoy-no-los-tienes.html",
     "related": [
       {
+        "title": "Nunca dejes tirado un proyecto que alguna vez funcionó",
+        "description": "Hay proyectos que hoy están apagados, pero un día tuvieron vida real. Un texto sobre volver a mirarlos antes de darlos por muertos.",
+        "url": "/posts/nunca-dejes-tirado-un-proyecto-que-alguna-vez-funciono.html",
+        "slug": "nunca-dejes-tirado-un-proyecto-que-alguna-vez-funciono"
+      },
+      {
         "title": "De sentirme hundido a volver a tener motivación",
         "description": "Un texto sobre el paso lento y real entre sentirse muy abajo y empezar a recuperar motivación sin chamuyo.",
         "url": "/posts/de-sentirme-hundido-a-volver-a-tener-motivacion.html",
@@ -654,12 +711,6 @@
         "description": "Hay mañanas en las que no tenés nada resuelto, pero igual seguís. Una reflexión honesta sobre empezar el día con problemas, cansancio y una…",
         "url": "/posts/manana-feliz-sin-nada-con-mil-problemas.html",
         "slug": "manana-feliz-sin-nada-con-mil-problemas"
-      },
-      {
-        "title": "Cuando dormís hasta tarde pero te levantás y querés seguir durmiendo",
-        "description": "Hay días en los que dormís muchas horas, pero igual te levantás con el cuerpo pesado y la cabeza lenta. Una reflexión honesta sobre ese cans…",
-        "url": "/posts/cuando-dormis-hasta-tarde-pero-te-levantas-y-queres-seguir-durmiendo.html",
-        "slug": "cuando-dormis-hasta-tarde-pero-te-levantas-y-queres-seguir-durmiendo"
       }
     ]
   },
