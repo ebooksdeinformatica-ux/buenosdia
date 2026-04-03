@@ -171,6 +171,57 @@
     ]
   },
   {
+    "title": "Me levanté con las ganas que no tenía hace cinco días",
+    "description": "Un texto sobre esa mañana rara y hermosa en la que volvés a sentir ganas después de varios días apagado.",
+    "tags": [
+      "me levante con ganas",
+      "volver a tener energia",
+      "motivacion real",
+      "empezar el dia",
+      "mananas dificiles",
+      "esperanza",
+      "seguir adelante"
+    ],
+    "tagSlugs": {
+      "me levante con ganas": "me-levante-con-ganas",
+      "volver a tener energia": "volver-a-tener-energia",
+      "motivacion real": "motivacion-real",
+      "empezar el dia": "empezar-el-dia",
+      "mananas dificiles": "mananas-dificiles",
+      "esperanza": "esperanza",
+      "seguir adelante": "seguir-adelante"
+    },
+    "date": "2026-04-03",
+    "slug": "me-levante-con-las-ganas-que-no-tenia-hace-cinco-dias",
+    "url": "/posts/me-levante-con-las-ganas-que-no-tenia-hace-cinco-dias.html",
+    "related": [
+      {
+        "title": "Una mañana feliz pero sin nada y con mil problemas",
+        "description": "Hay mañanas en las que no tenés nada resuelto, pero igual seguís. Una reflexión honesta sobre empezar el día con problemas, cansancio y una…",
+        "url": "/posts/manana-feliz-sin-nada-con-mil-problemas.html",
+        "slug": "manana-feliz-sin-nada-con-mil-problemas"
+      },
+      {
+        "title": "Levantar proyectos que algún día funcionaron y hoy no los tienes",
+        "description": "Hay mañanas en las que no duele empezar de cero, sino mirar todo lo que una vez funcionó y ya no está. Aun así, volver a levantar algo roto…",
+        "url": "/posts/levantar-proyectos-que-algun-dia-funcionaron-y-hoy-no-los-tienes.html",
+        "slug": "levantar-proyectos-que-algun-dia-funcionaron-y-hoy-no-los-tienes"
+      },
+      {
+        "title": "Días que empiezan después de las 5 de la tarde",
+        "description": "Hay días en los que recién arrancás cuando el sol ya se fue. Un texto honesto sobre sentirse fuera de horario, vivir a contramano y aun así…",
+        "url": "/posts/dias-que-empiezan-despues-de-las-5-de-la-tarde.html",
+        "slug": "dias-que-empiezan-despues-de-las-5-de-la-tarde"
+      },
+      {
+        "title": "Me activo por las noches para hacer todo",
+        "description": "Cuando cae la noche recién aparece la energía. Un texto para quienes sienten que viven mejor cuando el mundo se apaga un poco.",
+        "url": "/posts/me-activo-por-las-noches-para-hacer-todo.html",
+        "slug": "me-activo-por-las-noches-para-hacer-todo"
+      }
+    ]
+  },
+  {
     "title": "Me levanto triste por una mujer que no sabe si la quiero o me quiere | BuenosDia",
     "description": "Hay mañanas en las que uno no se despierta cansado: se despierta confundido. Un texto real sobre levantarse triste por alguien que no termina de estar, ni de irse.",
     "tags": [
@@ -552,10 +603,10 @@
         "slug": "cuando-dormis-hasta-tarde-pero-te-levantas-y-queres-seguir-durmiendo"
       },
       {
-        "title": "Me activo por las noches para hacer todo",
-        "description": "Cuando cae la noche recién aparece la energía. Un texto para quienes sienten que viven mejor cuando el mundo se apaga un poco.",
-        "url": "/posts/me-activo-por-las-noches-para-hacer-todo.html",
-        "slug": "me-activo-por-las-noches-para-hacer-todo"
+        "title": "Me levanté con las ganas que no tenía hace cinco días",
+        "description": "Un texto sobre esa mañana rara y hermosa en la que volvés a sentir ganas después de varios días apagado.",
+        "url": "/posts/me-levante-con-las-ganas-que-no-tenia-hace-cinco-dias.html",
+        "slug": "me-levante-con-las-ganas-que-no-tenia-hace-cinco-dias"
       }
     ]
   },
@@ -593,6 +644,12 @@
         "slug": "levantar-proyectos-que-algun-dia-funcionaron-y-hoy-no-los-tienes"
       },
       {
+        "title": "Me levanté con las ganas que no tenía hace cinco días",
+        "description": "Un texto sobre esa mañana rara y hermosa en la que volvés a sentir ganas después de varios días apagado.",
+        "url": "/posts/me-levante-con-las-ganas-que-no-tenia-hace-cinco-dias.html",
+        "slug": "me-levante-con-las-ganas-que-no-tenia-hace-cinco-dias"
+      },
+      {
         "title": "Días en los que solo tengo que esperar porque no me queda otra",
         "description": "Hay días en los que no queda otra que esperar. Esta reflexión acompaña esos momentos de pausa forzada, incertidumbre y resistencia silencios…",
         "url": "/posts/dias-en-los-que-solo-tengo-que-esperar-porque-no-me-queda-otra.html",
@@ -603,12 +660,6 @@
         "description": "Hay días en los que recién arrancás cuando el sol ya se fue. Un texto honesto sobre sentirse fuera de horario, vivir a contramano y aun así…",
         "url": "/posts/dias-que-empiezan-despues-de-las-5-de-la-tarde.html",
         "slug": "dias-que-empiezan-despues-de-las-5-de-la-tarde"
-      },
-      {
-        "title": "Me activo por las noches para hacer todo",
-        "description": "Cuando cae la noche recién aparece la energía. Un texto para quienes sienten que viven mejor cuando el mundo se apaga un poco.",
-        "url": "/posts/me-activo-por-las-noches-para-hacer-todo.html",
-        "slug": "me-activo-por-las-noches-para-hacer-todo"
       }
     ]
   }
