@@ -8,6 +8,8 @@ const DATA_DIR = path.join(ROOT, 'data');
 const TAGS_DIR = path.join(ROOT, 'tags');
 const SITEMAP_FILE = path.join(ROOT, 'sitemap.xml');
 const POSTS_JSON = path.join(DATA_DIR, 'posts.json');
+const CONTACT_URL = 'https://instagram.com/https_404_3rr0r';
+const CONTACT_HANDLE = '@https_404_3rr0r';
 
 if (!fs.existsSync(POSTS_DIR)) {
   console.error('No existe la carpeta /posts');
@@ -107,6 +109,33 @@ function patchPostHtml(html) {
   out = out.replace(/(<section[^>]*aria-labelledby="tags-post"[^>]*>[\s\S]*?<\/section>)/gis, section => rewriteTagLinks(section));
   out = out.replace(/(<section[^>]*class="[^"]*tags-box[^"]*"[^>]*>[\s\S]*?<\/section>)/gis, section => rewriteTagLinks(section));
 
+  out = out.replace(/<a([^>]*)href="[^"]*"([^>]*)>\s*Contacto\s*<\/a>/gi, `<a$1href="${CONTACT_URL}" target="_blank" rel="noopener noreferrer"$2>Contacto</a>`);
+  out = out.replace(/<a([^>]*)href="#publicaciones"([^>]*)>Publicaciones<\/a>/gi, '<a$1href="https://www.buenosdia.com/#publicaciones"$2>Publicaciones</a>');
+
+  out = out.replace(/<nav([^>]*)>([\s\S]*?)<\/nav>/i, (full, attrs, inner) => {
+    if (/Contacto</i.test(inner)) return `<nav${attrs}>${inner}</nav>`;
+    return `<nav${attrs}>${inner}\n        <a href="${CONTACT_URL}" target="_blank" rel="noopener noreferrer">Contacto</a>\n      </nav>`;
+  });
+
+  out = out.replace(/<div class="footer-links">([\s\S]*?)<\/div>/i, (full, inner) => {
+    if (/Contacto</i.test(inner)) return `<div class="footer-links">${inner}</div>`;
+    return `<div class="footer-links">${inner}\n        <a href="${CONTACT_URL}" target="_blank" rel="noopener noreferrer">Contacto</a>\n      </div>`;
+  });
+
+  if (!/contact-strip/.test(out)) {
+    out = out.replace(/<\/footer>/i, `  <div class="contact-strip">Contacto: <a href="${CONTACT_URL}" target="_blank" rel="noopener noreferrer">${CONTACT_HANDLE}</a></div>\n</footer>`);
+  } else {
+    out = out.replace(/<div class="contact-strip">[\s\S]*?<\/div>/i, `<div class="contact-strip">Contacto: <a href="${CONTACT_URL}" target="_blank" rel="noopener noreferrer">${CONTACT_HANDLE}</a></div>`);
+  }
+
+  if (!/\.contact-strip\s*\{/i.test(out)) {
+    out = out.replace(/<\/style>/i, `
+    .contact-strip{margin:18px auto 0;max-width:var(--max,860px);padding:16px 18px;border:1px solid var(--line,#e9e9e9);border-radius:16px;background:var(--soft,#f7f7f7);color:var(--muted,#666)}
+    .contact-strip a{color:var(--text,#111);font-weight:700;text-decoration:none}
+    .contact-strip a:hover{text-decoration:underline}
+  </style>`);
+  }
+
   return out;
 }
 
@@ -185,6 +214,7 @@ function renderTagPages(tagMap) {
         <a href="/">Inicio</a>
         <a href="/#publicaciones">Publicaciones</a>
         <a href="/tags/" aria-current="page">Etiquetas</a>
+        <a href="${CONTACT_URL}" target="_blank" rel="noopener noreferrer">Contacto</a>
       </nav>
     </header>
     <main>
@@ -199,6 +229,9 @@ function renderTagPages(tagMap) {
         </div>
       </section>
     </main>
+    <footer class="site-footer">
+      <p>Contacto: <a href="${CONTACT_URL}" target="_blank" rel="noopener noreferrer">${CONTACT_HANDLE}</a></p>
+    </footer>
   </div>
 </body>
 </html>`;
@@ -225,6 +258,7 @@ function renderTagPages(tagMap) {
         <a href="/">Inicio</a>
         <a href="/#publicaciones">Publicaciones</a>
         <a href="/tags/">Etiquetas</a>
+        <a href="${CONTACT_URL}" target="_blank" rel="noopener noreferrer">Contacto</a>
       </nav>
     </header>
     <main>
@@ -242,6 +276,9 @@ function renderTagPages(tagMap) {
         ${tag.posts.map(post => `<article class="post-card"><h2>${escapeHtml(post.title)}</h2><p>${escapeHtml(post.description)}</p><a class="read-link" href="${post.url}">Leer publicación →</a></article>`).join('')}
       </section>
     </main>
+    <footer class="site-footer">
+      <p>Contacto: <a href="${CONTACT_URL}" target="_blank" rel="noopener noreferrer">${CONTACT_HANDLE}</a></p>
+    </footer>
   </div>
 </body>
 </html>`;
@@ -256,15 +293,26 @@ function patchIndexHtml() {
   let html = fs.readFileSync(indexPath, 'utf8');
 
   html = html.replace('<a href="#etiquetas">Etiquetas</a>', '<a href="/tags/">Etiquetas</a>');
+  html = html.replace('<a href="#publicaciones">Publicaciones</a>', '<a href="https://www.buenosdia.com/#publicaciones">Publicaciones</a>');
+  html = html.replace('<a href="/tags/">Etiquetas</a>\n      </nav>', `<a href="/tags/">Etiquetas</a>\n        <a href="${CONTACT_URL}" target="_blank" rel="noopener noreferrer">Contacto</a>\n      </nav>`);
+  html = html.replace('</div>\n        </section>\n      </main>', '</div>\n          <div class="load-more-wrap">\n            <button id="loadMoreBtn" class="load-more" type="button" hidden>Ver más publicaciones</button>\n          </div>\n          <div id="postsSentinel" aria-hidden="true"></div>\n        </section>\n      </main>');
+  html = html.replace(/<footer>[\s\S]*?<\/footer>/i, `<div class="contact-strip">Contacto: <a href="${CONTACT_URL}" target="_blank" rel="noopener noreferrer">${CONTACT_HANDLE}</a></div>\n\n    <footer>\n      © 2026 buenosdia.com — mañanas reales, palabras que acompañan. ·\n      <a href="${CONTACT_URL}" target="_blank" rel="noopener noreferrer">Contacto</a>\n    </footer>`);
+  html = html.replace('.empty{\n      padding:18px;\n      border:1px dashed var(--line);\n      border-radius:16px;\n      color:var(--muted);\n      background:#fff;\n    }\n    footer{', '.empty{\n      padding:18px;\n      border:1px dashed var(--line);\n      border-radius:16px;\n      color:var(--muted);\n      background:#fff;\n    }\n    .load-more-wrap{display:flex;justify-content:center;margin-top:18px}\n    .load-more{border:1px solid var(--line);background:var(--card);color:var(--text);border-radius:999px;padding:12px 18px;font-size:1rem;cursor:pointer;box-shadow:var(--shadow)}\n    .load-more[hidden]{display:none}\n    .contact-strip{margin-top:18px;padding:18px 20px;background:var(--card);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);color:var(--muted)}\n    .contact-strip a{color:var(--text);font-weight:700;text-decoration:none}\n    .contact-strip a:hover{text-decoration:underline}\n    footer{');
 
   const scriptRegex = /<script>[\s\S]*?loadPosts\(\);\s*<\/script>/i;
   const tagSlugMap = JSON.stringify(Object.fromEntries(Object.values(tagMap).map(tag => [normalizeTag(tag.name), tag.slug])));
   const script = `<script>
     const TAG_SLUG_MAP = ${tagSlugMap};
+    const INITIAL_POSTS = 20;
+    const POSTS_BATCH = 5;
+    let allPosts = [];
+    let visibleCount = 0;
+    let observerStarted = false;
 
     async function loadPosts() {
       const postsList = document.getElementById('postsList');
       const tagCloud = document.getElementById('tagCloud');
+      const loadMoreBtn = document.getElementById('loadMoreBtn');
 
       try {
         const res = await fetch('/data/posts.json?v=' + Date.now());
@@ -273,44 +321,90 @@ function patchIndexHtml() {
         if (!Array.isArray(posts) || posts.length === 0) {
           postsList.innerHTML = '<div class="empty">Todavía no hay publicaciones visibles.</div>';
           tagCloud.innerHTML = '<div class="empty">Todavía no hay etiquetas.</div>';
+          if (loadMoreBtn) loadMoreBtn.hidden = true;
           return;
         }
 
-        posts.sort((a, b) => (b.date || '').localeCompare(a.date || ''));
+        allPosts = posts.slice().sort((a, b) => (b.date || '').localeCompare(a.date || ''));
+        renderPosts(true);
+        renderTagCloud(allPosts, tagCloud);
 
-        postsList.innerHTML = posts.map(post =>
-          '<article class="post-card">' +
-            '<h3>' + escapeHtml(post.title || 'Sin título') + '</h3>' +
-            '<p>' + escapeHtml(post.description || 'Sin descripción.') + '</p>' +
-            '<div class="tags">' +
-              ((post.tags || []).slice(0, 6).map(tag => '<a class="tag" href="' + tagHref(tag, post.tagSlugs) + '">' + escapeHtml(tag) + '</a>').join('')) +
-            '</div>' +
-            '<a class="read-link" href="' + post.url + '">Leer publicación →</a>' +
-          '</article>'
-        ).join('');
+        if (loadMoreBtn) {
+          loadMoreBtn.addEventListener('click', () => renderPosts(false));
+        }
 
-        const counts = {};
-        posts.forEach(post => {
-          (post.tags || []).forEach(tag => {
-            const key = String(tag || '').trim();
-            if (!key) return;
-            counts[key] = (counts[key] || 0) + 1;
-          });
-        });
-
-        const sortedTags = Object.entries(counts)
-          .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0], 'es', { sensitivity: 'base' }))
-          .slice(0, 30);
-
-        tagCloud.innerHTML = sortedTags.length
-          ? sortedTags.map(([tag, count]) => '<a class="tag" href="' + tagHref(tag) + '" title="Ver publicaciones con la etiqueta ' + escapeHtml(tag) + '">' + escapeHtml(tag) + ' (' + count + ')</a>').join('')
-          : '<div class="empty">Todavía no hay etiquetas.</div>';
-
+        setupInfiniteLoad();
         sanitizeTagLinks(document);
       } catch (err) {
         postsList.innerHTML = '<div class="empty">No se pudieron cargar las publicaciones.</div>';
         tagCloud.innerHTML = '<div class="empty">No se pudieron cargar las etiquetas.</div>';
+        if (loadMoreBtn) loadMoreBtn.hidden = true;
       }
+    }
+
+    function renderPosts(reset = false) {
+      const postsList = document.getElementById('postsList');
+      const loadMoreBtn = document.getElementById('loadMoreBtn');
+      if (!postsList) return;
+
+      if (reset) {
+        visibleCount = Math.min(INITIAL_POSTS, allPosts.length);
+      } else {
+        visibleCount = Math.min(visibleCount + POSTS_BATCH, allPosts.length);
+      }
+
+      const slice = allPosts.slice(0, visibleCount);
+      postsList.innerHTML = slice.map(post =>
+        '<article class="post-card">' +
+          '<h3>' + escapeHtml(post.title || 'Sin título') + '</h3>' +
+          '<p>' + escapeHtml(post.description || 'Sin descripción.') + '</p>' +
+          '<div class="tags">' +
+            ((post.tags || []).slice(0, 6).map(tag => '<a class="tag" href="' + tagHref(tag, post.tagSlugs) + '">' + escapeHtml(tag) + '</a>').join('')) +
+          '</div>' +
+          '<a class="read-link" href="' + post.url + '">Leer publicación →</a>' +
+        '</article>'
+      ).join('');
+
+      if (loadMoreBtn) loadMoreBtn.hidden = visibleCount >= allPosts.length;
+      sanitizeTagLinks(postsList);
+    }
+
+    function setupInfiniteLoad() {
+      if (observerStarted) return;
+      const sentinel = document.getElementById('postsSentinel');
+      if (!sentinel || !('IntersectionObserver' in window)) return;
+      observerStarted = true;
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting && visibleCount < allPosts.length) {
+            renderPosts(false);
+          }
+        });
+      }, {
+        rootMargin: '600px 0px 600px 0px'
+      });
+
+      observer.observe(sentinel);
+    }
+
+    function renderTagCloud(posts, tagCloud) {
+      const counts = {};
+      posts.forEach(post => {
+        (post.tags || []).forEach(tag => {
+          const key = String(tag || '').trim();
+          if (!key) return;
+          counts[key] = (counts[key] || 0) + 1;
+        });
+      });
+
+      const sortedTags = Object.entries(counts)
+        .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0], 'es', { sensitivity: 'base' }))
+        .slice(0, 30);
+
+      tagCloud.innerHTML = sortedTags.length
+        ? sortedTags.map(([tag, count]) => '<a class="tag" href="' + tagHref(tag) + '" title="Ver publicaciones con la etiqueta ' + escapeHtml(tag) + '">' + escapeHtml(tag) + ' (' + count + ')</a>').join('')
+        : '<div class="empty">Todavía no hay etiquetas.</div>';
     }
 
     function escapeHtml(str) {
@@ -325,16 +419,16 @@ function patchIndexHtml() {
     function normalizeTag(str) {
       return String(str || '')
         .normalize('NFD')
-        .replace(/[\\u0300-\\u036f]/g, '')
+        .replace(/[\u0300-\u036f]/g, '')
         .toLowerCase()
-        .replace(/[^a-z0-9\\s-]/g, ' ')
+        .replace(/[^a-z0-9\s-]/g, ' ')
         .trim()
-        .replace(/\\s+/g, ' ');
+        .replace(/\s+/g, ' ');
     }
 
     function slugify(str) {
       return normalizeTag(str)
-        .replace(/\\s+/g, '-')
+        .replace(/\s+/g, '-')
         .replace(/-+/g, '-')
         .replace(/^-|-$/g, '');
     }
@@ -350,7 +444,7 @@ function patchIndexHtml() {
 
     function sanitizeTagLinks(root) {
       root.querySelectorAll('a[href*="/tags/"]').forEach(a => {
-        const text = (a.textContent || '').replace(/\\(\\d+\\)\\s*$/, '').trim();
+        const text = (a.textContent || '').replace(/\(\d+\)\s*$/, '').trim();
         if (!text || a.getAttribute('href') === '/tags/') return;
         a.setAttribute('href', tagHref(text));
       });
@@ -395,6 +489,7 @@ function write404Page(tagMap) {
         <a href="/">Inicio</a>
         <a href="/#publicaciones">Publicaciones</a>
         <a href="/tags/">Etiquetas</a>
+        <a href="${CONTACT_URL}" target="_blank" rel="noopener noreferrer">Contacto</a>
       </nav>
     </header>
     <main>
@@ -407,6 +502,9 @@ function write404Page(tagMap) {
         <p><a class="read-link" href="/">Volver al inicio</a></p>
       </section>
     </main>
+    <footer class="site-footer">
+      <p>Contacto: <a href="${CONTACT_URL}" target="_blank" rel="noopener noreferrer">${CONTACT_HANDLE}</a></p>
+    </footer>
   </div>
   <script>
     const knownTagVariants = ${JSON.stringify(knownTagVariants)};
@@ -478,7 +576,7 @@ function computeRelatedPosts(currentPost, allPosts, limit = 4) {
 }
 
 function sharedTagPageCss() {
-  return `:root{--bg:#f6f3ee;--card:#fffdfa;--text:#171717;--muted:#667085;--line:#e7e1d8;--pill:#f5f5f4;--shadow:0 10px 25px rgba(0,0,0,.05);--radius:22px;--max:1100px}*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text)}.wrap{max-width:var(--max);margin:0 auto;padding:28px 20px 70px}header{display:flex;justify-content:space-between;align-items:flex-start;gap:18px;margin-bottom:22px}.brand{text-decoration:none;color:#111827;font-weight:700;font-size:1.2rem}nav a{text-decoration:none;color:var(--muted);margin-left:20px;font-size:1rem}.hero,.card,.post-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}.hero{padding:34px;margin-bottom:22px}.hero h1{margin:0 0 12px;font-size:clamp(2rem,5vw,3.5rem);line-height:1.02;letter-spacing:-.05em}.hero p{margin:0;color:#475467;line-height:1.65;font-size:1.08rem}.eyebrow{color:var(--muted);font-size:1rem;margin-bottom:14px}.card{padding:24px}.tag-cloud{display:flex;flex-wrap:wrap;gap:12px}.tag{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);background:var(--pill);color:#475467;border-radius:999px;padding:10px 14px;font-size:.98rem;text-decoration:none}.tag span{display:inline-block;background:#fff;border:1px solid var(--line);border-radius:999px;padding:2px 8px;font-size:.86rem}.tag.active{background:#111827;color:#fff}.tag.active span{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.22);color:#fff}.posts-grid{display:grid;gap:18px;margin-top:22px}.post-card{padding:26px}.post-card h2{margin:0 0 10px;font-size:1.45rem;line-height:1.2;letter-spacing:-.03em}.post-card p{margin:0 0 18px;color:#475467;font-size:1.02rem;line-height:1.65}.read-link{text-decoration:none;color:#111827;font-weight:700}.read-link:hover{text-decoration:underline}@media (max-width:800px){header{flex-direction:column}nav a{margin:0 18px 0 0}}`;
+  return `:root{--bg:#f6f3ee;--card:#fffdfa;--text:#171717;--muted:#667085;--line:#e7e1d8;--pill:#f5f5f4;--shadow:0 10px 25px rgba(0,0,0,.05);--radius:22px;--max:1100px}*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text)}.wrap{max-width:var(--max);margin:0 auto;padding:28px 20px 70px}header{display:flex;justify-content:space-between;align-items:flex-start;gap:18px;margin-bottom:22px}.brand{text-decoration:none;color:#111827;font-weight:700;font-size:1.2rem}nav a{text-decoration:none;color:var(--muted);margin-left:20px;font-size:1rem}.hero,.card,.post-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}.hero{padding:34px;margin-bottom:22px}.hero h1{margin:0 0 12px;font-size:clamp(2rem,5vw,3.5rem);line-height:1.02;letter-spacing:-.05em}.hero p{margin:0;color:#475467;line-height:1.65;font-size:1.08rem}.eyebrow{color:var(--muted);font-size:1rem;margin-bottom:14px}.card{padding:24px}.tag-cloud{display:flex;flex-wrap:wrap;gap:12px}.tag{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);background:var(--pill);color:#475467;border-radius:999px;padding:10px 14px;font-size:.98rem;text-decoration:none}.tag span{display:inline-block;background:#fff;border:1px solid var(--line);border-radius:999px;padding:2px 8px;font-size:.86rem}.tag.active{background:#111827;color:#fff}.tag.active span{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.22);color:#fff}.posts-grid{display:grid;gap:18px;margin-top:22px}.post-card{padding:26px}.post-card h2{margin:0 0 10px;font-size:1.45rem;line-height:1.2;letter-spacing:-.03em}.post-card p{margin:0 0 18px;color:#475467;font-size:1.02rem;line-height:1.65}.read-link{text-decoration:none;color:#111827;font-weight:700}.read-link:hover{text-decoration:underline}.site-footer{margin-top:22px;color:var(--muted);font-size:.95rem}.site-footer a{color:#111827;font-weight:700;text-decoration:none}.site-footer a:hover{text-decoration:underline}@media (max-width:800px){header{flex-direction:column}nav a{margin:0 18px 0 0}}`;
 }
 
 function tokenize(str = '') {
