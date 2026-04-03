@@ -1,0 +1,432 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Buenos Días | Frases, reflexiones y mañanas reales</title>
+  <meta name="description" content="Textos breves, humanos y sinceros para acompañar mañanas reales. Publicaciones automáticas, etiquetas y reflexiones que respiran verdad.">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <link rel="canonical" href="https://www.buenosdia.com/">
+  <style>
+    :root{
+      --bg:#f6f3ee;
+      --card:#fffdfa;
+      --text:#171717;
+      --muted:#667085;
+      --line:#e7e1d8;
+      --accent:#111827;
+      --pill:#f5f5f4;
+      --shadow:0 10px 25px rgba(0,0,0,.05);
+      --radius:22px;
+      --max:1240px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Arial, Helvetica, sans-serif;
+      background:var(--bg);
+      color:var(--text);
+    }
+    .wrap{max-width:var(--max); margin:0 auto; padding:28px 20px 70px;}
+    header{
+      display:flex;
+      justify-content:space-between;
+      align-items:flex-start;
+      gap:18px;
+      margin-bottom:22px;
+    }
+    .brand h1{
+      margin:0;
+      font-size:3rem;
+      line-height:1;
+      letter-spacing:-.04em;
+    }
+    .brand p{
+      margin:10px 0 0;
+      color:var(--muted);
+      font-size:1.05rem;
+    }
+    nav a{
+      text-decoration:none;
+      color:var(--muted);
+      margin-left:20px;
+      font-size:1rem;
+    }
+    nav a:hover{color:#000}
+    .grid{
+      display:grid;
+      grid-template-columns:minmax(0,1.8fr) minmax(280px,.8fr);
+      gap:26px;
+      align-items:start;
+    }
+    .hero, .box, .post-card{
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+    }
+    .hero{
+      padding:34px;
+      margin-bottom:26px;
+    }
+    .hero .eyebrow{
+      color:var(--muted);
+      font-size:1rem;
+      margin-bottom:14px;
+    }
+    .hero h2{
+      margin:0 0 14px;
+      font-size:4rem;
+      line-height:1.02;
+      letter-spacing:-.05em;
+    }
+    .hero p{
+      margin:0;
+      font-size:1.15rem;
+      line-height:1.65;
+      color:#475467;
+      max-width:900px;
+    }
+    .section-title{
+      margin:0 0 10px;
+      font-size:1.2rem;
+      letter-spacing:-.02em;
+    }
+    .section-sub{
+      margin:0 0 20px;
+      color:var(--muted);
+      font-size:1rem;
+    }
+    #postsList{
+      display:grid;
+      gap:18px;
+    }
+    .post-card{
+      padding:26px;
+    }
+    .post-card h3{
+      margin:0 0 10px;
+      font-size:1.55rem;
+      line-height:1.2;
+      letter-spacing:-.03em;
+    }
+    .post-card p{
+      margin:0 0 18px;
+      color:#475467;
+      font-size:1.05rem;
+      line-height:1.65;
+    }
+    .tags{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      margin-bottom:18px;
+    }
+    .tag{
+      display:inline-flex;
+      align-items:center;
+      border:1px solid var(--line);
+      background:var(--pill);
+      color:#475467;
+      border-radius:999px;
+      padding:10px 14px;
+      font-size:.98rem;
+      text-decoration:none;
+    }
+    .read-link{
+      text-decoration:none;
+      color:#111827;
+      font-weight:700;
+      font-size:1rem;
+    }
+    .read-link:hover{text-decoration:underline}
+    .sidebar{
+      display:grid;
+      gap:20px;
+    }
+    .box{
+      padding:24px;
+    }
+    .box h3{
+      margin:0 0 16px;
+      font-size:1.1rem;
+      letter-spacing:-.02em;
+    }
+    .tag-cloud{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+    }
+    .empty{
+      padding:18px;
+      border:1px dashed var(--line);
+      border-radius:16px;
+      color:var(--muted);
+      background:#fff;
+    }
+    .load-more-wrap{
+      display:flex;
+      justify-content:center;
+      margin-top:18px;
+    }
+    .load-more{
+      border:1px solid var(--line);
+      background:var(--card);
+      color:var(--text);
+      border-radius:999px;
+      padding:12px 18px;
+      font-size:1rem;
+      cursor:pointer;
+      box-shadow:var(--shadow);
+    }
+    .load-more[hidden]{display:none}
+    .contact-strip{
+      margin-top:18px;
+      padding:18px 20px;
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:18px;
+      box-shadow:var(--shadow);
+      color:var(--muted);
+    }
+    .contact-strip a{
+      color:var(--text);
+      font-weight:700;
+      text-decoration:none;
+    }
+    .contact-strip a:hover{text-decoration:underline}
+    footer{
+      margin-top:40px;
+      color:var(--muted);
+      font-size:.95rem;
+    }
+    @media (max-width: 980px){
+      .grid{grid-template-columns:1fr}
+      .hero h2{font-size:2.7rem}
+      header{flex-direction:column}
+      nav a{margin:0 18px 0 0}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <h1>Buenos Días</h1>
+        <p>Frases, reflexiones y mañanas reales</p>
+      </div>
+      <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="https://www.buenosdia.com/#publicaciones">Publicaciones</a>
+        <a href="/tags/">Etiquetas</a>
+        <a href="https://instagram.com/https_404_3rr0r" target="_blank" rel="noopener noreferrer">Contacto</a>
+      </nav>
+    </header>
+
+    <div class="grid">
+      <main>
+        <section class="hero" id="inicio">
+          <div class="eyebrow">Reflexiones para vivir el día real</div>
+          <h2>Textos para esas mañanas que a veces cuestan</h2>
+          <p>
+            No todas las mañanas llegan suaves. Algunas pesan. Otras apenas se sostienen.
+            Este espacio está hecho para eso: textos breves, humanos y sinceros, para acompañar
+            el inicio del día con algo de aire, claridad y verdad.
+          </p>
+        </section>
+
+        <section id="publicaciones">
+          <h2 class="section-title">Últimas publicaciones</h2>
+          <p class="section-sub">Los textos más recientes se muestran primero.</p>
+          <div id="postsList">
+            <div class="empty">Cargando publicaciones...</div>
+          </div>
+
+          <div class="load-more-wrap">
+            <button id="loadMoreBtn" class="load-more" type="button" hidden>Ver más publicaciones</button>
+          </div>
+          <div id="postsSentinel" aria-hidden="true"></div>
+        </section>
+      </main>
+
+      <aside class="sidebar">
+        <section class="box" id="etiquetas">
+          <h3>Etiquetas</h3>
+          <div class="tag-cloud" id="tagCloud">
+            <div class="empty">Cargando etiquetas...</div>
+          </div>
+        </section>
+
+        <section class="box">
+          <h3>Sobre este espacio</h3>
+          <p style="margin:0;color:#667085;line-height:1.7;">
+            Buenos Días reúne textos breves, reflexiones y mañanas reales para acompañar esos días en los que hace falta una palabra sincera, un poco de claridad o simplemente sentir que alguien entiende lo que pesa.
+          </p>
+        </section>
+      </aside>
+    </div>
+
+    <div class="contact-strip">
+      Contacto: <a href="https://instagram.com/https_404_3rr0r" target="_blank" rel="noopener noreferrer">@https_404_3rr0r</a>
+    </div>
+
+    <footer>
+      © 2026 buenosdia.com — mañanas reales, palabras que acompañan. ·
+      <a href="https://instagram.com/https_404_3rr0r" target="_blank" rel="noopener noreferrer">Contacto</a>
+    </footer>
+  </div>
+
+  <script>
+    const TAG_SLUG_MAP = {"plata y motivacion":"plata-y-motivacion","desmotivacion":"desmotivacion","dinero":"dinero","proyectos":"proyectos","seguir adelante":"seguir-adelante","motivacion real":"motivacion-real","cansancio emocional":"cansancio-emocional","recomponerse despues de depresion":"recomponerse-despues-de-depresion","reconstruccion personal":"reconstruccion-personal","fuerza interior":"fuerza-interior","volver a empezar":"volver-a-empezar","esperanza":"esperanza","entrenar por la tarde":"entrenar-por-la-tarde","cuerpo despues de entrenar":"cuerpo-despues-de-entrenar","falta de energia":"falta-de-energia","cansancio bueno":"cansancio-bueno","rutina rota":"rutina-rota","no entrenar nunca":"no-entrenar-nunca","cuerpo quieto":"cuerpo-quieto","cansancio mental":"cansancio-mental","salud emocional":"salud-emocional","amigos por interes":"amigos-por-interes","plata de por medio":"plata-de-por-medio","vinculos reales":"vinculos-reales","decepcion":"decepcion","abandono":"abandono","amistad":"amistad","tristeza":"tristeza","fatiga mental":"fatiga-mental","cerebro en pausa":"cerebro-en-pausa","despertar sin ganas":"despertar-sin-ganas","dias dificiles":"dias-dificiles","cansancio":"cansancio","esperar":"esperar","productividad humana":"productividad-humana","pausa en la vida":"pausa-en-la-vida","buenos dias de verdad":"buenos-dias-de-verdad","sentirme hundido":"sentirme-hundido","noche":"noche","noches dificiles":"noches-dificiles","fuera de horario":"fuera-de-horario","chip rutinario":"chip-rutinario","rutina automatica":"rutina-automatica","vida en piloto automatico":"vida-en-piloto-automatico","sentido de la vida":"sentido-de-la-vida","soledad":"soledad","silencio":"silencio","calma interior":"calma-interior","paz interior":"paz-interior","presencia emocional":"presencia-emocional","tristeza por no tener plata":"tristeza-por-no-tener-plata","felicidad":"felicidad","energia nocturna":"energia-nocturna","buenos dias reales":"buenos-dias-reales","me levante con ganas":"me-levante-con-ganas","volver a tener energia":"volver-a-tener-energia","empezar el dia":"empezar-el-dia","mananas dificiles":"mananas-dificiles","me levanto triste":"me-levanto-triste","mujer que no sabe si me quiere":"mujer-que-no-sabe-si-me-quiere","tristeza al despertar":"tristeza-al-despertar","amor confuso":"amor-confuso","manana triste":"manana-triste","sentimientos mezclados":"sentimientos-mezclados","levantar proyectos":"levantar-proyectos","proyectos caidos":"proyectos-caidos","no puedo dormir":"no-puedo-dormir","insomnio emocional":"insomnio-emocional","ansiedad nocturna":"ansiedad-nocturna","entrenar sin tiempo":"entrenar-sin-tiempo","no hay horario":"no-hay-horario","querer entrenar":"querer-entrenar","momentos vacios":"momentos-vacios","trabajar en huecos":"trabajar-en-huecos","avanzar de a poco":"avanzar-de-a-poco","dias que vuelven a tener sentido":"dias-que-vuelven-a-tener-sentido","motivacion":"motivacion","reflexion":"reflexion","agotamiento":"agotamiento","dormir y seguir cansado":"dormir-y-seguir-cansado","sueno acumulado":"sueno-acumulado","mananas pesadas":"mananas-pesadas","amigos":"amigos","buenos dias":"buenos-dias","mananas tristes":"mananas-tristes","emociones":"emociones","dia de lluvia":"dia-de-lluvia","lluvia y emociones":"lluvia-y-emociones","reflexion de buenos dias":"reflexion-de-buenos-dias","mananas grises":"mananas-grises","sentirse en paz":"sentirse-en-paz","incertidumbre":"incertidumbre","paciencia":"paciencia","resistencia emocional":"resistencia-emocional","empezar de nuevo":"empezar-de-nuevo","reconstruccion":"reconstruccion","manana feliz":"manana-feliz","problemas de la vida":"problemas-de-la-vida"};
+    const INITIAL_POSTS = 20;
+    const POSTS_BATCH = 5;
+    let allPosts = [];
+    let visibleCount = 0;
+    let observerStarted = false;
+
+    async function loadPosts() {
+      const postsList = document.getElementById('postsList');
+      const tagCloud = document.getElementById('tagCloud');
+      const loadMoreBtn = document.getElementById('loadMoreBtn');
+
+      try {
+        const res = await fetch('/data/posts.json?v=' + Date.now());
+        const posts = await res.json();
+
+        if (!Array.isArray(posts) || posts.length === 0) {
+          postsList.innerHTML = '<div class="empty">Todavía no hay publicaciones visibles.</div>';
+          tagCloud.innerHTML = '<div class="empty">Todavía no hay etiquetas.</div>';
+          if (loadMoreBtn) loadMoreBtn.hidden = true;
+          return;
+        }
+
+        allPosts = posts.slice().sort((a, b) => (b.date || '').localeCompare(a.date || ''));
+        renderPosts(true);
+        renderTagCloud(allPosts, tagCloud);
+
+        if (loadMoreBtn) {
+          loadMoreBtn.addEventListener('click', () => renderPosts(false));
+        }
+
+        setupInfiniteLoad();
+        sanitizeTagLinks(document);
+      } catch (err) {
+        postsList.innerHTML = '<div class="empty">No se pudieron cargar las publicaciones.</div>';
+        tagCloud.innerHTML = '<div class="empty">No se pudieron cargar las etiquetas.</div>';
+        if (loadMoreBtn) loadMoreBtn.hidden = true;
+      }
+    }
+
+    function renderPosts(reset = false) {
+      const postsList = document.getElementById('postsList');
+      const loadMoreBtn = document.getElementById('loadMoreBtn');
+      if (!postsList) return;
+
+      if (reset) {
+        visibleCount = Math.min(INITIAL_POSTS, allPosts.length);
+      } else {
+        visibleCount = Math.min(visibleCount + POSTS_BATCH, allPosts.length);
+      }
+
+      const slice = allPosts.slice(0, visibleCount);
+      postsList.innerHTML = slice.map(post =>
+        '<article class="post-card">' +
+          '<h3>' + escapeHtml(post.title || 'Sin título') + '</h3>' +
+          '<p>' + escapeHtml(post.description || 'Sin descripción.') + '</p>' +
+          '<div class="tags">' +
+            ((post.tags || []).slice(0, 6).map(tag => '<a class="tag" href="' + tagHref(tag, post.tagSlugs) + '">' + escapeHtml(tag) + '</a>').join('')) +
+          '</div>' +
+          '<a class="read-link" href="' + post.url + '">Leer publicación →</a>' +
+        '</article>'
+      ).join('');
+
+      if (loadMoreBtn) loadMoreBtn.hidden = visibleCount >= allPosts.length;
+      sanitizeTagLinks(postsList);
+    }
+
+    function setupInfiniteLoad() {
+      if (observerStarted) return;
+      const sentinel = document.getElementById('postsSentinel');
+      if (!sentinel || !('IntersectionObserver' in window)) return;
+      observerStarted = true;
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting && visibleCount < allPosts.length) {
+            renderPosts(false);
+          }
+        });
+      }, {
+        rootMargin: '600px 0px 600px 0px'
+      });
+
+      observer.observe(sentinel);
+    }
+
+    function renderTagCloud(posts, tagCloud) {
+      const counts = {};
+      posts.forEach(post => {
+        (post.tags || []).forEach(tag => {
+          const key = String(tag || '').trim();
+          if (!key) return;
+          counts[key] = (counts[key] || 0) + 1;
+        });
+      });
+
+      const sortedTags = Object.entries(counts)
+        .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0], 'es', { sensitivity: 'base' }))
+        .slice(0, 30);
+
+      tagCloud.innerHTML = sortedTags.length
+        ? sortedTags.map(([tag, count]) => '<a class="tag" href="' + tagHref(tag) + '" title="Ver publicaciones con la etiqueta ' + escapeHtml(tag) + '">' + escapeHtml(tag) + ' (' + count + ')</a>').join('')
+        : '<div class="empty">Todavía no hay etiquetas.</div>';
+    }
+
+    function escapeHtml(str) {
+      return String(str)
+        .replaceAll('&', '&amp;')
+        .replaceAll('<', '&lt;')
+        .replaceAll('>', '&gt;')
+        .replaceAll('"', '&quot;')
+        .replaceAll("'", '&#039;');
+    }
+
+    function normalizeTag(str) {
+      return String(str || '')
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .toLowerCase()
+        .replace(/[^a-z0-9\s-]/g, ' ')
+        .trim()
+        .replace(/\s+/g, ' ');
+    }
+
+    function slugify(str) {
+      return normalizeTag(str)
+        .replace(/\s+/g, '-')
+        .replace(/-+/g, '-')
+        .replace(/^-|-$/g, '');
+    }
+
+    function tagHref(tag, perPostMap) {
+      const raw = String(tag || '').trim();
+      const fromPost = perPostMap && perPostMap[raw];
+      const normalized = normalizeTag(raw);
+      const mapped = TAG_SLUG_MAP[normalized];
+      const slug = fromPost || mapped || slugify(raw);
+      return '/tags/' + slug + '.html';
+    }
+
+    function sanitizeTagLinks(root) {
+      root.querySelectorAll('a[href*="/tags/"]').forEach(a => {
+        const text = (a.textContent || '').replace(/\(\d+\)\s*$/, '').trim();
+        if (!text || a.getAttribute('href') === '/tags/') return;
+        a.setAttribute('href', tagHref(text));
+      });
+    }
+
+    loadPosts();
+  </script>
+</body>
+</html>
