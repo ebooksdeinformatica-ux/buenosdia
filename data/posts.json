@@ -1,5 +1,62 @@
 [
   {
+    "title": "De día mi cerebro está en hold",
+    "description": "Hay días en los que la cabeza no arranca hasta tarde. Un texto real sobre bloqueo mental, lentitud y esa sensación de vivir en pausa mientras todo sigue.",
+    "tags": [
+      "fatiga mental",
+      "cerebro en pausa",
+      "despertar sin ganas",
+      "dias dificiles",
+      "cansancio",
+      "esperar",
+      "productividad humana",
+      "pausa en la vida",
+      "seguir adelante",
+      "buenos dias de verdad"
+    ],
+    "tagSlugs": {
+      "fatiga mental": "fatiga-mental",
+      "cerebro en pausa": "cerebro-en-pausa",
+      "despertar sin ganas": "despertar-sin-ganas",
+      "dias dificiles": "dias-dificiles",
+      "cansancio": "cansancio",
+      "esperar": "esperar",
+      "productividad humana": "productividad-humana",
+      "pausa en la vida": "pausa-en-la-vida",
+      "seguir adelante": "seguir-adelante",
+      "buenos dias de verdad": "buenos-dias-de-verdad"
+    },
+    "date": "2026-04-03",
+    "slug": "de-dia-mi-cerebro-esta-en-hold",
+    "url": "/posts/de-dia-mi-cerebro-esta-en-hold.html",
+    "related": [
+      {
+        "title": "Días que empiezan después de las 5 de la tarde",
+        "description": "Hay días en los que recién arrancás cuando el sol ya se fue. Un texto honesto sobre sentirse fuera de horario, vivir a contramano y aun así…",
+        "url": "/posts/dias-que-empiezan-despues-de-las-5-de-la-tarde.html",
+        "slug": "dias-que-empiezan-despues-de-las-5-de-la-tarde"
+      },
+      {
+        "title": "Cuando dormís hasta tarde pero te levantás y querés seguir durmiendo",
+        "description": "Hay días en los que dormís muchas horas, pero igual te levantás con el cuerpo pesado y la cabeza lenta. Una reflexión honesta sobre ese cans…",
+        "url": "/posts/cuando-dormis-hasta-tarde-pero-te-levantas-y-queres-seguir-durmiendo.html",
+        "slug": "cuando-dormis-hasta-tarde-pero-te-levantas-y-queres-seguir-durmiendo"
+      },
+      {
+        "title": "Me activo por las noches para hacer todo",
+        "description": "Cuando cae la noche recién aparece la energía. Un texto para quienes sienten que viven mejor cuando el mundo se apaga un poco.",
+        "url": "/posts/me-activo-por-las-noches-para-hacer-todo.html",
+        "slug": "me-activo-por-las-noches-para-hacer-todo"
+      },
+      {
+        "title": "Cuando los amigos se bajan del barco por las noches",
+        "description": "Hay noches en las que duele más la ausencia de los que estaban cerca que cualquier problema en sí. Y aun así, la mañana llega, incluso cuand…",
+        "url": "/posts/cuando-los-amigos-se-bajan-del-barco-por-las-noches.html",
+        "slug": "cuando-los-amigos-se-bajan-del-barco-por-las-noches"
+      }
+    ]
+  },
+  {
     "title": "Días que empiezan después de las 5 de la tarde",
     "description": "Hay días en los que recién arrancás cuando el sol ya se fue. Un texto honesto sobre sentirse fuera de horario, vivir a contramano y aun así seguir.",
     "tags": [
@@ -31,6 +88,12 @@
     "url": "/posts/dias-que-empiezan-despues-de-las-5-de-la-tarde.html",
     "related": [
       {
+        "title": "De día mi cerebro está en hold",
+        "description": "Hay días en los que la cabeza no arranca hasta tarde. Un texto real sobre bloqueo mental, lentitud y esa sensación de vivir en pausa mientra…",
+        "url": "/posts/de-dia-mi-cerebro-esta-en-hold.html",
+        "slug": "de-dia-mi-cerebro-esta-en-hold"
+      },
+      {
         "title": "Me activo por las noches para hacer todo",
         "description": "Cuando cae la noche recién aparece la energía. Un texto para quienes sienten que viven mejor cuando el mundo se apaga un poco.",
         "url": "/posts/me-activo-por-las-noches-para-hacer-todo.html",
@@ -47,12 +110,6 @@
         "description": "Hay noches en las que duele más la ausencia de los que estaban cerca que cualquier problema en sí. Y aun así, la mañana llega, incluso cuand…",
         "url": "/posts/cuando-los-amigos-se-bajan-del-barco-por-las-noches.html",
         "slug": "cuando-los-amigos-se-bajan-del-barco-por-las-noches"
-      },
-      {
-        "title": "Levantar proyectos que algún día funcionaron y hoy no los tienes",
-        "description": "Hay mañanas en las que no duele empezar de cero, sino mirar todo lo que una vez funcionó y ya no está. Aun así, volver a levantar algo roto…",
-        "url": "/posts/levantar-proyectos-que-algun-dia-funcionaron-y-hoy-no-los-tienes.html",
-        "slug": "levantar-proyectos-que-algun-dia-funcionaron-y-hoy-no-los-tienes"
       }
     ]
   },
@@ -157,10 +214,10 @@
         "slug": "cuando-dormis-hasta-tarde-pero-te-levantas-y-queres-seguir-durmiendo"
       },
       {
-        "title": "Levantar proyectos que algún día funcionaron y hoy no los tienes",
-        "description": "Hay mañanas en las que no duele empezar de cero, sino mirar todo lo que una vez funcionó y ya no está. Aun así, volver a levantar algo roto…",
-        "url": "/posts/levantar-proyectos-que-algun-dia-funcionaron-y-hoy-no-los-tienes.html",
-        "slug": "levantar-proyectos-que-algun-dia-funcionaron-y-hoy-no-los-tienes"
+        "title": "De día mi cerebro está en hold",
+        "description": "Hay días en los que la cabeza no arranca hasta tarde. Un texto real sobre bloqueo mental, lentitud y esa sensación de vivir en pausa mientra…",
+        "url": "/posts/de-dia-mi-cerebro-esta-en-hold.html",
+        "slug": "de-dia-mi-cerebro-esta-en-hold"
       }
     ]
   },
@@ -253,6 +310,12 @@
         "slug": "dias-que-empiezan-despues-de-las-5-de-la-tarde"
       },
       {
+        "title": "De día mi cerebro está en hold",
+        "description": "Hay días en los que la cabeza no arranca hasta tarde. Un texto real sobre bloqueo mental, lentitud y esa sensación de vivir en pausa mientra…",
+        "url": "/posts/de-dia-mi-cerebro-esta-en-hold.html",
+        "slug": "de-dia-mi-cerebro-esta-en-hold"
+      },
+      {
         "title": "Me activo por las noches para hacer todo",
         "description": "Cuando cae la noche recién aparece la energía. Un texto para quienes sienten que viven mejor cuando el mundo se apaga un poco.",
         "url": "/posts/me-activo-por-las-noches-para-hacer-todo.html",
@@ -263,12 +326,6 @@
         "description": "Hay mañanas en las que no duele empezar de cero, sino mirar todo lo que una vez funcionó y ya no está. Aun así, volver a levantar algo roto…",
         "url": "/posts/levantar-proyectos-que-algun-dia-funcionaron-y-hoy-no-los-tienes.html",
         "slug": "levantar-proyectos-que-algun-dia-funcionaron-y-hoy-no-los-tienes"
-      },
-      {
-        "title": "Cuando los amigos se bajan del barco por las noches",
-        "description": "Hay noches en las que duele más la ausencia de los que estaban cerca que cualquier problema en sí. Y aun así, la mañana llega, incluso cuand…",
-        "url": "/posts/cuando-los-amigos-se-bajan-del-barco-por-las-noches.html",
-        "slug": "cuando-los-amigos-se-bajan-del-barco-por-las-noches"
       }
     ]
   },
@@ -420,6 +477,12 @@
         "slug": "manana-feliz-sin-nada-con-mil-problemas"
       },
       {
+        "title": "De día mi cerebro está en hold",
+        "description": "Hay días en los que la cabeza no arranca hasta tarde. Un texto real sobre bloqueo mental, lentitud y esa sensación de vivir en pausa mientra…",
+        "url": "/posts/de-dia-mi-cerebro-esta-en-hold.html",
+        "slug": "de-dia-mi-cerebro-esta-en-hold"
+      },
+      {
         "title": "Cuando los amigos se bajan del barco por las noches",
         "description": "Hay noches en las que duele más la ausencia de los que estaban cerca que cualquier problema en sí. Y aun así, la mañana llega, incluso cuand…",
         "url": "/posts/cuando-los-amigos-se-bajan-del-barco-por-las-noches.html",
@@ -430,12 +493,6 @@
         "description": "Hay mañanas en las que no duele empezar de cero, sino mirar todo lo que una vez funcionó y ya no está. Aun así, volver a levantar algo roto…",
         "url": "/posts/levantar-proyectos-que-algun-dia-funcionaron-y-hoy-no-los-tienes.html",
         "slug": "levantar-proyectos-que-algun-dia-funcionaron-y-hoy-no-los-tienes"
-      },
-      {
-        "title": "Días que empiezan después de las 5 de la tarde",
-        "description": "Hay días en los que recién arrancás cuando el sol ya se fue. Un texto honesto sobre sentirse fuera de horario, vivir a contramano y aun así…",
-        "url": "/posts/dias-que-empiezan-despues-de-las-5-de-la-tarde.html",
-        "slug": "dias-que-empiezan-despues-de-las-5-de-la-tarde"
       }
     ]
   },
