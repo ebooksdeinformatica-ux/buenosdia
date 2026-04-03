@@ -9,7 +9,8 @@
       "proyectos",
       "seguir adelante",
       "motivacion real",
-      "cansancio emocional"
+      "cansancio emocional",
+      "reconstruccion personal"
     ],
     "tagSlugs": {
       "plata y motivacion": "plata-y-motivacion",
@@ -18,12 +19,19 @@
       "proyectos": "proyectos",
       "seguir adelante": "seguir-adelante",
       "motivacion real": "motivacion-real",
-      "cansancio emocional": "cansancio-emocional"
+      "cansancio emocional": "cansancio-emocional",
+      "reconstruccion personal": "reconstruccion-personal"
     },
     "date": "2026-04-03",
     "slug": "como-la-plata-motiva-o-desmotiva",
     "url": "/posts/como-la-plata-motiva-o-desmotiva.html",
     "related": [
+      {
+        "title": "Trabajar en momentos vacíos nos ayuda",
+        "description": "A veces los ratos más vacíos del día son los que más ayudan a ordenar ideas y avanzar. Un texto sobre aprovechar esos huecos sin romantizarl…",
+        "url": "/posts/trabajar-en-momentos-vacios-nos-ayuda.html",
+        "slug": "trabajar-en-momentos-vacios-nos-ayuda"
+      },
       {
         "title": "Levantar proyectos que algún día funcionaron y hoy no los tienes",
         "description": "Hay mañanas en las que no duele empezar de cero, sino mirar todo lo que una vez funcionó y ya no está. Aun así, volver a levantar algo roto…",
@@ -35,12 +43,6 @@
         "description": "Hay personas que viven en piloto automático sin preguntarse qué más podrían hacer con su vida. Un texto sobre rutina, obediencia interna y p…",
         "url": "/posts/la-gente-con-el-chip-rutinario-metido-en-la-cabeza.html",
         "slug": "la-gente-con-el-chip-rutinario-metido-en-la-cabeza"
-      },
-      {
-        "title": "La tristeza cuando no hay plata, y aun así hay gente contenta",
-        "description": "No tener plata duele, pero también existe gente que, aun en esa falta, encuentra motivos para estar bien. Un texto real sobre esa contradicc…",
-        "url": "/posts/la-tristeza-cuando-no-hay-plata-y-aun-asi-hay-gente-contenta.html",
-        "slug": "la-tristeza-cuando-no-hay-plata-y-aun-asi-hay-gente-contenta"
       },
       {
         "title": "Nunca dejes tirado un proyecto que alguna vez funcionó",
@@ -60,7 +62,8 @@
       "fuerza interior",
       "volver a empezar",
       "esperanza",
-      "seguir adelante"
+      "seguir adelante",
+      "pausa en la vida"
     ],
     "tagSlugs": {
       "recomponerse despues de depresion": "recomponerse-despues-de-depresion",
@@ -69,7 +72,8 @@
       "fuerza interior": "fuerza-interior",
       "volver a empezar": "volver-a-empezar",
       "esperanza": "esperanza",
-      "seguir adelante": "seguir-adelante"
+      "seguir adelante": "seguir-adelante",
+      "pausa en la vida": "pausa-en-la-vida"
     },
     "date": "2026-04-03",
     "slug": "como-recomponerse-despues-de-una-depresion-grande",
@@ -94,10 +98,10 @@
         "slug": "nunca-dejes-tirado-un-proyecto-que-alguna-vez-funciono"
       },
       {
-        "title": "Una mañana feliz pero sin nada y con mil problemas",
-        "description": "Hay mañanas en las que no tenés nada resuelto, pero igual seguís. Una reflexión honesta sobre empezar el día con problemas, cansancio y una…",
-        "url": "/posts/manana-feliz-sin-nada-con-mil-problemas.html",
-        "slug": "manana-feliz-sin-nada-con-mil-problemas"
+        "title": "Me levanté con las ganas que no tenía hace cinco días",
+        "description": "Un texto sobre esa mañana rara y hermosa en la que volvés a sentir ganas después de varios días apagado.",
+        "url": "/posts/me-levante-con-las-ganas-que-no-tenia-hace-cinco-dias.html",
+        "slug": "me-levante-con-las-ganas-que-no-tenia-hace-cinco-dias"
       }
     ]
   },
@@ -111,7 +115,9 @@
       "motivacion real",
       "cansancio bueno",
       "rutina rota",
-      "seguir adelante"
+      "seguir adelante",
+      "cuerpo en movimiento",
+      "reconstruccion personal"
     ],
     "tagSlugs": {
       "entrenar por la tarde": "entrenar-por-la-tarde",
@@ -120,7 +126,9 @@
       "motivacion real": "motivacion-real",
       "cansancio bueno": "cansancio-bueno",
       "rutina rota": "rutina-rota",
-      "seguir adelante": "seguir-adelante"
+      "seguir adelante": "seguir-adelante",
+      "cuerpo en movimiento": "cuerpo-en-movimiento",
+      "reconstruccion personal": "reconstruccion-personal"
     },
     "date": "2026-04-03",
     "slug": "como-se-siente-el-cuerpo-despues-de-entrenar-por-la-tarde",
@@ -145,10 +153,10 @@
         "slug": "dias-que-empiezan-despues-de-las-5-de-la-tarde"
       },
       {
-        "title": "Me activo por las noches para hacer todo",
-        "description": "Cuando cae la noche recién aparece la energía. Un texto para quienes sienten que viven mejor cuando el mundo se apaga un poco.",
-        "url": "/posts/me-activo-por-las-noches-para-hacer-todo.html",
-        "slug": "me-activo-por-las-noches-para-hacer-todo"
+        "title": "Trabajar en momentos vacíos nos ayuda",
+        "description": "A veces los ratos más vacíos del día son los que más ayudan a ordenar ideas y avanzar. Un texto sobre aprovechar esos huecos sin romantizarl…",
+        "url": "/posts/trabajar-en-momentos-vacios-nos-ayuda.html",
+        "slug": "trabajar-en-momentos-vacios-nos-ayuda"
       }
     ]
   },
@@ -162,7 +170,8 @@
       "rutina rota",
       "cansancio mental",
       "seguir adelante",
-      "salud emocional"
+      "salud emocional",
+      "volver a empezar"
     ],
     "tagSlugs": {
       "no entrenar nunca": "no-entrenar-nunca",
@@ -171,7 +180,8 @@
       "rutina rota": "rutina-rota",
       "cansancio mental": "cansancio-mental",
       "seguir adelante": "seguir-adelante",
-      "salud emocional": "salud-emocional"
+      "salud emocional": "salud-emocional",
+      "volver a empezar": "volver-a-empezar"
     },
     "date": "2026-04-03",
     "slug": "como-se-siente-la-gente-que-no-entrena-nunca",
@@ -324,7 +334,8 @@
       "dias dificiles",
       "fuerza interior",
       "seguir adelante",
-      "reconstruccion personal"
+      "reconstruccion personal",
+      "pausa en la vida"
     ],
     "tagSlugs": {
       "motivacion real": "motivacion-real",
@@ -334,7 +345,8 @@
       "dias dificiles": "dias-dificiles",
       "fuerza interior": "fuerza-interior",
       "seguir adelante": "seguir-adelante",
-      "reconstruccion personal": "reconstruccion-personal"
+      "reconstruccion personal": "reconstruccion-personal",
+      "pausa en la vida": "pausa-en-la-vida"
     },
     "date": "2026-04-03",
     "slug": "de-sentirme-hundido-a-volver-a-tener-motivacion",
@@ -353,16 +365,16 @@
         "slug": "levantar-proyectos-que-algun-dia-funcionaron-y-hoy-no-los-tienes"
       },
       {
-        "title": "Días que empiezan después de las 5 de la tarde",
-        "description": "Hay días en los que recién arrancás cuando el sol ya se fue. Un texto honesto sobre sentirse fuera de horario, vivir a contramano y aun así…",
-        "url": "/posts/dias-que-empiezan-despues-de-las-5-de-la-tarde.html",
-        "slug": "dias-que-empiezan-despues-de-las-5-de-la-tarde"
-      },
-      {
         "title": "Nunca dejes tirado un proyecto que alguna vez funcionó",
         "description": "Hay proyectos que hoy están apagados, pero un día tuvieron vida real. Un texto sobre volver a mirarlos antes de darlos por muertos.",
         "url": "/posts/nunca-dejes-tirado-un-proyecto-que-alguna-vez-funciono.html",
         "slug": "nunca-dejes-tirado-un-proyecto-que-alguna-vez-funciono"
+      },
+      {
+        "title": "De día mi cerebro está en hold",
+        "description": "Hay días en los que la cabeza no arranca hasta tarde. Un texto real sobre bloqueo mental, lentitud y esa sensación de vivir en pausa mientra…",
+        "url": "/posts/de-dia-mi-cerebro-esta-en-hold.html",
+        "slug": "de-dia-mi-cerebro-esta-en-hold"
       }
     ]
   },
@@ -433,7 +445,8 @@
       "proyectos",
       "motivacion real",
       "sentido de la vida",
-      "seguir adelante"
+      "seguir adelante",
+      "reconstruccion personal"
     ],
     "tagSlugs": {
       "chip rutinario": "chip-rutinario",
@@ -442,7 +455,8 @@
       "proyectos": "proyectos",
       "motivacion real": "motivacion-real",
       "sentido de la vida": "sentido-de-la-vida",
-      "seguir adelante": "seguir-adelante"
+      "seguir adelante": "seguir-adelante",
+      "reconstruccion personal": "reconstruccion-personal"
     },
     "date": "2026-04-03",
     "slug": "la-gente-con-el-chip-rutinario-metido-en-la-cabeza",
@@ -514,16 +528,16 @@
         "slug": "me-activo-por-las-noches-para-hacer-todo"
       },
       {
+        "title": "La tristeza cuando no hay plata, y aun así hay gente contenta",
+        "description": "No tener plata duele, pero también existe gente que, aun en esa falta, encuentra motivos para estar bien. Un texto real sobre esa contradicc…",
+        "url": "/posts/la-tristeza-cuando-no-hay-plata-y-aun-asi-hay-gente-contenta.html",
+        "slug": "la-tristeza-cuando-no-hay-plata-y-aun-asi-hay-gente-contenta"
+      },
+      {
         "title": "Cuando los amigos solo están si hay plata de por medio",
         "description": "Hay vínculos que parecen cercanos hasta que se termina la plata. Un texto sobre amistades interesadas y la claridad dolorosa que eso deja.",
         "url": "/posts/cuando-los-amigos-solo-estan-si-hay-plata.html",
         "slug": "cuando-los-amigos-solo-estan-si-hay-plata"
-      },
-      {
-        "title": "De sentirme hundido a volver a tener motivación",
-        "description": "Un texto sobre el paso lento y real entre sentirse muy abajo y empezar a recuperar motivación sin chamuyo.",
-        "url": "/posts/de-sentirme-hundido-a-volver-a-tener-motivacion.html",
-        "slug": "de-sentirme-hundido-a-volver-a-tener-motivacion"
       }
     ]
   },
@@ -537,7 +551,9 @@
       "esperanza",
       "seguir adelante",
       "fuerza interior",
-      "calma interior"
+      "calma interior",
+      "paz interior",
+      "buenos dias de verdad"
     ],
     "tagSlugs": {
       "tristeza por no tener plata": "tristeza-por-no-tener-plata",
@@ -546,7 +562,9 @@
       "esperanza": "esperanza",
       "seguir adelante": "seguir-adelante",
       "fuerza interior": "fuerza-interior",
-      "calma interior": "calma-interior"
+      "calma interior": "calma-interior",
+      "paz interior": "paz-interior",
+      "buenos dias de verdad": "buenos-dias-de-verdad"
     },
     "date": "2026-04-03",
     "slug": "la-tristeza-cuando-no-hay-plata-y-aun-asi-hay-gente-contenta",
@@ -645,7 +663,10 @@
       "empezar el dia",
       "mananas dificiles",
       "esperanza",
-      "seguir adelante"
+      "seguir adelante",
+      "me levanto con ganas",
+      "volver a empezar",
+      "buenos dias reales"
     ],
     "tagSlugs": {
       "me levante con ganas": "me-levante-con-ganas",
@@ -654,18 +675,15 @@
       "empezar el dia": "empezar-el-dia",
       "mananas dificiles": "mananas-dificiles",
       "esperanza": "esperanza",
-      "seguir adelante": "seguir-adelante"
+      "seguir adelante": "seguir-adelante",
+      "me levanto con ganas": "me-levanto-con-ganas",
+      "volver a empezar": "volver-a-empezar",
+      "buenos dias reales": "buenos-dias-reales"
     },
     "date": "2026-04-03",
     "slug": "me-levante-con-las-ganas-que-no-tenia-hace-cinco-dias",
     "url": "/posts/me-levante-con-las-ganas-que-no-tenia-hace-cinco-dias.html",
     "related": [
-      {
-        "title": "Una mañana feliz pero sin nada y con mil problemas",
-        "description": "Hay mañanas en las que no tenés nada resuelto, pero igual seguís. Una reflexión honesta sobre empezar el día con problemas, cansancio y una…",
-        "url": "/posts/manana-feliz-sin-nada-con-mil-problemas.html",
-        "slug": "manana-feliz-sin-nada-con-mil-problemas"
-      },
       {
         "title": "Levantar proyectos que algún día funcionaron y hoy no los tienes",
         "description": "Hay mañanas en las que no duele empezar de cero, sino mirar todo lo que una vez funcionó y ya no está. Aun así, volver a levantar algo roto…",
@@ -679,10 +697,16 @@
         "slug": "como-recomponerse-despues-de-una-depresion-grande"
       },
       {
-        "title": "Días que empiezan después de las 5 de la tarde",
-        "description": "Hay días en los que recién arrancás cuando el sol ya se fue. Un texto honesto sobre sentirse fuera de horario, vivir a contramano y aun así…",
-        "url": "/posts/dias-que-empiezan-despues-de-las-5-de-la-tarde.html",
-        "slug": "dias-que-empiezan-despues-de-las-5-de-la-tarde"
+        "title": "Una mañana feliz pero sin nada y con mil problemas",
+        "description": "Hay mañanas en las que no tenés nada resuelto, pero igual seguís. Una reflexión honesta sobre empezar el día con problemas, cansancio y una…",
+        "url": "/posts/manana-feliz-sin-nada-con-mil-problemas.html",
+        "slug": "manana-feliz-sin-nada-con-mil-problemas"
+      },
+      {
+        "title": "De sentirme hundido a volver a tener motivación",
+        "description": "Un texto sobre el paso lento y real entre sentirse muy abajo y empezar a recuperar motivación sin chamuyo.",
+        "url": "/posts/de-sentirme-hundido-a-volver-a-tener-motivacion.html",
+        "slug": "de-sentirme-hundido-a-volver-a-tener-motivacion"
       }
     ]
   },
@@ -724,16 +748,16 @@
         "slug": "dias-que-empiezan-despues-de-las-5-de-la-tarde"
       },
       {
+        "title": "La tristeza cuando no hay plata, y aun así hay gente contenta",
+        "description": "No tener plata duele, pero también existe gente que, aun en esa falta, encuentra motivos para estar bien. Un texto real sobre esa contradicc…",
+        "url": "/posts/la-tristeza-cuando-no-hay-plata-y-aun-asi-hay-gente-contenta.html",
+        "slug": "la-tristeza-cuando-no-hay-plata-y-aun-asi-hay-gente-contenta"
+      },
+      {
         "title": "Cuando dormís hasta tarde pero te levantás y querés seguir durmiendo",
         "description": "Hay días en los que dormís muchas horas, pero igual te levantás con el cuerpo pesado y la cabeza lenta. Una reflexión honesta sobre ese cans…",
         "url": "/posts/cuando-dormis-hasta-tarde-pero-te-levantas-y-queres-seguir-durmiendo.html",
         "slug": "cuando-dormis-hasta-tarde-pero-te-levantas-y-queres-seguir-durmiendo"
-      },
-      {
-        "title": "De día mi cerebro está en hold",
-        "description": "Hay días en los que la cabeza no arranca hasta tarde. Un texto real sobre bloqueo mental, lentitud y esa sensación de vivir en pausa mientra…",
-        "url": "/posts/de-dia-mi-cerebro-esta-en-hold.html",
-        "slug": "de-dia-mi-cerebro-esta-en-hold"
       }
     ]
   },
@@ -747,7 +771,8 @@
       "volver a empezar",
       "motivacion real",
       "reconstruccion personal",
-      "seguir adelante"
+      "seguir adelante",
+      "fuerza interior"
     ],
     "tagSlugs": {
       "proyectos": "proyectos",
@@ -756,7 +781,8 @@
       "volver a empezar": "volver-a-empezar",
       "motivacion real": "motivacion-real",
       "reconstruccion personal": "reconstruccion-personal",
-      "seguir adelante": "seguir-adelante"
+      "seguir adelante": "seguir-adelante",
+      "fuerza interior": "fuerza-interior"
     },
     "date": "2026-04-03",
     "slug": "nunca-dejes-tirado-un-proyecto-que-alguna-vez-funciono",
@@ -781,10 +807,10 @@
         "slug": "de-sentirme-hundido-a-volver-a-tener-motivacion"
       },
       {
-        "title": "La gente con el chip rutinario metido en la cabeza",
-        "description": "Hay personas que viven en piloto automático sin preguntarse qué más podrían hacer con su vida. Un texto sobre rutina, obediencia interna y p…",
-        "url": "/posts/la-gente-con-el-chip-rutinario-metido-en-la-cabeza.html",
-        "slug": "la-gente-con-el-chip-rutinario-metido-en-la-cabeza"
+        "title": "Trabajar en momentos vacíos nos ayuda",
+        "description": "A veces los ratos más vacíos del día son los que más ayudan a ordenar ideas y avanzar. Un texto sobre aprovechar esos huecos sin romantizarl…",
+        "url": "/posts/trabajar-en-momentos-vacios-nos-ayuda.html",
+        "slug": "trabajar-en-momentos-vacios-nos-ayuda"
       }
     ]
   },
@@ -799,7 +825,9 @@
       "silencio",
       "ansiedad nocturna",
       "seguir adelante",
-      "rutina rota"
+      "rutina rota",
+      "soledad",
+      "cansancio emocional"
     ],
     "tagSlugs": {
       "noches dificiles": "noches-dificiles",
@@ -809,7 +837,9 @@
       "silencio": "silencio",
       "ansiedad nocturna": "ansiedad-nocturna",
       "seguir adelante": "seguir-adelante",
-      "rutina rota": "rutina-rota"
+      "rutina rota": "rutina-rota",
+      "soledad": "soledad",
+      "cansancio emocional": "cansancio-emocional"
     },
     "date": "2026-04-03",
     "slug": "por-que-no-puedo-dormir-por-las-noches",
@@ -852,7 +882,8 @@
       "querer entrenar",
       "cansancio",
       "productividad humana",
-      "seguir adelante"
+      "seguir adelante",
+      "volver a empezar"
     ],
     "tagSlugs": {
       "entrenar sin tiempo": "entrenar-sin-tiempo",
@@ -862,7 +893,8 @@
       "querer entrenar": "querer-entrenar",
       "cansancio": "cansancio",
       "productividad humana": "productividad-humana",
-      "seguir adelante": "seguir-adelante"
+      "seguir adelante": "seguir-adelante",
+      "volver a empezar": "volver-a-empezar"
     },
     "date": "2026-04-03",
     "slug": "quiero-entrenar-pero-no-hay-horario-en-el-dia",
@@ -904,7 +936,10 @@
       "rutina rota",
       "avanzar de a poco",
       "motivacion real",
-      "proyectos"
+      "proyectos",
+      "motivation real",
+      "seguir adelante",
+      "reconstruccion personal"
     ],
     "tagSlugs": {
       "momentos vacios": "momentos-vacios",
@@ -913,7 +948,10 @@
       "rutina rota": "rutina-rota",
       "avanzar de a poco": "avanzar-de-a-poco",
       "motivacion real": "motivacion-real",
-      "proyectos": "proyectos"
+      "proyectos": "proyectos",
+      "motivation real": "motivation-real",
+      "seguir adelante": "seguir-adelante",
+      "reconstruccion personal": "reconstruccion-personal"
     },
     "date": "2026-04-03",
     "slug": "trabajar-en-momentos-vacios-nos-ayuda",
@@ -926,12 +964,6 @@
         "slug": "me-activo-por-las-noches-para-hacer-todo"
       },
       {
-        "title": "Días que empiezan después de las 5 de la tarde",
-        "description": "Hay días en los que recién arrancás cuando el sol ya se fue. Un texto honesto sobre sentirse fuera de horario, vivir a contramano y aun así…",
-        "url": "/posts/dias-que-empiezan-despues-de-las-5-de-la-tarde.html",
-        "slug": "dias-que-empiezan-despues-de-las-5-de-la-tarde"
-      },
-      {
         "title": "Levantar proyectos que algún día funcionaron y hoy no los tienes",
         "description": "Hay mañanas en las que no duele empezar de cero, sino mirar todo lo que una vez funcionó y ya no está. Aun así, volver a levantar algo roto…",
         "url": "/posts/levantar-proyectos-que-algun-dia-funcionaron-y-hoy-no-los-tienes.html",
@@ -942,6 +974,12 @@
         "description": "La plata puede empujarte a moverte, pero también puede aplastarte cuando falta o cuando se vuelve obsesión. Un texto real sobre esa contradi…",
         "url": "/posts/como-la-plata-motiva-o-desmotiva.html",
         "slug": "como-la-plata-motiva-o-desmotiva"
+      },
+      {
+        "title": "Nunca dejes tirado un proyecto que alguna vez funcionó",
+        "description": "Hay proyectos que hoy están apagados, pero un día tuvieron vida real. Un texto sobre volver a mirarlos antes de darlos por muertos.",
+        "url": "/posts/nunca-dejes-tirado-un-proyecto-que-alguna-vez-funciono.html",
+        "slug": "nunca-dejes-tirado-un-proyecto-que-alguna-vez-funciono"
       }
     ]
   },
@@ -1107,10 +1145,10 @@
         "slug": "me-activo-por-las-noches-para-hacer-todo"
       },
       {
-        "title": "La soledad no siempre es tan soledad",
-        "description": "Hay momentos de soledad que no están tan vacíos como parecen. Un texto real sobre el silencio, la presencia interna y lo que aparece cuando…",
-        "url": "/posts/la-soledad-no-siempre-es-tan-soledad.html",
-        "slug": "la-soledad-no-siempre-es-tan-soledad"
+        "title": "Por qué no puedo dormir por las noches",
+        "description": "Un texto honesto sobre esas noches en las que el cuerpo quiere dormir pero la cabeza no se apaga.",
+        "url": "/posts/por-que-no-puedo-dormir-por-las-noches.html",
+        "slug": "por-que-no-puedo-dormir-por-las-noches"
       }
     ]
   },
@@ -1154,16 +1192,16 @@
         "slug": "manana-feliz-sin-nada-con-mil-problemas"
       },
       {
+        "title": "La tristeza cuando no hay plata, y aun así hay gente contenta",
+        "description": "No tener plata duele, pero también existe gente que, aun en esa falta, encuentra motivos para estar bien. Un texto real sobre esa contradicc…",
+        "url": "/posts/la-tristeza-cuando-no-hay-plata-y-aun-asi-hay-gente-contenta.html",
+        "slug": "la-tristeza-cuando-no-hay-plata-y-aun-asi-hay-gente-contenta"
+      },
+      {
         "title": "Cuando los amigos se bajan del barco por las noches",
         "description": "Hay noches en las que duele más la ausencia de los que estaban cerca que cualquier problema en sí. Y aun así, la mañana llega, incluso cuand…",
         "url": "/posts/cuando-los-amigos-se-bajan-del-barco-por-las-noches.html",
         "slug": "cuando-los-amigos-se-bajan-del-barco-por-las-noches"
-      },
-      {
-        "title": "Días que empiezan después de las 5 de la tarde",
-        "description": "Hay días en los que recién arrancás cuando el sol ya se fue. Un texto honesto sobre sentirse fuera de horario, vivir a contramano y aun así…",
-        "url": "/posts/dias-que-empiezan-despues-de-las-5-de-la-tarde.html",
-        "slug": "dias-que-empiezan-despues-de-las-5-de-la-tarde"
       }
     ]
   },
