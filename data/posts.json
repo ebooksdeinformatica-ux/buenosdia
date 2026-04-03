@@ -1,5 +1,109 @@
 [
   {
+    "title": "Cómo la plata puede motivar o desmotivar",
+    "description": "La plata puede empujarte a moverte, pero también puede aplastarte cuando falta o cuando se vuelve obsesión. Un texto real sobre esa contradicción.",
+    "tags": [
+      "plata y motivacion",
+      "desmotivacion",
+      "dinero",
+      "proyectos",
+      "seguir adelante",
+      "motivacion real",
+      "cansancio emocional"
+    ],
+    "tagSlugs": {
+      "plata y motivacion": "plata-y-motivacion",
+      "desmotivacion": "desmotivacion",
+      "dinero": "dinero",
+      "proyectos": "proyectos",
+      "seguir adelante": "seguir-adelante",
+      "motivacion real": "motivacion-real",
+      "cansancio emocional": "cansancio-emocional"
+    },
+    "date": "2026-04-03",
+    "slug": "como-la-plata-motiva-o-desmotiva",
+    "url": "/posts/como-la-plata-motiva-o-desmotiva.html",
+    "related": [
+      {
+        "title": "Levantar proyectos que algún día funcionaron y hoy no los tienes",
+        "description": "Hay mañanas en las que no duele empezar de cero, sino mirar todo lo que una vez funcionó y ya no está. Aun así, volver a levantar algo roto…",
+        "url": "/posts/levantar-proyectos-que-algun-dia-funcionaron-y-hoy-no-los-tienes.html",
+        "slug": "levantar-proyectos-que-algun-dia-funcionaron-y-hoy-no-los-tienes"
+      },
+      {
+        "title": "La tristeza cuando no hay plata, y aun así hay gente contenta",
+        "description": "No tener plata duele, pero también existe gente que, aun en esa falta, encuentra motivos para estar bien. Un texto real sobre esa contradicc…",
+        "url": "/posts/la-tristeza-cuando-no-hay-plata-y-aun-asi-hay-gente-contenta.html",
+        "slug": "la-tristeza-cuando-no-hay-plata-y-aun-asi-hay-gente-contenta"
+      },
+      {
+        "title": "Nunca dejes tirado un proyecto que alguna vez funcionó",
+        "description": "Hay proyectos que hoy están apagados, pero un día tuvieron vida real. Un texto sobre volver a mirarlos antes de darlos por muertos.",
+        "url": "/posts/nunca-dejes-tirado-un-proyecto-que-alguna-vez-funciono.html",
+        "slug": "nunca-dejes-tirado-un-proyecto-que-alguna-vez-funciono"
+      },
+      {
+        "title": "Trabajar en momentos vacíos nos ayuda",
+        "description": "A veces los ratos más vacíos del día son los que más ayudan a ordenar ideas y avanzar. Un texto sobre aprovechar esos huecos sin romantizarl…",
+        "url": "/posts/trabajar-en-momentos-vacios-nos-ayuda.html",
+        "slug": "trabajar-en-momentos-vacios-nos-ayuda"
+      }
+    ]
+  },
+  {
+    "title": "Cuando los amigos solo están si hay plata de por medio",
+    "description": "Hay vínculos que parecen cercanos hasta que se termina la plata. Un texto sobre amistades interesadas y la claridad dolorosa que eso deja.",
+    "tags": [
+      "amigos por interes",
+      "plata de por medio",
+      "vinculos reales",
+      "decepcion",
+      "abandono",
+      "amistad",
+      "tristeza",
+      "seguir adelante"
+    ],
+    "tagSlugs": {
+      "amigos por interes": "amigos-por-interes",
+      "plata de por medio": "plata-de-por-medio",
+      "vinculos reales": "vinculos-reales",
+      "decepcion": "decepcion",
+      "abandono": "abandono",
+      "amistad": "amistad",
+      "tristeza": "tristeza",
+      "seguir adelante": "seguir-adelante"
+    },
+    "date": "2026-04-03",
+    "slug": "cuando-los-amigos-solo-estan-si-hay-plata",
+    "url": "/posts/cuando-los-amigos-solo-estan-si-hay-plata.html",
+    "related": [
+      {
+        "title": "Cuando los amigos se bajan del barco por las noches",
+        "description": "Hay noches en las que duele más la ausencia de los que estaban cerca que cualquier problema en sí. Y aun así, la mañana llega, incluso cuand…",
+        "url": "/posts/cuando-los-amigos-se-bajan-del-barco-por-las-noches.html",
+        "slug": "cuando-los-amigos-se-bajan-del-barco-por-las-noches"
+      },
+      {
+        "title": "Me activo por las noches para hacer todo",
+        "description": "Cuando cae la noche recién aparece la energía. Un texto para quienes sienten que viven mejor cuando el mundo se apaga un poco.",
+        "url": "/posts/me-activo-por-las-noches-para-hacer-todo.html",
+        "slug": "me-activo-por-las-noches-para-hacer-todo"
+      },
+      {
+        "title": "Levantar proyectos que algún día funcionaron y hoy no los tienes",
+        "description": "Hay mañanas en las que no duele empezar de cero, sino mirar todo lo que una vez funcionó y ya no está. Aun así, volver a levantar algo roto…",
+        "url": "/posts/levantar-proyectos-que-algun-dia-funcionaron-y-hoy-no-los-tienes.html",
+        "slug": "levantar-proyectos-que-algun-dia-funcionaron-y-hoy-no-los-tienes"
+      },
+      {
+        "title": "La tristeza cuando no hay plata, y aun así hay gente contenta",
+        "description": "No tener plata duele, pero también existe gente que, aun en esa falta, encuentra motivos para estar bien. Un texto real sobre esa contradicc…",
+        "url": "/posts/la-tristeza-cuando-no-hay-plata-y-aun-asi-hay-gente-contenta.html",
+        "slug": "la-tristeza-cuando-no-hay-plata-y-aun-asi-hay-gente-contenta"
+      }
+    ]
+  },
+  {
     "title": "De día mi cerebro está en hold",
     "description": "Hay días en los que la cabeza no arranca hasta tarde. Un texto real sobre bloqueo mental, lentitud y esa sensación de vivir en pausa mientras todo sigue.",
     "tags": [
@@ -153,16 +257,67 @@
         "slug": "me-activo-por-las-noches-para-hacer-todo"
       },
       {
+        "title": "Quiero entrenar pero no hay horario en el día",
+        "description": "A veces querés entrenar de verdad, pero el día no te deja lugar. Un texto real sobre las ganas de moverse cuando la rutina no afloja.",
+        "url": "/posts/quiero-entrenar-pero-no-hay-horario-en-el-dia.html",
+        "slug": "quiero-entrenar-pero-no-hay-horario-en-el-dia"
+      },
+      {
         "title": "Cuando dormís hasta tarde pero te levantás y querés seguir durmiendo",
         "description": "Hay días en los que dormís muchas horas, pero igual te levantás con el cuerpo pesado y la cabeza lenta. Una reflexión honesta sobre ese cans…",
         "url": "/posts/cuando-dormis-hasta-tarde-pero-te-levantas-y-queres-seguir-durmiendo.html",
         "slug": "cuando-dormis-hasta-tarde-pero-te-levantas-y-queres-seguir-durmiendo"
-      },
+      }
+    ]
+  },
+  {
+    "title": "La tristeza cuando no hay plata, y aun así hay gente contenta",
+    "description": "No tener plata duele, pero también existe gente que, aun en esa falta, encuentra motivos para estar bien. Un texto real sobre esa contradicción humana.",
+    "tags": [
+      "tristeza por no tener plata",
+      "dinero",
+      "felicidad",
+      "esperanza",
+      "seguir adelante",
+      "fuerza interior",
+      "calma interior"
+    ],
+    "tagSlugs": {
+      "tristeza por no tener plata": "tristeza-por-no-tener-plata",
+      "dinero": "dinero",
+      "felicidad": "felicidad",
+      "esperanza": "esperanza",
+      "seguir adelante": "seguir-adelante",
+      "fuerza interior": "fuerza-interior",
+      "calma interior": "calma-interior"
+    },
+    "date": "2026-04-03",
+    "slug": "la-tristeza-cuando-no-hay-plata-y-aun-asi-hay-gente-contenta",
+    "url": "/posts/la-tristeza-cuando-no-hay-plata-y-aun-asi-hay-gente-contenta.html",
+    "related": [
       {
         "title": "Cuando los amigos se bajan del barco por las noches",
         "description": "Hay noches en las que duele más la ausencia de los que estaban cerca que cualquier problema en sí. Y aun así, la mañana llega, incluso cuand…",
         "url": "/posts/cuando-los-amigos-se-bajan-del-barco-por-las-noches.html",
         "slug": "cuando-los-amigos-se-bajan-del-barco-por-las-noches"
+      },
+      {
+        "title": "Una mañana feliz pero sin nada y con mil problemas",
+        "description": "Hay mañanas en las que no tenés nada resuelto, pero igual seguís. Una reflexión honesta sobre empezar el día con problemas, cansancio y una…",
+        "url": "/posts/manana-feliz-sin-nada-con-mil-problemas.html",
+        "slug": "manana-feliz-sin-nada-con-mil-problemas"
+      },
+      {
+        "title": "Cómo la plata puede motivar o desmotivar",
+        "description": "La plata puede empujarte a moverte, pero también puede aplastarte cuando falta o cuando se vuelve obsesión. Un texto real sobre esa contradi…",
+        "url": "/posts/como-la-plata-motiva-o-desmotiva.html",
+        "slug": "como-la-plata-motiva-o-desmotiva"
+      },
+      {
+        "title": "Levantar proyectos que algún día funcionaron y hoy no los tienes",
+        "description": "Hay mañanas en las que no duele empezar de cero, sino mirar todo lo que una vez funcionó y ya no está. Aun así, volver a levantar algo roto…",
+        "url": "/posts/levantar-proyectos-que-algun-dia-funcionaron-y-hoy-no-los-tienes.html",
+        "slug": "levantar-proyectos-que-algun-dia-funcionaron-y-hoy-no-los-tienes"
       }
     ]
   },
@@ -363,16 +518,16 @@
         "slug": "de-sentirme-hundido-a-volver-a-tener-motivacion"
       },
       {
-        "title": "Cuando los amigos se bajan del barco por las noches",
-        "description": "Hay noches en las que duele más la ausencia de los que estaban cerca que cualquier problema en sí. Y aun así, la mañana llega, incluso cuand…",
-        "url": "/posts/cuando-los-amigos-se-bajan-del-barco-por-las-noches.html",
-        "slug": "cuando-los-amigos-se-bajan-del-barco-por-las-noches"
+        "title": "Cómo la plata puede motivar o desmotivar",
+        "description": "La plata puede empujarte a moverte, pero también puede aplastarte cuando falta o cuando se vuelve obsesión. Un texto real sobre esa contradi…",
+        "url": "/posts/como-la-plata-motiva-o-desmotiva.html",
+        "slug": "como-la-plata-motiva-o-desmotiva"
       },
       {
-        "title": "Me levanté con las ganas que no tenía hace cinco días",
-        "description": "Un texto sobre esa mañana rara y hermosa en la que volvés a sentir ganas después de varios días apagado.",
-        "url": "/posts/me-levante-con-las-ganas-que-no-tenia-hace-cinco-dias.html",
-        "slug": "me-levante-con-las-ganas-que-no-tenia-hace-cinco-dias"
+        "title": "Trabajar en momentos vacíos nos ayuda",
+        "description": "A veces los ratos más vacíos del día son los que más ayudan a ordenar ideas y avanzar. Un texto sobre aprovechar esos huecos sin romantizarl…",
+        "url": "/posts/trabajar-en-momentos-vacios-nos-ayuda.html",
+        "slug": "trabajar-en-momentos-vacios-nos-ayuda"
       }
     ]
   },
@@ -426,6 +581,110 @@
         "description": "Hay mañanas en las que no duele empezar de cero, sino mirar todo lo que una vez funcionó y ya no está. Aun así, volver a levantar algo roto…",
         "url": "/posts/levantar-proyectos-que-algun-dia-funcionaron-y-hoy-no-los-tienes.html",
         "slug": "levantar-proyectos-que-algun-dia-funcionaron-y-hoy-no-los-tienes"
+      }
+    ]
+  },
+  {
+    "title": "Quiero entrenar pero no hay horario en el día",
+    "description": "A veces querés entrenar de verdad, pero el día no te deja lugar. Un texto real sobre las ganas de moverse cuando la rutina no afloja.",
+    "tags": [
+      "entrenar sin tiempo",
+      "no hay horario",
+      "rutina rota",
+      "falta de energia",
+      "querer entrenar",
+      "cansancio",
+      "productividad humana",
+      "seguir adelante"
+    ],
+    "tagSlugs": {
+      "entrenar sin tiempo": "entrenar-sin-tiempo",
+      "no hay horario": "no-hay-horario",
+      "rutina rota": "rutina-rota",
+      "falta de energia": "falta-de-energia",
+      "querer entrenar": "querer-entrenar",
+      "cansancio": "cansancio",
+      "productividad humana": "productividad-humana",
+      "seguir adelante": "seguir-adelante"
+    },
+    "date": "2026-04-03",
+    "slug": "quiero-entrenar-pero-no-hay-horario-en-el-dia",
+    "url": "/posts/quiero-entrenar-pero-no-hay-horario-en-el-dia.html",
+    "related": [
+      {
+        "title": "Días que empiezan después de las 5 de la tarde",
+        "description": "Hay días en los que recién arrancás cuando el sol ya se fue. Un texto honesto sobre sentirse fuera de horario, vivir a contramano y aun así…",
+        "url": "/posts/dias-que-empiezan-despues-de-las-5-de-la-tarde.html",
+        "slug": "dias-que-empiezan-despues-de-las-5-de-la-tarde"
+      },
+      {
+        "title": "Me activo por las noches para hacer todo",
+        "description": "Cuando cae la noche recién aparece la energía. Un texto para quienes sienten que viven mejor cuando el mundo se apaga un poco.",
+        "url": "/posts/me-activo-por-las-noches-para-hacer-todo.html",
+        "slug": "me-activo-por-las-noches-para-hacer-todo"
+      },
+      {
+        "title": "Cuando dormís hasta tarde pero te levantás y querés seguir durmiendo",
+        "description": "Hay días en los que dormís muchas horas, pero igual te levantás con el cuerpo pesado y la cabeza lenta. Una reflexión honesta sobre ese cans…",
+        "url": "/posts/cuando-dormis-hasta-tarde-pero-te-levantas-y-queres-seguir-durmiendo.html",
+        "slug": "cuando-dormis-hasta-tarde-pero-te-levantas-y-queres-seguir-durmiendo"
+      },
+      {
+        "title": "De día mi cerebro está en hold",
+        "description": "Hay días en los que la cabeza no arranca hasta tarde. Un texto real sobre bloqueo mental, lentitud y esa sensación de vivir en pausa mientra…",
+        "url": "/posts/de-dia-mi-cerebro-esta-en-hold.html",
+        "slug": "de-dia-mi-cerebro-esta-en-hold"
+      }
+    ]
+  },
+  {
+    "title": "Trabajar en momentos vacíos nos ayuda",
+    "description": "A veces los ratos más vacíos del día son los que más ayudan a ordenar ideas y avanzar. Un texto sobre aprovechar esos huecos sin romantizarlos.",
+    "tags": [
+      "momentos vacios",
+      "trabajar en huecos",
+      "productividad humana",
+      "rutina rota",
+      "avanzar de a poco",
+      "motivacion real",
+      "proyectos"
+    ],
+    "tagSlugs": {
+      "momentos vacios": "momentos-vacios",
+      "trabajar en huecos": "trabajar-en-huecos",
+      "productividad humana": "productividad-humana",
+      "rutina rota": "rutina-rota",
+      "avanzar de a poco": "avanzar-de-a-poco",
+      "motivacion real": "motivacion-real",
+      "proyectos": "proyectos"
+    },
+    "date": "2026-04-03",
+    "slug": "trabajar-en-momentos-vacios-nos-ayuda",
+    "url": "/posts/trabajar-en-momentos-vacios-nos-ayuda.html",
+    "related": [
+      {
+        "title": "Me activo por las noches para hacer todo",
+        "description": "Cuando cae la noche recién aparece la energía. Un texto para quienes sienten que viven mejor cuando el mundo se apaga un poco.",
+        "url": "/posts/me-activo-por-las-noches-para-hacer-todo.html",
+        "slug": "me-activo-por-las-noches-para-hacer-todo"
+      },
+      {
+        "title": "Días que empiezan después de las 5 de la tarde",
+        "description": "Hay días en los que recién arrancás cuando el sol ya se fue. Un texto honesto sobre sentirse fuera de horario, vivir a contramano y aun así…",
+        "url": "/posts/dias-que-empiezan-despues-de-las-5-de-la-tarde.html",
+        "slug": "dias-que-empiezan-despues-de-las-5-de-la-tarde"
+      },
+      {
+        "title": "Levantar proyectos que algún día funcionaron y hoy no los tienes",
+        "description": "Hay mañanas en las que no duele empezar de cero, sino mirar todo lo que una vez funcionó y ya no está. Aun así, volver a levantar algo roto…",
+        "url": "/posts/levantar-proyectos-que-algun-dia-funcionaron-y-hoy-no-los-tienes.html",
+        "slug": "levantar-proyectos-que-algun-dia-funcionaron-y-hoy-no-los-tienes"
+      },
+      {
+        "title": "Cómo la plata puede motivar o desmotivar",
+        "description": "La plata puede empujarte a moverte, pero también puede aplastarte cuando falta o cuando se vuelve obsesión. Un texto real sobre esa contradi…",
+        "url": "/posts/como-la-plata-motiva-o-desmotiva.html",
+        "slug": "como-la-plata-motiva-o-desmotiva"
       }
     ]
   },
@@ -573,6 +832,12 @@
     "url": "/posts/cuando-los-amigos-se-bajan-del-barco-por-las-noches.html",
     "related": [
       {
+        "title": "Cuando los amigos solo están si hay plata de por medio",
+        "description": "Hay vínculos que parecen cercanos hasta que se termina la plata. Un texto sobre amistades interesadas y la claridad dolorosa que eso deja.",
+        "url": "/posts/cuando-los-amigos-solo-estan-si-hay-plata.html",
+        "slug": "cuando-los-amigos-solo-estan-si-hay-plata"
+      },
+      {
         "title": "Levantar proyectos que algún día funcionaron y hoy no los tienes",
         "description": "Hay mañanas en las que no duele empezar de cero, sino mirar todo lo que una vez funcionó y ya no está. Aun así, volver a levantar algo roto…",
         "url": "/posts/levantar-proyectos-que-algun-dia-funcionaron-y-hoy-no-los-tienes.html",
@@ -589,12 +854,6 @@
         "description": "Un texto honesto sobre esas noches en las que el cuerpo quiere dormir pero la cabeza no se apaga.",
         "url": "/posts/por-que-no-puedo-dormir-por-las-noches.html",
         "slug": "por-que-no-puedo-dormir-por-las-noches"
-      },
-      {
-        "title": "Días que empiezan después de las 5 de la tarde",
-        "description": "Hay días en los que recién arrancás cuando el sol ya se fue. Un texto honesto sobre sentirse fuera de horario, vivir a contramano y aun así…",
-        "url": "/posts/dias-que-empiezan-despues-de-las-5-de-la-tarde.html",
-        "slug": "dias-que-empiezan-despues-de-las-5-de-la-tarde"
       }
     ]
   },
