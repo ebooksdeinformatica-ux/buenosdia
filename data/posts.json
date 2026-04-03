@@ -31,6 +31,12 @@
         "slug": "levantar-proyectos-que-algun-dia-funcionaron-y-hoy-no-los-tienes"
       },
       {
+        "title": "La gente con el chip rutinario metido en la cabeza",
+        "description": "Hay personas que viven en piloto automático sin preguntarse qué más podrían hacer con su vida. Un texto sobre rutina, obediencia interna y p…",
+        "url": "/posts/la-gente-con-el-chip-rutinario-metido-en-la-cabeza.html",
+        "slug": "la-gente-con-el-chip-rutinario-metido-en-la-cabeza"
+      },
+      {
         "title": "La tristeza cuando no hay plata, y aun así hay gente contenta",
         "description": "No tener plata duele, pero también existe gente que, aun en esa falta, encuentra motivos para estar bien. Un texto real sobre esa contradicc…",
         "url": "/posts/la-tristeza-cuando-no-hay-plata-y-aun-asi-hay-gente-contenta.html",
@@ -41,12 +47,159 @@
         "description": "Hay proyectos que hoy están apagados, pero un día tuvieron vida real. Un texto sobre volver a mirarlos antes de darlos por muertos.",
         "url": "/posts/nunca-dejes-tirado-un-proyecto-que-alguna-vez-funciono.html",
         "slug": "nunca-dejes-tirado-un-proyecto-que-alguna-vez-funciono"
+      }
+    ]
+  },
+  {
+    "title": "Cómo recomponerse después de una depresión grande",
+    "description": "Volver después de una depresión grande no es volver igual. Un texto real sobre reconstruirse sin apuro, sin teatro y sin exigirse milagros.",
+    "tags": [
+      "recomponerse despues de depresion",
+      "reconstruccion personal",
+      "motivacion real",
+      "fuerza interior",
+      "volver a empezar",
+      "esperanza",
+      "seguir adelante"
+    ],
+    "tagSlugs": {
+      "recomponerse despues de depresion": "recomponerse-despues-de-depresion",
+      "reconstruccion personal": "reconstruccion-personal",
+      "motivacion real": "motivacion-real",
+      "fuerza interior": "fuerza-interior",
+      "volver a empezar": "volver-a-empezar",
+      "esperanza": "esperanza",
+      "seguir adelante": "seguir-adelante"
+    },
+    "date": "2026-04-03",
+    "slug": "como-recomponerse-despues-de-una-depresion-grande",
+    "url": "/posts/como-recomponerse-despues-de-una-depresion-grande.html",
+    "related": [
+      {
+        "title": "De sentirme hundido a volver a tener motivación",
+        "description": "Un texto sobre el paso lento y real entre sentirse muy abajo y empezar a recuperar motivación sin chamuyo.",
+        "url": "/posts/de-sentirme-hundido-a-volver-a-tener-motivacion.html",
+        "slug": "de-sentirme-hundido-a-volver-a-tener-motivacion"
       },
       {
-        "title": "Trabajar en momentos vacíos nos ayuda",
-        "description": "A veces los ratos más vacíos del día son los que más ayudan a ordenar ideas y avanzar. Un texto sobre aprovechar esos huecos sin romantizarl…",
-        "url": "/posts/trabajar-en-momentos-vacios-nos-ayuda.html",
-        "slug": "trabajar-en-momentos-vacios-nos-ayuda"
+        "title": "Levantar proyectos que algún día funcionaron y hoy no los tienes",
+        "description": "Hay mañanas en las que no duele empezar de cero, sino mirar todo lo que una vez funcionó y ya no está. Aun así, volver a levantar algo roto…",
+        "url": "/posts/levantar-proyectos-que-algun-dia-funcionaron-y-hoy-no-los-tienes.html",
+        "slug": "levantar-proyectos-que-algun-dia-funcionaron-y-hoy-no-los-tienes"
+      },
+      {
+        "title": "Nunca dejes tirado un proyecto que alguna vez funcionó",
+        "description": "Hay proyectos que hoy están apagados, pero un día tuvieron vida real. Un texto sobre volver a mirarlos antes de darlos por muertos.",
+        "url": "/posts/nunca-dejes-tirado-un-proyecto-que-alguna-vez-funciono.html",
+        "slug": "nunca-dejes-tirado-un-proyecto-que-alguna-vez-funciono"
+      },
+      {
+        "title": "Una mañana feliz pero sin nada y con mil problemas",
+        "description": "Hay mañanas en las que no tenés nada resuelto, pero igual seguís. Una reflexión honesta sobre empezar el día con problemas, cansancio y una…",
+        "url": "/posts/manana-feliz-sin-nada-con-mil-problemas.html",
+        "slug": "manana-feliz-sin-nada-con-mil-problemas"
+      }
+    ]
+  },
+  {
+    "title": "Cómo se siente el cuerpo después de entrenar por la tarde",
+    "description": "Entrenar por la tarde deja una mezcla rara de cansancio, alivio y cabeza más limpia. Un texto real sobre esa sensación de haber movido el día.",
+    "tags": [
+      "entrenar por la tarde",
+      "cuerpo despues de entrenar",
+      "falta de energia",
+      "motivacion real",
+      "cansancio bueno",
+      "rutina rota",
+      "seguir adelante"
+    ],
+    "tagSlugs": {
+      "entrenar por la tarde": "entrenar-por-la-tarde",
+      "cuerpo despues de entrenar": "cuerpo-despues-de-entrenar",
+      "falta de energia": "falta-de-energia",
+      "motivacion real": "motivacion-real",
+      "cansancio bueno": "cansancio-bueno",
+      "rutina rota": "rutina-rota",
+      "seguir adelante": "seguir-adelante"
+    },
+    "date": "2026-04-03",
+    "slug": "como-se-siente-el-cuerpo-despues-de-entrenar-por-la-tarde",
+    "url": "/posts/como-se-siente-el-cuerpo-despues-de-entrenar-por-la-tarde.html",
+    "related": [
+      {
+        "title": "Cómo se siente la gente que no entrena nunca",
+        "description": "No entrenar ni de día, ni de tarde, ni de noche también deja marcas. Un texto sobre el cuerpo quieto, la energía rara y lo que pasa cuando u…",
+        "url": "/posts/como-se-siente-la-gente-que-no-entrena-nunca.html",
+        "slug": "como-se-siente-la-gente-que-no-entrena-nunca"
+      },
+      {
+        "title": "Quiero entrenar pero no hay horario en el día",
+        "description": "A veces querés entrenar de verdad, pero el día no te deja lugar. Un texto real sobre las ganas de moverse cuando la rutina no afloja.",
+        "url": "/posts/quiero-entrenar-pero-no-hay-horario-en-el-dia.html",
+        "slug": "quiero-entrenar-pero-no-hay-horario-en-el-dia"
+      },
+      {
+        "title": "Días que empiezan después de las 5 de la tarde",
+        "description": "Hay días en los que recién arrancás cuando el sol ya se fue. Un texto honesto sobre sentirse fuera de horario, vivir a contramano y aun así…",
+        "url": "/posts/dias-que-empiezan-despues-de-las-5-de-la-tarde.html",
+        "slug": "dias-que-empiezan-despues-de-las-5-de-la-tarde"
+      },
+      {
+        "title": "Me activo por las noches para hacer todo",
+        "description": "Cuando cae la noche recién aparece la energía. Un texto para quienes sienten que viven mejor cuando el mundo se apaga un poco.",
+        "url": "/posts/me-activo-por-las-noches-para-hacer-todo.html",
+        "slug": "me-activo-por-las-noches-para-hacer-todo"
+      }
+    ]
+  },
+  {
+    "title": "Cómo se siente la gente que no entrena nunca",
+    "description": "No entrenar ni de día, ni de tarde, ni de noche también deja marcas. Un texto sobre el cuerpo quieto, la energía rara y lo que pasa cuando uno no se mueve.",
+    "tags": [
+      "no entrenar nunca",
+      "falta de energia",
+      "cuerpo quieto",
+      "rutina rota",
+      "cansancio mental",
+      "seguir adelante",
+      "salud emocional"
+    ],
+    "tagSlugs": {
+      "no entrenar nunca": "no-entrenar-nunca",
+      "falta de energia": "falta-de-energia",
+      "cuerpo quieto": "cuerpo-quieto",
+      "rutina rota": "rutina-rota",
+      "cansancio mental": "cansancio-mental",
+      "seguir adelante": "seguir-adelante",
+      "salud emocional": "salud-emocional"
+    },
+    "date": "2026-04-03",
+    "slug": "como-se-siente-la-gente-que-no-entrena-nunca",
+    "url": "/posts/como-se-siente-la-gente-que-no-entrena-nunca.html",
+    "related": [
+      {
+        "title": "Quiero entrenar pero no hay horario en el día",
+        "description": "A veces querés entrenar de verdad, pero el día no te deja lugar. Un texto real sobre las ganas de moverse cuando la rutina no afloja.",
+        "url": "/posts/quiero-entrenar-pero-no-hay-horario-en-el-dia.html",
+        "slug": "quiero-entrenar-pero-no-hay-horario-en-el-dia"
+      },
+      {
+        "title": "Cómo se siente el cuerpo después de entrenar por la tarde",
+        "description": "Entrenar por la tarde deja una mezcla rara de cansancio, alivio y cabeza más limpia. Un texto real sobre esa sensación de haber movido el dí…",
+        "url": "/posts/como-se-siente-el-cuerpo-despues-de-entrenar-por-la-tarde.html",
+        "slug": "como-se-siente-el-cuerpo-despues-de-entrenar-por-la-tarde"
+      },
+      {
+        "title": "Por qué no puedo dormir por las noches",
+        "description": "Un texto honesto sobre esas noches en las que el cuerpo quiere dormir pero la cabeza no se apaga.",
+        "url": "/posts/por-que-no-puedo-dormir-por-las-noches.html",
+        "slug": "por-que-no-puedo-dormir-por-las-noches"
+      },
+      {
+        "title": "Días que empiezan después de las 5 de la tarde",
+        "description": "Hay días en los que recién arrancás cuando el sol ya se fue. Un texto honesto sobre sentirse fuera de horario, vivir a contramano y aun así…",
+        "url": "/posts/dias-que-empiezan-despues-de-las-5-de-la-tarde.html",
+        "slug": "dias-que-empiezan-despues-de-las-5-de-la-tarde"
       }
     ]
   },
@@ -84,6 +237,12 @@
         "slug": "cuando-los-amigos-se-bajan-del-barco-por-las-noches"
       },
       {
+        "title": "La soledad no siempre es tan soledad",
+        "description": "Hay momentos de soledad que no están tan vacíos como parecen. Un texto real sobre el silencio, la presencia interna y lo que aparece cuando…",
+        "url": "/posts/la-soledad-no-siempre-es-tan-soledad.html",
+        "slug": "la-soledad-no-siempre-es-tan-soledad"
+      },
+      {
         "title": "Me activo por las noches para hacer todo",
         "description": "Cuando cae la noche recién aparece la energía. Un texto para quienes sienten que viven mejor cuando el mundo se apaga un poco.",
         "url": "/posts/me-activo-por-las-noches-para-hacer-todo.html",
@@ -94,12 +253,6 @@
         "description": "Hay mañanas en las que no duele empezar de cero, sino mirar todo lo que una vez funcionó y ya no está. Aun así, volver a levantar algo roto…",
         "url": "/posts/levantar-proyectos-que-algun-dia-funcionaron-y-hoy-no-los-tienes.html",
         "slug": "levantar-proyectos-que-algun-dia-funcionaron-y-hoy-no-los-tienes"
-      },
-      {
-        "title": "La tristeza cuando no hay plata, y aun así hay gente contenta",
-        "description": "No tener plata duele, pero también existe gente que, aun en esa falta, encuentra motivos para estar bien. Un texto real sobre esa contradicc…",
-        "url": "/posts/la-tristeza-cuando-no-hay-plata-y-aun-asi-hay-gente-contenta.html",
-        "slug": "la-tristeza-cuando-no-hay-plata-y-aun-asi-hay-gente-contenta"
       }
     ]
   },
@@ -188,6 +341,12 @@
     "url": "/posts/de-sentirme-hundido-a-volver-a-tener-motivacion.html",
     "related": [
       {
+        "title": "Cómo recomponerse después de una depresión grande",
+        "description": "Volver después de una depresión grande no es volver igual. Un texto real sobre reconstruirse sin apuro, sin teatro y sin exigirse milagros.",
+        "url": "/posts/como-recomponerse-despues-de-una-depresion-grande.html",
+        "slug": "como-recomponerse-despues-de-una-depresion-grande"
+      },
+      {
         "title": "Levantar proyectos que algún día funcionaron y hoy no los tienes",
         "description": "Hay mañanas en las que no duele empezar de cero, sino mirar todo lo que una vez funcionó y ya no está. Aun así, volver a levantar algo roto…",
         "url": "/posts/levantar-proyectos-que-algun-dia-funcionaron-y-hoy-no-los-tienes.html",
@@ -204,12 +363,6 @@
         "description": "Hay proyectos que hoy están apagados, pero un día tuvieron vida real. Un texto sobre volver a mirarlos antes de darlos por muertos.",
         "url": "/posts/nunca-dejes-tirado-un-proyecto-que-alguna-vez-funciono.html",
         "slug": "nunca-dejes-tirado-un-proyecto-que-alguna-vez-funciono"
-      },
-      {
-        "title": "Una mañana feliz pero sin nada y con mil problemas",
-        "description": "Hay mañanas en las que no tenés nada resuelto, pero igual seguís. Una reflexión honesta sobre empezar el día con problemas, cansancio y una…",
-        "url": "/posts/manana-feliz-sin-nada-con-mil-problemas.html",
-        "slug": "manana-feliz-sin-nada-con-mil-problemas"
       }
     ]
   },
@@ -271,6 +424,110 @@
     ]
   },
   {
+    "title": "La gente con el chip rutinario metido en la cabeza",
+    "description": "Hay personas que viven en piloto automático sin preguntarse qué más podrían hacer con su vida. Un texto sobre rutina, obediencia interna y posibilidades dormidas.",
+    "tags": [
+      "chip rutinario",
+      "rutina automatica",
+      "vida en piloto automatico",
+      "proyectos",
+      "motivacion real",
+      "sentido de la vida",
+      "seguir adelante"
+    ],
+    "tagSlugs": {
+      "chip rutinario": "chip-rutinario",
+      "rutina automatica": "rutina-automatica",
+      "vida en piloto automatico": "vida-en-piloto-automatico",
+      "proyectos": "proyectos",
+      "motivacion real": "motivacion-real",
+      "sentido de la vida": "sentido-de-la-vida",
+      "seguir adelante": "seguir-adelante"
+    },
+    "date": "2026-04-03",
+    "slug": "la-gente-con-el-chip-rutinario-metido-en-la-cabeza",
+    "url": "/posts/la-gente-con-el-chip-rutinario-metido-en-la-cabeza.html",
+    "related": [
+      {
+        "title": "Levantar proyectos que algún día funcionaron y hoy no los tienes",
+        "description": "Hay mañanas en las que no duele empezar de cero, sino mirar todo lo que una vez funcionó y ya no está. Aun así, volver a levantar algo roto…",
+        "url": "/posts/levantar-proyectos-que-algun-dia-funcionaron-y-hoy-no-los-tienes.html",
+        "slug": "levantar-proyectos-que-algun-dia-funcionaron-y-hoy-no-los-tienes"
+      },
+      {
+        "title": "Cómo la plata puede motivar o desmotivar",
+        "description": "La plata puede empujarte a moverte, pero también puede aplastarte cuando falta o cuando se vuelve obsesión. Un texto real sobre esa contradi…",
+        "url": "/posts/como-la-plata-motiva-o-desmotiva.html",
+        "slug": "como-la-plata-motiva-o-desmotiva"
+      },
+      {
+        "title": "Nunca dejes tirado un proyecto que alguna vez funcionó",
+        "description": "Hay proyectos que hoy están apagados, pero un día tuvieron vida real. Un texto sobre volver a mirarlos antes de darlos por muertos.",
+        "url": "/posts/nunca-dejes-tirado-un-proyecto-que-alguna-vez-funciono.html",
+        "slug": "nunca-dejes-tirado-un-proyecto-que-alguna-vez-funciono"
+      },
+      {
+        "title": "Trabajar en momentos vacíos nos ayuda",
+        "description": "A veces los ratos más vacíos del día son los que más ayudan a ordenar ideas y avanzar. Un texto sobre aprovechar esos huecos sin romantizarl…",
+        "url": "/posts/trabajar-en-momentos-vacios-nos-ayuda.html",
+        "slug": "trabajar-en-momentos-vacios-nos-ayuda"
+      }
+    ]
+  },
+  {
+    "title": "La soledad no siempre es tan soledad",
+    "description": "Hay momentos de soledad que no están tan vacíos como parecen. Un texto real sobre el silencio, la presencia interna y lo que aparece cuando baja el ruido.",
+    "tags": [
+      "soledad",
+      "silencio",
+      "calma interior",
+      "paz interior",
+      "presencia emocional",
+      "vinculos reales",
+      "tristeza",
+      "seguir adelante"
+    ],
+    "tagSlugs": {
+      "soledad": "soledad",
+      "silencio": "silencio",
+      "calma interior": "calma-interior",
+      "paz interior": "paz-interior",
+      "presencia emocional": "presencia-emocional",
+      "vinculos reales": "vinculos-reales",
+      "tristeza": "tristeza",
+      "seguir adelante": "seguir-adelante"
+    },
+    "date": "2026-04-03",
+    "slug": "la-soledad-no-siempre-es-tan-soledad",
+    "url": "/posts/la-soledad-no-siempre-es-tan-soledad.html",
+    "related": [
+      {
+        "title": "Cuando los amigos se bajan del barco por las noches",
+        "description": "Hay noches en las que duele más la ausencia de los que estaban cerca que cualquier problema en sí. Y aun así, la mañana llega, incluso cuand…",
+        "url": "/posts/cuando-los-amigos-se-bajan-del-barco-por-las-noches.html",
+        "slug": "cuando-los-amigos-se-bajan-del-barco-por-las-noches"
+      },
+      {
+        "title": "Me activo por las noches para hacer todo",
+        "description": "Cuando cae la noche recién aparece la energía. Un texto para quienes sienten que viven mejor cuando el mundo se apaga un poco.",
+        "url": "/posts/me-activo-por-las-noches-para-hacer-todo.html",
+        "slug": "me-activo-por-las-noches-para-hacer-todo"
+      },
+      {
+        "title": "Cuando los amigos solo están si hay plata de por medio",
+        "description": "Hay vínculos que parecen cercanos hasta que se termina la plata. Un texto sobre amistades interesadas y la claridad dolorosa que eso deja.",
+        "url": "/posts/cuando-los-amigos-solo-estan-si-hay-plata.html",
+        "slug": "cuando-los-amigos-solo-estan-si-hay-plata"
+      },
+      {
+        "title": "De sentirme hundido a volver a tener motivación",
+        "description": "Un texto sobre el paso lento y real entre sentirse muy abajo y empezar a recuperar motivación sin chamuyo.",
+        "url": "/posts/de-sentirme-hundido-a-volver-a-tener-motivacion.html",
+        "slug": "de-sentirme-hundido-a-volver-a-tener-motivacion"
+      }
+    ]
+  },
+  {
     "title": "La tristeza cuando no hay plata, y aun así hay gente contenta",
     "description": "No tener plata duele, pero también existe gente que, aun en esa falta, encuentra motivos para estar bien. Un texto real sobre esa contradicción humana.",
     "tags": [
@@ -314,10 +571,10 @@
         "slug": "como-la-plata-motiva-o-desmotiva"
       },
       {
-        "title": "Levantar proyectos que algún día funcionaron y hoy no los tienes",
-        "description": "Hay mañanas en las que no duele empezar de cero, sino mirar todo lo que una vez funcionó y ya no está. Aun así, volver a levantar algo roto…",
-        "url": "/posts/levantar-proyectos-que-algun-dia-funcionaron-y-hoy-no-los-tienes.html",
-        "slug": "levantar-proyectos-que-algun-dia-funcionaron-y-hoy-no-los-tienes"
+        "title": "Cómo recomponerse después de una depresión grande",
+        "description": "Volver después de una depresión grande no es volver igual. Un texto real sobre reconstruirse sin apuro, sin teatro y sin exigirse milagros.",
+        "url": "/posts/como-recomponerse-despues-de-una-depresion-grande.html",
+        "slug": "como-recomponerse-despues-de-una-depresion-grande"
       }
     ]
   },
@@ -416,16 +673,16 @@
         "slug": "levantar-proyectos-que-algun-dia-funcionaron-y-hoy-no-los-tienes"
       },
       {
+        "title": "Cómo recomponerse después de una depresión grande",
+        "description": "Volver después de una depresión grande no es volver igual. Un texto real sobre reconstruirse sin apuro, sin teatro y sin exigirse milagros.",
+        "url": "/posts/como-recomponerse-despues-de-una-depresion-grande.html",
+        "slug": "como-recomponerse-despues-de-una-depresion-grande"
+      },
+      {
         "title": "Días que empiezan después de las 5 de la tarde",
         "description": "Hay días en los que recién arrancás cuando el sol ya se fue. Un texto honesto sobre sentirse fuera de horario, vivir a contramano y aun así…",
         "url": "/posts/dias-que-empiezan-despues-de-las-5-de-la-tarde.html",
         "slug": "dias-que-empiezan-despues-de-las-5-de-la-tarde"
-      },
-      {
-        "title": "De sentirme hundido a volver a tener motivación",
-        "description": "Un texto sobre el paso lento y real entre sentirse muy abajo y empezar a recuperar motivación sin chamuyo.",
-        "url": "/posts/de-sentirme-hundido-a-volver-a-tener-motivacion.html",
-        "slug": "de-sentirme-hundido-a-volver-a-tener-motivacion"
       }
     ]
   },
@@ -512,22 +769,22 @@
         "slug": "levantar-proyectos-que-algun-dia-funcionaron-y-hoy-no-los-tienes"
       },
       {
+        "title": "Cómo recomponerse después de una depresión grande",
+        "description": "Volver después de una depresión grande no es volver igual. Un texto real sobre reconstruirse sin apuro, sin teatro y sin exigirse milagros.",
+        "url": "/posts/como-recomponerse-despues-de-una-depresion-grande.html",
+        "slug": "como-recomponerse-despues-de-una-depresion-grande"
+      },
+      {
         "title": "De sentirme hundido a volver a tener motivación",
         "description": "Un texto sobre el paso lento y real entre sentirse muy abajo y empezar a recuperar motivación sin chamuyo.",
         "url": "/posts/de-sentirme-hundido-a-volver-a-tener-motivacion.html",
         "slug": "de-sentirme-hundido-a-volver-a-tener-motivacion"
       },
       {
-        "title": "Cómo la plata puede motivar o desmotivar",
-        "description": "La plata puede empujarte a moverte, pero también puede aplastarte cuando falta o cuando se vuelve obsesión. Un texto real sobre esa contradi…",
-        "url": "/posts/como-la-plata-motiva-o-desmotiva.html",
-        "slug": "como-la-plata-motiva-o-desmotiva"
-      },
-      {
-        "title": "Trabajar en momentos vacíos nos ayuda",
-        "description": "A veces los ratos más vacíos del día son los que más ayudan a ordenar ideas y avanzar. Un texto sobre aprovechar esos huecos sin romantizarl…",
-        "url": "/posts/trabajar-en-momentos-vacios-nos-ayuda.html",
-        "slug": "trabajar-en-momentos-vacios-nos-ayuda"
+        "title": "La gente con el chip rutinario metido en la cabeza",
+        "description": "Hay personas que viven en piloto automático sin preguntarse qué más podrían hacer con su vida. Un texto sobre rutina, obediencia interna y p…",
+        "url": "/posts/la-gente-con-el-chip-rutinario-metido-en-la-cabeza.html",
+        "slug": "la-gente-con-el-chip-rutinario-metido-en-la-cabeza"
       }
     ]
   },
@@ -577,10 +834,10 @@
         "slug": "dias-que-empiezan-despues-de-las-5-de-la-tarde"
       },
       {
-        "title": "Levantar proyectos que algún día funcionaron y hoy no los tienes",
-        "description": "Hay mañanas en las que no duele empezar de cero, sino mirar todo lo que una vez funcionó y ya no está. Aun así, volver a levantar algo roto…",
-        "url": "/posts/levantar-proyectos-que-algun-dia-funcionaron-y-hoy-no-los-tienes.html",
-        "slug": "levantar-proyectos-que-algun-dia-funcionaron-y-hoy-no-los-tienes"
+        "title": "Cómo se siente la gente que no entrena nunca",
+        "description": "No entrenar ni de día, ni de tarde, ni de noche también deja marcas. Un texto sobre el cuerpo quieto, la energía rara y lo que pasa cuando u…",
+        "url": "/posts/como-se-siente-la-gente-que-no-entrena-nunca.html",
+        "slug": "como-se-siente-la-gente-que-no-entrena-nunca"
       }
     ]
   },
@@ -624,16 +881,16 @@
         "slug": "me-activo-por-las-noches-para-hacer-todo"
       },
       {
-        "title": "Cuando dormís hasta tarde pero te levantás y querés seguir durmiendo",
-        "description": "Hay días en los que dormís muchas horas, pero igual te levantás con el cuerpo pesado y la cabeza lenta. Una reflexión honesta sobre ese cans…",
-        "url": "/posts/cuando-dormis-hasta-tarde-pero-te-levantas-y-queres-seguir-durmiendo.html",
-        "slug": "cuando-dormis-hasta-tarde-pero-te-levantas-y-queres-seguir-durmiendo"
+        "title": "Cómo se siente la gente que no entrena nunca",
+        "description": "No entrenar ni de día, ni de tarde, ni de noche también deja marcas. Un texto sobre el cuerpo quieto, la energía rara y lo que pasa cuando u…",
+        "url": "/posts/como-se-siente-la-gente-que-no-entrena-nunca.html",
+        "slug": "como-se-siente-la-gente-que-no-entrena-nunca"
       },
       {
-        "title": "De día mi cerebro está en hold",
-        "description": "Hay días en los que la cabeza no arranca hasta tarde. Un texto real sobre bloqueo mental, lentitud y esa sensación de vivir en pausa mientra…",
-        "url": "/posts/de-dia-mi-cerebro-esta-en-hold.html",
-        "slug": "de-dia-mi-cerebro-esta-en-hold"
+        "title": "Cómo se siente el cuerpo después de entrenar por la tarde",
+        "description": "Entrenar por la tarde deja una mezcla rara de cansancio, alivio y cabeza más limpia. Un texto real sobre esa sensación de haber movido el dí…",
+        "url": "/posts/como-se-siente-el-cuerpo-despues-de-entrenar-por-la-tarde.html",
+        "slug": "como-se-siente-el-cuerpo-despues-de-entrenar-por-la-tarde"
       }
     ]
   },
@@ -850,10 +1107,10 @@
         "slug": "me-activo-por-las-noches-para-hacer-todo"
       },
       {
-        "title": "Por qué no puedo dormir por las noches",
-        "description": "Un texto honesto sobre esas noches en las que el cuerpo quiere dormir pero la cabeza no se apaga.",
-        "url": "/posts/por-que-no-puedo-dormir-por-las-noches.html",
-        "slug": "por-que-no-puedo-dormir-por-las-noches"
+        "title": "La soledad no siempre es tan soledad",
+        "description": "Hay momentos de soledad que no están tan vacíos como parecen. Un texto real sobre el silencio, la presencia interna y lo que aparece cuando…",
+        "url": "/posts/la-soledad-no-siempre-es-tan-soledad.html",
+        "slug": "la-soledad-no-siempre-es-tan-soledad"
       }
     ]
   },
@@ -885,6 +1142,12 @@
     "url": "/posts/dia-de-lluvia-sin-vacios-por-dentro.html",
     "related": [
       {
+        "title": "La soledad no siempre es tan soledad",
+        "description": "Hay momentos de soledad que no están tan vacíos como parecen. Un texto real sobre el silencio, la presencia interna y lo que aparece cuando…",
+        "url": "/posts/la-soledad-no-siempre-es-tan-soledad.html",
+        "slug": "la-soledad-no-siempre-es-tan-soledad"
+      },
+      {
         "title": "Una mañana feliz pero sin nada y con mil problemas",
         "description": "Hay mañanas en las que no tenés nada resuelto, pero igual seguís. Una reflexión honesta sobre empezar el día con problemas, cansancio y una…",
         "url": "/posts/manana-feliz-sin-nada-con-mil-problemas.html",
@@ -901,12 +1164,6 @@
         "description": "Hay días en los que recién arrancás cuando el sol ya se fue. Un texto honesto sobre sentirse fuera de horario, vivir a contramano y aun así…",
         "url": "/posts/dias-que-empiezan-despues-de-las-5-de-la-tarde.html",
         "slug": "dias-que-empiezan-despues-de-las-5-de-la-tarde"
-      },
-      {
-        "title": "Cuando dormís hasta tarde pero te levantás y querés seguir durmiendo",
-        "description": "Hay días en los que dormís muchas horas, pero igual te levantás con el cuerpo pesado y la cabeza lenta. Una reflexión honesta sobre ese cans…",
-        "url": "/posts/cuando-dormis-hasta-tarde-pero-te-levantas-y-queres-seguir-durmiendo.html",
-        "slug": "cuando-dormis-hasta-tarde-pero-te-levantas-y-queres-seguir-durmiendo"
       }
     ]
   },
