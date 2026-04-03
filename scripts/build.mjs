@@ -303,9 +303,9 @@ function patchIndexHtml() {
       </nav>`);
 
   const publicacionesRegex = /<section id="publicaciones">[\s\S]*?<\/section>/i;
-  const publicacionesMatch = html.match(publicacionesRegex);
-  if (publicacionesMatch) {
-    let section = publicacionesMatch[0];
+  const match = html.match(publicacionesRegex);
+  if (match) {
+    let section = match[0];
     section = section.replace(/\s*<div class="load-more-wrap">[\s\S]*?<\/div>/g, '');
     section = section.replace(/\s*<div id="postsSentinel" aria-hidden="true"><\/div>/g, '');
     section = section.replace(
