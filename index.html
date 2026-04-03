@@ -246,6 +246,10 @@
             <button id="loadMoreBtn" class="load-more" type="button" hidden>Ver más publicaciones</button>
           </div>
           <div id="postsSentinel" aria-hidden="true"></div>
+          <div class="load-more-wrap">
+            <button id="loadMoreBtn" class="load-more" type="button" hidden>Ver más publicaciones</button>
+          </div>
+          <div id="postsSentinel" aria-hidden="true"></div>
         </section>
       </main>
 
@@ -269,6 +273,8 @@
     <div class="contact-strip">
       Contacto: <a href="https://instagram.com/https_404_3rr0r" target="_blank" rel="noopener noreferrer">@https_404_3rr0r</a>
     </div>
+
+    <div class="contact-strip">Contacto: <a href="https://instagram.com/https_404_3rr0r" target="_blank" rel="noopener noreferrer">@https_404_3rr0r</a></div>
 
     <footer>
       © 2026 buenosdia.com — mañanas reales, palabras que acompañan. ·
@@ -394,16 +400,16 @@
     function normalizeTag(str) {
       return String(str || '')
         .normalize('NFD')
-        .replace(/[\u0300-\u036f]/g, '')
+        .replace(/[̀-ͯ]/g, '')
         .toLowerCase()
-        .replace(/[^a-z0-9\s-]/g, ' ')
+        .replace(/[^a-z0-9s-]/g, ' ')
         .trim()
-        .replace(/\s+/g, ' ');
+        .replace(/s+/g, ' ');
     }
 
     function slugify(str) {
       return normalizeTag(str)
-        .replace(/\s+/g, '-')
+        .replace(/s+/g, '-')
         .replace(/-+/g, '-')
         .replace(/^-|-$/g, '');
     }
@@ -419,7 +425,7 @@
 
     function sanitizeTagLinks(root) {
       root.querySelectorAll('a[href*="/tags/"]').forEach(a => {
-        const text = (a.textContent || '').replace(/\(\d+\)\s*$/, '').trim();
+        const text = (a.textContent || '').replace(/(d+)s*$/, '').trim();
         if (!text || a.getAttribute('href') === '/tags/') return;
         a.setAttribute('href', tagHref(text));
       });
