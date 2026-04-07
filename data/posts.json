@@ -51,6 +51,59 @@
     ]
   },
   {
+    "title": "Cómo afecta que los demás ya crean saber quién sos",
+    "description": "Cuando los demás creen que ya te descifraron, muchas veces dejan de mirarte de verdad. Un texto sobre identidad, desgaste y seguir entero.",
+    "tags": [
+      "creen saber quien sos",
+      "identidad",
+      "desgaste social",
+      "prejuicios",
+      "ser malinterpretado",
+      "ambiente social",
+      "seguir entero",
+      "mirada ajena"
+    ],
+    "tagSlugs": {
+      "creen saber quien sos": "creen-saber-quien-sos",
+      "identidad": "identidad",
+      "desgaste social": "desgaste-social",
+      "prejuicios": "prejuicios",
+      "ser malinterpretado": "ser-malinterpretado",
+      "ambiente social": "ambiente-social",
+      "seguir entero": "seguir-entero",
+      "mirada ajena": "mirada-ajena"
+    },
+    "date": "2026-04-07",
+    "slug": "como-afecta-que-los-demas-ya-crean-saber-quien-sos",
+    "url": "/posts/como-afecta-que-los-demas-ya-crean-saber-quien-sos.html",
+    "related": [
+      {
+        "title": "En la universidad siempre te terminan poniendo la misma etiqueta",
+        "description": "Hay lugares donde antes de conocerte ya te ubican en una casilla. Un texto real sobre etiquetas, universidad y seguir siendo uno mismo.",
+        "url": "/posts/en-la-universidad-siempre-te-terminan-poniendo-la-misma-etiqueta.html",
+        "slug": "en-la-universidad-siempre-te-terminan-poniendo-la-misma-etiqueta"
+      },
+      {
+        "title": "Cuando sentís que ya te encasillaron antes de conocerte de verdad",
+        "description": "Esa sensación de llegar a un lugar y notar que ya decidieron quién sos antes de hablar con vos. Un texto sobre encasillamiento y presencia r…",
+        "url": "/posts/cuando-sentis-que-ya-te-encasillaron-antes-de-conocerte-de-verdad.html",
+        "slug": "cuando-sentis-que-ya-te-encasillaron-antes-de-conocerte-de-verdad"
+      },
+      {
+        "title": "Seguir siendo vos aunque el ambiente te quiera meter en un molde",
+        "description": "Cuando un ambiente te empuja a entrar en un molde, seguir siendo vos también se vuelve una forma de firmeza. Un texto sobre identidad y resi…",
+        "url": "/posts/seguir-siendo-vos-aunque-el-ambiente-te-quiera-meter-en-un-molde.html",
+        "slug": "seguir-siendo-vos-aunque-el-ambiente-te-quiera-meter-en-un-molde"
+      },
+      {
+        "title": "Cómo influye la rutina de los demás en la rutina de uno",
+        "description": "La rutina ajena también se mete en la nuestra: horarios, ritmos, exigencias y comparaciones. Un texto sobre cómo eso nos afecta más de lo qu…",
+        "url": "/posts/como-influye-la-rutina-de-los-demas-en-la-rutina-de-uno.html",
+        "slug": "como-influye-la-rutina-de-los-demas-en-la-rutina-de-uno"
+      }
+    ]
+  },
+  {
     "title": "Cómo desactivar el chip rutinario cuando te comparás con otra gente",
     "description": "Compararse con la rutina de los demás puede volverte más automático y más injusto con vos. Un texto sobre cortar ese chip y volver a tu propio ritmo.",
     "tags": [
@@ -198,16 +251,16 @@
         "slug": "dias-que-empiezan-despues-de-las-5-de-la-tarde"
       },
       {
-        "title": "Cómo elegir el momento justo para actuar ciertas cosas",
-        "description": "No todo se hace en cualquier instante. A veces elegir bien el momento cambia más que la fuerza. Un texto sobre timing, cabeza y acción.",
-        "url": "/posts/como-elegir-el-momento-justo-para-actuar-ciertas-cosas.html",
-        "slug": "como-elegir-el-momento-justo-para-actuar-ciertas-cosas"
+        "title": "Cómo afecta que los demás ya crean saber quién sos",
+        "description": "Cuando los demás creen que ya te descifraron, muchas veces dejan de mirarte de verdad. Un texto sobre identidad, desgaste y seguir entero.",
+        "url": "/posts/como-afecta-que-los-demas-ya-crean-saber-quien-sos.html",
+        "slug": "como-afecta-que-los-demas-ya-crean-saber-quien-sos"
       },
       {
-        "title": "Me activo por las noches para hacer todo",
-        "description": "Cuando cae la noche recién aparece la energía. Un texto para quienes sienten que viven mejor cuando el mundo se apaga un poco.",
-        "url": "/posts/me-activo-por-las-noches-para-hacer-todo.html",
-        "slug": "me-activo-por-las-noches-para-hacer-todo"
+        "title": "En la universidad siempre te terminan poniendo la misma etiqueta",
+        "description": "Hay lugares donde antes de conocerte ya te ubican en una casilla. Un texto real sobre etiquetas, universidad y seguir siendo uno mismo.",
+        "url": "/posts/en-la-universidad-siempre-te-terminan-poniendo-la-misma-etiqueta.html",
+        "slug": "en-la-universidad-siempre-te-terminan-poniendo-la-misma-etiqueta"
       }
     ]
   },
@@ -255,10 +308,10 @@
         "slug": "cuando-durante-el-dia-te-dan-ganas-de-hablar-con-una-chica"
       },
       {
-        "title": "La soledad no siempre es tan soledad",
-        "description": "Hay momentos de soledad que no están tan vacíos como parecen. Un texto real sobre el silencio, la presencia interna y lo que aparece cuando…",
-        "url": "/posts/la-soledad-no-siempre-es-tan-soledad.html",
-        "slug": "la-soledad-no-siempre-es-tan-soledad"
+        "title": "Estudiar rodeado de gente pero sentirte igual aparte",
+        "description": "Estar rodeado no siempre significa sentirte acompañado. Un texto sobre estudiar entre gente y seguir sintiéndote aparte.",
+        "url": "/posts/estudiar-rodeado-de-gente-pero-sentirte-igual-aparte.html",
+        "slug": "estudiar-rodeado-de-gente-pero-sentirte-igual-aparte"
       }
     ]
   },
@@ -695,6 +748,61 @@
     ]
   },
   {
+    "title": "Cuando sentís que ya te encasillaron antes de conocerte de verdad",
+    "description": "Esa sensación de llegar a un lugar y notar que ya decidieron quién sos antes de hablar con vos. Un texto sobre encasillamiento y presencia real.",
+    "tags": [
+      "encasillaron antes de conocerte",
+      "prejuicios",
+      "primera impresion",
+      "sentirte juzgado",
+      "identidad real",
+      "universidad",
+      "ambiente social",
+      "encasillado",
+      "vida social"
+    ],
+    "tagSlugs": {
+      "encasillaron antes de conocerte": "encasillaron-antes-de-conocerte",
+      "prejuicios": "prejuicios",
+      "primera impresion": "primera-impresion",
+      "sentirte juzgado": "sentirte-juzgado",
+      "identidad real": "identidad-real",
+      "universidad": "universidad",
+      "ambiente social": "ambiente-social",
+      "encasillado": "encasillado",
+      "vida social": "vida-social"
+    },
+    "date": "2026-04-07",
+    "slug": "cuando-sentis-que-ya-te-encasillaron-antes-de-conocerte-de-verdad",
+    "url": "/posts/cuando-sentis-que-ya-te-encasillaron-antes-de-conocerte-de-verdad.html",
+    "related": [
+      {
+        "title": "En la universidad siempre te terminan poniendo la misma etiqueta",
+        "description": "Hay lugares donde antes de conocerte ya te ubican en una casilla. Un texto real sobre etiquetas, universidad y seguir siendo uno mismo.",
+        "url": "/posts/en-la-universidad-siempre-te-terminan-poniendo-la-misma-etiqueta.html",
+        "slug": "en-la-universidad-siempre-te-terminan-poniendo-la-misma-etiqueta"
+      },
+      {
+        "title": "Seguir siendo vos aunque el ambiente te quiera meter en un molde",
+        "description": "Cuando un ambiente te empuja a entrar en un molde, seguir siendo vos también se vuelve una forma de firmeza. Un texto sobre identidad y resi…",
+        "url": "/posts/seguir-siendo-vos-aunque-el-ambiente-te-quiera-meter-en-un-molde.html",
+        "slug": "seguir-siendo-vos-aunque-el-ambiente-te-quiera-meter-en-un-molde"
+      },
+      {
+        "title": "Cómo afecta que los demás ya crean saber quién sos",
+        "description": "Cuando los demás creen que ya te descifraron, muchas veces dejan de mirarte de verdad. Un texto sobre identidad, desgaste y seguir entero.",
+        "url": "/posts/como-afecta-que-los-demas-ya-crean-saber-quien-sos.html",
+        "slug": "como-afecta-que-los-demas-ya-crean-saber-quien-sos"
+      },
+      {
+        "title": "Cuando los amigos se bajan del barco por las noches",
+        "description": "Hay noches en las que duele más la ausencia de los que estaban cerca que cualquier problema en sí. Y aun así, la mañana llega, incluso cuand…",
+        "url": "/posts/cuando-los-amigos-se-bajan-del-barco-por-las-noches.html",
+        "slug": "cuando-los-amigos-se-bajan-del-barco-por-las-noches"
+      }
+    ]
+  },
+  {
     "title": "Cuando te despertás y tus amigos te pasan a buscar para irte de fiesta",
     "description": "A veces el día arranca sin plan y de golpe tus amigos caen a buscarte. Un texto sobre esa energía inesperada que te saca del eje y también te devuelve vida.",
     "tags": [
@@ -1017,6 +1125,110 @@
         "description": "Un texto sobre el paso lento y real entre sentirse muy abajo y empezar a recuperar motivación sin chamuyo.",
         "url": "/posts/de-sentirme-hundido-a-volver-a-tener-motivacion.html",
         "slug": "de-sentirme-hundido-a-volver-a-tener-motivacion"
+      }
+    ]
+  },
+  {
+    "title": "En la universidad siempre te terminan poniendo la misma etiqueta",
+    "description": "Hay lugares donde antes de conocerte ya te ubican en una casilla. Un texto real sobre etiquetas, universidad y seguir siendo uno mismo.",
+    "tags": [
+      "universidad etiquetas",
+      "encasillado",
+      "prejuicios",
+      "vida universitaria",
+      "identidad",
+      "seguir siendo uno mismo",
+      "ambiente universitario"
+    ],
+    "tagSlugs": {
+      "universidad etiquetas": "universidad-etiquetas",
+      "encasillado": "encasillado",
+      "prejuicios": "prejuicios",
+      "vida universitaria": "vida-universitaria",
+      "identidad": "identidad",
+      "seguir siendo uno mismo": "seguir-siendo-uno-mismo",
+      "ambiente universitario": "ambiente-universitario"
+    },
+    "date": "2026-04-07",
+    "slug": "en-la-universidad-siempre-te-terminan-poniendo-la-misma-etiqueta",
+    "url": "/posts/en-la-universidad-siempre-te-terminan-poniendo-la-misma-etiqueta.html",
+    "related": [
+      {
+        "title": "Cuando sentís que ya te encasillaron antes de conocerte de verdad",
+        "description": "Esa sensación de llegar a un lugar y notar que ya decidieron quién sos antes de hablar con vos. Un texto sobre encasillamiento y presencia r…",
+        "url": "/posts/cuando-sentis-que-ya-te-encasillaron-antes-de-conocerte-de-verdad.html",
+        "slug": "cuando-sentis-que-ya-te-encasillaron-antes-de-conocerte-de-verdad"
+      },
+      {
+        "title": "Cómo afecta que los demás ya crean saber quién sos",
+        "description": "Cuando los demás creen que ya te descifraron, muchas veces dejan de mirarte de verdad. Un texto sobre identidad, desgaste y seguir entero.",
+        "url": "/posts/como-afecta-que-los-demas-ya-crean-saber-quien-sos.html",
+        "slug": "como-afecta-que-los-demas-ya-crean-saber-quien-sos"
+      },
+      {
+        "title": "Seguir siendo vos aunque el ambiente te quiera meter en un molde",
+        "description": "Cuando un ambiente te empuja a entrar en un molde, seguir siendo vos también se vuelve una forma de firmeza. Un texto sobre identidad y resi…",
+        "url": "/posts/seguir-siendo-vos-aunque-el-ambiente-te-quiera-meter-en-un-molde.html",
+        "slug": "seguir-siendo-vos-aunque-el-ambiente-te-quiera-meter-en-un-molde"
+      },
+      {
+        "title": "Días que empiezan después de las 5 de la tarde",
+        "description": "Hay días en los que recién arrancás cuando el sol ya se fue. Un texto honesto sobre sentirse fuera de horario, vivir a contramano y aun así…",
+        "url": "/posts/dias-que-empiezan-despues-de-las-5-de-la-tarde.html",
+        "slug": "dias-que-empiezan-despues-de-las-5-de-la-tarde"
+      }
+    ]
+  },
+  {
+    "title": "Estudiar rodeado de gente pero sentirte igual aparte",
+    "description": "Estar rodeado no siempre significa sentirte acompañado. Un texto sobre estudiar entre gente y seguir sintiéndote aparte.",
+    "tags": [
+      "estudiar rodeado de gente",
+      "sentirte aparte",
+      "universidad",
+      "soledad social",
+      "vida universitaria",
+      "desconexion",
+      "pertenencia",
+      "estudiar"
+    ],
+    "tagSlugs": {
+      "estudiar rodeado de gente": "estudiar-rodeado-de-gente",
+      "sentirte aparte": "sentirte-aparte",
+      "universidad": "universidad",
+      "soledad social": "soledad-social",
+      "vida universitaria": "vida-universitaria",
+      "desconexion": "desconexion",
+      "pertenencia": "pertenencia",
+      "estudiar": "estudiar"
+    },
+    "date": "2026-04-07",
+    "slug": "estudiar-rodeado-de-gente-pero-sentirte-igual-aparte",
+    "url": "/posts/estudiar-rodeado-de-gente-pero-sentirte-igual-aparte.html",
+    "related": [
+      {
+        "title": "Cuando sentís que ya te encasillaron antes de conocerte de verdad",
+        "description": "Esa sensación de llegar a un lugar y notar que ya decidieron quién sos antes de hablar con vos. Un texto sobre encasillamiento y presencia r…",
+        "url": "/posts/cuando-sentis-que-ya-te-encasillaron-antes-de-conocerte-de-verdad.html",
+        "slug": "cuando-sentis-que-ya-te-encasillaron-antes-de-conocerte-de-verdad"
+      },
+      {
+        "title": "En la universidad siempre te terminan poniendo la misma etiqueta",
+        "description": "Hay lugares donde antes de conocerte ya te ubican en una casilla. Un texto real sobre etiquetas, universidad y seguir siendo uno mismo.",
+        "url": "/posts/en-la-universidad-siempre-te-terminan-poniendo-la-misma-etiqueta.html",
+        "slug": "en-la-universidad-siempre-te-terminan-poniendo-la-misma-etiqueta"
+      },
+      {
+        "title": "La soledad no siempre es tan soledad",
+        "description": "Hay momentos de soledad que no están tan vacíos como parecen. Un texto real sobre el silencio, la presencia interna y lo que aparece cuando…",
+        "url": "/posts/la-soledad-no-siempre-es-tan-soledad.html",
+        "slug": "la-soledad-no-siempre-es-tan-soledad"
+      },
+      {
+        "title": "Me activo por las noches para hacer todo",
+        "description": "Cuando cae la noche recién aparece la energía. Un texto para quienes sienten que viven mejor cuando el mundo se apaga un poco.",
+        "url": "/posts/me-activo-por-las-noches-para-hacer-todo.html",
+        "slug": "me-activo-por-las-noches-para-hacer-todo"
       }
     ]
   },
@@ -1667,6 +1879,59 @@
         "description": "Entrenar por la tarde deja una mezcla rara de cansancio, alivio y cabeza más limpia. Un texto real sobre esa sensación de haber movido el dí…",
         "url": "/posts/como-se-siente-el-cuerpo-despues-de-entrenar-por-la-tarde.html",
         "slug": "como-se-siente-el-cuerpo-despues-de-entrenar-por-la-tarde"
+      }
+    ]
+  },
+  {
+    "title": "Seguir siendo vos aunque el ambiente te quiera meter en un molde",
+    "description": "Cuando un ambiente te empuja a entrar en un molde, seguir siendo vos también se vuelve una forma de firmeza. Un texto sobre identidad y resistencia suave.",
+    "tags": [
+      "seguir siendo vos",
+      "meterte en un molde",
+      "ambiente social",
+      "identidad",
+      "presion social",
+      "universidad",
+      "firmeza",
+      "molde social"
+    ],
+    "tagSlugs": {
+      "seguir siendo vos": "seguir-siendo-vos",
+      "meterte en un molde": "meterte-en-un-molde",
+      "ambiente social": "ambiente-social",
+      "identidad": "identidad",
+      "presion social": "presion-social",
+      "universidad": "universidad",
+      "firmeza": "firmeza",
+      "molde social": "molde-social"
+    },
+    "date": "2026-04-07",
+    "slug": "seguir-siendo-vos-aunque-el-ambiente-te-quiera-meter-en-un-molde",
+    "url": "/posts/seguir-siendo-vos-aunque-el-ambiente-te-quiera-meter-en-un-molde.html",
+    "related": [
+      {
+        "title": "Cuando sentís que ya te encasillaron antes de conocerte de verdad",
+        "description": "Esa sensación de llegar a un lugar y notar que ya decidieron quién sos antes de hablar con vos. Un texto sobre encasillamiento y presencia r…",
+        "url": "/posts/cuando-sentis-que-ya-te-encasillaron-antes-de-conocerte-de-verdad.html",
+        "slug": "cuando-sentis-que-ya-te-encasillaron-antes-de-conocerte-de-verdad"
+      },
+      {
+        "title": "En la universidad siempre te terminan poniendo la misma etiqueta",
+        "description": "Hay lugares donde antes de conocerte ya te ubican en una casilla. Un texto real sobre etiquetas, universidad y seguir siendo uno mismo.",
+        "url": "/posts/en-la-universidad-siempre-te-terminan-poniendo-la-misma-etiqueta.html",
+        "slug": "en-la-universidad-siempre-te-terminan-poniendo-la-misma-etiqueta"
+      },
+      {
+        "title": "Cómo afecta que los demás ya crean saber quién sos",
+        "description": "Cuando los demás creen que ya te descifraron, muchas veces dejan de mirarte de verdad. Un texto sobre identidad, desgaste y seguir entero.",
+        "url": "/posts/como-afecta-que-los-demas-ya-crean-saber-quien-sos.html",
+        "slug": "como-afecta-que-los-demas-ya-crean-saber-quien-sos"
+      },
+      {
+        "title": "Cuando los amigos se bajan del barco por las noches",
+        "description": "Hay noches en las que duele más la ausencia de los que estaban cerca que cualquier problema en sí. Y aun así, la mañana llega, incluso cuand…",
+        "url": "/posts/cuando-los-amigos-se-bajan-del-barco-por-las-noches.html",
+        "slug": "cuando-los-amigos-se-bajan-del-barco-por-las-noches"
       }
     ]
   },
