@@ -151,10 +151,10 @@
         "slug": "cuando-los-amigos-se-bajan-del-barco-por-las-noches"
       },
       {
-        "title": "Levantar proyectos que algún día funcionaron y hoy no los tienes",
-        "description": "Hay mañanas en las que no duele empezar de cero, sino mirar todo lo que una vez funcionó y ya no está. Aun así, volver a levantar algo roto…",
-        "url": "/posts/levantar-proyectos-que-algun-dia-funcionaron-y-hoy-no-los-tienes.html",
-        "slug": "levantar-proyectos-que-algun-dia-funcionaron-y-hoy-no-los-tienes"
+        "title": "Cuando perdés la frecuencia y empezás a sentir que nada sale bien",
+        "description": "Hay días en los que se corta algo adentro y hasta lo simple cuesta más. Un texto sobre perder la sintonía y sentir que nada termina de salir…",
+        "url": "/posts/cuando-perdes-la-frecuencia-y-empezas-a-sentir-que-nada-sale-bien.html",
+        "slug": "cuando-perdes-la-frecuencia-y-empezas-a-sentir-que-nada-sale-bien"
       }
     ]
   },
@@ -245,6 +245,12 @@
         "slug": "como-desactivar-el-chip-rutinario-cuando-te-comparas-con-otra-gente"
       },
       {
+        "title": "Cuando sentís que la frecuencia se te cae por absorber demasiado a los demás",
+        "description": "A veces no te apagás solo: te vas llenando de energía ajena. Un texto sobre absorber demasiado y perder tu propia señal.",
+        "url": "/posts/cuando-sentis-que-la-frecuencia-se-te-cae-por-absorber-demasiado-a-los-demas.html",
+        "slug": "cuando-sentis-que-la-frecuencia-se-te-cae-por-absorber-demasiado-a-los-demas"
+      },
+      {
         "title": "Días que empiezan después de las 5 de la tarde",
         "description": "Hay días en los que recién arrancás cuando el sol ya se fue. Un texto honesto sobre sentirse fuera de horario, vivir a contramano y aun así…",
         "url": "/posts/dias-que-empiezan-despues-de-las-5-de-la-tarde.html",
@@ -255,12 +261,6 @@
         "description": "Cuando los demás creen que ya te descifraron, muchas veces dejan de mirarte de verdad. Un texto sobre identidad, desgaste y seguir entero.",
         "url": "/posts/como-afecta-que-los-demas-ya-crean-saber-quien-sos.html",
         "slug": "como-afecta-que-los-demas-ya-crean-saber-quien-sos"
-      },
-      {
-        "title": "En la universidad siempre te terminan poniendo la misma etiqueta",
-        "description": "Hay lugares donde antes de conocerte ya te ubican en una casilla. Un texto real sobre etiquetas, universidad y seguir siendo uno mismo.",
-        "url": "/posts/en-la-universidad-siempre-te-terminan-poniendo-la-misma-etiqueta.html",
-        "slug": "en-la-universidad-siempre-te-terminan-poniendo-la-misma-etiqueta"
       }
     ]
   },
@@ -642,6 +642,161 @@
     ]
   },
   {
+    "title": "Cuando estás en buena sintonía hasta las decisiones salen mejor",
+    "description": "No siempre decidís mejor por pensar más, sino por estar más en eje. Un texto sobre sintonía interna y decisiones más limpias.",
+    "tags": [
+      "decisiones y frecuencia",
+      "buena sintonia",
+      "claridad interna",
+      "eje mental",
+      "elegir mejor",
+      "timing personal",
+      "intuicion"
+    ],
+    "tagSlugs": {
+      "decisiones y frecuencia": "decisiones-y-frecuencia",
+      "buena sintonia": "buena-sintonia",
+      "claridad interna": "claridad-interna",
+      "eje mental": "eje-mental",
+      "elegir mejor": "elegir-mejor",
+      "timing personal": "timing-personal",
+      "intuicion": "intuicion"
+    },
+    "date": "2026-04-07",
+    "slug": "cuando-estas-en-buena-sintonia-hasta-las-decisiones-salen-mejor",
+    "url": "/posts/cuando-estas-en-buena-sintonia-hasta-las-decisiones-salen-mejor.html",
+    "related": [
+      {
+        "title": "Cómo elegir el momento justo para actuar ciertas cosas",
+        "description": "No todo se hace en cualquier instante. A veces elegir bien el momento cambia más que la fuerza. Un texto sobre timing, cabeza y acción.",
+        "url": "/posts/como-elegir-el-momento-justo-para-actuar-ciertas-cosas.html",
+        "slug": "como-elegir-el-momento-justo-para-actuar-ciertas-cosas"
+      },
+      {
+        "title": "Cuando todo te sale natural porque entraste en tu frecuencia",
+        "description": "Hay días en los que no forzás nada y sin embargo todo encaja mejor. Un texto real sobre esa frecuencia interna donde las cosas salen más nat…",
+        "url": "/posts/cuando-todo-te-sale-natural-porque-entraste-en-tu-frecuencia.html",
+        "slug": "cuando-todo-te-sale-natural-porque-entraste-en-tu-frecuencia"
+      },
+      {
+        "title": "De sentirme hundido a volver a tener motivación",
+        "description": "Un texto sobre el paso lento y real entre sentirse muy abajo y empezar a recuperar motivación sin chamuyo.",
+        "url": "/posts/de-sentirme-hundido-a-volver-a-tener-motivacion.html",
+        "slug": "de-sentirme-hundido-a-volver-a-tener-motivacion"
+      },
+      {
+        "title": "Cuando te despertás y tus amigos te pasan a buscar para irte de fiesta",
+        "description": "A veces el día arranca sin plan y de golpe tus amigos caen a buscarte. Un texto sobre esa energía inesperada que te saca del eje y también t…",
+        "url": "/posts/cuando-te-despertas-y-tus-amigos-te-pasan-a-buscar-para-irte-de-fiesta.html",
+        "slug": "cuando-te-despertas-y-tus-amigos-te-pasan-a-buscar-para-irte-de-fiesta"
+      }
+    ]
+  },
+  {
+    "title": "Cuando fluís natural y parece que el mundo se acomoda solo",
+    "description": "Un texto sobre esos momentos donde no todo está perfecto, pero vos entrás tan en eje que hasta el mundo parece responder distinto.",
+    "tags": [
+      "fluir natural",
+      "mundo se acomoda",
+      "eje interno",
+      "frecuencia alta",
+      "dias buenos",
+      "claridad",
+      "energia alineada",
+      "vida real"
+    ],
+    "tagSlugs": {
+      "fluir natural": "fluir-natural",
+      "mundo se acomoda": "mundo-se-acomoda",
+      "eje interno": "eje-interno",
+      "frecuencia alta": "frecuencia-alta",
+      "dias buenos": "dias-buenos",
+      "claridad": "claridad",
+      "energia alineada": "energia-alineada",
+      "vida real": "vida-real"
+    },
+    "date": "2026-04-07",
+    "slug": "cuando-fluis-natural-y-parece-que-el-mundo-se-acomoda-solo",
+    "url": "/posts/cuando-fluis-natural-y-parece-que-el-mundo-se-acomoda-solo.html",
+    "related": [
+      {
+        "title": "Cuando todo te sale natural porque entraste en tu frecuencia",
+        "description": "Hay días en los que no forzás nada y sin embargo todo encaja mejor. Un texto real sobre esa frecuencia interna donde las cosas salen más nat…",
+        "url": "/posts/cuando-todo-te-sale-natural-porque-entraste-en-tu-frecuencia.html",
+        "slug": "cuando-todo-te-sale-natural-porque-entraste-en-tu-frecuencia"
+      },
+      {
+        "title": "Trabajar en momentos vacíos nos ayuda",
+        "description": "A veces los ratos más vacíos del día son los que más ayudan a ordenar ideas y avanzar. Un texto sobre aprovechar esos huecos sin romantizarl…",
+        "url": "/posts/trabajar-en-momentos-vacios-nos-ayuda.html",
+        "slug": "trabajar-en-momentos-vacios-nos-ayuda"
+      },
+      {
+        "title": "Cuando volvés a tu centro y entendés que no todo era mala suerte",
+        "description": "A veces parecía que todo salía mal, pero en realidad estabas lejos de tu centro. Un texto sobre volver al eje y leer distinto lo vivido.",
+        "url": "/posts/cuando-volves-a-tu-centro-y-entendes-que-no-todo-era-mala-suerte.html",
+        "slug": "cuando-volves-a-tu-centro-y-entendes-que-no-todo-era-mala-suerte"
+      },
+      {
+        "title": "Cómo se siente el cuerpo después de entrenar por la tarde",
+        "description": "Entrenar por la tarde deja una mezcla rara de cansancio, alivio y cabeza más limpia. Un texto real sobre esa sensación de haber movido el dí…",
+        "url": "/posts/como-se-siente-el-cuerpo-despues-de-entrenar-por-la-tarde.html",
+        "slug": "como-se-siente-el-cuerpo-despues-de-entrenar-por-la-tarde"
+      }
+    ]
+  },
+  {
+    "title": "Cuando la Matrix te mete ruido y te corta la sintonía",
+    "description": "Una reflexión sobre esos días donde todo parece venir contaminado por ruido externo, interferencia y energía ajena que te corta la naturalidad.",
+    "tags": [
+      "matrix ruido",
+      "interferencia mental",
+      "energia ajena",
+      "claridad mental",
+      "frecuencia personal",
+      "sintonia cortada",
+      "vida real"
+    ],
+    "tagSlugs": {
+      "matrix ruido": "matrix-ruido",
+      "interferencia mental": "interferencia-mental",
+      "energia ajena": "energia-ajena",
+      "claridad mental": "claridad-mental",
+      "frecuencia personal": "frecuencia-personal",
+      "sintonia cortada": "sintonia-cortada",
+      "vida real": "vida-real"
+    },
+    "date": "2026-04-07",
+    "slug": "cuando-la-matrix-te-mete-ruido-y-te-corta-la-sintonia",
+    "url": "/posts/cuando-la-matrix-te-mete-ruido-y-te-corta-la-sintonia.html",
+    "related": [
+      {
+        "title": "Cómo desactivar el chip rutinario cuando te comparás con otra gente",
+        "description": "Compararse con la rutina de los demás puede volverte más automático y más injusto con vos. Un texto sobre cortar ese chip y volver a tu prop…",
+        "url": "/posts/como-desactivar-el-chip-rutinario-cuando-te-comparas-con-otra-gente.html",
+        "slug": "como-desactivar-el-chip-rutinario-cuando-te-comparas-con-otra-gente"
+      },
+      {
+        "title": "Arrancar el lunes aunque haya lluvia, tormenta y gente que te quiere quebrar",
+        "description": "No siempre el problema es el clima. A veces también pesa la mala energía ajena, la presión y la sensación de que te quieren ver caer. Un tex…",
+        "url": "/posts/arrancar-el-lunes-aunque-haya-lluvia-tormenta-y-gente-que-te-quiere-quebrar.html",
+        "slug": "arrancar-el-lunes-aunque-haya-lluvia-tormenta-y-gente-que-te-quiere-quebrar"
+      },
+      {
+        "title": "Me activo por las noches para hacer todo",
+        "description": "Cuando cae la noche recién aparece la energía. Un texto para quienes sienten que viven mejor cuando el mundo se apaga un poco.",
+        "url": "/posts/me-activo-por-las-noches-para-hacer-todo.html",
+        "slug": "me-activo-por-las-noches-para-hacer-todo"
+      },
+      {
+        "title": "Cuando volvés con tus amigos de fiesta y sabés que al otro día hay que ir a laburar",
+        "description": "Volvés de noche o de madrugada, la pasaste bien, pero ya asoma el peso del día siguiente. Un texto sobre ese cruce raro entre disfrute, cans…",
+        "url": "/posts/cuando-volves-con-tus-amigos-de-fiesta-y-sabes-que-al-otro-dia-hay-que-ir-a-laburar.html",
+        "slug": "cuando-volves-con-tus-amigos-de-fiesta-y-sabes-que-al-otro-dia-hay-que-ir-a-laburar"
+      }
+    ]
+  },
+  {
     "title": "Cuando los amigos solo están si hay plata de por medio",
     "description": "Hay vínculos que parecen cercanos hasta que se termina la plata. Un texto sobre amistades interesadas y la claridad dolorosa que eso deja.",
     "tags": [
@@ -695,6 +850,110 @@
     ]
   },
   {
+    "title": "Cuando perdés la frecuencia y empezás a sentir que nada sale bien",
+    "description": "Hay días en los que se corta algo adentro y hasta lo simple cuesta más. Un texto sobre perder la sintonía y sentir que nada termina de salir.",
+    "tags": [
+      "perder la frecuencia",
+      "nada sale bien",
+      "sintonia rota",
+      "bloqueo mental",
+      "cansancio interno",
+      "autoboicot",
+      "rutina mental",
+      "dias dificiles"
+    ],
+    "tagSlugs": {
+      "perder la frecuencia": "perder-la-frecuencia",
+      "nada sale bien": "nada-sale-bien",
+      "sintonia rota": "sintonia-rota",
+      "bloqueo mental": "bloqueo-mental",
+      "cansancio interno": "cansancio-interno",
+      "autoboicot": "autoboicot",
+      "rutina mental": "rutina-mental",
+      "dias dificiles": "dias-dificiles"
+    },
+    "date": "2026-04-07",
+    "slug": "cuando-perdes-la-frecuencia-y-empezas-a-sentir-que-nada-sale-bien",
+    "url": "/posts/cuando-perdes-la-frecuencia-y-empezas-a-sentir-que-nada-sale-bien.html",
+    "related": [
+      {
+        "title": "Días que empiezan después de las 5 de la tarde",
+        "description": "Hay días en los que recién arrancás cuando el sol ya se fue. Un texto honesto sobre sentirse fuera de horario, vivir a contramano y aun así…",
+        "url": "/posts/dias-que-empiezan-despues-de-las-5-de-la-tarde.html",
+        "slug": "dias-que-empiezan-despues-de-las-5-de-la-tarde"
+      },
+      {
+        "title": "De día mi cerebro está en hold",
+        "description": "Hay días en los que la cabeza no arranca hasta tarde. Un texto real sobre bloqueo mental, lentitud y esa sensación de vivir en pausa mientra…",
+        "url": "/posts/de-dia-mi-cerebro-esta-en-hold.html",
+        "slug": "de-dia-mi-cerebro-esta-en-hold"
+      },
+      {
+        "title": "De sentirme hundido a volver a tener motivación",
+        "description": "Un texto sobre el paso lento y real entre sentirse muy abajo y empezar a recuperar motivación sin chamuyo.",
+        "url": "/posts/de-sentirme-hundido-a-volver-a-tener-motivacion.html",
+        "slug": "de-sentirme-hundido-a-volver-a-tener-motivacion"
+      },
+      {
+        "title": "Cuando dormís hasta tarde pero te levantás y querés seguir durmiendo",
+        "description": "Hay días en los que dormís muchas horas, pero igual te levantás con el cuerpo pesado y la cabeza lenta. Una reflexión honesta sobre ese cans…",
+        "url": "/posts/cuando-dormis-hasta-tarde-pero-te-levantas-y-queres-seguir-durmiendo.html",
+        "slug": "cuando-dormis-hasta-tarde-pero-te-levantas-y-queres-seguir-durmiendo"
+      }
+    ]
+  },
+  {
+    "title": "Cuando querés forzar la frecuencia y por eso mismo se te escapa",
+    "description": "Hay estados que no vuelven por obligación. Un texto sobre querer entrar en flow a la fuerza y terminar alejándolo más.",
+    "tags": [
+      "forzar la frecuencia",
+      "flow forzado",
+      "naturalidad",
+      "ansiedad de rendimiento",
+      "autoboicot",
+      "presion interna",
+      "querer fluir"
+    ],
+    "tagSlugs": {
+      "forzar la frecuencia": "forzar-la-frecuencia",
+      "flow forzado": "flow-forzado",
+      "naturalidad": "naturalidad",
+      "ansiedad de rendimiento": "ansiedad-de-rendimiento",
+      "autoboicot": "autoboicot",
+      "presion interna": "presion-interna",
+      "querer fluir": "querer-fluir"
+    },
+    "date": "2026-04-07",
+    "slug": "cuando-queres-forzar-la-frecuencia-y-por-eso-mismo-se-te-escapa",
+    "url": "/posts/cuando-queres-forzar-la-frecuencia-y-por-eso-mismo-se-te-escapa.html",
+    "related": [
+      {
+        "title": "Cuando perdés la frecuencia y empezás a sentir que nada sale bien",
+        "description": "Hay días en los que se corta algo adentro y hasta lo simple cuesta más. Un texto sobre perder la sintonía y sentir que nada termina de salir…",
+        "url": "/posts/cuando-perdes-la-frecuencia-y-empezas-a-sentir-que-nada-sale-bien.html",
+        "slug": "cuando-perdes-la-frecuencia-y-empezas-a-sentir-que-nada-sale-bien"
+      },
+      {
+        "title": "De sentirme hundido a volver a tener motivación",
+        "description": "Un texto sobre el paso lento y real entre sentirse muy abajo y empezar a recuperar motivación sin chamuyo.",
+        "url": "/posts/de-sentirme-hundido-a-volver-a-tener-motivacion.html",
+        "slug": "de-sentirme-hundido-a-volver-a-tener-motivacion"
+      },
+      {
+        "title": "Arrancar el lunes aunque haya lluvia, tormenta y gente que te quiere quebrar",
+        "description": "No siempre el problema es el clima. A veces también pesa la mala energía ajena, la presión y la sensación de que te quieren ver caer. Un tex…",
+        "url": "/posts/arrancar-el-lunes-aunque-haya-lluvia-tormenta-y-gente-que-te-quiere-quebrar.html",
+        "slug": "arrancar-el-lunes-aunque-haya-lluvia-tormenta-y-gente-que-te-quiere-quebrar"
+      },
+      {
+        "title": "Cómo recomponerse después de una depresión grande",
+        "description": "Volver después de una depresión grande no es volver igual. Un texto real sobre reconstruirse sin apuro, sin teatro y sin exigirse milagros.",
+        "url": "/posts/como-recomponerse-despues-de-una-depresion-grande.html",
+        "slug": "como-recomponerse-despues-de-una-depresion-grande"
+      }
+    ]
+  },
+  {
     "title": "Cuando salís a caminar por la tarde y no hay nadie, pero no te sentís solo",
     "description": "Hay tardes en las que salís a caminar, no hay nadie alrededor y sin embargo no te sentís mal. Una reflexión sobre esa soledad rara que también puede traer paz.",
     "tags": [
@@ -744,6 +1003,57 @@
         "description": "No tener plata duele, pero también existe gente que, aun en esa falta, encuentra motivos para estar bien. Un texto real sobre esa contradicc…",
         "url": "/posts/la-tristeza-cuando-no-hay-plata-y-aun-asi-hay-gente-contenta.html",
         "slug": "la-tristeza-cuando-no-hay-plata-y-aun-asi-hay-gente-contenta"
+      }
+    ]
+  },
+  {
+    "title": "Cuando sentís que la frecuencia se te cae por absorber demasiado a los demás",
+    "description": "A veces no te apagás solo: te vas llenando de energía ajena. Un texto sobre absorber demasiado y perder tu propia señal.",
+    "tags": [
+      "absorber energia ajena",
+      "frecuencia baja",
+      "influencia externa",
+      "comparacion",
+      "rutina de los demas",
+      "saturacion social",
+      "eje propio"
+    ],
+    "tagSlugs": {
+      "absorber energia ajena": "absorber-energia-ajena",
+      "frecuencia baja": "frecuencia-baja",
+      "influencia externa": "influencia-externa",
+      "comparacion": "comparacion",
+      "rutina de los demas": "rutina-de-los-demas",
+      "saturacion social": "saturacion-social",
+      "eje propio": "eje-propio"
+    },
+    "date": "2026-04-07",
+    "slug": "cuando-sentis-que-la-frecuencia-se-te-cae-por-absorber-demasiado-a-los-demas",
+    "url": "/posts/cuando-sentis-que-la-frecuencia-se-te-cae-por-absorber-demasiado-a-los-demas.html",
+    "related": [
+      {
+        "title": "Cómo influye la rutina de los demás en la rutina de uno",
+        "description": "La rutina ajena también se mete en la nuestra: horarios, ritmos, exigencias y comparaciones. Un texto sobre cómo eso nos afecta más de lo qu…",
+        "url": "/posts/como-influye-la-rutina-de-los-demas-en-la-rutina-de-uno.html",
+        "slug": "como-influye-la-rutina-de-los-demas-en-la-rutina-de-uno"
+      },
+      {
+        "title": "Cómo desactivar el chip rutinario cuando te comparás con otra gente",
+        "description": "Compararse con la rutina de los demás puede volverte más automático y más injusto con vos. Un texto sobre cortar ese chip y volver a tu prop…",
+        "url": "/posts/como-desactivar-el-chip-rutinario-cuando-te-comparas-con-otra-gente.html",
+        "slug": "como-desactivar-el-chip-rutinario-cuando-te-comparas-con-otra-gente"
+      },
+      {
+        "title": "Cuando sentís que ya te encasillaron antes de conocerte de verdad",
+        "description": "Esa sensación de llegar a un lugar y notar que ya decidieron quién sos antes de hablar con vos. Un texto sobre encasillamiento y presencia r…",
+        "url": "/posts/cuando-sentis-que-ya-te-encasillaron-antes-de-conocerte-de-verdad.html",
+        "slug": "cuando-sentis-que-ya-te-encasillaron-antes-de-conocerte-de-verdad"
+      },
+      {
+        "title": "Cuando te despertás y tus amigos te pasan a buscar para irte de fiesta",
+        "description": "A veces el día arranca sin plan y de golpe tus amigos caen a buscarte. Un texto sobre esa energía inesperada que te saca del eje y también t…",
+        "url": "/posts/cuando-te-despertas-y-tus-amigos-te-pasan-a-buscar-para-irte-de-fiesta.html",
+        "slug": "cuando-te-despertas-y-tus-amigos-te-pasan-a-buscar-para-irte-de-fiesta"
       }
     ]
   },
@@ -803,6 +1113,57 @@
     ]
   },
   {
+    "title": "Cuando te desalineás y empezás a hacer todo desde la pelea interna",
+    "description": "Hay días donde no falla el plan: falla el estado desde el que lo hacés. Un texto sobre desalineación y desgaste interior.",
+    "tags": [
+      "pelea interna",
+      "desalineacion",
+      "frecuencia rota",
+      "desgaste interior",
+      "ruido mental",
+      "autoboicot",
+      "vida real"
+    ],
+    "tagSlugs": {
+      "pelea interna": "pelea-interna",
+      "desalineacion": "desalineacion",
+      "frecuencia rota": "frecuencia-rota",
+      "desgaste interior": "desgaste-interior",
+      "ruido mental": "ruido-mental",
+      "autoboicot": "autoboicot",
+      "vida real": "vida-real"
+    },
+    "date": "2026-04-07",
+    "slug": "cuando-te-desalineas-y-empezas-a-hacer-todo-desde-la-pelea-interna",
+    "url": "/posts/cuando-te-desalineas-y-empezas-a-hacer-todo-desde-la-pelea-interna.html",
+    "related": [
+      {
+        "title": "Cómo desactivar el chip rutinario cuando te comparás con otra gente",
+        "description": "Compararse con la rutina de los demás puede volverte más automático y más injusto con vos. Un texto sobre cortar ese chip y volver a tu prop…",
+        "url": "/posts/como-desactivar-el-chip-rutinario-cuando-te-comparas-con-otra-gente.html",
+        "slug": "como-desactivar-el-chip-rutinario-cuando-te-comparas-con-otra-gente"
+      },
+      {
+        "title": "Cuando perdés la frecuencia y empezás a sentir que nada sale bien",
+        "description": "Hay días en los que se corta algo adentro y hasta lo simple cuesta más. Un texto sobre perder la sintonía y sentir que nada termina de salir…",
+        "url": "/posts/cuando-perdes-la-frecuencia-y-empezas-a-sentir-que-nada-sale-bien.html",
+        "slug": "cuando-perdes-la-frecuencia-y-empezas-a-sentir-que-nada-sale-bien"
+      },
+      {
+        "title": "Cuando volvés con tus amigos de fiesta y sabés que al otro día hay que ir a laburar",
+        "description": "Volvés de noche o de madrugada, la pasaste bien, pero ya asoma el peso del día siguiente. Un texto sobre ese cruce raro entre disfrute, cans…",
+        "url": "/posts/cuando-volves-con-tus-amigos-de-fiesta-y-sabes-que-al-otro-dia-hay-que-ir-a-laburar.html",
+        "slug": "cuando-volves-con-tus-amigos-de-fiesta-y-sabes-que-al-otro-dia-hay-que-ir-a-laburar"
+      },
+      {
+        "title": "Las ganas que vienen solas cuando empezás a programarte el cerebro",
+        "description": "A veces las ganas de hacer cosas no llegan por magia, sino por ir reprogramando la mente de a poco. Un texto sobre impulso, enfoque y recons…",
+        "url": "/posts/las-ganas-que-vienen-solas-cuando-empezas-a-programarte-el-cerebro.html",
+        "slug": "las-ganas-que-vienen-solas-cuando-empezas-a-programarte-el-cerebro"
+      }
+    ]
+  },
+  {
     "title": "Cuando te despertás y tus amigos te pasan a buscar para irte de fiesta",
     "description": "A veces el día arranca sin plan y de golpe tus amigos caen a buscarte. Un texto sobre esa energía inesperada que te saca del eje y también te devuelve vida.",
     "tags": [
@@ -852,6 +1213,212 @@
         "description": "Hay mañanas en las que no duele empezar de cero, sino mirar todo lo que una vez funcionó y ya no está. Aun así, volver a levantar algo roto…",
         "url": "/posts/levantar-proyectos-que-algun-dia-funcionaron-y-hoy-no-los-tienes.html",
         "slug": "levantar-proyectos-que-algun-dia-funcionaron-y-hoy-no-los-tienes"
+      }
+    ]
+  },
+  {
+    "title": "Cuando todo te sale natural porque entraste en tu frecuencia",
+    "description": "Hay días en los que no forzás nada y sin embargo todo encaja mejor. Un texto real sobre esa frecuencia interna donde las cosas salen más naturales.",
+    "tags": [
+      "frecuencia natural",
+      "sintonia interna",
+      "flujo mental",
+      "claridad",
+      "motivacion real",
+      "energia propia",
+      "vida real"
+    ],
+    "tagSlugs": {
+      "frecuencia natural": "frecuencia-natural",
+      "sintonia interna": "sintonia-interna",
+      "flujo mental": "flujo-mental",
+      "claridad": "claridad",
+      "motivacion real": "motivacion-real",
+      "energia propia": "energia-propia",
+      "vida real": "vida-real"
+    },
+    "date": "2026-04-07",
+    "slug": "cuando-todo-te-sale-natural-porque-entraste-en-tu-frecuencia",
+    "url": "/posts/cuando-todo-te-sale-natural-porque-entraste-en-tu-frecuencia.html",
+    "related": [
+      {
+        "title": "Trabajar en momentos vacíos nos ayuda",
+        "description": "A veces los ratos más vacíos del día son los que más ayudan a ordenar ideas y avanzar. Un texto sobre aprovechar esos huecos sin romantizarl…",
+        "url": "/posts/trabajar-en-momentos-vacios-nos-ayuda.html",
+        "slug": "trabajar-en-momentos-vacios-nos-ayuda"
+      },
+      {
+        "title": "Empezar el lunes con lluvia a las 4 de la tarde, pero igual ponerte a laburar",
+        "description": "Hay lunes raros que parecen empezar tarde, con lluvia y clima vencido. Y aun así toca levantarse mentalmente y hacer algo. Un texto sobre mo…",
+        "url": "/posts/empezar-el-lunes-con-lluvia-a-las-4-de-la-tarde-pero-igual-ponerte-a-laburar.html",
+        "slug": "empezar-el-lunes-con-lluvia-a-las-4-de-la-tarde-pero-igual-ponerte-a-laburar"
+      },
+      {
+        "title": "Cuando fluís natural y parece que el mundo se acomoda solo",
+        "description": "Un texto sobre esos momentos donde no todo está perfecto, pero vos entrás tan en eje que hasta el mundo parece responder distinto.",
+        "url": "/posts/cuando-fluis-natural-y-parece-que-el-mundo-se-acomoda-solo.html",
+        "slug": "cuando-fluis-natural-y-parece-que-el-mundo-se-acomoda-solo"
+      },
+      {
+        "title": "Cómo la plata puede motivar o desmotivar",
+        "description": "La plata puede empujarte a moverte, pero también puede aplastarte cuando falta o cuando se vuelve obsesión. Un texto real sobre esa contradi…",
+        "url": "/posts/como-la-plata-motiva-o-desmotiva.html",
+        "slug": "como-la-plata-motiva-o-desmotiva"
+      }
+    ]
+  },
+  {
+    "title": "Cuando tu cuerpo no está hecho para vivir en ruido constante",
+    "description": "A veces el problema no es que seas débil: es que el cuerpo no fue hecho para sostener tanto ruido. Un texto sobre saturación y frecuencia.",
+    "tags": [
+      "cuerpo saturado",
+      "ruido constante",
+      "frecuencia humana",
+      "cansancio mental",
+      "interferencia",
+      "cuerpo y mente",
+      "vida moderna"
+    ],
+    "tagSlugs": {
+      "cuerpo saturado": "cuerpo-saturado",
+      "ruido constante": "ruido-constante",
+      "frecuencia humana": "frecuencia-humana",
+      "cansancio mental": "cansancio-mental",
+      "interferencia": "interferencia",
+      "cuerpo y mente": "cuerpo-y-mente",
+      "vida moderna": "vida-moderna"
+    },
+    "date": "2026-04-07",
+    "slug": "cuando-tu-cuerpo-no-esta-hecho-para-vivir-en-ruido-constante",
+    "url": "/posts/cuando-tu-cuerpo-no-esta-hecho-para-vivir-en-ruido-constante.html",
+    "related": [
+      {
+        "title": "Por qué no puedo dormir por las noches",
+        "description": "Un texto honesto sobre esas noches en las que el cuerpo quiere dormir pero la cabeza no se apaga.",
+        "url": "/posts/por-que-no-puedo-dormir-por-las-noches.html",
+        "slug": "por-que-no-puedo-dormir-por-las-noches"
+      },
+      {
+        "title": "Cómo sobrevivir día a día con tu mente para estar bien",
+        "description": "A veces el trabajo más difícil del día no está afuera sino adentro. Un texto real sobre convivir con la propia mente sin romperse.",
+        "url": "/posts/como-sobrevivir-dia-a-dia-con-tu-mente-para-estar-bien.html",
+        "slug": "como-sobrevivir-dia-a-dia-con-tu-mente-para-estar-bien"
+      },
+      {
+        "title": "Por qué a veces querés dormir en varias etapas durante el día",
+        "description": "Hay días en los que el sueño no viene de una sola vez, sino en partes. Un texto sobre cansancio, mente saturada y esa necesidad de dormir po…",
+        "url": "/posts/por-que-a-veces-queres-dormir-en-varias-etapas-durante-el-dia.html",
+        "slug": "por-que-a-veces-queres-dormir-en-varias-etapas-durante-el-dia"
+      },
+      {
+        "title": "Me activo por las noches para hacer todo",
+        "description": "Cuando cae la noche recién aparece la energía. Un texto para quienes sienten que viven mejor cuando el mundo se apaga un poco.",
+        "url": "/posts/me-activo-por-las-noches-para-hacer-todo.html",
+        "slug": "me-activo-por-las-noches-para-hacer-todo"
+      }
+    ]
+  },
+  {
+    "title": "Cuando tu mejor frecuencia aparece sin que tengas que explicarla",
+    "description": "Hay estados donde no necesitás demostrar nada: simplemente estás bien plantado. Un texto sobre esa frecuencia limpia que no hace ruido.",
+    "tags": [
+      "mejor frecuencia",
+      "presencia natural",
+      "claridad",
+      "energia limpia",
+      "eje propio",
+      "tranquilidad firme",
+      "vida real"
+    ],
+    "tagSlugs": {
+      "mejor frecuencia": "mejor-frecuencia",
+      "presencia natural": "presencia-natural",
+      "claridad": "claridad",
+      "energia limpia": "energia-limpia",
+      "eje propio": "eje-propio",
+      "tranquilidad firme": "tranquilidad-firme",
+      "vida real": "vida-real"
+    },
+    "date": "2026-04-07",
+    "slug": "cuando-tu-mejor-frecuencia-aparece-sin-que-tengas-que-explicarla",
+    "url": "/posts/cuando-tu-mejor-frecuencia-aparece-sin-que-tengas-que-explicarla.html",
+    "related": [
+      {
+        "title": "Cuando fluís natural y parece que el mundo se acomoda solo",
+        "description": "Un texto sobre esos momentos donde no todo está perfecto, pero vos entrás tan en eje que hasta el mundo parece responder distinto.",
+        "url": "/posts/cuando-fluis-natural-y-parece-que-el-mundo-se-acomoda-solo.html",
+        "slug": "cuando-fluis-natural-y-parece-que-el-mundo-se-acomoda-solo"
+      },
+      {
+        "title": "Cuando todo te sale natural porque entraste en tu frecuencia",
+        "description": "Hay días en los que no forzás nada y sin embargo todo encaja mejor. Un texto real sobre esa frecuencia interna donde las cosas salen más nat…",
+        "url": "/posts/cuando-todo-te-sale-natural-porque-entraste-en-tu-frecuencia.html",
+        "slug": "cuando-todo-te-sale-natural-porque-entraste-en-tu-frecuencia"
+      },
+      {
+        "title": "Cuando te despertás y tus amigos te pasan a buscar para irte de fiesta",
+        "description": "A veces el día arranca sin plan y de golpe tus amigos caen a buscarte. Un texto sobre esa energía inesperada que te saca del eje y también t…",
+        "url": "/posts/cuando-te-despertas-y-tus-amigos-te-pasan-a-buscar-para-irte-de-fiesta.html",
+        "slug": "cuando-te-despertas-y-tus-amigos-te-pasan-a-buscar-para-irte-de-fiesta"
+      },
+      {
+        "title": "En la universidad siempre te terminan poniendo la misma etiqueta",
+        "description": "Hay lugares donde antes de conocerte ya te ubican en una casilla. Un texto real sobre etiquetas, universidad y seguir siendo uno mismo.",
+        "url": "/posts/en-la-universidad-siempre-te-terminan-poniendo-la-misma-etiqueta.html",
+        "slug": "en-la-universidad-siempre-te-terminan-poniendo-la-misma-etiqueta"
+      }
+    ]
+  },
+  {
+    "title": "Cuando volvés a tu centro y entendés que no todo era mala suerte",
+    "description": "A veces parecía que todo salía mal, pero en realidad estabas lejos de tu centro. Un texto sobre volver al eje y leer distinto lo vivido.",
+    "tags": [
+      "volver al centro",
+      "mala suerte",
+      "eje interno",
+      "claridad",
+      "reconstruccion",
+      "frecuencia personal",
+      "reconstruccion personal",
+      "entenderse mejor"
+    ],
+    "tagSlugs": {
+      "volver al centro": "volver-al-centro",
+      "mala suerte": "mala-suerte",
+      "eje interno": "eje-interno",
+      "claridad": "claridad",
+      "reconstruccion": "reconstruccion",
+      "frecuencia personal": "frecuencia-personal",
+      "reconstruccion personal": "reconstruccion-personal",
+      "entenderse mejor": "entenderse-mejor"
+    },
+    "date": "2026-04-07",
+    "slug": "cuando-volves-a-tu-centro-y-entendes-que-no-todo-era-mala-suerte",
+    "url": "/posts/cuando-volves-a-tu-centro-y-entendes-que-no-todo-era-mala-suerte.html",
+    "related": [
+      {
+        "title": "Cuando fluís natural y parece que el mundo se acomoda solo",
+        "description": "Un texto sobre esos momentos donde no todo está perfecto, pero vos entrás tan en eje que hasta el mundo parece responder distinto.",
+        "url": "/posts/cuando-fluis-natural-y-parece-que-el-mundo-se-acomoda-solo.html",
+        "slug": "cuando-fluis-natural-y-parece-que-el-mundo-se-acomoda-solo"
+      },
+      {
+        "title": "Levantar proyectos que algún día funcionaron y hoy no los tienes",
+        "description": "Hay mañanas en las que no duele empezar de cero, sino mirar todo lo que una vez funcionó y ya no está. Aun así, volver a levantar algo roto…",
+        "url": "/posts/levantar-proyectos-que-algun-dia-funcionaron-y-hoy-no-los-tienes.html",
+        "slug": "levantar-proyectos-que-algun-dia-funcionaron-y-hoy-no-los-tienes"
+      },
+      {
+        "title": "Arrancar el lunes aunque haya lluvia, tormenta y gente que te quiere quebrar",
+        "description": "No siempre el problema es el clima. A veces también pesa la mala energía ajena, la presión y la sensación de que te quieren ver caer. Un tex…",
+        "url": "/posts/arrancar-el-lunes-aunque-haya-lluvia-tormenta-y-gente-que-te-quiere-quebrar.html",
+        "slug": "arrancar-el-lunes-aunque-haya-lluvia-tormenta-y-gente-que-te-quiere-quebrar"
+      },
+      {
+        "title": "Cómo recomponerse después de una depresión grande",
+        "description": "Volver después de una depresión grande no es volver igual. Un texto real sobre reconstruirse sin apuro, sin teatro y sin exigirse milagros.",
+        "url": "/posts/como-recomponerse-despues-de-una-depresion-grande.html",
+        "slug": "como-recomponerse-despues-de-una-depresion-grande"
       }
     ]
   },
