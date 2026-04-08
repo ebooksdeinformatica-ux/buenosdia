@@ -59,6 +59,20 @@
     .stats-strip{display:flex;flex-wrap:wrap;gap:8px}
     .stat-pill{display:inline-flex;align-items:center;justify-content:center;border:1px solid var(--line,#e9e9e9);background:#fff;border-radius:999px;padding:8px 12px;font-size:.9rem;color:var(--muted,#666)}
     @media (max-width:760px){.spotlight-grid{grid-template-columns:1fr}}
+  
+    .contact-strip{margin:18px auto 0;max-width:var(--max,860px);padding:16px 18px;border:1px solid var(--line,#e9e9e9);border-radius:16px;background:var(--soft,#f7f7f7);color:var(--muted,#666)}
+    .contact-strip a{color:var(--text,#111);font-weight:700;text-decoration:none}
+    .contact-strip a:hover{text-decoration:underline}
+    .auto-discovery{margin:24px 0}
+    .auto-block-title{margin:0 0 8px;font-size:1.18rem;line-height:1.2}
+    .auto-block-sub{margin:0 0 14px;color:var(--muted,#666);font-size:14px;line-height:1.6}
+    .auto-posts-grid{display:grid;gap:12px}
+    .auto-post-card{display:block;padding:14px 16px;border:1px solid var(--line,#e9e9e9);border-radius:14px;background:#fff;text-decoration:none;color:inherit}
+    .auto-post-card strong{display:block;font-size:15px;line-height:1.35;margin-bottom:6px}
+    .auto-post-card span{display:block;color:var(--muted,#666);font-size:14px;line-height:1.55}
+    .auto-post-card em{display:block;color:var(--muted,#666);font-size:12px;font-style:normal;letter-spacing:.02em;text-transform:uppercase;margin-bottom:6px}
+    .auto-post-card:hover{border-color:#d8d8d8;transform:translateY(-1px);transition:all .18s ease}
+    @media (min-width:760px){.auto-posts-grid{grid-template-columns:1fr 1fr}}
   </style>
   <script type="application/ld+json">
   {
@@ -126,37 +140,76 @@
       <a class="tag" href="/tags/buenos-dias-de-verdad.html">buenos dias de verdad</a>
     </section>
 
-                                                                                                                                                                        <section class="card" aria-labelledby="interlinks-post">
-      <h2 id="interlinks-post" class="section-title">Seguí leyendo</h2>
-      <div class="links-grid">
-        <a class="related" href="/posts/levantar-proyectos-que-algun-dia-funcionaron-y-hoy-no-los-tienes.html">
-          <strong>Levantar proyectos que algún día funcionaron y hoy no los tienes</strong>
-          <span>Hay mañanas en las que no duele empezar de cero, sino mirar todo lo que una vez funcionó y ya no está. Aun así, volver a levantar…</span>
-        </a>
+                                                                                                                                                                        <section class="faq">
+      <h2>Preguntas frecuentes</h2>
+      <h3>¿Cómo puedo compartir este artículo?</h3>
+      <p>Usá los botones de compartir arriba para enviarlo por WhatsApp, Telegram, Facebook o X. También podés copiar el enlace o el texto para Instagram.</p>
+      <h3>¿Puedo leer más artículos como este?</h3>
+      <p>Sí, visitá la página principal de <a href="/">buenosdia.com</a> para ver todas las publicaciones.</p>
+    </section>
 
-        <a class="related" href="/posts/dias-que-empiezan-despues-de-las-5-de-la-tarde.html">
+        <section class="card auto-discovery" data-auto-block="destacadas-publicaciones-auto">
+      <h2 class="auto-block-title">Más destacadas</h2>
+      <p class="auto-block-sub">Una selección automática del sitio para seguir navegando.</p>
+      <div class="auto-posts-grid">
+        <a class="auto-post-card" href="/posts/dias-que-empiezan-despues-de-las-5-de-la-tarde.html">
+          <em>08/04/2026</em>
           <strong>Días que empiezan después de las 5 de la tarde</strong>
-          <span>Hay días en los que recién arrancás cuando el sol ya se fue. Un texto honesto sobre sentirse fuera de horario, vivir a contramano…</span>
+          <span>Hay días en los que recién arrancás cuando el sol ya se fue. Un texto honesto sobre sentirse fuera de horario, vivir a c…</span>
         </a>
-
-        <a class="related" href="/posts/manana-feliz-sin-nada-con-mil-problemas.html">
-          <strong>Una mañana feliz pero sin nada y con mil problemas</strong>
-          <span>Hay mañanas en las que no tenés nada resuelto, pero igual seguís. Una reflexión honesta sobre empezar el día con problemas, cansan…</span>
+        <a class="auto-post-card" href="/posts/me-activo-por-las-noches-para-hacer-todo.html">
+          <em>08/04/2026</em>
+          <strong>Me activo por las noches para hacer todo</strong>
+          <span>Cuando cae la noche recién aparece la energía. Un texto para quienes sienten que viven mejor cuando el mundo se apaga un…</span>
         </a>
-
-        <a class="related" href="/posts/de-sentirme-hundido-a-volver-a-tener-motivacion.html">
+        <a class="auto-post-card" href="/posts/levantar-proyectos-que-algun-dia-funcionaron-y-hoy-no-los-tienes.html">
+          <em>17/03/2026</em>
+          <strong>Levantar proyectos que algún día funcionaron y hoy no los tienes</strong>
+          <span>Hay mañanas en las que no duele empezar de cero, sino mirar todo lo que una vez funcionó y ya no está. Aun así, volver a…</span>
+        </a>
+        <a class="auto-post-card" href="/posts/cuando-los-amigos-se-bajan-del-barco-por-las-noches.html">
+          <em>17/03/2026</em>
+          <strong>Cuando los amigos se bajan del barco por las noches</strong>
+          <span>Hay noches en las que duele más la ausencia de los que estaban cerca que cualquier problema en sí. Y aun así, la mañana…</span>
+        </a>
+        <a class="auto-post-card" href="/posts/de-sentirme-hundido-a-volver-a-tener-motivacion.html">
+          <em>08/04/2026</em>
           <strong>De sentirme hundido a volver a tener motivación</strong>
           <span>Un texto sobre el paso lento y real entre sentirse muy abajo y empezar a recuperar motivación sin chamuyo.</span>
         </a>
       </div>
     </section>
 
-    <section class="faq">
-      <h2>Preguntas frecuentes</h2>
-      <h3>¿Cómo puedo compartir este artículo?</h3>
-      <p>Usá los botones de compartir arriba para enviarlo por WhatsApp, Telegram, Facebook o X. También podés copiar el enlace o el texto para Instagram.</p>
-      <h3>¿Puedo leer más artículos como este?</h3>
-      <p>Sí, visitá la página principal de <a href="/">buenosdia.com</a> para ver todas las publicaciones.</p>
+        <section class="card auto-discovery" data-auto-block="ultimas-publicaciones-auto">
+      <h2 class="auto-block-title">Últimas 5 publicaciones</h2>
+      <p class="auto-block-sub">Los textos más nuevos del sitio, en orden.</p>
+      <div class="auto-posts-grid">
+        <a class="auto-post-card" href="/posts/arrancar-el-lunes-aunque-haya-lluvia-tormenta-y-gente-que-te-quiere-quebrar.html">
+          <em>08/04/2026</em>
+          <strong>Arrancar el lunes aunque haya lluvia, tormenta y gente que te quiere quebrar</strong>
+          <span>No siempre el problema es el clima. A veces también pesa la mala energía ajena, la presión y la sensación de que te quie…</span>
+        </a>
+        <a class="auto-post-card" href="/posts/como-afecta-que-los-demas-ya-crean-saber-quien-sos.html">
+          <em>08/04/2026</em>
+          <strong>Cómo afecta que los demás ya crean saber quién sos</strong>
+          <span>Cuando los demás creen que ya te descifraron, muchas veces dejan de mirarte de verdad. Un texto sobre identidad, desgast…</span>
+        </a>
+        <a class="auto-post-card" href="/posts/como-desactivar-el-chip-rutinario-cuando-te-comparas-con-otra-gente.html">
+          <em>08/04/2026</em>
+          <strong>Cómo desactivar el chip rutinario cuando te comparás con otra gente</strong>
+          <span>Compararse con la rutina de los demás puede volverte más automático y más injusto con vos. Un texto sobre cortar ese chi…</span>
+        </a>
+        <a class="auto-post-card" href="/posts/como-elegir-el-momento-justo-para-actuar-ciertas-cosas.html">
+          <em>08/04/2026</em>
+          <strong>Cómo elegir el momento justo para actuar ciertas cosas</strong>
+          <span>No todo se hace en cualquier instante. A veces elegir bien el momento cambia más que la fuerza. Un texto sobre timing, c…</span>
+        </a>
+        <a class="auto-post-card" href="/posts/como-influye-la-rutina-de-los-demas-en-la-rutina-de-uno.html">
+          <em>08/04/2026</em>
+          <strong>Cómo influye la rutina de los demás en la rutina de uno</strong>
+          <span>La rutina ajena también se mete en la nuestra: horarios, ritmos, exigencias y comparaciones. Un texto sobre cómo eso nos…</span>
+        </a>
+      </div>
     </section>
   </main>
 
@@ -167,6 +220,7 @@
     
 </footer>
   <div class="contact-strip">Contacto: <a href="https://instagram.com/https_404_3rr0r" target="_blank" rel="noopener noreferrer">@https_404_3rr0r</a></div>
+  
   
   
   
