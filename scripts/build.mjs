@@ -169,7 +169,7 @@ function cleanupLegacyAutoSections(html = '') {
   const patterns = [
     /<section class="card"[^>]*aria-labelledby="interlinks-post"[^>]*>[\s\S]*?<\/section>\s*/gi,
     /<section[^>]*data-auto-block="[^"]+"[^>]*>[\s\S]*?<\/section>\s*/gi,
-    /<section[^>]*class="[^"]*card[^"]*"[^>]*>[\s\S]*?<h2[^>]*>\s*(Seguí leyendo|Moverse por la red|Explora|Para descubrir|Descubri más|Descubrí más)\s*<\/h2>[\s\S]*?<\/section>\s*/gi
+    /<section[^>]*class="[^"]*card[^"]*"[^>]*>[\s\S]*?<h2[^>]*>\s*(Seguí leyendo|Moverse por la red|Moverse por la web|Explora|Para descubrir|Descubri más|Descubrí más)\s*<\/h2>[\s\S]*?<\/section>\s*/gi
   ];
   for (const pattern of patterns) out = out.replace(pattern, '');
   return out;
