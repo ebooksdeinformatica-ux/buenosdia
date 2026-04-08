@@ -10,6 +10,7 @@ const SITEMAP_FILE = path.join(ROOT, 'sitemap.xml');
 const POSTS_JSON = path.join(DATA_DIR, 'posts.json');
 const CONTACT_URL = 'https://instagram.com/https_404_3rr0r';
 const CONTACT_HANDLE = '@https_404_3rr0r';
+const ADSENSE_SNIPPET = `<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7756135514831267" crossorigin="anonymous"></script>`;
 const STATCOUNTER_SNIPPET = `<!-- Default Statcounter code for Buenos Dia https://www.buenosdia.com/ -->
 <script type="text/javascript">
 var sc_project=13215021; 
@@ -78,6 +79,7 @@ const featuredPosts = computeFeaturedPosts(posts, 8);
 for (const post of posts) {
   let updatedHtml = cleanupLegacyAutoSections(post.html);
   updatedHtml = patchPostHtml(updatedHtml, post, posts, featuredPosts);
+  updatedHtml = injectAdsense(updatedHtml);
   updatedHtml = injectStatcounter(updatedHtml);
   fs.writeFileSync(post.fullPath, updatedHtml, 'utf8');
 }
@@ -173,6 +175,11 @@ function cleanupLegacyAutoSections(html = '') {
   ];
   for (const pattern of patterns) out = out.replace(pattern, '');
   return out;
+}
+
+function injectAdsense(html = '') {
+  if (html.includes('pagead2.googlesyndication.com/pagead/js/adsbygoogle.js')) return html;
+  return html.replace(/<\/head>/i, `\n  ${ADSENSE_SNIPPET}\n</head>`);
 }
 
 function injectStatcounter(html = '') {
@@ -284,6 +291,7 @@ function renderTagPages(tagMap) {
 </body>
 </html>`;
 
+  tagsIndexHtml = injectAdsense(tagsIndexHtml);
   tagsIndexHtml = injectStatcounter(tagsIndexHtml);
   fs.writeFileSync(path.join(TAGS_DIR, 'index.html'), tagsIndexHtml, 'utf8');
 
@@ -388,6 +396,7 @@ function renderTagPages(tagMap) {
 </body>
 </html>`;
 
+    pageHtml = injectAdsense(pageHtml);
     pageHtml = injectStatcounter(pageHtml);
     fs.writeFileSync(path.join(TAGS_DIR, `${tag.slug}.html`), pageHtml, 'utf8');
   }
@@ -400,6 +409,7 @@ function patchIndexHtml(tagMap) {
 
   const tagSlugMap = JSON.stringify(Object.fromEntries(Object.values(tagMap).map(tag => [normalizeTag(tag.name), tag.slug])));
   html = html.replace(/const TAG_SLUG_MAP = \{[\s\S]*?\};/i, `const TAG_SLUG_MAP = ${tagSlugMap};`);
+  html = injectAdsense(html);
   html = injectStatcounter(html);
   fs.writeFileSync(indexPath, html, 'utf8');
 }
@@ -479,6 +489,7 @@ function write404Page(tagMap) {
 </body>
 </html>`;
 
+  html = injectAdsense(html);
   html = injectStatcounter(html);
   fs.writeFileSync(path.join(ROOT, '404.html'), html, 'utf8');
 }
