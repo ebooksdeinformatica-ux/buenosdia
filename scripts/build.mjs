@@ -8,7 +8,6 @@ const DATA_DIR = path.join(ROOT, 'data');
 const TAGS_DIR = path.join(ROOT, 'tags');
 const SITEMAP_FILE = path.join(ROOT, 'sitemap.xml');
 const POSTS_JSON = path.join(DATA_DIR, 'posts.json');
-const IMAGE_DIR = path.join(ROOT, 'assets', 'imagenes-tematicas');
 const CONTACT_URL = 'https://instagram.com/https_404_3rr0r';
 const CONTACT_HANDLE = '@https_404_3rr0r';
 const ADSENSE_SNIPPET = `<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7756135514831267" crossorigin="anonymous"></script>`;
@@ -32,6 +31,14 @@ const BD_PREVIOUS_POSTS_BY_SLUG = loadPreviousPostsBySlug();
 const TAG_ALIASES = {
   // Alias seguro: corregir variantes ortográficas futuras sin romper el pipeline.
 };
+
+const IMAGE_DIR = path.join(ROOT, 'assets', 'imagenes-tematicas');
+const INSTITUTIONAL_LINKS = `
+        <a href="/quienes-somos.html">Quiénes somos</a>
+        <a href="/politica-editorial.html">Política editorial</a>`;
+const INSTITUTIONAL_FOOTER_LINKS = `
+        <a href="/quienes-somos.html">Quiénes somos</a>
+        <a href="/politica-editorial.html">Política editorial</a>`;
 
 
 if (!fs.existsSync(POSTS_DIR)) {
@@ -138,17 +145,13 @@ function patchPostHtml(html, currentPost, allPosts, featuredPosts, lineMap) {
   out = out.replace(/<nav([^>]*)>[\s\S]*?<\/nav>/i, `<nav$1>
         <a href="/">Inicio</a>
         <a href="https://www.buenosdia.com/#publicaciones">Publicaciones</a>
-        <a href="/tags/">Etiquetas</a>
-        <a href="/quienes-somos.html">Quiénes somos</a>
-        <a href="/politica-editorial.html">Política editorial</a>
+        <a href="/tags/">Etiquetas</a>${INSTITUTIONAL_LINKS}
         <a href="${CONTACT_URL}" target="_blank" rel="noopener noreferrer">Contacto</a>
       </nav>`);
 
   out = out.replace(/<div class="footer-links">[\s\S]*?<\/div>/i, `<div class="footer-links">
         <a href="https://www.buenosdia.com/#publicaciones">Publicaciones</a>
-        <a href="/tags/">Etiquetas</a>
-        <a href="/quienes-somos.html">Quiénes somos</a>
-        <a href="/politica-editorial.html">Política editorial</a>
+        <a href="/tags/">Etiquetas</a>${INSTITUTIONAL_FOOTER_LINKS}
         <a href="${CONTACT_URL}" target="_blank" rel="noopener noreferrer">${CONTACT_HANDLE}</a>
       </div>`);
 
@@ -170,18 +173,14 @@ function patchPostHtml(html, currentPost, allPosts, featuredPosts, lineMap) {
     .auto-post-card span{display:block;color:var(--muted,#666);font-size:14px;line-height:1.55}
     .auto-post-card em{display:block;color:var(--muted,#666);font-size:12px;font-style:normal;letter-spacing:.02em;text-transform:uppercase;margin-bottom:6px}
     .auto-post-card:hover{border-color:#d8d8d8;transform:translateY(-1px);transition:all .18s ease}
-    .bd-featured-image{margin:0 0 22px}
-    .bd-featured-image img{display:block;width:100%;height:auto;border-radius:18px}
-    .featured-quote{margin:26px 0;padding:18px 20px;border-left:4px solid var(--line,#e9e9e9);background:var(--soft,#f7f7f7);border-radius:12px;color:var(--text,#111);font-size:1.08rem;line-height:1.65}
+    .bd-featured-image{margin:18px auto 26px;max-width:min(100%,820px)}
+    .bd-featured-image img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;border-radius:18px;border:1px solid var(--line,#e9e9e9);box-shadow:var(--shadow,0 10px 25px rgba(0,0,0,.05))}
     @media (min-width:760px){.auto-posts-grid{grid-template-columns:1fr 1fr}}
   </style>`);
   }
 
-  const featuredImage = getFeaturedImage(currentPost);
-  out = ensureDiscoverMeta(out, currentPost, featuredImage);
-  out = ensureArticleJsonLd(out, currentPost, featuredImage);
-  out = ensureFeaturedImage(out, currentPost, featuredImage);
   out = ensureFeaturedQuote(out, currentPost);
+  out = enhancePostDiscover(out, currentPost);
   const latestHtml = renderAutoSection('ultimas-publicaciones-auto', 'Últimas 5 publicaciones', 'Los textos más nuevos del sitio, en orden.', getLatestPosts(currentPost, allPosts, 5));
   const featuredHtml = renderAutoSection('destacadas-publicaciones-auto', 'Más destacadas', 'Una selección automática del sitio para seguir navegando.', getFeaturedPostsForPost(currentPost, featuredPosts, allPosts, 5));
   const lineHtml = renderLineSection(currentPost, lineMap, 4);
@@ -318,7 +317,7 @@ function renderTagPages(tagMap) {
       </section>
     </main>
     <footer class="site-footer">
-      <p><a href="/quienes-somos.html">Quiénes somos</a> · <a href="/politica-editorial.html">Política editorial</a> · Contacto: <a href="${CONTACT_URL}" target="_blank" rel="noopener noreferrer">${CONTACT_HANDLE}</a></p>
+      <p>Contacto: <a href="${CONTACT_URL}" target="_blank" rel="noopener noreferrer">${CONTACT_HANDLE}</a></p>
     </footer>
   </div>
 </body>
@@ -349,6 +348,8 @@ function renderTagPages(tagMap) {
         <a href="/">Inicio</a>
         <a href="/#publicaciones">Publicaciones</a>
         <a href="/tags/">Etiquetas</a>
+        <a href="/quienes-somos.html">Quiénes somos</a>
+        <a href="/politica-editorial.html">Política editorial</a>
         <a href="${CONTACT_URL}" target="_blank" rel="noopener noreferrer">Contacto</a>
       </nav>
     </header>
@@ -370,7 +371,7 @@ function renderTagPages(tagMap) {
       <div id="tagPostsSentinel" aria-hidden="true"></div>
     </main>
     <footer class="site-footer">
-      <p><a href="/quienes-somos.html">Quiénes somos</a> · <a href="/politica-editorial.html">Política editorial</a> · Contacto: <a href="${CONTACT_URL}" target="_blank" rel="noopener noreferrer">${CONTACT_HANDLE}</a></p>
+      <p>Contacto: <a href="${CONTACT_URL}" target="_blank" rel="noopener noreferrer">${CONTACT_HANDLE}</a></p>
     </footer>
   </div>
   <script>
@@ -442,6 +443,20 @@ function patchIndexHtml(tagMap) {
 
   const tagSlugMap = JSON.stringify(Object.fromEntries(Object.values(tagMap).map(tag => [normalizeTag(tag.name), tag.slug])));
   html = html.replace(/const TAG_SLUG_MAP = \{[\s\S]*?\};/i, `const TAG_SLUG_MAP = ${tagSlugMap};`);
+  html = html.replace(/<nav>[\s\S]*?<\/nav>/i, `<nav>
+        <a href="#inicio">Inicio</a>
+        <a href="https://www.buenosdia.com/#publicaciones">Publicaciones</a>
+        <a href="/tags/">Etiquetas</a>
+        <a href="/quienes-somos.html">Quiénes somos</a>
+        <a href="/politica-editorial.html">Política editorial</a>
+        <a href="${CONTACT_URL}" target="_blank" rel="noopener noreferrer">Contacto</a>
+      </nav>`);
+  html = html.replace(/<footer>[\s\S]*?<\/footer>/i, `<footer>
+      © 2026 buenosdia.com — mañanas reales, palabras que acompañan. ·
+      <a href="/quienes-somos.html">Quiénes somos</a> ·
+      <a href="/politica-editorial.html">Política editorial</a> ·
+      <a href="${CONTACT_URL}" target="_blank" rel="noopener noreferrer">Contacto</a>
+    </footer>`);
   html = injectAdsense(html);
   html = injectStatcounter(html);
   fs.writeFileSync(indexPath, html, 'utf8');
@@ -474,6 +489,8 @@ function write404Page(tagMap) {
         <a href="/">Inicio</a>
         <a href="/#publicaciones">Publicaciones</a>
         <a href="/tags/">Etiquetas</a>
+        <a href="/quienes-somos.html">Quiénes somos</a>
+        <a href="/politica-editorial.html">Política editorial</a>
         <a href="${CONTACT_URL}" target="_blank" rel="noopener noreferrer">Contacto</a>
       </nav>
     </header>
@@ -488,7 +505,7 @@ function write404Page(tagMap) {
       </section>
     </main>
     <footer class="site-footer">
-      <p><a href="/quienes-somos.html">Quiénes somos</a> · <a href="/politica-editorial.html">Política editorial</a> · Contacto: <a href="${CONTACT_URL}" target="_blank" rel="noopener noreferrer">${CONTACT_HANDLE}</a></p>
+      <p>Contacto: <a href="${CONTACT_URL}" target="_blank" rel="noopener noreferrer">${CONTACT_HANDLE}</a></p>
     </footer>
   </div>
   <script>
@@ -630,94 +647,6 @@ function renderLineSection(currentPost, lineMap, limit = 4) {
   return renderAutoSection(`linea-editorial-${currentPost.line}`, lineTitle, lineSubtitle, items);
 }
 
-
-function getFeaturedImage(currentPost = {}) {
-  try {
-    if (!fs.existsSync(IMAGE_DIR)) return '';
-    const candidates = [];
-    for (const tag of currentPost.tags || []) {
-      const slug = slugify(tag);
-      if (slug) candidates.push(slug);
-    }
-    if (currentPost.line) candidates.push(currentPost.line);
-    const seen = new Set();
-    for (const candidate of candidates) {
-      if (!candidate || seen.has(candidate)) continue;
-      seen.add(candidate);
-      const filePath = path.join(IMAGE_DIR, `${candidate}.webp`);
-      if (fs.existsSync(filePath)) return `/assets/imagenes-tematicas/${candidate}.webp`;
-    }
-    return '';
-  } catch {
-    return '';
-  }
-}
-
-function ensureDiscoverMeta(html = '', currentPost = {}, featuredImage = '') {
-  let out = html;
-  if (!/max-image-preview:large/i.test(out)) {
-    if (/<meta\s+name="robots"/i.test(out)) {
-      out = out.replace(/<meta\s+name="robots"\s+content="([^"]*)"\s*\/?>/i, (full, content) => {
-        return /max-image-preview:large/i.test(content)
-          ? full
-          : `<meta name="robots" content="${content},max-image-preview:large">`;
-      });
-    } else {
-      out = out.replace(/<\/head>/i, `
-  <meta name="robots" content="index,follow,max-image-preview:large">
-</head>`);
-    }
-  }
-  if (featuredImage && !/<meta\s+property="og:image"/i.test(out)) {
-    out = out.replace(/<\/head>/i, `
-  <meta property="og:image" content="${SITE_URL}${featuredImage}">
-</head>`);
-  }
-  if (!/<meta\s+property="og:type"/i.test(out)) {
-    out = out.replace(/<\/head>/i, `
-  <meta property="og:type" content="article">
-</head>`);
-  }
-  if (currentPost.date && !/<meta\s+property="article:published_time"/i.test(out)) {
-    out = out.replace(/<\/head>/i, `
-  <meta property="article:published_time" content="${currentPost.date}T00:00:00Z">
-</head>`);
-  }
-  return out;
-}
-
-function ensureArticleJsonLd(html = '', currentPost = {}, featuredImage = '') {
-  if (/type="application\/ld\+json"/i.test(html) && /"@type"\s*:\s*"Article"/i.test(html)) {
-    return html;
-  }
-  const payload = {
-    '@context': 'https://schema.org',
-    '@type': 'Article',
-    headline: strip(currentPost.title || ''),
-    description: strip(currentPost.description || ''),
-    datePublished: currentPost.date || today(),
-    dateModified: currentPost.date || today(),
-    mainEntityOfPage: `${SITE_URL}${currentPost.url || ''}`,
-    author: { '@type': 'Organization', name: 'buenosdia.com' },
-    publisher: { '@type': 'Organization', name: 'buenosdia.com' }
-  };
-  if (featuredImage) payload.image = [`${SITE_URL}${featuredImage}`];
-  const script = `
-  <script type="application/ld+json">${JSON.stringify(payload)}</script>`;
-  return html.replace(/<\/head>/i, `${script}
-</head>`);
-}
-
-function ensureFeaturedImage(html = '', currentPost = {}, featuredImage = '') {
-  if (!featuredImage || /class="[^"]*bd-featured-image[^"]*"/i.test(html)) return html;
-  const block = `
-      <figure class="bd-featured-image"><img src="${featuredImage}" alt="${escapeHtml(strip(currentPost.title || 'Imagen destacada'))}" loading="lazy"></figure>`;
-  if (/<article[^>]*>/i.test(html)) {
-    return html.replace(/<article([^>]*)>/i, `<article$1>${block}`);
-  }
-  return html;
-}
-
 function ensureFeaturedQuote(html = '', currentPost = {}) {
   if (/class="[^"]*featured-quote[^"]*"/i.test(html) || /class="[^"]*frase-destacada[^"]*"/i.test(html)) {
     return html;
@@ -833,6 +762,113 @@ function loadPreviousPostsBySlug() {
   } catch {
     return {};
   }
+}
+
+
+function enhancePostDiscover(html = '', currentPost = {}) {
+  let out = html;
+  const featuredImageUrl = getFeaturedImageUrl(currentPost);
+  out = ensureDiscoverRobots(out);
+  out = ensureArticleStructuredData(out, currentPost, featuredImageUrl);
+  if (featuredImageUrl) {
+    out = ensureOgImage(out, featuredImageUrl);
+    out = ensureFeaturedImageBlock(out, currentPost, featuredImageUrl);
+  }
+  return out;
+}
+
+function getFeaturedImageUrl(post = {}) {
+  try {
+    if (!fs.existsSync(IMAGE_DIR)) return '';
+    const candidates = [];
+    for (const tag of post.tags || []) {
+      const slug = slugify(tag);
+      if (slug) candidates.push(slug);
+    }
+    if (post.line) candidates.push(post.line);
+    const fallbacks = ['base', 'visual', 'viva', 'alma'];
+    for (const candidate of [...candidates, ...fallbacks]) {
+      const filePath = path.join(IMAGE_DIR, `${candidate}.webp`);
+      if (fs.existsSync(filePath)) {
+        return `/assets/imagenes-tematicas/${candidate}.webp`;
+      }
+    }
+    return '';
+  } catch {
+    return '';
+  }
+}
+
+function ensureDiscoverRobots(html = '') {
+  if (/max-image-preview:large/i.test(html)) return html;
+  if (/<meta\s+name="robots"/i.test(html)) {
+    return html.replace(/<meta\s+name="robots"\s+content="([^"]*)"\s*\/?>/i, (full, content) => {
+      const current = String(content || '').trim();
+      if (/max-image-preview:large/i.test(current)) return full;
+      const next = current ? `${current},max-image-preview:large` : 'index,follow,max-image-preview:large';
+      return `<meta name="robots" content="${next}">`;
+    });
+  }
+  return html.replace(/<link rel="canonical"[^>]*>/i, match => `${match}
+  <meta name="robots" content="index,follow,max-image-preview:large">`);
+}
+
+function ensureOgImage(html = '', imageUrl = '') {
+  if (!imageUrl) return html;
+  const fullUrl = `${SITE_URL}${imageUrl}`;
+  if (/<meta\s+property="og:image"/i.test(html)) {
+    return html.replace(/<meta\s+property="og:image"\s+content="[^"]*"\s*\/?>/i, `<meta property="og:image" content="${fullUrl}">`);
+  }
+  return html.replace(/<link rel="canonical"[^>]*>/i, match => `${match}
+  <meta property="og:image" content="${fullUrl}">`);
+}
+
+function ensureFeaturedImageBlock(html = '', post = {}, imageUrl = '') {
+  if (!imageUrl) return html;
+  const imageBlock = `
+      <div class="bd-featured-image" data-bd-featured="true">
+        <img src="${imageUrl}" alt="${escapeHtml(post.title || 'BuenosDia')}" loading="eager" decoding="async">
+      </div>`;
+  if (/data-bd-featured="true"/i.test(html)) {
+    return html.replace(/\s*<div class="bd-featured-image" data-bd-featured="true">[\s\S]*?<\/div>/i, imageBlock);
+  }
+  if (/<article[^>]*>/i.test(html)) {
+    return html.replace(/<article([^>]*)>/i, `<article$1>${imageBlock}`);
+  }
+  return html;
+}
+
+function ensureArticleStructuredData(html = '', post = {}, imageUrl = '') {
+  const structuredData = JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: post.title || 'BuenosDia',
+    description: shortDescription(post.description || post.lead || post.body || '', 180),
+    datePublished: post.date || today(),
+    dateModified: post.date || today(),
+    mainEntityOfPage: `${SITE_URL}${post.url || ''}`,
+    author: {
+      '@type': 'Organization',
+      name: 'buenosdia.com',
+      url: SITE_URL
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'buenosdia.com',
+      url: SITE_URL
+    },
+    image: imageUrl ? [`${SITE_URL}${imageUrl}`] : undefined
+  }, null, 2);
+
+  const script = `
+  <script type="application/ld+json" data-bd-schema="article">
+${structuredData}
+  </script>`;
+  if (/data-bd-schema="article"/i.test(html)) {
+    return html.replace(/\s*<script type="application\/ld\+json" data-bd-schema="article">[\s\S]*?<\/script>/i, script);
+  }
+  return html.replace(/<\/head>/i, `${script}
+</head>`);
 }
 
 
