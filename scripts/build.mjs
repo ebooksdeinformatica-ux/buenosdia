@@ -32,7 +32,7 @@ const TAG_ALIASES = {
   // Alias seguro: corregir variantes ortográficas futuras sin romper el pipeline.
 };
 
-const IMAGE_DIR = path.join(ROOT, 'assets', 'imagenes-tematicas');
+const IMAGE_DIR = path.join(ROOT, 'assets', 'imagenes-tematicas'); // carpeta reservada; la inyección automática quedó desactivada para evitar duplicados y desfasajes visuales.
 const INSTITUTIONAL_LINKS = `
         <a href="/quienes-somos.html">Quiénes somos</a>
         <a href="/politica-editorial.html">Política editorial</a>`;
@@ -767,14 +767,19 @@ function loadPreviousPostsBySlug() {
 
 function enhancePostDiscover(html = '', currentPost = {}) {
   let out = html;
-  const featuredImageUrl = getFeaturedImageUrl(currentPost);
   out = ensureDiscoverRobots(out);
-  out = ensureArticleStructuredData(out, currentPost, featuredImageUrl);
-  if (featuredImageUrl) {
-    out = ensureOgImage(out, featuredImageUrl);
-  }
-  out = ensureFeaturedImageBlock(out, currentPost, featuredImageUrl);
+  out = removeAutoOgImage(out);
+  out = ensureArticleStructuredData(out, currentPost, '');
+  out = removeAutoFeaturedImageBlock(out);
   return out;
+}
+
+function removeAutoOgImage(html = '') {
+  return html.replace(/\s*<meta\s+property="og:image"\s+content="https:\/\/www\.buenosdia\.com\/assets\/imagenes-tematicas\/[^"]+\.webp"\s*\/?>/i, '');
+}
+
+function removeAutoFeaturedImageBlock(html = '') {
+  return html.replace(/\s*<div class="bd-featured-image" data-bd-featured="true">[\s\S]*?<\/div>/i, '');
 }
 
 function getFeaturedImageUrl(post = {}) {
