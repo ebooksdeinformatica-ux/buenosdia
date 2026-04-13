@@ -8,6 +8,7 @@ const DATA_DIR = path.join(ROOT, 'data');
 const TAGS_DIR = path.join(ROOT, 'tags');
 const SITEMAP_FILE = path.join(ROOT, 'sitemap.xml');
 const POSTS_JSON = path.join(DATA_DIR, 'posts.json');
+const IMAGE_DIR = path.join(ROOT, 'assets', 'imagenes-tematicas');
 const CONTACT_URL = 'https://instagram.com/https_404_3rr0r';
 const CONTACT_HANDLE = '@https_404_3rr0r';
 const ADSENSE_SNIPPET = `<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7756135514831267" crossorigin="anonymous"></script>`;
@@ -138,12 +139,16 @@ function patchPostHtml(html, currentPost, allPosts, featuredPosts, lineMap) {
         <a href="/">Inicio</a>
         <a href="https://www.buenosdia.com/#publicaciones">Publicaciones</a>
         <a href="/tags/">Etiquetas</a>
+        <a href="/quienes-somos.html">Quiénes somos</a>
+        <a href="/politica-editorial.html">Política editorial</a>
         <a href="${CONTACT_URL}" target="_blank" rel="noopener noreferrer">Contacto</a>
       </nav>`);
 
   out = out.replace(/<div class="footer-links">[\s\S]*?<\/div>/i, `<div class="footer-links">
         <a href="https://www.buenosdia.com/#publicaciones">Publicaciones</a>
         <a href="/tags/">Etiquetas</a>
+        <a href="/quienes-somos.html">Quiénes somos</a>
+        <a href="/politica-editorial.html">Política editorial</a>
         <a href="${CONTACT_URL}" target="_blank" rel="noopener noreferrer">${CONTACT_HANDLE}</a>
       </div>`);
 
@@ -165,10 +170,17 @@ function patchPostHtml(html, currentPost, allPosts, featuredPosts, lineMap) {
     .auto-post-card span{display:block;color:var(--muted,#666);font-size:14px;line-height:1.55}
     .auto-post-card em{display:block;color:var(--muted,#666);font-size:12px;font-style:normal;letter-spacing:.02em;text-transform:uppercase;margin-bottom:6px}
     .auto-post-card:hover{border-color:#d8d8d8;transform:translateY(-1px);transition:all .18s ease}
+    .bd-featured-image{margin:0 0 22px}
+    .bd-featured-image img{display:block;width:100%;height:auto;border-radius:18px}
+    .featured-quote{margin:26px 0;padding:18px 20px;border-left:4px solid var(--line,#e9e9e9);background:var(--soft,#f7f7f7);border-radius:12px;color:var(--text,#111);font-size:1.08rem;line-height:1.65}
     @media (min-width:760px){.auto-posts-grid{grid-template-columns:1fr 1fr}}
   </style>`);
   }
 
+  const featuredImage = getFeaturedImage(currentPost);
+  out = ensureDiscoverMeta(out, currentPost, featuredImage);
+  out = ensureArticleJsonLd(out, currentPost, featuredImage);
+  out = ensureFeaturedImage(out, currentPost, featuredImage);
   out = ensureFeaturedQuote(out, currentPost);
   const latestHtml = renderAutoSection('ultimas-publicaciones-auto', 'Últimas 5 publicaciones', 'Los textos más nuevos del sitio, en orden.', getLatestPosts(currentPost, allPosts, 5));
   const featuredHtml = renderAutoSection('destacadas-publicaciones-auto', 'Más destacadas', 'Una selección automática del sitio para seguir navegando.', getFeaturedPostsForPost(currentPost, featuredPosts, allPosts, 5));
@@ -288,6 +300,8 @@ function renderTagPages(tagMap) {
         <a href="/">Inicio</a>
         <a href="/#publicaciones">Publicaciones</a>
         <a href="/tags/" aria-current="page">Etiquetas</a>
+        <a href="/quienes-somos.html">Quiénes somos</a>
+        <a href="/politica-editorial.html">Política editorial</a>
         <a href="${CONTACT_URL}" target="_blank" rel="noopener noreferrer">Contacto</a>
       </nav>
     </header>
@@ -304,7 +318,7 @@ function renderTagPages(tagMap) {
       </section>
     </main>
     <footer class="site-footer">
-      <p>Contacto: <a href="${CONTACT_URL}" target="_blank" rel="noopener noreferrer">${CONTACT_HANDLE}</a></p>
+      <p><a href="/quienes-somos.html">Quiénes somos</a> · <a href="/politica-editorial.html">Política editorial</a> · Contacto: <a href="${CONTACT_URL}" target="_blank" rel="noopener noreferrer">${CONTACT_HANDLE}</a></p>
     </footer>
   </div>
 </body>
@@ -356,7 +370,7 @@ function renderTagPages(tagMap) {
       <div id="tagPostsSentinel" aria-hidden="true"></div>
     </main>
     <footer class="site-footer">
-      <p>Contacto: <a href="${CONTACT_URL}" target="_blank" rel="noopener noreferrer">${CONTACT_HANDLE}</a></p>
+      <p><a href="/quienes-somos.html">Quiénes somos</a> · <a href="/politica-editorial.html">Política editorial</a> · Contacto: <a href="${CONTACT_URL}" target="_blank" rel="noopener noreferrer">${CONTACT_HANDLE}</a></p>
     </footer>
   </div>
   <script>
@@ -474,7 +488,7 @@ function write404Page(tagMap) {
       </section>
     </main>
     <footer class="site-footer">
-      <p>Contacto: <a href="${CONTACT_URL}" target="_blank" rel="noopener noreferrer">${CONTACT_HANDLE}</a></p>
+      <p><a href="/quienes-somos.html">Quiénes somos</a> · <a href="/politica-editorial.html">Política editorial</a> · Contacto: <a href="${CONTACT_URL}" target="_blank" rel="noopener noreferrer">${CONTACT_HANDLE}</a></p>
     </footer>
   </div>
   <script>
@@ -614,6 +628,94 @@ function renderLineSection(currentPost, lineMap, limit = 4) {
   }[currentPost.line] || 'Seguí navegando por publicaciones emparentadas con este tono.';
 
   return renderAutoSection(`linea-editorial-${currentPost.line}`, lineTitle, lineSubtitle, items);
+}
+
+
+function getFeaturedImage(currentPost = {}) {
+  try {
+    if (!fs.existsSync(IMAGE_DIR)) return '';
+    const candidates = [];
+    for (const tag of currentPost.tags || []) {
+      const slug = slugify(tag);
+      if (slug) candidates.push(slug);
+    }
+    if (currentPost.line) candidates.push(currentPost.line);
+    const seen = new Set();
+    for (const candidate of candidates) {
+      if (!candidate || seen.has(candidate)) continue;
+      seen.add(candidate);
+      const filePath = path.join(IMAGE_DIR, `${candidate}.webp`);
+      if (fs.existsSync(filePath)) return `/assets/imagenes-tematicas/${candidate}.webp`;
+    }
+    return '';
+  } catch {
+    return '';
+  }
+}
+
+function ensureDiscoverMeta(html = '', currentPost = {}, featuredImage = '') {
+  let out = html;
+  if (!/max-image-preview:large/i.test(out)) {
+    if (/<meta\s+name="robots"/i.test(out)) {
+      out = out.replace(/<meta\s+name="robots"\s+content="([^"]*)"\s*\/?>/i, (full, content) => {
+        return /max-image-preview:large/i.test(content)
+          ? full
+          : `<meta name="robots" content="${content},max-image-preview:large">`;
+      });
+    } else {
+      out = out.replace(/<\/head>/i, `
+  <meta name="robots" content="index,follow,max-image-preview:large">
+</head>`);
+    }
+  }
+  if (featuredImage && !/<meta\s+property="og:image"/i.test(out)) {
+    out = out.replace(/<\/head>/i, `
+  <meta property="og:image" content="${SITE_URL}${featuredImage}">
+</head>`);
+  }
+  if (!/<meta\s+property="og:type"/i.test(out)) {
+    out = out.replace(/<\/head>/i, `
+  <meta property="og:type" content="article">
+</head>`);
+  }
+  if (currentPost.date && !/<meta\s+property="article:published_time"/i.test(out)) {
+    out = out.replace(/<\/head>/i, `
+  <meta property="article:published_time" content="${currentPost.date}T00:00:00Z">
+</head>`);
+  }
+  return out;
+}
+
+function ensureArticleJsonLd(html = '', currentPost = {}, featuredImage = '') {
+  if (/type="application\/ld\+json"/i.test(html) && /"@type"\s*:\s*"Article"/i.test(html)) {
+    return html;
+  }
+  const payload = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: strip(currentPost.title || ''),
+    description: strip(currentPost.description || ''),
+    datePublished: currentPost.date || today(),
+    dateModified: currentPost.date || today(),
+    mainEntityOfPage: `${SITE_URL}${currentPost.url || ''}`,
+    author: { '@type': 'Organization', name: 'buenosdia.com' },
+    publisher: { '@type': 'Organization', name: 'buenosdia.com' }
+  };
+  if (featuredImage) payload.image = [`${SITE_URL}${featuredImage}`];
+  const script = `
+  <script type="application/ld+json">${JSON.stringify(payload)}</script>`;
+  return html.replace(/<\/head>/i, `${script}
+</head>`);
+}
+
+function ensureFeaturedImage(html = '', currentPost = {}, featuredImage = '') {
+  if (!featuredImage || /class="[^"]*bd-featured-image[^"]*"/i.test(html)) return html;
+  const block = `
+      <figure class="bd-featured-image"><img src="${featuredImage}" alt="${escapeHtml(strip(currentPost.title || 'Imagen destacada'))}" loading="lazy"></figure>`;
+  if (/<article[^>]*>/i.test(html)) {
+    return html.replace(/<article([^>]*)>/i, `<article$1>${block}`);
+  }
+  return html;
 }
 
 function ensureFeaturedQuote(html = '', currentPost = {}) {
