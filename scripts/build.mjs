@@ -173,8 +173,8 @@ function patchPostHtml(html, currentPost, allPosts, featuredPosts, lineMap) {
     .auto-post-card span{display:block;color:var(--muted,#666);font-size:14px;line-height:1.55}
     .auto-post-card em{display:block;color:var(--muted,#666);font-size:12px;font-style:normal;letter-spacing:.02em;text-transform:uppercase;margin-bottom:6px}
     .auto-post-card:hover{border-color:#d8d8d8;transform:translateY(-1px);transition:all .18s ease}
-    .bd-featured-image{margin:18px auto 26px;max-width:min(100%,820px)}
-    .bd-featured-image img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;border-radius:18px;border:1px solid var(--line,#e9e9e9);box-shadow:var(--shadow,0 10px 25px rgba(0,0,0,.05))}
+    .bd-featured-image{margin:18px 0 26px;width:100%;max-width:100%;overflow:hidden}
+    .bd-featured-image img{display:block;width:100%;max-width:100%;height:auto;border-radius:18px;border:1px solid var(--line,#e9e9e9);box-shadow:var(--shadow,0 10px 25px rgba(0,0,0,.05))}
     @media (min-width:760px){.auto-posts-grid{grid-template-columns:1fr 1fr}}
   </style>`);
   }
@@ -772,8 +772,8 @@ function enhancePostDiscover(html = '', currentPost = {}) {
   out = ensureArticleStructuredData(out, currentPost, featuredImageUrl);
   if (featuredImageUrl) {
     out = ensureOgImage(out, featuredImageUrl);
-    out = ensureFeaturedImageBlock(out, currentPost, featuredImageUrl);
   }
+  out = ensureFeaturedImageBlock(out, currentPost, featuredImageUrl);
   return out;
 }
 
@@ -823,18 +823,39 @@ function ensureOgImage(html = '', imageUrl = '') {
   <meta property="og:image" content="${fullUrl}">`);
 }
 
+function hasManualArticleImage(html = '') {
+  const articleMatch = html.match(/<article[^>]*>([\s\S]*?)<\/article>/i);
+  if (!articleMatch) return false;
+  const cleaned = articleMatch[1].replace(/<div class="bd-featured-image" data-bd-featured="true">[\s\S]*?<\/div>/ig, '');
+  return /<img/i.test(cleaned);
+}
+
 function ensureFeaturedImageBlock(html = '', post = {}, imageUrl = '') {
-  if (!imageUrl) return html;
+  if (!imageUrl) {
+    return html.replace(/\s*<div class="bd-featured-image" data-bd-featured="true">[\s\S]*?<\/div>/i, '');
+  }
+
   const imageBlock = `
       <div class="bd-featured-image" data-bd-featured="true">
         <img src="${imageUrl}" alt="${escapeHtml(post.title || 'BuenosDia')}" loading="eager" decoding="async">
       </div>`;
+
+  if (hasManualArticleImage(html)) {
+    return html.replace(/\s*<div class="bd-featured-image" data-bd-featured="true">[\s\S]*?<\/div>/i, '');
+  }
+
   if (/data-bd-featured="true"/i.test(html)) {
     return html.replace(/\s*<div class="bd-featured-image" data-bd-featured="true">[\s\S]*?<\/div>/i, imageBlock);
   }
+
+  if (/<article[^>]*>[\s\S]*?<div class="meta">[\s\S]*?<\/div>/i.test(html)) {
+    return html.replace(/(<article[^>]*>[\s\S]*?<div class="meta">[\s\S]*?<\/div>)/i, `$1${imageBlock}`);
+  }
+
   if (/<article[^>]*>/i.test(html)) {
     return html.replace(/<article([^>]*)>/i, `<article$1>${imageBlock}`);
   }
+
   return html;
 }
 
