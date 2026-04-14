@@ -32,7 +32,7 @@ const TAG_ALIASES = {
   // Alias seguro: corregir variantes ortográficas futuras sin romper el pipeline.
 };
 
-const IMAGE_DIR = path.join(ROOT, 'assets', 'imagenes-tematicas'); // carpeta reservada; la inyección automática quedó desactivada para evitar duplicados y desfasajes visuales.
+const IMAGE_DIR = path.join(ROOT, 'assets', 'imagenes-tematicas');
 const INSTITUTIONAL_LINKS = `
         <a href="/quienes-somos.html">Quiénes somos</a>
         <a href="/politica-editorial.html">Política editorial</a>`;
@@ -173,21 +173,18 @@ function patchPostHtml(html, currentPost, allPosts, featuredPosts, lineMap) {
     .auto-post-card span{display:block;color:var(--muted,#666);font-size:14px;line-height:1.55}
     .auto-post-card em{display:block;color:var(--muted,#666);font-size:12px;font-style:normal;letter-spacing:.02em;text-transform:uppercase;margin-bottom:6px}
     .auto-post-card:hover{border-color:#d8d8d8;transform:translateY(-1px);transition:all .18s ease}
-    .bd-featured-image{display:none !important}
-    .bd-featured-image img{display:none !important}
-    .article img,.article picture,.article figure{display:block;max-width:min(100%,860px) !important;width:100% !important;height:auto !important;margin:18px auto 26px auto !important}
-    .article figure img,.article picture img{display:block;width:100% !important;max-width:100% !important;height:auto !important;margin:0 auto !important}
-    .article img{border-radius:18px;box-shadow:var(--shadow,0 10px 25px rgba(0,0,0,.05));border:1px solid var(--line,#e9e9e9)}
-    .article figure{margin:18px auto 26px auto !important}
-    .article figure img{border:none;box-shadow:none}
-    @media (max-width:760px){.article img,.article picture,.article figure{max-width:100% !important;border-radius:14px}}
+    .bd-content-image{margin:18px auto 26px;max-width:min(100%,860px)}
+    .bd-content-image img{display:block;width:100%;max-width:100%;height:auto;border-radius:18px;border:1px solid var(--line,#e9e9e9);box-shadow:var(--shadow,0 10px 25px rgba(0,0,0,.05))}
+    .article img,.article figure img,article img,article figure img{display:block;width:100%;max-width:100%;height:auto}
+    .article figure,article figure{margin:18px 0 26px}
+    .article figure img,article figure img{border-radius:18px}
+
     @media (min-width:760px){.auto-posts-grid{grid-template-columns:1fr 1fr}}
   </style>`);
   }
 
   out = ensureFeaturedQuote(out, currentPost);
   out = enhancePostDiscover(out, currentPost);
-  out = normalizeManualArticleImages(out);
   const latestHtml = renderAutoSection('ultimas-publicaciones-auto', 'Últimas 5 publicaciones', 'Los textos más nuevos del sitio, en orden.', getLatestPosts(currentPost, allPosts, 5));
   const featuredHtml = renderAutoSection('destacadas-publicaciones-auto', 'Más destacadas', 'Una selección automática del sitio para seguir navegando.', getFeaturedPostsForPost(currentPost, featuredPosts, allPosts, 5));
   const lineHtml = renderLineSection(currentPost, lineMap, 4);
@@ -554,8 +551,11 @@ function write404Page(tagMap) {
 function writeSitemap(posts, tagMap) {
   const tagUrls = Object.values(tagMap).map(tag => `  <url>\n    <loc>${SITE_URL}/tags/${tag.slug}.html</loc>\n    <lastmod>${today()}</lastmod>\n  </url>`);
   const postUrls = posts.map(post => `  <url>\n    <loc>${SITE_URL}${post.url}</loc>\n    <lastmod>${post.date}</lastmod>\n  </url>`);
+  const staticUrls = ['quienes-somos.html','politica-editorial.html','contacto.html']
+    .filter(file => fs.existsSync(path.join(ROOT, file)))
+    .map(file => `  <url>\n    <loc>${SITE_URL}/${file}</loc>\n    <lastmod>${today()}</lastmod>\n  </url>`);
 
-  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n  <url>\n    <loc>${SITE_URL}/</loc>\n    <lastmod>${today()}</lastmod>\n  </url>\n  <url>\n    <loc>${SITE_URL}/tags/</loc>\n    <lastmod>${today()}</lastmod>\n  </url>\n${postUrls.join('\n')}\n${tagUrls.join('\n')}\n</urlset>\n`;
+  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n  <url>\n    <loc>${SITE_URL}/</loc>\n    <lastmod>${today()}</lastmod>\n  </url>\n  <url>\n    <loc>${SITE_URL}/tags/</loc>\n    <lastmod>${today()}</lastmod>\n  </url>\n${staticUrls.join('\n')}\n${postUrls.join('\n')}\n${tagUrls.join('\n')}\n</urlset>\n`;
   fs.writeFileSync(SITEMAP_FILE, sitemap, 'utf8');
 }
 
@@ -771,55 +771,71 @@ function loadPreviousPostsBySlug() {
   }
 }
 
-
-function enhancePostDiscover(html = '', currentPost = {}) {
+function cleanupLegacyAutoFeaturedImages(html = '') {
   let out = html;
-  out = ensureDiscoverRobots(out);
-  out = removeAutoOgImage(out);
-  out = ensureArticleStructuredData(out, currentPost, '');
-  out = removeAutoFeaturedImageBlock(out);
+  out = out.replace(/\s*<div class="bd-featured-image" data-bd-featured="true">[\s\S]*?<\/div>\s*/ig, '\n');
+  out = out.replace(/\s*<meta\s+property="og:image"\s+content="https:\/\/www\.buenosdia\.com\/assets\/imagenes-tematicas\/[^"]*"\s*\/?>\s*/ig, '\n');
   return out;
 }
 
-function removeAutoOgImage(html = '') {
-  return html.replace(/\s*<meta\s+property="og:image"\s+content="https:\/\/www\.buenosdia\.com\/assets\/imagenes-tematicas\/[^"]+\.webp"\s*\/?>/i, '');
-}
+function ensureManualImagesResponsive(html = '') {
+  let out = html;
 
-function removeAutoFeaturedImageBlock(html = '') {
-  return html.replace(/\s*<div class="bd-featured-image" data-bd-featured="true">[\s\S]*?<\/div>/i, '');
-}
+  // Solo tocamos imágenes dentro del artículo.
+  const articleMatch = out.match(/<article[^>]*>([\s\S]*?)<\/article>/i);
+  if (!articleMatch) return out;
 
-function normalizeManualArticleImages(html = '') {
-  return html.replace(/<img([^>]*?)>/gi, (full, attrs) => {
-    const cleaned = String(attrs || '')
-      .replace(/\swidth="[^"]*"/gi, '')
-      .replace(/\sheight="[^"]*"/gi, '')
-      .replace(/\sstyle="[^"]*"/gi, '');
-    return `<img${cleaned}>`;
+  let articleInner = articleMatch[1];
+
+  // Limpiar atributos problemáticos de imágenes manuales
+  articleInner = articleInner.replace(/<img\b([^>]*?)>/gi, (full, attrs) => {
+    let next = attrs;
+
+    // Quitar width/height inline para que no rompan el layout
+    next = next.replace(/\swidth="[^"]*"/gi, '');
+    next = next.replace(/\sheight="[^"]*"/gi, '');
+
+    // Limpiar style solo de width/height/max-width fijos
+    next = next.replace(/\sstyle="([^"]*)"/gi, (m, styleValue) => {
+      let clean = styleValue
+        .replace(/\bwidth\s*:\s*[^;"]+;?/gi, '')
+        .replace(/\bheight\s*:\s*[^;"]+;?/gi, '')
+        .replace(/\bmax-width\s*:\s*[^;"]+;?/gi, '')
+        .replace(/\s{2,}/g, ' ')
+        .replace(/\s*;\s*$/g, '')
+        .trim();
+      return clean ? ` style="${clean}"` : '';
+    });
+
+    return `<img${next}>`;
   });
+
+  // Si la imagen está sola en el artículo, envolverla para centrar y limitar ancho.
+  articleInner = articleInner.replace(
+    /(?:<p>\s*)?(<img\b[^>]*>)(?:\s*<\/p>)?/i,
+    '<div class="bd-content-image">$1</div>'
+  );
+
+  out = out.replace(articleMatch[0], articleMatch[0].replace(articleMatch[1], articleInner));
+  return out;
 }
+
+
+
+function enhancePostDiscover(html = '', currentPost = {}) {
+  let out = html;
+  out = cleanupLegacyAutoFeaturedImages(out);
+  out = ensureDiscoverRobots(out);
+  out = ensureManualImagesResponsive(out);
+  out = ensureArticleStructuredData(out, currentPost);
+  return out;
+}
+
 
 function getFeaturedImageUrl(post = {}) {
-  try {
-    if (!fs.existsSync(IMAGE_DIR)) return '';
-    const candidates = [];
-    for (const tag of post.tags || []) {
-      const slug = slugify(tag);
-      if (slug) candidates.push(slug);
-    }
-    if (post.line) candidates.push(post.line);
-    const fallbacks = ['base', 'visual', 'viva', 'alma'];
-    for (const candidate of [...candidates, ...fallbacks]) {
-      const filePath = path.join(IMAGE_DIR, `${candidate}.webp`);
-      if (fs.existsSync(filePath)) {
-        return `/assets/imagenes-tematicas/${candidate}.webp`;
-      }
-    }
-    return '';
-  } catch {
-    return '';
-  }
+  return '';
 }
+
 
 function ensureDiscoverRobots(html = '') {
   if (/max-image-preview:large/i.test(html)) return html;
@@ -836,52 +852,24 @@ function ensureDiscoverRobots(html = '') {
 }
 
 function ensureOgImage(html = '', imageUrl = '') {
-  if (!imageUrl) return html;
-  const fullUrl = `${SITE_URL}${imageUrl}`;
-  if (/<meta\s+property="og:image"/i.test(html)) {
-    return html.replace(/<meta\s+property="og:image"\s+content="[^"]*"\s*\/?>/i, `<meta property="og:image" content="${fullUrl}">`);
-  }
-  return html.replace(/<link rel="canonical"[^>]*>/i, match => `${match}
-  <meta property="og:image" content="${fullUrl}">`);
+  return html;
 }
+
 
 function hasManualArticleImage(html = '') {
   const articleMatch = html.match(/<article[^>]*>([\s\S]*?)<\/article>/i);
   if (!articleMatch) return false;
   const cleaned = articleMatch[1].replace(/<div class="bd-featured-image" data-bd-featured="true">[\s\S]*?<\/div>/ig, '');
-  return /<img/i.test(cleaned);
+  return /<img\b/i.test(cleaned);
 }
+
 
 function ensureFeaturedImageBlock(html = '', post = {}, imageUrl = '') {
-  if (!imageUrl) {
-    return html.replace(/\s*<div class="bd-featured-image" data-bd-featured="true">[\s\S]*?<\/div>/i, '');
-  }
-
-  const imageBlock = `
-      <div class="bd-featured-image" data-bd-featured="true">
-        <img src="${imageUrl}" alt="${escapeHtml(post.title || 'BuenosDia')}" loading="eager" decoding="async">
-      </div>`;
-
-  if (hasManualArticleImage(html)) {
-    return html.replace(/\s*<div class="bd-featured-image" data-bd-featured="true">[\s\S]*?<\/div>/i, '');
-  }
-
-  if (/data-bd-featured="true"/i.test(html)) {
-    return html.replace(/\s*<div class="bd-featured-image" data-bd-featured="true">[\s\S]*?<\/div>/i, imageBlock);
-  }
-
-  if (/<article[^>]*>[\s\S]*?<div class="meta">[\s\S]*?<\/div>/i.test(html)) {
-    return html.replace(/(<article[^>]*>[\s\S]*?<div class="meta">[\s\S]*?<\/div>)/i, `$1${imageBlock}`);
-  }
-
-  if (/<article[^>]*>/i.test(html)) {
-    return html.replace(/<article([^>]*)>/i, `<article$1>${imageBlock}`);
-  }
-
-  return html;
+  return cleanupLegacyAutoFeaturedImages(html);
 }
 
-function ensureArticleStructuredData(html = '', post = {}, imageUrl = '') {
+
+function ensureArticleStructuredData(html = '', post = {}) {
   const structuredData = JSON.stringify({
     '@context': 'https://schema.org',
     '@type': 'Article',
@@ -899,8 +887,7 @@ function ensureArticleStructuredData(html = '', post = {}, imageUrl = '') {
       '@type': 'Organization',
       name: 'buenosdia.com',
       url: SITE_URL
-    },
-    image: imageUrl ? [`${SITE_URL}${imageUrl}`] : undefined
+    }
   }, null, 2);
 
   const script = `
@@ -913,6 +900,7 @@ ${structuredData}
   return html.replace(/<\/head>/i, `${script}
 </head>`);
 }
+
 
 
 function sharedTagPageCss() {
