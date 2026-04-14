@@ -173,14 +173,21 @@ function patchPostHtml(html, currentPost, allPosts, featuredPosts, lineMap) {
     .auto-post-card span{display:block;color:var(--muted,#666);font-size:14px;line-height:1.55}
     .auto-post-card em{display:block;color:var(--muted,#666);font-size:12px;font-style:normal;letter-spacing:.02em;text-transform:uppercase;margin-bottom:6px}
     .auto-post-card:hover{border-color:#d8d8d8;transform:translateY(-1px);transition:all .18s ease}
-    .bd-featured-image{margin:18px 0 26px;width:100%;max-width:100%;overflow:hidden}
-    .bd-featured-image img{display:block;width:100%;max-width:100%;height:auto;border-radius:18px;border:1px solid var(--line,#e9e9e9);box-shadow:var(--shadow,0 10px 25px rgba(0,0,0,.05))}
+    .bd-featured-image{display:none !important}
+    .bd-featured-image img{display:none !important}
+    .article img,.article picture,.article figure{display:block;max-width:min(100%,860px) !important;width:100% !important;height:auto !important;margin:18px auto 26px auto !important}
+    .article figure img,.article picture img{display:block;width:100% !important;max-width:100% !important;height:auto !important;margin:0 auto !important}
+    .article img{border-radius:18px;box-shadow:var(--shadow,0 10px 25px rgba(0,0,0,.05));border:1px solid var(--line,#e9e9e9)}
+    .article figure{margin:18px auto 26px auto !important}
+    .article figure img{border:none;box-shadow:none}
+    @media (max-width:760px){.article img,.article picture,.article figure{max-width:100% !important;border-radius:14px}}
     @media (min-width:760px){.auto-posts-grid{grid-template-columns:1fr 1fr}}
   </style>`);
   }
 
   out = ensureFeaturedQuote(out, currentPost);
   out = enhancePostDiscover(out, currentPost);
+  out = normalizeManualArticleImages(out);
   const latestHtml = renderAutoSection('ultimas-publicaciones-auto', 'Últimas 5 publicaciones', 'Los textos más nuevos del sitio, en orden.', getLatestPosts(currentPost, allPosts, 5));
   const featuredHtml = renderAutoSection('destacadas-publicaciones-auto', 'Más destacadas', 'Una selección automática del sitio para seguir navegando.', getFeaturedPostsForPost(currentPost, featuredPosts, allPosts, 5));
   const lineHtml = renderLineSection(currentPost, lineMap, 4);
@@ -780,6 +787,16 @@ function removeAutoOgImage(html = '') {
 
 function removeAutoFeaturedImageBlock(html = '') {
   return html.replace(/\s*<div class="bd-featured-image" data-bd-featured="true">[\s\S]*?<\/div>/i, '');
+}
+
+function normalizeManualArticleImages(html = '') {
+  return html.replace(/<img([^>]*?)>/gi, (full, attrs) => {
+    const cleaned = String(attrs || '')
+      .replace(/\swidth="[^"]*"/gi, '')
+      .replace(/\sheight="[^"]*"/gi, '')
+      .replace(/\sstyle="[^"]*"/gi, '');
+    return `<img${cleaned}>`;
+  });
 }
 
 function getFeaturedImageUrl(post = {}) {
