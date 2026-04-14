@@ -26,6 +26,21 @@ alt="Web Analytics Made Easy - Statcounter"
 referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
 <!-- End of Statcounter Code -->`;
 
+const BD_FEATURE_EDITORIAL_BLOCKS = process.env.BD_EDITORIAL_BLOCKS === 'true';
+const BD_PREVIOUS_POSTS_BY_SLUG = loadPreviousPostsBySlug();
+const TAG_ALIASES = {
+  // Alias seguro: corregir variantes ortográficas futuras sin romper el pipeline.
+};
+
+const IMAGE_DIR = path.join(ROOT, 'assets', 'imagenes-tematicas');
+const INSTITUTIONAL_LINKS = `
+        <a href="/quienes-somos.html">Quiénes somos</a>
+        <a href="/politica-editorial.html">Política editorial</a>`;
+const INSTITUTIONAL_FOOTER_LINKS = `
+        <a href="/quienes-somos.html">Quiénes somos</a>
+        <a href="/politica-editorial.html">Política editorial</a>`;
+
+
 if (!fs.existsSync(POSTS_DIR)) {
   console.error('No existe la carpeta /posts');
   process.exit(1);
@@ -40,11 +55,13 @@ const files = fs.readdirSync(POSTS_DIR).filter(file => file.endsWith('.html'));
 const posts = files.map(file => {
   const fullPath = path.join(POSTS_DIR, file);
   const html = fs.readFileSync(fullPath, 'utf8');
+  const slug = file.replace('.html', '');
+  const previousPost = BD_PREVIOUS_POSTS_BY_SLUG[slug] || null;
 
   const title =
     match(html, /<title>(.*?)<\/title>/is) ||
     match(html, /<h1[^>]*>(.*?)<\/h1>/is) ||
-    cleanSlug(file.replace('.html', ''));
+    cleanSlug(slug);
 
   const description =
     match(html, /<meta\s+name="description"\s+content="(.*?)"\s*\/?>/is) ||
@@ -52,12 +69,13 @@ const posts = files.map(file => {
     'Reflexión en buenosdia.com';
 
   const keywords = match(html, /<meta\s+name="keywords"\s+content="(.*?)"\s*\/?>/is) || '';
-  const articleDate = match(html, /"datePublished"\s*:\s*"(.*?)"/is) || today();
+  const articleDate = extractArticleDate(html, previousPost?.date);
   const lead = match(html, /<p[^>]*class="lead"[^>]*>(.*?)<\/p>/is) || '';
   const articleHtml = match(html, /<article[^>]*>([\s\S]*?)<\/article>/is) || '';
   const metaTags = keywords.split(',').map(normalizeTag).filter(Boolean);
   const visibleTags = getVisibleTags(html).map(normalizeTag).filter(Boolean);
   const tags = [...new Set([...metaTags, ...visibleTags])];
+  const lineOverride = extractEditorialLineOverride(html);
 
   return {
     title: strip(title.replace(/\|\s*buenosdia\.com/i, '').trim()),
@@ -65,20 +83,26 @@ const posts = files.map(file => {
     lead: strip(lead),
     body: strip(articleHtml),
     tags,
-    date: articleDate.slice(0, 10),
-    slug: file.replace('.html', ''),
+    date: articleDate,
+    slug,
     url: `/posts/${file}`,
     fullPath,
-    html
+    html,
+    lineOverride
   };
 }).sort((a, b) => b.date.localeCompare(a.date) || a.title.localeCompare(b.title, 'es'));
 
+for (const post of posts) {
+  post.line = detectEditorialLine(post);
+}
+
 const tagMap = buildTagMap(posts);
 const featuredPosts = computeFeaturedPosts(posts, 8);
+const lineMap = buildLineMap(posts);
 
 for (const post of posts) {
   let updatedHtml = cleanupLegacyAutoSections(post.html);
-  updatedHtml = patchPostHtml(updatedHtml, post, posts, featuredPosts);
+  updatedHtml = patchPostHtml(updatedHtml, post, posts, featuredPosts, lineMap);
   updatedHtml = injectAdsense(updatedHtml);
   updatedHtml = injectStatcounter(updatedHtml);
   fs.writeFileSync(post.fullPath, updatedHtml, 'utf8');
@@ -92,6 +116,7 @@ const exportedPosts = posts.map(post => ({
   date: post.date,
   slug: post.slug,
   url: post.url,
+  line: post.line,
   related: computeRelatedPosts(post, posts, 4).map(p => ({
     title: p.title,
     description: shortDescription(p.description, 140),
@@ -108,7 +133,7 @@ writeSitemap(posts, tagMap);
 
 console.log(`Generados ${posts.length} posts, ${Object.keys(tagMap).length} páginas de etiquetas, data/posts.json y sitemap.xml.`);
 
-function patchPostHtml(html, currentPost, allPosts, featuredPosts) {
+function patchPostHtml(html, currentPost, allPosts, featuredPosts, lineMap) {
   let out = html;
   out = cleanupLegacyAutoSections(out);
   out = out.replace(/href="\/#etiquetas"/g, 'href="/tags/"');
@@ -120,13 +145,13 @@ function patchPostHtml(html, currentPost, allPosts, featuredPosts) {
   out = out.replace(/<nav([^>]*)>[\s\S]*?<\/nav>/i, `<nav$1>
         <a href="/">Inicio</a>
         <a href="https://www.buenosdia.com/#publicaciones">Publicaciones</a>
-        <a href="/tags/">Etiquetas</a>
+        <a href="/tags/">Etiquetas</a>${INSTITUTIONAL_LINKS}
         <a href="${CONTACT_URL}" target="_blank" rel="noopener noreferrer">Contacto</a>
       </nav>`);
 
   out = out.replace(/<div class="footer-links">[\s\S]*?<\/div>/i, `<div class="footer-links">
         <a href="https://www.buenosdia.com/#publicaciones">Publicaciones</a>
-        <a href="/tags/">Etiquetas</a>
+        <a href="/tags/">Etiquetas</a>${INSTITUTIONAL_FOOTER_LINKS}
         <a href="${CONTACT_URL}" target="_blank" rel="noopener noreferrer">${CONTACT_HANDLE}</a>
       </div>`);
 
@@ -148,13 +173,22 @@ function patchPostHtml(html, currentPost, allPosts, featuredPosts) {
     .auto-post-card span{display:block;color:var(--muted,#666);font-size:14px;line-height:1.55}
     .auto-post-card em{display:block;color:var(--muted,#666);font-size:12px;font-style:normal;letter-spacing:.02em;text-transform:uppercase;margin-bottom:6px}
     .auto-post-card:hover{border-color:#d8d8d8;transform:translateY(-1px);transition:all .18s ease}
+    .bd-featured-image{display:block;width:100%;max-width:min(100%,700px);margin:22px auto 26px;line-height:0;text-decoration:none}
+    .bd-featured-image img{display:block;width:100%;max-width:100%;height:auto;border-radius:18px;border:1px solid var(--line,#e9e9e9);box-shadow:var(--shadow,0 10px 25px rgba(0,0,0,.05));object-fit:cover}
+    .bd-featured-image:hover img{filter:brightness(.98)}
+    .article img,.article figure img,article img,article figure img{display:block;width:100%;max-width:100%;height:auto}
+    .article figure,article figure{width:100%;max-width:min(100%,700px);margin:22px auto 26px}
+
     @media (min-width:760px){.auto-posts-grid{grid-template-columns:1fr 1fr}}
   </style>`);
   }
 
+  out = ensureFeaturedQuote(out, currentPost);
+  out = enhancePostDiscover(out, currentPost);
   const latestHtml = renderAutoSection('ultimas-publicaciones-auto', 'Últimas 5 publicaciones', 'Los textos más nuevos del sitio, en orden.', getLatestPosts(currentPost, allPosts, 5));
   const featuredHtml = renderAutoSection('destacadas-publicaciones-auto', 'Más destacadas', 'Una selección automática del sitio para seguir navegando.', getFeaturedPostsForPost(currentPost, featuredPosts, allPosts, 5));
-  const autoBlocks = `\n\n    ${featuredHtml}\n\n    ${latestHtml}`;
+  const lineHtml = renderLineSection(currentPost, lineMap, 4);
+  const autoBlocks = `\n\n    ${featuredHtml}\n\n    ${latestHtml}${lineHtml ? `\n\n    ${lineHtml}` : ''}`;
 
   const faqRegex = /(<section[^>]*class="[^"]*\bfaq\b[^"]*"[^>]*>[\s\S]*?<\/section>)/i;
   if (faqRegex.test(out)) {
@@ -269,6 +303,8 @@ function renderTagPages(tagMap) {
         <a href="/">Inicio</a>
         <a href="/#publicaciones">Publicaciones</a>
         <a href="/tags/" aria-current="page">Etiquetas</a>
+        <a href="/quienes-somos.html">Quiénes somos</a>
+        <a href="/politica-editorial.html">Política editorial</a>
         <a href="${CONTACT_URL}" target="_blank" rel="noopener noreferrer">Contacto</a>
       </nav>
     </header>
@@ -316,6 +352,8 @@ function renderTagPages(tagMap) {
         <a href="/">Inicio</a>
         <a href="/#publicaciones">Publicaciones</a>
         <a href="/tags/">Etiquetas</a>
+        <a href="/quienes-somos.html">Quiénes somos</a>
+        <a href="/politica-editorial.html">Política editorial</a>
         <a href="${CONTACT_URL}" target="_blank" rel="noopener noreferrer">Contacto</a>
       </nav>
     </header>
@@ -409,6 +447,20 @@ function patchIndexHtml(tagMap) {
 
   const tagSlugMap = JSON.stringify(Object.fromEntries(Object.values(tagMap).map(tag => [normalizeTag(tag.name), tag.slug])));
   html = html.replace(/const TAG_SLUG_MAP = \{[\s\S]*?\};/i, `const TAG_SLUG_MAP = ${tagSlugMap};`);
+  html = html.replace(/<nav>[\s\S]*?<\/nav>/i, `<nav>
+        <a href="#inicio">Inicio</a>
+        <a href="https://www.buenosdia.com/#publicaciones">Publicaciones</a>
+        <a href="/tags/">Etiquetas</a>
+        <a href="/quienes-somos.html">Quiénes somos</a>
+        <a href="/politica-editorial.html">Política editorial</a>
+        <a href="${CONTACT_URL}" target="_blank" rel="noopener noreferrer">Contacto</a>
+      </nav>`);
+  html = html.replace(/<footer>[\s\S]*?<\/footer>/i, `<footer>
+      © 2026 buenosdia.com — mañanas reales, palabras que acompañan. ·
+      <a href="/quienes-somos.html">Quiénes somos</a> ·
+      <a href="/politica-editorial.html">Política editorial</a> ·
+      <a href="${CONTACT_URL}" target="_blank" rel="noopener noreferrer">Contacto</a>
+    </footer>`);
   html = injectAdsense(html);
   html = injectStatcounter(html);
   fs.writeFileSync(indexPath, html, 'utf8');
@@ -441,6 +493,8 @@ function write404Page(tagMap) {
         <a href="/">Inicio</a>
         <a href="/#publicaciones">Publicaciones</a>
         <a href="/tags/">Etiquetas</a>
+        <a href="/quienes-somos.html">Quiénes somos</a>
+        <a href="/politica-editorial.html">Política editorial</a>
         <a href="${CONTACT_URL}" target="_blank" rel="noopener noreferrer">Contacto</a>
       </nav>
     </header>
@@ -497,8 +551,11 @@ function write404Page(tagMap) {
 function writeSitemap(posts, tagMap) {
   const tagUrls = Object.values(tagMap).map(tag => `  <url>\n    <loc>${SITE_URL}/tags/${tag.slug}.html</loc>\n    <lastmod>${today()}</lastmod>\n  </url>`);
   const postUrls = posts.map(post => `  <url>\n    <loc>${SITE_URL}${post.url}</loc>\n    <lastmod>${post.date}</lastmod>\n  </url>`);
+  const staticUrls = ['quienes-somos.html','politica-editorial.html','contacto.html']
+    .filter(file => fs.existsSync(path.join(ROOT, file)))
+    .map(file => `  <url>\n    <loc>${SITE_URL}/${file}</loc>\n    <lastmod>${today()}</lastmod>\n  </url>`);
 
-  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n  <url>\n    <loc>${SITE_URL}/</loc>\n    <lastmod>${today()}</lastmod>\n  </url>\n  <url>\n    <loc>${SITE_URL}/tags/</loc>\n    <lastmod>${today()}</lastmod>\n  </url>\n${postUrls.join('\n')}\n${tagUrls.join('\n')}\n</urlset>\n`;
+  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n  <url>\n    <loc>${SITE_URL}/</loc>\n    <lastmod>${today()}</lastmod>\n  </url>\n  <url>\n    <loc>${SITE_URL}/tags/</loc>\n    <lastmod>${today()}</lastmod>\n  </url>\n${staticUrls.join('\n')}\n${postUrls.join('\n')}\n${tagUrls.join('\n')}\n</urlset>\n`;
   fs.writeFileSync(SITEMAP_FILE, sitemap, 'utf8');
 }
 
@@ -553,13 +610,326 @@ function computeRelatedPosts(currentPost, allPosts, limit = 4) {
       const postTokens = tokenize(`${post.title} ${post.description} ${post.lead} ${post.body}`);
       const sharedTags = intersectionSize(currentTags, postTags);
       const sharedTokens = intersectionSize(currentTokens, postTokens);
-      const score = (sharedTags * 12) + (sharedTokens * 2) + (post.date === currentPost.date ? 1 : 0);
+      const sameLineBonus = post.line && currentPost.line && post.line === currentPost.line ? 8 : 0;
+      const score = (sharedTags * 12) + (sharedTokens * 2) + sameLineBonus + (post.date === currentPost.date ? 1 : 0);
       return { ...post, _score: score };
     })
     .filter(post => post._score > 0)
     .sort((a, b) => b._score - a._score || b.date.localeCompare(a.date) || a.title.localeCompare(b.title, 'es'))
     .slice(0, limit);
 }
+
+
+function buildLineMap(posts) {
+  const map = {};
+  for (const post of posts) {
+    if (!post.line) continue;
+    if (!map[post.line]) map[post.line] = [];
+    map[post.line].push(post);
+  }
+  for (const line of Object.keys(map)) {
+    map[line].sort((a, b) => b.date.localeCompare(a.date) || a.title.localeCompare(b.title, 'es'));
+  }
+  return map;
+}
+
+function renderLineSection(currentPost, lineMap, limit = 4) {
+  if (!BD_FEATURE_EDITORIAL_BLOCKS || !currentPost.line || !lineMap[currentPost.line]) return '';
+  const items = lineMap[currentPost.line].filter(post => post.slug !== currentPost.slug).slice(0, limit);
+  if (!items.length) return '';
+  const lineTitle = {
+    base: 'Más de esta línea base',
+    visual: 'Más de esta línea visual',
+    viva: 'Más de esta línea viva',
+    alma: 'Más de esta línea alma'
+  }[currentPost.line] || 'Más de esta línea';
+
+  const lineSubtitle = {
+    base: 'Textos buscables, claros y útiles para sostener el sitio.',
+    visual: 'Piezas guardables, simples y recortables para circular mejor.',
+    viva: 'Textos más humanos y de pulso actual, con más sensación de presente.',
+    alma: 'Textos con más eje, más centro y más identidad de fondo.'
+  }[currentPost.line] || 'Seguí navegando por publicaciones emparentadas con este tono.';
+
+  return renderAutoSection(`linea-editorial-${currentPost.line}`, lineTitle, lineSubtitle, items);
+}
+
+function ensureFeaturedQuote(html = '', currentPost = {}) {
+  if (/class="[^"]*featured-quote[^"]*"/i.test(html) || /class="[^"]*frase-destacada[^"]*"/i.test(html)) {
+    return html;
+  }
+
+  const quote = escapeHtml(buildFallbackQuote(currentPost));
+  if (!quote) return html;
+
+  const block = `\n      <blockquote class="featured-quote">${quote}</blockquote>`;
+
+  if (/<\/article>/i.test(html)) {
+    return html.replace(/<\/article>/i, `${block}\n    </article>`);
+  }
+
+  return html;
+}
+
+function buildFallbackQuote(post = {}) {
+  const candidates = [
+    firstSentence(post.description),
+    firstSentence(post.lead),
+    firstSentence(post.body)
+  ].filter(Boolean);
+
+  for (const candidate of candidates) {
+    const clean = candidate.replace(/^['"“”‘’]+|['"“”‘’]+$/g, '').trim();
+    if (clean.length >= 40 && clean.length <= 180) return clean;
+  }
+
+  if (post.title) return strip(post.title);
+  return 'Hay días en los que seguir ya es una forma silenciosa de reconstrucción.';
+}
+
+function firstSentence(text = '') {
+  const clean = strip(text);
+  if (!clean) return '';
+  const matchSentence = clean.match(/^[^.?!]+[.?!]?/);
+  return (matchSentence ? matchSentence[0] : clean).trim();
+}
+
+function extractArticleDate(html = '', previousDate = '') {
+  const jsonLdDate =
+    match(html, /"datePublished"\s*:\s*"(.*?)"/is) ||
+    match(html, /<meta\s+property="article:published_time"\s+content="(.*?)"\s*\/?>/is) ||
+    match(html, /<meta\s+name="article:published_time"\s+content="(.*?)"\s*\/?>/is);
+
+  const visibleDate =
+    match(html, /Buenos\s*d[ií]as\s*de\s*verdad\s*[·•\-]\s*(\d{4}-\d{2}-\d{2})/is) ||
+    match(html, /<div[^>]*class="eyebrow"[^>]*>[\s\S]*?(\d{4}-\d{2}-\d{2})[\s\S]*?<\/div>/is);
+
+  return normalizeDateString(jsonLdDate) || normalizeDateString(visibleDate) || normalizeDateString(previousDate) || today();
+}
+
+function normalizeDateString(value = '') {
+  const text = String(value || '').trim();
+  if (!text) return '';
+  const isoMatch = text.match(/(\d{4}-\d{2}-\d{2})/);
+  if (isoMatch) return isoMatch[1];
+  const date = new Date(text);
+  if (Number.isNaN(date.getTime())) return '';
+  return date.toISOString().slice(0, 10);
+}
+
+function extractEditorialLineOverride(html = '') {
+  const direct =
+    match(html, /<meta\s+name="bd:line"\s+content="(.*?)"\s*\/?>/is) ||
+    match(html, /<meta\s+property="bd:line"\s+content="(.*?)"\s*\/?>/is);
+
+  const normalized = normalizeText(direct);
+  return ['base', 'visual', 'viva', 'alma'].includes(normalized) ? normalized : '';
+}
+
+function detectEditorialLine(post = {}) {
+  const override = normalizeText(post.lineOverride || '');
+  if (['base', 'visual', 'viva', 'alma'].includes(override)) return override;
+
+  const title = normalizeText(post.title || '');
+  const tagText = normalizeText((post.tags || []).join(' '));
+  const body = normalizeText(`${post.description || ''} ${post.lead || ''} ${post.body || ''}`);
+  const text = `${title} ${tagText} ${body}`.trim();
+
+  const score = { base: 0, visual: 0, viva: 0, alma: 0 };
+
+  const baseTerms = ['como ', 'como-', 'por que', 'que hacer', 'momento', 'elegir', 'recomponerse', 'sobrevivir', 'influir', 'afecta', 'desactivar'];
+  const visualTerms = ['frases', 'mensajes', 'ideas', 'palabras', 'textos para compartir', 'imagenes', 'imagen', 'postal', 'estado', 'estados', 'indirectas'];
+  const vivaTerms = ['hoy', 'lunes', 'lluvia', 'tarde', 'noche', 'amigos', 'fiesta', 'laburar', 'rutina', 'despertas', 'despertas', 'durante el dia', 'al otro dia'];
+  const almaTerms = ['matrix', 'frecuencia', 'sintonia', 'centro', 'alma', 'ruido', 'conciencia', 'verdad', 'eje interno', 'energia ajena', 'interferencia'];
+
+  if (title.startsWith('como ') || title.startsWith('cómo ')) score.base += 6;
+  if (title.includes('frases') || title.includes('mensajes')) score.visual += 8;
+  if (title.startsWith('cuando ')) score.viva += 3;
+
+  for (const term of baseTerms) if (text.includes(term)) score.base += 2;
+  for (const term of visualTerms) if (text.includes(term)) score.visual += 2;
+  for (const term of vivaTerms) if (text.includes(term)) score.viva += 2;
+  for (const term of almaTerms) if (text.includes(term)) score.alma += 3;
+
+  const entries = Object.entries(score).sort((a, b) => b[1] - a[1]);
+  const [winner, topScore] = entries[0];
+
+  if (topScore <= 0) return 'viva';
+  if (winner === 'visual' && score.visual < 4) return 'viva';
+  return winner;
+}
+
+function loadPreviousPostsBySlug() {
+  try {
+    if (!fs.existsSync(POSTS_JSON)) return {};
+    const raw = fs.readFileSync(POSTS_JSON, 'utf8');
+    const parsed = JSON.parse(raw);
+    if (!Array.isArray(parsed)) return {};
+    return Object.fromEntries(parsed.filter(Boolean).map(post => [post.slug, post]));
+  } catch {
+    return {};
+  }
+}
+
+
+function cleanupLegacyAutoFeaturedImages(html = '') {
+  let out = html;
+  out = out.replace(/\s*<div class="bd-featured-image" data-bd-featured="true">[\s\S]*?<\/div>\s*/ig, '\n');
+  out = out.replace(/\s*<a class="bd-featured-image" data-bd-featured="true"[\s\S]*?<\/a>\s*/ig, '\n');
+  out = out.replace(/\s*<meta\s+property="og:image"\s+content="https:\/\/www\.buenosdia\.com\/assets\/imagenes-tematicas\/[^"]*"\s*\/?>\s*/ig, '\n');
+  return out;
+}
+
+function enhancePostDiscover(html = '', currentPost = {}) {
+  let out = html;
+  out = cleanupLegacyAutoFeaturedImages(out);
+  const featuredImageUrl = getFeaturedImageUrl(currentPost);
+  out = ensureDiscoverRobots(out);
+  out = ensureArticleStructuredData(out, currentPost, featuredImageUrl);
+  if (featuredImageUrl) {
+    out = ensureOgImage(out, featuredImageUrl);
+  }
+  out = ensureFeaturedImageBlock(out, currentPost, featuredImageUrl);
+  return out;
+}
+
+
+function getFeaturedImageUrl(post = {}) {
+  try {
+    if (!fs.existsSync(IMAGE_DIR)) return '';
+    const candidates = [];
+    for (const tag of post.tags || []) {
+      const slug = slugify(tag);
+      if (slug) candidates.push(slug);
+    }
+    if (post.line) candidates.push(post.line);
+    for (const candidate of candidates) {
+      const filePath = path.join(IMAGE_DIR, `${candidate}.webp`);
+      if (fs.existsSync(filePath)) return `/assets/imagenes-tematicas/${candidate}.webp`;
+    }
+    const fallback = ['base','visual','viva','alma'];
+    for (const candidate of fallback) {
+      const filePath = path.join(IMAGE_DIR, `${candidate}.webp`);
+      if (fs.existsSync(filePath)) return `/assets/imagenes-tematicas/${candidate}.webp`;
+    }
+    return '';
+  } catch {
+    return '';
+  }
+}
+
+
+function ensureDiscoverRobots(html = '') {
+  if (/max-image-preview:large/i.test(html)) return html;
+  if (/<meta\s+name="robots"/i.test(html)) {
+    return html.replace(/<meta\s+name="robots"\s+content="([^"]*)"\s*\/?>/i, (full, content) => {
+      const current = String(content || '').trim();
+      if (/max-image-preview:large/i.test(current)) return full;
+      const next = current ? `${current},max-image-preview:large` : 'index,follow,max-image-preview:large';
+      return `<meta name="robots" content="${next}">`;
+    });
+  }
+  return html.replace(/<link rel="canonical"[^>]*>/i, match => `${match}
+  <meta name="robots" content="index,follow,max-image-preview:large">`);
+}
+
+function ensureOgImage(html = '', imageUrl = '') {
+  if (!imageUrl) return html;
+  const fullUrl = `${SITE_URL}${imageUrl}`;
+  if (/<meta\s+property="og:image"/i.test(html)) {
+    return html.replace(/<meta\s+property="og:image"\s+content="[^"]*"\s*\/?>/i, `<meta property="og:image" content="${fullUrl}">`);
+  }
+  if (/<link rel="canonical"[^>]*>/i.test(html)) {
+    return html.replace(/<link rel="canonical"[^>]*>/i, match => `${match}
+  <meta property="og:image" content="${fullUrl}">`);
+  }
+  return html.replace(/<\/head>/i, `  <meta property="og:image" content="${fullUrl}">
+</head>`);
+}
+
+
+function hasManualArticleImage(html = '') {
+  const mainMatch = html.match(/<main[^>]*>([\s\S]*?)<\/main>/i);
+  if (!mainMatch) return false;
+  let cleaned = mainMatch[1];
+
+  cleaned = cleaned.replace(/<img\b[^>]*class="statcounter"[^>]*>/ig, '');
+  cleaned = cleaned.replace(/<div class="bd-featured-image" data-bd-featured="true">[\s\S]*?<\/div>/ig, '');
+  cleaned = cleaned.replace(/<a class="bd-featured-image" data-bd-featured="true"[\s\S]*?<\/a>/ig, '');
+
+  return /<img\b/i.test(cleaned);
+}
+
+
+function hasMainContentImage(html = '') {
+  const mainMatch = html.match(/<main[^>]*>([\s\S]*?)<\/main>/i);
+  if (!mainMatch) return false;
+  let cleaned = mainMatch[1];
+
+  cleaned = cleaned.replace(/<img\b[^>]*class="statcounter"[^>]*>/ig, '');
+  cleaned = cleaned.replace(/<div class="bd-featured-image" data-bd-featured="true">[\s\S]*?<\/div>/ig, '');
+  cleaned = cleaned.replace(/<a class="bd-featured-image" data-bd-featured="true"[\s\S]*?<\/a>/ig, '');
+
+  return /<img\b/i.test(cleaned);
+}
+
+function ensureFeaturedImageBlock(html = '', post = {}, imageUrl = '') {
+  let out = cleanupLegacyAutoFeaturedImages(html);
+  if (!imageUrl) return out;
+  if (hasMainContentImage(out)) return out;
+
+  const imageBlock = `
+      <a class="bd-featured-image" data-bd-featured="true" href="${imageUrl}" target="_blank" rel="noopener noreferrer" aria-label="Ver imagen en grande">
+        <img src="${imageUrl}" alt="${escapeHtml(post.title || 'BuenosDia')}" loading="eager" decoding="async">
+      </a>`;
+
+  // Insert after share card if present, otherwise after hero, otherwise before article
+  if (/<aside[^>]*aria-label="Compartir publicación"[^>]*>[\s\S]*?<\/aside>/i.test(out)) {
+    return out.replace(/(<aside[^>]*aria-label="Compartir publicación"[^>]*>[\s\S]*?<\/aside>)/i, `$1${imageBlock}`);
+  }
+  if (/<section[^>]*class="hero"[^>]*>[\s\S]*?<\/section>/i.test(out)) {
+    return out.replace(/(<section[^>]*class="hero"[^>]*>[\s\S]*?<\/section>)/i, `$1${imageBlock}`);
+  }
+  if (/<article[^>]*>/i.test(out)) {
+    return out.replace(/<article([^>]*)>/i, `<article$1>${imageBlock}`);
+  }
+  return out;
+}
+
+
+function ensureArticleStructuredData(html = '', post = {}, imageUrl = '') {
+  const structuredData = JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: post.title || 'BuenosDia',
+    description: shortDescription(post.description || post.lead || post.body || '', 180),
+    datePublished: post.date || today(),
+    dateModified: post.date || today(),
+    mainEntityOfPage: `${SITE_URL}${post.url || ''}`,
+    author: {
+      '@type': 'Organization',
+      name: 'buenosdia.com',
+      url: SITE_URL
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'buenosdia.com',
+      url: SITE_URL
+    },
+    image: imageUrl ? [`${SITE_URL}${imageUrl}`] : undefined
+  }, null, 2);
+
+  const script = `
+  <script type="application/ld+json" data-bd-schema="article">
+${structuredData}
+  </script>`;
+  if (/data-bd-schema="article"/i.test(html)) {
+    return html.replace(/\s*<script type="application\/ld\+json" data-bd-schema="article">[\s\S]*?<\/script>/i, script);
+  }
+  return html.replace(/<\/head>/i, `${script}
+</head>`);
+}
+
 
 function sharedTagPageCss() {
   return `:root{--bg:#f6f3ee;--card:#fffdfa;--text:#171717;--muted:#667085;--line:#e7e1d8;--pill:#f5f5f4;--shadow:0 10px 25px rgba(0,0,0,.05);--radius:22px;--max:1100px}*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text)}.wrap{max-width:var(--max);margin:0 auto;padding:28px 20px 70px}header{display:flex;justify-content:space-between;align-items:flex-start;gap:18px;margin-bottom:22px}.brand{text-decoration:none;color:#111827;font-weight:700;font-size:1.2rem}nav a{text-decoration:none;color:var(--muted);margin-left:20px;font-size:1rem}.hero,.card,.post-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}.hero{padding:34px;margin-bottom:22px}.hero h1{margin:0 0 12px;font-size:clamp(2rem,5vw,3.5rem);line-height:1.02;letter-spacing:-.05em}.hero p{margin:0;color:#475467;line-height:1.65;font-size:1.08rem}.eyebrow{color:var(--muted);font-size:1rem;margin-bottom:14px}.card{padding:24px}.tag-cloud{display:flex;flex-wrap:wrap;gap:12px}.tag-cloud-scroll{max-height:460px;overflow:auto;padding-right:4px}.tag{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);background:var(--pill);color:#475467;border-radius:999px;padding:10px 14px;font-size:.98rem;text-decoration:none}.tag span{display:inline-block;background:#fff;border:1px solid var(--line);border-radius:999px;padding:2px 8px;font-size:.86rem}.tag.active{background:#111827;color:#fff}.tag.active span{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.22);color:#fff}.posts-grid{display:grid;gap:18px;margin-top:22px}.post-card{padding:26px}.post-card h2{margin:0 0 10px;font-size:1.45rem;line-height:1.2;letter-spacing:-.03em}.post-card p{margin:0 0 18px;color:#475467;font-size:1.02rem;line-height:1.65}.read-link{text-decoration:none;color:#111827;font-weight:700}.read-link:hover{text-decoration:underline}.load-more-wrap{display:flex;justify-content:center;margin-top:18px}.load-more{border:1px solid var(--line);background:var(--card);color:var(--text);border-radius:999px;padding:12px 18px;font-size:1rem;cursor:pointer;box-shadow:var(--shadow)}.load-more[hidden]{display:none}.site-footer{margin-top:22px;color:var(--muted);font-size:.95rem}.site-footer a{color:#111827;font-weight:700;text-decoration:none}.site-footer a:hover{text-decoration:underline}@media (max-width:800px){header{flex-direction:column}nav a{margin:0 18px 0 0}}`;
@@ -581,7 +951,8 @@ function normalizeText(str = '') {
 }
 
 function normalizeTag(tag = '') {
-  return normalizeText(tag).replace(/\s+/g, ' ').trim();
+  const normalized = normalizeText(tag).replace(/\s+/g, ' ').trim();
+  return TAG_ALIASES[normalized] || normalized;
 }
 
 function slugify(str = '') {
@@ -638,28 +1009,4 @@ function cleanSlug(str) {
 
 function today() {
   return new Date().toISOString().slice(0, 10);
-}
-
-
-function removeArticleImages(html = '') {
-  const articleMatch = html.match(/<article[^>]*>([\s\S]*?)<\/article>/i);
-  if (!articleMatch) return html;
-
-  let inner = articleMatch[1];
-
-  // eliminar bloques automáticos viejos
-  inner = inner.replace(/\s*<div class="bd-featured-image"[\s\S]*?<\/div>\s*/ig, '\n');
-  inner = inner.replace(/\s*<div class="bd-content-image"[\s\S]*?<\/div>\s*/ig, '\n');
-
-  // eliminar figures que contengan imágenes
-  inner = inner.replace(/\s*<figure\b[^>]*>[\s\S]*?<img\b[\s\S]*?<\/figure>\s*/ig, '\n');
-
-  // eliminar imágenes sueltas y párrafos que sólo contienen una imagen
-  inner = inner.replace(/\s*<p>\s*<img\b[^>]*>\s*<\/p>\s*/ig, '\n');
-  inner = inner.replace(/\s*<img\b[^>]*>\s*/ig, '\n');
-
-  // limpiar metas visuales automáticas previas
-  let out = html.replace(articleMatch[0], articleMatch[0].replace(articleMatch[1], inner));
-  out = out.replace(/\s*<meta\s+property="og:image"\s+content="[^"]*"\s*\/?>(\s*)/ig, '\n');
-  return out;
 }
