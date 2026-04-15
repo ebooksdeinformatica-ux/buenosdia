@@ -173,12 +173,6 @@ function patchPostHtml(html, currentPost, allPosts, featuredPosts, lineMap) {
     .auto-post-card span{display:block;color:var(--muted,#666);font-size:14px;line-height:1.55}
     .auto-post-card em{display:block;color:var(--muted,#666);font-size:12px;font-style:normal;letter-spacing:.02em;text-transform:uppercase;margin-bottom:6px}
     .auto-post-card:hover{border-color:#d8d8d8;transform:translateY(-1px);transition:all .18s ease}
-    .bd-featured-image{display:block;width:100%;max-width:min(100%,700px);margin:22px auto 26px;line-height:0;text-decoration:none}
-    .bd-featured-image img{display:block;width:100%;max-width:100%;height:auto;border-radius:18px;border:1px solid var(--line,#e9e9e9);box-shadow:var(--shadow,0 10px 25px rgba(0,0,0,.05));object-fit:cover}
-    .bd-featured-image:hover img{filter:brightness(.98)}
-    .article img,.article figure img,article img,article figure img{display:block;width:100%;max-width:100%;height:auto}
-    .article figure,article figure{width:100%;max-width:min(100%,700px);margin:22px auto 26px}
-
     @media (min-width:760px){.auto-posts-grid{grid-template-columns:1fr 1fr}}
   </style>`);
   }
@@ -551,11 +545,8 @@ function write404Page(tagMap) {
 function writeSitemap(posts, tagMap) {
   const tagUrls = Object.values(tagMap).map(tag => `  <url>\n    <loc>${SITE_URL}/tags/${tag.slug}.html</loc>\n    <lastmod>${today()}</lastmod>\n  </url>`);
   const postUrls = posts.map(post => `  <url>\n    <loc>${SITE_URL}${post.url}</loc>\n    <lastmod>${post.date}</lastmod>\n  </url>`);
-  const staticUrls = ['quienes-somos.html','politica-editorial.html','contacto.html']
-    .filter(file => fs.existsSync(path.join(ROOT, file)))
-    .map(file => `  <url>\n    <loc>${SITE_URL}/${file}</loc>\n    <lastmod>${today()}</lastmod>\n  </url>`);
 
-  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n  <url>\n    <loc>${SITE_URL}/</loc>\n    <lastmod>${today()}</lastmod>\n  </url>\n  <url>\n    <loc>${SITE_URL}/tags/</loc>\n    <lastmod>${today()}</lastmod>\n  </url>\n${staticUrls.join('\n')}\n${postUrls.join('\n')}\n${tagUrls.join('\n')}\n</urlset>\n`;
+  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n  <url>\n    <loc>${SITE_URL}/</loc>\n    <lastmod>${today()}</lastmod>\n  </url>\n  <url>\n    <loc>${SITE_URL}/tags/</loc>\n    <lastmod>${today()}</lastmod>\n  </url>\n${postUrls.join('\n')}\n${tagUrls.join('\n')}\n</urlset>\n`;
   fs.writeFileSync(SITEMAP_FILE, sitemap, 'utf8');
 }
 
@@ -772,50 +763,18 @@ function loadPreviousPostsBySlug() {
 }
 
 
-function cleanupLegacyAutoFeaturedImages(html = '') {
-  let out = html;
-  out = out.replace(/\s*<div class="bd-featured-image" data-bd-featured="true">[\s\S]*?<\/div>\s*/ig, '\n');
-  out = out.replace(/\s*<a class="bd-featured-image" data-bd-featured="true"[\s\S]*?<\/a>\s*/ig, '\n');
-  out = out.replace(/\s*<meta\s+property="og:image"\s+content="https:\/\/www\.buenosdia\.com\/assets\/imagenes-tematicas\/[^"]*"\s*\/?>\s*/ig, '\n');
-  return out;
-}
-
 function enhancePostDiscover(html = '', currentPost = {}) {
   let out = html;
+  out = removeContentImages(out);
   out = cleanupLegacyAutoFeaturedImages(out);
-  const featuredImageUrl = getFeaturedImageUrl(currentPost);
   out = ensureDiscoverRobots(out);
-  out = ensureArticleStructuredData(out, currentPost, featuredImageUrl);
-  if (featuredImageUrl) {
-    out = ensureOgImage(out, featuredImageUrl);
-  }
-  out = ensureFeaturedImageBlock(out, currentPost, featuredImageUrl);
+  out = ensureArticleStructuredData(out, currentPost, '');
   return out;
 }
 
 
 function getFeaturedImageUrl(post = {}) {
-  try {
-    if (!fs.existsSync(IMAGE_DIR)) return '';
-    const candidates = [];
-    for (const tag of post.tags || []) {
-      const slug = slugify(tag);
-      if (slug) candidates.push(slug);
-    }
-    if (post.line) candidates.push(post.line);
-    for (const candidate of candidates) {
-      const filePath = path.join(IMAGE_DIR, `${candidate}.webp`);
-      if (fs.existsSync(filePath)) return `/assets/imagenes-tematicas/${candidate}.webp`;
-    }
-    const fallback = ['base','visual','viva','alma'];
-    for (const candidate of fallback) {
-      const filePath = path.join(IMAGE_DIR, `${candidate}.webp`);
-      if (fs.existsSync(filePath)) return `/assets/imagenes-tematicas/${candidate}.webp`;
-    }
-    return '';
-  } catch {
-    return '';
-  }
+  return '';
 }
 
 
@@ -834,66 +793,17 @@ function ensureDiscoverRobots(html = '') {
 }
 
 function ensureOgImage(html = '', imageUrl = '') {
-  if (!imageUrl) return html;
-  const fullUrl = `${SITE_URL}${imageUrl}`;
-  if (/<meta\s+property="og:image"/i.test(html)) {
-    return html.replace(/<meta\s+property="og:image"\s+content="[^"]*"\s*\/?>/i, `<meta property="og:image" content="${fullUrl}">`);
-  }
-  if (/<link rel="canonical"[^>]*>/i.test(html)) {
-    return html.replace(/<link rel="canonical"[^>]*>/i, match => `${match}
-  <meta property="og:image" content="${fullUrl}">`);
-  }
-  return html.replace(/<\/head>/i, `  <meta property="og:image" content="${fullUrl}">
-</head>`);
+  return html;
 }
 
 
 function hasManualArticleImage(html = '') {
-  const mainMatch = html.match(/<main[^>]*>([\s\S]*?)<\/main>/i);
-  if (!mainMatch) return false;
-  let cleaned = mainMatch[1];
-
-  cleaned = cleaned.replace(/<img\b[^>]*class="statcounter"[^>]*>/ig, '');
-  cleaned = cleaned.replace(/<div class="bd-featured-image" data-bd-featured="true">[\s\S]*?<\/div>/ig, '');
-  cleaned = cleaned.replace(/<a class="bd-featured-image" data-bd-featured="true"[\s\S]*?<\/a>/ig, '');
-
-  return /<img\b/i.test(cleaned);
+  return false;
 }
 
-
-function hasMainContentImage(html = '') {
-  const mainMatch = html.match(/<main[^>]*>([\s\S]*?)<\/main>/i);
-  if (!mainMatch) return false;
-  let cleaned = mainMatch[1];
-
-  cleaned = cleaned.replace(/<img\b[^>]*class="statcounter"[^>]*>/ig, '');
-  cleaned = cleaned.replace(/<div class="bd-featured-image" data-bd-featured="true">[\s\S]*?<\/div>/ig, '');
-  cleaned = cleaned.replace(/<a class="bd-featured-image" data-bd-featured="true"[\s\S]*?<\/a>/ig, '');
-
-  return /<img\b/i.test(cleaned);
-}
 
 function ensureFeaturedImageBlock(html = '', post = {}, imageUrl = '') {
-  let out = cleanupLegacyAutoFeaturedImages(html);
-  if (!imageUrl) return out;
-  if (hasMainContentImage(out)) return out;
-
-  const imageBlock = `
-      <a class="bd-featured-image" data-bd-featured="true" href="${imageUrl}" target="_blank" rel="noopener noreferrer" aria-label="Ver imagen en grande">
-        <img src="${imageUrl}" alt="${escapeHtml(post.title || 'BuenosDia')}" loading="eager" decoding="async">
-      </a>`;
-
-  // Insert after share card if present, otherwise after hero, otherwise before article
-  if (/<aside[^>]*aria-label="Compartir publicación"[^>]*>[\s\S]*?<\/aside>/i.test(out)) {
-    return out.replace(/(<aside[^>]*aria-label="Compartir publicación"[^>]*>[\s\S]*?<\/aside>)/i, `$1${imageBlock}`);
-  }
-  if (/<section[^>]*class="hero"[^>]*>[\s\S]*?<\/section>/i.test(out)) {
-    return out.replace(/(<section[^>]*class="hero"[^>]*>[\s\S]*?<\/section>)/i, `$1${imageBlock}`);
-  }
-  if (/<article[^>]*>/i.test(out)) {
-    return out.replace(/<article([^>]*)>/i, `<article$1>${imageBlock}`);
-  }
-  return out;
+  return removeContentImages(html);
 }
 
 
@@ -901,33 +811,47 @@ function ensureArticleStructuredData(html = '', post = {}, imageUrl = '') {
   const structuredData = JSON.stringify({
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: post.title || 'BuenosDia',
+    headline: post.title || 'buenosdia.com',
     description: shortDescription(post.description || post.lead || post.body || '', 180),
     datePublished: post.date || today(),
     dateModified: post.date || today(),
     mainEntityOfPage: `${SITE_URL}${post.url || ''}`,
-    author: {
-      '@type': 'Organization',
-      name: 'buenosdia.com',
-      url: SITE_URL
-    },
-    publisher: {
-      '@type': 'Organization',
-      name: 'buenosdia.com',
-      url: SITE_URL
-    },
-    image: imageUrl ? [`${SITE_URL}${imageUrl}`] : undefined
+    author: { '@type': 'Organization', name: 'buenosdia.com', url: SITE_URL },
+    publisher: { '@type': 'Organization', name: 'buenosdia.com', url: SITE_URL }
   }, null, 2);
 
-  const script = `
-  <script type="application/ld+json" data-bd-schema="article">
-${structuredData}
-  </script>`;
+  const script = `\n  <script type="application/ld+json" data-bd-schema="article">\n${structuredData}\n  </script>`;
   if (/data-bd-schema="article"/i.test(html)) {
     return html.replace(/\s*<script type="application\/ld\+json" data-bd-schema="article">[\s\S]*?<\/script>/i, script);
   }
-  return html.replace(/<\/head>/i, `${script}
-</head>`);
+  return html.replace(/<\/head>/i, `${script}\n</head>`);
+}
+
+
+
+function removeContentImages(html = '') {
+  let out = html;
+
+  out = out.replace(/\s*<meta\s+property="og:image"\s+content="[^"]*"\s*\/?>\s*/ig, '\n');
+
+  const mainMatch = out.match(/<main[^>]*>([\s\S]*?)<\/main>/i);
+  if (!mainMatch) {
+    return out
+      .replace(/\s*<figure\b[^>]*>[\s\S]*?<\/figure>\s*/ig, '\n')
+      .replace(/\s*<a\b([^>]*)>\s*<img\b[^>]*>\s*<\/a>\s*/ig, '\n')
+      .replace(/\s*<p>\s*<img\b[^>]*>\s*<\/p>\s*/ig, '\n')
+      .replace(/\s*<img\b[^>]*>\s*/ig, '\n');
+  }
+
+  let inner = mainMatch[1];
+  inner = inner.replace(/\s*<div class="bd-featured-image"[\s\S]*?<\/div>\s*/ig, '\n');
+  inner = inner.replace(/\s*<div class="bd-content-image"[\s\S]*?<\/div>\s*/ig, '\n');
+  inner = inner.replace(/\s*<figure\b[^>]*>[\s\S]*?<\/figure>\s*/ig, '\n');
+  inner = inner.replace(/\s*<a\b([^>]*)>\s*<img\b[^>]*>\s*<\/a>\s*/ig, '\n');
+  inner = inner.replace(/\s*<p>\s*<img\b[^>]*>\s*<\/p>\s*/ig, '\n');
+  inner = inner.replace(/\s*<img\b[^>]*>\s*/ig, '\n');
+
+  return out.replace(mainMatch[0], `<main>${inner}</main>`);
 }
 
 
