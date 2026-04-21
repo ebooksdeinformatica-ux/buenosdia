@@ -47,14 +47,17 @@ const TAG_KEEP_WHITELIST = new Set([
   'cansancio',
   'identidad',
   'motivacion',
+  'motivacion real',
   'reflexion',
-  'frecuencia personal',
-  'energia propia',
+  'claridad',
+  'esperanza',
   'seguir adelante',
   'vida real',
-  'motivacion real'
+  'reconstruccion personal',
+  'frecuencia personal',
+  'energia propia'
 ]);
-
+let ACTIVE_TAG_SLUGS = new Set();
 
 
 if (!fs.existsSync(POSTS_DIR)) {
@@ -113,33 +116,37 @@ for (const post of posts) {
 }
 
 const tagMap = buildTagMap(posts);
+ACTIVE_TAG_SLUGS = new Set(Object.keys(tagMap));
 const featuredPosts = computeFeaturedPosts(posts, 8);
 const lineMap = buildLineMap(posts);
 
 for (const post of posts) {
   let updatedHtml = cleanupLegacyAutoSections(post.html);
-  updatedHtml = patchPostHtml(updatedHtml, post, posts, featuredPosts, lineMap);
+  updatedHtml = patchPostHtml(updatedHtml, post, posts, featuredPosts, lineMap, tagMap);
   updatedHtml = injectAdsense(updatedHtml);
   updatedHtml = injectStatcounter(updatedHtml);
   fs.writeFileSync(post.fullPath, updatedHtml, 'utf8');
 }
 
-const exportedPosts = posts.map(post => ({
-  title: post.title,
-  description: post.description,
-  tags: post.tags,
-  tagSlugs: Object.fromEntries((post.tags || []).map(tag => [tag, (tagMap[slugify(tag)] && tagMap[slugify(tag)].slug) || slugify(tag)])),
-  date: post.date,
-  slug: post.slug,
-  url: post.url,
-  line: post.line,
-  related: computeRelatedPosts(post, posts, 4).map(p => ({
-    title: p.title,
-    description: shortDescription(p.description, 140),
-    url: p.url,
-    slug: p.slug
-  }))
-}));
+const exportedPosts = posts.map(post => {
+  const strongTags = (post.tags || []).filter(tag => tagMap[slugify(tag)]);
+  return {
+    title: post.title,
+    description: post.description,
+    tags: strongTags,
+    tagSlugs: Object.fromEntries(strongTags.map(tag => [tag, tagMap[slugify(tag)].slug])),
+    date: post.date,
+    slug: post.slug,
+    url: post.url,
+    line: post.line,
+    related: computeRelatedPosts(post, posts, 4).map(p => ({
+      title: p.title,
+      description: shortDescription(p.description, 140),
+      url: p.url,
+      slug: p.slug
+    }))
+  };
+});
 fs.writeFileSync(POSTS_JSON, JSON.stringify(exportedPosts, null, 2), 'utf8');
 
 patchIndexHtml(tagMap);
@@ -149,7 +156,7 @@ writeSitemap(posts, tagMap);
 
 console.log(`Generados ${posts.length} posts, ${Object.keys(tagMap).length} páginas de etiquetas, data/posts.json y sitemap.xml.`);
 
-function patchPostHtml(html, currentPost, allPosts, featuredPosts, lineMap) {
+function patchPostHtml(html, currentPost, allPosts, featuredPosts, lineMap, tagMap) {
   let out = html;
   out = cleanupLegacyAutoSections(out);
   out = out.replace(/href="\/#etiquetas"/g, 'href="/tags/"');
@@ -242,9 +249,11 @@ function rewriteTagLinks(sectionHtml) {
     const tagText = strip(inner);
     const slug = slugify(tagText);
     if (!slug) return full;
+    if (!ACTIVE_TAG_SLUGS.has(slug)) return `<span class="tag">${inner}</span>`;
     return `<a${before}href="/tags/${slug}.html"${after}>${inner}</a>`;
   });
 }
+
 
 function getVisibleTags(html = '') {
   const results = [];
@@ -270,7 +279,6 @@ function getVisibleTags(html = '') {
 function buildTagMap(posts) {
   const map = {};
   const forbidden = new Set(['inicio','publicaciones','etiquetas','contacto','buenosdia com','buenosdia.com']);
-
   for (const post of posts) {
     for (const tag of post.tags || []) {
       const normalized = normalizeTag(tag);
@@ -285,7 +293,7 @@ function buildTagMap(posts) {
         title: post.title,
         description: post.description,
         lead: post.lead,
-        body: shortDescription(post.body, 260),
+        body: post.body,
         date: post.date,
         url: post.url,
         slug: post.slug,
@@ -294,7 +302,6 @@ function buildTagMap(posts) {
       });
     }
   }
-
   const filtered = {};
   for (const [slug, tag] of Object.entries(map)) {
     tag.posts.sort((a, b) => b.date.localeCompare(a.date) || a.title.localeCompare(b.title, 'es'));
@@ -306,53 +313,110 @@ function buildTagMap(posts) {
 
 
 
-function buildTagIntro(tag) {
-  const posts = tag.posts || [];
-  const count = posts.length;
-  const tagText = tag.name || 'este tema';
-
-  const combined = posts.map(post => `${post.title || ''} ${post.description || ''} ${post.lead || ''} ${post.body || ''}`).join(' ');
-  const tagTokens = new Set(tokenize(tagText));
-  const tokens = [...tokenize(combined)].filter(token => !tagTokens.has(token));
-  const weights = {};
-  for (const token of tokens) weights[token] = (weights[token] || 0) + 1;
-  const top = Object.entries(weights)
-    .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0], 'es'))
-    .slice(0, 4)
-    .map(([token]) => token);
-
-  const lineCounts = {};
-  for (const post of posts) lineCounts[post.line || 'viva'] = (lineCounts[post.line || 'viva'] || 0) + 1;
-  const mainLine = Object.entries(lineCounts).sort((a, b) => b[1] - a[1])[0]?.[0] || 'viva';
-
-  const linePhrase = {
-    base: 'con un enfoque más claro, útil y orientado a resolver',
-    visual: 'con un tono más recortable, concreto y fácil de compartir',
-    viva: 'desde experiencias reales, momentos humanos y situaciones del día a día',
-    alma: 'desde una mirada más interior, profunda y de búsqueda personal'
-  }[mainLine] || 'desde distintos ángulos humanos y cotidianos';
-
-  const first = top[0] || '';
-  const second = top[1] || '';
-  const third = top[2] || '';
-
-  const variants = [
-    `Acá reunimos ${count} publicación${count === 1 ? '' : 'es'} sobre ${tagText}. ${tagText.charAt(0).toUpperCase() + tagText.slice(1)} aparece ligado a ${first || 'situaciones reales'}${second ? `, ${second}` : ''}${third ? ` y ${third}` : ''}, ${linePhrase}. La idea de esta página es que quien llegue buscando ${tagText} encuentre una entrada ordenada, útil y concreta para seguir leyendo sin perderse entre etiquetas sueltas.`,
-    `${tagText.charAt(0).toUpperCase() + tagText.slice(1)} no aparece acá como una palabra aislada: se cruza con ${first || 'experiencias reales'}${second ? `, ${second}` : ''}${third ? ` y ${third}` : ''}. En esta etiqueta hay ${count} publicación${count === 1 ? '' : 'es'} que trabajan ese eje ${linePhrase}. Si entraste buscando ${tagText}, esta página junta lo más relacionado para que avances por un hilo más claro.`,
-    `Esta etiqueta agrupa ${count} publicación${count === 1 ? '' : 'es'} vinculadas con ${tagText}. A lo largo de estos textos, ${tagText} se conecta con ${first || 'la experiencia cotidiana'}${second ? `, ${second}` : ''}${third ? ` y ${third}` : ''}. Por eso, más que una lista suelta, esta página funciona como una puerta de entrada temática para leer mejor lo que buenosdia.com viene trabajando sobre ${tagText}.`
-  ];
-
-  const idx = Math.abs(hashString(tag.slug || tag.name || '0')) % variants.length;
-  return variants[idx];
-}
-
 function hashString(str = '') {
   let hash = 0;
   for (let i = 0; i < str.length; i += 1) hash = ((hash << 5) - hash) + str.charCodeAt(i);
   return hash | 0;
 }
 
-function getStrongRelatedTags(currentTag, tagMap, limit = 24) {
+function capitalizePhrase(text = '') {
+  return text ? text.charAt(0).toUpperCase() + text.slice(1) : '';
+}
+
+function inferTagMode(tagName = '') {
+  const tag = normalizeTag(tagName);
+  if (/(cansancio|agotamiento|fatiga|ansiedad|tristeza|soledad|decepcion|dolor|insomnio|desmotivacion|incertidumbre)/.test(tag)) return 'estado';
+  if (/(motivacion|claridad|esperanza|energia|frecuencia|identidad|paz|calma|presencia|equilibrio|intuicion|naturalidad|firmeza)/.test(tag)) return 'eje';
+  if (/(volver|seguir|empezar|cambiar|retomar|reconstruccion|reconstruir|reprogramarse|superar|levantar|transformar|entrenar|caminar|sobrevivir)/.test(tag)) return 'proceso';
+  if (/(amigos|amistad|vinculos|social|gente|mujer|pareja|mirada ajena|abandono|decepcion|universidad)/.test(tag)) return 'vinculo';
+  if (/(dias|dia|mañanas|mananas|noche|noches|lunes|lluvia|madrugada|feriados|rutina|trabajo|tarde)/.test(tag)) return 'situacion';
+  return 'general';
+}
+
+function getTagContextTerms(tag) {
+  const combined = (tag.posts || []).map(post => `${post.title || ''} ${post.description || ''} ${post.lead || ''} ${post.body || ''}`).join(' ');
+  const tagTokens = new Set(tokenize(tag.name || ''));
+  const weights = {};
+  for (const token of tokenize(combined)) {
+    if (tagTokens.has(token)) continue;
+    weights[token] = (weights[token] || 0) + 1;
+  }
+  return Object.entries(weights)
+    .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0], 'es'))
+    .slice(0, 4)
+    .map(([token]) => token);
+}
+
+function getTagExampleTitles(tag, limit = 2) {
+  return (tag.posts || []).slice(0, limit).map(post => post.title).filter(Boolean);
+}
+
+function buildTagDefinition(tag) {
+  const name = tag.name || 'este tema';
+  const mode = inferTagMode(name);
+  const terms = getTagContextTerms(tag);
+  const term1 = terms[0] || '';
+  const term2 = terms[1] || '';
+  const cap = capitalizePhrase(name);
+
+  const byMode = {
+    estado: [
+      `${cap} no es solo una sensación suelta: muchas veces nombra un desgaste real que se acumula en el cuerpo, en la cabeza o en la forma de atravesar el día.`,
+      `${cap} suele aparecer cuando el cuerpo y la mente empiezan a pasar factura, no siempre con ruido, pero sí con señales concretas que se sienten en la vida diaria.`,
+      `${cap} habla de un límite. De ese punto en el que algo pide pausa, aire o una forma distinta de sostenerse.`
+    ],
+    eje: [
+      `${cap} tiene que ver con una dirección interna: con la forma en que una persona vuelve a ordenar lo que siente, lo que piensa y lo que decide hacer.`,
+      `${cap} no apunta a una idea vacía o decorativa: apunta a un eje real desde donde mirar mejor lo que pasa y moverse con más sentido.`,
+      `${cap} toca una parte clave de la vida cotidiana: la que define con qué energía, con qué claridad y desde qué lugar interno se enfrenta cada día.`
+    ],
+    proceso: [
+      `${cap} no es una frase linda: es un proceso. Habla de moverse otra vez, de reconstruir algo o de empezar a salir de un punto que estaba trabado.`,
+      `${cap} nombra un recorrido. No algo instantáneo, sino una serie de decisiones, intentos y pequeños movimientos que vuelven a poner a alguien en marcha.`,
+      `${cap} aparece cuando ya no alcanza con aguantar. Es la parte de la vida en la que toca rehacer, corregir o animarse a dar un paso distinto.`
+    ],
+    vinculo: [
+      `${cap} pone el foco en lo que pasa entre personas: en la forma en que alguien acompaña, decepciona, sostiene o deja marcas en la vida real.`,
+      `${cap} habla de vínculos concretos. De lo que se siente cuando el otro suma, falta, pesa o modifica el clima emocional de una etapa.`,
+      `${cap} toca una zona sensible de la experiencia: la que mezcla presencia, expectativas y la verdad que aparece cuando los vínculos se ponen a prueba.`
+    ],
+    situacion: [
+      `${cap} nombra escenas concretas de la vida diaria. No una idea abstracta, sino momentos reales que cambian el humor, el ritmo o la forma de mirar lo que viene.`,
+      `${cap} aparece en esos tramos del día donde el cuerpo, la mente y el contexto se cruzan, y dejan una sensación más difícil de explicar que de sentir.`,
+      `${cap} funciona como una manera de ponerle nombre a ciertos momentos que se repiten y que, aunque parezcan simples, tienen bastante carga emocional.`
+    ],
+    general: [
+      `${cap} reúne una idea que vuelve seguido en la vida real y que toma forma distinta según el momento, el ánimo y lo que cada persona viene atravesando.`,
+      `${cap} sirve para nombrar un eje humano que aparece en varias situaciones del día a día, siempre ligado a algo concreto y reconocible.`,
+      `${cap} no queda en lo teórico: baja a experiencias, decisiones y estados que cualquiera puede reconocer cuando mira su propia vida con un poco más de atención.`
+    ]
+  };
+
+  const variants = byMode[mode] || byMode.general;
+  const idx = Math.abs(hashString(tag.slug || name)) % variants.length;
+  let sentence = variants[idx];
+
+  if (term1 || term2) {
+    const extras = [term1, term2].filter(Boolean).join(' y ');
+    sentence += ` En estos textos suele cruzarse con ${extras}, por eso no queda aislado ni abstracto.`;
+  }
+
+  return sentence;
+}
+
+function buildTagIntro(tag) {
+  const name = tag.name || 'este tema';
+  const count = tag.count || (tag.posts || []).length || 0;
+  const definition = buildTagDefinition(tag);
+  const exampleTitles = getTagExampleTitles(tag, 2);
+  const examplesText = exampleTitles.length
+    ? ` Acá aparece, por ejemplo, en publicaciones como ${exampleTitles.map(title => `“${title}”`).join(' y ')}.`
+    : '';
+  const closing = ` En esta etiqueta vas a encontrar ${count} publicación${count === 1 ? '' : 'es'} relacionadas con ${name}, pensadas para entrar mejor al tema sin perderte entre resultados vacíos.`;
+  return `${definition}${examplesText}${closing}`.trim();
+}
+
+function getStrongRelatedTags(currentTag, tagMap, limit = 30) {
   return Object.values(tagMap)
     .filter(tag => tag.slug !== currentTag.slug)
     .sort((a, b) => b.count - a.count || a.name.localeCompare(b.name, 'es'))
@@ -370,12 +434,59 @@ function renderStrongTagsForPost(currentPost, tagMap, limit = 8) {
   if (!items.length) return '';
 
   return `    <section class="card auto-discovery" data-auto-block="strong-tags-post">
-      <h2 class="auto-block-title">Temas fuertes relacionados</h2>
-      <p class="auto-block-sub">Etiquetas más sólidas para seguir tirando del mismo hilo.</p>
+      <h2 class="auto-block-title">Etiquetas fuertes relacionadas</h2>
+      <p class="auto-block-sub">Temas más sólidos para seguir leyendo sin salirte del mismo hilo.</p>
       <div class="tag-cloud tag-cloud-strong">
         ${items.map(tag => `<a class="tag" href="/tags/${tag.slug}.html">${escapeHtml(tag.name)} <span>${tag.count}</span></a>`).join('')}
       </div>
     </section>`;
+}
+
+function cleanupLegacyAutoFeaturedImages(html = '') {
+  let out = html;
+  out = out.replace(/\s*<div class="bd-post-hero"[\s\S]*?<\/div>\s*/ig, '\n');
+  out = out.replace(/\s*<div class="bd-featured-image"[\s\S]*?<\/div>\s*/ig, '\n');
+  out = out.replace(/\s*<div class="bd-content-image"[\s\S]*?<\/div>\s*/ig, '\n');
+  return out;
+}
+
+function sanitizeImageTag(imgHtml = '') {
+  return String(imgHtml || '')
+    .replace(/\swidth="[^"]*"/gi, '')
+    .replace(/\sheight="[^"]*"/gi, '')
+    .replace(/\sstyle="([^"]*)"/gi, (m, styleValue) => {
+      let clean = String(styleValue || '')
+        .replace(/\bwidth\s*:\s*[^;"]+;?/gi, '')
+        .replace(/\bheight\s*:\s*[^;"]+;?/gi, '')
+        .replace(/\bmax-width\s*:\s*[^;"]+;?/gi, '')
+        .replace(/\s{2,}/g, ' ')
+        .replace(/\s*;\s*$/g, '')
+        .trim();
+      return clean ? ` style="${clean}"` : '';
+    });
+}
+
+function ensureContentImagesResponsive(html = '') {
+  let out = html;
+  const heroPattern = /(<main[^>]*>[\s\S]*?)(<img\b[^>]*src="([^"]+)"[^>]*>)(\s*)(?=<div[^>]*class="[^"]*meta[^"]*"|<article\b|<p\b|<h2\b|<h3\b)/i;
+  const heroMatch = out.match(heroPattern);
+  if (heroMatch && !/class="bd-post-hero"/i.test(out)) {
+    const srcValue = heroMatch[3] || '';
+    const cleaned = sanitizeImageTag(heroMatch[2]);
+    const wrapped = `<div class="bd-post-hero"><a href="${srcValue}" target="_blank" rel="noopener noreferrer">${cleaned}</a></div>`;
+    out = out.replace(heroPattern, `$1${wrapped}$4`);
+  }
+
+  const articleMatch = out.match(/<article[^>]*>([\s\S]*?)<\/article>/i);
+  if (articleMatch) {
+    let inner = articleMatch[1];
+    inner = inner.replace(/<img\b[^>]*src="([^"]+)"[^>]*>/gi, (full, srcValue) => {
+      const cleaned = sanitizeImageTag(full);
+      return `<a href="${srcValue}" target="_blank" rel="noopener noreferrer">${cleaned}</a>`;
+    });
+    out = out.replace(articleMatch[0], articleMatch[0].replace(articleMatch[1], inner));
+  }
+  return out;
 }
 
 function renderTagPages(tagMap) {
@@ -412,12 +523,11 @@ function renderTagPages(tagMap) {
       <section class="hero">
         <p class="eyebrow">Etiquetas</p>
         <h1>Todas las etiquetas</h1>
-        <p>Entrá por tema y encontrá las publicaciones relacionadas. Las etiquetas más fuertes aparecen primero para que navegar sea más claro.</p>
+        <p>Las etiquetas más fuertes aparecen primero para que entrar por tema sea más claro y útil.</p>
       </section>
 
       <section class="card">
         <h2 class="block-title">Etiquetas más fuertes</h2>
-        <p class="block-sub">Las que más publicaciones reúnen y mejor funcionan como entrada al sitio.</p>
         <div class="tag-cloud">
           ${strongTags.map(tag => `<a class="tag" href="/tags/${tag.slug}.html">${escapeHtml(tag.name)} <span>${tag.count}</span></a>`).join('')}
         </div>
@@ -427,7 +537,7 @@ function renderTagPages(tagMap) {
         <div class="tags-toolbar">
           <div>
             <h2 class="block-title">Buscar por etiqueta</h2>
-            <p class="block-sub">Filtrá rápido y encontrá el tema que te interesa.</p>
+            <p class="block-sub">Encontrá rápido el tema que querés leer.</p>
           </div>
           <input id="tagSearchInput" class="tag-search" type="search" placeholder="Buscar etiqueta...">
         </div>
@@ -446,7 +556,6 @@ function renderTagPages(tagMap) {
   </div>
   <script>
     const tagSearchInput = document.getElementById('tagSearchInput');
-    const allTagsCloud = document.getElementById('allTagsCloud');
     const extraTagsCloud = document.getElementById('extraTagsCloud');
     const showMoreTagsBtn = document.getElementById('showMoreTagsBtn');
 
@@ -936,22 +1045,39 @@ function loadPreviousPostsBySlug() {
 
 function enhancePostDiscover(html = '', currentPost = {}) {
   let out = html;
+  const featuredImageUrl = getFeaturedImageUrl(currentPost);
   out = cleanupLegacyAutoFeaturedImages(out);
   out = ensureDiscoverRobots(out);
-  out = ensureArticleStructuredData(out, currentPost, '');
-  out = constrainPostImages(out);
+  if (featuredImageUrl) out = ensureOgImage(out, featuredImageUrl);
+  out = ensureArticleStructuredData(out, currentPost, featuredImageUrl);
+  out = ensureFeaturedImageBlock(out, currentPost, featuredImageUrl);
   return out;
 }
 
 
 
-function cleanupLegacyAutoFeaturedImages(html = '') {
-  return html;
+function getFeaturedImageUrl(post = {}) {
+  try {
+    if (!fs.existsSync(IMAGE_DIR)) return '';
+    const candidates = [];
+    for (const tag of post.tags || []) {
+      const slug = slugify(tag);
+      if (slug) candidates.push(slug);
+    }
+    if (post.line) candidates.push(post.line);
+    const seen = new Set();
+    for (const candidate of [...candidates, 'base', 'visual', 'viva', 'alma']) {
+      if (!candidate || seen.has(candidate)) continue;
+      seen.add(candidate);
+      const filePath = path.join(IMAGE_DIR, `${candidate}.webp`);
+      if (fs.existsSync(filePath)) return `/assets/imagenes-tematicas/${candidate}.webp`;
+    }
+    return '';
+  } catch {
+    return '';
+  }
 }
 
-function getFeaturedImageUrl(post = {}) {
-  return '';
-}
 
 
 function ensureDiscoverRobots(html = '') {
@@ -969,63 +1095,44 @@ function ensureDiscoverRobots(html = '') {
 }
 
 function ensureOgImage(html = '', imageUrl = '') {
-  return html;
+  if (!imageUrl) return html;
+  const fullUrl = `${SITE_URL}${imageUrl}`;
+  if (/<meta\s+property="og:image"/i.test(html)) {
+    return html.replace(/<meta\s+property="og:image"\s+content="[^"]*"\s*\/?>/i, `<meta property="og:image" content="${fullUrl}">`);
+  }
+  return html.replace(/<link rel="canonical"[^>]*>/i, match => `${match}\n  <meta property="og:image" content="${fullUrl}">`);
 }
+
 
 
 function hasManualArticleImage(html = '') {
-  return false;
+  const articleMatch = html.match(/<article[^>]*>([\s\S]*?)<\/article>/i);
+  if (!articleMatch) return false;
+  return /<img\b/i.test(articleMatch[1]);
 }
+
 
 
 function ensureFeaturedImageBlock(html = '', post = {}, imageUrl = '') {
-  return removeContentImages(html);
-}
+  let out = cleanupLegacyAutoFeaturedImages(html);
+  if (!imageUrl) return ensureContentImagesResponsive(out);
 
-
-
-function sanitizeImageTag(imgHtml = '') {
-  return String(imgHtml || '')
-    .replace(/\swidth="[^"]*"/gi, '')
-    .replace(/\sheight="[^"]*"/gi, '')
-    .replace(/\sstyle="([^"]*)"/gi, (m, styleValue) => {
-      let clean = String(styleValue || '')
-        .replace(/\bwidth\s*:\s*[^;"]+;?/gi, '')
-        .replace(/\bheight\s*:\s*[^;"]+;?/gi, '')
-        .replace(/\bmax-width\s*:\s*[^;"]+;?/gi, '')
-        .replace(/\s{2,}/g, ' ')
-        .replace(/\s*;\s*$/g, '')
-        .trim();
-      return clean ? ` style="${clean}"` : '';
-    });
-}
-
-function constrainPostImages(html = '') {
-  let out = html;
-
-  // 1) imagen hero antes de la meta o del artículo
-  const heroPattern = /(<main[^>]*>[\s\S]*?)(<img\b[^>]*src="([^"]+)"[^>]*>)(\s*)(?=<div[^>]*class="[^"]*meta[^"]*"|<article\b|<p\b|<h2\b|<h3\b)/i;
-  const heroMatch = out.match(heroPattern);
-  if (heroMatch && !/class="bd-post-hero"/i.test(out)) {
-    const imgSrc = heroMatch[3] || '';
-    const cleanedImg = sanitizeImageTag(heroMatch[2]);
-    const wrapped = `<div class="bd-post-hero"><a href="${imgSrc}" target="_blank" rel="noopener noreferrer">${cleanedImg}</a></div>`;
-    out = out.replace(heroPattern, `$1${wrapped}$4`);
+  if (/<main[^>]*>[\s\S]*?<img\b/i.test(out)) {
+    return ensureContentImagesResponsive(out);
   }
 
-  // 2) imágenes dentro del artículo
-  const articleMatch = out.match(/<article[^>]*>([\s\S]*?)<\/article>/i);
-  if (articleMatch) {
-    let articleInner = articleMatch[1];
-    articleInner = articleInner.replace(/<img\b[^>]*src="([^"]+)"[^>]*>/gi, (full, src) => {
-      const cleaned = sanitizeImageTag(full);
-      return `<a href="${src}" target="_blank" rel="noopener noreferrer">${cleaned}</a>`;
-    });
-    out = out.replace(articleMatch[0], articleMatch[0].replace(articleMatch[1], articleInner));
+  const imageBlock = `\n      <div class="bd-post-hero"><a href="${imageUrl}" target="_blank" rel="noopener noreferrer"><img src="${imageUrl}" alt="${escapeHtml(post.title || 'buenosdia.com')}" loading="eager" decoding="async"></a></div>`;
+  if (/<div[^>]*class="[^"]*meta[^"]*"[^>]*>/i.test(out)) {
+    out = out.replace(/(<div[^>]*class="[^"]*meta[^"]*"[^>]*>)/i, `${imageBlock}\n$1`);
+  } else if (/<article\b/i.test(out)) {
+    out = out.replace(/(<article\b[^>]*>)/i, `${imageBlock}\n$1`);
+  } else if (/<main\b[^>]*>/i.test(out)) {
+    out = out.replace(/(<main\b[^>]*>)/i, `$1${imageBlock}`);
   }
-
-  return out;
+  return ensureContentImagesResponsive(out);
 }
+
+
 
 function ensureArticleStructuredData(html = '', post = {}, imageUrl = '') {
   const structuredData = JSON.stringify({
@@ -1037,7 +1144,8 @@ function ensureArticleStructuredData(html = '', post = {}, imageUrl = '') {
     dateModified: post.date || today(),
     mainEntityOfPage: `${SITE_URL}${post.url || ''}`,
     author: { '@type': 'Organization', name: 'buenosdia.com', url: SITE_URL },
-    publisher: { '@type': 'Organization', name: 'buenosdia.com', url: SITE_URL }
+    publisher: { '@type': 'Organization', name: 'buenosdia.com', url: SITE_URL },
+    image: imageUrl ? [`${SITE_URL}${imageUrl}`] : undefined
   }, null, 2);
 
   const script = `\n  <script type="application/ld+json" data-bd-schema="article">\n${structuredData}\n  </script>`;
@@ -1049,6 +1157,7 @@ function ensureArticleStructuredData(html = '', post = {}, imageUrl = '') {
 
 
 
+
 function removeContentImages(html = '') {
   return html;
 }
@@ -1056,7 +1165,7 @@ function removeContentImages(html = '') {
 
 
 function sharedTagPageCss() {
-  return `:root{--bg:#f6f3ee;--card:#fffdfa;--text:#171717;--muted:#667085;--line:#e7e1d8;--pill:#f5f5f4;--shadow:0 10px 25px rgba(0,0,0,.05);--radius:22px;--max:1100px}*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text)}.wrap{max-width:var(--max);margin:0 auto;padding:28px 20px 70px}header{display:flex;justify-content:space-between;align-items:flex-start;gap:18px;margin-bottom:22px}.brand{text-decoration:none;color:#111827;font-weight:700;font-size:1.2rem}nav a{text-decoration:none;color:var(--muted);margin-left:20px;font-size:1rem}.hero,.card,.post-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}.hero{padding:34px;margin-bottom:22px}.hero h1{margin:0 0 12px;font-size:clamp(2rem,5vw,3.5rem);line-height:1.02;letter-spacing:-.05em}.hero p{margin:0;color:#475467;line-height:1.65;font-size:1.08rem}.hero .tag-intro{margin-top:18px;color:#475467;line-height:1.7;font-size:1.02rem}.eyebrow{color:var(--muted);font-size:1rem;margin-bottom:14px}.card{padding:24px}.block-title{margin:0 0 8px;font-size:1.2rem;line-height:1.2}.block-sub{margin:0 0 16px;color:#667085;line-height:1.6}.topics-head,.tags-toolbar{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;flex-wrap:wrap;margin-bottom:14px}.tag-search{border:1px solid var(--line);background:#fff;border-radius:999px;padding:12px 16px;font-size:1rem;min-width:260px;max-width:100%}.tag-cloud{display:flex;flex-wrap:wrap;gap:12px}.extra-tags{margin-top:14px}.tag-cloud-scroll{max-height:460px;overflow:auto;padding-right:4px}.tag{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);background:var(--pill);color:#475467;border-radius:999px;padding:10px 14px;font-size:.98rem;text-decoration:none}.tag span{display:inline-block;background:#fff;border:1px solid var(--line);border-radius:999px;padding:2px 8px;font-size:.86rem}.tag.active{background:#111827;color:#fff}.tag.active span{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.22);color:#fff}.posts-grid{display:grid;gap:18px;margin-top:22px}.post-card{padding:26px}.post-card h2{margin:0 0 10px;font-size:1.45rem;line-height:1.2;letter-spacing:-.03em}.post-card p{margin:0 0 18px;color:#475467;font-size:1.02rem;line-height:1.65}.read-link{text-decoration:none;color:#111827;font-weight:700}.read-link:hover{text-decoration:underline}.load-more-wrap{display:flex;justify-content:center;margin-top:18px}.load-more{border:1px solid var(--line);background:var(--card);color:var(--text);border-radius:999px;padding:12px 18px;font-size:1rem;cursor:pointer;box-shadow:var(--shadow)}.load-more[hidden]{display:none}.site-footer{margin-top:22px;color:var(--muted);font-size:.95rem}.site-footer a{color:#111827;font-weight:700;text-decoration:none}.site-footer a:hover{text-decoration:underline}@media (max-width:800px){header{flex-direction:column}nav a{margin:0 18px 0 0}.tag-search{min-width:100%}}`;
+  return `:root{--bg:#f6f3ee;--card:#fffdfa;--text:#171717;--muted:#667085;--line:#e7e1d8;--pill:#f5f5f4;--shadow:0 10px 25px rgba(0,0,0,.05);--radius:22px;--max:1100px}*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text)}.wrap{max-width:var(--max);margin:0 auto;padding:28px 20px 70px}header{display:flex;justify-content:space-between;align-items:flex-start;gap:18px;margin-bottom:22px}.brand{text-decoration:none;color:#111827;font-weight:700;font-size:1.2rem}nav a{text-decoration:none;color:var(--muted);margin-left:20px;font-size:1rem}.hero,.card,.post-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}.hero{padding:34px;margin-bottom:22px}.hero h1{margin:0 0 12px;font-size:clamp(2rem,5vw,3.5rem);line-height:1.02;letter-spacing:-.05em}.hero p{margin:0;color:#475467;line-height:1.65;font-size:1.08rem}.hero .tag-intro{margin-top:18px;color:#475467;line-height:1.75;font-size:1.03rem}.eyebrow{color:var(--muted);font-size:1rem;margin-bottom:14px}.card{padding:24px}.block-title{margin:0 0 8px;font-size:1.2rem;line-height:1.2}.block-sub{margin:0 0 16px;color:#667085;line-height:1.6}.topics-head,.tags-toolbar{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;flex-wrap:wrap;margin-bottom:14px}.tag-search{border:1px solid var(--line);background:#fff;border-radius:999px;padding:12px 16px;font-size:1rem;min-width:260px;max-width:100%}.tag-cloud{display:flex;flex-wrap:wrap;gap:12px}.extra-tags{margin-top:14px}.tag-cloud-scroll{max-height:460px;overflow:auto;padding-right:4px}.tag{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);background:var(--pill);color:#475467;border-radius:999px;padding:10px 14px;font-size:.98rem;text-decoration:none}.tag span{display:inline-block;background:#fff;border:1px solid var(--line);border-radius:999px;padding:2px 8px;font-size:.86rem}.tag.active{background:#111827;color:#fff}.tag.active span{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.22);color:#fff}.posts-grid{display:grid;gap:18px;margin-top:22px}.post-card{padding:26px}.post-card h2{margin:0 0 10px;font-size:1.45rem;line-height:1.2;letter-spacing:-.03em}.post-card p{margin:0 0 18px;color:#475467;font-size:1.02rem;line-height:1.65}.read-link{text-decoration:none;color:#111827;font-weight:700}.read-link:hover{text-decoration:underline}.load-more-wrap{display:flex;justify-content:center;margin-top:18px}.load-more{border:1px solid var(--line);background:var(--card);color:var(--text);border-radius:999px;padding:12px 18px;font-size:1rem;cursor:pointer;box-shadow:var(--shadow)}.load-more[hidden]{display:none}.site-footer{margin-top:22px;color:var(--muted);font-size:.95rem}.site-footer a{color:#111827;font-weight:700;text-decoration:none}.site-footer a:hover{text-decoration:underline}@media (max-width:800px){header{flex-direction:column}nav a{margin:0 18px 0 0}.tag-search{min-width:100%}}`;
 }
 
 
