@@ -40,6 +40,22 @@ const INSTITUTIONAL_FOOTER_LINKS = `
         <a href="/quienes-somos.html">Quiénes somos</a>
         <a href="/politica-editorial.html">Política editorial</a>`;
 
+const TAG_MIN_PAGE_COUNT = 2;
+const TAG_STRONG_HIGHLIGHT_COUNT = 3;
+const TAG_PAGE_INITIAL_VISIBLE = 24;
+const TAG_KEEP_WHITELIST = new Set([
+  'cansancio',
+  'identidad',
+  'motivacion',
+  'reflexion',
+  'frecuencia personal',
+  'energia propia',
+  'seguir adelante',
+  'vida real',
+  'motivacion real'
+]);
+
+
 
 if (!fs.existsSync(POSTS_DIR)) {
   console.error('No existe la carpeta /posts');
@@ -173,17 +189,22 @@ function patchPostHtml(html, currentPost, allPosts, featuredPosts, lineMap) {
     .auto-post-card span{display:block;color:var(--muted,#666);font-size:14px;line-height:1.55}
     .auto-post-card em{display:block;color:var(--muted,#666);font-size:12px;font-style:normal;letter-spacing:.02em;text-transform:uppercase;margin-bottom:6px}
     .auto-post-card:hover{border-color:#d8d8d8;transform:translateY(-1px);transition:all .18s ease}
+    .tag-cloud-strong{display:flex;flex-wrap:wrap;gap:12px}
+    .bd-post-hero,.bd-content-image{margin:18px auto 26px;max-width:min(100%,860px);width:100%;overflow:hidden}
+    .bd-post-hero a,.bd-content-image a{display:block;text-decoration:none}
+    .bd-post-hero img,.bd-content-image img,.article img,.article figure img,article img,article figure img{display:block;width:100%;max-width:100%;height:auto;border-radius:18px;border:1px solid var(--line,#e9e9e9);box-shadow:var(--shadow,0 10px 25px rgba(0,0,0,.05))}
+    .article figure,article figure{margin:18px 0 26px}
     @media (min-width:760px){.auto-posts-grid{grid-template-columns:1fr 1fr}}
   </style>`);
   }
 
   out = ensureFeaturedQuote(out, currentPost);
   out = enhancePostDiscover(out, currentPost);
-  out = ensureResponsivePostImages(out);
+  const strongTagsHtml = renderStrongTagsForPost(currentPost, tagMap, 8);
   const latestHtml = renderAutoSection('ultimas-publicaciones-auto', 'Últimas 5 publicaciones', 'Los textos más nuevos del sitio, en orden.', getLatestPosts(currentPost, allPosts, 5));
   const featuredHtml = renderAutoSection('destacadas-publicaciones-auto', 'Más destacadas', 'Una selección automática del sitio para seguir navegando.', getFeaturedPostsForPost(currentPost, featuredPosts, allPosts, 5));
   const lineHtml = renderLineSection(currentPost, lineMap, 4);
-  const autoBlocks = `\n\n    ${featuredHtml}\n\n    ${latestHtml}${lineHtml ? `\n\n    ${lineHtml}` : ''}`;
+  const autoBlocks = `\n\n    ${strongTagsHtml ? `${strongTagsHtml}\n\n    ` : ''}${featuredHtml}\n\n    ${latestHtml}${lineHtml ? `\n\n    ${lineHtml}` : ''}`;
 
   const faqRegex = /(<section[^>]*class="[^"]*\bfaq\b[^"]*"[^>]*>[\s\S]*?<\/section>)/i;
   if (faqRegex.test(out)) {
@@ -249,6 +270,7 @@ function getVisibleTags(html = '') {
 function buildTagMap(posts) {
   const map = {};
   const forbidden = new Set(['inicio','publicaciones','etiquetas','contacto','buenosdia com','buenosdia.com']);
+
   for (const post of posts) {
     for (const tag of post.tags || []) {
       const normalized = normalizeTag(tag);
@@ -256,28 +278,111 @@ function buildTagMap(posts) {
       const slug = slugify(normalized);
       if (!slug) continue;
       if (!map[slug]) {
-        map[slug] = { slug, name: tag, count: 0, posts: [] };
+        map[slug] = { slug, name: normalized, count: 0, posts: [] };
       }
       map[slug].count += 1;
       map[slug].posts.push({
         title: post.title,
         description: post.description,
+        lead: post.lead,
+        body: shortDescription(post.body, 260),
         date: post.date,
         url: post.url,
-        slug: post.slug
+        slug: post.slug,
+        line: post.line,
+        tags: post.tags || []
       });
     }
   }
 
-  for (const tag of Object.values(map)) {
+  const filtered = {};
+  for (const [slug, tag] of Object.entries(map)) {
     tag.posts.sort((a, b) => b.date.localeCompare(a.date) || a.title.localeCompare(b.title, 'es'));
+    const keep = tag.count >= TAG_MIN_PAGE_COUNT || TAG_KEEP_WHITELIST.has(tag.name) || TAG_KEEP_WHITELIST.has(slug);
+    if (keep) filtered[slug] = tag;
   }
-  return map;
+  return filtered;
+}
+
+
+
+function buildTagIntro(tag) {
+  const posts = tag.posts || [];
+  const count = posts.length;
+  const tagText = tag.name || 'este tema';
+
+  const combined = posts.map(post => `${post.title || ''} ${post.description || ''} ${post.lead || ''} ${post.body || ''}`).join(' ');
+  const tagTokens = new Set(tokenize(tagText));
+  const tokens = [...tokenize(combined)].filter(token => !tagTokens.has(token));
+  const weights = {};
+  for (const token of tokens) weights[token] = (weights[token] || 0) + 1;
+  const top = Object.entries(weights)
+    .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0], 'es'))
+    .slice(0, 4)
+    .map(([token]) => token);
+
+  const lineCounts = {};
+  for (const post of posts) lineCounts[post.line || 'viva'] = (lineCounts[post.line || 'viva'] || 0) + 1;
+  const mainLine = Object.entries(lineCounts).sort((a, b) => b[1] - a[1])[0]?.[0] || 'viva';
+
+  const linePhrase = {
+    base: 'con un enfoque más claro, útil y orientado a resolver',
+    visual: 'con un tono más recortable, concreto y fácil de compartir',
+    viva: 'desde experiencias reales, momentos humanos y situaciones del día a día',
+    alma: 'desde una mirada más interior, profunda y de búsqueda personal'
+  }[mainLine] || 'desde distintos ángulos humanos y cotidianos';
+
+  const first = top[0] || '';
+  const second = top[1] || '';
+  const third = top[2] || '';
+
+  const variants = [
+    `Acá reunimos ${count} publicación${count === 1 ? '' : 'es'} sobre ${tagText}. ${tagText.charAt(0).toUpperCase() + tagText.slice(1)} aparece ligado a ${first || 'situaciones reales'}${second ? `, ${second}` : ''}${third ? ` y ${third}` : ''}, ${linePhrase}. La idea de esta página es que quien llegue buscando ${tagText} encuentre una entrada ordenada, útil y concreta para seguir leyendo sin perderse entre etiquetas sueltas.`,
+    `${tagText.charAt(0).toUpperCase() + tagText.slice(1)} no aparece acá como una palabra aislada: se cruza con ${first || 'experiencias reales'}${second ? `, ${second}` : ''}${third ? ` y ${third}` : ''}. En esta etiqueta hay ${count} publicación${count === 1 ? '' : 'es'} que trabajan ese eje ${linePhrase}. Si entraste buscando ${tagText}, esta página junta lo más relacionado para que avances por un hilo más claro.`,
+    `Esta etiqueta agrupa ${count} publicación${count === 1 ? '' : 'es'} vinculadas con ${tagText}. A lo largo de estos textos, ${tagText} se conecta con ${first || 'la experiencia cotidiana'}${second ? `, ${second}` : ''}${third ? ` y ${third}` : ''}. Por eso, más que una lista suelta, esta página funciona como una puerta de entrada temática para leer mejor lo que buenosdia.com viene trabajando sobre ${tagText}.`
+  ];
+
+  const idx = Math.abs(hashString(tag.slug || tag.name || '0')) % variants.length;
+  return variants[idx];
+}
+
+function hashString(str = '') {
+  let hash = 0;
+  for (let i = 0; i < str.length; i += 1) hash = ((hash << 5) - hash) + str.charCodeAt(i);
+  return hash | 0;
+}
+
+function getStrongRelatedTags(currentTag, tagMap, limit = 24) {
+  return Object.values(tagMap)
+    .filter(tag => tag.slug !== currentTag.slug)
+    .sort((a, b) => b.count - a.count || a.name.localeCompare(b.name, 'es'))
+    .slice(0, limit);
+}
+
+function renderStrongTagsForPost(currentPost, tagMap, limit = 8) {
+  const items = (currentPost.tags || [])
+    .map(tag => tagMap[slugify(tag)])
+    .filter(Boolean)
+    .filter((tag, index, arr) => arr.findIndex(item => item.slug === tag.slug) === index)
+    .sort((a, b) => b.count - a.count || a.name.localeCompare(b.name, 'es'))
+    .slice(0, limit);
+
+  if (!items.length) return '';
+
+  return `    <section class="card auto-discovery" data-auto-block="strong-tags-post">
+      <h2 class="auto-block-title">Temas fuertes relacionados</h2>
+      <p class="auto-block-sub">Etiquetas más sólidas para seguir tirando del mismo hilo.</p>
+      <div class="tag-cloud tag-cloud-strong">
+        ${items.map(tag => `<a class="tag" href="/tags/${tag.slug}.html">${escapeHtml(tag.name)} <span>${tag.count}</span></a>`).join('')}
+      </div>
+    </section>`;
 }
 
 function renderTagPages(tagMap) {
   const tags = Object.values(tagMap).sort((a, b) => b.count - a.count || a.name.localeCompare(b.name, 'es'));
-  const topTags = tags.slice(0, 18);
+  const strongTags = tags.filter(tag => tag.count >= TAG_STRONG_HIGHLIGHT_COUNT);
+  const initialVisible = tags.slice(0, TAG_PAGE_INITIAL_VISIBLE);
+  const remainingTags = tags.slice(TAG_PAGE_INITIAL_VISIBLE);
 
   let tagsIndexHtml = `<!doctype html>
 <html lang="es">
@@ -285,7 +390,7 @@ function renderTagPages(tagMap) {
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Etiquetas | buenosdia.com</title>
-  <meta name="description" content="Explorá las etiquetas de buenosdia.com, buscá temas concretos y entrá a las publicaciones relacionadas con cada palabra clave.">
+  <meta name="description" content="Explorá las etiquetas principales de buenosdia.com y entrá a las publicaciones relacionadas con cada tema.">
   <meta name="robots" content="index,follow,max-image-preview:large">
   <link rel="canonical" href="${SITE_URL}/tags/">
   <style>${sharedTagPageCss()}</style>
@@ -307,25 +412,32 @@ function renderTagPages(tagMap) {
       <section class="hero">
         <p class="eyebrow">Etiquetas</p>
         <h1>Todas las etiquetas</h1>
-        <p>Acá podés entrar por tema, buscar una palabra puntual y abrir las publicaciones relacionadas sin perderte en un choclo inmanejable.</p>
+        <p>Entrá por tema y encontrá las publicaciones relacionadas. Las etiquetas más fuertes aparecen primero para que navegar sea más claro.</p>
       </section>
 
       <section class="card">
-        <div class="tag-toolbar">
-          <input id="tagsSearch" class="tag-search" type="search" placeholder="Buscar una etiqueta..." aria-label="Buscar una etiqueta">
-          <button id="toggleAllTags" class="toggle-tags" type="button" hidden>Ver más etiquetas</button>
-        </div>
-        <div class="tag-grid compact" id="allTagsGrid">
-          ${tags.map(tag => `<a class="tag" data-tag="${escapeHtml(normalizeTag(tag.name))}" href="/tags/${tag.slug}.html">${escapeHtml(tag.name)} <span>${tag.count}</span></a>`).join('')}
+        <h2 class="block-title">Etiquetas más fuertes</h2>
+        <p class="block-sub">Las que más publicaciones reúnen y mejor funcionan como entrada al sitio.</p>
+        <div class="tag-cloud">
+          ${strongTags.map(tag => `<a class="tag" href="/tags/${tag.slug}.html">${escapeHtml(tag.name)} <span>${tag.count}</span></a>`).join('')}
         </div>
       </section>
 
       <section class="card">
-        <h2 class="auto-block-title">Etiquetas más fuertes</h2>
-        <p class="auto-block-sub">Las que hoy agrupan más publicaciones y sirven mejor como puerta de entrada.</p>
-        <div class="tag-grid">
-          ${topTags.map(tag => `<a class="tag" href="/tags/${tag.slug}.html">${escapeHtml(tag.name)} <span>${tag.count}</span></a>`).join('')}
+        <div class="tags-toolbar">
+          <div>
+            <h2 class="block-title">Buscar por etiqueta</h2>
+            <p class="block-sub">Filtrá rápido y encontrá el tema que te interesa.</p>
+          </div>
+          <input id="tagSearchInput" class="tag-search" type="search" placeholder="Buscar etiqueta...">
         </div>
+        <div class="tag-cloud" id="allTagsCloud">
+          ${initialVisible.map(tag => `<a class="tag" href="/tags/${tag.slug}.html" data-tag-name="${escapeHtml(tag.name)}">${escapeHtml(tag.name)} <span>${tag.count}</span></a>`).join('')}
+        </div>
+        ${remainingTags.length ? `<div class="load-more-wrap"><button id="showMoreTagsBtn" class="load-more" type="button">Ver más etiquetas</button></div>
+        <div class="tag-cloud extra-tags" id="extraTagsCloud" hidden>
+          ${remainingTags.map(tag => `<a class="tag" href="/tags/${tag.slug}.html" data-tag-name="${escapeHtml(tag.name)}">${escapeHtml(tag.name)} <span>${tag.count}</span></a>`).join('')}
+        </div>` : ''}
       </section>
     </main>
     <footer class="site-footer">
@@ -333,30 +445,26 @@ function renderTagPages(tagMap) {
     </footer>
   </div>
   <script>
-    const searchInput = document.getElementById('tagsSearch');
-    const grid = document.getElementById('allTagsGrid');
-    const toggle = document.getElementById('toggleAllTags');
+    const tagSearchInput = document.getElementById('tagSearchInput');
+    const allTagsCloud = document.getElementById('allTagsCloud');
+    const extraTagsCloud = document.getElementById('extraTagsCloud');
+    const showMoreTagsBtn = document.getElementById('showMoreTagsBtn');
 
-    if (grid && toggle && grid.querySelectorAll('.tag').length > 60) {
-      toggle.hidden = false;
-      toggle.addEventListener('click', () => {
-        grid.classList.toggle('expanded');
-        toggle.textContent = grid.classList.contains('expanded') ? 'Ver menos etiquetas' : 'Ver más etiquetas';
+    if (showMoreTagsBtn && extraTagsCloud) {
+      showMoreTagsBtn.addEventListener('click', () => {
+        extraTagsCloud.hidden = !extraTagsCloud.hidden;
+        showMoreTagsBtn.textContent = extraTagsCloud.hidden ? 'Ver más etiquetas' : 'Ver menos etiquetas';
       });
     }
 
-    if (searchInput && grid) {
-      searchInput.addEventListener('input', () => {
-        const q = String(searchInput.value || '').toLowerCase().trim();
-        const tags = [...grid.querySelectorAll('.tag')];
-        let visible = 0;
+    if (tagSearchInput) {
+      tagSearchInput.addEventListener('input', () => {
+        const value = tagSearchInput.value.toLowerCase().trim();
+        const tags = document.querySelectorAll('[data-tag-name]');
         tags.forEach(tag => {
-          const txt = (tag.dataset.tag || tag.textContent || '').toLowerCase();
-          const show = !q || txt.includes(q);
-          tag.style.display = show ? 'inline-flex' : 'none';
-          if (show) visible += 1;
+          const name = (tag.getAttribute('data-tag-name') || '').toLowerCase();
+          tag.style.display = !value || name.includes(value) ? '' : 'none';
         });
-        if (toggle) toggle.hidden = q ? true : tags.length <= 60;
       });
     }
   </script>
@@ -369,7 +477,8 @@ function renderTagPages(tagMap) {
 
   for (const tag of tags) {
     const tagPostsJson = JSON.stringify(tag.posts);
-    const relatedTags = tags.filter(item => item.slug !== tag.slug).slice(0, 80);
+    const relatedTags = getStrongRelatedTags(tag, tagMap, 30);
+    const introText = buildTagIntro(tag);
 
     let pageHtml = `<!doctype html>
 <html lang="es">
@@ -377,7 +486,7 @@ function renderTagPages(tagMap) {
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>${escapeHtml(tag.name)} | Etiquetas | buenosdia.com</title>
-  <meta name="description" content="Leé publicaciones de buenosdia.com relacionadas con ${escapeHtml(tag.name)} y descubrí textos conectados con esta palabra clave.">
+  <meta name="description" content="${escapeHtml(shortDescription(introText, 155))}">
   <meta name="robots" content="index,follow,max-image-preview:large">
   <link rel="canonical" href="${SITE_URL}/tags/${tag.slug}.html">
   <style>${sharedTagPageCss()}</style>
@@ -400,18 +509,19 @@ function renderTagPages(tagMap) {
         <p class="eyebrow">Etiqueta</p>
         <h1>${escapeHtml(tag.name)}</h1>
         <p>${tag.count} publicación${tag.count === 1 ? '' : 'es'} relacionadas con este tema.</p>
-        <div class="tag-intro">${escapeHtml(buildTagIntro(tag.name, tag.count))}</div>
+        <div class="tag-intro">${escapeHtml(introText)}</div>
       </section>
 
-      <section class="tag-panel">
-        <div class="tag-toolbar">
-          <strong>Más temas para seguir navegando</strong>
-          <button id="toggleRelatedTags" class="toggle-tags" type="button" hidden>Ver más etiquetas</button>
+      ${relatedTags.length ? `<section class="card">
+        <div class="topics-head">
+          <h2 class="block-title">Más temas para seguir navegando</h2>
+          ${relatedTags.length > 15 ? '<button id="toggleRelatedTags" class="load-more" type="button">Ver más etiquetas</button>' : ''}
         </div>
-        <div class="tag-grid compact" id="relatedTagsGrid">
-          ${relatedTags.map(item => `<a class="tag${item.slug === tag.slug ? ' active' : ''}" href="/tags/${item.slug}.html">${escapeHtml(item.name)} <span>${item.count}</span></a>`).join('')}
+        <div class="tag-cloud" id="relatedTagsCloud">
+          ${relatedTags.slice(0, 15).map(item => `<a class="tag" href="/tags/${item.slug}.html">${escapeHtml(item.name)} <span>${item.count}</span></a>`).join('')}
         </div>
-      </section>
+        ${relatedTags.length > 15 ? `<div class="tag-cloud extra-tags" id="moreRelatedTags" hidden>${relatedTags.slice(15).map(item => `<a class="tag" href="/tags/${item.slug}.html">${escapeHtml(item.name)} <span>${item.count}</span></a>`).join('')}</div>` : ''}
+      </section>` : ''}
 
       <section class="posts-grid" id="tagPostsList"></section>
       <div class="load-more-wrap">
@@ -425,8 +535,8 @@ function renderTagPages(tagMap) {
   </div>
   <script>
     const TAG_POSTS = ${tagPostsJson};
-    const INITIAL_TAG_POSTS = 12;
-    const TAG_POSTS_BATCH = 12;
+    const INITIAL_TAG_POSTS = 20;
+    const TAG_POSTS_BATCH = 20;
     let visibleTagPosts = 0;
     let observerStarted = false;
 
@@ -476,13 +586,12 @@ function renderTagPages(tagMap) {
     if (tagLoadMoreBtn) tagLoadMoreBtn.addEventListener('click', () => renderTagPosts(false));
     setupInfiniteTagLoad();
 
-    const relatedGrid = document.getElementById('relatedTagsGrid');
-    const toggleRelated = document.getElementById('toggleRelatedTags');
-    if (relatedGrid && toggleRelated && relatedGrid.querySelectorAll('.tag').length > 40) {
-      toggleRelated.hidden = false;
-      toggleRelated.addEventListener('click', () => {
-        relatedGrid.classList.toggle('expanded');
-        toggleRelated.textContent = relatedGrid.classList.contains('expanded') ? 'Ver menos etiquetas' : 'Ver más etiquetas';
+    const toggleRelatedTags = document.getElementById('toggleRelatedTags');
+    const moreRelatedTags = document.getElementById('moreRelatedTags');
+    if (toggleRelatedTags && moreRelatedTags) {
+      toggleRelatedTags.addEventListener('click', () => {
+        moreRelatedTags.hidden = !moreRelatedTags.hidden;
+        toggleRelatedTags.textContent = moreRelatedTags.hidden ? 'Ver más etiquetas' : 'Ver menos etiquetas';
       });
     }
   </script>
@@ -494,6 +603,7 @@ function renderTagPages(tagMap) {
     fs.writeFileSync(path.join(TAGS_DIR, `${tag.slug}.html`), pageHtml, 'utf8');
   }
 }
+
 
 function patchIndexHtml(tagMap) {
   const indexPath = path.join(ROOT, 'index.html');
@@ -606,11 +716,8 @@ function write404Page(tagMap) {
 function writeSitemap(posts, tagMap) {
   const tagUrls = Object.values(tagMap).map(tag => `  <url>\n    <loc>${SITE_URL}/tags/${tag.slug}.html</loc>\n    <lastmod>${today()}</lastmod>\n  </url>`);
   const postUrls = posts.map(post => `  <url>\n    <loc>${SITE_URL}${post.url}</loc>\n    <lastmod>${post.date}</lastmod>\n  </url>`);
-  const staticUrls = ['quienes-somos.html','politica-editorial.html','contacto.html']
-    .filter(file => fs.existsSync(path.join(ROOT, file)))
-    .map(file => `  <url>\n    <loc>${SITE_URL}/${file}</loc>\n    <lastmod>${today()}</lastmod>\n  </url>`);
 
-  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n  <url>\n    <loc>${SITE_URL}/</loc>\n    <lastmod>${today()}</lastmod>\n  </url>\n  <url>\n    <loc>${SITE_URL}/tags/</loc>\n    <lastmod>${today()}</lastmod>\n  </url>\n${staticUrls.join('\n')}\n${postUrls.join('\n')}\n${tagUrls.join('\n')}\n</urlset>\n`;
+  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n  <url>\n    <loc>${SITE_URL}/</loc>\n    <lastmod>${today()}</lastmod>\n  </url>\n  <url>\n    <loc>${SITE_URL}/tags/</loc>\n    <lastmod>${today()}</lastmod>\n  </url>\n${postUrls.join('\n')}\n${tagUrls.join('\n')}\n</urlset>\n`;
   fs.writeFileSync(SITEMAP_FILE, sitemap, 'utf8');
 }
 
@@ -829,12 +936,18 @@ function loadPreviousPostsBySlug() {
 
 function enhancePostDiscover(html = '', currentPost = {}) {
   let out = html;
+  out = cleanupLegacyAutoFeaturedImages(out);
   out = ensureDiscoverRobots(out);
   out = ensureArticleStructuredData(out, currentPost, '');
+  out = constrainPostImages(out);
   return out;
 }
 
 
+
+function cleanupLegacyAutoFeaturedImages(html = '') {
+  return html;
+}
 
 function getFeaturedImageUrl(post = {}) {
   return '';
@@ -870,6 +983,50 @@ function ensureFeaturedImageBlock(html = '', post = {}, imageUrl = '') {
 }
 
 
+
+function sanitizeImageTag(imgHtml = '') {
+  return String(imgHtml || '')
+    .replace(/\swidth="[^"]*"/gi, '')
+    .replace(/\sheight="[^"]*"/gi, '')
+    .replace(/\sstyle="([^"]*)"/gi, (m, styleValue) => {
+      let clean = String(styleValue || '')
+        .replace(/\bwidth\s*:\s*[^;"]+;?/gi, '')
+        .replace(/\bheight\s*:\s*[^;"]+;?/gi, '')
+        .replace(/\bmax-width\s*:\s*[^;"]+;?/gi, '')
+        .replace(/\s{2,}/g, ' ')
+        .replace(/\s*;\s*$/g, '')
+        .trim();
+      return clean ? ` style="${clean}"` : '';
+    });
+}
+
+function constrainPostImages(html = '') {
+  let out = html;
+
+  // 1) imagen hero antes de la meta o del artículo
+  const heroPattern = /(<main[^>]*>[\s\S]*?)(<img\b[^>]*src="([^"]+)"[^>]*>)(\s*)(?=<div[^>]*class="[^"]*meta[^"]*"|<article\b|<p\b|<h2\b|<h3\b)/i;
+  const heroMatch = out.match(heroPattern);
+  if (heroMatch && !/class="bd-post-hero"/i.test(out)) {
+    const imgSrc = heroMatch[3] || '';
+    const cleanedImg = sanitizeImageTag(heroMatch[2]);
+    const wrapped = `<div class="bd-post-hero"><a href="${imgSrc}" target="_blank" rel="noopener noreferrer">${cleanedImg}</a></div>`;
+    out = out.replace(heroPattern, `$1${wrapped}$4`);
+  }
+
+  // 2) imágenes dentro del artículo
+  const articleMatch = out.match(/<article[^>]*>([\s\S]*?)<\/article>/i);
+  if (articleMatch) {
+    let articleInner = articleMatch[1];
+    articleInner = articleInner.replace(/<img\b[^>]*src="([^"]+)"[^>]*>/gi, (full, src) => {
+      const cleaned = sanitizeImageTag(full);
+      return `<a href="${src}" target="_blank" rel="noopener noreferrer">${cleaned}</a>`;
+    });
+    out = out.replace(articleMatch[0], articleMatch[0].replace(articleMatch[1], articleInner));
+  }
+
+  return out;
+}
+
 function ensureArticleStructuredData(html = '', post = {}, imageUrl = '') {
   const structuredData = JSON.stringify({
     '@context': 'https://schema.org',
@@ -893,164 +1050,15 @@ function ensureArticleStructuredData(html = '', post = {}, imageUrl = '') {
 
 
 function removeContentImages(html = '') {
-  let out = html;
-
-  out = out.replace(/\s*<meta\s+property="og:image"\s+content="[^"]*"\s*\/?>\s*/ig, '\n');
-
-  const mainMatch = out.match(/<main[^>]*>([\s\S]*?)<\/main>/i);
-  if (!mainMatch) {
-    return out
-      .replace(/\s*<figure\b[^>]*>[\s\S]*?<\/figure>\s*/ig, '\n')
-      .replace(/\s*<a\b([^>]*)>\s*<img\b[^>]*>\s*<\/a>\s*/ig, '\n')
-      .replace(/\s*<p>\s*<img\b[^>]*>\s*<\/p>\s*/ig, '\n')
-      .replace(/\s*<img\b[^>]*>\s*/ig, '\n');
-  }
-
-  let inner = mainMatch[1];
-  inner = inner.replace(/\s*<div class="bd-featured-image"[\s\S]*?<\/div>\s*/ig, '\n');
-  inner = inner.replace(/\s*<div class="bd-content-image"[\s\S]*?<\/div>\s*/ig, '\n');
-  inner = inner.replace(/\s*<figure\b[^>]*>[\s\S]*?<\/figure>\s*/ig, '\n');
-  inner = inner.replace(/\s*<a\b([^>]*)>\s*<img\b[^>]*>\s*<\/a>\s*/ig, '\n');
-  inner = inner.replace(/\s*<p>\s*<img\b[^>]*>\s*<\/p>\s*/ig, '\n');
-  inner = inner.replace(/\s*<img\b[^>]*>\s*/ig, '\n');
-
-  return out.replace(mainMatch[0], `<main>${inner}</main>`);
+  return html;
 }
 
 
-
-function ensureResponsivePostImages(html = '') {
-  let out = html;
-
-  // CSS global para alinear texto e imagen dentro del mismo ancho visual
-  if (/<\/style>/i.test(out) && !/\.bd-post-hero\s*\{/i.test(out)) {
-    out = out.replace(/<\/style>/i, `
-    .bd-post-hero,.bd-content-media{max-width:min(100%,860px);margin:18px auto 26px}
-    .bd-post-hero a,.bd-content-media a{display:block;text-decoration:none}
-    .bd-post-hero img,.bd-content-media img{display:block;width:100%;max-width:100%;height:auto;border-radius:18px;border:1px solid var(--line,#e9e9e9);box-shadow:var(--shadow,0 10px 25px rgba(0,0,0,.05))}
-    article,.article{max-width:min(100%,860px);margin-left:auto;margin-right:auto}
-    article img,.article img,article figure img,.article figure img{display:block;width:100%;max-width:100%;height:auto}
-    article figure,.article figure{max-width:min(100%,860px);margin:18px auto 26px}
-  </style>`);
-  }
-
-  // 1) Detectar imagen superior antes del texto principal/meta y meterla en contenedor
-  const heroPatterns = [
-    /(<main[^>]*>[\s\S]*?<nav[\s\S]*?<\/nav>\s*)(<img\b[^>]*src="([^"]+)"[^>]*>)(\s*)(?=<div[^>]*class="[^"]*meta[^"]*"|<article\b|<p\b|<h1\b|<h2\b)/i,
-    /(<main[^>]*>[\s\S]*?)(<img\b[^>]*src="([^"]+)"[^>]*>)(\s*)(?=<div[^>]*class="[^"]*meta[^"]*"|<article\b|<p\b|<h1\b|<h2\b)/i,
-    /(<header[\s\S]*?<\/header>\s*)(<img\b[^>]*src="([^"]+)"[^>]*>)(\s*)(?=<div[^>]*class="[^"]*meta[^"]*"|<article\b|<p\b|<h1\b|<h2\b)/i
-  ];
-
-  if (!/class="bd-post-hero"/i.test(out)) {
-    for (const pattern of heroPatterns) {
-      const m = out.match(pattern);
-      if (!m) continue;
-      const before = m[1] || '';
-      const imgTag = sanitizeResponsiveImageTag(m[2] || '');
-      const src = m[3] || '';
-      const afterGap = m[4] || '';
-      const replacement = `${before}<div class="bd-post-hero"><a href="${src}" target="_blank" rel="noopener noreferrer">${imgTag}</a></div>${afterGap}`;
-      out = out.replace(pattern, replacement);
-      break;
-    }
-  }
-
-  // 2) Limpiar wrappers automáticos viejos duplicados
-  out = out.replace(/<div class="bd-featured-image"[\s\S]*?<\/div>\s*/ig, '');
-  out = out.replace(/<div class="bd-content-image"[\s\S]*?<\/div>\s*/ig, '');
-
-  // 3) Saneamos imágenes dentro del artículo y las metemos en contenedor clickeable
-  const articleMatch = out.match(/<article[^>]*>([\s\S]*?)<\/article>/i);
-  if (articleMatch) {
-    let articleInner = articleMatch[1];
-
-    articleInner = articleInner.replace(/<figure\b([^>]*)>([\s\S]*?<img\b[^>]*src="([^"]+)"[^>]*>[\s\S]*?)<\/figure>/ig, (full, attrs, inner, src) => {
-      const cleaned = inner.replace(/<img\b[^>]*>/i, img => sanitizeResponsiveImageTag(img));
-      return `<figure${attrs} class="bd-content-media">${cleaned.replace(/<img\b/i, `<a href="${src}" target="_blank" rel="noopener noreferrer"><img`).replace(/>(?![\s\S]*<\/a>)/, '></a>')}</figure>`;
-    });
-
-    articleInner = articleInner.replace(/(?:<p>\s*)?(<img\b[^>]*src="([^"]+)"[^>]*>)(?:\s*<\/p>)?/ig, (full, img, src) => {
-      const cleaned = sanitizeResponsiveImageTag(img);
-      return `<div class="bd-content-media"><a href="${src}" target="_blank" rel="noopener noreferrer">${cleaned}</a></div>`;
-    });
-
-    out = out.replace(articleMatch[0], articleMatch[0].replace(articleMatch[1], articleInner));
-  }
-
-  return out;
-}
-
-function sanitizeResponsiveImageTag(imgTag = '') {
-  return String(imgTag || '')
-    .replace(/\swidth="[^"]*"/gi, '')
-    .replace(/\sheight="[^"]*"/gi, '')
-    .replace(/\sloading="[^"]*"/gi, ' loading="lazy"')
-    .replace(/\sstyle="([^"]*)"/gi, (m, styleValue) => {
-      let clean = String(styleValue || '')
-        .replace(/\bwidth\s*:\s*[^;"]+;?/gi, '')
-        .replace(/\bheight\s*:\s*[^;"]+;?/gi, '')
-        .replace(/\bmax-width\s*:\s*[^;"]+;?/gi, '')
-        .replace(/\bmin-width\s*:\s*[^;"]+;?/gi, '')
-        .replace(/\s{2,}/g, ' ')
-        .replace(/\s*;\s*$/g, '')
-        .trim();
-      return clean ? ` style="${clean}"` : '';
-    });
-}
-
-function buildTagIntro(tag = '', count = 0) {
-  const clean = strip(tag);
-  const label = clean || 'este tema';
-  const plural = count === 1 ? 'publicación' : 'publicaciones';
-  return [
-    `En esta etiqueta reunimos ${count} ${plural} relacionadas con ${label}.`,
-    `${label.charAt(0).toUpperCase() + label.slice(1)} aparece en textos donde la experiencia cotidiana, la reflexión y el lenguaje simple se cruzan para darle forma a algo más claro.`,
-    `La idea de esta página es que quien llegue buscando ${label} encuentre una entrada ordenada, directa y útil, sin perderse entre etiquetas sueltas o resultados vacíos.`,
-    `Acá vas a ver publicaciones que tocan ese eje desde distintos ángulos, pero siempre con el tono humano y respirado de buenosdia.com.`,
-    `Si este tema te toca de cerca, estas publicaciones funcionan como una puerta de entrada para seguir leyendo y profundizar sin salirte del hilo.`
-  ].join(' ');
-}
 
 function sharedTagPageCss() {
-  return `:root{--bg:#f6f3ee;--card:#fffdfa;--text:#171717;--muted:#667085;--line:#e7e1d8;--pill:#f5f5f4;--shadow:0 10px 25px rgba(0,0,0,.05);--radius:22px;--max:1100px}
-*{box-sizing:border-box}
-body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text)}
-.wrap{max-width:var(--max);margin:0 auto;padding:28px 20px 70px}
-header{display:flex;justify-content:space-between;align-items:flex-start;gap:18px;margin-bottom:22px}
-.brand{text-decoration:none;color:#111827;font-weight:700;font-size:1.2rem}
-nav a{text-decoration:none;color:var(--muted);margin-left:20px;font-size:1rem}
-.hero,.card,.post-card,.tag-panel{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}
-.hero{padding:34px;margin-bottom:22px}
-.hero h1{margin:0 0 12px;font-size:clamp(2rem,5vw,3.5rem);line-height:1.02;letter-spacing:-.05em}
-.hero p{margin:0;color:#475467;line-height:1.65;font-size:1.08rem}
-.eyebrow{color:var(--muted);font-size:1rem;margin-bottom:14px}
-.card{padding:24px}
-.tag-intro{color:#475467;line-height:1.75;font-size:1.03rem;margin-top:18px}
-.tag-toolbar{display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin-bottom:16px}
-.tag-search{width:100%;max-width:420px;padding:13px 16px;border:1px solid var(--line);border-radius:999px;background:#fff;color:#111827;font-size:1rem}
-.tag-grid{display:flex;flex-wrap:wrap;gap:12px}
-.tag-grid.compact .tag:nth-child(n+61){display:none}
-.tag-grid.compact.expanded .tag:nth-child(n+61){display:inline-flex}
-.tag-cloud-scroll{max-height:none;overflow:visible;padding-right:0}
-.tag{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);background:var(--pill);color:#475467;border-radius:999px;padding:10px 14px;font-size:.98rem;text-decoration:none}
-.tag span{display:inline-block;background:#fff;border:1px solid var(--line);border-radius:999px;padding:2px 8px;font-size:.86rem}
-.tag.active{background:#111827;color:#fff}
-.tag.active span{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.22);color:#fff}
-.tag-panel{padding:20px}
-.posts-grid{display:grid;gap:18px;margin-top:22px}
-.post-card{padding:26px}
-.post-card h2{margin:0 0 10px;font-size:1.45rem;line-height:1.2;letter-spacing:-.03em}
-.post-card p{margin:0 0 18px;color:#475467;font-size:1.02rem;line-height:1.65}
-.read-link{text-decoration:none;color:#111827;font-weight:700}
-.read-link:hover{text-decoration:underline}
-.load-more-wrap{display:flex;justify-content:center;margin-top:18px}
-.load-more,.toggle-tags{border:1px solid var(--line);background:var(--card);color:var(--text);border-radius:999px;padding:12px 18px;font-size:1rem;cursor:pointer;box-shadow:var(--shadow)}
-.load-more[hidden],.toggle-tags[hidden]{display:none}
-.site-footer{margin-top:22px;color:var(--muted);font-size:.95rem}
-.site-footer a{color:#111827;font-weight:700;text-decoration:none}
-.site-footer a:hover{text-decoration:underline}
-@media (max-width:800px){header{flex-direction:column}nav a{margin:0 18px 0 0}.tag-search{max-width:none}}`;
+  return `:root{--bg:#f6f3ee;--card:#fffdfa;--text:#171717;--muted:#667085;--line:#e7e1d8;--pill:#f5f5f4;--shadow:0 10px 25px rgba(0,0,0,.05);--radius:22px;--max:1100px}*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text)}.wrap{max-width:var(--max);margin:0 auto;padding:28px 20px 70px}header{display:flex;justify-content:space-between;align-items:flex-start;gap:18px;margin-bottom:22px}.brand{text-decoration:none;color:#111827;font-weight:700;font-size:1.2rem}nav a{text-decoration:none;color:var(--muted);margin-left:20px;font-size:1rem}.hero,.card,.post-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}.hero{padding:34px;margin-bottom:22px}.hero h1{margin:0 0 12px;font-size:clamp(2rem,5vw,3.5rem);line-height:1.02;letter-spacing:-.05em}.hero p{margin:0;color:#475467;line-height:1.65;font-size:1.08rem}.hero .tag-intro{margin-top:18px;color:#475467;line-height:1.7;font-size:1.02rem}.eyebrow{color:var(--muted);font-size:1rem;margin-bottom:14px}.card{padding:24px}.block-title{margin:0 0 8px;font-size:1.2rem;line-height:1.2}.block-sub{margin:0 0 16px;color:#667085;line-height:1.6}.topics-head,.tags-toolbar{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;flex-wrap:wrap;margin-bottom:14px}.tag-search{border:1px solid var(--line);background:#fff;border-radius:999px;padding:12px 16px;font-size:1rem;min-width:260px;max-width:100%}.tag-cloud{display:flex;flex-wrap:wrap;gap:12px}.extra-tags{margin-top:14px}.tag-cloud-scroll{max-height:460px;overflow:auto;padding-right:4px}.tag{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);background:var(--pill);color:#475467;border-radius:999px;padding:10px 14px;font-size:.98rem;text-decoration:none}.tag span{display:inline-block;background:#fff;border:1px solid var(--line);border-radius:999px;padding:2px 8px;font-size:.86rem}.tag.active{background:#111827;color:#fff}.tag.active span{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.22);color:#fff}.posts-grid{display:grid;gap:18px;margin-top:22px}.post-card{padding:26px}.post-card h2{margin:0 0 10px;font-size:1.45rem;line-height:1.2;letter-spacing:-.03em}.post-card p{margin:0 0 18px;color:#475467;font-size:1.02rem;line-height:1.65}.read-link{text-decoration:none;color:#111827;font-weight:700}.read-link:hover{text-decoration:underline}.load-more-wrap{display:flex;justify-content:center;margin-top:18px}.load-more{border:1px solid var(--line);background:var(--card);color:var(--text);border-radius:999px;padding:12px 18px;font-size:1rem;cursor:pointer;box-shadow:var(--shadow)}.load-more[hidden]{display:none}.site-footer{margin-top:22px;color:var(--muted);font-size:.95rem}.site-footer a{color:#111827;font-weight:700;text-decoration:none}.site-footer a:hover{text-decoration:underline}@media (max-width:800px){header{flex-direction:column}nav a{margin:0 18px 0 0}.tag-search{min-width:100%}}`;
 }
+
 
 function tokenize(str = '') {
   const stopwords = new Set(['de','la','el','los','las','y','en','a','un','una','unos','unas','con','sin','por','para','que','del','al','se','me','mi','tu','te','lo','le','les','su','sus','como','pero','porque','ya','muy','mas','hay','es','son','fue','ser','si','no','yo','vos','este','esta','estos','estas','eso','esa','esos','esas','cada','entre','sobre','cuando','donde','todo','toda','todos','todas','solo','sola','aunque','tambien','hasta','desde','otra','otro','otras','otros','dia','dias','manana','mañana','buenos','buena','buen','hoy','ayer','igual','tener','tenes','tenés','queda','quedar','cosas','vida','real','reales']);
