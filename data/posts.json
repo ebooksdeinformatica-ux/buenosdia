@@ -14,16 +14,16 @@
     "line": "alma",
     "related": [
       {
-        "title": "Cuando tus amigos vienen a cocinar a tu casa",
-        "description": "Hay planes que no necesitan mucho para sentirse vivos. Un texto sobre abrir la casa, cocinar entre amigos y recordar que compartir también c…",
-        "url": "/posts/cuando-tus-amigos-vienen-a-cocinar-a-tu-casa.html",
-        "slug": "cuando-tus-amigos-vienen-a-cocinar-a-tu-casa"
-      },
-      {
         "title": "Levantar proyectos que algún día funcionaron y hoy no los tienes",
         "description": "Hay mañanas en las que no duele empezar de cero, sino mirar todo lo que una vez funcionó y ya no está. Aun así, volver a levantar algo roto…",
         "url": "/posts/levantar-proyectos-que-algun-dia-funcionaron-y-hoy-no-los-tienes.html",
         "slug": "levantar-proyectos-que-algun-dia-funcionaron-y-hoy-no-los-tienes"
+      },
+      {
+        "title": "Cuando tus amigos vienen a cocinar a tu casa",
+        "description": "Hay planes que no necesitan mucho para sentirse vivos. Un texto sobre abrir la casa, cocinar entre amigos y recordar que compartir también c…",
+        "url": "/posts/cuando-tus-amigos-vienen-a-cocinar-a-tu-casa.html",
+        "slug": "cuando-tus-amigos-vienen-a-cocinar-a-tu-casa"
       },
       {
         "title": "Inyectando nuevas pócimas mágicas a la vida para no caer en lo mismo",
@@ -110,16 +110,16 @@
         "slug": "cuando-te-despertas-y-tus-amigos-te-pasan-a-buscar-para-irte-de-fiesta"
       },
       {
-        "title": "La cocina como pequeño laboratorio para cambiar un poco la vida",
-        "description": "A veces cambiar la vida empieza por una mesada. Un texto sobre la cocina como laboratorio cotidiano de amistad, ideas y transformación real.",
-        "url": "/posts/la-cocina-como-pequeno-laboratorio-para-cambiar-un-poco-la-vida.html",
-        "slug": "la-cocina-como-pequeno-laboratorio-para-cambiar-un-poco-la-vida"
-      },
-      {
         "title": "Mezclando los saberes de la vida con amigos que también traen lo suyo",
         "description": "A veces una charla entre amigos vale como una escuela. Un texto sobre mezclar saberes de la vida y crecer con lo que cada uno trae.",
         "url": "/posts/mezclando-los-saberes-de-la-vida-con-amigos-que-tambien-traen-lo-suyo.html",
         "slug": "mezclando-los-saberes-de-la-vida-con-amigos-que-tambien-traen-lo-suyo"
+      },
+      {
+        "title": "La cocina como pequeño laboratorio para cambiar un poco la vida",
+        "description": "A veces cambiar la vida empieza por una mesada. Un texto sobre la cocina como laboratorio cotidiano de amistad, ideas y transformación real.",
+        "url": "/posts/la-cocina-como-pequeno-laboratorio-para-cambiar-un-poco-la-vida.html",
+        "slug": "la-cocina-como-pequeno-laboratorio-para-cambiar-un-poco-la-vida"
       }
     ]
   },
@@ -236,16 +236,16 @@
         "slug": "cocinando-ideas-nuevas-con-amigos-para-mejorar-la-vida"
       },
       {
+        "title": "Cuando los amigos se bajan del barco por las noches",
+        "description": "Hay noches en las que duele más la ausencia de los que estaban cerca que cualquier problema en sí. Y aun así, la mañana llega, incluso cuand…",
+        "url": "/posts/cuando-los-amigos-se-bajan-del-barco-por-las-noches.html",
+        "slug": "cuando-los-amigos-se-bajan-del-barco-por-las-noches"
+      },
+      {
         "title": "Mezclando los saberes de la vida con amigos que también traen lo suyo",
         "description": "A veces una charla entre amigos vale como una escuela. Un texto sobre mezclar saberes de la vida y crecer con lo que cada uno trae.",
         "url": "/posts/mezclando-los-saberes-de-la-vida-con-amigos-que-tambien-traen-lo-suyo.html",
         "slug": "mezclando-los-saberes-de-la-vida-con-amigos-que-tambien-traen-lo-suyo"
-      },
-      {
-        "title": "Medidas de cuchara para hacer la mejor pócima para la vida",
-        "description": "No todo se arregla con fórmulas exactas, pero algunas medidas ayudan. Un texto sobre la mejor pócima para la vida usando imagen de cuchara…",
-        "url": "/posts/medidas-de-cuchara-para-hacer-la-mejor-pocima-para-la-vida.html",
-        "slug": "medidas-de-cuchara-para-hacer-la-mejor-pocima-para-la-vida"
       }
     ]
   },
@@ -284,10 +284,10 @@
         "slug": "cocinando-ideas-nuevas-con-amigos-para-mejorar-la-vida"
       },
       {
-        "title": "Cómo sobrevivir día a día con tu mente para estar bien",
-        "description": "A veces el trabajo más difícil del día no está afuera sino adentro. Un texto real sobre convivir con la propia mente sin romperse.",
-        "url": "/posts/como-sobrevivir-dia-a-dia-con-tu-mente-para-estar-bien.html",
-        "slug": "como-sobrevivir-dia-a-dia-con-tu-mente-para-estar-bien"
+        "title": "Días que empiezan después de las 5 de la tarde",
+        "description": "Hay días en los que recién arrancás cuando el sol ya se fue. Un texto honesto sobre sentirse fuera de horario, vivir a contramano y aun así…",
+        "url": "/posts/dias-que-empiezan-despues-de-las-5-de-la-tarde.html",
+        "slug": "dias-que-empiezan-despues-de-las-5-de-la-tarde"
       }
     ]
   },
@@ -372,10 +372,10 @@
         "slug": "la-gente-con-el-chip-rutinario-metido-en-la-cabeza"
       },
       {
-        "title": "De sentirme hundido a volver a tener motivación",
-        "description": "Un texto sobre el paso lento y real entre sentirse muy abajo y empezar a recuperar motivación sin chamuyo.",
-        "url": "/posts/de-sentirme-hundido-a-volver-a-tener-motivacion.html",
-        "slug": "de-sentirme-hundido-a-volver-a-tener-motivacion"
+        "title": "Cuando los amigos se bajan del barco por las noches",
+        "description": "Hay noches en las que duele más la ausencia de los que estaban cerca que cualquier problema en sí. Y aun así, la mañana llega, incluso cuand…",
+        "url": "/posts/cuando-los-amigos-se-bajan-del-barco-por-las-noches.html",
+        "slug": "cuando-los-amigos-se-bajan-del-barco-por-las-noches"
       }
     ]
   },
@@ -406,16 +406,16 @@
         "slug": "como-se-siente-la-gente-que-no-entrena-nunca"
       },
       {
-        "title": "Mezclando los saberes de la vida con amigos que también traen lo suyo",
-        "description": "A veces una charla entre amigos vale como una escuela. Un texto sobre mezclar saberes de la vida y crecer con lo que cada uno trae.",
-        "url": "/posts/mezclando-los-saberes-de-la-vida-con-amigos-que-tambien-traen-lo-suyo.html",
-        "slug": "mezclando-los-saberes-de-la-vida-con-amigos-que-tambien-traen-lo-suyo"
-      },
-      {
         "title": "Cuando los amigos se bajan del barco por las noches",
         "description": "Hay noches en las que duele más la ausencia de los que estaban cerca que cualquier problema en sí. Y aun así, la mañana llega, incluso cuand…",
         "url": "/posts/cuando-los-amigos-se-bajan-del-barco-por-las-noches.html",
         "slug": "cuando-los-amigos-se-bajan-del-barco-por-las-noches"
+      },
+      {
+        "title": "Mezclando los saberes de la vida con amigos que también traen lo suyo",
+        "description": "A veces una charla entre amigos vale como una escuela. Un texto sobre mezclar saberes de la vida y crecer con lo que cada uno trae.",
+        "url": "/posts/mezclando-los-saberes-de-la-vida-con-amigos-que-tambien-traen-lo-suyo.html",
+        "slug": "mezclando-los-saberes-de-la-vida-con-amigos-que-tambien-traen-lo-suyo"
       }
     ]
   },
@@ -526,16 +526,16 @@
         "slug": "cuando-los-amigos-se-bajan-del-barco-por-las-noches"
       },
       {
-        "title": "De sentirme hundido a volver a tener motivación",
-        "description": "Un texto sobre el paso lento y real entre sentirse muy abajo y empezar a recuperar motivación sin chamuyo.",
-        "url": "/posts/de-sentirme-hundido-a-volver-a-tener-motivacion.html",
-        "slug": "de-sentirme-hundido-a-volver-a-tener-motivacion"
-      },
-      {
         "title": "Levantar proyectos que algún día funcionaron y hoy no los tienes",
         "description": "Hay mañanas en las que no duele empezar de cero, sino mirar todo lo que una vez funcionó y ya no está. Aun así, volver a levantar algo roto…",
         "url": "/posts/levantar-proyectos-que-algun-dia-funcionaron-y-hoy-no-los-tienes.html",
         "slug": "levantar-proyectos-que-algun-dia-funcionaron-y-hoy-no-los-tienes"
+      },
+      {
+        "title": "De sentirme hundido a volver a tener motivación",
+        "description": "Un texto sobre el paso lento y real entre sentirse muy abajo y empezar a recuperar motivación sin chamuyo.",
+        "url": "/posts/de-sentirme-hundido-a-volver-a-tener-motivacion.html",
+        "slug": "de-sentirme-hundido-a-volver-a-tener-motivacion"
       },
       {
         "title": "Una mañana feliz pero sin nada y con mil problemas",
@@ -608,16 +608,16 @@
         "slug": "de-sentirme-hundido-a-volver-a-tener-motivacion"
       },
       {
-        "title": "Cómo elegir el momento justo para actuar ciertas cosas",
-        "description": "No todo se hace en cualquier instante. A veces elegir bien el momento cambia más que la fuerza. Un texto sobre timing, cabeza y acción.",
-        "url": "/posts/como-elegir-el-momento-justo-para-actuar-ciertas-cosas.html",
-        "slug": "como-elegir-el-momento-justo-para-actuar-ciertas-cosas"
-      },
-      {
         "title": "Cuando perdés la frecuencia y empezás a sentir que nada sale bien",
         "description": "Hay días en los que se corta algo adentro y hasta lo simple cuesta más. Un texto sobre perder la sintonía y sentir que nada termina de salir…",
         "url": "/posts/cuando-perdes-la-frecuencia-y-empezas-a-sentir-que-nada-sale-bien.html",
         "slug": "cuando-perdes-la-frecuencia-y-empezas-a-sentir-que-nada-sale-bien"
+      },
+      {
+        "title": "Cuando los amigos se bajan del barco por las noches",
+        "description": "Hay noches en las que duele más la ausencia de los que estaban cerca que cualquier problema en sí. Y aun así, la mañana llega, incluso cuand…",
+        "url": "/posts/cuando-los-amigos-se-bajan-del-barco-por-las-noches.html",
+        "slug": "cuando-los-amigos-se-bajan-del-barco-por-las-noches"
       }
     ]
   },
@@ -798,12 +798,6 @@
     "line": "viva",
     "related": [
       {
-        "title": "Cómo influye la rutina de los demás en la rutina de uno",
-        "description": "La rutina ajena también se mete en la nuestra: horarios, ritmos, exigencias y comparaciones. Un texto sobre cómo eso nos afecta más de lo qu…",
-        "url": "/posts/como-influye-la-rutina-de-los-demas-en-la-rutina-de-uno.html",
-        "slug": "como-influye-la-rutina-de-los-demas-en-la-rutina-de-uno"
-      },
-      {
         "title": "Cómo desactivar el chip rutinario cuando te comparás con otra gente",
         "description": "Compararse con la rutina de los demás puede volverte más automático y más injusto con vos. Un texto sobre cortar ese chip y volver a tu prop…",
         "url": "/posts/como-desactivar-el-chip-rutinario-cuando-te-comparas-con-otra-gente.html",
@@ -814,6 +808,12 @@
         "description": "Esa sensación de llegar a un lugar y notar que ya decidieron quién sos antes de hablar con vos. Un texto sobre encasillamiento y presencia r…",
         "url": "/posts/cuando-sentis-que-ya-te-encasillaron-antes-de-conocerte-de-verdad.html",
         "slug": "cuando-sentis-que-ya-te-encasillaron-antes-de-conocerte-de-verdad"
+      },
+      {
+        "title": "Cómo influye la rutina de los demás en la rutina de uno",
+        "description": "La rutina ajena también se mete en la nuestra: horarios, ritmos, exigencias y comparaciones. Un texto sobre cómo eso nos afecta más de lo qu…",
+        "url": "/posts/como-influye-la-rutina-de-los-demas-en-la-rutina-de-uno.html",
+        "slug": "como-influye-la-rutina-de-los-demas-en-la-rutina-de-uno"
       },
       {
         "title": "Cuando te despertás y tus amigos te pasan a buscar para irte de fiesta",
@@ -1018,12 +1018,6 @@
         "slug": "cuando-todo-te-sale-natural-porque-entraste-en-tu-frecuencia"
       },
       {
-        "title": "Tomando cosas dietéticas con amigos y sintiendo que igual la vida puede tener gusto",
-        "description": "No todo lo sano tiene que ser aburrido. Un texto sobre compartir cosas dietéticas con amigos y encontrar placer sin caer en el exceso.",
-        "url": "/posts/tomando-cosas-dieteticas-con-amigos-y-sintiendo-que-igual-la-vida-puede-tener-gusto.html",
-        "slug": "tomando-cosas-dieteticas-con-amigos-y-sintiendo-que-igual-la-vida-puede-tener-gusto"
-      },
-      {
         "title": "En la universidad siempre te terminan poniendo la misma etiqueta",
         "description": "Hay lugares donde antes de conocerte ya te ubican en una casilla. Un texto real sobre etiquetas, universidad y seguir siendo uno mismo.",
         "url": "/posts/en-la-universidad-siempre-te-terminan-poniendo-la-misma-etiqueta.html",
@@ -1034,6 +1028,12 @@
         "description": "Hay momentos en los que hace falta cambiar la mezcla. Un texto sobre meter nuevas pócimas a la vida: hábitos, ideas y combinaciones que devu…",
         "url": "/posts/inyectando-nuevas-pocimas-magicas-a-la-vida-para-no-caer-en-lo-mismo.html",
         "slug": "inyectando-nuevas-pocimas-magicas-a-la-vida-para-no-caer-en-lo-mismo"
+      },
+      {
+        "title": "Medidas de cuchara para hacer la mejor pócima para la vida",
+        "description": "No todo se arregla con fórmulas exactas, pero algunas medidas ayudan. Un texto sobre la mejor pócima para la vida usando imagen de cuchara…",
+        "url": "/posts/medidas-de-cuchara-para-hacer-la-mejor-pocima-para-la-vida.html",
+        "slug": "medidas-de-cuchara-para-hacer-la-mejor-pocima-para-la-vida"
       }
     ]
   },
@@ -1056,12 +1056,6 @@
     "line": "alma",
     "related": [
       {
-        "title": "Levantar proyectos que algún día funcionaron y hoy no los tienes",
-        "description": "Hay mañanas en las que no duele empezar de cero, sino mirar todo lo que una vez funcionó y ya no está. Aun así, volver a levantar algo roto…",
-        "url": "/posts/levantar-proyectos-que-algun-dia-funcionaron-y-hoy-no-los-tienes.html",
-        "slug": "levantar-proyectos-que-algun-dia-funcionaron-y-hoy-no-los-tienes"
-      },
-      {
         "title": "Arrancar el lunes aunque haya lluvia, tormenta y gente que te quiere quebrar",
         "description": "No siempre el problema es el clima. A veces también pesa la mala energía ajena, la presión y la sensación de que te quieren ver caer. Un tex…",
         "url": "/posts/arrancar-el-lunes-aunque-haya-lluvia-tormenta-y-gente-que-te-quiere-quebrar.html",
@@ -1072,6 +1066,12 @@
         "description": "Un texto sobre esos momentos donde no todo está perfecto, pero vos entrás tan en eje que hasta el mundo parece responder distinto.",
         "url": "/posts/cuando-fluis-natural-y-parece-que-el-mundo-se-acomoda-solo.html",
         "slug": "cuando-fluis-natural-y-parece-que-el-mundo-se-acomoda-solo"
+      },
+      {
+        "title": "Levantar proyectos que algún día funcionaron y hoy no los tienes",
+        "description": "Hay mañanas en las que no duele empezar de cero, sino mirar todo lo que una vez funcionó y ya no está. Aun así, volver a levantar algo roto…",
+        "url": "/posts/levantar-proyectos-que-algun-dia-funcionaron-y-hoy-no-los-tienes.html",
+        "slug": "levantar-proyectos-que-algun-dia-funcionaron-y-hoy-no-los-tienes"
       },
       {
         "title": "Cómo recomponerse después de una depresión grande",
@@ -1140,6 +1140,12 @@
     "line": "base",
     "related": [
       {
+        "title": "Una mañana feliz pero sin nada y con mil problemas",
+        "description": "Hay mañanas en las que no tenés nada resuelto, pero igual seguís. Una reflexión honesta sobre empezar el día con problemas, cansancio y una…",
+        "url": "/posts/manana-feliz-sin-nada-con-mil-problemas.html",
+        "slug": "manana-feliz-sin-nada-con-mil-problemas"
+      },
+      {
         "title": "Días que empiezan después de las 5 de la tarde",
         "description": "Hay días en los que recién arrancás cuando el sol ya se fue. Un texto honesto sobre sentirse fuera de horario, vivir a contramano y aun así…",
         "url": "/posts/dias-que-empiezan-despues-de-las-5-de-la-tarde.html",
@@ -1150,12 +1156,6 @@
         "description": "A veces los ratos más vacíos del día son los que más ayudan a ordenar ideas y avanzar. Un texto sobre aprovechar esos huecos sin romantizarl…",
         "url": "/posts/trabajar-en-momentos-vacios-nos-ayuda.html",
         "slug": "trabajar-en-momentos-vacios-nos-ayuda"
-      },
-      {
-        "title": "Una mañana feliz pero sin nada y con mil problemas",
-        "description": "Hay mañanas en las que no tenés nada resuelto, pero igual seguís. Una reflexión honesta sobre empezar el día con problemas, cansancio y una…",
-        "url": "/posts/manana-feliz-sin-nada-con-mil-problemas.html",
-        "slug": "manana-feliz-sin-nada-con-mil-problemas"
       },
       {
         "title": "Quiero entrenar pero no hay horario en el día",
@@ -1240,16 +1240,16 @@
         "slug": "seguir-siendo-vos-aunque-el-ambiente-te-quiera-meter-en-un-molde"
       },
       {
-        "title": "Cómo afecta que los demás ya crean saber quién sos",
-        "description": "Cuando los demás creen que ya te descifraron, muchas veces dejan de mirarte de verdad. Un texto sobre identidad, desgaste y seguir entero.",
-        "url": "/posts/como-afecta-que-los-demas-ya-crean-saber-quien-sos.html",
-        "slug": "como-afecta-que-los-demas-ya-crean-saber-quien-sos"
-      },
-      {
         "title": "Cuando los amigos se bajan del barco por las noches",
         "description": "Hay noches en las que duele más la ausencia de los que estaban cerca que cualquier problema en sí. Y aun así, la mañana llega, incluso cuand…",
         "url": "/posts/cuando-los-amigos-se-bajan-del-barco-por-las-noches.html",
         "slug": "cuando-los-amigos-se-bajan-del-barco-por-las-noches"
+      },
+      {
+        "title": "Cómo afecta que los demás ya crean saber quién sos",
+        "description": "Cuando los demás creen que ya te descifraron, muchas veces dejan de mirarte de verdad. Un texto sobre identidad, desgaste y seguir entero.",
+        "url": "/posts/como-afecta-que-los-demas-ya-crean-saber-quien-sos.html",
+        "slug": "como-afecta-que-los-demas-ya-crean-saber-quien-sos"
       }
     ]
   },
@@ -1322,16 +1322,16 @@
         "slug": "cuando-sentis-que-ya-te-encasillaron-antes-de-conocerte-de-verdad"
       },
       {
+        "title": "Cuando los amigos se bajan del barco por las noches",
+        "description": "Hay noches en las que duele más la ausencia de los que estaban cerca que cualquier problema en sí. Y aun así, la mañana llega, incluso cuand…",
+        "url": "/posts/cuando-los-amigos-se-bajan-del-barco-por-las-noches.html",
+        "slug": "cuando-los-amigos-se-bajan-del-barco-por-las-noches"
+      },
+      {
         "title": "La soledad no siempre es tan soledad",
         "description": "Hay momentos de soledad que no están tan vacíos como parecen. Un texto real sobre el silencio, la presencia interna y lo que aparece cuando…",
         "url": "/posts/la-soledad-no-siempre-es-tan-soledad.html",
         "slug": "la-soledad-no-siempre-es-tan-soledad"
-      },
-      {
-        "title": "Cuando salís a caminar por la tarde y no hay nadie, pero no te sentís solo",
-        "description": "Hay tardes en las que salís a caminar, no hay nadie alrededor y sin embargo no te sentís mal. Una reflexión sobre esa soledad rara que tambi…",
-        "url": "/posts/cuando-salis-a-caminar-por-la-tarde-y-no-hay-nadie-pero-no-te-sentis-solo.html",
-        "slug": "cuando-salis-a-caminar-por-la-tarde-y-no-hay-nadie-pero-no-te-sentis-solo"
       }
     ]
   },
@@ -1410,16 +1410,16 @@
         "slug": "la-gente-con-el-chip-rutinario-metido-en-la-cabeza"
       },
       {
-        "title": "Seguir siendo vos aunque el ambiente te quiera meter en un molde",
-        "description": "Cuando un ambiente te empuja a entrar en un molde, seguir siendo vos también se vuelve una forma de firmeza. Un texto sobre identidad y resi…",
-        "url": "/posts/seguir-siendo-vos-aunque-el-ambiente-te-quiera-meter-en-un-molde.html",
-        "slug": "seguir-siendo-vos-aunque-el-ambiente-te-quiera-meter-en-un-molde"
-      },
-      {
         "title": "Cuando los amigos se bajan del barco por las noches",
         "description": "Hay noches en las que duele más la ausencia de los que estaban cerca que cualquier problema en sí. Y aun así, la mañana llega, incluso cuand…",
         "url": "/posts/cuando-los-amigos-se-bajan-del-barco-por-las-noches.html",
         "slug": "cuando-los-amigos-se-bajan-del-barco-por-las-noches"
+      },
+      {
+        "title": "Seguir siendo vos aunque el ambiente te quiera meter en un molde",
+        "description": "Cuando un ambiente te empuja a entrar en un molde, seguir siendo vos también se vuelve una forma de firmeza. Un texto sobre identidad y resi…",
+        "url": "/posts/seguir-siendo-vos-aunque-el-ambiente-te-quiera-meter-en-un-molde.html",
+        "slug": "seguir-siendo-vos-aunque-el-ambiente-te-quiera-meter-en-un-molde"
       }
     ]
   },
@@ -1440,16 +1440,16 @@
         "slug": "dias-que-empiezan-despues-de-las-5-de-la-tarde"
       },
       {
-        "title": "Cómo influye la rutina de los demás en la rutina de uno",
-        "description": "La rutina ajena también se mete en la nuestra: horarios, ritmos, exigencias y comparaciones. Un texto sobre cómo eso nos afecta más de lo qu…",
-        "url": "/posts/como-influye-la-rutina-de-los-demas-en-la-rutina-de-uno.html",
-        "slug": "como-influye-la-rutina-de-los-demas-en-la-rutina-de-uno"
-      },
-      {
         "title": "Una mañana feliz pero sin nada y con mil problemas",
         "description": "Hay mañanas en las que no tenés nada resuelto, pero igual seguís. Una reflexión honesta sobre empezar el día con problemas, cansancio y una…",
         "url": "/posts/manana-feliz-sin-nada-con-mil-problemas.html",
         "slug": "manana-feliz-sin-nada-con-mil-problemas"
+      },
+      {
+        "title": "Cómo influye la rutina de los demás en la rutina de uno",
+        "description": "La rutina ajena también se mete en la nuestra: horarios, ritmos, exigencias y comparaciones. Un texto sobre cómo eso nos afecta más de lo qu…",
+        "url": "/posts/como-influye-la-rutina-de-los-demas-en-la-rutina-de-uno.html",
+        "slug": "como-influye-la-rutina-de-los-demas-en-la-rutina-de-uno"
       },
       {
         "title": "Cómo la plata puede motivar o desmotivar",
@@ -1534,16 +1534,16 @@
         "slug": "la-gente-con-el-chip-rutinario-metido-en-la-cabeza"
       },
       {
-        "title": "Nunca dejes tirado un proyecto que alguna vez funcionó",
-        "description": "Hay proyectos que hoy están apagados, pero un día tuvieron vida real. Un texto sobre volver a mirarlos antes de darlos por muertos.",
-        "url": "/posts/nunca-dejes-tirado-un-proyecto-que-alguna-vez-funciono.html",
-        "slug": "nunca-dejes-tirado-un-proyecto-que-alguna-vez-funciono"
-      },
-      {
         "title": "Levantar proyectos que algún día funcionaron y hoy no los tienes",
         "description": "Hay mañanas en las que no duele empezar de cero, sino mirar todo lo que una vez funcionó y ya no está. Aun así, volver a levantar algo roto…",
         "url": "/posts/levantar-proyectos-que-algun-dia-funcionaron-y-hoy-no-los-tienes.html",
         "slug": "levantar-proyectos-que-algun-dia-funcionaron-y-hoy-no-los-tienes"
+      },
+      {
+        "title": "Nunca dejes tirado un proyecto que alguna vez funcionó",
+        "description": "Hay proyectos que hoy están apagados, pero un día tuvieron vida real. Un texto sobre volver a mirarlos antes de darlos por muertos.",
+        "url": "/posts/nunca-dejes-tirado-un-proyecto-que-alguna-vez-funciono.html",
+        "slug": "nunca-dejes-tirado-un-proyecto-que-alguna-vez-funciono"
       }
     ]
   },
@@ -1580,22 +1580,22 @@
         "slug": "de-sentirme-hundido-a-volver-a-tener-motivacion"
       },
       {
-        "title": "Nunca dejes tirado un proyecto que alguna vez funcionó",
-        "description": "Hay proyectos que hoy están apagados, pero un día tuvieron vida real. Un texto sobre volver a mirarlos antes de darlos por muertos.",
-        "url": "/posts/nunca-dejes-tirado-un-proyecto-que-alguna-vez-funciono.html",
-        "slug": "nunca-dejes-tirado-un-proyecto-que-alguna-vez-funciono"
-      },
-      {
         "title": "Levantar proyectos que algún día funcionaron y hoy no los tienes",
         "description": "Hay mañanas en las que no duele empezar de cero, sino mirar todo lo que una vez funcionó y ya no está. Aun así, volver a levantar algo roto…",
         "url": "/posts/levantar-proyectos-que-algun-dia-funcionaron-y-hoy-no-los-tienes.html",
         "slug": "levantar-proyectos-que-algun-dia-funcionaron-y-hoy-no-los-tienes"
       },
       {
-        "title": "Me levanté con las ganas que no tenía hace cinco días",
-        "description": "Un texto sobre esa mañana rara y hermosa en la que volvés a sentir ganas después de varios días apagado.",
-        "url": "/posts/me-levante-con-las-ganas-que-no-tenia-hace-cinco-dias.html",
-        "slug": "me-levante-con-las-ganas-que-no-tenia-hace-cinco-dias"
+        "title": "Nunca dejes tirado un proyecto que alguna vez funcionó",
+        "description": "Hay proyectos que hoy están apagados, pero un día tuvieron vida real. Un texto sobre volver a mirarlos antes de darlos por muertos.",
+        "url": "/posts/nunca-dejes-tirado-un-proyecto-que-alguna-vez-funciono.html",
+        "slug": "nunca-dejes-tirado-un-proyecto-que-alguna-vez-funciono"
+      },
+      {
+        "title": "Una mañana feliz pero sin nada y con mil problemas",
+        "description": "Hay mañanas en las que no tenés nada resuelto, pero igual seguís. Una reflexión honesta sobre empezar el día con problemas, cansancio y una…",
+        "url": "/posts/manana-feliz-sin-nada-con-mil-problemas.html",
+        "slug": "manana-feliz-sin-nada-con-mil-problemas"
       }
     ]
   },
@@ -1640,10 +1640,10 @@
         "slug": "trabajar-en-momentos-vacios-nos-ayuda"
       },
       {
-        "title": "Días que empiezan después de las 5 de la tarde",
-        "description": "Hay días en los que recién arrancás cuando el sol ya se fue. Un texto honesto sobre sentirse fuera de horario, vivir a contramano y aun así…",
-        "url": "/posts/dias-que-empiezan-despues-de-las-5-de-la-tarde.html",
-        "slug": "dias-que-empiezan-despues-de-las-5-de-la-tarde"
+        "title": "Una mañana feliz pero sin nada y con mil problemas",
+        "description": "Hay mañanas en las que no tenés nada resuelto, pero igual seguís. Una reflexión honesta sobre empezar el día con problemas, cansancio y una…",
+        "url": "/posts/manana-feliz-sin-nada-con-mil-problemas.html",
+        "slug": "manana-feliz-sin-nada-con-mil-problemas"
       }
     ]
   },
@@ -1718,10 +1718,10 @@
         "slug": "cuando-tus-amigos-vienen-a-cocinar-a-tu-casa"
       },
       {
-        "title": "Medidas de cuchara para hacer la mejor pócima para la vida",
-        "description": "No todo se arregla con fórmulas exactas, pero algunas medidas ayudan. Un texto sobre la mejor pócima para la vida usando imagen de cuchara…",
-        "url": "/posts/medidas-de-cuchara-para-hacer-la-mejor-pocima-para-la-vida.html",
-        "slug": "medidas-de-cuchara-para-hacer-la-mejor-pocima-para-la-vida"
+        "title": "Cuando dormís hasta tarde pero te levantás y querés seguir durmiendo",
+        "description": "Hay días en los que dormís muchas horas, pero igual te levantás con el cuerpo pesado y la cabeza lenta. Una reflexión honesta sobre ese cans…",
+        "url": "/posts/cuando-dormis-hasta-tarde-pero-te-levantas-y-queres-seguir-durmiendo.html",
+        "slug": "cuando-dormis-hasta-tarde-pero-te-levantas-y-queres-seguir-durmiendo"
       },
       {
         "title": "Por qué no puedo dormir por las noches",
@@ -1910,10 +1910,10 @@
         "slug": "de-sentirme-hundido-a-volver-a-tener-motivacion"
       },
       {
-        "title": "Quiero entrenar pero no hay horario en el día",
-        "description": "A veces querés entrenar de verdad, pero el día no te deja lugar. Un texto real sobre las ganas de moverse cuando la rutina no afloja.",
-        "url": "/posts/quiero-entrenar-pero-no-hay-horario-en-el-dia.html",
-        "slug": "quiero-entrenar-pero-no-hay-horario-en-el-dia"
+        "title": "Días en los que solo tengo que esperar porque no me queda otra",
+        "description": "Hay días en los que no queda otra que esperar. Esta reflexión acompaña esos momentos de pausa forzada, incertidumbre y resistencia silencios…",
+        "url": "/posts/dias-en-los-que-solo-tengo-que-esperar-porque-no-me-queda-otra.html",
+        "slug": "dias-en-los-que-solo-tengo-que-esperar-porque-no-me-queda-otra"
       }
     ]
   },
@@ -2160,12 +2160,6 @@
         "slug": "cuando-los-amigos-se-bajan-del-barco-por-las-noches"
       },
       {
-        "title": "La soledad no siempre es tan soledad",
-        "description": "Hay momentos de soledad que no están tan vacíos como parecen. Un texto real sobre el silencio, la presencia interna y lo que aparece cuando…",
-        "url": "/posts/la-soledad-no-siempre-es-tan-soledad.html",
-        "slug": "la-soledad-no-siempre-es-tan-soledad"
-      },
-      {
         "title": "Una mañana feliz pero sin nada y con mil problemas",
         "description": "Hay mañanas en las que no tenés nada resuelto, pero igual seguís. Una reflexión honesta sobre empezar el día con problemas, cansancio y una…",
         "url": "/posts/manana-feliz-sin-nada-con-mil-problemas.html",
@@ -2176,6 +2170,12 @@
         "description": "Hay mañanas en las que no duele empezar de cero, sino mirar todo lo que una vez funcionó y ya no está. Aun así, volver a levantar algo roto…",
         "url": "/posts/levantar-proyectos-que-algun-dia-funcionaron-y-hoy-no-los-tienes.html",
         "slug": "levantar-proyectos-que-algun-dia-funcionaron-y-hoy-no-los-tienes"
+      },
+      {
+        "title": "La soledad no siempre es tan soledad",
+        "description": "Hay momentos de soledad que no están tan vacíos como parecen. Un texto real sobre el silencio, la presencia interna y lo que aparece cuando…",
+        "url": "/posts/la-soledad-no-siempre-es-tan-soledad.html",
+        "slug": "la-soledad-no-siempre-es-tan-soledad"
       }
     ]
   },
@@ -2310,16 +2310,16 @@
         "slug": "levantar-proyectos-que-algun-dia-funcionaron-y-hoy-no-los-tienes"
       },
       {
-        "title": "Cómo recomponerse después de una depresión grande",
-        "description": "Volver después de una depresión grande no es volver igual. Un texto real sobre reconstruirse sin apuro, sin teatro y sin exigirse milagros.",
-        "url": "/posts/como-recomponerse-despues-de-una-depresion-grande.html",
-        "slug": "como-recomponerse-despues-de-una-depresion-grande"
-      },
-      {
         "title": "Una mañana feliz pero sin nada y con mil problemas",
         "description": "Hay mañanas en las que no tenés nada resuelto, pero igual seguís. Una reflexión honesta sobre empezar el día con problemas, cansancio y una…",
         "url": "/posts/manana-feliz-sin-nada-con-mil-problemas.html",
         "slug": "manana-feliz-sin-nada-con-mil-problemas"
+      },
+      {
+        "title": "Cómo recomponerse después de una depresión grande",
+        "description": "Volver después de una depresión grande no es volver igual. Un texto real sobre reconstruirse sin apuro, sin teatro y sin exigirse milagros.",
+        "url": "/posts/como-recomponerse-despues-de-una-depresion-grande.html",
+        "slug": "como-recomponerse-despues-de-una-depresion-grande"
       },
       {
         "title": "Me activo por las noches para hacer todo",
@@ -2504,10 +2504,10 @@
         "slug": "dias-que-empiezan-despues-de-las-5-de-la-tarde"
       },
       {
-        "title": "Cómo se siente la gente que no entrena nunca",
-        "description": "No entrenar ni de día, ni de tarde, ni de noche también deja marcas. Un texto sobre el cuerpo quieto, la energía rara y lo que pasa cuando u…",
-        "url": "/posts/como-se-siente-la-gente-que-no-entrena-nunca.html",
-        "slug": "como-se-siente-la-gente-que-no-entrena-nunca"
+        "title": "Cuando dormís hasta tarde pero te levantás y querés seguir durmiendo",
+        "description": "Hay días en los que dormís muchas horas, pero igual te levantás con el cuerpo pesado y la cabeza lenta. Una reflexión honesta sobre ese cans…",
+        "url": "/posts/cuando-dormis-hasta-tarde-pero-te-levantas-y-queres-seguir-durmiendo.html",
+        "slug": "cuando-dormis-hasta-tarde-pero-te-levantas-y-queres-seguir-durmiendo"
       }
     ]
   },
@@ -2598,16 +2598,16 @@
         "slug": "nunca-dejes-tirado-un-proyecto-que-alguna-vez-funciono"
       },
       {
-        "title": "Me activo por las noches para hacer todo",
-        "description": "Cuando cae la noche recién aparece la energía. Un texto para quienes sienten que viven mejor cuando el mundo se apaga un poco.",
-        "url": "/posts/me-activo-por-las-noches-para-hacer-todo.html",
-        "slug": "me-activo-por-las-noches-para-hacer-todo"
-      },
-      {
         "title": "Levantar proyectos que algún día funcionaron y hoy no los tienes",
         "description": "Hay mañanas en las que no duele empezar de cero, sino mirar todo lo que una vez funcionó y ya no está. Aun así, volver a levantar algo roto…",
         "url": "/posts/levantar-proyectos-que-algun-dia-funcionaron-y-hoy-no-los-tienes.html",
         "slug": "levantar-proyectos-que-algun-dia-funcionaron-y-hoy-no-los-tienes"
+      },
+      {
+        "title": "Me activo por las noches para hacer todo",
+        "description": "Cuando cae la noche recién aparece la energía. Un texto para quienes sienten que viven mejor cuando el mundo se apaga un poco.",
+        "url": "/posts/me-activo-por-las-noches-para-hacer-todo.html",
+        "slug": "me-activo-por-las-noches-para-hacer-todo"
       }
     ]
   },
@@ -2730,16 +2730,16 @@
     "line": "alma",
     "related": [
       {
-        "title": "Cuando los amigos solo están si hay plata de por medio",
-        "description": "Hay vínculos que parecen cercanos hasta que se termina la plata. Un texto sobre amistades interesadas y la claridad dolorosa que eso deja.",
-        "url": "/posts/cuando-los-amigos-solo-estan-si-hay-plata.html",
-        "slug": "cuando-los-amigos-solo-estan-si-hay-plata"
-      },
-      {
         "title": "Levantar proyectos que algún día funcionaron y hoy no los tienes",
         "description": "Hay mañanas en las que no duele empezar de cero, sino mirar todo lo que una vez funcionó y ya no está. Aun así, volver a levantar algo roto…",
         "url": "/posts/levantar-proyectos-que-algun-dia-funcionaron-y-hoy-no-los-tienes.html",
         "slug": "levantar-proyectos-que-algun-dia-funcionaron-y-hoy-no-los-tienes"
+      },
+      {
+        "title": "Cuando los amigos solo están si hay plata de por medio",
+        "description": "Hay vínculos que parecen cercanos hasta que se termina la plata. Un texto sobre amistades interesadas y la claridad dolorosa que eso deja.",
+        "url": "/posts/cuando-los-amigos-solo-estan-si-hay-plata.html",
+        "slug": "cuando-los-amigos-solo-estan-si-hay-plata"
       },
       {
         "title": "La soledad no siempre es tan soledad",
