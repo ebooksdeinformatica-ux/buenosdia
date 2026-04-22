@@ -10,14 +10,14 @@ const SITEMAP_FILE = path.join(ROOT, 'sitemap.xml');
 const POSTS_JSON = path.join(DATA_DIR, 'posts.json');
 const CONTACT_PAGE_PATH = '/contacto.html';
 const CONTACT_URL = CONTACT_PAGE_PATH;
-const CONTACT_LABEL = 'Contacto';
-const CONTACT_HANDLE = 'Abrir contacto';
+const CONTACT_EMAIL = 'ebooksdeinformatica@gmail.com';
+const CONTACT_EMAIL_MAILTO = `mailto:${CONTACT_EMAIL}`;
 const CONTACT_INSTAGRAM_URL = 'https://instagram.com/https_404_3rr0r';
 const CONTACT_INSTAGRAM_HANDLE = '@https_404_3rr0r';
 const AUTHOR_NAME = 'ASPF';
 const AUTHOR_ROLE = 'Editor y creador de buenosdia.com';
 const AUTHOR_PAGE_PATH = '/autor/aspf.html';
-const AUTHOR_SHORT_BIO = 'Escribe textos breves, humanos y reflexivos sobre mañanas reales, cansancio, esperanza, reconstrucción y vida cotidiana.';
+const AUTHOR_SHORT_BIO = 'Escribe textos humanos, reflexivos y originales sobre mañanas reales, reconstrucción, cansancio, claridad, sentido y vida cotidiana.';
 const PUBLISHER_NAME = 'Buenos Días';
 const ADSENSE_SNIPPET = `<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7756135514831267" crossorigin="anonymous"></script>`;
 const STATCOUNTER_SNIPPET = `<!-- Default Statcounter code for Buenos Dia https://www.buenosdia.com/ -->
@@ -169,6 +169,12 @@ console.log(`Generados ${posts.length} posts, ${Object.keys(tagMap).length} pág
 function patchPostHtml(html, currentPost, allPosts, featuredPosts, lineMap, tagMap) {
   let out = html;
   out = cleanupLegacyAutoSections(out);
+  out = cleanupLegacyAutoFeaturedImages(out);
+  out = removeEmptyFeaturedFigure(out);
+  out = dedupeInlineCss(out);
+  out = cleanDuplicateStructuredData(out);
+  out = ensureAuthorMeta(out);
+  out = ensureBrandLabel(out);
   out = out.replace(/href="\/#etiquetas"/g, 'href="/tags/"');
 
   out = out.replace(/(<section[^>]*aria-labelledby="tags-post"[^>]*>[\s\S]*?<\/section>)/gis, section => rewriteTagLinks(section));
@@ -194,7 +200,7 @@ function patchPostHtml(html, currentPost, allPosts, featuredPosts, lineMap, tagM
   out = out.replace(/<footer([^>]*)>([\s\S]*?)<\/footer>/i, (full, attrs, inner) => `<footer${attrs}>${inner}</footer>
   <div class="contact-strip">Contacto editorial: <a href="${CONTACT_PAGE_PATH}">abrir página de contacto</a> · <a href="${AUTHOR_PAGE_PATH}">quién escribe</a></div>`);
 
-  if (!/\.contact-strip\s*\{/i.test(out) || !/\.auto-posts-grid\s*\{/i.test(out)) {
+  if (!/\.contact-strip\s*\{/i.test(out) || !/\.auto-posts-grid\s*\{/i.test(out) || !/\.bd-author-box\s*\{/i.test(out)) {
     out = out.replace(/<\/style>/i, `
     .contact-strip{margin:18px auto 0;max-width:var(--max,860px);padding:16px 18px;border:1px solid var(--line,#e9e9e9);border-radius:16px;background:var(--soft,#f7f7f7);color:var(--muted,#666)}
     .contact-strip a{color:var(--text,#111);font-weight:700;text-decoration:none}
@@ -213,7 +219,7 @@ function patchPostHtml(html, currentPost, allPosts, featuredPosts, lineMap, tagM
     .bd-post-hero a,.bd-content-image a{display:block;text-decoration:none}
     .bd-post-hero img,.bd-content-image img,.article img,.article figure img,article img,article figure img{display:block;width:100%;max-width:100%;height:auto;border-radius:18px;border:1px solid var(--line,#e9e9e9);box-shadow:var(--shadow,0 10px 25px rgba(0,0,0,.05))}
     .article figure,article figure{margin:18px 0 26px}
-    .bd-author-box{margin:18px auto 24px;max-width:min(100%,860px)}
+    .bd-author-box{margin:26px auto 24px;max-width:min(100%,860px)}
     .bd-author-box .author-kicker{margin:0 0 8px;color:var(--muted,#666);font-size:.95rem;letter-spacing:.02em;text-transform:uppercase}
     .bd-author-box h2{margin:0 0 10px;font-size:1.28rem;line-height:1.2}
     .bd-author-box p{margin:0;color:#475467;line-height:1.7}
@@ -228,17 +234,26 @@ function patchPostHtml(html, currentPost, allPosts, featuredPosts, lineMap, tagM
   out = ensureAuthorBox(out, currentPost);
   out = ensureFeaturedQuote(out, currentPost);
   out = enhancePostDiscover(out, currentPost);
-  const strongTagsHtml = renderStrongTagsForPost(currentPost, tagMap, 8);
-  const latestHtml = renderAutoSection('ultimas-publicaciones-auto', 'Últimas 5 publicaciones', 'Los textos más nuevos del sitio, en orden.', getLatestPosts(currentPost, allPosts, 5));
-  const featuredHtml = renderAutoSection('destacadas-publicaciones-auto', 'Más destacadas', 'Una selección automática del sitio para seguir navegando.', getFeaturedPostsForPost(currentPost, featuredPosts, allPosts, 5));
-  const lineHtml = renderLineSection(currentPost, lineMap, 4);
-  const autoBlocks = `\n\n    ${strongTagsHtml ? `${strongTagsHtml}\n\n    ` : ''}${featuredHtml}\n\n    ${latestHtml}${lineHtml ? `\n\n    ${lineHtml}` : ''}`;
+  const strongTagsHtml = renderStrongTagsForPost(currentPost, tagMap, 6);
+  const latestHtml = renderAutoSection('ultimas-publicaciones-auto', 'Últimas 3 publicaciones', 'Los textos más nuevos del sitio, en orden.', getLatestPosts(currentPost, allPosts, 3));
+  const featuredHtml = renderAutoSection('destacadas-publicaciones-auto', 'Más destacadas', 'Una selección automática del sitio para seguir navegando.', getFeaturedPostsForPost(currentPost, featuredPosts, allPosts, 3));
+  const lineHtml = renderLineSection(currentPost, lineMap, 3);
+  const autoBlocks = `
+
+    ${strongTagsHtml ? `${strongTagsHtml}
+
+    ` : ''}${featuredHtml}
+
+    ${latestHtml}${lineHtml ? `
+
+    ${lineHtml}` : ''}`;
 
   const faqRegex = /(<section[^>]*class="[^"]*\bfaq\b[^"]*"[^>]*>[\s\S]*?<\/section>)/i;
   if (faqRegex.test(out)) {
     out = out.replace(faqRegex, `$1${autoBlocks}`);
   } else if (/<\/main>/i.test(out)) {
-    out = out.replace(/<\/main>/i, `${autoBlocks}\n  </main>`);
+    out = out.replace(/<\/main>/i, `${autoBlocks}
+  </main>`);
   }
 
   return out;
@@ -510,6 +525,82 @@ function ensureContentImagesResponsive(html = '') {
   return out;
 }
 
+function removeEmptyFeaturedFigure(html = '') {
+  return html.replace(/\s*<figure[^>]*class="[^"]*bd-featured-image[^"]*"[^>]*>\s*<\/figure>\s*/gi, '\n');
+}
+
+function dedupeInlineCss(html = '') {
+  let out = html;
+  const pattern = String.raw`
+\s*\.bd-post-hero,\.bd-content-media\{[\s\S]*?article figure,.article figure\{max-width:min\(100%,860px\);margin:18px auto 26px\}
+`;
+  const regex = new RegExp(pattern, 'g');
+  const matches = out.match(regex);
+  if (matches && matches.length > 1) {
+    let seen = false;
+    out = out.replace(regex, () => {
+      if (!seen) {
+        seen = true;
+        return matches[0];
+      }
+      return '';
+    });
+  }
+  return out;
+}
+
+function cleanDuplicateStructuredData(html = '') {
+  return html.replace(/\s*<script type="application\/ld\+json">\s*\{[\s\S]*?"@type"\s*:\s*"Article"[\s\S]*?<\/script>/i, '');
+}
+
+function ensureAuthorMeta(html = '') {
+  if (/<meta\s+name="author"/i.test(html)) {
+    return html.replace(/<meta\s+name="author"\s+content="[^"]*"\s*\/?>/i, `<meta name="author" content="${AUTHOR_NAME}">`);
+  }
+  return html.replace(/<meta\s+name="keywords"[^>]*>/i, match => `${match}
+  <meta name="author" content="${AUTHOR_NAME}">`);
+}
+
+function ensureBrandLabel(html = '') {
+  let out = html;
+  out = out.replace(/>BuenosDia</g, '>Buenos Días<');
+  out = out.replace(/>buenosdia\.com<\/a>/g, '>Buenos Días</a>');
+  return out;
+}
+
+function ensureHumanByline(html = '', post = {}) {
+  let out = html;
+  out = out.replace(/Publicado por\s*buenosdia\.com/gi, `Por ${AUTHOR_NAME}`);
+  if (/<div[^>]*class="meta"[^>]*>.*?<\/div>/i.test(out)) {
+    out = out.replace(/<div([^>]*)class="([^"]*\bmeta\b[^"]*)"([^>]*)>[\s\S]*?<\/div>/i, `<div$1class="$2"$3>Por ${AUTHOR_NAME} · <a href="${AUTHOR_PAGE_PATH}">ver perfil</a></div>`);
+  }
+  return out;
+}
+
+function ensureAuthorBox(html = '', post = {}) {
+  if (/data-bd-author-box="true"/i.test(html)) return html;
+  const authorBox = `
+    <section class="card bd-author-box" data-bd-author-box="true">
+      <p class="author-kicker">Quién escribe</p>
+      <h2>${AUTHOR_NAME}</h2>
+      <p>${AUTHOR_ROLE}. ${AUTHOR_SHORT_BIO}</p>
+      <div class="author-links">
+        <a href="${AUTHOR_PAGE_PATH}">Ver perfil</a>
+        <a href="${CONTACT_PAGE_PATH}">Contacto</a>
+        <a href="/politica-editorial.html">Política editorial</a>
+      </div>
+    </section>`;
+
+  if (/<section[^>]*class="tags"[^>]*aria-label="Etiquetas"[^>]*>/i.test(html)) {
+    return html.replace(/(<section[^>]*class="tags"[^>]*aria-label="Etiquetas"[^>]*>)/i, `${authorBox}
+
+    $1`);
+  }
+  if (/<\/article>/i.test(html)) {
+    return html.replace(/<\/article>/i, `</article>${authorBox}`);
+  }
+  return html;
+}
 
 function writeInstitutionalPages() {
   const authorDir = path.join(ROOT, 'autor');
@@ -521,7 +612,7 @@ function writeInstitutionalPages() {
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Contacto | buenosdia.com</title>
-  <meta name="description" content="Página de contacto editorial de buenosdia.com, con información básica sobre quién escribe y cómo contactar el proyecto.">
+  <meta name="description" content="Página de contacto editorial de buenosdia.com, con email, Instagram y páginas institucionales visibles para lectores y buscadores.">
   <meta name="robots" content="index,follow,max-image-preview:large">
   <link rel="canonical" href="${SITE_URL}${CONTACT_PAGE_PATH}">
   <style>${sharedTagPageCss()}</style>
@@ -529,7 +620,7 @@ function writeInstitutionalPages() {
 <body>
   <div class="wrap">
     <header>
-      <a class="brand" href="/">buenosdia.com</a>
+      <a class="brand" href="/">Buenos Días</a>
       <nav>
         <a href="/">Inicio</a>
         <a href="/#publicaciones">Publicaciones</a>
@@ -544,24 +635,23 @@ function writeInstitutionalPages() {
       <section class="hero">
         <p class="eyebrow">Contacto editorial</p>
         <h1>Cómo contactar buenosdia.com</h1>
-        <p>Este sitio publica textos breves, humanos y reflexivos. La forma de contacto visible del proyecto está reunida en esta página para que el lector y Google encuentren una referencia clara, simple y real.</p>
+        <p>Esta página reúne los datos visibles del proyecto para que lectores, buscadores y revisiones editoriales encuentren una referencia clara, humana y directa.</p>
       </section>
       <section class="card">
-        <h2 class="block-title">Canales visibles</h2>
-        <p class="block-sub">Hoy el canal público principal es Instagram. También podés revisar quién escribe y la política editorial del sitio.</p>
+        <h2 class="block-title">Canales de contacto</h2>
         <div class="tag-cloud">
-          <a class="tag" href="${AUTHOR_PAGE_PATH}">Quién escribe</a>
-          <a class="tag" href="/politica-editorial.html">Política editorial</a>
+          <a class="tag" href="${CONTACT_EMAIL_MAILTO}">${CONTACT_EMAIL}</a>
           <a class="tag" href="${CONTACT_INSTAGRAM_URL}" target="_blank" rel="noopener noreferrer">Instagram ${CONTACT_INSTAGRAM_HANDLE}</a>
+          <a class="tag" href="${AUTHOR_PAGE_PATH}">Quién escribe</a>
         </div>
       </section>
       <section class="card">
-        <h2 class="block-title">Nota editorial</h2>
-        <p class="block-sub">Buenosdia.com prioriza textos originales y navegación clara. Esta página existe para que la identidad del proyecto no quede escondida detrás de las publicaciones.</p>
+        <h2 class="block-title">Para qué existe esta página</h2>
+        <p class="block-sub">Buenosdia.com publica textos originales y humanos. Esta página ayuda a que el proyecto tenga una identidad editorial visible, con vías reales de contacto y contexto claro sobre quién está detrás.</p>
       </section>
     </main>
     <footer class="site-footer">
-      <p><a href="${CONTACT_INSTAGRAM_URL}" target="_blank" rel="noopener noreferrer">${CONTACT_INSTAGRAM_HANDLE}</a> · <a href="${AUTHOR_PAGE_PATH}">Quién escribe</a></p>
+      <p><a href="${CONTACT_EMAIL_MAILTO}">${CONTACT_EMAIL}</a> · <a href="${CONTACT_INSTAGRAM_URL}" target="_blank" rel="noopener noreferrer">${CONTACT_INSTAGRAM_HANDLE}</a></p>
     </footer>
   </div>
 </body>
@@ -578,11 +668,12 @@ function writeInstitutionalPages() {
   <meta name="robots" content="index,follow,max-image-preview:large">
   <link rel="canonical" href="${SITE_URL}${AUTHOR_PAGE_PATH}">
   <style>${sharedTagPageCss()}</style>
+  <script type="application/ld+json">${JSON.stringify({'@context':'https://schema.org','@type':'Person','name':AUTHOR_NAME,'jobTitle':AUTHOR_ROLE,'description':AUTHOR_SHORT_BIO,'url':`${SITE_URL}${AUTHOR_PAGE_PATH}`})}</script>
 </head>
 <body>
   <div class="wrap">
     <header>
-      <a class="brand" href="/">buenosdia.com</a>
+      <a class="brand" href="/">Buenos Días</a>
       <nav>
         <a href="/">Inicio</a>
         <a href="/#publicaciones">Publicaciones</a>
@@ -601,10 +692,10 @@ function writeInstitutionalPages() {
       </section>
       <section class="card">
         <h2 class="block-title">Perfil editorial</h2>
-        <p class="block-sub">Detrás de buenosdia.com hay una búsqueda de textos cercanos, legibles y humanos, pensados para acompañar mañanas reales sin prometer más de lo que una publicación puede dar.</p>
+        <p class="block-sub">Detrás de Buenos Días hay una búsqueda de textos cercanos, legibles y originales, pensados para acompañar mañanas reales sin sonar mecánicos ni vacíos.</p>
       </section>
       <section class="card">
-        <h2 class="block-title">Páginas relacionadas</h2>
+        <h2 class="block-title">Enlaces útiles</h2>
         <div class="tag-cloud">
           <a class="tag" href="/quienes-somos.html">Quiénes somos</a>
           <a class="tag" href="/politica-editorial.html">Política editorial</a>
@@ -620,26 +711,26 @@ function writeInstitutionalPages() {
 </html>`));
   fs.writeFileSync(path.join(authorDir, 'aspf.html'), authorHtml, 'utf8');
 
-  ensureInstitutionalFile('quienes-somos.html', 'Quiénes somos | buenosdia.com', 'Página institucional de buenosdia.com con una presentación breve del proyecto editorial.', `
+  ensureInstitutionalFile('quienes-somos.html', 'Quiénes somos | buenosdia.com', 'Página institucional de Buenos Días con una presentación breve del proyecto editorial.', `
       <section class="hero">
         <p class="eyebrow">Quiénes somos</p>
         <h1>Un proyecto editorial simple y humano</h1>
-        <p>Buenosdia.com reúne publicaciones breves sobre mañanas reales, cansancio, claridad, esperanza y reconstrucción. Busca una lectura directa, legible y útil para personas reales.</p>
+        <p>Buenos Días reúne publicaciones originales sobre mañanas reales, claridad, cansancio, esperanza, sentido y reconstrucción. Busca una lectura directa, honesta y útil para personas reales.</p>
       </section>
       <section class="card">
         <h2 class="block-title">Qué hace este sitio</h2>
-        <p class="block-sub">Publica textos originales, organiza etiquetas temáticas y prioriza una navegación simple. No pretende hacerse pasar por un medio de noticias duras: funciona como un espacio editorial de reflexión cotidiana.</p>
+        <p class="block-sub">Publica textos propios, organiza etiquetas temáticas y prioriza una navegación simple. No intenta inflar páginas vacías ni hacerse pasar por lo que no es.</p>
       </section>`);
 
-  ensureInstitutionalFile('politica-editorial.html', 'Política editorial | buenosdia.com', 'Criterios editoriales básicos de buenosdia.com: originalidad, claridad, mantenimiento y señales visibles de autoría.', `
+  ensureInstitutionalFile('politica-editorial.html', 'Política editorial | buenosdia.com', 'Criterios editoriales básicos de Buenos Días: originalidad, claridad, mantenimiento y señales visibles de autoría.', `
       <section class="hero">
         <p class="eyebrow">Política editorial</p>
-        <h1>Cómo se publica en buenosdia.com</h1>
-        <p>El sitio prioriza textos originales, claridad de lectura, etiquetas coherentes y una identidad visible del proyecto. Se evita publicar páginas vacías, contenido engañoso o piezas hechas solo para inflar tráfico.</p>
+        <h1>Cómo se publica en Buenos Días</h1>
+        <p>El sitio prioriza textos originales, claridad de lectura, etiquetas coherentes e identidad visible del proyecto. Se evita publicar páginas débiles, contenido engañoso o piezas hechas solo para inflar tráfico.</p>
       </section>
       <section class="card">
         <h2 class="block-title">Criterios básicos</h2>
-        <p class="block-sub">Cada publicación debe aportar una idea, una mirada o una compañía real al lector. Cuando una página deja de tener sentido o queda demasiado débil, conviene revisarla, fusionarla o retirarla.</p>
+        <p class="block-sub">Cada publicación debe aportar una idea, una mirada o una compañía real al lector. Cuando una página queda floja, se revisa, se amplía, se fusiona o se retira.</p>
       </section>`);
 }
 
@@ -660,7 +751,7 @@ function ensureInstitutionalFile(filename, title, description, mainContent) {
 <body>
   <div class="wrap">
     <header>
-      <a class="brand" href="/">buenosdia.com</a>
+      <a class="brand" href="/">Buenos Días</a>
       <nav>
         <a href="/">Inicio</a>
         <a href="/#publicaciones">Publicaciones</a>
@@ -680,36 +771,6 @@ function ensureInstitutionalFile(filename, title, description, mainContent) {
 </body>
 </html>`));
   fs.writeFileSync(filePath, html, 'utf8');
-}
-
-function ensureHumanByline(html = '', post = {}) {
-  let out = html;
-  out = out.replace(/Publicado por\s*buenosdia\.com/gi, `Por ${AUTHOR_NAME}`);
-  return out;
-}
-
-function ensureAuthorBox(html = '', post = {}) {
-  if (/data-bd-author-box="true"/i.test(html)) return html;
-  const authorBox = `
-      <section class="card bd-author-box" data-bd-author-box="true">
-        <p class="author-kicker">Quién escribe</p>
-        <h2>${AUTHOR_NAME}</h2>
-        <p>${AUTHOR_ROLE}. ${AUTHOR_SHORT_BIO}</p>
-        <div class="author-links">
-          <a href="${AUTHOR_PAGE_PATH}">Ver perfil</a>
-          <a href="${CONTACT_PAGE_PATH}">Contacto</a>
-          <a href="/politica-editorial.html">Política editorial</a>
-        </div>
-      </section>`;
-
-  if (/<article/i.test(html)) {
-    return html.replace(/(<article[^>]*>)/i, `${authorBox}
-$1`);
-  }
-  if (/<main[^>]*>/i.test(html)) {
-    return html.replace(/(<main[^>]*>)/i, `$1${authorBox}`);
-  }
-  return html;
 }
 
 function renderTagPages(tagMap) {
@@ -739,7 +800,6 @@ function renderTagPages(tagMap) {
         <a href="/tags/" aria-current="page">Etiquetas</a>
         <a href="/quienes-somos.html">Quiénes somos</a>
         <a href="/politica-editorial.html">Política editorial</a>
-        <a href="${AUTHOR_PAGE_PATH}">Quién escribe</a>
         <a href="${CONTACT_PAGE_PATH}">Contacto</a>
       </nav>
     </header>
@@ -834,7 +894,6 @@ function renderTagPages(tagMap) {
         <a href="/tags/">Etiquetas</a>
         <a href="/quienes-somos.html">Quiénes somos</a>
         <a href="/politica-editorial.html">Política editorial</a>
-        <a href="${AUTHOR_PAGE_PATH}">Quién escribe</a>
         <a href="${CONTACT_PAGE_PATH}">Contacto</a>
       </nav>
     </header>
@@ -963,6 +1022,11 @@ function patchIndexHtml(tagMap) {
       <a href="${AUTHOR_PAGE_PATH}">Quién escribe</a> ·
       <a href="${CONTACT_PAGE_PATH}">Contacto</a>
     </footer>`);
+  html = html.replace(/<h3>Sobre este espacio<\/h3>[\s\S]*?<\/section>/i, `<h3>Sobre este espacio</h3>
+          <p style="margin:0;color:#667085;line-height:1.7;">
+            Buenos Días reúne textos más humanos, originales y trabajados para acompañar mañanas reales. No busca llenar por llenar: busca dejar una idea, ordenar una emoción o abrir una salida concreta en medio del día.
+          </p>
+        </section>`);
   html = injectAdsense(html);
   html = injectStatcounter(html);
   fs.writeFileSync(indexPath, html, 'utf8');
@@ -997,7 +1061,6 @@ function write404Page(tagMap) {
         <a href="/tags/">Etiquetas</a>
         <a href="/quienes-somos.html">Quiénes somos</a>
         <a href="/politica-editorial.html">Política editorial</a>
-        <a href="${AUTHOR_PAGE_PATH}">Quién escribe</a>
         <a href="${CONTACT_PAGE_PATH}">Contacto</a>
       </nav>
     </header>
@@ -1080,7 +1143,11 @@ function writeSitemap(posts, tagMap) {
     <loc>${SITE_URL}/tags/</loc>
     <lastmod>${today()}</lastmod>
   </url>
-${institutionalUrls.join('\n')}\n${postUrls.join('\n')}\n${tagUrls.join('\n')}\n</urlset>\n`;
+${institutionalUrls.join('\n')}
+${postUrls.join('\n')}
+${tagUrls.join('\n')}
+</urlset>
+`;
   fs.writeFileSync(SITEMAP_FILE, sitemap, 'utf8');
 }
 
@@ -1412,9 +1479,6 @@ ${structuredData}
   return html.replace(/<\/head>/i, `${script}
 </head>`);
 }
-
-
-
 
 function removeContentImages(html = '') {
   return html;
