@@ -86,15 +86,11 @@
     "description": "Hay planes que no necesitan mucho para sentirse vivos. Un texto sobre abrir la casa, cocinar entre amigos y recordar que compartir también cura.",
     "tags": [
       "vida real",
-      "amistad real",
-      "compartir",
-      "hogar vivo"
+      "amistad real"
     ],
     "tagSlugs": {
       "vida real": "vida-real",
-      "amistad real": "amistad-real",
-      "compartir": "compartir",
-      "hogar vivo": "hogar-vivo"
+      "amistad real": "amistad-real"
     },
     "date": "2026-04-11",
     "slug": "cuando-tus-amigos-vienen-a-cocinar-a-tu-casa",
@@ -133,16 +129,12 @@
     "tags": [
       "seguir adelante",
       "fuerza interior",
-      "resistencia mental",
-      "vida real",
-      "impulso real"
+      "vida real"
     ],
     "tagSlugs": {
       "seguir adelante": "seguir-adelante",
       "fuerza interior": "fuerza-interior",
-      "resistencia mental": "resistencia-mental",
-      "vida real": "vida-real",
-      "impulso real": "impulso-real"
+      "vida real": "vida-real"
     },
     "date": "2026-04-11",
     "slug": "haciendo-polvo-los-obstaculos-de-la-vida-para-seguir-igual",
@@ -221,12 +213,10 @@
     "title": "La cocina como pequeño laboratorio para cambiar un poco la vida",
     "description": "A veces cambiar la vida empieza por una mesada. Un texto sobre la cocina como laboratorio cotidiano de amistad, ideas y transformación real.",
     "tags": [
-      "vida real",
-      "hogar vivo"
+      "vida real"
     ],
     "tagSlugs": {
-      "vida real": "vida-real",
-      "hogar vivo": "hogar-vivo"
+      "vida real": "vida-real"
     },
     "date": "2026-04-11",
     "slug": "la-cocina-como-pequeno-laboratorio-para-cambiar-un-poco-la-vida",
@@ -263,12 +253,10 @@
     "title": "Medidas de cuchara para hacer la mejor pócima para la vida",
     "description": "No todo se arregla con fórmulas exactas, pero algunas medidas ayudan. Un texto sobre la mejor pócima para la vida usando imagen de cuchara, mezcla y equilibrio.",
     "tags": [
-      "equilibrio interno",
       "vida real",
       "claridad"
     ],
     "tagSlugs": {
-      "equilibrio interno": "equilibrio-interno",
       "vida real": "vida-real",
       "claridad": "claridad"
     },
@@ -395,14 +383,10 @@
     "title": "Tomando cosas dietéticas con amigos y sintiendo que igual la vida puede tener gusto",
     "description": "No todo lo sano tiene que ser aburrido. Un texto sobre compartir cosas dietéticas con amigos y encontrar placer sin caer en el exceso.",
     "tags": [
-      "vida real",
-      "energia limpia",
-      "compartir"
+      "vida real"
     ],
     "tagSlugs": {
-      "vida real": "vida-real",
-      "energia limpia": "energia-limpia",
-      "compartir": "compartir"
+      "vida real": "vida-real"
     },
     "date": "2026-04-11",
     "slug": "tomando-cosas-dieteticas-con-amigos-y-sintiendo-que-igual-la-vida-puede-tener-gusto",
@@ -439,15 +423,11 @@
     "title": "Tratando de cambiar el mundo por las tardes, cuando el día ya viene cargado",
     "description": "No todo empieza a la mañana. Un texto sobre querer cambiar algo por las tardes, aun cuando el día ya viene pesado y torcido.",
     "tags": [
-      "empezar tarde",
       "vida real",
-      "impulso real",
       "seguir adelante"
     ],
     "tagSlugs": {
-      "empezar tarde": "empezar-tarde",
       "vida real": "vida-real",
-      "impulso real": "impulso-real",
       "seguir adelante": "seguir-adelante"
     },
     "date": "2026-04-11",
@@ -485,11 +465,9 @@
     "title": "Me levanto triste por una mujer que no sabe si la quiero o me quiere | BuenosDia",
     "description": "Hay mañanas en las que uno no se despierta cansado: se despierta confundido. Un texto real sobre levantarse triste por alguien que no termina de estar, ni de irse.",
     "tags": [
-      "amor confuso",
       "buenos dias de verdad"
     ],
     "tagSlugs": {
-      "amor confuso": "amor-confuso",
       "buenos dias de verdad": "buenos-dias-de-verdad"
     },
     "date": "2026-04-08",
@@ -529,14 +507,12 @@
     "tags": [
       "seguir adelante",
       "fuerza interior",
-      "motivacion real",
-      "resistencia mental"
+      "motivacion real"
     ],
     "tagSlugs": {
       "seguir adelante": "seguir-adelante",
       "fuerza interior": "fuerza-interior",
-      "motivacion real": "motivacion-real",
-      "resistencia mental": "resistencia-mental"
+      "motivacion real": "motivacion-real"
     },
     "date": "2026-04-07",
     "slug": "arrancar-el-lunes-aunque-haya-lluvia-tormenta-y-gente-que-te-quiere-quebrar",
@@ -573,12 +549,10 @@
     "title": "Cómo la pasás tan bien con amigos que conociste hace poco",
     "description": "A veces hay gente nueva con la que todo fluye rápido. Un texto sobre esa química inesperada con amigos recientes que te hacen sentir parte enseguida.",
     "tags": [
-      "vinculos reales",
-      "espontaneidad"
+      "vinculos reales"
     ],
     "tagSlugs": {
-      "vinculos reales": "vinculos-reales",
-      "espontaneidad": "espontaneidad"
+      "vinculos reales": "vinculos-reales"
     },
     "date": "2026-04-07",
     "slug": "como-la-pasas-tan-bien-con-amigos-que-conociste-hace-poco",
@@ -614,12 +588,8 @@
   {
     "title": "Cuando estás en buena sintonía hasta las decisiones salen mejor",
     "description": "No siempre decidís mejor por pensar más, sino por estar más en eje. Un texto sobre sintonía interna y decisiones más limpias.",
-    "tags": [
-      "timing personal"
-    ],
-    "tagSlugs": {
-      "timing personal": "timing-personal"
-    },
+    "tags": [],
+    "tagSlugs": {},
     "date": "2026-04-07",
     "slug": "cuando-estas-en-buena-sintonia-hasta-las-decisiones-salen-mejor",
     "url": "/posts/cuando-estas-en-buena-sintonia-hasta-las-decisiones-salen-mejor.html",
@@ -655,12 +625,10 @@
     "title": "Cuando fluís natural y parece que el mundo se acomoda solo",
     "description": "Un texto sobre esos momentos donde no todo está perfecto, pero vos entrás tan en eje que hasta el mundo parece responder distinto.",
     "tags": [
-      "eje interno",
       "claridad",
       "vida real"
     ],
     "tagSlugs": {
-      "eje interno": "eje-interno",
       "claridad": "claridad",
       "vida real": "vida-real"
     },
@@ -699,12 +667,10 @@
     "title": "Cuando la Matrix te mete ruido y te corta la sintonía",
     "description": "Una reflexión sobre esos días donde todo parece venir contaminado por ruido externo, interferencia y energía ajena que te corta la naturalidad.",
     "tags": [
-      "claridad mental",
       "frecuencia personal",
       "vida real"
     ],
     "tagSlugs": {
-      "claridad mental": "claridad-mental",
       "frecuencia personal": "frecuencia-personal",
       "vida real": "vida-real"
     },
@@ -744,12 +710,10 @@
     "description": "Hay días en los que se corta algo adentro y hasta lo simple cuesta más. Un texto sobre perder la sintonía y sentir que nada termina de salir.",
     "tags": [
       "autoboicot",
-      "rutina mental",
       "dias dificiles"
     ],
     "tagSlugs": {
       "autoboicot": "autoboicot",
-      "rutina mental": "rutina-mental",
       "dias dificiles": "dias-dificiles"
     },
     "date": "2026-04-07",
@@ -826,18 +790,8 @@
   {
     "title": "Cuando sentís que la frecuencia se te cae por absorber demasiado a los demás",
     "description": "A veces no te apagás solo: te vas llenando de energía ajena. Un texto sobre absorber demasiado y perder tu propia señal.",
-    "tags": [
-      "influencia externa",
-      "comparacion",
-      "rutina de los demas",
-      "eje propio"
-    ],
-    "tagSlugs": {
-      "influencia externa": "influencia-externa",
-      "comparacion": "comparacion",
-      "rutina de los demas": "rutina-de-los-demas",
-      "eje propio": "eje-propio"
-    },
+    "tags": [],
+    "tagSlugs": {},
     "date": "2026-04-07",
     "slug": "cuando-sentis-que-la-frecuencia-se-te-cae-por-absorber-demasiado-a-los-demas",
     "url": "/posts/cuando-sentis-que-la-frecuencia-se-te-cae-por-absorber-demasiado-a-los-demas.html",
@@ -917,13 +871,11 @@
     "tags": [
       "amistad real",
       "noche",
-      "espontaneidad",
       "buenos dias reales"
     ],
     "tagSlugs": {
       "amistad real": "amistad-real",
       "noche": "noche",
-      "espontaneidad": "espontaneidad",
       "buenos dias reales": "buenos-dias-reales"
     },
     "date": "2026-04-07",
@@ -1048,14 +1000,10 @@
     "description": "Hay estados donde no necesitás demostrar nada: simplemente estás bien plantado. Un texto sobre esa frecuencia limpia que no hace ruido.",
     "tags": [
       "claridad",
-      "energia limpia",
-      "eje propio",
       "vida real"
     ],
     "tagSlugs": {
       "claridad": "claridad",
-      "energia limpia": "energia-limpia",
-      "eje propio": "eje-propio",
       "vida real": "vida-real"
     },
     "date": "2026-04-07",
@@ -1093,16 +1041,12 @@
     "title": "Cuando volvés a tu centro y entendés que no todo era mala suerte",
     "description": "A veces parecía que todo salía mal, pero en realidad estabas lejos de tu centro. Un texto sobre volver al eje y leer distinto lo vivido.",
     "tags": [
-      "eje interno",
       "claridad",
-      "reconstruccion",
       "frecuencia personal",
       "reconstruccion personal"
     ],
     "tagSlugs": {
-      "eje interno": "eje-interno",
       "claridad": "claridad",
-      "reconstruccion": "reconstruccion",
       "frecuencia personal": "frecuencia-personal",
       "reconstruccion personal": "reconstruccion-personal"
     },
@@ -1141,12 +1085,10 @@
     "title": "Cuando volvés con tus amigos de fiesta y sabés que al otro día hay que ir a laburar",
     "description": "Volvés de noche o de madrugada, la pasaste bien, pero ya asoma el peso del día siguiente. Un texto sobre ese cruce raro entre disfrute, cansancio y responsabilidad.",
     "tags": [
-      "amigos",
       "cansancio",
       "vida real"
     ],
     "tagSlugs": {
-      "amigos": "amigos",
       "cansancio": "cansancio",
       "vida real": "vida-real"
     },
@@ -1186,13 +1128,11 @@
     "description": "Hay lunes raros que parecen empezar tarde, con lluvia y clima vencido. Y aun así toca levantarse mentalmente y hacer algo. Un texto sobre moverse incluso cuando el día no acompaña.",
     "tags": [
       "motivacion real",
-      "seguir adelante",
-      "empezar tarde"
+      "seguir adelante"
     ],
     "tagSlugs": {
       "motivacion real": "motivacion-real",
-      "seguir adelante": "seguir-adelante",
-      "empezar tarde": "empezar-tarde"
+      "seguir adelante": "seguir-adelante"
     },
     "date": "2026-04-07",
     "slug": "empezar-el-lunes-con-lluvia-a-las-4-de-la-tarde-pero-igual-ponerte-a-laburar",
@@ -1275,14 +1215,12 @@
     "tags": [
       "prejuicios",
       "universidad",
-      "ambiente social",
-      "encasillado"
+      "ambiente social"
     ],
     "tagSlugs": {
       "prejuicios": "prejuicios",
       "universidad": "universidad",
-      "ambiente social": "ambiente-social",
-      "encasillado": "encasillado"
+      "ambiente social": "ambiente-social"
     },
     "date": "2026-04-06",
     "slug": "cuando-sentis-que-ya-te-encasillaron-antes-de-conocerte-de-verdad",
@@ -1319,15 +1257,11 @@
     "title": "En la universidad siempre te terminan poniendo la misma etiqueta",
     "description": "Hay lugares donde antes de conocerte ya te ubican en una casilla. Un texto real sobre etiquetas, universidad y seguir siendo uno mismo.",
     "tags": [
-      "encasillado",
       "prejuicios",
-      "vida universitaria",
       "identidad"
     ],
     "tagSlugs": {
-      "encasillado": "encasillado",
       "prejuicios": "prejuicios",
-      "vida universitaria": "vida-universitaria",
       "identidad": "identidad"
     },
     "date": "2026-04-06",
@@ -1365,12 +1299,10 @@
     "title": "Estudiar rodeado de gente pero sentirte igual aparte",
     "description": "Estar rodeado no siempre significa sentirte acompañado. Un texto sobre estudiar entre gente y seguir sintiéndote aparte.",
     "tags": [
-      "universidad",
-      "vida universitaria"
+      "universidad"
     ],
     "tagSlugs": {
-      "universidad": "universidad",
-      "vida universitaria": "vida-universitaria"
+      "universidad": "universidad"
     },
     "date": "2026-04-06",
     "slug": "estudiar-rodeado-de-gente-pero-sentirte-igual-aparte",
@@ -1452,15 +1384,11 @@
     "description": "Compararse con la rutina de los demás puede volverte más automático y más injusto con vos. Un texto sobre cortar ese chip y volver a tu propio ritmo.",
     "tags": [
       "chip rutinario",
-      "rutina mental",
-      "comparacion",
       "vida real",
       "autoboicot"
     ],
     "tagSlugs": {
       "chip rutinario": "chip-rutinario",
-      "rutina mental": "rutina-mental",
-      "comparacion": "comparacion",
       "vida real": "vida-real",
       "autoboicot": "autoboicot"
     },
@@ -1498,14 +1426,8 @@
   {
     "title": "Cómo elegir el momento justo para actuar ciertas cosas",
     "description": "No todo se hace en cualquier instante. A veces elegir bien el momento cambia más que la fuerza. Un texto sobre timing, cabeza y acción.",
-    "tags": [
-      "timing personal",
-      "claridad mental"
-    ],
-    "tagSlugs": {
-      "timing personal": "timing-personal",
-      "claridad mental": "claridad-mental"
-    },
+    "tags": [],
+    "tagSlugs": {},
     "date": "2026-04-03",
     "slug": "como-elegir-el-momento-justo-para-actuar-ciertas-cosas",
     "url": "/posts/como-elegir-el-momento-justo-para-actuar-ciertas-cosas.html",
@@ -1541,13 +1463,9 @@
     "title": "Cómo influye la rutina de los demás en la rutina de uno",
     "description": "La rutina ajena también se mete en la nuestra: horarios, ritmos, exigencias y comparaciones. Un texto sobre cómo eso nos afecta más de lo que parece.",
     "tags": [
-      "rutina de los demas",
-      "influencia externa",
       "chip rutinario"
     ],
     "tagSlugs": {
-      "rutina de los demas": "rutina-de-los-demas",
-      "influencia externa": "influencia-externa",
       "chip rutinario": "chip-rutinario"
     },
     "date": "2026-04-03",
@@ -1585,7 +1503,6 @@
     "title": "Cómo la plata puede motivar o desmotivar",
     "description": "La plata puede empujarte a moverte, pero también puede aplastarte cuando falta o cuando se vuelve obsesión. Un texto real sobre esa contradicción.",
     "tags": [
-      "dinero",
       "proyectos",
       "seguir adelante",
       "motivacion real",
@@ -1593,7 +1510,6 @@
       "reconstruccion personal"
     ],
     "tagSlugs": {
-      "dinero": "dinero",
       "proyectos": "proyectos",
       "seguir adelante": "seguir-adelante",
       "motivacion real": "motivacion-real",
@@ -1782,12 +1698,8 @@
   {
     "title": "Cómo sobrevivir día a día con tu mente para estar bien",
     "description": "A veces el trabajo más difícil del día no está afuera sino adentro. Un texto real sobre convivir con la propia mente sin romperse.",
-    "tags": [
-      "equilibrio interno"
-    ],
-    "tagSlugs": {
-      "equilibrio interno": "equilibrio-interno"
-    },
+    "tags": [],
+    "tagSlugs": {},
     "date": "2026-04-03",
     "slug": "como-sobrevivir-dia-a-dia-con-tu-mente-para-estar-bien",
     "url": "/posts/como-sobrevivir-dia-a-dia-con-tu-mente-para-estar-bien.html",
@@ -1824,12 +1736,10 @@
     "description": "Hay días en los que no falta trabajo ni cosas para hacer, pero igual aparece esa necesidad de hablar con una chica y sentir una conexión real.",
     "tags": [
       "vinculos reales",
-      "amor confuso",
       "presencia emocional"
     ],
     "tagSlugs": {
       "vinculos reales": "vinculos-reales",
-      "amor confuso": "amor-confuso",
       "presencia emocional": "presencia-emocional"
     },
     "date": "2026-04-03",
@@ -1868,17 +1778,11 @@
     "description": "Hay vínculos que parecen cercanos hasta que se termina la plata. Un texto sobre amistades interesadas y la claridad dolorosa que eso deja.",
     "tags": [
       "vinculos reales",
-      "decepcion",
-      "abandono",
-      "amistad",
       "tristeza",
       "seguir adelante"
     ],
     "tagSlugs": {
       "vinculos reales": "vinculos-reales",
-      "decepcion": "decepcion",
-      "abandono": "abandono",
-      "amistad": "amistad",
       "tristeza": "tristeza",
       "seguir adelante": "seguir-adelante"
     },
@@ -1965,22 +1869,18 @@
     "title": "De día mi cerebro está en hold",
     "description": "Hay días en los que la cabeza no arranca hasta tarde. Un texto real sobre bloqueo mental, lentitud y esa sensación de vivir en pausa mientras todo sigue.",
     "tags": [
-      "fatiga mental",
       "despertar sin ganas",
       "dias dificiles",
       "cansancio",
-      "esperar",
       "productividad humana",
       "pausa en la vida",
       "seguir adelante",
       "buenos dias de verdad"
     ],
     "tagSlugs": {
-      "fatiga mental": "fatiga-mental",
       "despertar sin ganas": "despertar-sin-ganas",
       "dias dificiles": "dias-dificiles",
       "cansancio": "cansancio",
-      "esperar": "esperar",
       "productividad humana": "productividad-humana",
       "pausa en la vida": "pausa-en-la-vida",
       "seguir adelante": "seguir-adelante",
@@ -2134,7 +2034,6 @@
       "chip rutinario",
       "proyectos",
       "motivacion real",
-      "sentido de la vida",
       "seguir adelante",
       "reconstruccion personal"
     ],
@@ -2142,7 +2041,6 @@
       "chip rutinario": "chip-rutinario",
       "proyectos": "proyectos",
       "motivacion real": "motivacion-real",
-      "sentido de la vida": "sentido-de-la-vida",
       "seguir adelante": "seguir-adelante",
       "reconstruccion personal": "reconstruccion-personal"
     },
@@ -2235,7 +2133,6 @@
     "title": "La tristeza cuando no hay plata, y aun así hay gente contenta",
     "description": "No tener plata duele, pero también existe gente que, aun en esa falta, encuentra motivos para estar bien. Un texto real sobre esa contradicción humana.",
     "tags": [
-      "dinero",
       "esperanza",
       "seguir adelante",
       "fuerza interior",
@@ -2244,7 +2141,6 @@
       "buenos dias de verdad"
     ],
     "tagSlugs": {
-      "dinero": "dinero",
       "esperanza": "esperanza",
       "seguir adelante": "seguir-adelante",
       "fuerza interior": "fuerza-interior",
@@ -2390,8 +2286,6 @@
     "description": "Un texto sobre esa mañana rara y hermosa en la que volvés a sentir ganas después de varios días apagado.",
     "tags": [
       "motivacion real",
-      "empezar el dia",
-      "mananas dificiles",
       "esperanza",
       "seguir adelante",
       "volver a empezar",
@@ -2399,8 +2293,6 @@
     ],
     "tagSlugs": {
       "motivacion real": "motivacion-real",
-      "empezar el dia": "empezar-el-dia",
-      "mananas dificiles": "mananas-dificiles",
       "esperanza": "esperanza",
       "seguir adelante": "seguir-adelante",
       "volver a empezar": "volver-a-empezar",
@@ -2442,8 +2334,6 @@
     "description": "Hay proyectos que hoy están apagados, pero un día tuvieron vida real. Un texto sobre volver a mirarlos antes de darlos por muertos.",
     "tags": [
       "proyectos",
-      "levantar proyectos",
-      "proyectos caidos",
       "volver a empezar",
       "motivacion real",
       "reconstruccion personal",
@@ -2452,8 +2342,6 @@
     ],
     "tagSlugs": {
       "proyectos": "proyectos",
-      "levantar proyectos": "levantar-proyectos",
-      "proyectos caidos": "proyectos-caidos",
       "volver a empezar": "volver-a-empezar",
       "motivacion real": "motivacion-real",
       "reconstruccion personal": "reconstruccion-personal",
@@ -2495,12 +2383,10 @@
     "title": "Por qué a veces querés dormir en varias etapas durante el día",
     "description": "Hay días en los que el sueño no viene de una sola vez, sino en partes. Un texto sobre cansancio, mente saturada y esa necesidad de dormir por etapas.",
     "tags": [
-      "cansancio mental",
-      "agotamiento"
+      "cansancio mental"
     ],
     "tagSlugs": {
-      "cansancio mental": "cansancio-mental",
-      "agotamiento": "agotamiento"
+      "cansancio mental": "cansancio-mental"
     },
     "date": "2026-04-03",
     "slug": "por-que-a-veces-queres-dormir-en-varias-etapas-durante-el-dia",
@@ -2729,7 +2615,6 @@
     "title": "Dias que vuelven a tener sentido | BuenosDia",
     "description": "Hay días en los que la vida parece recuperar su lógica, su peso, su razón de ser. Una reflexión sobre esos momentos en los que todo vuelve a encajar.",
     "tags": [
-      "sentido de la vida",
       "dias dificiles",
       "motivacion",
       "esperanza",
@@ -2737,7 +2622,6 @@
       "buenos dias de verdad"
     ],
     "tagSlugs": {
-      "sentido de la vida": "sentido-de-la-vida",
       "dias dificiles": "dias-dificiles",
       "motivacion": "motivacion",
       "esperanza": "esperanza",
@@ -2780,8 +2664,6 @@
     "description": "Hay días en los que dormís muchas horas, pero igual te levantás con el cuerpo pesado y la cabeza lenta. Una reflexión honesta sobre ese cansancio que no se va ni durmiendo.",
     "tags": [
       "cansancio",
-      "agotamiento",
-      "fatiga mental",
       "falta de energia",
       "buenos dias reales",
       "cansancio emocional",
@@ -2789,8 +2671,6 @@
     ],
     "tagSlugs": {
       "cansancio": "cansancio",
-      "agotamiento": "agotamiento",
-      "fatiga mental": "fatiga-mental",
       "falta de energia": "falta-de-energia",
       "buenos dias reales": "buenos-dias-reales",
       "cansancio emocional": "cansancio-emocional",
@@ -2831,28 +2711,18 @@
     "title": "Cuando los amigos se bajan del barco por las noches",
     "description": "Hay noches en las que duele más la ausencia de los que estaban cerca que cualquier problema en sí. Y aun así, la mañana llega, incluso cuando uno siente que tuvo que sostenerse solo.",
     "tags": [
-      "amigos",
       "soledad",
-      "abandono",
-      "decepcion",
       "noches dificiles",
       "seguir adelante",
       "vinculos reales",
-      "buenos dias",
-      "presencia emocional",
-      "amistad"
+      "presencia emocional"
     ],
     "tagSlugs": {
-      "amigos": "amigos",
       "soledad": "soledad",
-      "abandono": "abandono",
-      "decepcion": "decepcion",
       "noches dificiles": "noches-dificiles",
       "seguir adelante": "seguir-adelante",
       "vinculos reales": "vinculos-reales",
-      "buenos dias": "buenos-dias",
-      "presencia emocional": "presencia-emocional",
-      "amistad": "amistad"
+      "presencia emocional": "presencia-emocional"
     },
     "date": "2026-03-17",
     "slug": "cuando-los-amigos-se-bajan-del-barco-por-las-noches",
@@ -2935,14 +2805,12 @@
     "title": "Días en los que solo tengo que esperar porque no me queda otra",
     "description": "Hay días en los que no queda otra que esperar. Esta reflexión acompaña esos momentos de pausa forzada, incertidumbre y resistencia silenciosa sin caer en frases vacías.",
     "tags": [
-      "esperar",
       "dias dificiles",
       "reflexion de buenos dias",
       "pausa en la vida",
       "fuerza interior"
     ],
     "tagSlugs": {
-      "esperar": "esperar",
       "dias dificiles": "dias-dificiles",
       "reflexion de buenos dias": "reflexion-de-buenos-dias",
       "pausa en la vida": "pausa-en-la-vida",
@@ -2983,30 +2851,20 @@
     "title": "Levantar proyectos que algún día funcionaron y hoy no los tienes",
     "description": "Hay mañanas en las que no duele empezar de cero, sino mirar todo lo que una vez funcionó y ya no está. Aun así, volver a levantar algo roto también puede ser una forma de seguir vivo.",
     "tags": [
-      "levantar proyectos",
       "reconstruccion personal",
       "volver a empezar",
       "motivacion real",
-      "proyectos caidos",
-      "mananas dificiles",
-      "buenos dias",
       "seguir adelante",
       "proyectos",
-      "reconstruccion",
       "motivacion",
       "esperanza"
     ],
     "tagSlugs": {
-      "levantar proyectos": "levantar-proyectos",
       "reconstruccion personal": "reconstruccion-personal",
       "volver a empezar": "volver-a-empezar",
       "motivacion real": "motivacion-real",
-      "proyectos caidos": "proyectos-caidos",
-      "mananas dificiles": "mananas-dificiles",
-      "buenos dias": "buenos-dias",
       "seguir adelante": "seguir-adelante",
       "proyectos": "proyectos",
-      "reconstruccion": "reconstruccion",
       "motivacion": "motivacion",
       "esperanza": "esperanza"
     },
@@ -3045,7 +2903,6 @@
     "title": "Una mañana feliz pero sin nada y con mil problemas",
     "description": "Hay mañanas en las que no tenés nada resuelto, pero igual seguís. Una reflexión honesta sobre empezar el día con problemas, cansancio y una pequeña fuerza interior.",
     "tags": [
-      "empezar el dia",
       "reflexion de buenos dias",
       "seguir adelante",
       "esperanza",
@@ -3053,7 +2910,6 @@
       "fuerza interior"
     ],
     "tagSlugs": {
-      "empezar el dia": "empezar-el-dia",
       "reflexion de buenos dias": "reflexion-de-buenos-dias",
       "seguir adelante": "seguir-adelante",
       "esperanza": "esperanza",
