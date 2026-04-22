@@ -226,6 +226,8 @@ function patchPostHtml(html, currentPost, allPosts, featuredPosts, lineMap, tagM
     .bd-author-box .author-links{margin-top:12px;display:flex;flex-wrap:wrap;gap:14px}
     .bd-author-box .author-links a{color:var(--text,#111);font-weight:700;text-decoration:none}
     .bd-author-box .author-links a:hover{text-decoration:underline}
+    .bd-inline-link{margin:1rem 0 1.2rem;padding:14px 16px;border-left:3px solid var(--line,#e9e9e9);background:var(--soft,#f7f7f7);border-radius:12px;color:#3f4754}
+    .bd-inline-link a{font-weight:700;text-decoration:underline;text-underline-offset:3px}
     @media (min-width:760px){.auto-posts-grid{grid-template-columns:1fr 1fr}}
   </style>`);
   }
@@ -233,6 +235,7 @@ function patchPostHtml(html, currentPost, allPosts, featuredPosts, lineMap, tagM
   out = ensureHumanByline(out, currentPost);
   out = ensureAuthorBox(out, currentPost);
   out = ensureFeaturedQuote(out, currentPost);
+  out = ensureContextualInterlinks(out, currentPost, allPosts);
   out = enhancePostDiscover(out, currentPost);
   const strongTagsHtml = renderStrongTagsForPost(currentPost, tagMap, 6);
   const latestHtml = renderAutoSection('ultimas-publicaciones-auto', 'Últimas 3 publicaciones', 'Los textos más nuevos del sitio, en orden.', getLatestPosts(currentPost, allPosts, 3));
@@ -600,6 +603,92 @@ function ensureAuthorBox(html = '', post = {}) {
     return html.replace(/<\/article>/i, `</article>${authorBox}`);
   }
   return html;
+}
+
+
+function ensureContextualInterlinks(html = '', currentPost = {}, allPosts = []) {
+  let out = removeLegacyContextualInterlinks(html);
+  const articleMatch = out.match(/<article[^>]*>([\s\S]*?)<\/article>/i);
+  if (!articleMatch) return out;
+
+  const articleInner = articleMatch[1] || '';
+  const paragraphMatches = [...articleInner.matchAll(/<p\b[^>]*>[\s\S]*?<\/p>/gi)];
+  if (paragraphMatches.length < 3) return out;
+
+  const candidates = getInlineInterlinkCandidates(currentPost, allPosts, articleInner, 3);
+  if (!candidates.length) return out;
+
+  const insertionIndexes = pickInlineInsertionIndexes(paragraphMatches.length, candidates.length);
+  if (!insertionIndexes.length) return out;
+
+  const insertions = new Map();
+  candidates.slice(0, insertionIndexes.length).forEach((candidate, idx) => {
+    insertions.set(insertionIndexes[idx], buildInlineInterlinkParagraph(candidate, idx));
+  });
+
+  let paragraphIndex = -1;
+  const patchedInner = articleInner.replace(/(<p\b[^>]*>[\s\S]*?<\/p>)/gi, (full) => {
+    paragraphIndex += 1;
+    const addition = insertions.get(paragraphIndex);
+    return addition ? `${full}
+      ${addition}` : full;
+  });
+
+  return out.replace(articleMatch[0], articleMatch[0].replace(articleInner, patchedInner));
+}
+
+function removeLegacyContextualInterlinks(html = '') {
+  return html.replace(/\s*<p[^>]*class="[^"]*bd-inline-link[^"]*"[^>]*data-bd-inline-link="true"[^>]*>[\s\S]*?<\/p>\s*/gi, '\n');
+}
+
+function getInlineInterlinkCandidates(currentPost = {}, allPosts = [], articleInner = '', limit = 3) {
+  const articleText = strip(articleInner);
+  const alreadyLinkedUrls = new Set([...articleInner.matchAll(/href="([^"]+)"/gi)].map(match => match[1]));
+  const currentTags = new Set((currentPost.tags || []).map(normalizeTag));
+  const currentTokens = tokenize(`${currentPost.title || ''} ${currentPost.description || ''} ${currentPost.lead || ''} ${currentPost.body || ''}`);
+
+  return allPosts
+    .filter(post => post.slug !== currentPost.slug)
+    .filter(post => !alreadyLinkedUrls.has(post.url))
+    .map(post => {
+      const postTags = new Set((post.tags || []).map(normalizeTag));
+      const sharedTags = [...postTags].filter(tag => currentTags.has(tag));
+      const postTokens = tokenize(`${post.title || ''} ${post.description || ''} ${post.lead || ''} ${post.body || ''}`);
+      const sharedTokens = intersectionSize(currentTokens, postTokens);
+      const sameLineBonus = post.line && currentPost.line && post.line === currentPost.line ? 6 : 0;
+      const freshnessBonus = post.date && currentPost.date && post.date >= currentPost.date ? 1 : 0;
+      const titlePenalty = articleText.toLowerCase().includes(String(post.title || '').toLowerCase()) ? -2 : 0;
+      const score = (sharedTags.length * 10) + (sharedTokens * 2) + sameLineBonus + freshnessBonus + titlePenalty;
+      return { ...post, _score: score, _sharedTags: sharedTags };
+    })
+    .filter(post => post._score >= 6)
+    .sort((a, b) => b._score - a._score || b.date.localeCompare(a.date) || a.title.localeCompare(b.title, 'es'))
+    .slice(0, limit);
+}
+
+function pickInlineInsertionIndexes(paragraphCount = 0, candidateCount = 0) {
+  if (paragraphCount < 3 || candidateCount <= 0) return [];
+  const base = [1, Math.max(2, Math.floor(paragraphCount / 2)), Math.max(3, paragraphCount - 2)]
+    .filter(index => index < paragraphCount);
+  const unique = [];
+  for (const index of base) {
+    if (!unique.includes(index)) unique.push(index);
+  }
+  return unique.slice(0, candidateCount);
+}
+
+function buildInlineInterlinkParagraph(candidate = {}, idx = 0) {
+  const context = candidate._sharedTags && candidate._sharedTags.length
+    ? `, sobre todo por ${candidate._sharedTags.slice(0, 2).join(' y ')}`
+    : '';
+
+  const templates = [
+    `Si esta idea te resuena, también puede servirte <a href="${candidate.url}">${escapeHtml(candidate.title)}</a>${escapeHtml(context)}, donde la misma línea aparece desde otro ángulo.`,
+    `Hay otra punta de este mismo hilo en <a href="${candidate.url}">${escapeHtml(candidate.title)}</a>${escapeHtml(context)}, y suma bastante para empujar la lectura un poco más.`,
+    `Para abrir todavía más esta búsqueda, también entra bien <a href="${candidate.url}">${escapeHtml(candidate.title)}</a>${escapeHtml(context)}, porque toca una parte cercana sin repetir lo mismo.`
+  ];
+
+  return `<p class="bd-inline-link" data-bd-inline-link="true">${templates[idx % templates.length]}</p>`;
 }
 
 function writeInstitutionalPages() {
