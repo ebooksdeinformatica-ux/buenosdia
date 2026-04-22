@@ -8,8 +8,17 @@ const DATA_DIR = path.join(ROOT, 'data');
 const TAGS_DIR = path.join(ROOT, 'tags');
 const SITEMAP_FILE = path.join(ROOT, 'sitemap.xml');
 const POSTS_JSON = path.join(DATA_DIR, 'posts.json');
-const CONTACT_URL = 'https://instagram.com/https_404_3rr0r';
-const CONTACT_HANDLE = '@https_404_3rr0r';
+const CONTACT_PAGE_PATH = '/contacto.html';
+const CONTACT_URL = CONTACT_PAGE_PATH;
+const CONTACT_LABEL = 'Contacto';
+const CONTACT_HANDLE = 'Abrir contacto';
+const CONTACT_INSTAGRAM_URL = 'https://instagram.com/https_404_3rr0r';
+const CONTACT_INSTAGRAM_HANDLE = '@https_404_3rr0r';
+const AUTHOR_NAME = 'ASPF';
+const AUTHOR_ROLE = 'Editor y creador de buenosdia.com';
+const AUTHOR_PAGE_PATH = '/autor/aspf.html';
+const AUTHOR_SHORT_BIO = 'Escribe textos breves, humanos y reflexivos sobre mañanas reales, cansancio, esperanza, reconstrucción y vida cotidiana.';
+const PUBLISHER_NAME = 'Buenos Días';
 const ADSENSE_SNIPPET = `<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7756135514831267" crossorigin="anonymous"></script>`;
 const STATCOUNTER_SNIPPET = `<!-- Default Statcounter code for Buenos Dia https://www.buenosdia.com/ -->
 <script type="text/javascript">
@@ -40,7 +49,7 @@ const INSTITUTIONAL_FOOTER_LINKS = `
         <a href="/quienes-somos.html">Quiénes somos</a>
         <a href="/politica-editorial.html">Política editorial</a>`;
 
-const TAG_MIN_PAGE_COUNT = 2;
+const TAG_MIN_PAGE_COUNT = 3;
 const TAG_STRONG_HIGHLIGHT_COUNT = 3;
 const TAG_PAGE_INITIAL_VISIBLE = 24;
 const TAG_KEEP_WHITELIST = new Set([
@@ -150,6 +159,7 @@ const exportedPosts = posts.map(post => {
 fs.writeFileSync(POSTS_JSON, JSON.stringify(exportedPosts, null, 2), 'utf8');
 
 patchIndexHtml(tagMap);
+writeInstitutionalPages();
 renderTagPages(tagMap);
 write404Page(tagMap);
 writeSitemap(posts, tagMap);
@@ -169,18 +179,20 @@ function patchPostHtml(html, currentPost, allPosts, featuredPosts, lineMap, tagM
         <a href="/">Inicio</a>
         <a href="https://www.buenosdia.com/#publicaciones">Publicaciones</a>
         <a href="/tags/">Etiquetas</a>${INSTITUTIONAL_LINKS}
-        <a href="${CONTACT_URL}" target="_blank" rel="noopener noreferrer">Contacto</a>
+        <a href="${AUTHOR_PAGE_PATH}">Quién escribe</a>
+        <a href="${CONTACT_PAGE_PATH}">Contacto</a>
       </nav>`);
 
   out = out.replace(/<div class="footer-links">[\s\S]*?<\/div>/i, `<div class="footer-links">
         <a href="https://www.buenosdia.com/#publicaciones">Publicaciones</a>
         <a href="/tags/">Etiquetas</a>${INSTITUTIONAL_FOOTER_LINKS}
-        <a href="${CONTACT_URL}" target="_blank" rel="noopener noreferrer">${CONTACT_HANDLE}</a>
+        <a href="${AUTHOR_PAGE_PATH}">Quién escribe</a>
+        <a href="${CONTACT_PAGE_PATH}">Contacto</a>
       </div>`);
 
   out = out.replace(/<div class="contact-strip">[\s\S]*?<\/div>/gi, '');
   out = out.replace(/<footer([^>]*)>([\s\S]*?)<\/footer>/i, (full, attrs, inner) => `<footer${attrs}>${inner}</footer>
-  <div class="contact-strip">Contacto: <a href="${CONTACT_URL}" target="_blank" rel="noopener noreferrer">${CONTACT_HANDLE}</a></div>`);
+  <div class="contact-strip">Contacto editorial: <a href="${CONTACT_PAGE_PATH}">abrir página de contacto</a> · <a href="${AUTHOR_PAGE_PATH}">quién escribe</a></div>`);
 
   if (!/\.contact-strip\s*\{/i.test(out) || !/\.auto-posts-grid\s*\{/i.test(out)) {
     out = out.replace(/<\/style>/i, `
@@ -201,10 +213,19 @@ function patchPostHtml(html, currentPost, allPosts, featuredPosts, lineMap, tagM
     .bd-post-hero a,.bd-content-image a{display:block;text-decoration:none}
     .bd-post-hero img,.bd-content-image img,.article img,.article figure img,article img,article figure img{display:block;width:100%;max-width:100%;height:auto;border-radius:18px;border:1px solid var(--line,#e9e9e9);box-shadow:var(--shadow,0 10px 25px rgba(0,0,0,.05))}
     .article figure,article figure{margin:18px 0 26px}
+    .bd-author-box{margin:18px auto 24px;max-width:min(100%,860px)}
+    .bd-author-box .author-kicker{margin:0 0 8px;color:var(--muted,#666);font-size:.95rem;letter-spacing:.02em;text-transform:uppercase}
+    .bd-author-box h2{margin:0 0 10px;font-size:1.28rem;line-height:1.2}
+    .bd-author-box p{margin:0;color:#475467;line-height:1.7}
+    .bd-author-box .author-links{margin-top:12px;display:flex;flex-wrap:wrap;gap:14px}
+    .bd-author-box .author-links a{color:var(--text,#111);font-weight:700;text-decoration:none}
+    .bd-author-box .author-links a:hover{text-decoration:underline}
     @media (min-width:760px){.auto-posts-grid{grid-template-columns:1fr 1fr}}
   </style>`);
   }
 
+  out = ensureHumanByline(out, currentPost);
+  out = ensureAuthorBox(out, currentPost);
   out = ensureFeaturedQuote(out, currentPost);
   out = enhancePostDiscover(out, currentPost);
   const strongTagsHtml = renderStrongTagsForPost(currentPost, tagMap, 8);
@@ -489,6 +510,208 @@ function ensureContentImagesResponsive(html = '') {
   return out;
 }
 
+
+function writeInstitutionalPages() {
+  const authorDir = path.join(ROOT, 'autor');
+  fs.mkdirSync(authorDir, { recursive: true });
+
+  const contactHtml = injectStatcounter(injectAdsense(`<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contacto | buenosdia.com</title>
+  <meta name="description" content="Página de contacto editorial de buenosdia.com, con información básica sobre quién escribe y cómo contactar el proyecto.">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <link rel="canonical" href="${SITE_URL}${CONTACT_PAGE_PATH}">
+  <style>${sharedTagPageCss()}</style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <a class="brand" href="/">buenosdia.com</a>
+      <nav>
+        <a href="/">Inicio</a>
+        <a href="/#publicaciones">Publicaciones</a>
+        <a href="/tags/">Etiquetas</a>
+        <a href="/quienes-somos.html">Quiénes somos</a>
+        <a href="/politica-editorial.html">Política editorial</a>
+        <a href="${AUTHOR_PAGE_PATH}">Quién escribe</a>
+        <a href="${CONTACT_PAGE_PATH}" aria-current="page">Contacto</a>
+      </nav>
+    </header>
+    <main>
+      <section class="hero">
+        <p class="eyebrow">Contacto editorial</p>
+        <h1>Cómo contactar buenosdia.com</h1>
+        <p>Este sitio publica textos breves, humanos y reflexivos. La forma de contacto visible del proyecto está reunida en esta página para que el lector y Google encuentren una referencia clara, simple y real.</p>
+      </section>
+      <section class="card">
+        <h2 class="block-title">Canales visibles</h2>
+        <p class="block-sub">Hoy el canal público principal es Instagram. También podés revisar quién escribe y la política editorial del sitio.</p>
+        <div class="tag-cloud">
+          <a class="tag" href="${AUTHOR_PAGE_PATH}">Quién escribe</a>
+          <a class="tag" href="/politica-editorial.html">Política editorial</a>
+          <a class="tag" href="${CONTACT_INSTAGRAM_URL}" target="_blank" rel="noopener noreferrer">Instagram ${CONTACT_INSTAGRAM_HANDLE}</a>
+        </div>
+      </section>
+      <section class="card">
+        <h2 class="block-title">Nota editorial</h2>
+        <p class="block-sub">Buenosdia.com prioriza textos originales y navegación clara. Esta página existe para que la identidad del proyecto no quede escondida detrás de las publicaciones.</p>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <p><a href="${CONTACT_INSTAGRAM_URL}" target="_blank" rel="noopener noreferrer">${CONTACT_INSTAGRAM_HANDLE}</a> · <a href="${AUTHOR_PAGE_PATH}">Quién escribe</a></p>
+    </footer>
+  </div>
+</body>
+</html>`));
+  fs.writeFileSync(path.join(ROOT, 'contacto.html'), contactHtml, 'utf8');
+
+  const authorHtml = injectStatcounter(injectAdsense(`<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>${AUTHOR_NAME} | Quién escribe | buenosdia.com</title>
+  <meta name="description" content="Perfil editorial de ${AUTHOR_NAME}, responsable de la línea de textos y publicaciones de buenosdia.com.">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <link rel="canonical" href="${SITE_URL}${AUTHOR_PAGE_PATH}">
+  <style>${sharedTagPageCss()}</style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <a class="brand" href="/">buenosdia.com</a>
+      <nav>
+        <a href="/">Inicio</a>
+        <a href="/#publicaciones">Publicaciones</a>
+        <a href="/tags/">Etiquetas</a>
+        <a href="/quienes-somos.html">Quiénes somos</a>
+        <a href="/politica-editorial.html">Política editorial</a>
+        <a href="${AUTHOR_PAGE_PATH}" aria-current="page">Quién escribe</a>
+        <a href="${CONTACT_PAGE_PATH}">Contacto</a>
+      </nav>
+    </header>
+    <main>
+      <section class="hero">
+        <p class="eyebrow">Autor</p>
+        <h1>${AUTHOR_NAME}</h1>
+        <p>${AUTHOR_ROLE}. ${AUTHOR_SHORT_BIO}</p>
+      </section>
+      <section class="card">
+        <h2 class="block-title">Perfil editorial</h2>
+        <p class="block-sub">Detrás de buenosdia.com hay una búsqueda de textos cercanos, legibles y humanos, pensados para acompañar mañanas reales sin prometer más de lo que una publicación puede dar.</p>
+      </section>
+      <section class="card">
+        <h2 class="block-title">Páginas relacionadas</h2>
+        <div class="tag-cloud">
+          <a class="tag" href="/quienes-somos.html">Quiénes somos</a>
+          <a class="tag" href="/politica-editorial.html">Política editorial</a>
+          <a class="tag" href="${CONTACT_PAGE_PATH}">Contacto</a>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <p><a href="${CONTACT_PAGE_PATH}">Contacto</a> · <a href="/politica-editorial.html">Política editorial</a></p>
+    </footer>
+  </div>
+</body>
+</html>`));
+  fs.writeFileSync(path.join(authorDir, 'aspf.html'), authorHtml, 'utf8');
+
+  ensureInstitutionalFile('quienes-somos.html', 'Quiénes somos | buenosdia.com', 'Página institucional de buenosdia.com con una presentación breve del proyecto editorial.', `
+      <section class="hero">
+        <p class="eyebrow">Quiénes somos</p>
+        <h1>Un proyecto editorial simple y humano</h1>
+        <p>Buenosdia.com reúne publicaciones breves sobre mañanas reales, cansancio, claridad, esperanza y reconstrucción. Busca una lectura directa, legible y útil para personas reales.</p>
+      </section>
+      <section class="card">
+        <h2 class="block-title">Qué hace este sitio</h2>
+        <p class="block-sub">Publica textos originales, organiza etiquetas temáticas y prioriza una navegación simple. No pretende hacerse pasar por un medio de noticias duras: funciona como un espacio editorial de reflexión cotidiana.</p>
+      </section>`);
+
+  ensureInstitutionalFile('politica-editorial.html', 'Política editorial | buenosdia.com', 'Criterios editoriales básicos de buenosdia.com: originalidad, claridad, mantenimiento y señales visibles de autoría.', `
+      <section class="hero">
+        <p class="eyebrow">Política editorial</p>
+        <h1>Cómo se publica en buenosdia.com</h1>
+        <p>El sitio prioriza textos originales, claridad de lectura, etiquetas coherentes y una identidad visible del proyecto. Se evita publicar páginas vacías, contenido engañoso o piezas hechas solo para inflar tráfico.</p>
+      </section>
+      <section class="card">
+        <h2 class="block-title">Criterios básicos</h2>
+        <p class="block-sub">Cada publicación debe aportar una idea, una mirada o una compañía real al lector. Cuando una página deja de tener sentido o queda demasiado débil, conviene revisarla, fusionarla o retirarla.</p>
+      </section>`);
+}
+
+function ensureInstitutionalFile(filename, title, description, mainContent) {
+  const filePath = path.join(ROOT, filename);
+  if (fs.existsSync(filePath)) return;
+  const html = injectStatcounter(injectAdsense(`<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>${title}</title>
+  <meta name="description" content="${description}">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <link rel="canonical" href="${SITE_URL}/${filename}">
+  <style>${sharedTagPageCss()}</style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <a class="brand" href="/">buenosdia.com</a>
+      <nav>
+        <a href="/">Inicio</a>
+        <a href="/#publicaciones">Publicaciones</a>
+        <a href="/tags/">Etiquetas</a>
+        <a href="/quienes-somos.html">Quiénes somos</a>
+        <a href="/politica-editorial.html">Política editorial</a>
+        <a href="${AUTHOR_PAGE_PATH}">Quién escribe</a>
+        <a href="${CONTACT_PAGE_PATH}">Contacto</a>
+      </nav>
+    </header>
+    <main>${mainContent}
+    </main>
+    <footer class="site-footer">
+      <p><a href="${AUTHOR_PAGE_PATH}">Quién escribe</a> · <a href="${CONTACT_PAGE_PATH}">Contacto</a></p>
+    </footer>
+  </div>
+</body>
+</html>`));
+  fs.writeFileSync(filePath, html, 'utf8');
+}
+
+function ensureHumanByline(html = '', post = {}) {
+  let out = html;
+  out = out.replace(/Publicado por\s*buenosdia\.com/gi, `Por ${AUTHOR_NAME}`);
+  return out;
+}
+
+function ensureAuthorBox(html = '', post = {}) {
+  if (/data-bd-author-box="true"/i.test(html)) return html;
+  const authorBox = `
+      <section class="card bd-author-box" data-bd-author-box="true">
+        <p class="author-kicker">Quién escribe</p>
+        <h2>${AUTHOR_NAME}</h2>
+        <p>${AUTHOR_ROLE}. ${AUTHOR_SHORT_BIO}</p>
+        <div class="author-links">
+          <a href="${AUTHOR_PAGE_PATH}">Ver perfil</a>
+          <a href="${CONTACT_PAGE_PATH}">Contacto</a>
+          <a href="/politica-editorial.html">Política editorial</a>
+        </div>
+      </section>`;
+
+  if (/<article/i.test(html)) {
+    return html.replace(/(<article[^>]*>)/i, `${authorBox}
+$1`);
+  }
+  if (/<main[^>]*>/i.test(html)) {
+    return html.replace(/(<main[^>]*>)/i, `$1${authorBox}`);
+  }
+  return html;
+}
+
 function renderTagPages(tagMap) {
   const tags = Object.values(tagMap).sort((a, b) => b.count - a.count || a.name.localeCompare(b.name, 'es'));
   const strongTags = tags.filter(tag => tag.count >= TAG_STRONG_HIGHLIGHT_COUNT);
@@ -516,7 +739,8 @@ function renderTagPages(tagMap) {
         <a href="/tags/" aria-current="page">Etiquetas</a>
         <a href="/quienes-somos.html">Quiénes somos</a>
         <a href="/politica-editorial.html">Política editorial</a>
-        <a href="${CONTACT_URL}" target="_blank" rel="noopener noreferrer">Contacto</a>
+        <a href="${AUTHOR_PAGE_PATH}">Quién escribe</a>
+        <a href="${CONTACT_PAGE_PATH}">Contacto</a>
       </nav>
     </header>
     <main>
@@ -551,7 +775,7 @@ function renderTagPages(tagMap) {
       </section>
     </main>
     <footer class="site-footer">
-      <p>Contacto: <a href="${CONTACT_URL}" target="_blank" rel="noopener noreferrer">${CONTACT_HANDLE}</a></p>
+      <p><a href="${CONTACT_PAGE_PATH}">Contacto</a> · <a href="${AUTHOR_PAGE_PATH}">Quién escribe</a></p>
     </footer>
   </div>
   <script>
@@ -610,7 +834,8 @@ function renderTagPages(tagMap) {
         <a href="/tags/">Etiquetas</a>
         <a href="/quienes-somos.html">Quiénes somos</a>
         <a href="/politica-editorial.html">Política editorial</a>
-        <a href="${CONTACT_URL}" target="_blank" rel="noopener noreferrer">Contacto</a>
+        <a href="${AUTHOR_PAGE_PATH}">Quién escribe</a>
+        <a href="${CONTACT_PAGE_PATH}">Contacto</a>
       </nav>
     </header>
     <main>
@@ -639,7 +864,7 @@ function renderTagPages(tagMap) {
       <div id="tagPostsSentinel" aria-hidden="true"></div>
     </main>
     <footer class="site-footer">
-      <p>Contacto: <a href="${CONTACT_URL}" target="_blank" rel="noopener noreferrer">${CONTACT_HANDLE}</a></p>
+      <p><a href="${CONTACT_PAGE_PATH}">Contacto</a> · <a href="${AUTHOR_PAGE_PATH}">Quién escribe</a></p>
     </footer>
   </div>
   <script>
@@ -727,13 +952,16 @@ function patchIndexHtml(tagMap) {
         <a href="/tags/">Etiquetas</a>
         <a href="/quienes-somos.html">Quiénes somos</a>
         <a href="/politica-editorial.html">Política editorial</a>
-        <a href="${CONTACT_URL}" target="_blank" rel="noopener noreferrer">Contacto</a>
+        <a href="${AUTHOR_PAGE_PATH}">Quién escribe</a>
+        <a href="${CONTACT_PAGE_PATH}">Contacto</a>
       </nav>`);
+  html = html.replace(/<div class="contact-strip">[\s\S]*?<\/div>/i, `<div class="contact-strip">Contacto editorial: <a href="${CONTACT_PAGE_PATH}">abrir página de contacto</a> · <a href="${AUTHOR_PAGE_PATH}">quién escribe</a></div>`);
   html = html.replace(/<footer>[\s\S]*?<\/footer>/i, `<footer>
       © 2026 buenosdia.com — mañanas reales, palabras que acompañan. ·
       <a href="/quienes-somos.html">Quiénes somos</a> ·
       <a href="/politica-editorial.html">Política editorial</a> ·
-      <a href="${CONTACT_URL}" target="_blank" rel="noopener noreferrer">Contacto</a>
+      <a href="${AUTHOR_PAGE_PATH}">Quién escribe</a> ·
+      <a href="${CONTACT_PAGE_PATH}">Contacto</a>
     </footer>`);
   html = injectAdsense(html);
   html = injectStatcounter(html);
@@ -769,7 +997,8 @@ function write404Page(tagMap) {
         <a href="/tags/">Etiquetas</a>
         <a href="/quienes-somos.html">Quiénes somos</a>
         <a href="/politica-editorial.html">Política editorial</a>
-        <a href="${CONTACT_URL}" target="_blank" rel="noopener noreferrer">Contacto</a>
+        <a href="${AUTHOR_PAGE_PATH}">Quién escribe</a>
+        <a href="${CONTACT_PAGE_PATH}">Contacto</a>
       </nav>
     </header>
     <main>
@@ -783,7 +1012,7 @@ function write404Page(tagMap) {
       </section>
     </main>
     <footer class="site-footer">
-      <p>Contacto: <a href="${CONTACT_URL}" target="_blank" rel="noopener noreferrer">${CONTACT_HANDLE}</a></p>
+      <p><a href="${CONTACT_PAGE_PATH}">Contacto</a> · <a href="${AUTHOR_PAGE_PATH}">Quién escribe</a></p>
     </footer>
   </div>
   <script>
@@ -823,10 +1052,35 @@ function write404Page(tagMap) {
 }
 
 function writeSitemap(posts, tagMap) {
-  const tagUrls = Object.values(tagMap).map(tag => `  <url>\n    <loc>${SITE_URL}/tags/${tag.slug}.html</loc>\n    <lastmod>${today()}</lastmod>\n  </url>`);
-  const postUrls = posts.map(post => `  <url>\n    <loc>${SITE_URL}${post.url}</loc>\n    <lastmod>${post.date}</lastmod>\n  </url>`);
+  const tagUrls = Object.values(tagMap).map(tag => `  <url>
+    <loc>${SITE_URL}/tags/${tag.slug}.html</loc>
+    <lastmod>${today()}</lastmod>
+  </url>`);
+  const postUrls = posts.map(post => `  <url>
+    <loc>${SITE_URL}${post.url}</loc>
+    <lastmod>${post.date}</lastmod>
+  </url>`);
+  const institutionalUrls = [
+    `${SITE_URL}${CONTACT_PAGE_PATH}`,
+    `${SITE_URL}${AUTHOR_PAGE_PATH}`,
+    `${SITE_URL}/quienes-somos.html`,
+    `${SITE_URL}/politica-editorial.html`
+  ].map(url => `  <url>
+    <loc>${url}</loc>
+    <lastmod>${today()}</lastmod>
+  </url>`);
 
-  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n  <url>\n    <loc>${SITE_URL}/</loc>\n    <lastmod>${today()}</lastmod>\n  </url>\n  <url>\n    <loc>${SITE_URL}/tags/</loc>\n    <lastmod>${today()}</lastmod>\n  </url>\n${postUrls.join('\n')}\n${tagUrls.join('\n')}\n</urlset>\n`;
+  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>${SITE_URL}/</loc>
+    <lastmod>${today()}</lastmod>
+  </url>
+  <url>
+    <loc>${SITE_URL}/tags/</loc>
+    <lastmod>${today()}</lastmod>
+  </url>
+${institutionalUrls.join('\n')}\n${postUrls.join('\n')}\n${tagUrls.join('\n')}\n</urlset>\n`;
   fs.writeFileSync(SITEMAP_FILE, sitemap, 'utf8');
 }
 
@@ -1137,22 +1391,26 @@ function ensureFeaturedImageBlock(html = '', post = {}, imageUrl = '') {
 function ensureArticleStructuredData(html = '', post = {}, imageUrl = '') {
   const structuredData = JSON.stringify({
     '@context': 'https://schema.org',
-    '@type': 'Article',
+    '@type': 'BlogPosting',
     headline: post.title || 'buenosdia.com',
     description: shortDescription(post.description || post.lead || post.body || '', 180),
     datePublished: post.date || today(),
     dateModified: post.date || today(),
     mainEntityOfPage: `${SITE_URL}${post.url || ''}`,
-    author: { '@type': 'Organization', name: 'buenosdia.com', url: SITE_URL },
-    publisher: { '@type': 'Organization', name: 'buenosdia.com', url: SITE_URL },
+    author: { '@type': 'Person', name: AUTHOR_NAME, url: `${SITE_URL}${AUTHOR_PAGE_PATH}` },
+    publisher: { '@type': 'Organization', name: PUBLISHER_NAME, url: SITE_URL },
     image: imageUrl ? [`${SITE_URL}${imageUrl}`] : undefined
   }, null, 2);
 
-  const script = `\n  <script type="application/ld+json" data-bd-schema="article">\n${structuredData}\n  </script>`;
+  const script = `
+  <script type="application/ld+json" data-bd-schema="article">
+${structuredData}
+  </script>`;
   if (/data-bd-schema="article"/i.test(html)) {
     return html.replace(/\s*<script type="application\/ld\+json" data-bd-schema="article">[\s\S]*?<\/script>/i, script);
   }
-  return html.replace(/<\/head>/i, `${script}\n</head>`);
+  return html.replace(/<\/head>/i, `${script}
+</head>`);
 }
 
 
