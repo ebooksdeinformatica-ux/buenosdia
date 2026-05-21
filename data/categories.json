@@ -1,0 +1,8 @@
+[
+  {"name":"Tecnología","slug":"tecnologia","icon":"IA","description":"Inteligencia artificial, apps, internet, herramientas, plataformas y oportunidades digitales para la vida real."},
+  {"name":"Pan y Circo","slug":"pan-y-circo","icon":"TV","description":"Televisión, películas, series, realities y entretenimiento masivo mirado sin anestesia."},
+  {"name":"Alimentación","slug":"alimentacion","icon":"EN","description":"Comida real, ultraprocesados, energía, hábitos, cuerpo y claridad mental."},
+  {"name":"Deportes","slug":"deportes","icon":"GY","description":"Disciplina, gimnasio, fútbol, combate, cuerpo, competencia y mentalidad."},
+  {"name":"Matrix","slug":"matrix","icon":"MX","description":"Sistema, algoritmos, consumo, pantalla, deuda, manipulación cultural y piloto automático."},
+  {"name":"Saliendo de la Matrix","slug":"saliendo-de-la-matrix","icon":"EX","description":"Hábitos, proyectos, IA, foco, reconstrucción personal y libertad práctica."}
+]
