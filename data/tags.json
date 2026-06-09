@@ -1,0 +1,402 @@
+[
+  {
+    "tag": "tecnologia",
+    "count": 50,
+    "slug": "tecnologia"
+  },
+  {
+    "tag": "pan-y-circo",
+    "count": 50,
+    "slug": "pan-y-circo"
+  },
+  {
+    "tag": "alimentacion",
+    "count": 50,
+    "slug": "alimentacion"
+  },
+  {
+    "tag": "deportes",
+    "count": 50,
+    "slug": "deportes"
+  },
+  {
+    "tag": "matrix",
+    "count": 50,
+    "slug": "matrix"
+  },
+  {
+    "tag": "saliendo-de-la-matrix",
+    "count": 50,
+    "slug": "saliendo-de-la-matrix"
+  },
+  {
+    "tag": "cuando",
+    "count": 27,
+    "slug": "cuando"
+  },
+  {
+    "tag": "volver",
+    "count": 15,
+    "slug": "volver"
+  },
+  {
+    "tag": "ordenar",
+    "count": 12,
+    "slug": "ordenar"
+  },
+  {
+    "tag": "rutina",
+    "count": 12,
+    "slug": "rutina"
+  },
+  {
+    "tag": "digital",
+    "count": 11,
+    "slug": "digital"
+  },
+  {
+    "tag": "cuerpo",
+    "count": 10,
+    "slug": "cuerpo"
+  },
+  {
+    "tag": "recuperar",
+    "count": 9,
+    "slug": "recuperar"
+  },
+  {
+    "tag": "cansancio",
+    "count": 9,
+    "slug": "cansancio"
+  },
+  {
+    "tag": "pantalla",
+    "count": 8,
+    "slug": "pantalla"
+  },
+  {
+    "tag": "energía",
+    "count": 8,
+    "slug": "energia"
+  },
+  {
+    "tag": "internet",
+    "count": 7,
+    "slug": "internet"
+  },
+  {
+    "tag": "mental",
+    "count": 7,
+    "slug": "mental"
+  },
+  {
+    "tag": "comida",
+    "count": 7,
+    "slug": "comida"
+  },
+  {
+    "tag": "proyectos",
+    "count": 6,
+    "slug": "proyectos"
+  },
+  {
+    "tag": "aunque",
+    "count": 6,
+    "slug": "aunque"
+  },
+  {
+    "tag": "sistema",
+    "count": 6,
+    "slug": "sistema"
+  },
+  {
+    "tag": "trabajar",
+    "count": 6,
+    "slug": "trabajar"
+  },
+  {
+    "tag": "consumo",
+    "count": 6,
+    "slug": "consumo"
+  },
+  {
+    "tag": "después",
+    "count": 6,
+    "slug": "despues"
+  },
+  {
+    "tag": "ansiedad",
+    "count": 6,
+    "slug": "ansiedad"
+  },
+  {
+    "tag": "empezar",
+    "count": 6,
+    "slug": "empezar"
+  },
+  {
+    "tag": "disciplina",
+    "count": 6,
+    "slug": "disciplina"
+  },
+  {
+    "tag": "trabajo",
+    "count": 5,
+    "slug": "trabajo"
+  },
+  {
+    "tag": "aprender",
+    "count": 5,
+    "slug": "aprender"
+  },
+  {
+    "tag": "digitales",
+    "count": 5,
+    "slug": "digitales"
+  },
+  {
+    "tag": "contenido",
+    "count": 5,
+    "slug": "contenido"
+  },
+  {
+    "tag": "convertir",
+    "count": 5,
+    "slug": "convertir"
+  },
+  {
+    "tag": "proyecto",
+    "count": 5,
+    "slug": "proyecto"
+  },
+  {
+    "tag": "personal",
+    "count": 5,
+    "slug": "personal"
+  },
+  {
+    "tag": "dinero",
+    "count": 5,
+    "slug": "dinero"
+  },
+  {
+    "tag": "entretenimiento",
+    "count": 5,
+    "slug": "entretenimiento"
+  },
+  {
+    "tag": "pensar",
+    "count": 5,
+    "slug": "pensar"
+  },
+  {
+    "tag": "silencio",
+    "count": 5,
+    "slug": "silencio"
+  },
+  {
+    "tag": "cabeza",
+    "count": 5,
+    "slug": "cabeza"
+  },
+  {
+    "tag": "propio",
+    "count": 5,
+    "slug": "propio"
+  },
+  {
+    "tag": "elegir",
+    "count": 5,
+    "slug": "elegir"
+  },
+  {
+    "tag": "Matrix",
+    "count": 5,
+    "slug": "matrix"
+  },
+  {
+    "tag": "entrenar",
+    "count": 5,
+    "slug": "entrenar"
+  },
+  {
+    "tag": "pequeñas",
+    "count": 5,
+    "slug": "pequenas"
+  },
+  {
+    "tag": "perder",
+    "count": 4,
+    "slug": "perder"
+  },
+  {
+    "tag": "simples",
+    "count": 4,
+    "slug": "simples"
+  },
+  {
+    "tag": "vender",
+    "count": 4,
+    "slug": "vender"
+  },
+  {
+    "tag": "online",
+    "count": 4,
+    "slug": "online"
+  },
+  {
+    "tag": "volverse",
+    "count": 4,
+    "slug": "volverse"
+  },
+  {
+    "tag": "series",
+    "count": 4,
+    "slug": "series"
+  },
+  {
+    "tag": "atención",
+    "count": 4,
+    "slug": "atencion"
+  },
+  {
+    "tag": "cultura",
+    "count": 4,
+    "slug": "cultura"
+  },
+  {
+    "tag": "siempre",
+    "count": 4,
+    "slug": "siempre"
+  },
+  {
+    "tag": "automático",
+    "count": 4,
+    "slug": "automatico"
+  },
+  {
+    "tag": "caminar",
+    "count": 4,
+    "slug": "caminar"
+  },
+  {
+    "tag": "movimiento",
+    "count": 4,
+    "slug": "movimiento"
+  },
+  {
+    "tag": "entrenamiento",
+    "count": 4,
+    "slug": "entrenamiento"
+  },
+  {
+    "tag": "también",
+    "count": 4,
+    "slug": "tambien"
+  },
+  {
+    "tag": "computadora",
+    "count": 3,
+    "slug": "computadora"
+  },
+  {
+    "tag": "complicarte",
+    "count": 3,
+    "slug": "complicarte"
+  },
+  {
+    "tag": "semana",
+    "count": 3,
+    "slug": "semana"
+  },
+  {
+    "tag": "práctica",
+    "count": 3,
+    "slug": "practica"
+  },
+  {
+    "tag": "vuelve",
+    "count": 3,
+    "slug": "vuelve"
+  },
+  {
+    "tag": "invisible",
+    "count": 3,
+    "slug": "invisible"
+  },
+  {
+    "tag": "algoritmo",
+    "count": 3,
+    "slug": "algoritmo"
+  },
+  {
+    "tag": "comparación",
+    "count": 3,
+    "slug": "comparacion"
+  },
+  {
+    "tag": "sentir",
+    "count": 3,
+    "slug": "sentir"
+  },
+  {
+    "tag": "consumir",
+    "count": 3,
+    "slug": "consumir"
+  },
+  {
+    "tag": "estado",
+    "count": 3,
+    "slug": "estado"
+  },
+  {
+    "tag": "prestada",
+    "count": 3,
+    "slug": "prestada"
+  },
+  {
+    "tag": "alimentación",
+    "count": 3,
+    "slug": "alimentacion"
+  },
+  {
+    "tag": "simple",
+    "count": 3,
+    "slug": "simple"
+  },
+  {
+    "tag": "hambre",
+    "count": 3,
+    "slug": "hambre"
+  },
+  {
+    "tag": "piloto",
+    "count": 3,
+    "slug": "piloto"
+  },
+  {
+    "tag": "motivación",
+    "count": 3,
+    "slug": "motivacion"
+  },
+  {
+    "tag": "físico",
+    "count": 3,
+    "slug": "fisico"
+  },
+  {
+    "tag": "mínima",
+    "count": 3,
+    "slug": "minima"
+  },
+  {
+    "tag": "reconstruirte",
+    "count": 3,
+    "slug": "reconstruirte"
+  },
+  {
+    "tag": "deporte",
+    "count": 3,
+    "slug": "deporte"
+  }
+]
