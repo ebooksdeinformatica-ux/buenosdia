@@ -1,1 +1,22 @@
-[]
+[
+  {
+    "title": "Cómo empezar de cero cuando sentís que ya perdiste demasiado",
+    "description": "Un texto real sobre volver a levantarte cuando la vida te dejó cansado, sin promesas falsas, sin motivación barata y sin esconder el dolor.",
+    "category": "Saliendo de la Matrix",
+    "url": "/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": ["empezar de cero", "reconstrucción personal", "motivación sin humo", "vida real"],
+    "readingTime": "5 min"
+  },
+  {
+    "title": "El entretenimiento que te duerme cuando más necesitás despertar",
+    "description": "Una mirada directa sobre ese entretenimiento que parece descanso, pero muchas veces termina robando foco, energía y ganas de construir algo propio.",
+    "category": "Pan y Circo",
+    "url": "/posts/entretenimiento-que-te-duerme-cuando-necesitas-despertar.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": ["pan y circo", "pantallas", "consumo digital", "matrix"],
+    "readingTime": "4 min"
+  }
+]
