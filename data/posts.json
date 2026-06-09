@@ -1,72 +1,2221 @@
 [
   {
-    "title": "La inteligencia artificial no te sirve si no sabés qué pedirle",
-    "description": "La IA puede acelerar ideas, publicaciones y proyectos, pero primero necesitás dirección, criterio y una pregunta clara.",
+    "title": "Usar una computadora vieja para crear valor digital",
+    "description": "Un texto de buenosdia.com sobre usar una computadora vieja para crear valor digital, conectado con tecnología real, internet, IA, herramientas digitales y proyectos online, sin humo y con enfoque práctico para la vida real.",
     "category": "Tecnología",
-    "url": "/posts/inteligencia-artificial-no-te-sirve-si-no-sabes-que-pedirle.html",
+    "url": "/posts/usar-una-computadora-vieja-para-crear-valor-digital.html",
     "date": "2026-06-09",
     "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
-    "tags": ["inteligencia artificial", "tecnología", "prompts", "proyectos online"],
-    "readingTime": "5 min"
-  },
-  {
-    "title": "Entrenar cuando no tenés ganas: la batalla invisible",
-    "description": "Un texto sobre disciplina, cuerpo y esos días donde entrenar no sale de la motivación sino de no querer seguir igual.",
-    "category": "Deportes",
-    "url": "/posts/entrenar-cuando-no-tenes-ganas.html",
-    "date": "2026-06-09",
-    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
-    "tags": ["deportes", "disciplina", "entrenar sin ganas", "hábitos"],
-    "readingTime": "5 min"
-  },
-  {
-    "title": "Comer mal también te programa la cabeza",
-    "description": "Un texto directo sobre alimentación, energía mental y hábitos cotidianos que parecen chicos pero terminan manejando el día.",
-    "category": "Alimentación",
-    "url": "/posts/comer-mal-tambien-te-programa-la-cabeza.html",
-    "date": "2026-06-09",
-    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
-    "tags": ["alimentación", "energía mental", "hábitos", "matrix cotidiana"],
-    "readingTime": "5 min"
-  },
-  {
-    "title": "La rutina normal que te va apagando sin hacer ruido",
-    "description": "Un texto sobre la rutina, el piloto automático y esos hábitos cotidianos que parecen normales hasta que te dejan sin energía.",
-    "category": "Matrix",
-    "url": "/posts/rutina-normal-que-te-va-apagando.html",
-    "date": "2026-06-09",
-    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
-    "tags": ["matrix", "rutina", "piloto automático", "vida real"],
-    "readingTime": "4 min"
-  },
-  {
-    "title": "Cómo usar una PC vieja para crear un proyecto digital real",
-    "description": "Guía editorial para convertir una computadora vieja en un taller digital: blog, contenido, herramientas livianas, organización, SEO y proyectos online.",
-    "category": "Tecnología",
-    "url": "/posts/pc-vieja-taller-digital.html",
-    "date": "2026-06-09",
-    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
-    "tags": ["tecnología", "internet", "pc vieja", "proyectos online", "seo"],
+    "tags": [
+      "tecnologia",
+      "computadora",
+      "digital"
+    ],
     "readingTime": "9 min"
   },
   {
-    "title": "Cómo empezar de cero cuando sentís que ya perdiste demasiado",
-    "description": "Un texto real sobre volver a levantarte cuando la vida te dejó cansado, sin promesas falsas, sin motivación barata y sin esconder el dolor.",
-    "category": "Saliendo de la Matrix",
-    "url": "/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.html",
+    "title": "Inteligencia artificial como herramienta de trabajo diario",
+    "description": "Un texto de buenosdia.com sobre inteligencia artificial como herramienta de trabajo diario, conectado con tecnología real, internet, IA, herramientas digitales y proyectos online, sin humo y con enfoque práctico para la vida real.",
+    "category": "Tecnología",
+    "url": "/posts/inteligencia-artificial-como-herramienta-de-trabajo-diario.html",
     "date": "2026-06-09",
     "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
-    "tags": ["empezar de cero", "reconstrucción personal", "motivación sin humo", "vida real"],
-    "readingTime": "5 min"
+    "tags": [
+      "tecnologia",
+      "inteligencia",
+      "artificial",
+      "herramienta",
+      "trabajo"
+    ],
+    "readingTime": "9 min"
   },
   {
-    "title": "El entretenimiento que te duerme cuando más necesitás despertar",
-    "description": "Una mirada directa sobre ese entretenimiento que parece descanso, pero muchas veces termina robando foco, energía y ganas de construir algo propio.",
-    "category": "Pan y Circo",
-    "url": "/posts/entretenimiento-que-te-duerme-cuando-necesitas-despertar.html",
+    "title": "Organizar archivos para no perder proyectos",
+    "description": "Un texto de buenosdia.com sobre organizar archivos para no perder proyectos, conectado con tecnología real, internet, IA, herramientas digitales y proyectos online, sin humo y con enfoque práctico para la vida real.",
+    "category": "Tecnología",
+    "url": "/posts/organizar-archivos-para-no-perder-proyectos.html",
     "date": "2026-06-09",
     "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
-    "tags": ["pan y circo", "pantallas", "consumo digital", "matrix"],
-    "readingTime": "4 min"
+    "tags": [
+      "tecnologia",
+      "organizar",
+      "archivos",
+      "perder",
+      "proyectos"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Crear un blog aunque no tengas equipo perfecto",
+    "description": "Un texto de buenosdia.com sobre crear un blog aunque no tengas equipo perfecto, conectado con tecnología real, internet, IA, herramientas digitales y proyectos online, sin humo y con enfoque práctico para la vida real.",
+    "category": "Tecnología",
+    "url": "/posts/crear-un-blog-aunque-no-tengas-equipo-perfecto.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "tecnologia",
+      "aunque",
+      "tengas",
+      "equipo",
+      "perfecto"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Aprender programación cuando venís de cero",
+    "description": "Un texto de buenosdia.com sobre aprender programación cuando venís de cero, conectado con tecnología real, internet, IA, herramientas digitales y proyectos online, sin humo y con enfoque práctico para la vida real.",
+    "category": "Tecnología",
+    "url": "/posts/aprender-programacion-cuando-venis-de-cero.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "tecnologia",
+      "aprender",
+      "programación",
+      "cuando"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Automatizar tareas simples sin complicarte",
+    "description": "Un texto de buenosdia.com sobre automatizar tareas simples sin complicarte, conectado con tecnología real, internet, IA, herramientas digitales y proyectos online, sin humo y con enfoque práctico para la vida real.",
+    "category": "Tecnología",
+    "url": "/posts/automatizar-tareas-simples-sin-complicarte.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "tecnologia",
+      "automatizar",
+      "tareas",
+      "simples",
+      "complicarte"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Vender plantillas digitales a gente común",
+    "description": "Un texto de buenosdia.com sobre vender plantillas digitales a gente común, conectado con tecnología real, internet, IA, herramientas digitales y proyectos online, sin humo y con enfoque práctico para la vida real.",
+    "category": "Tecnología",
+    "url": "/posts/vender-plantillas-digitales-a-gente-comun.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "tecnologia",
+      "vender",
+      "plantillas",
+      "digitales"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Usar internet para recuperar ingresos perdidos",
+    "description": "Un texto de buenosdia.com sobre usar internet para recuperar ingresos perdidos, conectado con tecnología real, internet, IA, herramientas digitales y proyectos online, sin humo y con enfoque práctico para la vida real.",
+    "category": "Tecnología",
+    "url": "/posts/usar-internet-para-recuperar-ingresos-perdidos.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "tecnologia",
+      "internet",
+      "recuperar",
+      "ingresos",
+      "perdidos"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Crear contenido sin depender de redes sociales",
+    "description": "Un texto de buenosdia.com sobre crear contenido sin depender de redes sociales, conectado con tecnología real, internet, IA, herramientas digitales y proyectos online, sin humo y con enfoque práctico para la vida real.",
+    "category": "Tecnología",
+    "url": "/posts/crear-contenido-sin-depender-de-redes-sociales.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "tecnologia",
+      "contenido",
+      "depender",
+      "sociales"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Convertir ideas sueltas en publicaciones útiles",
+    "description": "Un texto de buenosdia.com sobre convertir ideas sueltas en publicaciones útiles, conectado con tecnología real, internet, IA, herramientas digitales y proyectos online, sin humo y con enfoque práctico para la vida real.",
+    "category": "Tecnología",
+    "url": "/posts/convertir-ideas-sueltas-en-publicaciones-utiles.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "tecnologia",
+      "convertir",
+      "sueltas",
+      "publicaciones",
+      "útiles"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Usar IA para ordenar un proyecto online",
+    "description": "Un texto de buenosdia.com sobre usar IA para ordenar un proyecto online, conectado con tecnología real, internet, IA, herramientas digitales y proyectos online, sin humo y con enfoque práctico para la vida real.",
+    "category": "Tecnología",
+    "url": "/posts/usar-ia-para-ordenar-un-proyecto-online.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "tecnologia",
+      "ordenar",
+      "proyecto",
+      "online"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Herramientas livianas para una notebook vieja",
+    "description": "Un texto de buenosdia.com sobre herramientas livianas para una notebook vieja, conectado con tecnología real, internet, IA, herramientas digitales y proyectos online, sin humo y con enfoque práctico para la vida real.",
+    "category": "Tecnología",
+    "url": "/posts/herramientas-livianas-para-una-notebook-vieja.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "tecnologia",
+      "herramientas",
+      "livianas",
+      "notebook"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Crear una rutina digital de una hora por día",
+    "description": "Un texto de buenosdia.com sobre crear una rutina digital de una hora por día, conectado con tecnología real, internet, IA, herramientas digitales y proyectos online, sin humo y con enfoque práctico para la vida real.",
+    "category": "Tecnología",
+    "url": "/posts/crear-una-rutina-digital-de-una-hora-por-dia.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "tecnologia",
+      "rutina",
+      "digital"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Hacer SEO sin volverse esclavo de los trucos",
+    "description": "Un texto de buenosdia.com sobre hacer SEO sin volverse esclavo de los trucos, conectado con tecnología real, internet, IA, herramientas digitales y proyectos online, sin humo y con enfoque práctico para la vida real.",
+    "category": "Tecnología",
+    "url": "/posts/hacer-seo-sin-volverse-esclavo-de-los-trucos.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "tecnologia",
+      "volverse",
+      "esclavo",
+      "trucos"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Publicar mejor con pocos recursos",
+    "description": "Un texto de buenosdia.com sobre publicar mejor con pocos recursos, conectado con tecnología real, internet, IA, herramientas digitales y proyectos online, sin humo y con enfoque práctico para la vida real.",
+    "category": "Tecnología",
+    "url": "/posts/publicar-mejor-con-pocos-recursos.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "tecnologia",
+      "publicar",
+      "recursos"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Armar una base de conocimiento personal",
+    "description": "Un texto de buenosdia.com sobre armar una base de conocimiento personal, conectado con tecnología real, internet, IA, herramientas digitales y proyectos online, sin humo y con enfoque práctico para la vida real.",
+    "category": "Tecnología",
+    "url": "/posts/armar-una-base-de-conocimiento-personal.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "tecnologia",
+      "conocimiento",
+      "personal"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Usar la tecnología para salir del estancamiento",
+    "description": "Un texto de buenosdia.com sobre usar la tecnología para salir del estancamiento, conectado con tecnología real, internet, IA, herramientas digitales y proyectos online, sin humo y con enfoque práctico para la vida real.",
+    "category": "Tecnología",
+    "url": "/posts/usar-la-tecnologia-para-salir-del-estancamiento.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "tecnologia",
+      "tecnología",
+      "estancamiento"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Crear servicios digitales simples para vender",
+    "description": "Un texto de buenosdia.com sobre crear servicios digitales simples para vender, conectado con tecnología real, internet, IA, herramientas digitales y proyectos online, sin humo y con enfoque práctico para la vida real.",
+    "category": "Tecnología",
+    "url": "/posts/crear-servicios-digitales-simples-para-vender.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "tecnologia",
+      "servicios",
+      "digitales",
+      "simples",
+      "vender"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Ordenar contraseñas y cuentas sin caos",
+    "description": "Un texto de buenosdia.com sobre ordenar contraseñas y cuentas sin caos, conectado con tecnología real, internet, IA, herramientas digitales y proyectos online, sin humo y con enfoque práctico para la vida real.",
+    "category": "Tecnología",
+    "url": "/posts/ordenar-contrasenas-y-cuentas-sin-caos.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "tecnologia",
+      "ordenar",
+      "contraseñas",
+      "cuentas"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Hacer una web estática que cargue rápido",
+    "description": "Un texto de buenosdia.com sobre hacer una web estática que cargue rápido, conectado con tecnología real, internet, IA, herramientas digitales y proyectos online, sin humo y con enfoque práctico para la vida real.",
+    "category": "Tecnología",
+    "url": "/posts/hacer-una-web-estatica-que-cargue-rapido.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "tecnologia",
+      "estática",
+      "cargue",
+      "rápido"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Escribir mejores prompts con intención real",
+    "description": "Un texto de buenosdia.com sobre escribir mejores prompts con intención real, conectado con tecnología real, internet, IA, herramientas digitales y proyectos online, sin humo y con enfoque práctico para la vida real.",
+    "category": "Tecnología",
+    "url": "/posts/escribir-mejores-prompts-con-intencion-real.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "tecnologia",
+      "escribir",
+      "mejores",
+      "prompts",
+      "intención"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Usar GitHub como taller de proyectos",
+    "description": "Un texto de buenosdia.com sobre usar GitHub como taller de proyectos, conectado con tecnología real, internet, IA, herramientas digitales y proyectos online, sin humo y con enfoque práctico para la vida real.",
+    "category": "Tecnología",
+    "url": "/posts/usar-github-como-taller-de-proyectos.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "tecnologia",
+      "GitHub",
+      "taller",
+      "proyectos"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Crear imágenes web limpias y livianas",
+    "description": "Un texto de buenosdia.com sobre crear imágenes web limpias y livianas, conectado con tecnología real, internet, IA, herramientas digitales y proyectos online, sin humo y con enfoque práctico para la vida real.",
+    "category": "Tecnología",
+    "url": "/posts/crear-imagenes-web-limpias-y-livianas.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "tecnologia",
+      "imágenes",
+      "limpias",
+      "livianas"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Transformar experiencia vieja en contenido nuevo",
+    "description": "Un texto de buenosdia.com sobre transformar experiencia vieja en contenido nuevo, conectado con tecnología real, internet, IA, herramientas digitales y proyectos online, sin humo y con enfoque práctico para la vida real.",
+    "category": "Tecnología",
+    "url": "/posts/transformar-experiencia-vieja-en-contenido-nuevo.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "tecnologia",
+      "transformar",
+      "experiencia",
+      "contenido"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Volver a vivir de internet sin nostalgia",
+    "description": "Un texto de buenosdia.com sobre volver a vivir de internet sin nostalgia, conectado con tecnología real, internet, IA, herramientas digitales y proyectos online, sin humo y con enfoque práctico para la vida real.",
+    "category": "Tecnología",
+    "url": "/posts/volver-a-vivir-de-internet-sin-nostalgia.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "tecnologia",
+      "volver",
+      "internet",
+      "nostalgia"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Cuando el entretenimiento se vuelve anestesia",
+    "description": "Un texto de buenosdia.com sobre cuando el entretenimiento se vuelve anestesia, conectado con pantallas, entretenimiento, consumo digital y atención robada, sin humo y con enfoque práctico para la vida real.",
+    "category": "Pan y Circo",
+    "url": "/posts/cuando-el-entretenimiento-se-vuelve-anestesia.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "pan-y-circo",
+      "cuando",
+      "entretenimiento",
+      "vuelve",
+      "anestesia"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Series que descansan y series que te vacían",
+    "description": "Un texto de buenosdia.com sobre series que descansan y series que te vacían, conectado con pantallas, entretenimiento, consumo digital y atención robada, sin humo y con enfoque práctico para la vida real.",
+    "category": "Pan y Circo",
+    "url": "/posts/series-que-descansan-y-series-que-te-vacian.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "pan-y-circo",
+      "series",
+      "descansan",
+      "series",
+      "vacían"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "El scroll infinito y la mañana perdida",
+    "description": "Un texto de buenosdia.com sobre el scroll infinito y la mañana perdida, conectado con pantallas, entretenimiento, consumo digital y atención robada, sin humo y con enfoque práctico para la vida real.",
+    "category": "Pan y Circo",
+    "url": "/posts/el-scroll-infinito-y-la-manana-perdida.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "pan-y-circo",
+      "scroll",
+      "infinito",
+      "mañana",
+      "perdida"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Televisión como ruido de fondo mental",
+    "description": "Un texto de buenosdia.com sobre televisión como ruido de fondo mental, conectado con pantallas, entretenimiento, consumo digital y atención robada, sin humo y con enfoque práctico para la vida real.",
+    "category": "Pan y Circo",
+    "url": "/posts/television-como-ruido-de-fondo-mental.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "pan-y-circo",
+      "televisión",
+      "mental"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Mirar menos para pensar mejor",
+    "description": "Un texto de buenosdia.com sobre mirar menos para pensar mejor, conectado con pantallas, entretenimiento, consumo digital y atención robada, sin humo y con enfoque práctico para la vida real.",
+    "category": "Pan y Circo",
+    "url": "/posts/mirar-menos-para-pensar-mejor.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "pan-y-circo",
+      "pensar"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "La pantalla como premio barato",
+    "description": "Un texto de buenosdia.com sobre la pantalla como premio barato, conectado con pantallas, entretenimiento, consumo digital y atención robada, sin humo y con enfoque práctico para la vida real.",
+    "category": "Pan y Circo",
+    "url": "/posts/la-pantalla-como-premio-barato.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "pan-y-circo",
+      "pantalla",
+      "premio",
+      "barato"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Consumo digital y cansancio invisible",
+    "description": "Un texto de buenosdia.com sobre consumo digital y cansancio invisible, conectado con pantallas, entretenimiento, consumo digital y atención robada, sin humo y con enfoque práctico para la vida real.",
+    "category": "Pan y Circo",
+    "url": "/posts/consumo-digital-y-cansancio-invisible.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "pan-y-circo",
+      "consumo",
+      "digital",
+      "cansancio",
+      "invisible"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Noticias que informan y noticias que intoxican",
+    "description": "Un texto de buenosdia.com sobre noticias que informan y noticias que intoxican, conectado con pantallas, entretenimiento, consumo digital y atención robada, sin humo y con enfoque práctico para la vida real.",
+    "category": "Pan y Circo",
+    "url": "/posts/noticias-que-informan-y-noticias-que-intoxican.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "pan-y-circo",
+      "noticias",
+      "informan",
+      "noticias",
+      "intoxican"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Famosos, escándalos y atención robada",
+    "description": "Un texto de buenosdia.com sobre famosos, escándalos y atención robada, conectado con pantallas, entretenimiento, consumo digital y atención robada, sin humo y con enfoque práctico para la vida real.",
+    "category": "Pan y Circo",
+    "url": "/posts/famosos-escandalos-y-atencion-robada.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "pan-y-circo",
+      "famosos,",
+      "escándalos",
+      "atención",
+      "robada"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "La cultura del clip corto",
+    "description": "Un texto de buenosdia.com sobre la cultura del clip corto, conectado con pantallas, entretenimiento, consumo digital y atención robada, sin humo y con enfoque práctico para la vida real.",
+    "category": "Pan y Circo",
+    "url": "/posts/la-cultura-del-clip-corto.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "pan-y-circo",
+      "cultura"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Cuando todos opinan pero nadie piensa",
+    "description": "Un texto de buenosdia.com sobre cuando todos opinan pero nadie piensa, conectado con pantallas, entretenimiento, consumo digital y atención robada, sin humo y con enfoque práctico para la vida real.",
+    "category": "Pan y Circo",
+    "url": "/posts/cuando-todos-opinan-pero-nadie-piensa.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "pan-y-circo",
+      "cuando",
+      "opinan",
+      "piensa"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "El algoritmo que aprende tus debilidades",
+    "description": "Un texto de buenosdia.com sobre el algoritmo que aprende tus debilidades, conectado con pantallas, entretenimiento, consumo digital y atención robada, sin humo y con enfoque práctico para la vida real.",
+    "category": "Pan y Circo",
+    "url": "/posts/el-algoritmo-que-aprende-tus-debilidades.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "pan-y-circo",
+      "algoritmo",
+      "aprende",
+      "debilidades"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Cómo recuperar silencio después de tanto ruido",
+    "description": "Un texto de buenosdia.com sobre cómo recuperar silencio después de tanto ruido, conectado con pantallas, entretenimiento, consumo digital y atención robada, sin humo y con enfoque práctico para la vida real.",
+    "category": "Pan y Circo",
+    "url": "/posts/como-recuperar-silencio-despues-de-tanto-ruido.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "pan-y-circo",
+      "recuperar",
+      "silencio",
+      "después"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Entretenimiento sin culpa pero con límite",
+    "description": "Un texto de buenosdia.com sobre entretenimiento sin culpa pero con límite, conectado con pantallas, entretenimiento, consumo digital y atención robada, sin humo y con enfoque práctico para la vida real.",
+    "category": "Pan y Circo",
+    "url": "/posts/entretenimiento-sin-culpa-pero-con-limite.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "pan-y-circo",
+      "entretenimiento",
+      "límite"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "El celular como circo de bolsillo",
+    "description": "Un texto de buenosdia.com sobre el celular como circo de bolsillo, conectado con pantallas, entretenimiento, consumo digital y atención robada, sin humo y con enfoque práctico para la vida real.",
+    "category": "Pan y Circo",
+    "url": "/posts/el-celular-como-circo-de-bolsillo.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "pan-y-circo",
+      "celular",
+      "bolsillo"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Redes sociales y comparación diaria",
+    "description": "Un texto de buenosdia.com sobre redes sociales y comparación diaria, conectado con pantallas, entretenimiento, consumo digital y atención robada, sin humo y con enfoque práctico para la vida real.",
+    "category": "Pan y Circo",
+    "url": "/posts/redes-sociales-y-comparacion-diaria.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "pan-y-circo",
+      "sociales",
+      "comparación",
+      "diaria"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Ver contenido para escapar de uno mismo",
+    "description": "Un texto de buenosdia.com sobre ver contenido para escapar de uno mismo, conectado con pantallas, entretenimiento, consumo digital y atención robada, sin humo y con enfoque práctico para la vida real.",
+    "category": "Pan y Circo",
+    "url": "/posts/ver-contenido-para-escapar-de-uno-mismo.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "pan-y-circo",
+      "contenido",
+      "escapar"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Cuando la pantalla ocupa el lugar del proyecto",
+    "description": "Un texto de buenosdia.com sobre cuando la pantalla ocupa el lugar del proyecto, conectado con pantallas, entretenimiento, consumo digital y atención robada, sin humo y con enfoque práctico para la vida real.",
+    "category": "Pan y Circo",
+    "url": "/posts/cuando-la-pantalla-ocupa-el-lugar-del-proyecto.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "pan-y-circo",
+      "cuando",
+      "pantalla",
+      "proyecto"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "La dopamina rápida que te deja quieto",
+    "description": "Un texto de buenosdia.com sobre la dopamina rápida que te deja quieto, conectado con pantallas, entretenimiento, consumo digital y atención robada, sin humo y con enfoque práctico para la vida real.",
+    "category": "Pan y Circo",
+    "url": "/posts/la-dopamina-rapida-que-te-deja-quieto.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "pan-y-circo",
+      "dopamina",
+      "rápida",
+      "quieto"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Aprender a apagar sin sentir culpa",
+    "description": "Un texto de buenosdia.com sobre aprender a apagar sin sentir culpa, conectado con pantallas, entretenimiento, consumo digital y atención robada, sin humo y con enfoque práctico para la vida real.",
+    "category": "Pan y Circo",
+    "url": "/posts/aprender-a-apagar-sin-sentir-culpa.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "pan-y-circo",
+      "aprender",
+      "apagar",
+      "sentir"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Consumir cultura sin entregar la cabeza",
+    "description": "Un texto de buenosdia.com sobre consumir cultura sin entregar la cabeza, conectado con pantallas, entretenimiento, consumo digital y atención robada, sin humo y con enfoque práctico para la vida real.",
+    "category": "Pan y Circo",
+    "url": "/posts/consumir-cultura-sin-entregar-la-cabeza.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "pan-y-circo",
+      "consumir",
+      "cultura",
+      "entregar",
+      "cabeza"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Películas, series y criterio propio",
+    "description": "Un texto de buenosdia.com sobre películas, series y criterio propio, conectado con pantallas, entretenimiento, consumo digital y atención robada, sin humo y con enfoque práctico para la vida real.",
+    "category": "Pan y Circo",
+    "url": "/posts/peliculas-series-y-criterio-propio.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "pan-y-circo",
+      "películas,",
+      "series",
+      "criterio",
+      "propio"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "La falsa urgencia de estar al día",
+    "description": "Un texto de buenosdia.com sobre la falsa urgencia de estar al día, conectado con pantallas, entretenimiento, consumo digital y atención robada, sin humo y con enfoque práctico para la vida real.",
+    "category": "Pan y Circo",
+    "url": "/posts/la-falsa-urgencia-de-estar-al-dia.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "pan-y-circo",
+      "urgencia"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Cómo elegir qué mirar sin ser arrastrado",
+    "description": "Un texto de buenosdia.com sobre cómo elegir qué mirar sin ser arrastrado, conectado con pantallas, entretenimiento, consumo digital y atención robada, sin humo y con enfoque práctico para la vida real.",
+    "category": "Pan y Circo",
+    "url": "/posts/como-elegir-que-mirar-sin-ser-arrastrado.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "pan-y-circo",
+      "elegir",
+      "arrastrado"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Salir del ruido sin volverse ermitaño",
+    "description": "Un texto de buenosdia.com sobre salir del ruido sin volverse ermitaño, conectado con pantallas, entretenimiento, consumo digital y atención robada, sin humo y con enfoque práctico para la vida real.",
+    "category": "Pan y Circo",
+    "url": "/posts/salir-del-ruido-sin-volverse-ermitano.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "pan-y-circo",
+      "volverse",
+      "ermitaño"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Comer mal y pensar con niebla",
+    "description": "Un texto de buenosdia.com sobre comer mal y pensar con niebla, conectado con comida, energía mental, hábitos, cuerpo y claridad diaria, sin humo y con enfoque práctico para la vida real.",
+    "category": "Alimentación",
+    "url": "/posts/comer-mal-y-pensar-con-niebla.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "alimentacion",
+      "pensar",
+      "niebla"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Desayunar mejor para empezar distinto",
+    "description": "Un texto de buenosdia.com sobre desayunar mejor para empezar distinto, conectado con comida, energía mental, hábitos, cuerpo y claridad diaria, sin humo y con enfoque práctico para la vida real.",
+    "category": "Alimentación",
+    "url": "/posts/desayunar-mejor-para-empezar-distinto.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "alimentacion",
+      "desayunar",
+      "empezar",
+      "distinto"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Azúcar, ansiedad y energía prestada",
+    "description": "Un texto de buenosdia.com sobre azúcar, ansiedad y energía prestada, conectado con comida, energía mental, hábitos, cuerpo y claridad diaria, sin humo y con enfoque práctico para la vida real.",
+    "category": "Alimentación",
+    "url": "/posts/azucar-ansiedad-y-energia-prestada.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "alimentacion",
+      "azúcar,",
+      "ansiedad",
+      "energía",
+      "prestada"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Ultraprocesados y cansancio cotidiano",
+    "description": "Un texto de buenosdia.com sobre ultraprocesados y cansancio cotidiano, conectado con comida, energía mental, hábitos, cuerpo y claridad diaria, sin humo y con enfoque práctico para la vida real.",
+    "category": "Alimentación",
+    "url": "/posts/ultraprocesados-y-cansancio-cotidiano.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "alimentacion",
+      "ultraprocesados",
+      "cansancio",
+      "cotidiano"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Agua, cuerpo y claridad mental",
+    "description": "Un texto de buenosdia.com sobre agua, cuerpo y claridad mental, conectado con comida, energía mental, hábitos, cuerpo y claridad diaria, sin humo y con enfoque práctico para la vida real.",
+    "category": "Alimentación",
+    "url": "/posts/agua-cuerpo-y-claridad-mental.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "alimentacion",
+      "cuerpo",
+      "claridad",
+      "mental"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Comida real sin fanatismo",
+    "description": "Un texto de buenosdia.com sobre comida real sin fanatismo, conectado con comida, energía mental, hábitos, cuerpo y claridad diaria, sin humo y con enfoque práctico para la vida real.",
+    "category": "Alimentación",
+    "url": "/posts/comida-real-sin-fanatismo.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "alimentacion",
+      "comida",
+      "fanatismo"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Ordenar la alimentación cuando no hay ganas",
+    "description": "Un texto de buenosdia.com sobre ordenar la alimentación cuando no hay ganas, conectado con comida, energía mental, hábitos, cuerpo y claridad diaria, sin humo y con enfoque práctico para la vida real.",
+    "category": "Alimentación",
+    "url": "/posts/ordenar-la-alimentacion-cuando-no-hay-ganas.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "alimentacion",
+      "ordenar",
+      "alimentación",
+      "cuando"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "La cocina simple como acto de control",
+    "description": "Un texto de buenosdia.com sobre la cocina simple como acto de control, conectado con comida, energía mental, hábitos, cuerpo y claridad diaria, sin humo y con enfoque práctico para la vida real.",
+    "category": "Alimentación",
+    "url": "/posts/la-cocina-simple-como-acto-de-control.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "alimentacion",
+      "cocina",
+      "simple",
+      "control"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Comer apurado y vivir acelerado",
+    "description": "Un texto de buenosdia.com sobre comer apurado y vivir acelerado, conectado con comida, energía mental, hábitos, cuerpo y claridad diaria, sin humo y con enfoque práctico para la vida real.",
+    "category": "Alimentación",
+    "url": "/posts/comer-apurado-y-vivir-acelerado.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "alimentacion",
+      "apurado",
+      "acelerado"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Hábitos pequeños que cambian el día",
+    "description": "Un texto de buenosdia.com sobre hábitos pequeños que cambian el día, conectado con comida, energía mental, hábitos, cuerpo y claridad diaria, sin humo y con enfoque práctico para la vida real.",
+    "category": "Alimentación",
+    "url": "/posts/habitos-pequenos-que-cambian-el-dia.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "alimentacion",
+      "hábitos",
+      "pequeños",
+      "cambian"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Proteína, energía y decisiones mejores",
+    "description": "Un texto de buenosdia.com sobre proteína, energía y decisiones mejores, conectado con comida, energía mental, hábitos, cuerpo y claridad diaria, sin humo y con enfoque práctico para la vida real.",
+    "category": "Alimentación",
+    "url": "/posts/proteina-energia-y-decisiones-mejores.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "alimentacion",
+      "proteína,",
+      "energía",
+      "decisiones",
+      "mejores"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Hambre emocional y pantalla encendida",
+    "description": "Un texto de buenosdia.com sobre hambre emocional y pantalla encendida, conectado con comida, energía mental, hábitos, cuerpo y claridad diaria, sin humo y con enfoque práctico para la vida real.",
+    "category": "Alimentación",
+    "url": "/posts/hambre-emocional-y-pantalla-encendida.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "alimentacion",
+      "hambre",
+      "emocional",
+      "pantalla",
+      "encendida"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Comprar comida con más conciencia",
+    "description": "Un texto de buenosdia.com sobre comprar comida con más conciencia, conectado con comida, energía mental, hábitos, cuerpo y claridad diaria, sin humo y con enfoque práctico para la vida real.",
+    "category": "Alimentación",
+    "url": "/posts/comprar-comida-con-mas-conciencia.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "alimentacion",
+      "comprar",
+      "comida",
+      "conciencia"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "El cuerpo como base del proyecto",
+    "description": "Un texto de buenosdia.com sobre el cuerpo como base del proyecto, conectado con comida, energía mental, hábitos, cuerpo y claridad diaria, sin humo y con enfoque práctico para la vida real.",
+    "category": "Alimentación",
+    "url": "/posts/el-cuerpo-como-base-del-proyecto.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "alimentacion",
+      "cuerpo",
+      "proyecto"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Alimentación y disciplina sin obsesión",
+    "description": "Un texto de buenosdia.com sobre alimentación y disciplina sin obsesión, conectado con comida, energía mental, hábitos, cuerpo y claridad diaria, sin humo y con enfoque práctico para la vida real.",
+    "category": "Alimentación",
+    "url": "/posts/alimentacion-y-disciplina-sin-obsesion.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "alimentacion",
+      "alimentación",
+      "disciplina",
+      "obsesión"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Cuando el cansancio empieza en el plato",
+    "description": "Un texto de buenosdia.com sobre cuando el cansancio empieza en el plato, conectado con comida, energía mental, hábitos, cuerpo y claridad diaria, sin humo y con enfoque práctico para la vida real.",
+    "category": "Alimentación",
+    "url": "/posts/cuando-el-cansancio-empieza-en-el-plato.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "alimentacion",
+      "cuando",
+      "cansancio",
+      "empieza"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Comer mejor con poco presupuesto",
+    "description": "Un texto de buenosdia.com sobre comer mejor con poco presupuesto, conectado con comida, energía mental, hábitos, cuerpo y claridad diaria, sin humo y con enfoque práctico para la vida real.",
+    "category": "Alimentación",
+    "url": "/posts/comer-mejor-con-poco-presupuesto.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "alimentacion",
+      "presupuesto"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "La ansiedad que se disfraza de antojo",
+    "description": "Un texto de buenosdia.com sobre la ansiedad que se disfraza de antojo, conectado con comida, energía mental, hábitos, cuerpo y claridad diaria, sin humo y con enfoque práctico para la vida real.",
+    "category": "Alimentación",
+    "url": "/posts/la-ansiedad-que-se-disfraza-de-antojo.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "alimentacion",
+      "ansiedad",
+      "disfraza",
+      "antojo"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Rutina de comida para mente clara",
+    "description": "Un texto de buenosdia.com sobre rutina de comida para mente clara, conectado con comida, energía mental, hábitos, cuerpo y claridad diaria, sin humo y con enfoque práctico para la vida real.",
+    "category": "Alimentación",
+    "url": "/posts/rutina-de-comida-para-mente-clara.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "alimentacion",
+      "rutina",
+      "comida"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Menos paquete y más energía real",
+    "description": "Un texto de buenosdia.com sobre menos paquete y más energía real, conectado con comida, energía mental, hábitos, cuerpo y claridad diaria, sin humo y con enfoque práctico para la vida real.",
+    "category": "Alimentación",
+    "url": "/posts/menos-paquete-y-mas-energia-real.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "alimentacion",
+      "paquete",
+      "energía"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Alimentarse para sostener trabajo digital",
+    "description": "Un texto de buenosdia.com sobre alimentarse para sostener trabajo digital, conectado con comida, energía mental, hábitos, cuerpo y claridad diaria, sin humo y con enfoque práctico para la vida real.",
+    "category": "Alimentación",
+    "url": "/posts/alimentarse-para-sostener-trabajo-digital.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "alimentacion",
+      "alimentarse",
+      "sostener",
+      "trabajo",
+      "digital"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "La Matrix del consumo alimentario",
+    "description": "Un texto de buenosdia.com sobre la Matrix del consumo alimentario, conectado con comida, energía mental, hábitos, cuerpo y claridad diaria, sin humo y con enfoque práctico para la vida real.",
+    "category": "Alimentación",
+    "url": "/posts/la-matrix-del-consumo-alimentario.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "alimentacion",
+      "Matrix",
+      "consumo",
+      "alimentario"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Volver a escuchar al cuerpo",
+    "description": "Un texto de buenosdia.com sobre volver a escuchar al cuerpo, conectado con comida, energía mental, hábitos, cuerpo y claridad diaria, sin humo y con enfoque práctico para la vida real.",
+    "category": "Alimentación",
+    "url": "/posts/volver-a-escuchar-al-cuerpo.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "alimentacion",
+      "volver",
+      "escuchar",
+      "cuerpo"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Comida simple para días difíciles",
+    "description": "Un texto de buenosdia.com sobre comida simple para días difíciles, conectado con comida, energía mental, hábitos, cuerpo y claridad diaria, sin humo y con enfoque práctico para la vida real.",
+    "category": "Alimentación",
+    "url": "/posts/comida-simple-para-dias-dificiles.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "alimentacion",
+      "comida",
+      "simple",
+      "difíciles"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Ordenar la heladera para ordenar la cabeza",
+    "description": "Un texto de buenosdia.com sobre ordenar la heladera para ordenar la cabeza, conectado con comida, energía mental, hábitos, cuerpo y claridad diaria, sin humo y con enfoque práctico para la vida real.",
+    "category": "Alimentación",
+    "url": "/posts/ordenar-la-heladera-para-ordenar-la-cabeza.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "alimentacion",
+      "ordenar",
+      "heladera",
+      "ordenar",
+      "cabeza"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Entrenar aunque no tengas ganas",
+    "description": "Un texto de buenosdia.com sobre entrenar aunque no tengas ganas, conectado con entrenamiento, disciplina, cuerpo, movimiento y mentalidad, sin humo y con enfoque práctico para la vida real.",
+    "category": "Deportes",
+    "url": "/posts/entrenar-aunque-no-tengas-ganas.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "deportes",
+      "entrenar",
+      "aunque",
+      "tengas"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Caminar como primer acto de disciplina",
+    "description": "Un texto de buenosdia.com sobre caminar como primer acto de disciplina, conectado con entrenamiento, disciplina, cuerpo, movimiento y mentalidad, sin humo y con enfoque práctico para la vida real.",
+    "category": "Deportes",
+    "url": "/posts/caminar-como-primer-acto-de-disciplina.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "deportes",
+      "caminar",
+      "primer",
+      "disciplina"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "El cuerpo como ancla mental",
+    "description": "Un texto de buenosdia.com sobre el cuerpo como ancla mental, conectado con entrenamiento, disciplina, cuerpo, movimiento y mentalidad, sin humo y con enfoque práctico para la vida real.",
+    "category": "Deportes",
+    "url": "/posts/el-cuerpo-como-ancla-mental.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "deportes",
+      "cuerpo",
+      "mental"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Volver al gimnasio después de abandonar",
+    "description": "Un texto de buenosdia.com sobre volver al gimnasio después de abandonar, conectado con entrenamiento, disciplina, cuerpo, movimiento y mentalidad, sin humo y con enfoque práctico para la vida real.",
+    "category": "Deportes",
+    "url": "/posts/volver-al-gimnasio-despues-de-abandonar.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "deportes",
+      "volver",
+      "gimnasio",
+      "después",
+      "abandonar"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Disciplina sin motivación barata",
+    "description": "Un texto de buenosdia.com sobre disciplina sin motivación barata, conectado con entrenamiento, disciplina, cuerpo, movimiento y mentalidad, sin humo y con enfoque práctico para la vida real.",
+    "category": "Deportes",
+    "url": "/posts/disciplina-sin-motivacion-barata.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "deportes",
+      "disciplina",
+      "motivación",
+      "barata"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Hacer poco pero hacerlo siempre",
+    "description": "Un texto de buenosdia.com sobre hacer poco pero hacerlo siempre, conectado con entrenamiento, disciplina, cuerpo, movimiento y mentalidad, sin humo y con enfoque práctico para la vida real.",
+    "category": "Deportes",
+    "url": "/posts/hacer-poco-pero-hacerlo-siempre.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "deportes",
+      "hacerlo",
+      "siempre"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Cansancio mental y movimiento físico",
+    "description": "Un texto de buenosdia.com sobre cansancio mental y movimiento físico, conectado con entrenamiento, disciplina, cuerpo, movimiento y mentalidad, sin humo y con enfoque práctico para la vida real.",
+    "category": "Deportes",
+    "url": "/posts/cansancio-mental-y-movimiento-fisico.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "deportes",
+      "cansancio",
+      "mental",
+      "movimiento",
+      "físico"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Entrenamiento para recuperar respeto propio",
+    "description": "Un texto de buenosdia.com sobre entrenamiento para recuperar respeto propio, conectado con entrenamiento, disciplina, cuerpo, movimiento y mentalidad, sin humo y con enfoque práctico para la vida real.",
+    "category": "Deportes",
+    "url": "/posts/entrenamiento-para-recuperar-respeto-propio.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "deportes",
+      "entrenamiento",
+      "recuperar",
+      "respeto",
+      "propio"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Cuando el cuerpo pide rutina",
+    "description": "Un texto de buenosdia.com sobre cuando el cuerpo pide rutina, conectado con entrenamiento, disciplina, cuerpo, movimiento y mentalidad, sin humo y con enfoque práctico para la vida real.",
+    "category": "Deportes",
+    "url": "/posts/cuando-el-cuerpo-pide-rutina.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "deportes",
+      "cuando",
+      "cuerpo",
+      "rutina"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Deporte como salida del ruido",
+    "description": "Un texto de buenosdia.com sobre deporte como salida del ruido, conectado con entrenamiento, disciplina, cuerpo, movimiento y mentalidad, sin humo y con enfoque práctico para la vida real.",
+    "category": "Deportes",
+    "url": "/posts/deporte-como-salida-del-ruido.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "deportes",
+      "deporte",
+      "salida"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "La constancia que nadie aplaude",
+    "description": "Un texto de buenosdia.com sobre la constancia que nadie aplaude, conectado con entrenamiento, disciplina, cuerpo, movimiento y mentalidad, sin humo y con enfoque práctico para la vida real.",
+    "category": "Deportes",
+    "url": "/posts/la-constancia-que-nadie-aplaude.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "deportes",
+      "constancia",
+      "aplaude"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Empezar a moverse sin vergüenza",
+    "description": "Un texto de buenosdia.com sobre empezar a moverse sin vergüenza, conectado con entrenamiento, disciplina, cuerpo, movimiento y mentalidad, sin humo y con enfoque práctico para la vida real.",
+    "category": "Deportes",
+    "url": "/posts/empezar-a-moverse-sin-verguenza.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "deportes",
+      "empezar",
+      "moverse",
+      "vergüenza"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Fuerza, paciencia y días malos",
+    "description": "Un texto de buenosdia.com sobre fuerza, paciencia y días malos, conectado con entrenamiento, disciplina, cuerpo, movimiento y mentalidad, sin humo y con enfoque práctico para la vida real.",
+    "category": "Deportes",
+    "url": "/posts/fuerza-paciencia-y-dias-malos.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "deportes",
+      "fuerza,",
+      "paciencia"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Entrenar para pensar mejor",
+    "description": "Un texto de buenosdia.com sobre entrenar para pensar mejor, conectado con entrenamiento, disciplina, cuerpo, movimiento y mentalidad, sin humo y con enfoque práctico para la vida real.",
+    "category": "Deportes",
+    "url": "/posts/entrenar-para-pensar-mejor.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "deportes",
+      "entrenar",
+      "pensar"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Rutina mínima para no romper la cadena",
+    "description": "Un texto de buenosdia.com sobre rutina mínima para no romper la cadena, conectado con entrenamiento, disciplina, cuerpo, movimiento y mentalidad, sin humo y con enfoque práctico para la vida real.",
+    "category": "Deportes",
+    "url": "/posts/rutina-minima-para-no-romper-la-cadena.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "deportes",
+      "rutina",
+      "mínima",
+      "romper",
+      "cadena"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Ganarle una hora al sedentarismo",
+    "description": "Un texto de buenosdia.com sobre ganarle una hora al sedentarismo, conectado con entrenamiento, disciplina, cuerpo, movimiento y mentalidad, sin humo y con enfoque práctico para la vida real.",
+    "category": "Deportes",
+    "url": "/posts/ganarle-una-hora-al-sedentarismo.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "deportes",
+      "ganarle",
+      "sedentarismo"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Movimiento contra piloto automático",
+    "description": "Un texto de buenosdia.com sobre movimiento contra piloto automático, conectado con entrenamiento, disciplina, cuerpo, movimiento y mentalidad, sin humo y con enfoque práctico para la vida real.",
+    "category": "Deportes",
+    "url": "/posts/movimiento-contra-piloto-automatico.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "deportes",
+      "movimiento",
+      "contra",
+      "piloto",
+      "automático"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "El entrenamiento como promesa cumplida",
+    "description": "Un texto de buenosdia.com sobre el entrenamiento como promesa cumplida, conectado con entrenamiento, disciplina, cuerpo, movimiento y mentalidad, sin humo y con enfoque práctico para la vida real.",
+    "category": "Deportes",
+    "url": "/posts/el-entrenamiento-como-promesa-cumplida.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "deportes",
+      "entrenamiento",
+      "promesa",
+      "cumplida"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Cuidar el cuerpo sin obsesionarse",
+    "description": "Un texto de buenosdia.com sobre cuidar el cuerpo sin obsesionarse, conectado con entrenamiento, disciplina, cuerpo, movimiento y mentalidad, sin humo y con enfoque práctico para la vida real.",
+    "category": "Deportes",
+    "url": "/posts/cuidar-el-cuerpo-sin-obsesionarse.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "deportes",
+      "cuidar",
+      "cuerpo",
+      "obsesionarse"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Deporte y reconstrucción personal",
+    "description": "Un texto de buenosdia.com sobre deporte y reconstrucción personal, conectado con entrenamiento, disciplina, cuerpo, movimiento y mentalidad, sin humo y con enfoque práctico para la vida real.",
+    "category": "Deportes",
+    "url": "/posts/deporte-y-reconstruccion-personal.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "deportes",
+      "deporte",
+      "reconstrucción",
+      "personal"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Cuando el sofá también programa",
+    "description": "Un texto de buenosdia.com sobre cuando el sofá también programa, conectado con entrenamiento, disciplina, cuerpo, movimiento y mentalidad, sin humo y con enfoque práctico para la vida real.",
+    "category": "Deportes",
+    "url": "/posts/cuando-el-sofa-tambien-programa.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "deportes",
+      "cuando",
+      "también",
+      "programa"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Caminar para ordenar ideas",
+    "description": "Un texto de buenosdia.com sobre caminar para ordenar ideas, conectado con entrenamiento, disciplina, cuerpo, movimiento y mentalidad, sin humo y con enfoque práctico para la vida real.",
+    "category": "Deportes",
+    "url": "/posts/caminar-para-ordenar-ideas.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "deportes",
+      "caminar",
+      "ordenar"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Fútbol, cuerpo y descarga mental",
+    "description": "Un texto de buenosdia.com sobre fútbol, cuerpo y descarga mental, conectado con entrenamiento, disciplina, cuerpo, movimiento y mentalidad, sin humo y con enfoque práctico para la vida real.",
+    "category": "Deportes",
+    "url": "/posts/futbol-cuerpo-y-descarga-mental.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "deportes",
+      "fútbol,",
+      "cuerpo",
+      "descarga",
+      "mental"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Hacer ejercicio en una etapa difícil",
+    "description": "Un texto de buenosdia.com sobre hacer ejercicio en una etapa difícil, conectado con entrenamiento, disciplina, cuerpo, movimiento y mentalidad, sin humo y con enfoque práctico para la vida real.",
+    "category": "Deportes",
+    "url": "/posts/hacer-ejercicio-en-una-etapa-dificil.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "deportes",
+      "ejercicio",
+      "difícil"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Volver a sentir energía real",
+    "description": "Un texto de buenosdia.com sobre volver a sentir energía real, conectado con entrenamiento, disciplina, cuerpo, movimiento y mentalidad, sin humo y con enfoque práctico para la vida real.",
+    "category": "Deportes",
+    "url": "/posts/volver-a-sentir-energia-real.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "deportes",
+      "volver",
+      "sentir",
+      "energía"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "La rutina normal que te va apagando",
+    "description": "Un texto de buenosdia.com sobre la rutina normal que te va apagando, conectado con rutina, algoritmos, consumo, piloto automático y vida cotidiana, sin humo y con enfoque práctico para la vida real.",
+    "category": "Matrix",
+    "url": "/posts/la-rutina-normal-que-te-va-apagando.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "matrix",
+      "rutina",
+      "normal",
+      "apagando"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Piloto automático y días repetidos",
+    "description": "Un texto de buenosdia.com sobre piloto automático y días repetidos, conectado con rutina, algoritmos, consumo, piloto automático y vida cotidiana, sin humo y con enfoque práctico para la vida real.",
+    "category": "Matrix",
+    "url": "/posts/piloto-automatico-y-dias-repetidos.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "matrix",
+      "piloto",
+      "automático",
+      "repetidos"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Algoritmos que ordenan tu atención",
+    "description": "Un texto de buenosdia.com sobre algoritmos que ordenan tu atención, conectado con rutina, algoritmos, consumo, piloto automático y vida cotidiana, sin humo y con enfoque práctico para la vida real.",
+    "category": "Matrix",
+    "url": "/posts/algoritmos-que-ordenan-tu-atencion.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "matrix",
+      "algoritmos",
+      "ordenan",
+      "atención"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Consumo diario y libertad perdida",
+    "description": "Un texto de buenosdia.com sobre consumo diario y libertad perdida, conectado con rutina, algoritmos, consumo, piloto automático y vida cotidiana, sin humo y con enfoque práctico para la vida real.",
+    "category": "Matrix",
+    "url": "/posts/consumo-diario-y-libertad-perdida.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "matrix",
+      "consumo",
+      "diario",
+      "libertad",
+      "perdida"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Cuando la comodidad se vuelve jaula",
+    "description": "Un texto de buenosdia.com sobre cuando la comodidad se vuelve jaula, conectado con rutina, algoritmos, consumo, piloto automático y vida cotidiana, sin humo y con enfoque práctico para la vida real.",
+    "category": "Matrix",
+    "url": "/posts/cuando-la-comodidad-se-vuelve-jaula.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "matrix",
+      "cuando",
+      "comodidad",
+      "vuelve"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Trabajar, consumir y dormir sin pensar",
+    "description": "Un texto de buenosdia.com sobre trabajar, consumir y dormir sin pensar, conectado con rutina, algoritmos, consumo, piloto automático y vida cotidiana, sin humo y con enfoque práctico para la vida real.",
+    "category": "Matrix",
+    "url": "/posts/trabajar-consumir-y-dormir-sin-pensar.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "matrix",
+      "trabajar,",
+      "consumir",
+      "dormir",
+      "pensar"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "La agenda que no elegiste",
+    "description": "Un texto de buenosdia.com sobre la agenda que no elegiste, conectado con rutina, algoritmos, consumo, piloto automático y vida cotidiana, sin humo y con enfoque práctico para la vida real.",
+    "category": "Matrix",
+    "url": "/posts/la-agenda-que-no-elegiste.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "matrix",
+      "agenda",
+      "elegiste"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "El cansancio como estado social",
+    "description": "Un texto de buenosdia.com sobre el cansancio como estado social, conectado con rutina, algoritmos, consumo, piloto automático y vida cotidiana, sin humo y con enfoque práctico para la vida real.",
+    "category": "Matrix",
+    "url": "/posts/el-cansancio-como-estado-social.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "matrix",
+      "cansancio",
+      "estado",
+      "social"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Publicidad, deseo y comparación",
+    "description": "Un texto de buenosdia.com sobre publicidad, deseo y comparación, conectado con rutina, algoritmos, consumo, piloto automático y vida cotidiana, sin humo y con enfoque práctico para la vida real.",
+    "category": "Matrix",
+    "url": "/posts/publicidad-deseo-y-comparacion.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "matrix",
+      "publicidad,",
+      "comparación"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "La normalidad que nadie cuestiona",
+    "description": "Un texto de buenosdia.com sobre la normalidad que nadie cuestiona, conectado con rutina, algoritmos, consumo, piloto automático y vida cotidiana, sin humo y con enfoque práctico para la vida real.",
+    "category": "Matrix",
+    "url": "/posts/la-normalidad-que-nadie-cuestiona.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "matrix",
+      "normalidad",
+      "cuestiona"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Vivir ocupado pero no avanzar",
+    "description": "Un texto de buenosdia.com sobre vivir ocupado pero no avanzar, conectado con rutina, algoritmos, consumo, piloto automático y vida cotidiana, sin humo y con enfoque práctico para la vida real.",
+    "category": "Matrix",
+    "url": "/posts/vivir-ocupado-pero-no-avanzar.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "matrix",
+      "ocupado",
+      "avanzar"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "La Matrix de las pequeñas costumbres",
+    "description": "Un texto de buenosdia.com sobre la Matrix de las pequeñas costumbres, conectado con rutina, algoritmos, consumo, piloto automático y vida cotidiana, sin humo y con enfoque práctico para la vida real.",
+    "category": "Matrix",
+    "url": "/posts/la-matrix-de-las-pequenas-costumbres.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "matrix",
+      "Matrix",
+      "pequeñas",
+      "costumbres"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Pantallas, compras y ruido mental",
+    "description": "Un texto de buenosdia.com sobre pantallas, compras y ruido mental, conectado con rutina, algoritmos, consumo, piloto automático y vida cotidiana, sin humo y con enfoque práctico para la vida real.",
+    "category": "Matrix",
+    "url": "/posts/pantallas-compras-y-ruido-mental.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "matrix",
+      "pantallas,",
+      "compras",
+      "mental"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Cuando todos corren hacia ningún lado",
+    "description": "Un texto de buenosdia.com sobre cuando todos corren hacia ningún lado, conectado con rutina, algoritmos, consumo, piloto automático y vida cotidiana, sin humo y con enfoque práctico para la vida real.",
+    "category": "Matrix",
+    "url": "/posts/cuando-todos-corren-hacia-ningun-lado.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "matrix",
+      "cuando",
+      "corren",
+      "ningún"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "El sistema que premia distracción",
+    "description": "Un texto de buenosdia.com sobre el sistema que premia distracción, conectado con rutina, algoritmos, consumo, piloto automático y vida cotidiana, sin humo y con enfoque práctico para la vida real.",
+    "category": "Matrix",
+    "url": "/posts/el-sistema-que-premia-distraccion.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "matrix",
+      "sistema",
+      "premia",
+      "distracción"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "La vida administrada por notificaciones",
+    "description": "Un texto de buenosdia.com sobre la vida administrada por notificaciones, conectado con rutina, algoritmos, consumo, piloto automático y vida cotidiana, sin humo y con enfoque práctico para la vida real.",
+    "category": "Matrix",
+    "url": "/posts/la-vida-administrada-por-notificaciones.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "matrix",
+      "administrada",
+      "notificaciones"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Salir de la jaula invisible",
+    "description": "Un texto de buenosdia.com sobre salir de la jaula invisible, conectado con rutina, algoritmos, consumo, piloto automático y vida cotidiana, sin humo y con enfoque práctico para la vida real.",
+    "category": "Matrix",
+    "url": "/posts/salir-de-la-jaula-invisible.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "matrix",
+      "invisible"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Rutinas que parecen naturales",
+    "description": "Un texto de buenosdia.com sobre rutinas que parecen naturales, conectado con rutina, algoritmos, consumo, piloto automático y vida cotidiana, sin humo y con enfoque práctico para la vida real.",
+    "category": "Matrix",
+    "url": "/posts/rutinas-que-parecen-naturales.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "matrix",
+      "rutinas",
+      "parecen",
+      "naturales"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "La cultura de estar siempre disponible",
+    "description": "Un texto de buenosdia.com sobre la cultura de estar siempre disponible, conectado con rutina, algoritmos, consumo, piloto automático y vida cotidiana, sin humo y con enfoque práctico para la vida real.",
+    "category": "Matrix",
+    "url": "/posts/la-cultura-de-estar-siempre-disponible.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "matrix",
+      "cultura",
+      "siempre",
+      "disponible"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "El miedo a quedarse en silencio",
+    "description": "Un texto de buenosdia.com sobre el miedo a quedarse en silencio, conectado con rutina, algoritmos, consumo, piloto automático y vida cotidiana, sin humo y con enfoque práctico para la vida real.",
+    "category": "Matrix",
+    "url": "/posts/el-miedo-a-quedarse-en-silencio.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "matrix",
+      "quedarse",
+      "silencio"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "La Matrix también vive en la casa",
+    "description": "Un texto de buenosdia.com sobre la Matrix también vive en la casa, conectado con rutina, algoritmos, consumo, piloto automático y vida cotidiana, sin humo y con enfoque práctico para la vida real.",
+    "category": "Matrix",
+    "url": "/posts/la-matrix-tambien-vive-en-la-casa.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "matrix",
+      "Matrix",
+      "también"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Automatismos que roban decisión",
+    "description": "Un texto de buenosdia.com sobre automatismos que roban decisión, conectado con rutina, algoritmos, consumo, piloto automático y vida cotidiana, sin humo y con enfoque práctico para la vida real.",
+    "category": "Matrix",
+    "url": "/posts/automatismos-que-roban-decision.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "matrix",
+      "automatismos",
+      "decisión"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Normalizar el agotamiento",
+    "description": "Un texto de buenosdia.com sobre normalizar el agotamiento, conectado con rutina, algoritmos, consumo, piloto automático y vida cotidiana, sin humo y con enfoque práctico para la vida real.",
+    "category": "Matrix",
+    "url": "/posts/normalizar-el-agotamiento.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "matrix",
+      "normalizar",
+      "agotamiento"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Cuando obedecer parece elegir",
+    "description": "Un texto de buenosdia.com sobre cuando obedecer parece elegir, conectado con rutina, algoritmos, consumo, piloto automático y vida cotidiana, sin humo y con enfoque práctico para la vida real.",
+    "category": "Matrix",
+    "url": "/posts/cuando-obedecer-parece-elegir.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "matrix",
+      "cuando",
+      "obedecer",
+      "parece",
+      "elegir"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Despertar sin volverse paranoico",
+    "description": "Un texto de buenosdia.com sobre despertar sin volverse paranoico, conectado con rutina, algoritmos, consumo, piloto automático y vida cotidiana, sin humo y con enfoque práctico para la vida real.",
+    "category": "Matrix",
+    "url": "/posts/despertar-sin-volverse-paranoico.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "matrix",
+      "despertar",
+      "volverse",
+      "paranoico"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Empezar de cero sin fuerza",
+    "description": "Un texto de buenosdia.com sobre empezar de cero sin fuerza, conectado con reconstrucción, proyectos, foco, libertad práctica y salida del piloto automático, sin humo y con enfoque práctico para la vida real.",
+    "category": "Saliendo de la Matrix",
+    "url": "/posts/empezar-de-cero-sin-fuerza.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "saliendo-de-la-matrix",
+      "empezar",
+      "fuerza"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Reconstruir una vida con poco dinero",
+    "description": "Un texto de buenosdia.com sobre reconstruir una vida con poco dinero, conectado con reconstrucción, proyectos, foco, libertad práctica y salida del piloto automático, sin humo y con enfoque práctico para la vida real.",
+    "category": "Saliendo de la Matrix",
+    "url": "/posts/reconstruir-una-vida-con-poco-dinero.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "saliendo-de-la-matrix",
+      "reconstruir",
+      "dinero"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Volver a crear después de abandonar",
+    "description": "Un texto de buenosdia.com sobre volver a crear después de abandonar, conectado con reconstrucción, proyectos, foco, libertad práctica y salida del piloto automático, sin humo y con enfoque práctico para la vida real.",
+    "category": "Saliendo de la Matrix",
+    "url": "/posts/volver-a-crear-despues-de-abandonar.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "saliendo-de-la-matrix",
+      "volver",
+      "después",
+      "abandonar"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Ordenar proyectos que parecían muertos",
+    "description": "Un texto de buenosdia.com sobre ordenar proyectos que parecían muertos, conectado con reconstrucción, proyectos, foco, libertad práctica y salida del piloto automático, sin humo y con enfoque práctico para la vida real.",
+    "category": "Saliendo de la Matrix",
+    "url": "/posts/ordenar-proyectos-que-parecian-muertos.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "saliendo-de-la-matrix",
+      "ordenar",
+      "proyectos",
+      "parecían",
+      "muertos"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Hacer una cosa útil por día",
+    "description": "Un texto de buenosdia.com sobre hacer una cosa útil por día, conectado con reconstrucción, proyectos, foco, libertad práctica y salida del piloto automático, sin humo y con enfoque práctico para la vida real.",
+    "category": "Saliendo de la Matrix",
+    "url": "/posts/hacer-una-cosa-util-por-dia.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "saliendo-de-la-matrix"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Salir del pozo con rutina mínima",
+    "description": "Un texto de buenosdia.com sobre salir del pozo con rutina mínima, conectado con reconstrucción, proyectos, foco, libertad práctica y salida del piloto automático, sin humo y con enfoque práctico para la vida real.",
+    "category": "Saliendo de la Matrix",
+    "url": "/posts/salir-del-pozo-con-rutina-minima.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "saliendo-de-la-matrix",
+      "rutina",
+      "mínima"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Recuperar foco después del caos",
+    "description": "Un texto de buenosdia.com sobre recuperar foco después del caos, conectado con reconstrucción, proyectos, foco, libertad práctica y salida del piloto automático, sin humo y con enfoque práctico para la vida real.",
+    "category": "Saliendo de la Matrix",
+    "url": "/posts/recuperar-foco-despues-del-caos.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "saliendo-de-la-matrix",
+      "recuperar",
+      "después"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Crear ingresos online sin humo",
+    "description": "Un texto de buenosdia.com sobre crear ingresos online sin humo, conectado con reconstrucción, proyectos, foco, libertad práctica y salida del piloto automático, sin humo y con enfoque práctico para la vida real.",
+    "category": "Saliendo de la Matrix",
+    "url": "/posts/crear-ingresos-online-sin-humo.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "saliendo-de-la-matrix",
+      "ingresos",
+      "online"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Levantarte aunque nadie te empuje",
+    "description": "Un texto de buenosdia.com sobre levantarte aunque nadie te empuje, conectado con reconstrucción, proyectos, foco, libertad práctica y salida del piloto automático, sin humo y con enfoque práctico para la vida real.",
+    "category": "Saliendo de la Matrix",
+    "url": "/posts/levantarte-aunque-nadie-te-empuje.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "saliendo-de-la-matrix",
+      "levantarte",
+      "aunque",
+      "empuje"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Convertir bronca en trabajo",
+    "description": "Un texto de buenosdia.com sobre convertir bronca en trabajo, conectado con reconstrucción, proyectos, foco, libertad práctica y salida del piloto automático, sin humo y con enfoque práctico para la vida real.",
+    "category": "Saliendo de la Matrix",
+    "url": "/posts/convertir-bronca-en-trabajo.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "saliendo-de-la-matrix",
+      "convertir",
+      "bronca",
+      "trabajo"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Aprender otra vez desde abajo",
+    "description": "Un texto de buenosdia.com sobre aprender otra vez desde abajo, conectado con reconstrucción, proyectos, foco, libertad práctica y salida del piloto automático, sin humo y con enfoque práctico para la vida real.",
+    "category": "Saliendo de la Matrix",
+    "url": "/posts/aprender-otra-vez-desde-abajo.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "saliendo-de-la-matrix",
+      "aprender"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Dejar de esperar el momento perfecto",
+    "description": "Un texto de buenosdia.com sobre dejar de esperar el momento perfecto, conectado con reconstrucción, proyectos, foco, libertad práctica y salida del piloto automático, sin humo y con enfoque práctico para la vida real.",
+    "category": "Saliendo de la Matrix",
+    "url": "/posts/dejar-de-esperar-el-momento-perfecto.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "saliendo-de-la-matrix",
+      "esperar",
+      "momento",
+      "perfecto"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Crear una web como acto de rescate",
+    "description": "Un texto de buenosdia.com sobre crear una web como acto de rescate, conectado con reconstrucción, proyectos, foco, libertad práctica y salida del piloto automático, sin humo y con enfoque práctico para la vida real.",
+    "category": "Saliendo de la Matrix",
+    "url": "/posts/crear-una-web-como-acto-de-rescate.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "saliendo-de-la-matrix",
+      "rescate"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Volver a creer en tu oficio",
+    "description": "Un texto de buenosdia.com sobre volver a creer en tu oficio, conectado con reconstrucción, proyectos, foco, libertad práctica y salida del piloto automático, sin humo y con enfoque práctico para la vida real.",
+    "category": "Saliendo de la Matrix",
+    "url": "/posts/volver-a-creer-en-tu-oficio.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "saliendo-de-la-matrix",
+      "volver",
+      "oficio"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Hacer dinero con habilidades digitales",
+    "description": "Un texto de buenosdia.com sobre hacer dinero con habilidades digitales, conectado con reconstrucción, proyectos, foco, libertad práctica y salida del piloto automático, sin humo y con enfoque práctico para la vida real.",
+    "category": "Saliendo de la Matrix",
+    "url": "/posts/hacer-dinero-con-habilidades-digitales.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "saliendo-de-la-matrix",
+      "dinero",
+      "habilidades",
+      "digitales"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Sostener esperanza sin vender fantasía",
+    "description": "Un texto de buenosdia.com sobre sostener esperanza sin vender fantasía, conectado con reconstrucción, proyectos, foco, libertad práctica y salida del piloto automático, sin humo y con enfoque práctico para la vida real.",
+    "category": "Saliendo de la Matrix",
+    "url": "/posts/sostener-esperanza-sin-vender-fantasia.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "saliendo-de-la-matrix",
+      "sostener",
+      "esperanza",
+      "vender",
+      "fantasía"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Romper una etapa con acciones pequeñas",
+    "description": "Un texto de buenosdia.com sobre romper una etapa con acciones pequeñas, conectado con reconstrucción, proyectos, foco, libertad práctica y salida del piloto automático, sin humo y con enfoque práctico para la vida real.",
+    "category": "Saliendo de la Matrix",
+    "url": "/posts/romper-una-etapa-con-acciones-pequenas.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "saliendo-de-la-matrix",
+      "romper",
+      "acciones",
+      "pequeñas"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Salir del modo víctima sin negarte dolor",
+    "description": "Un texto de buenosdia.com sobre salir del modo víctima sin negarte dolor, conectado con reconstrucción, proyectos, foco, libertad práctica y salida del piloto automático, sin humo y con enfoque práctico para la vida real.",
+    "category": "Saliendo de la Matrix",
+    "url": "/posts/salir-del-modo-victima-sin-negarte-dolor.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "saliendo-de-la-matrix",
+      "víctima",
+      "negarte"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Reconstruirte sin aplausos",
+    "description": "Un texto de buenosdia.com sobre reconstruirte sin aplausos, conectado con reconstrucción, proyectos, foco, libertad práctica y salida del piloto automático, sin humo y con enfoque práctico para la vida real.",
+    "category": "Saliendo de la Matrix",
+    "url": "/posts/reconstruirte-sin-aplausos.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "saliendo-de-la-matrix",
+      "reconstruirte",
+      "aplausos"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Crear un sistema personal de avance",
+    "description": "Un texto de buenosdia.com sobre crear un sistema personal de avance, conectado con reconstrucción, proyectos, foco, libertad práctica y salida del piloto automático, sin humo y con enfoque práctico para la vida real.",
+    "category": "Saliendo de la Matrix",
+    "url": "/posts/crear-un-sistema-personal-de-avance.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "saliendo-de-la-matrix",
+      "sistema",
+      "personal",
+      "avance"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Dejar de mirar y empezar a hacer",
+    "description": "Un texto de buenosdia.com sobre dejar de mirar y empezar a hacer, conectado con reconstrucción, proyectos, foco, libertad práctica y salida del piloto automático, sin humo y con enfoque práctico para la vida real.",
+    "category": "Saliendo de la Matrix",
+    "url": "/posts/dejar-de-mirar-y-empezar-a-hacer.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "saliendo-de-la-matrix",
+      "empezar"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Internet como segunda oportunidad",
+    "description": "Un texto de buenosdia.com sobre internet como segunda oportunidad, conectado con reconstrucción, proyectos, foco, libertad práctica y salida del piloto automático, sin humo y con enfoque práctico para la vida real.",
+    "category": "Saliendo de la Matrix",
+    "url": "/posts/internet-como-segunda-oportunidad.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "saliendo-de-la-matrix",
+      "internet",
+      "segunda",
+      "oportunidad"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Ordenar la cabeza para ordenar la vida",
+    "description": "Un texto de buenosdia.com sobre ordenar la cabeza para ordenar la vida, conectado con reconstrucción, proyectos, foco, libertad práctica y salida del piloto automático, sin humo y con enfoque práctico para la vida real.",
+    "category": "Saliendo de la Matrix",
+    "url": "/posts/ordenar-la-cabeza-para-ordenar-la-vida.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "saliendo-de-la-matrix",
+      "ordenar",
+      "cabeza",
+      "ordenar"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Trabajar en silencio hasta ver movimiento",
+    "description": "Un texto de buenosdia.com sobre trabajar en silencio hasta ver movimiento, conectado con reconstrucción, proyectos, foco, libertad práctica y salida del piloto automático, sin humo y con enfoque práctico para la vida real.",
+    "category": "Saliendo de la Matrix",
+    "url": "/posts/trabajar-en-silencio-hasta-ver-movimiento.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "saliendo-de-la-matrix",
+      "trabajar",
+      "silencio",
+      "movimiento"
+    ],
+    "readingTime": "9 min"
+  },
+  {
+    "title": "Volver a subir sin caer abruptamente",
+    "description": "Un texto de buenosdia.com sobre volver a subir sin caer abruptamente, conectado con reconstrucción, proyectos, foco, libertad práctica y salida del piloto automático, sin humo y con enfoque práctico para la vida real.",
+    "category": "Saliendo de la Matrix",
+    "url": "/posts/volver-a-subir-sin-caer-abruptamente.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": [
+      "saliendo-de-la-matrix",
+      "volver",
+      "abruptamente"
+    ],
+    "readingTime": "9 min"
   }
 ]
