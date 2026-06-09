@@ -1,4 +1,4 @@
-name: Generar 150 publicaciones SEO
+name: Generar 300 publicaciones premium SEO
 
 on:
   push:
@@ -21,12 +21,12 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-      - name: Generar publicaciones, feed y sitemap
+      - name: Generar publicaciones premium, índices, tags y sitemap
         run: node scripts/generar-150-posts.mjs
       - name: Publicar cambios generados
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add posts data/posts.json sitemap.xml
-          git commit -m "Generar 150 publicaciones SEO estáticas" || echo "Sin cambios para publicar"
+          git add posts data sitemap.xml robots.txt assets/img/posts tecnologia pan-y-circo alimentacion deportes matrix saliendo-de-la-matrix tags
+          git commit -m "Generar 300 publicaciones premium SEO" || echo "Sin cambios para publicar"
           git push
