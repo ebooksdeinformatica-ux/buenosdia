@@ -1,5 +1,25 @@
 [
   {
+    "title": "La rutina normal que te va apagando sin hacer ruido",
+    "description": "Un texto sobre la rutina, el piloto automático y esos hábitos cotidianos que parecen normales hasta que te dejan sin energía.",
+    "category": "Matrix",
+    "url": "/posts/rutina-normal-que-te-va-apagando.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": ["matrix", "rutina", "piloto automático", "vida real"],
+    "readingTime": "4 min"
+  },
+  {
+    "title": "Una PC vieja también puede ser un taller digital",
+    "description": "No hace falta esperar la computadora perfecta para empezar a crear, publicar y ordenar un proyecto online.",
+    "category": "Tecnología",
+    "url": "/posts/pc-vieja-taller-digital.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": ["tecnología", "internet", "pc vieja", "proyectos online"],
+    "readingTime": "4 min"
+  },
+  {
     "title": "Cómo empezar de cero cuando sentís que ya perdiste demasiado",
     "description": "Un texto real sobre volver a levantarte cuando la vida te dejó cansado, sin promesas falsas, sin motivación barata y sin esconder el dolor.",
     "category": "Saliendo de la Matrix",
