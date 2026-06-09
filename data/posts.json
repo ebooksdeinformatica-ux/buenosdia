@@ -1,5 +1,35 @@
 [
   {
+    "title": "La inteligencia artificial no te sirve si no sabés qué pedirle",
+    "description": "La IA puede acelerar ideas, publicaciones y proyectos, pero primero necesitás dirección, criterio y una pregunta clara.",
+    "category": "Tecnología",
+    "url": "/posts/inteligencia-artificial-no-te-sirve-si-no-sabes-que-pedirle.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": ["inteligencia artificial", "tecnología", "prompts", "proyectos online"],
+    "readingTime": "5 min"
+  },
+  {
+    "title": "Entrenar cuando no tenés ganas: la batalla invisible",
+    "description": "Un texto sobre disciplina, cuerpo y esos días donde entrenar no sale de la motivación sino de no querer seguir igual.",
+    "category": "Deportes",
+    "url": "/posts/entrenar-cuando-no-tenes-ganas.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": ["deportes", "disciplina", "entrenar sin ganas", "hábitos"],
+    "readingTime": "5 min"
+  },
+  {
+    "title": "Comer mal también te programa la cabeza",
+    "description": "Un texto directo sobre alimentación, energía mental y hábitos cotidianos que parecen chicos pero terminan manejando el día.",
+    "category": "Alimentación",
+    "url": "/posts/comer-mal-tambien-te-programa-la-cabeza.html",
+    "date": "2026-06-09",
+    "image": "/assets/img/posts/empezar-de-cero-cuando-sentis-que-perdiste-demasiado.svg",
+    "tags": ["alimentación", "energía mental", "hábitos", "matrix cotidiana"],
+    "readingTime": "5 min"
+  },
+  {
     "title": "La rutina normal que te va apagando sin hacer ruido",
     "description": "Un texto sobre la rutina, el piloto automático y esos hábitos cotidianos que parecen normales hasta que te dejan sin energía.",
     "category": "Matrix",
