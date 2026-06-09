@@ -1,0 +1,33 @@
+name: Build total SEO buenosdia
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+    paths:
+      - 'scripts/generar-150-posts.mjs'
+      - '.github/workflows/build-total-seo.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  build-total:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descargar repositorio
+        uses: actions/checkout@v4
+      - name: Preparar Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Generar todo el sistema SEO
+        run: node scripts/generar-150-posts.mjs
+      - name: Publicar sistema generado
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add posts data sitemap.xml robots.txt assets/img/posts tecnologia pan-y-circo alimentacion deportes matrix saliendo-de-la-matrix tags
+          git status --short
+          git commit -m "Build total SEO: 300 posts premium, índices y tags" || echo "Sin cambios para publicar"
+          git push
