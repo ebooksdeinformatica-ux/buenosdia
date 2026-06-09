@@ -1,0 +1,33 @@
+name: Generar índices premium de categorías
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'data/posts.json'
+      - 'scripts/generar-indices-categorias.mjs'
+      - '.github/workflows/generar-indices-categorias.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-category-indexes:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descargar repositorio
+        uses: actions/checkout@v4
+      - name: Preparar Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Generar índices de categorías
+        run: node scripts/generar-indices-categorias.mjs
+      - name: Publicar cambios generados
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add tecnologia pan-y-circo alimentacion deportes matrix saliendo-de-la-matrix sitemap.xml
+          git commit -m "Generar índices premium de categorías" || echo "Sin cambios para publicar"
+          git push
