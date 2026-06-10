@@ -6,6 +6,7 @@ on:
     branches: [ main ]
     paths:
       - 'scripts/generar-150-posts.mjs'
+      - 'scripts/postprocesar-publicaciones.mjs'
       - '.github/workflows/build-total-seo.yml'
 
 permissions:
@@ -23,14 +24,13 @@ jobs:
           node-version: '20'
       - name: Generar publicaciones y páginas
         run: node scripts/generar-150-posts.mjs
-      - name: Limpiar lenguaje interno de las publicaciones
-        run: |
-          node -e "const fs=require('fs'),p=require('path');const d='posts';const r=[['<h2>Cómo se conecta con SEO, proyectos y vida diaria</h2>','<h2>Cómo llevarlo al día de hoy</h2>'],['Este sitio no separa el contenido de la vida. Una publicación puede hablar de tecnología y terminar tocando disciplina. Puede hablar de alimentación y terminar tocando foco. Puede hablar de Matrix y terminar en una acción digital. Esa mezcla es parte de la identidad editorial: internet, cuerpo, cabeza y proyecto viviendo en la misma mesa.','La vida real no viene separada por temas. La tecnología se mezcla con el cuerpo, la comida con el foco, el descanso con las ganas y una decisión pequeña puede cambiar el tono de todo el día.'],['En términos de SEO moderno, un texto fuerte no es solo largo. Tiene intención, contexto, enlaces internos, lenguaje natural, estructura clara y una respuesta que una persona real puede usar. Por eso cada publicación conecta con otras: para que el lector arme camino, no para encerrarlo en una página suelta.','Un texto sirve cuando te deja algo para hacer, no solo algo para asentir con la cabeza. La idea es tomar una frase, bajarla al día y convertirla en una acción concreta.'],['Eso es SEO para la vida real: intención clara, estructura clara y acción clara.','Eso es avance real: una intención clara, un paso concreto y una acción que puedas terminar.']];for(const f of fs.readdirSync(d)){if(!f.endsWith('.html'))continue;const x=p.join(d,f);let s=fs.readFileSync(x,'utf8');for(const [a,b] of r)s=s.split(a).join(b);fs.writeFileSync(x,s)}"
+      - name: Limpiar textos públicos e instalar Statcounter global
+        run: node scripts/postprocesar-publicaciones.mjs
       - name: Publicar sistema generado
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add posts data sitemap.xml robots.txt assets/img/posts tecnologia pan-y-circo alimentacion deportes matrix saliendo-de-la-matrix tags
+          git add -A
           git status --short
-          git commit -m "Actualizar publicaciones para visitantes" || echo "Sin cambios para publicar"
+          git commit -m "Actualizar publicaciones y Statcounter global" || echo "Sin cambios para publicar"
           git push
