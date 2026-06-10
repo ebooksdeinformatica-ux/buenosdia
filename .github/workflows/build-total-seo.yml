@@ -8,6 +8,7 @@ on:
       - 'scripts/generar-150-posts.mjs'
       - 'scripts/recrear-publicaciones-por-intencion.mjs'
       - 'scripts/postprocesar-publicaciones.mjs'
+      - 'scripts/preparar-indexacion.mjs'
       - 'scripts/auditar-publicaciones.mjs'
       - '.github/workflows/build-total-seo.yml'
 
@@ -25,10 +26,11 @@ jobs:
       - run: node scripts/generar-150-posts.mjs
       - run: node scripts/recrear-publicaciones-por-intencion.mjs
       - run: node scripts/postprocesar-publicaciones.mjs
+      - run: node scripts/preparar-indexacion.mjs
       - run: node scripts/auditar-publicaciones.mjs
       - run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A
-          git commit -m "Rehacer 300 publicaciones por intención y auditarlas" || echo "Sin cambios"
+          git commit -m "Preparar indexación y auditar las 300 publicaciones" || echo "Sin cambios"
           git push
