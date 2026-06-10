@@ -6,6 +6,7 @@ on:
     branches: [ main ]
     paths:
       - 'scripts/generar-150-posts.mjs'
+      - 'scripts/recrear-publicaciones-por-intencion.mjs'
       - 'scripts/postprocesar-publicaciones.mjs'
       - 'scripts/auditar-publicaciones.mjs'
       - '.github/workflows/build-total-seo.yml'
@@ -17,23 +18,17 @@ jobs:
   build-total:
     runs-on: ubuntu-latest
     steps:
-      - name: Descargar repositorio
-        uses: actions/checkout@v4
-      - name: Preparar Node
-        uses: actions/setup-node@v4
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: '20'
-      - name: Generar publicaciones y páginas
-        run: node scripts/generar-150-posts.mjs
-      - name: Limpiar textos públicos e instalar Statcounter global
-        run: node scripts/postprocesar-publicaciones.mjs
-      - name: Auditar publicaciones
-        run: node scripts/auditar-publicaciones.mjs
-      - name: Publicar sistema generado
-        run: |
+      - run: node scripts/generar-150-posts.mjs
+      - run: node scripts/recrear-publicaciones-por-intencion.mjs
+      - run: node scripts/postprocesar-publicaciones.mjs
+      - run: node scripts/auditar-publicaciones.mjs
+      - run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A
-          git status --short
-          git commit -m "Actualizar publicaciones auditadas" || echo "Sin cambios para publicar"
+          git commit -m "Rehacer 300 publicaciones por intención y auditarlas" || echo "Sin cambios"
           git push
