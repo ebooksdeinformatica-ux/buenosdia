@@ -7,6 +7,7 @@ on:
     paths:
       - 'scripts/generar-150-posts.mjs'
       - 'scripts/postprocesar-publicaciones.mjs'
+      - 'scripts/auditar-publicaciones.mjs'
       - '.github/workflows/build-total-seo.yml'
 
 permissions:
@@ -26,11 +27,13 @@ jobs:
         run: node scripts/generar-150-posts.mjs
       - name: Limpiar textos públicos e instalar Statcounter global
         run: node scripts/postprocesar-publicaciones.mjs
+      - name: Auditar publicaciones
+        run: node scripts/auditar-publicaciones.mjs
       - name: Publicar sistema generado
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A
           git status --short
-          git commit -m "Actualizar publicaciones y Statcounter global" || echo "Sin cambios para publicar"
+          git commit -m "Actualizar publicaciones auditadas" || echo "Sin cambios para publicar"
           git push
