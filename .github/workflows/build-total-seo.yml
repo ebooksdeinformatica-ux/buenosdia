@@ -14,6 +14,10 @@ on:
       - 'scripts/auditar-publicaciones.mjs'
       - '.github/workflows/build-total-seo.yml'
 
+concurrency:
+  group: build-total-${{ github.ref }}
+  cancel-in-progress: true
+
 permissions:
   contents: write
 
