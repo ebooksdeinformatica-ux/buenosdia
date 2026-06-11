@@ -1,12 +1,11 @@
-name: Validar estable
+name: Revisar pulido estable
 on:
   pull_request:
     branches: [main]
 permissions:
-  contents: write
+  contents: read
 jobs:
-  validar:
-    if: github.actor != 'github-actions[bot]'
+  revisar:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -15,17 +14,10 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
-      - run: |
-          node scripts/pulir-build-estable.mjs
-          node scripts/finalizar-categorias.mjs
-          node scripts/preparar-indexacion.mjs
-          node scripts/postprocesar-publicaciones.mjs
-          node scripts/auditar-publicaciones-v2.mjs
-          node scripts/auditar-fragmentos.mjs
-          node scripts/auditar-sitio.mjs
-      - run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A
-          git commit -m "Validar release estable" || echo "Sin cambios"
-          git push
+      - name: Ejecutar pulido
+        continue-on-error: true
+        run: node scripts/pulir-build-estable.mjs 2>&1 | tee salida-pulido.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: salida-pulido
+          path: salida-pulido.txt
