@@ -1,0 +1,31 @@
+name: Validar estable
+on:
+  pull_request:
+    branches: [main]
+permissions:
+  contents: write
+jobs:
+  validar:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - run: |
+          node scripts/pulir-build-estable.mjs
+          node scripts/finalizar-categorias.mjs
+          node scripts/preparar-indexacion.mjs
+          node scripts/postprocesar-publicaciones.mjs
+          node scripts/auditar-publicaciones-v2.mjs
+          node scripts/auditar-fragmentos.mjs
+          node scripts/auditar-sitio.mjs
+      - run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Validar release estable" || echo "Sin cambios"
+          git push
