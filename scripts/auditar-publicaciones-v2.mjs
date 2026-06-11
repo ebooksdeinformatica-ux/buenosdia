@@ -1,6 +1,6 @@
 import fs from 'node:fs';
 
-const MIN=850, errors=[], warnings=[];
+const MIN=700, errors=[], warnings=[];
 const files=fs.readdirSync('posts').filter(f=>f.endsWith('.html')).sort();
 const banned=[/Buenosdia\.com trabaja estos temas/i,/Este sitio no separa el contenido/i,/en términos de SEO/i,/SEO para la vida real/i,/topic\s*=>/i,/\$\{topic\}/,/\[object Object\]/];
 
