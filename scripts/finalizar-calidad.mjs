@@ -24,11 +24,11 @@ function detail(post){
   const p=profiles[post.category];
   const t=esc(post.title.toLowerCase());
   return `<section class="deep-guide"><h2>Aplicación detallada</h2>
-<h3>Definir el punto de partida</h3><p>Para trabajar ${t}, describí la situación actual con datos simples y elegí un ${esc(p.focus)}. Anotá qué ocurre, cuándo aparece, qué recursos ya tenés y qué resultado querés observar. Esa base evita cambiar muchas variables al mismo tiempo y permite distinguir una mejora real de una impresión momentánea.</p>
-<h3>Plan concreto</h3><p>Un plan útil para ${t} puede seguir esta secuencia: ${esc(p.steps)}. Convertí cada paso en una tarea que pueda terminarse y guardarse. Si una acción depende de condiciones perfectas, reducí su tamaño. La continuidad mejora cuando retomar exige pocas decisiones y el siguiente paso queda escrito.</p>
-<h3>Riesgos y límites</h3><p>Al abordar ${t}, prestá atención a ${esc(p.risks)}. No uses una guía general para reemplazar una evaluación médica, nutricional, física, de seguridad o financiera cuando existe una situación concreta. En temas sensibles, verificá datos, evitá promesas y buscá ayuda profesional cuando corresponda.</p>
-<h3>Cómo medir avances</h3><p>Revisá ${t} con indicadores propios: ${esc(p.measure)}. Compará períodos similares y no saques conclusiones por un solo día. Mantené lo que aporta, ajustá lo que resulta pesado y eliminá lo que no produce una diferencia visible.</p>
-<h3>Prueba de siete días</h3><p>Durante una semana, elegí una sola modificación relacionada con ${t}. Registrá el punto de partida, aplicá el cambio en un horario definido y anotá el resultado. Al final, respondé qué ayudó, qué obstáculo apareció y cuál es el siguiente ajuste más pequeño.</p></section>`;
+<h3>Definir el punto de partida</h3><p>Para trabajar el tema “${t}”, describí la situación actual con datos simples y definí como foco ${esc(p.focus)}. Anotá qué ocurre, cuándo aparece, qué recursos ya tenés y qué resultado querés observar. Esa base evita cambiar muchas variables al mismo tiempo y permite distinguir una mejora real de una impresión momentánea.</p>
+<h3>Plan concreto</h3><p>Un plan útil para “${t}” puede seguir esta secuencia: ${esc(p.steps)}. Convertí cada paso en una tarea que pueda terminarse y guardarse. Si una acción depende de condiciones perfectas, reducí su tamaño. La continuidad mejora cuando retomar exige pocas decisiones y el siguiente paso queda escrito.</p>
+<h3>Riesgos y límites</h3><p>Al abordar “${t}”, prestá atención a ${esc(p.risks)}. No uses una guía general para reemplazar una evaluación médica, nutricional, física, de seguridad o financiera cuando existe una situación concreta. En temas sensibles, verificá datos, evitá promesas y buscá ayuda profesional cuando corresponda.</p>
+<h3>Cómo medir avances</h3><p>Revisá “${t}” con indicadores propios: ${esc(p.measure)}. Compará períodos similares y no saques conclusiones por un solo día. Mantené lo que aporta, ajustá lo que resulta pesado y eliminá lo que no produce una diferencia visible.</p>
+<h3>Prueba de siete días</h3><p>Durante una semana, elegí una sola modificación relacionada con “${t}”. Registrá el punto de partida, aplicá el cambio en un horario definido y anotá el resultado. Al final, respondé qué ayudó, qué obstáculo apareció y cuál es el siguiente ajuste más pequeño.</p></section>`;
 }
 
 function setDescription(html,d){
@@ -53,7 +53,7 @@ for(const post of posts){
   html=html.replace(/<section data-value-block="true">[\s\S]*?<\/section>/gi,'');
   if(!html.includes('data-value-block="true"')) html=html.replace('<article class="post-shell post-card-article">','<article class="post-shell post-card-article"><span data-value-block="true" hidden></span>');
   if(!html.includes('class="deep-guide"')) html=html.replace('<section class="related-box"><h2>Lecturas relacionadas</h2>',`${detail(post)}<section class="related-box"><h2>Lecturas relacionadas</h2>`);
-  if(words(html)<900) html=html.replace('</article>',`<section class="practical-review"><h2>Revisión final</h2><p>Antes de cerrar ${esc(post.title.toLowerCase())}, escribí una acción de menos de una hora, la señal que vas a observar y el momento de revisión. Repetí varios intentos antes de decidir si sirve. Si el tema involucra salud, lesiones, seguridad o dinero, verificá la información y buscá orientación adecuada cuando una guía general no alcance.</p></section></article>`);
+  if(words(html)<900) html=html.replace('</article>',`<section class="practical-review"><h2>Revisión final</h2><p>Antes de cerrar esta guía sobre “${esc(post.title)}”, escribí una acción de menos de una hora, la señal que vas a observar y el momento de revisión. Repetí varios intentos antes de decidir si sirve. Si el tema involucra salud, lesiones, seguridad o dinero, verificá la información y buscá orientación adecuada cuando una guía general no alcance.</p></section></article>`);
   map.set(rel,{post,html});
 }
 
