@@ -2,8 +2,6 @@ name: Build total buenosdia
 
 on:
   workflow_dispatch:
-  pull_request:
-    branches: [ main ]
   push:
     branches: [ main ]
     paths:
@@ -22,8 +20,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        with:
-          ref: ${{ github.event.pull_request.head.ref || github.ref_name }}
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
@@ -37,4 +33,4 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A
           git commit -m "Preparar indexación y auditar las 300 publicaciones" || echo "Sin cambios"
-          git push origin HEAD:${{ github.event.pull_request.head.ref || github.ref_name }}
+          git push
