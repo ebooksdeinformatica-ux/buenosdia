@@ -1,0 +1,38 @@
+name: Release final 300 publicaciones
+
+on:
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  generar-validar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.ref || github.ref_name }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - run: node scripts/parchear-reescritor.mjs
+      - run: node scripts/generar-150-posts.mjs
+      - run: node scripts/recrear-publicaciones-por-intencion.mjs
+      - run: node scripts/postprocesar-publicaciones.mjs
+      - run: node scripts/finalizar-calidad.mjs
+      - run: node scripts/finalizar-categorias.mjs
+      - run: node scripts/preparar-indexacion.mjs
+      - run: node scripts/postprocesar-publicaciones.mjs
+      - run: node scripts/auditar-publicaciones.mjs
+      - run: node scripts/auditar-fragmentos.mjs
+      - run: node scripts/auditar-sitio.mjs
+      - name: Guardar build aprobado
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Release final: 300 publicaciones auditadas" || echo "Sin cambios"
+          git push origin HEAD:${{ github.event.pull_request.head.ref || github.ref_name }}
