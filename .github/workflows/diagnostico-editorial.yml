@@ -1,8 +1,6 @@
 name: Diagnostico editorial completo
 
 on:
-  pull_request:
-    branches: [ main ]
   workflow_dispatch:
 
 permissions:
@@ -13,8 +11,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        with:
-          ref: ${{ github.event.pull_request.head.ref || github.ref_name }}
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
@@ -30,8 +26,7 @@ jobs:
       - run: node scripts/finalizar-categorias.mjs
       - run: node scripts/preparar-indexacion.mjs
       - run: node scripts/postprocesar-publicaciones.mjs
-      - name: Guardar salida editorial
-        run: node scripts/auditar-publicaciones-v2.mjs > auditoria-editorial.txt 2>&1 || true
+      - run: node scripts/auditar-publicaciones-v2.mjs > auditoria-editorial.txt 2>&1 || true
       - uses: actions/upload-artifact@v4
         with:
           name: auditoria-editorial-completa
