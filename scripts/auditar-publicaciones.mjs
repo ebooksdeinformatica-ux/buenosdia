@@ -92,13 +92,13 @@ for (const [paragraph, owners] of shared) {
 }
 
 console.log(`Auditadas ${files.length} publicaciones.`);
-console.log(`Advertencias: ${warnings.length}`);
-for (const warning of warnings.slice(0, 100)) console.warn(`WARN: ${warning}`);
-
 if (errors.length) {
   console.error(`Errores: ${errors.length}`);
-  for (const error of errors.slice(0, 200)) console.error(`ERROR: ${error}`);
+  for (const error of errors.slice(0, 80)) console.error(`ERROR: ${error}`);
+  console.log(`Advertencias adicionales: ${warnings.length}`);
   process.exit(1);
 }
 
+console.log(`Advertencias: ${warnings.length}`);
+for (const warning of warnings.slice(0, 40)) console.warn(`WARN: ${warning}`);
 console.log('Auditoría aprobada: contenido extenso, limpio y técnicamente completo.');
