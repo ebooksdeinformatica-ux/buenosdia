@@ -55,11 +55,11 @@ function titleFromPost(post) {
 function categorySlug(post) {
   return CATEGORY_SLUG[post.category] || slugify(post.category);
 }
-function sourcesHtml(keys = []) {
+function sourcesHtml(keys = [], topic = '') {
   const items = keys.flatMap(k => SOURCES[k] || []);
   const unique = [...new Map(items.map(x => [x.url, x])).values()];
   if (!unique.length) return '';
-  return `<section class="related-box sources-box"><h2>Fuentes consultadas</h2><ul>${unique.map(s => `<li><a href="${s.url}" rel="nofollow noopener" target="_blank">${esc(s.name)}</a></li>`).join('')}</ul><p>La información es general y no reemplaza una evaluación profesional cuando existe un problema médico, nutricional, físico o financiero concreto.</p></section>`;
+  return `<section class="related-box sources-box"><h2>Fuentes consultadas</h2><ul>${unique.map(s => `<li><a href="${s.url}" rel="nofollow noopener" target="_blank">${esc(s.name)}</a></li>`).join('')}</ul><p>Estas fuentes permiten verificar y ampliar “${esc(topic)}”. Cuando el tema involucra salud, dinero o seguridad, una guía general no reemplaza asesoramiento profesional.</p></section>`;
 }
 
 function classify(post) {
@@ -67,7 +67,7 @@ function classify(post) {
   if (post.category === 'Tecnología') {
     if (/contrasen|cuentas|backup|respaldo|seguridad/.test(t)) return 'security';
     if (/inteligencia artificial|\bia\b|prompt/.test(t)) return 'ai';
-    if (/git|github|web|blog|pagina|seo|adsense/.test(t)) return 'web';
+    if (/(?:\bgit\b|github|\bweb\b|blog|pagina|seo|adsense)/.test(t)) return 'web';
     if (/vender|ingres|servicio|producto|dinero|marca personal/.test(t)) return 'digital-income';
     if (/archivo|organizar|rutina|calendario|mantenimiento/.test(t)) return 'workflow';
     return 'tool';
@@ -267,7 +267,7 @@ const LAYOUTS = [
 function practicalPlan(post, seed) {
   const topic = esc(post.title.toLowerCase());
   const variants = [
-    [`Día 1: registrá cómo aparece ${topic}.`,`Día 2: eliminá una fricción o distracción.`,`Día 3: prepará una alternativa concreta.`,`Días 4 y 5: repetí la acción mínima.`,`Día 6: compará energía, tiempo o resultado.`,`Día 7: decidí qué mantener.`],
+    [`Día 1: describí el punto de partida de “${topic}”.`,`Día 2: identificá el obstáculo principal.`,`Día 3: prepará una acción concreta.`,`Días 4 y 5: repetí una versión sostenible.`,`Día 6: compará el resultado con el inicio.`,`Día 7: decidí qué mantener o ajustar.`],
     [`Definí un resultado pequeño y verificable.`,`Elegí un bloque de tiempo realista.`,`Prepará materiales antes de empezar.`,`Terminá una versión simple.`,`Pedí una devolución o revisá el resultado.`,`Anotá el próximo paso.`],
     [`Medí la situación actual durante dos días.`,`Elegí una sola variable para cambiar.`,`Sostenela durante cinco días.`,`Registrá obstáculos sin juzgarte.`,`Ajustá el tamaño de la acción.`,`Repetí otra semana si aporta valor.`]
   ];
@@ -282,26 +282,26 @@ function articleBody(post, intent) {
   const opening = typeof opener === 'function' ? opener(post.title) : `${post.title} se entiende mejor cuando se observa como un problema concreto, con causas, costos y decisiones posibles.`;
   const ordered = block.paragraphs.map((p, i) => ({ heading: block.headings[i] || layout[i] || `Paso ${i+1}`, paragraph:p }));
   const shuffled = seed % 2 ? [...ordered].reverse() : ordered;
-  const sections = shuffled.map((s, i) => `<h2>${esc(s.heading)}</h2><p>${esc(s.paragraph)}</p><p>${esc(topicSpecific(post, intent, i, seed))}</p>`).join('');
-  return `<p>${esc(opening)}</p><p>${esc(contextParagraph(post, intent, seed))}</p><p class="pullquote">${esc(pick(quotesFor(post.category), seed))}</p>${sections}<h2>${esc(layout[3])}</h2><ul>${practicalPlan(post, seed)}</ul><h2>${esc(layout[4])}</h2><p>${esc(conclusion(post, intent, seed))}</p>${sourcesHtml(block.sources)}`;
+  const sections = shuffled.map((s, i) => `<h2>${esc(s.heading)}</h2><p>${esc(`${s.paragraph} ${topicSpecific(post, intent, i, seed)}`)}</p>`).join('');
+  return `<p>${esc(opening)}</p><p>${esc(contextParagraph(post, intent, seed))}</p><p class="pullquote">${esc(pick(quotesFor(post.category), seed))}</p>${sections}<h2>${esc(layout[3])}</h2><ul>${practicalPlan(post, seed)}</ul><h2>${esc(layout[4])}</h2><p>${esc(conclusion(post, intent, seed))}</p>${sourcesHtml(block.sources, post.title)}`;
 }
 
 function contextParagraph(post, intent, seed) {
-  const topic = post.title.toLowerCase();
+  const topic = post.title;
   const options = [
-    `Antes de cambiar ${topic}, conviene registrar durante unos días cuándo ocurre, qué lo dispara y qué consecuencia deja. Esa observación evita aplicar soluciones genéricas a un problema mal definido.`,
-    `La mejor estrategia para ${topic} depende del punto de partida, los recursos disponibles y el costo de sostenerla. Una opción simple que se repite suele superar a un plan ideal que dura poco.`,
-    `No hace falta resolver ${topic} en una sola semana. El objetivo inicial es producir información propia: qué funciona, qué falla y qué ajuste reduce más fricción.`
+    `Para evaluar “${topic}”, registrá el punto de partida, el contexto y la consecuencia que querés modificar. Esa observación evita aplicar soluciones generales a un problema mal definido.`,
+    `La estrategia para “${topic}” depende del punto de partida, los recursos disponibles y el costo de sostenerla. Una opción simple y repetible suele superar a un plan ideal que dura poco.`,
+    `No hace falta resolver “${topic}” en una semana. El objetivo inicial es obtener información propia: qué funciona, qué falla y qué ajuste reduce más fricción.`
   ];
   return pick(options, seed);
 }
 function topicSpecific(post, intent, index, seed) {
-  const topic = post.title.toLowerCase();
+  const topic = post.title;
   const options = [
-    `Aplicado a ${topic}, esto significa elegir un cambio que pueda observarse: tiempo ahorrado, tarea terminada, síntoma registrado, gasto evitado o sesión sostenida.`,
-    `Para ${topic}, conviene anotar el punto de partida y revisar el resultado después de varios intentos, no después de un solo día bueno o malo.`,
-    `El cambio alrededor de ${topic} debe caber en la vida actual. Si requiere condiciones perfectas, probablemente necesita dividirse en una versión más pequeña.`,
-    `Una señal útil en ${topic} es que la acción dependa cada vez menos de recordar o improvisar y más de un entorno preparado.`
+    `En “${topic}”, elegí un cambio observable: tiempo ahorrado, tarea terminada, gasto evitado, síntoma registrado o sesión sostenida.`,
+    `Anotá el punto de partida de “${topic}” y revisá el resultado después de varios intentos, no después de un único día.`,
+    `El cambio relacionado con “${topic}” debe caber en tu vida actual. Si exige condiciones perfectas, dividilo en una versión más pequeña.`,
+    `Una señal de mejora en “${topic}” es depender menos de improvisar y más de un entorno preparado.`
   ];
   return pick(options, seed, index);
 }
@@ -340,7 +340,7 @@ function render(post) {
   const description = `Guía práctica sobre ${post.title.toLowerCase()}: causas, pasos concretos, errores frecuentes y una forma realista de medir avances.`.slice(0, 165);
   const ld = JSON.stringify({ '@context':'https://schema.org','@type':'BlogPosting', headline:post.title, description, datePublished:post.date, dateModified:'2026-06-10', author:{'@type':'Person',name:'ASPF'}, publisher:{'@type':'Organization',name:'buenosdia.com'}, image:`${SITE}${post.image}`, mainEntityOfPage:canonical });
   const crumbs = JSON.stringify({ '@context':'https://schema.org','@type':'BreadcrumbList',itemListElement:[{'@type':'ListItem',position:1,name:'Inicio',item:`${SITE}/`},{'@type':'ListItem',position:2,name:post.category,item:`${SITE}/${slug}/`},{'@type':'ListItem',position:3,name:post.title,item:canonical}] });
-  return `<!doctype html><html lang="es-AR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${esc(post.title)} | buenosdia.com</title><meta name="description" content="${esc(description)}"><meta name="robots" content="index,follow,max-image-preview:large"><link rel="canonical" href="${canonical}"><meta property="og:type" content="article"><meta property="og:title" content="${esc(post.title)}"><meta property="og:description" content="${esc(description)}"><meta property="og:url" content="${canonical}"><meta property="og:image" content="${SITE}${post.image}"><meta name="twitter:card" content="summary_large_image"><link rel="stylesheet" href="/assets/css/main.css"><link rel="stylesheet" href="/assets/css/post.css"><script type="application/ld+json">${ld}</script><script type="application/ld+json">${crumbs}</script></head><body><header class="site-header"><div class="container header-inner"><a class="brand" href="/"><img src="/assets/img/logo-buenosdia-icon-192.webp" width="56" height="56" alt="Logo de buenosdia.com"><span><strong>buenosdia.com</strong><small>Tecnología, Matrix y vida real</small></span></a><nav class="site-nav"><a href="/#publicaciones">Publicaciones</a><a href="/#categorias">Categorías</a><a href="/${slug}/">${esc(post.category)}</a></nav></div></header><main><section class="post-hero"><div class="post-shell"><span class="post-kicker">${esc(post.category)}</span><h1 class="post-title">${esc(post.title)}</h1><p class="post-description">${esc(description)}</p><div class="post-meta-line">Por ASPF · Actualizado 10/06/2026 · 10–14 min</div></div><figure class="post-cover"><img src="${post.image}" alt="${esc(post.title)}" width="1200" height="675"></figure></section><article class="post-shell post-card-article"><div class="share-box"><a href="https://wa.me/?text=${encodeURIComponent(post.title+' '+canonical)}">WhatsApp</a><a href="https://www.facebook.com/sharer/sharer.php?u=${canonical}">Facebook</a><a href="https://twitter.com/intent/tweet?url=${canonical}">X</a><button onclick="navigator.clipboard.writeText(location.href)">Copiar enlace</button></div>${articleBody(post,intent)}<section class="related-box"><h2>Lecturas relacionadas</h2><ul>${rel.map(r=>`<li><a href="${r.url}">${esc(r.title)}</a></li>`).join('')}</ul></section><section class="faq-box"><h2>Preguntas frecuentes</h2><div class="faq-item"><strong>¿Cuál es el primer paso?</strong><p>Registrar la situación actual y elegir una acción pequeña que pueda comprobarse.</p></div><div class="faq-item"><strong>¿Cuánto tiempo hace falta?</strong><p>Depende del tema, pero una semana suele alcanzar para obtener información propia y decidir el ajuste siguiente.</p></div><div class="faq-item"><strong>¿Cuándo conviene pedir ayuda?</strong><p>Cuando existen síntomas, lesiones, deudas complejas, riesgo de seguridad o una situación que supera la información general.</p></div></section><div class="post-tags">${(post.tags||[]).map(t=>`<span>${esc(t)}</span>`).join('')}</div></article></main><footer class="site-footer"><div class="container footer-grid"><nav><a href="/privacidad/">Privacidad</a><a href="/cookies/">Cookies</a><a href="/terminos/">Términos</a></nav></div></footer></body></html>`;
+  return `<!doctype html><html lang="es-AR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${esc(post.title)} | buenosdia.com</title><meta name="description" content="${esc(description)}"><meta name="robots" content="index,follow,max-image-preview:large"><link rel="canonical" href="${canonical}"><meta property="og:type" content="article"><meta property="og:title" content="${esc(post.title)}"><meta property="og:description" content="${esc(description)}"><meta property="og:url" content="${canonical}"><meta property="og:image" content="${SITE}${post.image}"><meta name="twitter:card" content="summary_large_image"><link rel="stylesheet" href="/assets/css/main.css"><link rel="stylesheet" href="/assets/css/post.css"><script type="application/ld+json">${ld}</script><script type="application/ld+json">${crumbs}</script></head><body><header class="site-header"><div class="container header-inner"><a class="brand" href="/"><img src="/assets/img/logo-buenosdia-icon-192.webp" width="56" height="56" alt="Logo de buenosdia.com"><span><strong>buenosdia.com</strong><small>Tecnología, Matrix y vida real</small></span></a><nav class="site-nav"><a href="/#publicaciones">Publicaciones</a><a href="/#categorias">Categorías</a><a href="/${slug}/">${esc(post.category)}</a></nav></div></header><main><section class="post-hero"><div class="post-shell"><span class="post-kicker">${esc(post.category)}</span><h1 class="post-title">${esc(post.title)}</h1><p class="post-description">${esc(description)}</p><div class="post-meta-line">Por ASPF · Actualizado 10/06/2026 · 10–14 min</div></div><figure class="post-cover"><img src="${post.image}" alt="${esc(post.title)}" width="1200" height="675"></figure></section><article class="post-shell post-card-article"><div class="share-box"><a href="https://wa.me/?text=${encodeURIComponent(post.title+' '+canonical)}">WhatsApp</a><a href="https://www.facebook.com/sharer/sharer.php?u=${canonical}">Facebook</a><a href="https://twitter.com/intent/tweet?url=${canonical}">X</a><button onclick="navigator.clipboard.writeText(location.href)">Copiar enlace</button></div>${articleBody(post,intent)}<section class="related-box"><h2>Lecturas relacionadas</h2><ul>${rel.map(r=>`<li><a href="${r.url}">${esc(r.title)}</a></li>`).join('')}</ul></section><section class="faq-box"><h2>Preguntas frecuentes</h2><div class="faq-item"><strong>¿Cuál es el primer paso?</strong><p>Para “${esc(post.title)}”, registrá la situación actual y elegí una acción pequeña que pueda comprobarse.</p></div><div class="faq-item"><strong>¿Cuánto tiempo conviene probar?</strong><p>Una semana suele alcanzar para obtener información propia sobre “${esc(post.title)}” y decidir el ajuste siguiente.</p></div><div class="faq-item"><strong>¿Cuándo conviene pedir ayuda?</strong><p>Buscá orientación cuando “${esc(post.title)}” involucre síntomas, lesiones, deudas complejas, seguridad o una situación que supera una guía general.</p></div></section><div class="post-tags">${(post.tags||[]).map(t=>`<span>${esc(t)}</span>`).join('')}</div></article></main><footer class="site-footer"><div class="container footer-grid"><nav><a href="/privacidad/">Privacidad</a><a href="/cookies/">Cookies</a><a href="/terminos/">Términos</a></nav></div></footer></body></html>`;
 }
 
 for (const post of posts) {

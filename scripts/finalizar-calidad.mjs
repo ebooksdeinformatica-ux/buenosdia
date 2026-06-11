@@ -74,3 +74,6 @@ for(const item of map.values()){
 for(const [rel,item] of map) fs.writeFileSync(rel,item.html);
 fs.writeFileSync('data/posts.json',`${JSON.stringify(posts,null,2)}\n`);
 console.log(`Calidad final aplicada a ${posts.length} publicaciones.`);
+
+import { execFileSync } from 'node:child_process';
+execFileSync(process.execPath,['scripts/completar-profundidad.mjs'],{stdio:'inherit'});
