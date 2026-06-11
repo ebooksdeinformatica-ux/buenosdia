@@ -278,7 +278,8 @@ function articleBody(post, intent) {
   const seed = hash(post.title);
   const block = blockFor(post, intent);
   const layout = pick(LAYOUTS, seed);
-  const opening = DIRECT_OPENINGS[intent] || `${post.title} se entiende mejor cuando se observa como un problema concreto, con causas, costos y decisiones posibles.`;
+  const opener = DIRECT_OPENINGS[intent];
+  const opening = typeof opener === 'function' ? opener(post.title) : `${post.title} se entiende mejor cuando se observa como un problema concreto, con causas, costos y decisiones posibles.`;
   const ordered = block.paragraphs.map((p, i) => ({ heading: block.headings[i] || layout[i] || `Paso ${i+1}`, paragraph:p }));
   const shuffled = seed % 2 ? [...ordered].reverse() : ordered;
   const sections = shuffled.map((s, i) => `<h2>${esc(s.heading)}</h2><p>${esc(s.paragraph)}</p><p>${esc(topicSpecific(post, intent, i, seed))}</p>`).join('');
