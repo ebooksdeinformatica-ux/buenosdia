@@ -1,0 +1,38 @@
+{
+  "Tecnología": {
+    "focus": "resultado digital verificable",
+    "steps": "definir la tarea, elegir una herramienta, guardar versiones y comprobar el resultado",
+    "risks": "credenciales reutilizadas, archivos sin respaldo, descargas dudosas y dependencia de una sola plataforma",
+    "measure": "tiempo ahorrado, errores reducidos, archivos recuperables y entregas terminadas"
+  },
+  "Pan y Circo": {
+    "focus": "uso consciente de la atención",
+    "steps": "registrar disparadores, limitar horarios, elegir contenido y preparar una alternativa",
+    "risks": "scroll automático, sueño retrasado, comparación y repetición de información sin contexto",
+    "measure": "tiempo de pantalla, calidad del descanso, concentración y sensación posterior"
+  },
+  "Alimentación": {
+    "focus": "hábitos sostenibles y observación del cuerpo",
+    "steps": "registrar horarios, planificar compras, preparar opciones simples y cambiar una variable por vez",
+    "risks": "restricciones extremas, conclusiones médicas rápidas, desperdicio y decisiones tomadas con hambre",
+    "measure": "energía, hambre, sueño, síntomas y facilidad para sostener la rutina"
+  },
+  "Deportes": {
+    "focus": "progresión segura y continuidad",
+    "steps": "medir el punto de partida, aumentar una variable, registrar sesiones y recuperar",
+    "risks": "hacer demasiado al inicio, ignorar dolor, comparar niveles y abandonar por no cumplir un plan perfecto",
+    "measure": "regularidad, técnica, tolerancia al esfuerzo, recuperación y ausencia de dolor anormal"
+  },
+  "Matrix": {
+    "focus": "recuperar decisiones automáticas",
+    "steps": "describir la secuencia, medir el costo, modificar el entorno y probar una alternativa",
+    "risks": "normalizar pérdidas de tiempo, dinero, sueño o atención y depender solo de fuerza de voluntad",
+    "measure": "minutos recuperados, gastos evitados, interrupciones reducidas y decisiones elegidas"
+  },
+  "Saliendo de la Matrix": {
+    "focus": "avance visible y sostenible",
+    "steps": "definir una entrega, dividirla en tareas, registrar obstáculos y revisar semanalmente",
+    "risks": "objetivos vagos, demasiadas tareas simultáneas, promesas económicas y aprendizaje sin oferta concreta",
+    "measure": "entregas publicadas, propuestas enviadas, horas trabajadas y respuestas obtenidas"
+  }
+}
