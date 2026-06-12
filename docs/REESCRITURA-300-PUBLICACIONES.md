@@ -1,5 +1,25 @@
 # Reescritura real de las 300 publicaciones
 
+## Norma superior del proyecto
+
+Todo trabajo editorial, técnico y SEO de `buenosdia.com` se realiza obligatoriamente bajo el modelo **ACTIVAR MODELO DE BLOG GITHUB**.
+
+Este modelo tiene prioridad sobre cualquier generador anterior, plantilla automática o criterio de volumen. Exige simultáneamente:
+
+- relevancia;
+- calidad;
+- confianza;
+- accesibilidad técnica;
+- autoridad;
+- experiencia real;
+- utilidad concreta para la audiencia;
+- estructura por clústeres temáticos;
+- revisión humana antes de publicar;
+- fuentes primarias o autorizadas cuando corresponda;
+- ausencia de contenido masivo genérico creado únicamente para posicionar.
+
+La inteligencia artificial puede ayudar a investigar, estructurar, revisar estilo y resumir, pero nunca puede publicar masivamente sin control editorial. Si un artículo no cumple este modelo, no se considera terminado aunque el HTML sea válido.
+
 ## Decisión
 
 Las 300 publicaciones actuales se consideran borradores defectuosos. No se elimina el conjunto ni se cambian las URLs existentes sin necesidad: se reemplazan completamente la descripción y el cuerpo editorial, en seis lotes de 50 publicaciones.
