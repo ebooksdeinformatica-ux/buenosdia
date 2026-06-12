@@ -1,0 +1,1 @@
+Prueba técnica de escritura segura. Este archivo puede eliminarse después de validar el flujo.
