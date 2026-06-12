@@ -241,34 +241,34 @@
     "readingTime": "10–13 min"
   },
   {
-    "title": "Usar la tecnología para salir del estancamiento",
-    "description": "Guía práctica para usar la tecnología para salir del estancamiento: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y sostenible.",
+    "title": "Cómo usar la tecnología para salir del estancamiento",
+    "description": "Cómo usar tecnología para convertir un proyecto trabado en una entrega concreta: elegir una tarea, usar herramientas simples, medir y cerrar la sesión.",
     "category": "Tecnología",
     "url": "/posts/usar-la-tecnologia-para-salir-del-estancamiento.html",
-    "date": "2026-06-10",
+    "date": "2026-06-12",
     "image": "/assets/img/posts/tecnologia.svg",
     "tags": [
-      "tecnologia",
-      "tecnología",
-      "estancamiento"
+      "tecnología útil",
+      "proyectos digitales",
+      "acción concreta",
+      "trabajo online"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "9–12 min"
   },
   {
-    "title": "Crear servicios digitales simples para vender",
-    "description": "Guía práctica para crear servicios digitales simples para vender: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y sostenible.",
+    "title": "Cómo crear servicios digitales simples para vender",
+    "description": "Cómo transformar una habilidad digital en un servicio vendible: problema concreto, alcance, entrega, precio, prueba, soporte y mejora.",
     "category": "Tecnología",
     "url": "/posts/crear-servicios-digitales-simples-para-vender.html",
-    "date": "2026-06-10",
+    "date": "2026-06-12",
     "image": "/assets/img/posts/tecnologia.svg",
     "tags": [
-      "tecnologia",
-      "servicios",
-      "digitales",
-      "simples",
-      "vender"
+      "servicios digitales",
+      "ventas",
+      "trabajo online",
+      "oferta simple"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "9–12 min"
   },
   {
     "title": "Ordenar contraseñas y cuentas sin caos",
@@ -347,49 +347,49 @@
     "readingTime": "10–14 min"
   },
   {
-    "title": "Transformar experiencia vieja en contenido nuevo",
-    "description": "Guía práctica para transformar experiencia vieja en contenido nuevo: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y...",
+    "title": "Cómo transformar experiencia vieja en contenido nuevo",
+    "description": "Cómo convertir experiencia acumulada en artículos útiles: separar recuerdo, aprendizaje, dato verificable, ejemplo actual y una respuesta que sirva hoy.",
     "category": "Tecnología",
     "url": "/posts/transformar-experiencia-vieja-en-contenido-nuevo.html",
-    "date": "2026-06-10",
+    "date": "2026-06-12",
     "image": "/assets/img/posts/tecnologia.svg",
     "tags": [
-      "tecnologia",
-      "transformar",
       "experiencia",
-      "contenido"
+      "contenido propio",
+      "blog",
+      "voz editorial"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "9–12 min"
   },
   {
     "title": "Volver a vivir de internet sin nostalgia",
-    "description": "Guía práctica para volver a vivir de internet sin nostalgia: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y sostenible.",
+    "description": "Cómo volver a construir ingresos online sin copiar el pasado: experiencia, oferta actual, contenido útil, medición, paciencia y control de expectativas.",
     "category": "Tecnología",
     "url": "/posts/volver-a-vivir-de-internet-sin-nostalgia.html",
-    "date": "2026-06-10",
+    "date": "2026-06-12",
     "image": "/assets/img/posts/tecnologia.svg",
     "tags": [
-      "tecnologia",
-      "volver",
-      "internet",
-      "nostalgia"
+      "vivir de internet",
+      "negocio digital",
+      "reconstrucción",
+      "contenido propio"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "9–12 min"
   },
   {
-    "title": "Crear un sistema de trabajo digital desde cero",
-    "description": "Guía práctica para crear un sistema de trabajo digital desde cero: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y sostenible.",
+    "title": "Cómo crear un sistema de trabajo digital desde cero",
+    "description": "Cómo armar un sistema de trabajo digital simple: carpeta, bandeja de entrada, tareas, versiones, respaldos, rutina y revisión semanal.",
     "category": "Tecnología",
     "url": "/posts/crear-un-sistema-de-trabajo-digital-desde-cero.html",
-    "date": "2026-06-10",
+    "date": "2026-06-12",
     "image": "/assets/img/posts/tecnologia.svg",
     "tags": [
-      "tecnologia",
-      "sistema",
-      "trabajo",
-      "digital"
+      "sistema digital",
+      "organización",
+      "Git",
+      "productividad"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "9–12 min"
   },
   {
     "title": "Usar herramientas gratuitas para producir más",
