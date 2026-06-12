@@ -75,35 +75,34 @@
     "readingTime": "11–14 min"
   },
   {
-    "title": "Automatizar tareas simples sin complicarte",
-    "description": "Guía práctica para automatizar tareas simples sin complicarte: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y sostenible.",
+    "title": "Cómo automatizar tareas simples sin complicarte",
+    "description": "Cómo elegir una tarea repetitiva, automatizarla con seguridad, probarla sobre copias y medir si realmente ahorra tiempo en lugar de crear otro problema.",
     "category": "Tecnología",
     "url": "/posts/automatizar-tareas-simples-sin-complicarte.html",
-    "date": "2026-06-10",
+    "date": "2026-06-12",
     "image": "/assets/img/posts/tecnologia.svg",
     "tags": [
-      "tecnologia",
-      "automatizar",
-      "tareas",
-      "simples",
-      "complicarte"
+      "automatización",
+      "Python",
+      "GitHub Actions",
+      "productividad digital"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "11–14 min"
   },
   {
-    "title": "Vender plantillas digitales a gente común",
-    "description": "Guía práctica para vender plantillas digitales a gente común: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y sostenible.",
+    "title": "Cómo vender plantillas digitales a gente común",
+    "description": "Cómo crear plantillas que una persona no técnica pueda abrir, entender y usar: problema, formato, instrucciones, licencia, prueba, precio y soporte.",
     "category": "Tecnología",
     "url": "/posts/vender-plantillas-digitales-a-gente-comun.html",
-    "date": "2026-06-10",
+    "date": "2026-06-12",
     "image": "/assets/img/posts/tecnologia.svg",
     "tags": [
-      "tecnologia",
-      "vender",
-      "plantillas",
-      "digitales"
+      "plantillas digitales",
+      "productos digitales",
+      "pequeños negocios",
+      "accesibilidad"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "10–13 min"
   },
   {
     "title": "Usar internet para recuperar ingresos perdidos",
@@ -122,50 +121,49 @@
     "readingTime": "10–14 min"
   },
   {
-    "title": "Crear contenido sin depender de redes sociales",
-    "description": "Guía práctica para crear contenido sin depender de redes sociales: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y sostenible.",
+    "title": "Cómo crear contenido sin depender de redes sociales",
+    "description": "Cómo construir contenido en un dominio propio, atraer visitas desde buscadores, conservar archivos y usar redes como distribución sin entregarles todo.",
     "category": "Tecnología",
     "url": "/posts/crear-contenido-sin-depender-de-redes-sociales.html",
-    "date": "2026-06-10",
+    "date": "2026-06-12",
     "image": "/assets/img/posts/tecnologia.svg",
     "tags": [
-      "tecnologia",
-      "contenido",
-      "depender",
-      "sociales"
+      "contenido propio",
+      "redes sociales",
+      "blog",
+      "distribución"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "10–13 min"
   },
   {
-    "title": "Convertir ideas sueltas en publicaciones útiles",
-    "description": "Guía práctica para convertir ideas sueltas en publicaciones útiles: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y sostenible.",
+    "title": "Cómo convertir ideas sueltas en publicaciones útiles",
+    "description": "Cómo pasar de una nota dispersa a un artículo con intención, preguntas, experiencia, fuentes, estructura, edición y una razón real para publicarse.",
     "category": "Tecnología",
     "url": "/posts/convertir-ideas-sueltas-en-publicaciones-utiles.html",
-    "date": "2026-06-10",
+    "date": "2026-06-12",
     "image": "/assets/img/posts/tecnologia.svg",
     "tags": [
-      "tecnologia",
-      "convertir",
-      "sueltas",
-      "publicaciones",
-      "útiles"
+      "ideas de contenido",
+      "escritura web",
+      "edición",
+      "SEO humano"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "10–13 min"
   },
   {
-    "title": "Usar IA para ordenar un proyecto online",
-    "description": "Guía práctica para usar ia para ordenar un proyecto online: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y sostenible.",
+    "title": "Cómo usar IA para ordenar un proyecto online",
+    "description": "Cómo usar inteligencia artificial para inventariar archivos, aclarar objetivos, ordenar tareas y detectar huecos sin entregarle el control del proyecto.",
     "category": "Tecnología",
     "url": "/posts/usar-ia-para-ordenar-un-proyecto-online.html",
-    "date": "2026-06-10",
+    "date": "2026-06-12",
     "image": "/assets/img/posts/tecnologia.svg",
     "tags": [
-      "tecnologia",
-      "ordenar",
-      "proyecto",
-      "online"
+      "inteligencia artificial",
+      "gestión de proyectos",
+      "organización digital",
+      "productividad"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "10–13 min"
   },
   {
     "title": "Herramientas livianas para una notebook vieja",
