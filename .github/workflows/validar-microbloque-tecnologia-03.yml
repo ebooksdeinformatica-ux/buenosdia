@@ -1,0 +1,46 @@
+name: Validar microbloque Tecnología 03
+
+on:
+  pull_request:
+    branches: [release-estable-v3]
+    paths:
+      - 'posts/herramientas-livianas-para-una-notebook-vieja.html'
+      - 'posts/crear-una-rutina-digital-de-una-hora-por-dia.html'
+      - 'posts/hacer-seo-sin-volverse-esclavo-de-los-trucos.html'
+      - 'posts/publicar-mejor-con-pocos-recursos.html'
+      - 'posts/armar-una-base-de-conocimiento-personal.html'
+      - 'scripts/aplicar-microbloque.mjs'
+      - 'scripts/auditar-microbloque-contenido.mjs'
+      - 'scripts/auditar-microbloque-tecnica.mjs'
+      - 'data/microbloques/tecnologia-03*.json'
+      - '.github/workflows/validar-microbloque-tecnologia-03.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  validar:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Actualizar catálogo
+        run: |
+          node scripts/aplicar-microbloque.mjs data/microbloques/tecnologia-03a.json
+          node scripts/aplicar-microbloque.mjs data/microbloques/tecnologia-03b.json
+      - name: Auditar contenido
+        run: node scripts/auditar-microbloque-contenido.mjs data/microbloques/tecnologia-03.json
+      - name: Auditar SEO y técnica
+        run: node scripts/auditar-microbloque-tecnica.mjs data/microbloques/tecnologia-03.json
+      - name: Guardar catálogo validado
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/posts.json
+          git commit -m "Actualizar catálogo del microbloque Tecnología 03" || echo "Sin cambios"
+          git push
