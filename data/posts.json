@@ -1,80 +1,78 @@
 [
   {
-    "title": "Usar una computadora vieja para crear valor digital",
-    "description": "Guía práctica para usar una computadora vieja para crear valor digital: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y...",
+    "title": "Cómo usar una computadora vieja para crear valor digital",
+    "description": "Una computadora vieja todavía puede producir valor: cómo diagnosticarla, trabajar con herramientas livianas y decidir cuándo mejorarla o cambiarla.",
     "category": "Tecnología",
     "url": "/posts/usar-una-computadora-vieja-para-crear-valor-digital.html",
-    "date": "2026-06-10",
+    "date": "2026-06-12",
     "image": "/assets/img/posts/tecnologia.svg",
     "tags": [
-      "tecnologia",
-      "computadora",
-      "digital"
+      "computadoras viejas",
+      "trabajo digital",
+      "hardware",
+      "GitHub Pages"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "12–15 min"
   },
   {
-    "title": "Inteligencia artificial como herramienta de trabajo diario",
-    "description": "Guía práctica para inteligencia artificial como herramienta de trabajo diario: herramientas, riesgos, pasos y criterios para obtener un resultado digital...",
+    "title": "Cómo usar la inteligencia artificial en el trabajo diario",
+    "description": "Cómo integrar inteligencia artificial al trabajo sin delegar criterio: tareas útiles, verificación, privacidad, límites y un flujo que realmente ahorre tiempo.",
     "category": "Tecnología",
     "url": "/posts/inteligencia-artificial-como-herramienta-de-trabajo-diario.html",
-    "date": "2026-06-10",
+    "date": "2026-06-12",
     "image": "/assets/img/posts/tecnologia.svg",
     "tags": [
-      "tecnologia",
-      "inteligencia",
-      "artificial",
-      "herramienta",
-      "trabajo"
+      "inteligencia artificial",
+      "trabajo digital",
+      "verificación",
+      "privacidad"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "12–15 min"
   },
   {
-    "title": "Organizar archivos para no perder proyectos",
-    "description": "Guía práctica para organizar archivos para no perder proyectos: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y sostenible.",
+    "title": "Cómo organizar archivos para no perder proyectos",
+    "description": "Un sistema simple para encontrar la versión correcta, separar trabajo activo, usar Git cuando corresponde y recuperar un proyecto sin depender de la memoria.",
     "category": "Tecnología",
     "url": "/posts/organizar-archivos-para-no-perder-proyectos.html",
-    "date": "2026-06-10",
+    "date": "2026-06-12",
     "image": "/assets/img/posts/tecnologia.svg",
     "tags": [
-      "tecnologia",
-      "organizar",
-      "archivos",
-      "perder",
-      "proyectos"
+      "organización digital",
+      "Git",
+      "backups",
+      "archivos"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "12–15 min"
   },
   {
-    "title": "Crear un blog aunque no tengas equipo perfecto",
-    "description": "Guía práctica para crear un blog aunque no tengas equipo perfecto: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y sostenible.",
+    "title": "Cómo crear un blog sin una computadora perfecta",
+    "description": "Cómo crear y sostener un blog con una computadora común: estructura mínima, GitHub Pages, contenido útil, velocidad, SEO y publicación sin humo.",
     "category": "Tecnología",
     "url": "/posts/crear-un-blog-aunque-no-tengas-equipo-perfecto.html",
-    "date": "2026-06-10",
+    "date": "2026-06-12",
     "image": "/assets/img/posts/tecnologia.svg",
     "tags": [
-      "tecnologia",
-      "aunque",
-      "tengas",
-      "equipo",
-      "perfecto"
+      "crear un blog",
+      "GitHub Pages",
+      "SEO",
+      "sitios estáticos"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "10–13 min"
   },
   {
-    "title": "Aprender programación cuando venís de cero",
-    "description": "Guía práctica para aprender programación cuando venís de cero: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y sostenible.",
+    "title": "Cómo aprender programación cuando venís de cero",
+    "description": "Cómo empezar a programar sin perderte entre cursos: elegir una ruta, construir proyectos pequeños, entender errores y medir avances reales.",
     "category": "Tecnología",
     "url": "/posts/aprender-programacion-cuando-venis-de-cero.html",
-    "date": "2026-06-10",
+    "date": "2026-06-12",
     "image": "/assets/img/posts/tecnologia.svg",
     "tags": [
-      "tecnologia",
-      "aprender",
-      "programación",
-      "cuando"
+      "aprender programación",
+      "Python",
+      "desarrollo web",
+      "GitHub"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "11–14 min"
   },
   {
     "title": "Automatizar tareas simples sin complicarte",
