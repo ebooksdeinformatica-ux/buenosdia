@@ -1,0 +1,10 @@
+name: Release histórico desactivado
+
+on:
+  workflow_dispatch:
+
+jobs:
+  informacion:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Workflow histórico desactivado."

@@ -1,0 +1,52 @@
+name: Validar release estable
+
+on:
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  validar:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descargar release estable
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+
+      - name: Preparar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Pulir redacción final
+        run: node scripts/pulir-build-estable.mjs
+
+      - name: Finalizar categorías
+        run: node scripts/finalizar-categorias.mjs
+
+      - name: Preparar indexación
+        run: node scripts/preparar-indexacion.mjs
+
+      - name: Aplicar postprocesado y Statcounter
+        run: node scripts/postprocesar-publicaciones.mjs
+
+      - name: Auditar publicaciones
+        run: node scripts/auditar-publicaciones-v2.mjs
+
+      - name: Auditar fragmentos
+        run: node scripts/auditar-fragmentos.mjs
+
+      - name: Auditar sitio completo
+        run: node scripts/auditar-sitio.mjs
+
+      - name: Guardar release validado
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Validar release estable" || echo "Sin cambios"
+          git push

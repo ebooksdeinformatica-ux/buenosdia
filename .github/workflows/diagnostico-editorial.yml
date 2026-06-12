@@ -1,0 +1,21 @@
+name: Diagnóstico editorial manual
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  diagnostico:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - run: node scripts/auditar-publicaciones-v2.mjs > auditoria-editorial.txt 2>&1 || true
+      - uses: actions/upload-artifact@v4
+        with:
+          name: auditoria-editorial-completa
+          path: auditoria-editorial.txt

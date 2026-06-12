@@ -1,0 +1,14 @@
+{
+  "modelo": "ACTIVAR MODELO DE BLOG GITHUB",
+  "total": 300,
+  "reescritos": 1,
+  "publicados_definitivos": 0,
+  "categorias": {
+    "Tecnología": {"total": 50, "reescritos": 1, "publicados_definitivos": 0},
+    "Pan y Circo": {"total": 50, "reescritos": 0, "publicados_definitivos": 0},
+    "Alimentación": {"total": 50, "reescritos": 0, "publicados_definitivos": 0},
+    "Deportes": {"total": 50, "reescritos": 0, "publicados_definitivos": 0},
+    "Matrix": {"total": 50, "reescritos": 0, "publicados_definitivos": 0},
+    "Saliendo de la Matrix": {"total": 50, "reescritos": 0, "publicados_definitivos": 0}
+  }
+}
