@@ -166,76 +166,79 @@
     "readingTime": "10–13 min"
   },
   {
-    "title": "Herramientas livianas para una notebook vieja",
-    "description": "Guía práctica para herramientas livianas para una notebook vieja: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y sostenible.",
+    "title": "Herramientas livianas para trabajar con una notebook vieja",
+    "description": "Cómo elegir programas livianos para una notebook vieja según la tarea, el consumo real, la seguridad, los formatos y la posibilidad de recuperar el trabajo.",
     "category": "Tecnología",
     "url": "/posts/herramientas-livianas-para-una-notebook-vieja.html",
-    "date": "2026-06-10",
+    "date": "2026-06-12",
     "image": "/assets/img/posts/tecnologia.svg",
     "tags": [
-      "tecnologia",
-      "herramientas",
-      "livianas",
-      "notebook"
+      "software liviano",
+      "notebook vieja",
+      "rendimiento",
+      "herramientas digitales"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "10–13 min"
   },
   {
-    "title": "Crear una rutina digital de una hora por día",
-    "description": "Guía práctica para crear una rutina digital de una hora por día: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y sostenible.",
+    "title": "Cómo crear una rutina digital de una hora por día",
+    "description": "Cómo convertir una hora diaria en una entrega concreta: preparar el entorno, producir sin multitarea, cerrar la sesión y retomar sin empezar de cero.",
     "category": "Tecnología",
     "url": "/posts/crear-una-rutina-digital-de-una-hora-por-dia.html",
-    "date": "2026-06-10",
+    "date": "2026-06-12",
     "image": "/assets/img/posts/tecnologia.svg",
     "tags": [
-      "tecnologia",
-      "rutina",
-      "digital"
+      "rutina digital",
+      "trabajo profundo",
+      "productividad",
+      "proyectos online"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "10–13 min"
   },
   {
-    "title": "Hacer SEO sin volverse esclavo de los trucos",
-    "description": "Guía práctica para hacer seo sin volverse esclavo de los trucos: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y sostenible.",
+    "title": "Cómo hacer SEO sin volverte esclavo de los trucos",
+    "description": "Cómo trabajar SEO con intención, contenido útil, estructura, enlaces y medición sin perseguir fórmulas mágicas ni fabricar páginas para el algoritmo.",
     "category": "Tecnología",
     "url": "/posts/hacer-seo-sin-volverse-esclavo-de-los-trucos.html",
-    "date": "2026-06-10",
+    "date": "2026-06-12",
     "image": "/assets/img/posts/tecnologia.svg",
     "tags": [
-      "tecnologia",
-      "volverse",
-      "esclavo",
-      "trucos"
+      "SEO",
+      "Google Search",
+      "contenido útil",
+      "Search Console"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "10–13 min"
   },
   {
-    "title": "Publicar mejor con pocos recursos",
-    "description": "Guía práctica para publicar mejor con pocos recursos: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y sostenible.",
+    "title": "Cómo publicar mejor con pocos recursos",
+    "description": "Cómo publicar contenido sólido con recursos limitados y pocas horas: elegir prioridades, reutilizar trabajo, auditar y evitar herramientas innecesarias.",
     "category": "Tecnología",
     "url": "/posts/publicar-mejor-con-pocos-recursos.html",
-    "date": "2026-06-10",
+    "date": "2026-06-12",
     "image": "/assets/img/posts/tecnologia.svg",
     "tags": [
-      "tecnologia",
-      "publicar",
-      "recursos"
+      "publicación digital",
+      "pocos recursos",
+      "contenido web",
+      "herramientas gratuitas"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "10–13 min"
   },
   {
-    "title": "Armar una base de conocimiento personal",
-    "description": "Guía práctica para armar una base de conocimiento personal: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y sostenible.",
+    "title": "Cómo armar una base de conocimiento personal",
+    "description": "Cómo guardar ideas, fuentes, decisiones y experiencia en una base de conocimiento portable, recuperable y conectada con proyectos reales.",
     "category": "Tecnología",
     "url": "/posts/armar-una-base-de-conocimiento-personal.html",
-    "date": "2026-06-10",
+    "date": "2026-06-12",
     "image": "/assets/img/posts/tecnologia.svg",
     "tags": [
-      "tecnologia",
-      "conocimiento",
-      "personal"
+      "base de conocimiento",
+      "Markdown",
+      "notas personales",
+      "biblioteca digital"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "10–13 min"
   },
   {
     "title": "Usar la tecnología para salir del estancamiento",
