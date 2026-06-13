@@ -31,9 +31,9 @@ jobs:
           node scripts/aplicar-microbloque.mjs data/microbloques/tecnologia-05a.json
           node scripts/aplicar-microbloque.mjs data/microbloques/tecnologia-05b.json
       - name: Auditar contenido
-        run: node scripts/auditar-microbloque-contenido.mjs data/microbloques/tecnologia-05.json
+        run: node scripts/auditar-microbloque-contenido.mjs data/microbloques/tecnologia-05-final.json
       - name: Auditar SEO y técnica
-        run: node scripts/auditar-microbloque-tecnica.mjs data/microbloques/tecnologia-05.json
+        run: node scripts/auditar-microbloque-tecnica.mjs data/microbloques/tecnologia-05-final.json
       - name: Guardar catálogo validado
         run: |
           git config user.name "github-actions[bot]"
