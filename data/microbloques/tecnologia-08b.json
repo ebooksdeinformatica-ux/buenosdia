@@ -1,0 +1,29 @@
+{
+  "name": "Tecnología 08b",
+  "posts": [
+    {
+      "url": "/posts/usar-ia-para-mejorar-textos-sin-perder-tu-voz.html",
+      "title": "Usar IA para mejorar textos sin perder tu voz",
+      "description": "Cómo usar IA para mejorar textos sin perder tu voz: corregir estructura, detectar repeticiones, pedir críticas útiles y conservar criterio editorial.",
+      "date": "2026-06-12",
+      "readingTime": "8–11 min",
+      "tags": ["IA", "escritura", "voz propia", "edición"]
+    },
+    {
+      "url": "/posts/crear-recursos-descargables-para-vender-en-internet.html",
+      "title": "Crear recursos descargables para vender en internet",
+      "description": "Cómo crear recursos descargables vendibles: problema concreto, archivo usable, instrucciones, formato, prueba, licencia simple y mejora con usuarios reales.",
+      "date": "2026-06-12",
+      "readingTime": "8–11 min",
+      "tags": ["recursos descargables", "productos digitales", "plantillas", "venta online"]
+    },
+    {
+      "url": "/posts/probar-ideas-digitales-antes-de-gastar-dinero.html",
+      "title": "Probar ideas digitales antes de gastar dinero",
+      "description": "Cómo probar ideas digitales antes de gastar dinero: página simple, muestra, conversación real, lista de interesados, costo mínimo y decisión con datos.",
+      "date": "2026-06-12",
+      "readingTime": "8–11 min",
+      "tags": ["ideas digitales", "validación", "producto digital", "negocio online"]
+    }
+  ]
+}
