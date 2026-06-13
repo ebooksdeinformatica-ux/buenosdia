@@ -511,18 +511,18 @@
   },
   {
     "title": "Usar una computadora lenta con inteligencia práctica",
-    "description": "Guía práctica para usar una computadora lenta con inteligencia práctica: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y...",
+    "description": "Cómo trabajar con una computadora lenta sin perder el día: diagnóstico, menos programas, tareas pequeñas, archivos livianos y cuándo conviene mejorar el equipo.",
     "category": "Tecnología",
     "url": "/posts/usar-una-computadora-lenta-con-inteligencia-practica.html",
-    "date": "2026-06-10",
+    "date": "2026-06-12",
     "image": "/assets/img/posts/tecnologia.svg",
     "tags": [
-      "tecnologia",
-      "computadora",
-      "inteligencia",
-      "práctica"
+      "computadora lenta",
+      "productividad",
+      "notebook vieja",
+      "herramientas livianas"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "8–11 min"
   },
   {
     "title": "Cómo crear un calendario editorial sin complicarte",
@@ -571,17 +571,18 @@
   },
   {
     "title": "Crear una marca personal desde una notebook común",
-    "description": "Guía práctica para crear una marca personal desde una notebook común: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y...",
+    "description": "Cómo crear una marca personal desde una notebook común: tema claro, prueba de trabajo, archivo propio, constancia, límites y publicaciones útiles.",
     "category": "Tecnología",
     "url": "/posts/crear-una-marca-personal-desde-una-notebook-comun.html",
-    "date": "2026-06-10",
+    "date": "2026-06-12",
     "image": "/assets/img/posts/tecnologia.svg",
     "tags": [
-      "tecnologia",
-      "personal",
-      "notebook"
+      "marca personal",
+      "notebook común",
+      "contenido propio",
+      "trabajo digital"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "8–11 min"
   },
   {
     "title": "Hacer backups simples para no perder tu trabajo",
@@ -616,51 +617,48 @@
   },
   {
     "title": "Automatizar publicaciones sin perder calidad humana",
-    "description": "Guía práctica para automatizar publicaciones sin perder calidad humana: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y...",
+    "description": "Cómo automatizar publicaciones sin perder calidad humana: separar tareas técnicas, revisión editorial, fuentes, enlaces, auditoría y aprobación antes de publicar.",
     "category": "Tecnología",
     "url": "/posts/automatizar-publicaciones-sin-perder-calidad-humana.html",
-    "date": "2026-06-10",
+    "date": "2026-06-12",
     "image": "/assets/img/posts/tecnologia.svg",
     "tags": [
-      "tecnologia",
-      "automatizar",
+      "automatización",
       "publicaciones",
-      "perder",
-      "calidad"
+      "calidad humana",
+      "GitHub Actions"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "8–11 min"
   },
   {
     "title": "Usar internet para encontrar oportunidades reales",
-    "description": "Guía práctica para usar internet para encontrar oportunidades reales: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y...",
+    "description": "Cómo usar internet para encontrar oportunidades reales: observar problemas, validar demanda, evitar promesas fáciles y convertir señales en acciones concretas.",
     "category": "Tecnología",
     "url": "/posts/usar-internet-para-encontrar-oportunidades-reales.html",
-    "date": "2026-06-10",
+    "date": "2026-06-12",
     "image": "/assets/img/posts/tecnologia.svg",
     "tags": [
-      "tecnologia",
-      "internet",
-      "encontrar",
-      "oportunidades",
-      "reales"
+      "oportunidades online",
+      "validación",
+      "negocio digital",
+      "investigación"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "8–11 min"
   },
   {
     "title": "Convertir una habilidad vieja en producto digital",
-    "description": "Guía práctica para convertir una habilidad vieja en producto digital: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y...",
+    "description": "Cómo convertir una habilidad vieja en producto digital: detectar valor real, crear una entrega pequeña, probarla, mejorarla y venderla sin humo.",
     "category": "Tecnología",
     "url": "/posts/convertir-una-habilidad-vieja-en-producto-digital.html",
-    "date": "2026-06-10",
+    "date": "2026-06-12",
     "image": "/assets/img/posts/tecnologia.svg",
     "tags": [
-      "tecnologia",
-      "convertir",
-      "habilidad",
-      "producto",
-      "digital"
+      "producto digital",
+      "habilidades",
+      "plantillas",
+      "validación"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "8–11 min"
   },
   {
     "title": "Cómo crear una web liviana para AdSense",
