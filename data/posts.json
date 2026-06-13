@@ -301,19 +301,18 @@
   },
   {
     "title": "Escribir mejores prompts con intención real",
-    "description": "Guía práctica para escribir mejores prompts con intención real: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y sostenible.",
+    "description": "Cómo escribir mejores prompts con intención real: contexto, objetivo, límites, formato, ejemplos, revisión y uso de IA sin perder criterio propio.",
     "category": "Tecnología",
     "url": "/posts/escribir-mejores-prompts-con-intencion-real.html",
-    "date": "2026-06-10",
+    "date": "2026-06-12",
     "image": "/assets/img/posts/tecnologia.svg",
     "tags": [
-      "tecnologia",
-      "escribir",
-      "mejores",
       "prompts",
-      "intención"
+      "inteligencia artificial",
+      "criterio",
+      "productividad"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "8–11 min"
   },
   {
     "title": "Cómo usar GitHub como taller de proyectos",
@@ -392,18 +391,18 @@
   },
   {
     "title": "Usar herramientas gratuitas para producir más",
-    "description": "Guía práctica para usar herramientas gratuitas para producir más: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y sostenible.",
+    "description": "Cómo usar herramientas gratuitas para producir más sin llenarte de cuentas: elegir por tarea, probar con archivos reales, exportar y medir fricción.",
     "category": "Tecnología",
     "url": "/posts/usar-herramientas-gratuitas-para-producir-mas.html",
-    "date": "2026-06-10",
+    "date": "2026-06-12",
     "image": "/assets/img/posts/tecnologia.svg",
     "tags": [
-      "tecnologia",
-      "herramientas",
-      "gratuitas",
-      "producir"
+      "herramientas gratuitas",
+      "productividad",
+      "exportación",
+      "flujo digital"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "8–11 min"
   },
   {
     "title": "Cómo hacer una página rápida que Google pueda entender",
@@ -452,18 +451,18 @@
   },
   {
     "title": "Usar IA para mejorar textos sin perder tu voz",
-    "description": "Guía práctica para usar ia para mejorar textos sin perder tu voz: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y sostenible.",
+    "description": "Cómo usar IA para mejorar textos sin perder tu voz: corregir estructura, detectar repeticiones, pedir críticas útiles y conservar criterio editorial.",
     "category": "Tecnología",
     "url": "/posts/usar-ia-para-mejorar-textos-sin-perder-tu-voz.html",
-    "date": "2026-06-10",
+    "date": "2026-06-12",
     "image": "/assets/img/posts/tecnologia.svg",
     "tags": [
-      "tecnologia",
-      "mejorar",
-      "textos",
-      "perder"
+      "IA",
+      "escritura",
+      "voz propia",
+      "edición"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "8–11 min"
   },
   {
     "title": "Cómo organizar una semana de producción digital",
@@ -482,19 +481,18 @@
   },
   {
     "title": "Crear recursos descargables para vender en internet",
-    "description": "Guía práctica para crear recursos descargables para vender en internet: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y...",
+    "description": "Cómo crear recursos descargables vendibles: problema concreto, archivo usable, instrucciones, formato, prueba, licencia simple y mejora con usuarios reales.",
     "category": "Tecnología",
     "url": "/posts/crear-recursos-descargables-para-vender-en-internet.html",
-    "date": "2026-06-10",
+    "date": "2026-06-12",
     "image": "/assets/img/posts/tecnologia.svg",
     "tags": [
-      "tecnologia",
-      "recursos",
-      "descargables",
-      "vender",
-      "internet"
+      "recursos descargables",
+      "productos digitales",
+      "plantillas",
+      "venta online"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "8–11 min"
   },
   {
     "title": "Cómo mejorar una web vieja sin romperla",
@@ -543,19 +541,18 @@
   },
   {
     "title": "Probar ideas digitales antes de gastar dinero",
-    "description": "Guía práctica para probar ideas digitales antes de gastar dinero: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y sostenible.",
+    "description": "Cómo probar ideas digitales antes de gastar dinero: página simple, muestra, conversación real, lista de interesados, costo mínimo y decisión con datos.",
     "category": "Tecnología",
     "url": "/posts/probar-ideas-digitales-antes-de-gastar-dinero.html",
-    "date": "2026-06-10",
+    "date": "2026-06-12",
     "image": "/assets/img/posts/tecnologia.svg",
     "tags": [
-      "tecnologia",
-      "probar",
-      "digitales",
-      "gastar",
-      "dinero"
+      "ideas digitales",
+      "validación",
+      "producto digital",
+      "negocio online"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "8–11 min"
   },
   {
     "title": "Cómo usar estadísticas para decidir qué publicar",
