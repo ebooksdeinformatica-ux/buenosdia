@@ -1,0 +1,21 @@
+{
+  "name": "Tecnología 09a",
+  "posts": [
+    {
+      "url": "/posts/usar-una-computadora-lenta-con-inteligencia-practica.html",
+      "title": "Usar una computadora lenta con inteligencia práctica",
+      "description": "Cómo trabajar con una computadora lenta sin perder el día: diagnóstico, menos programas, tareas pequeñas, archivos livianos y cuándo conviene mejorar el equipo.",
+      "date": "2026-06-12",
+      "readingTime": "8–11 min",
+      "tags": ["computadora lenta", "productividad", "notebook vieja", "herramientas livianas"]
+    },
+    {
+      "url": "/posts/crear-una-marca-personal-desde-una-notebook-comun.html",
+      "title": "Crear una marca personal desde una notebook común",
+      "description": "Cómo crear una marca personal desde una notebook común: tema claro, prueba de trabajo, archivo propio, constancia, límites y publicaciones útiles.",
+      "date": "2026-06-12",
+      "readingTime": "8–11 min",
+      "tags": ["marca personal", "notebook común", "contenido propio", "trabajo digital"]
+    }
+  ]
+}
