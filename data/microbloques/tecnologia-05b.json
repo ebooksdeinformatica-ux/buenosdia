@@ -1,0 +1,29 @@
+{
+  "name": "Tecnología 05b",
+  "posts": [
+    {
+      "url": "/posts/hacer-una-pagina-rapida-que-google-pueda-entender.html",
+      "title": "Cómo hacer una página rápida que Google pueda entender",
+      "description": "Cómo crear una página rápida y entendible para Google: intención clara, HTML semántico, enlaces, datos estructurados, imágenes livianas y contenido útil.",
+      "date": "2026-06-12",
+      "readingTime": "9–12 min",
+      "tags": ["SEO técnico", "página rápida", "Google Search", "HTML semántico"]
+    },
+    {
+      "url": "/posts/usar-github-como-taller-de-proyectos.html",
+      "title": "Cómo usar GitHub como taller de proyectos",
+      "description": "Cómo usar GitHub como taller de proyectos: repositorios, ramas, commits, issues, pull requests, Pages y una forma simple de no perder avances.",
+      "date": "2026-06-12",
+      "readingTime": "9–12 min",
+      "tags": ["GitHub", "Git", "proyectos digitales", "GitHub Pages"]
+    },
+    {
+      "url": "/posts/convertir-conocimientos-informaticos-en-servicios-simples.html",
+      "title": "Cómo convertir conocimientos informáticos en servicios simples",
+      "description": "Cómo convertir conocimientos informáticos en entregas simples: problema concreto, resultado visible, alcance, ejemplo, instrucciones y mejora del proceso.",
+      "date": "2026-06-12",
+      "readingTime": "9–12 min",
+      "tags": ["servicios informáticos", "entregas simples", "trabajo digital", "oferta clara"]
+    }
+  ]
+}
