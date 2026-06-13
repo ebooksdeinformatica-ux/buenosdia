@@ -1,0 +1,43 @@
+name: Validar microbloque Tecnología 07
+
+on:
+  pull_request:
+    branches: [release-estable-v3]
+    paths:
+      - 'posts/crear-contenido-evergreen-con-mirada-propia.html'
+      - 'posts/crear-un-archivo-maestro-para-tus-proyectos-online.html'
+      - 'posts/organizar-una-semana-de-produccion-digital.html'
+      - 'posts/crear-un-calendario-editorial-sin-complicarte.html'
+      - 'posts/trabajar-con-foco-cuando-la-computadora-no-ayuda.html'
+      - 'data/microbloques/tecnologia-07*.json'
+      - '.github/workflows/validar-microbloque-tecnologia-07.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  validar:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Actualizar catálogo
+        run: |
+          node scripts/aplicar-microbloque.mjs data/microbloques/tecnologia-07a.json
+          node scripts/aplicar-microbloque.mjs data/microbloques/tecnologia-07b.json
+      - name: Auditar contenido
+        run: node scripts/auditar-microbloque-contenido.mjs data/microbloques/tecnologia-07.json
+      - name: Auditar SEO y técnica
+        run: node scripts/auditar-microbloque-tecnica.mjs data/microbloques/tecnologia-07.json
+      - name: Guardar catálogo validado
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/posts.json
+          git commit -m "Actualizar catálogo del microbloque Tecnología 07" || echo "Sin cambios"
+          git push
