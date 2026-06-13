@@ -286,19 +286,19 @@
     "readingTime": "10–14 min"
   },
   {
-    "title": "Hacer una web estática que cargue rápido",
-    "description": "Guía práctica para hacer una web estática que cargue rápido: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y sostenible.",
+    "title": "Cómo hacer una web estática que cargue rápido",
+    "description": "Cómo crear una web estática rápida con HTML claro, CSS mínimo, imágenes livianas, pocos scripts, URLs simples y mantenimiento fácil.",
     "category": "Tecnología",
     "url": "/posts/hacer-una-web-estatica-que-cargue-rapido.html",
-    "date": "2026-06-10",
+    "date": "2026-06-12",
     "image": "/assets/img/posts/tecnologia.svg",
     "tags": [
-      "tecnologia",
-      "estática",
-      "cargue",
-      "rápido"
+      "web estática",
+      "rendimiento web",
+      "HTML",
+      "GitHub Pages"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "9–12 min"
   },
   {
     "title": "Escribir mejores prompts con intención real",
@@ -317,19 +317,19 @@
     "readingTime": "10–14 min"
   },
   {
-    "title": "Usar GitHub como taller de proyectos",
-    "description": "Guía práctica para usar github como taller de proyectos: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y sostenible.",
+    "title": "Cómo usar GitHub como taller de proyectos",
+    "description": "Cómo usar GitHub como taller de proyectos: repositorios, ramas, commits, issues, pull requests, Pages y una forma simple de no perder avances.",
     "category": "Tecnología",
     "url": "/posts/usar-github-como-taller-de-proyectos.html",
-    "date": "2026-06-10",
+    "date": "2026-06-12",
     "image": "/assets/img/posts/tecnologia.svg",
     "tags": [
-      "tecnologia",
       "GitHub",
-      "taller",
-      "proyectos"
+      "Git",
+      "proyectos digitales",
+      "GitHub Pages"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "9–12 min"
   },
   {
     "title": "Crear imágenes web limpias y livianas",
@@ -407,20 +407,19 @@
     "readingTime": "10–14 min"
   },
   {
-    "title": "Hacer una página rápida que Google pueda entender",
-    "description": "Guía práctica para hacer una página rápida que google pueda entender: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y...",
+    "title": "Cómo hacer una página rápida que Google pueda entender",
+    "description": "Cómo crear una página rápida y entendible para Google: intención clara, HTML semántico, enlaces, datos estructurados, imágenes livianas y contenido útil.",
     "category": "Tecnología",
     "url": "/posts/hacer-una-pagina-rapida-que-google-pueda-entender.html",
-    "date": "2026-06-10",
+    "date": "2026-06-12",
     "image": "/assets/img/posts/tecnologia.svg",
     "tags": [
-      "tecnologia",
-      "página",
-      "rápida",
-      "Google",
-      "entender"
+      "SEO técnico",
+      "página rápida",
+      "Google Search",
+      "HTML semántico"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "9–12 min"
   },
   {
     "title": "Crear un archivo maestro para tus proyectos online",
@@ -439,20 +438,19 @@
     "readingTime": "10–14 min"
   },
   {
-    "title": "Convertir conocimientos informáticos en servicios simples",
-    "description": "Guía práctica para convertir conocimientos informáticos en servicios simples: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto...",
+    "title": "Cómo convertir conocimientos informáticos en servicios simples",
+    "description": "Cómo convertir conocimientos informáticos en entregas simples: problema concreto, resultado visible, alcance, ejemplo, instrucciones y mejora del proceso.",
     "category": "Tecnología",
     "url": "/posts/convertir-conocimientos-informaticos-en-servicios-simples.html",
-    "date": "2026-06-10",
+    "date": "2026-06-12",
     "image": "/assets/img/posts/tecnologia.svg",
     "tags": [
-      "tecnologia",
-      "convertir",
-      "conocimientos",
-      "informáticos",
-      "servicios"
+      "servicios informáticos",
+      "entregas simples",
+      "trabajo digital",
+      "oferta clara"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "9–12 min"
   },
   {
     "title": "Usar IA para mejorar textos sin perder tu voz",
@@ -502,18 +500,19 @@
     "readingTime": "10–14 min"
   },
   {
-    "title": "Mejorar una web vieja sin romperla",
-    "description": "Guía práctica para mejorar una web vieja sin romperla: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y sostenible.",
+    "title": "Cómo mejorar una web vieja sin romperla",
+    "description": "Cómo mejorar una web vieja con respaldo, auditoría inicial, cambios pequeños, control de versiones, pruebas y prioridad sobre lo que realmente afecta al usuario.",
     "category": "Tecnología",
     "url": "/posts/mejorar-una-web-vieja-sin-romperla.html",
-    "date": "2026-06-10",
+    "date": "2026-06-12",
     "image": "/assets/img/posts/tecnologia.svg",
     "tags": [
-      "tecnologia",
-      "mejorar",
-      "romperla"
+      "web vieja",
+      "rediseño",
+      "Git",
+      "SEO técnico"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "9–12 min"
   },
   {
     "title": "Usar una computadora lenta con inteligencia práctica",
