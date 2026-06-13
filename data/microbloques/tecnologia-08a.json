@@ -1,0 +1,21 @@
+{
+  "name": "Tecnología 08a",
+  "posts": [
+    {
+      "url": "/posts/escribir-mejores-prompts-con-intencion-real.html",
+      "title": "Escribir mejores prompts con intención real",
+      "description": "Cómo escribir mejores prompts con intención real: contexto, objetivo, límites, formato, ejemplos, revisión y uso de IA sin perder criterio propio.",
+      "date": "2026-06-12",
+      "readingTime": "8–11 min",
+      "tags": ["prompts", "inteligencia artificial", "criterio", "productividad"]
+    },
+    {
+      "url": "/posts/usar-herramientas-gratuitas-para-producir-mas.html",
+      "title": "Usar herramientas gratuitas para producir más",
+      "description": "Cómo usar herramientas gratuitas para producir más sin llenarte de cuentas: elegir por tarea, probar con archivos reales, exportar y medir fricción.",
+      "date": "2026-06-12",
+      "readingTime": "8–11 min",
+      "tags": ["herramientas gratuitas", "productividad", "exportación", "flujo digital"]
+    }
+  ]
+}
