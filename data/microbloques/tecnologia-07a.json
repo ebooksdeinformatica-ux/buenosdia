@@ -1,0 +1,21 @@
+{
+  "name": "Tecnología 07a",
+  "posts": [
+    {
+      "url": "/posts/crear-contenido-evergreen-con-mirada-propia.html",
+      "title": "Cómo crear contenido evergreen con mirada propia",
+      "description": "Cómo crear contenido evergreen que siga sirviendo con el tiempo: pregunta estable, experiencia propia, fuentes, actualización y voz humana.",
+      "date": "2026-06-12",
+      "readingTime": "9–12 min",
+      "tags": ["evergreen", "contenido útil", "voz propia", "SEO humano"]
+    },
+    {
+      "url": "/posts/crear-un-archivo-maestro-para-tus-proyectos-online.html",
+      "title": "Cómo crear un archivo maestro para tus proyectos online",
+      "description": "Cómo crear un archivo maestro para proyectos online: dominio, repositorio, plataforma, estado, tareas, enlaces, respaldo y revisión mensual.",
+      "date": "2026-06-12",
+      "readingTime": "9–12 min",
+      "tags": ["archivo maestro", "proyectos online", "organización", "repositorios"]
+    }
+  ]
+}

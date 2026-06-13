@@ -1,0 +1,29 @@
+{
+  "name": "Tecnología 09b",
+  "posts": [
+    {
+      "url": "/posts/automatizar-publicaciones-sin-perder-calidad-humana.html",
+      "title": "Automatizar publicaciones sin perder calidad humana",
+      "description": "Cómo automatizar publicaciones sin perder calidad humana: separar tareas técnicas, revisión editorial, fuentes, enlaces, auditoría y aprobación antes de publicar.",
+      "date": "2026-06-12",
+      "readingTime": "8–11 min",
+      "tags": ["automatización", "publicaciones", "calidad humana", "GitHub Actions"]
+    },
+    {
+      "url": "/posts/usar-internet-para-encontrar-oportunidades-reales.html",
+      "title": "Usar internet para encontrar oportunidades reales",
+      "description": "Cómo usar internet para encontrar oportunidades reales: observar problemas, validar demanda, evitar promesas fáciles y convertir señales en acciones concretas.",
+      "date": "2026-06-12",
+      "readingTime": "8–11 min",
+      "tags": ["oportunidades online", "validación", "negocio digital", "investigación"]
+    },
+    {
+      "url": "/posts/convertir-una-habilidad-vieja-en-producto-digital.html",
+      "title": "Convertir una habilidad vieja en producto digital",
+      "description": "Cómo convertir una habilidad vieja en producto digital: detectar valor real, crear una entrega pequeña, probarla, mejorarla y venderla sin humo.",
+      "date": "2026-06-12",
+      "readingTime": "8–11 min",
+      "tags": ["producto digital", "habilidades", "plantillas", "validación"]
+    }
+  ]
+}

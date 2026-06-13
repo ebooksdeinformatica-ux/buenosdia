@@ -1,0 +1,21 @@
+{
+  "name": "Tecnología 03a",
+  "posts": [
+    {
+      "url": "/posts/herramientas-livianas-para-una-notebook-vieja.html",
+      "title": "Herramientas livianas para trabajar con una notebook vieja",
+      "description": "Cómo elegir programas livianos para una notebook vieja según la tarea, el consumo real, la seguridad, los formatos y la posibilidad de recuperar el trabajo.",
+      "date": "2026-06-12",
+      "readingTime": "10–13 min",
+      "tags": ["software liviano", "notebook vieja", "rendimiento", "herramientas digitales"]
+    },
+    {
+      "url": "/posts/crear-una-rutina-digital-de-una-hora-por-dia.html",
+      "title": "Cómo crear una rutina digital de una hora por día",
+      "description": "Cómo convertir una hora diaria en una entrega concreta: preparar el entorno, producir sin multitarea, cerrar la sesión y retomar sin empezar de cero.",
+      "date": "2026-06-12",
+      "readingTime": "10–13 min",
+      "tags": ["rutina digital", "trabajo profundo", "productividad", "proyectos online"]
+    }
+  ]
+}

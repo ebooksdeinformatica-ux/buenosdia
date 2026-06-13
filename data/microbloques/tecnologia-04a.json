@@ -1,0 +1,21 @@
+{
+  "name": "Tecnología 04a",
+  "posts": [
+    {
+      "url": "/posts/usar-la-tecnologia-para-salir-del-estancamiento.html",
+      "title": "Cómo usar la tecnología para salir del estancamiento",
+      "description": "Cómo usar tecnología para convertir un proyecto trabado en una entrega concreta: elegir una tarea, usar herramientas simples, medir y cerrar la sesión.",
+      "date": "2026-06-12",
+      "readingTime": "9–12 min",
+      "tags": ["tecnología útil", "proyectos digitales", "acción concreta", "trabajo online"]
+    },
+    {
+      "url": "/posts/crear-un-sistema-de-trabajo-digital-desde-cero.html",
+      "title": "Cómo crear un sistema de trabajo digital desde cero",
+      "description": "Cómo armar un sistema de trabajo digital simple: carpeta, bandeja de entrada, tareas, versiones, respaldos, rutina y revisión semanal.",
+      "date": "2026-06-12",
+      "readingTime": "9–12 min",
+      "tags": ["sistema digital", "organización", "Git", "productividad"]
+    }
+  ]
+}

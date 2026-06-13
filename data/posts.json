@@ -1,275 +1,273 @@
 [
   {
-    "title": "Usar una computadora vieja para crear valor digital",
-    "description": "Guía práctica para usar una computadora vieja para crear valor digital: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y...",
+    "title": "Cómo usar una computadora vieja para crear valor digital",
+    "description": "Una computadora vieja todavía puede producir valor: cómo diagnosticarla, trabajar con herramientas livianas y decidir cuándo mejorarla o cambiarla.",
     "category": "Tecnología",
     "url": "/posts/usar-una-computadora-vieja-para-crear-valor-digital.html",
-    "date": "2026-06-10",
+    "date": "2026-06-12",
     "image": "/assets/img/posts/tecnologia.svg",
     "tags": [
-      "tecnologia",
-      "computadora",
-      "digital"
+      "computadoras viejas",
+      "trabajo digital",
+      "hardware",
+      "GitHub Pages"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "12–15 min"
   },
   {
-    "title": "Inteligencia artificial como herramienta de trabajo diario",
-    "description": "Guía práctica para inteligencia artificial como herramienta de trabajo diario: herramientas, riesgos, pasos y criterios para obtener un resultado digital...",
+    "title": "Cómo usar la inteligencia artificial en el trabajo diario",
+    "description": "Cómo integrar inteligencia artificial al trabajo sin delegar criterio: tareas útiles, verificación, privacidad, límites y un flujo que realmente ahorre tiempo.",
     "category": "Tecnología",
     "url": "/posts/inteligencia-artificial-como-herramienta-de-trabajo-diario.html",
-    "date": "2026-06-10",
+    "date": "2026-06-12",
     "image": "/assets/img/posts/tecnologia.svg",
     "tags": [
-      "tecnologia",
-      "inteligencia",
-      "artificial",
-      "herramienta",
-      "trabajo"
+      "inteligencia artificial",
+      "trabajo digital",
+      "verificación",
+      "privacidad"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "12–15 min"
   },
   {
-    "title": "Organizar archivos para no perder proyectos",
-    "description": "Guía práctica para organizar archivos para no perder proyectos: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y sostenible.",
+    "title": "Cómo organizar archivos para no perder proyectos",
+    "description": "Un sistema simple para encontrar la versión correcta, separar trabajo activo, usar Git cuando corresponde y recuperar un proyecto sin depender de la memoria.",
     "category": "Tecnología",
     "url": "/posts/organizar-archivos-para-no-perder-proyectos.html",
-    "date": "2026-06-10",
+    "date": "2026-06-12",
     "image": "/assets/img/posts/tecnologia.svg",
     "tags": [
-      "tecnologia",
-      "organizar",
-      "archivos",
-      "perder",
-      "proyectos"
+      "organización digital",
+      "Git",
+      "backups",
+      "archivos"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "12–15 min"
   },
   {
-    "title": "Crear un blog aunque no tengas equipo perfecto",
-    "description": "Guía práctica para crear un blog aunque no tengas equipo perfecto: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y sostenible.",
+    "title": "Cómo crear un blog sin una computadora perfecta",
+    "description": "Cómo crear y sostener un blog con una computadora común: estructura mínima, GitHub Pages, contenido útil, velocidad, SEO y publicación sin humo.",
     "category": "Tecnología",
     "url": "/posts/crear-un-blog-aunque-no-tengas-equipo-perfecto.html",
-    "date": "2026-06-10",
+    "date": "2026-06-12",
     "image": "/assets/img/posts/tecnologia.svg",
     "tags": [
-      "tecnologia",
-      "aunque",
-      "tengas",
-      "equipo",
-      "perfecto"
+      "crear un blog",
+      "GitHub Pages",
+      "SEO",
+      "sitios estáticos"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "10–13 min"
   },
   {
-    "title": "Aprender programación cuando venís de cero",
-    "description": "Guía práctica para aprender programación cuando venís de cero: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y sostenible.",
+    "title": "Cómo aprender programación cuando venís de cero",
+    "description": "Cómo empezar a programar sin perderte entre cursos: elegir una ruta, construir proyectos pequeños, entender errores y medir avances reales.",
     "category": "Tecnología",
     "url": "/posts/aprender-programacion-cuando-venis-de-cero.html",
-    "date": "2026-06-10",
+    "date": "2026-06-12",
     "image": "/assets/img/posts/tecnologia.svg",
     "tags": [
-      "tecnologia",
-      "aprender",
-      "programación",
-      "cuando"
+      "aprender programación",
+      "Python",
+      "desarrollo web",
+      "GitHub"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "11–14 min"
   },
   {
-    "title": "Automatizar tareas simples sin complicarte",
-    "description": "Guía práctica para automatizar tareas simples sin complicarte: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y sostenible.",
+    "title": "Cómo automatizar tareas simples sin complicarte",
+    "description": "Cómo elegir una tarea repetitiva, automatizarla con seguridad, probarla sobre copias y medir si realmente ahorra tiempo en lugar de crear otro problema.",
     "category": "Tecnología",
     "url": "/posts/automatizar-tareas-simples-sin-complicarte.html",
-    "date": "2026-06-10",
+    "date": "2026-06-12",
     "image": "/assets/img/posts/tecnologia.svg",
     "tags": [
-      "tecnologia",
-      "automatizar",
-      "tareas",
-      "simples",
-      "complicarte"
+      "automatización",
+      "Python",
+      "GitHub Actions",
+      "productividad digital"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "11–14 min"
   },
   {
-    "title": "Vender plantillas digitales a gente común",
-    "description": "Guía práctica para vender plantillas digitales a gente común: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y sostenible.",
+    "title": "Cómo vender plantillas digitales a gente común",
+    "description": "Cómo crear plantillas que una persona no técnica pueda abrir, entender y usar: problema, formato, instrucciones, licencia, prueba, precio y soporte.",
     "category": "Tecnología",
     "url": "/posts/vender-plantillas-digitales-a-gente-comun.html",
-    "date": "2026-06-10",
+    "date": "2026-06-12",
     "image": "/assets/img/posts/tecnologia.svg",
     "tags": [
-      "tecnologia",
-      "vender",
-      "plantillas",
-      "digitales"
+      "plantillas digitales",
+      "productos digitales",
+      "pequeños negocios",
+      "accesibilidad"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "10–13 min"
   },
   {
-    "title": "Usar internet para recuperar ingresos perdidos",
-    "description": "Guía práctica para usar internet para recuperar ingresos perdidos: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y sostenible.",
+    "title": "Cómo usar internet para recuperar ingresos perdidos",
+    "description": "Cómo usar internet para reconstruir ingresos con criterio: inventario de habilidades, servicios simples, contenido propio, medición, límites y expectativas reales.",
     "category": "Tecnología",
     "url": "/posts/usar-internet-para-recuperar-ingresos-perdidos.html",
-    "date": "2026-06-10",
+    "date": "2026-06-12",
     "image": "/assets/img/posts/tecnologia.svg",
     "tags": [
-      "tecnologia",
-      "internet",
-      "recuperar",
-      "ingresos",
-      "perdidos"
+      "ingresos online",
+      "servicios digitales",
+      "blog",
+      "reconstrucción"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "9–12 min"
   },
   {
-    "title": "Crear contenido sin depender de redes sociales",
-    "description": "Guía práctica para crear contenido sin depender de redes sociales: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y sostenible.",
+    "title": "Cómo crear contenido sin depender de redes sociales",
+    "description": "Cómo construir contenido en un dominio propio, atraer visitas desde buscadores, conservar archivos y usar redes como distribución sin entregarles todo.",
     "category": "Tecnología",
     "url": "/posts/crear-contenido-sin-depender-de-redes-sociales.html",
-    "date": "2026-06-10",
+    "date": "2026-06-12",
     "image": "/assets/img/posts/tecnologia.svg",
     "tags": [
-      "tecnologia",
-      "contenido",
-      "depender",
-      "sociales"
+      "contenido propio",
+      "redes sociales",
+      "blog",
+      "distribución"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "10–13 min"
   },
   {
-    "title": "Convertir ideas sueltas en publicaciones útiles",
-    "description": "Guía práctica para convertir ideas sueltas en publicaciones útiles: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y sostenible.",
+    "title": "Cómo convertir ideas sueltas en publicaciones útiles",
+    "description": "Cómo pasar de una nota dispersa a un artículo con intención, preguntas, experiencia, fuentes, estructura, edición y una razón real para publicarse.",
     "category": "Tecnología",
     "url": "/posts/convertir-ideas-sueltas-en-publicaciones-utiles.html",
-    "date": "2026-06-10",
+    "date": "2026-06-12",
     "image": "/assets/img/posts/tecnologia.svg",
     "tags": [
-      "tecnologia",
-      "convertir",
-      "sueltas",
-      "publicaciones",
-      "útiles"
+      "ideas de contenido",
+      "escritura web",
+      "edición",
+      "SEO humano"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "10–13 min"
   },
   {
-    "title": "Usar IA para ordenar un proyecto online",
-    "description": "Guía práctica para usar ia para ordenar un proyecto online: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y sostenible.",
+    "title": "Cómo usar IA para ordenar un proyecto online",
+    "description": "Cómo usar inteligencia artificial para inventariar archivos, aclarar objetivos, ordenar tareas y detectar huecos sin entregarle el control del proyecto.",
     "category": "Tecnología",
     "url": "/posts/usar-ia-para-ordenar-un-proyecto-online.html",
-    "date": "2026-06-10",
+    "date": "2026-06-12",
     "image": "/assets/img/posts/tecnologia.svg",
     "tags": [
-      "tecnologia",
-      "ordenar",
-      "proyecto",
-      "online"
+      "inteligencia artificial",
+      "gestión de proyectos",
+      "organización digital",
+      "productividad"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "10–13 min"
   },
   {
-    "title": "Herramientas livianas para una notebook vieja",
-    "description": "Guía práctica para herramientas livianas para una notebook vieja: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y sostenible.",
+    "title": "Herramientas livianas para trabajar con una notebook vieja",
+    "description": "Cómo elegir programas livianos para una notebook vieja según la tarea, el consumo real, la seguridad, los formatos y la posibilidad de recuperar el trabajo.",
     "category": "Tecnología",
     "url": "/posts/herramientas-livianas-para-una-notebook-vieja.html",
-    "date": "2026-06-10",
+    "date": "2026-06-12",
     "image": "/assets/img/posts/tecnologia.svg",
     "tags": [
-      "tecnologia",
-      "herramientas",
-      "livianas",
-      "notebook"
+      "software liviano",
+      "notebook vieja",
+      "rendimiento",
+      "herramientas digitales"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "10–13 min"
   },
   {
-    "title": "Crear una rutina digital de una hora por día",
-    "description": "Guía práctica para crear una rutina digital de una hora por día: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y sostenible.",
+    "title": "Cómo crear una rutina digital de una hora por día",
+    "description": "Cómo convertir una hora diaria en una entrega concreta: preparar el entorno, producir sin multitarea, cerrar la sesión y retomar sin empezar de cero.",
     "category": "Tecnología",
     "url": "/posts/crear-una-rutina-digital-de-una-hora-por-dia.html",
-    "date": "2026-06-10",
+    "date": "2026-06-12",
     "image": "/assets/img/posts/tecnologia.svg",
     "tags": [
-      "tecnologia",
-      "rutina",
-      "digital"
+      "rutina digital",
+      "trabajo profundo",
+      "productividad",
+      "proyectos online"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "10–13 min"
   },
   {
-    "title": "Hacer SEO sin volverse esclavo de los trucos",
-    "description": "Guía práctica para hacer seo sin volverse esclavo de los trucos: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y sostenible.",
+    "title": "Cómo hacer SEO sin volverte esclavo de los trucos",
+    "description": "Cómo trabajar SEO con intención, contenido útil, estructura, enlaces y medición sin perseguir fórmulas mágicas ni fabricar páginas para el algoritmo.",
     "category": "Tecnología",
     "url": "/posts/hacer-seo-sin-volverse-esclavo-de-los-trucos.html",
-    "date": "2026-06-10",
+    "date": "2026-06-12",
     "image": "/assets/img/posts/tecnologia.svg",
     "tags": [
-      "tecnologia",
-      "volverse",
-      "esclavo",
-      "trucos"
+      "SEO",
+      "Google Search",
+      "contenido útil",
+      "Search Console"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "10–13 min"
   },
   {
-    "title": "Publicar mejor con pocos recursos",
-    "description": "Guía práctica para publicar mejor con pocos recursos: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y sostenible.",
+    "title": "Cómo publicar mejor con pocos recursos",
+    "description": "Cómo publicar contenido sólido con recursos limitados y pocas horas: elegir prioridades, reutilizar trabajo, auditar y evitar herramientas innecesarias.",
     "category": "Tecnología",
     "url": "/posts/publicar-mejor-con-pocos-recursos.html",
-    "date": "2026-06-10",
+    "date": "2026-06-12",
     "image": "/assets/img/posts/tecnologia.svg",
     "tags": [
-      "tecnologia",
-      "publicar",
-      "recursos"
+      "publicación digital",
+      "pocos recursos",
+      "contenido web",
+      "herramientas gratuitas"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "10–13 min"
   },
   {
-    "title": "Armar una base de conocimiento personal",
-    "description": "Guía práctica para armar una base de conocimiento personal: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y sostenible.",
+    "title": "Cómo armar una base de conocimiento personal",
+    "description": "Cómo guardar ideas, fuentes, decisiones y experiencia en una base de conocimiento portable, recuperable y conectada con proyectos reales.",
     "category": "Tecnología",
     "url": "/posts/armar-una-base-de-conocimiento-personal.html",
-    "date": "2026-06-10",
+    "date": "2026-06-12",
     "image": "/assets/img/posts/tecnologia.svg",
     "tags": [
-      "tecnologia",
-      "conocimiento",
-      "personal"
+      "base de conocimiento",
+      "Markdown",
+      "notas personales",
+      "biblioteca digital"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "10–13 min"
   },
   {
-    "title": "Usar la tecnología para salir del estancamiento",
-    "description": "Guía práctica para usar la tecnología para salir del estancamiento: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y sostenible.",
+    "title": "Cómo usar la tecnología para salir del estancamiento",
+    "description": "Cómo usar tecnología para convertir un proyecto trabado en una entrega concreta: elegir una tarea, usar herramientas simples, medir y cerrar la sesión.",
     "category": "Tecnología",
     "url": "/posts/usar-la-tecnologia-para-salir-del-estancamiento.html",
-    "date": "2026-06-10",
+    "date": "2026-06-12",
     "image": "/assets/img/posts/tecnologia.svg",
     "tags": [
-      "tecnologia",
-      "tecnología",
-      "estancamiento"
+      "tecnología útil",
+      "proyectos digitales",
+      "acción concreta",
+      "trabajo online"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "9–12 min"
   },
   {
-    "title": "Crear servicios digitales simples para vender",
-    "description": "Guía práctica para crear servicios digitales simples para vender: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y sostenible.",
+    "title": "Cómo crear servicios digitales simples para vender",
+    "description": "Cómo transformar una habilidad digital en un servicio vendible: problema concreto, alcance, entrega, precio, prueba, soporte y mejora.",
     "category": "Tecnología",
     "url": "/posts/crear-servicios-digitales-simples-para-vender.html",
-    "date": "2026-06-10",
+    "date": "2026-06-12",
     "image": "/assets/img/posts/tecnologia.svg",
     "tags": [
-      "tecnologia",
-      "servicios",
-      "digitales",
-      "simples",
-      "vender"
+      "servicios digitales",
+      "ventas",
+      "trabajo online",
+      "oferta simple"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "9–12 min"
   },
   {
     "title": "Ordenar contraseñas y cuentas sin caos",
@@ -287,309 +285,304 @@
     "readingTime": "10–14 min"
   },
   {
-    "title": "Hacer una web estática que cargue rápido",
-    "description": "Guía práctica para hacer una web estática que cargue rápido: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y sostenible.",
+    "title": "Cómo hacer una web estática que cargue rápido",
+    "description": "Cómo crear una web estática rápida con HTML claro, CSS mínimo, imágenes livianas, pocos scripts, URLs simples y mantenimiento fácil.",
     "category": "Tecnología",
     "url": "/posts/hacer-una-web-estatica-que-cargue-rapido.html",
-    "date": "2026-06-10",
+    "date": "2026-06-12",
     "image": "/assets/img/posts/tecnologia.svg",
     "tags": [
-      "tecnologia",
-      "estática",
-      "cargue",
-      "rápido"
+      "web estática",
+      "rendimiento web",
+      "HTML",
+      "GitHub Pages"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "9–12 min"
   },
   {
     "title": "Escribir mejores prompts con intención real",
-    "description": "Guía práctica para escribir mejores prompts con intención real: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y sostenible.",
+    "description": "Cómo escribir mejores prompts con intención real: contexto, objetivo, límites, formato, ejemplos, revisión y uso de IA sin perder criterio propio.",
     "category": "Tecnología",
     "url": "/posts/escribir-mejores-prompts-con-intencion-real.html",
-    "date": "2026-06-10",
+    "date": "2026-06-12",
     "image": "/assets/img/posts/tecnologia.svg",
     "tags": [
-      "tecnologia",
-      "escribir",
-      "mejores",
       "prompts",
-      "intención"
+      "inteligencia artificial",
+      "criterio",
+      "productividad"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "8–11 min"
   },
   {
-    "title": "Usar GitHub como taller de proyectos",
-    "description": "Guía práctica para usar github como taller de proyectos: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y sostenible.",
+    "title": "Cómo usar GitHub como taller de proyectos",
+    "description": "Cómo usar GitHub como taller de proyectos: repositorios, ramas, commits, issues, pull requests, Pages y una forma simple de no perder avances.",
     "category": "Tecnología",
     "url": "/posts/usar-github-como-taller-de-proyectos.html",
-    "date": "2026-06-10",
+    "date": "2026-06-12",
     "image": "/assets/img/posts/tecnologia.svg",
     "tags": [
-      "tecnologia",
       "GitHub",
-      "taller",
-      "proyectos"
+      "Git",
+      "proyectos digitales",
+      "GitHub Pages"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "9–12 min"
   },
   {
-    "title": "Crear imágenes web limpias y livianas",
-    "description": "Guía práctica para crear imágenes web limpias y livianas: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y sostenible.",
+    "title": "Cómo crear imágenes web limpias y livianas",
+    "description": "Cómo preparar imágenes web limpias y livianas: tamaño correcto, compresión, formato, nombre de archivo, alt, portada social y respaldo del original.",
     "category": "Tecnología",
     "url": "/posts/crear-imagenes-web-limpias-y-livianas.html",
-    "date": "2026-06-10",
+    "date": "2026-06-12",
     "image": "/assets/img/posts/tecnologia.svg",
     "tags": [
-      "tecnologia",
-      "imágenes",
-      "limpias",
-      "livianas"
+      "imágenes web",
+      "WebP",
+      "rendimiento",
+      "alt"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "9–12 min"
   },
   {
-    "title": "Transformar experiencia vieja en contenido nuevo",
-    "description": "Guía práctica para transformar experiencia vieja en contenido nuevo: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y...",
+    "title": "Cómo transformar experiencia vieja en contenido nuevo",
+    "description": "Cómo convertir experiencia acumulada en artículos útiles: separar recuerdo, aprendizaje, dato verificable, ejemplo actual y una respuesta que sirva hoy.",
     "category": "Tecnología",
     "url": "/posts/transformar-experiencia-vieja-en-contenido-nuevo.html",
-    "date": "2026-06-10",
+    "date": "2026-06-12",
     "image": "/assets/img/posts/tecnologia.svg",
     "tags": [
-      "tecnologia",
-      "transformar",
       "experiencia",
-      "contenido"
+      "contenido propio",
+      "blog",
+      "voz editorial"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "9–12 min"
   },
   {
     "title": "Volver a vivir de internet sin nostalgia",
-    "description": "Guía práctica para volver a vivir de internet sin nostalgia: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y sostenible.",
+    "description": "Cómo volver a construir ingresos online sin copiar el pasado: experiencia, oferta actual, contenido útil, medición, paciencia y control de expectativas.",
     "category": "Tecnología",
     "url": "/posts/volver-a-vivir-de-internet-sin-nostalgia.html",
-    "date": "2026-06-10",
+    "date": "2026-06-12",
     "image": "/assets/img/posts/tecnologia.svg",
     "tags": [
-      "tecnologia",
-      "volver",
-      "internet",
-      "nostalgia"
+      "vivir de internet",
+      "negocio digital",
+      "reconstrucción",
+      "contenido propio"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "9–12 min"
   },
   {
-    "title": "Crear un sistema de trabajo digital desde cero",
-    "description": "Guía práctica para crear un sistema de trabajo digital desde cero: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y sostenible.",
+    "title": "Cómo crear un sistema de trabajo digital desde cero",
+    "description": "Cómo armar un sistema de trabajo digital simple: carpeta, bandeja de entrada, tareas, versiones, respaldos, rutina y revisión semanal.",
     "category": "Tecnología",
     "url": "/posts/crear-un-sistema-de-trabajo-digital-desde-cero.html",
-    "date": "2026-06-10",
+    "date": "2026-06-12",
     "image": "/assets/img/posts/tecnologia.svg",
     "tags": [
-      "tecnologia",
-      "sistema",
-      "trabajo",
-      "digital"
+      "sistema digital",
+      "organización",
+      "Git",
+      "productividad"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "9–12 min"
   },
   {
     "title": "Usar herramientas gratuitas para producir más",
-    "description": "Guía práctica para usar herramientas gratuitas para producir más: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y sostenible.",
+    "description": "Cómo usar herramientas gratuitas para producir más sin llenarte de cuentas: elegir por tarea, probar con archivos reales, exportar y medir fricción.",
     "category": "Tecnología",
     "url": "/posts/usar-herramientas-gratuitas-para-producir-mas.html",
-    "date": "2026-06-10",
+    "date": "2026-06-12",
     "image": "/assets/img/posts/tecnologia.svg",
     "tags": [
-      "tecnologia",
-      "herramientas",
-      "gratuitas",
-      "producir"
+      "herramientas gratuitas",
+      "productividad",
+      "exportación",
+      "flujo digital"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "8–11 min"
   },
   {
-    "title": "Hacer una página rápida que Google pueda entender",
-    "description": "Guía práctica para hacer una página rápida que google pueda entender: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y...",
+    "title": "Cómo hacer una página rápida que Google pueda entender",
+    "description": "Cómo crear una página rápida y entendible para Google: intención clara, HTML semántico, enlaces, datos estructurados, imágenes livianas y contenido útil.",
     "category": "Tecnología",
     "url": "/posts/hacer-una-pagina-rapida-que-google-pueda-entender.html",
-    "date": "2026-06-10",
+    "date": "2026-06-12",
     "image": "/assets/img/posts/tecnologia.svg",
     "tags": [
-      "tecnologia",
-      "página",
-      "rápida",
-      "Google",
-      "entender"
+      "SEO técnico",
+      "página rápida",
+      "Google Search",
+      "HTML semántico"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "9–12 min"
   },
   {
-    "title": "Crear un archivo maestro para tus proyectos online",
-    "description": "Guía práctica para crear un archivo maestro para tus proyectos online: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y...",
+    "title": "Cómo crear un archivo maestro para tus proyectos online",
+    "description": "Cómo crear un archivo maestro para proyectos online: dominio, repositorio, plataforma, estado, tareas, enlaces, respaldo y revisión mensual.",
     "category": "Tecnología",
     "url": "/posts/crear-un-archivo-maestro-para-tus-proyectos-online.html",
-    "date": "2026-06-10",
+    "date": "2026-06-12",
     "image": "/assets/img/posts/tecnologia.svg",
     "tags": [
-      "tecnologia",
-      "archivo",
-      "maestro",
-      "proyectos",
-      "online"
+      "archivo maestro",
+      "proyectos online",
+      "organización",
+      "repositorios"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "9–12 min"
   },
   {
-    "title": "Convertir conocimientos informáticos en servicios simples",
-    "description": "Guía práctica para convertir conocimientos informáticos en servicios simples: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto...",
+    "title": "Cómo convertir conocimientos informáticos en servicios simples",
+    "description": "Cómo convertir conocimientos informáticos en entregas simples: problema concreto, resultado visible, alcance, ejemplo, instrucciones y mejora del proceso.",
     "category": "Tecnología",
     "url": "/posts/convertir-conocimientos-informaticos-en-servicios-simples.html",
-    "date": "2026-06-10",
+    "date": "2026-06-12",
     "image": "/assets/img/posts/tecnologia.svg",
     "tags": [
-      "tecnologia",
-      "convertir",
-      "conocimientos",
-      "informáticos",
-      "servicios"
+      "servicios informáticos",
+      "entregas simples",
+      "trabajo digital",
+      "oferta clara"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "9–12 min"
   },
   {
     "title": "Usar IA para mejorar textos sin perder tu voz",
-    "description": "Guía práctica para usar ia para mejorar textos sin perder tu voz: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y sostenible.",
+    "description": "Cómo usar IA para mejorar textos sin perder tu voz: corregir estructura, detectar repeticiones, pedir críticas útiles y conservar criterio editorial.",
     "category": "Tecnología",
     "url": "/posts/usar-ia-para-mejorar-textos-sin-perder-tu-voz.html",
-    "date": "2026-06-10",
+    "date": "2026-06-12",
     "image": "/assets/img/posts/tecnologia.svg",
     "tags": [
-      "tecnologia",
-      "mejorar",
-      "textos",
-      "perder"
+      "IA",
+      "escritura",
+      "voz propia",
+      "edición"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "8–11 min"
   },
   {
-    "title": "Organizar una semana de producción digital",
-    "description": "Guía práctica para organizar una semana de producción digital: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y sostenible.",
+    "title": "Cómo organizar una semana de producción digital",
+    "description": "Cómo organizar una semana de producción digital: selección de temas, escritura, edición, publicación, medición y mantenimiento sin mezclar etapas.",
     "category": "Tecnología",
     "url": "/posts/organizar-una-semana-de-produccion-digital.html",
-    "date": "2026-06-10",
+    "date": "2026-06-12",
     "image": "/assets/img/posts/tecnologia.svg",
     "tags": [
-      "tecnologia",
-      "organizar",
-      "semana",
-      "producción",
-      "digital"
+      "producción digital",
+      "calendario",
+      "blog",
+      "organización"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "9–12 min"
   },
   {
     "title": "Crear recursos descargables para vender en internet",
-    "description": "Guía práctica para crear recursos descargables para vender en internet: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y...",
+    "description": "Cómo crear recursos descargables vendibles: problema concreto, archivo usable, instrucciones, formato, prueba, licencia simple y mejora con usuarios reales.",
     "category": "Tecnología",
     "url": "/posts/crear-recursos-descargables-para-vender-en-internet.html",
-    "date": "2026-06-10",
+    "date": "2026-06-12",
     "image": "/assets/img/posts/tecnologia.svg",
     "tags": [
-      "tecnologia",
-      "recursos",
-      "descargables",
-      "vender",
-      "internet"
+      "recursos descargables",
+      "productos digitales",
+      "plantillas",
+      "venta online"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "8–11 min"
   },
   {
-    "title": "Mejorar una web vieja sin romperla",
-    "description": "Guía práctica para mejorar una web vieja sin romperla: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y sostenible.",
+    "title": "Cómo mejorar una web vieja sin romperla",
+    "description": "Cómo mejorar una web vieja con respaldo, auditoría inicial, cambios pequeños, control de versiones, pruebas y prioridad sobre lo que realmente afecta al usuario.",
     "category": "Tecnología",
     "url": "/posts/mejorar-una-web-vieja-sin-romperla.html",
-    "date": "2026-06-10",
+    "date": "2026-06-12",
     "image": "/assets/img/posts/tecnologia.svg",
     "tags": [
-      "tecnologia",
-      "mejorar",
-      "romperla"
+      "web vieja",
+      "rediseño",
+      "Git",
+      "SEO técnico"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "9–12 min"
   },
   {
     "title": "Usar una computadora lenta con inteligencia práctica",
-    "description": "Guía práctica para usar una computadora lenta con inteligencia práctica: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y...",
+    "description": "Cómo trabajar con una computadora lenta sin perder el día: diagnóstico, menos programas, tareas pequeñas, archivos livianos y cuándo conviene mejorar el equipo.",
     "category": "Tecnología",
     "url": "/posts/usar-una-computadora-lenta-con-inteligencia-practica.html",
-    "date": "2026-06-10",
+    "date": "2026-06-12",
     "image": "/assets/img/posts/tecnologia.svg",
     "tags": [
-      "tecnologia",
-      "computadora",
-      "inteligencia",
-      "práctica"
+      "computadora lenta",
+      "productividad",
+      "notebook vieja",
+      "herramientas livianas"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "8–11 min"
   },
   {
-    "title": "Crear un calendario editorial sin complicarte",
-    "description": "Guía práctica para crear un calendario editorial sin complicarte: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y sostenible.",
+    "title": "Cómo crear un calendario editorial sin complicarte",
+    "description": "Cómo crear un calendario editorial simple: temas, intención, estado, fecha, fuentes, enlaces internos, revisión y publicación sin convertirlo en una carga.",
     "category": "Tecnología",
     "url": "/posts/crear-un-calendario-editorial-sin-complicarte.html",
-    "date": "2026-06-10",
+    "date": "2026-06-12",
     "image": "/assets/img/posts/tecnologia.svg",
     "tags": [
-      "tecnologia",
-      "calendario",
-      "editorial",
-      "complicarte"
+      "calendario editorial",
+      "blog",
+      "contenidos",
+      "organización"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "9–12 min"
   },
   {
     "title": "Probar ideas digitales antes de gastar dinero",
-    "description": "Guía práctica para probar ideas digitales antes de gastar dinero: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y sostenible.",
+    "description": "Cómo probar ideas digitales antes de gastar dinero: página simple, muestra, conversación real, lista de interesados, costo mínimo y decisión con datos.",
     "category": "Tecnología",
     "url": "/posts/probar-ideas-digitales-antes-de-gastar-dinero.html",
-    "date": "2026-06-10",
+    "date": "2026-06-12",
     "image": "/assets/img/posts/tecnologia.svg",
     "tags": [
-      "tecnologia",
-      "probar",
-      "digitales",
-      "gastar",
-      "dinero"
+      "ideas digitales",
+      "validación",
+      "producto digital",
+      "negocio online"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "8–11 min"
   },
   {
-    "title": "Usar estadísticas para decidir qué publicar",
-    "description": "Guía práctica para usar estadísticas para decidir qué publicar: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y sostenible.",
+    "title": "Cómo usar estadísticas para decidir qué publicar",
+    "description": "Cómo usar estadísticas para decidir publicaciones: consultas, impresiones, clics, CTR, páginas fuertes, huecos de contenido y decisiones editoriales.",
     "category": "Tecnología",
     "url": "/posts/usar-estadisticas-para-decidir-que-publicar.html",
-    "date": "2026-06-10",
+    "date": "2026-06-12",
     "image": "/assets/img/posts/tecnologia.svg",
     "tags": [
-      "tecnologia",
       "estadísticas",
-      "decidir",
-      "publicar"
+      "Search Console",
+      "SEO",
+      "decisión editorial"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "9–12 min"
   },
   {
     "title": "Crear una marca personal desde una notebook común",
-    "description": "Guía práctica para crear una marca personal desde una notebook común: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y...",
+    "description": "Cómo crear una marca personal desde una notebook común: tema claro, prueba de trabajo, archivo propio, constancia, límites y publicaciones útiles.",
     "category": "Tecnología",
     "url": "/posts/crear-una-marca-personal-desde-una-notebook-comun.html",
-    "date": "2026-06-10",
+    "date": "2026-06-12",
     "image": "/assets/img/posts/tecnologia.svg",
     "tags": [
-      "tecnologia",
-      "personal",
-      "notebook"
+      "marca personal",
+      "notebook común",
+      "contenido propio",
+      "trabajo digital"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "8–11 min"
   },
   {
     "title": "Hacer backups simples para no perder tu trabajo",
@@ -608,95 +601,94 @@
     "readingTime": "10–14 min"
   },
   {
-    "title": "Crear un mini laboratorio de SEO casero",
-    "description": "Guía práctica para crear un mini laboratorio de seo casero: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y sostenible.",
+    "title": "Cómo crear un mini laboratorio de SEO casero",
+    "description": "Cómo crear un mini laboratorio SEO casero: hipótesis, páginas de prueba, cambios pequeños, Search Console, registro y decisiones sin fórmulas mágicas.",
     "category": "Tecnología",
     "url": "/posts/crear-un-mini-laboratorio-de-seo-casero.html",
-    "date": "2026-06-10",
+    "date": "2026-06-12",
     "image": "/assets/img/posts/tecnologia.svg",
     "tags": [
-      "tecnologia",
-      "laboratorio",
-      "casero"
+      "SEO",
+      "Search Console",
+      "experimentos",
+      "GitHub"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "9–12 min"
   },
   {
     "title": "Automatizar publicaciones sin perder calidad humana",
-    "description": "Guía práctica para automatizar publicaciones sin perder calidad humana: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y...",
+    "description": "Cómo automatizar publicaciones sin perder calidad humana: separar tareas técnicas, revisión editorial, fuentes, enlaces, auditoría y aprobación antes de publicar.",
     "category": "Tecnología",
     "url": "/posts/automatizar-publicaciones-sin-perder-calidad-humana.html",
-    "date": "2026-06-10",
+    "date": "2026-06-12",
     "image": "/assets/img/posts/tecnologia.svg",
     "tags": [
-      "tecnologia",
-      "automatizar",
+      "automatización",
       "publicaciones",
-      "perder",
-      "calidad"
+      "calidad humana",
+      "GitHub Actions"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "8–11 min"
   },
   {
     "title": "Usar internet para encontrar oportunidades reales",
-    "description": "Guía práctica para usar internet para encontrar oportunidades reales: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y...",
+    "description": "Cómo usar internet para encontrar oportunidades reales: observar problemas, validar demanda, evitar promesas fáciles y convertir señales en acciones concretas.",
     "category": "Tecnología",
     "url": "/posts/usar-internet-para-encontrar-oportunidades-reales.html",
-    "date": "2026-06-10",
+    "date": "2026-06-12",
     "image": "/assets/img/posts/tecnologia.svg",
     "tags": [
-      "tecnologia",
-      "internet",
-      "encontrar",
-      "oportunidades",
-      "reales"
+      "oportunidades online",
+      "validación",
+      "negocio digital",
+      "investigación"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "8–11 min"
   },
   {
     "title": "Convertir una habilidad vieja en producto digital",
-    "description": "Guía práctica para convertir una habilidad vieja en producto digital: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y...",
+    "description": "Cómo convertir una habilidad vieja en producto digital: detectar valor real, crear una entrega pequeña, probarla, mejorarla y venderla sin humo.",
     "category": "Tecnología",
     "url": "/posts/convertir-una-habilidad-vieja-en-producto-digital.html",
-    "date": "2026-06-10",
+    "date": "2026-06-12",
     "image": "/assets/img/posts/tecnologia.svg",
     "tags": [
-      "tecnologia",
-      "convertir",
-      "habilidad",
-      "producto",
-      "digital"
+      "producto digital",
+      "habilidades",
+      "plantillas",
+      "validación"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "8–11 min"
   },
   {
-    "title": "Crear una web liviana para AdSense",
-    "description": "Guía práctica para crear una web liviana para adsense: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y sostenible.",
+    "title": "Cómo crear una web liviana para AdSense",
+    "description": "Cómo preparar una web liviana para AdSense: contenido útil, navegación clara, velocidad, políticas, ubicación razonable de anuncios y medición honesta.",
     "category": "Tecnología",
     "url": "/posts/crear-una-web-liviana-para-adsense.html",
-    "date": "2026-06-10",
+    "date": "2026-06-12",
     "image": "/assets/img/posts/tecnologia.svg",
     "tags": [
-      "tecnologia",
-      "liviana",
-      "AdSense"
+      "AdSense",
+      "monetización",
+      "web liviana",
+      "contenido útil"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "9–12 min"
   },
   {
-    "title": "Trabajar con foco cuando la computadora no ayuda",
-    "description": "Guía práctica para trabajar con foco cuando la computadora no ayuda: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y...",
+    "title": "Cómo trabajar con foco cuando la computadora no ayuda",
+    "description": "Cómo trabajar con foco en una computadora limitada: reducir programas, preparar archivos, elegir una entrega pequeña y cerrar cada sesión con claridad.",
     "category": "Tecnología",
     "url": "/posts/trabajar-con-foco-cuando-la-computadora-no-ayuda.html",
-    "date": "2026-06-10",
+    "date": "2026-06-12",
     "image": "/assets/img/posts/tecnologia.svg",
     "tags": [
-      "tecnologia",
-      "trabajar",
-      "cuando",
-      "computadora"
+      "foco",
+      "notebook vieja",
+      "productividad",
+      "herramientas livianas"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "9–12 min"
   },
   {
     "title": "Usar prompts para planificar un negocio digital",
@@ -715,20 +707,19 @@
     "readingTime": "10–14 min"
   },
   {
-    "title": "Crear contenido evergreen con mirada propia",
-    "description": "Guía práctica para crear contenido evergreen con mirada propia: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y sostenible.",
+    "title": "Cómo crear contenido evergreen con mirada propia",
+    "description": "Cómo crear contenido evergreen que siga sirviendo con el tiempo: pregunta estable, experiencia propia, fuentes, actualización y voz humana.",
     "category": "Tecnología",
     "url": "/posts/crear-contenido-evergreen-con-mirada-propia.html",
-    "date": "2026-06-10",
+    "date": "2026-06-12",
     "image": "/assets/img/posts/tecnologia.svg",
     "tags": [
-      "tecnologia",
-      "contenido",
       "evergreen",
-      "mirada",
-      "propia"
+      "contenido útil",
+      "voz propia",
+      "SEO humano"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "9–12 min"
   },
   {
     "title": "Levantar un proyecto abandonado con método",

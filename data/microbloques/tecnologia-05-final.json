@@ -1,0 +1,11 @@
+{
+  "name": "Tecnología 05",
+  "minimumWords": 600,
+  "files": [
+    "mejorar-una-web-vieja-sin-romperla.html",
+    "hacer-una-web-estatica-que-cargue-rapido.html",
+    "hacer-una-pagina-rapida-que-google-pueda-entender.html",
+    "usar-github-como-taller-de-proyectos.html",
+    "convertir-conocimientos-informaticos-en-servicios-simples.html"
+  ]
+}

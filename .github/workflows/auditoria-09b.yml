@@ -1,0 +1,35 @@
+name: Auditoria 09b
+
+on:
+  pull_request:
+    branches: [release-estable-v3]
+
+permissions:
+  contents: write
+
+jobs:
+  auditar:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Catalogo
+        run: |
+          node scripts/aplicar-microbloque.mjs data/microbloques/tecnologia-09a.json
+          node scripts/aplicar-microbloque.mjs data/microbloques/tecnologia-09b.json
+      - name: Contenido
+        run: node scripts/auditar-microbloque-contenido.mjs data/microbloques/tecnologia-09.json
+      - name: Tecnica
+        run: node scripts/auditar-microbloque-tecnica.mjs data/microbloques/tecnologia-09.json
+      - name: Guardar
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/posts.json
+          git commit -m "Actualizar catalogo bloque 09" || echo "Sin cambios"
+          git push

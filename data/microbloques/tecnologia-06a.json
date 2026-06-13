@@ -1,0 +1,21 @@
+{
+  "name": "Tecnología 06a",
+  "posts": [
+    {
+      "url": "/posts/crear-imagenes-web-limpias-y-livianas.html",
+      "title": "Cómo crear imágenes web limpias y livianas",
+      "description": "Cómo preparar imágenes web limpias y livianas: tamaño correcto, compresión, formato, nombre de archivo, alt, portada social y respaldo del original.",
+      "date": "2026-06-12",
+      "readingTime": "9–12 min",
+      "tags": ["imágenes web", "WebP", "rendimiento", "alt"]
+    },
+    {
+      "url": "/posts/usar-estadisticas-para-decidir-que-publicar.html",
+      "title": "Cómo usar estadísticas para decidir qué publicar",
+      "description": "Cómo usar estadísticas para decidir publicaciones: consultas, impresiones, clics, CTR, páginas fuertes, huecos de contenido y decisiones editoriales.",
+      "date": "2026-06-12",
+      "readingTime": "9–12 min",
+      "tags": ["estadísticas", "Search Console", "SEO", "decisión editorial"]
+    }
+  ]
+}

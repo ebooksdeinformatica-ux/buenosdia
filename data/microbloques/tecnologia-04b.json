@@ -1,0 +1,29 @@
+{
+  "name": "Tecnología 04b",
+  "posts": [
+    {
+      "url": "/posts/transformar-experiencia-vieja-en-contenido-nuevo.html",
+      "title": "Cómo transformar experiencia vieja en contenido nuevo",
+      "description": "Cómo convertir experiencia acumulada en artículos útiles: separar recuerdo, aprendizaje, dato verificable, ejemplo actual y una respuesta que sirva hoy.",
+      "date": "2026-06-12",
+      "readingTime": "9–12 min",
+      "tags": ["experiencia", "contenido propio", "blog", "voz editorial"]
+    },
+    {
+      "url": "/posts/volver-a-vivir-de-internet-sin-nostalgia.html",
+      "title": "Volver a vivir de internet sin nostalgia",
+      "description": "Cómo volver a construir ingresos online sin copiar el pasado: experiencia, oferta actual, contenido útil, medición, paciencia y control de expectativas.",
+      "date": "2026-06-12",
+      "readingTime": "9–12 min",
+      "tags": ["vivir de internet", "negocio digital", "reconstrucción", "contenido propio"]
+    },
+    {
+      "url": "/posts/crear-servicios-digitales-simples-para-vender.html",
+      "title": "Cómo crear servicios digitales simples para vender",
+      "description": "Cómo transformar una habilidad digital en un servicio vendible: problema concreto, alcance, entrega, precio, prueba, soporte y mejora.",
+      "date": "2026-06-12",
+      "readingTime": "9–12 min",
+      "tags": ["servicios digitales", "ventas", "trabajo online", "oferta simple"]
+    }
+  ]
+}
