@@ -1,0 +1,29 @@
+{
+  "name": "Tecnología 07b",
+  "posts": [
+    {
+      "url": "/posts/organizar-una-semana-de-produccion-digital.html",
+      "title": "Cómo organizar una semana de producción digital",
+      "description": "Cómo organizar una semana de producción digital: selección de temas, escritura, edición, publicación, medición y mantenimiento sin mezclar etapas.",
+      "date": "2026-06-12",
+      "readingTime": "9–12 min",
+      "tags": ["producción digital", "calendario", "blog", "organización"]
+    },
+    {
+      "url": "/posts/crear-un-calendario-editorial-sin-complicarte.html",
+      "title": "Cómo crear un calendario editorial sin complicarte",
+      "description": "Cómo crear un calendario editorial simple: temas, intención, estado, fecha, fuentes, enlaces internos, revisión y publicación sin convertirlo en una carga.",
+      "date": "2026-06-12",
+      "readingTime": "9–12 min",
+      "tags": ["calendario editorial", "blog", "contenidos", "organización"]
+    },
+    {
+      "url": "/posts/trabajar-con-foco-cuando-la-computadora-no-ayuda.html",
+      "title": "Cómo trabajar con foco cuando la computadora no ayuda",
+      "description": "Cómo trabajar con foco en una computadora limitada: reducir programas, preparar archivos, elegir una entrega pequeña y cerrar cada sesión con claridad.",
+      "date": "2026-06-12",
+      "readingTime": "9–12 min",
+      "tags": ["foco", "notebook vieja", "productividad", "herramientas livianas"]
+    }
+  ]
+}
