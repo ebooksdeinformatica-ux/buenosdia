@@ -421,20 +421,19 @@
     "readingTime": "9–12 min"
   },
   {
-    "title": "Crear un archivo maestro para tus proyectos online",
-    "description": "Guía práctica para crear un archivo maestro para tus proyectos online: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y...",
+    "title": "Cómo crear un archivo maestro para tus proyectos online",
+    "description": "Cómo crear un archivo maestro para proyectos online: dominio, repositorio, plataforma, estado, tareas, enlaces, respaldo y revisión mensual.",
     "category": "Tecnología",
     "url": "/posts/crear-un-archivo-maestro-para-tus-proyectos-online.html",
-    "date": "2026-06-10",
+    "date": "2026-06-12",
     "image": "/assets/img/posts/tecnologia.svg",
     "tags": [
-      "tecnologia",
-      "archivo",
-      "maestro",
-      "proyectos",
-      "online"
+      "archivo maestro",
+      "proyectos online",
+      "organización",
+      "repositorios"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "9–12 min"
   },
   {
     "title": "Cómo convertir conocimientos informáticos en servicios simples",
@@ -467,20 +466,19 @@
     "readingTime": "10–14 min"
   },
   {
-    "title": "Organizar una semana de producción digital",
-    "description": "Guía práctica para organizar una semana de producción digital: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y sostenible.",
+    "title": "Cómo organizar una semana de producción digital",
+    "description": "Cómo organizar una semana de producción digital: selección de temas, escritura, edición, publicación, medición y mantenimiento sin mezclar etapas.",
     "category": "Tecnología",
     "url": "/posts/organizar-una-semana-de-produccion-digital.html",
-    "date": "2026-06-10",
+    "date": "2026-06-12",
     "image": "/assets/img/posts/tecnologia.svg",
     "tags": [
-      "tecnologia",
-      "organizar",
-      "semana",
-      "producción",
-      "digital"
+      "producción digital",
+      "calendario",
+      "blog",
+      "organización"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "9–12 min"
   },
   {
     "title": "Crear recursos descargables para vender en internet",
@@ -529,19 +527,19 @@
     "readingTime": "10–14 min"
   },
   {
-    "title": "Crear un calendario editorial sin complicarte",
-    "description": "Guía práctica para crear un calendario editorial sin complicarte: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y sostenible.",
+    "title": "Cómo crear un calendario editorial sin complicarte",
+    "description": "Cómo crear un calendario editorial simple: temas, intención, estado, fecha, fuentes, enlaces internos, revisión y publicación sin convertirlo en una carga.",
     "category": "Tecnología",
     "url": "/posts/crear-un-calendario-editorial-sin-complicarte.html",
-    "date": "2026-06-10",
+    "date": "2026-06-12",
     "image": "/assets/img/posts/tecnologia.svg",
     "tags": [
-      "tecnologia",
-      "calendario",
-      "editorial",
-      "complicarte"
+      "calendario editorial",
+      "blog",
+      "contenidos",
+      "organización"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "9–12 min"
   },
   {
     "title": "Probar ideas digitales antes de gastar dinero",
@@ -683,19 +681,19 @@
     "readingTime": "9–12 min"
   },
   {
-    "title": "Trabajar con foco cuando la computadora no ayuda",
-    "description": "Guía práctica para trabajar con foco cuando la computadora no ayuda: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y...",
+    "title": "Cómo trabajar con foco cuando la computadora no ayuda",
+    "description": "Cómo trabajar con foco en una computadora limitada: reducir programas, preparar archivos, elegir una entrega pequeña y cerrar cada sesión con claridad.",
     "category": "Tecnología",
     "url": "/posts/trabajar-con-foco-cuando-la-computadora-no-ayuda.html",
-    "date": "2026-06-10",
+    "date": "2026-06-12",
     "image": "/assets/img/posts/tecnologia.svg",
     "tags": [
-      "tecnologia",
-      "trabajar",
-      "cuando",
-      "computadora"
+      "foco",
+      "notebook vieja",
+      "productividad",
+      "herramientas livianas"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "9–12 min"
   },
   {
     "title": "Usar prompts para planificar un negocio digital",
@@ -714,20 +712,19 @@
     "readingTime": "10–14 min"
   },
   {
-    "title": "Crear contenido evergreen con mirada propia",
-    "description": "Guía práctica para crear contenido evergreen con mirada propia: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y sostenible.",
+    "title": "Cómo crear contenido evergreen con mirada propia",
+    "description": "Cómo crear contenido evergreen que siga sirviendo con el tiempo: pregunta estable, experiencia propia, fuentes, actualización y voz humana.",
     "category": "Tecnología",
     "url": "/posts/crear-contenido-evergreen-con-mirada-propia.html",
-    "date": "2026-06-10",
+    "date": "2026-06-12",
     "image": "/assets/img/posts/tecnologia.svg",
     "tags": [
-      "tecnologia",
-      "contenido",
       "evergreen",
-      "mirada",
-      "propia"
+      "contenido útil",
+      "voz propia",
+      "SEO humano"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "9–12 min"
   },
   {
     "title": "Levantar un proyecto abandonado con método",
