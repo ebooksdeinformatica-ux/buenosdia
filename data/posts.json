@@ -105,20 +105,19 @@
     "readingTime": "10–13 min"
   },
   {
-    "title": "Usar internet para recuperar ingresos perdidos",
-    "description": "Guía práctica para usar internet para recuperar ingresos perdidos: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y sostenible.",
+    "title": "Cómo usar internet para recuperar ingresos perdidos",
+    "description": "Cómo usar internet para reconstruir ingresos con criterio: inventario de habilidades, servicios simples, contenido propio, medición, límites y expectativas reales.",
     "category": "Tecnología",
     "url": "/posts/usar-internet-para-recuperar-ingresos-perdidos.html",
-    "date": "2026-06-10",
+    "date": "2026-06-12",
     "image": "/assets/img/posts/tecnologia.svg",
     "tags": [
-      "tecnologia",
-      "internet",
-      "recuperar",
-      "ingresos",
-      "perdidos"
+      "ingresos online",
+      "servicios digitales",
+      "blog",
+      "reconstrucción"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "9–12 min"
   },
   {
     "title": "Cómo crear contenido sin depender de redes sociales",
@@ -332,19 +331,19 @@
     "readingTime": "9–12 min"
   },
   {
-    "title": "Crear imágenes web limpias y livianas",
-    "description": "Guía práctica para crear imágenes web limpias y livianas: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y sostenible.",
+    "title": "Cómo crear imágenes web limpias y livianas",
+    "description": "Cómo preparar imágenes web limpias y livianas: tamaño correcto, compresión, formato, nombre de archivo, alt, portada social y respaldo del original.",
     "category": "Tecnología",
     "url": "/posts/crear-imagenes-web-limpias-y-livianas.html",
-    "date": "2026-06-10",
+    "date": "2026-06-12",
     "image": "/assets/img/posts/tecnologia.svg",
     "tags": [
-      "tecnologia",
-      "imágenes",
-      "limpias",
-      "livianas"
+      "imágenes web",
+      "WebP",
+      "rendimiento",
+      "alt"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "9–12 min"
   },
   {
     "title": "Cómo transformar experiencia vieja en contenido nuevo",
@@ -561,19 +560,19 @@
     "readingTime": "10–14 min"
   },
   {
-    "title": "Usar estadísticas para decidir qué publicar",
-    "description": "Guía práctica para usar estadísticas para decidir qué publicar: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y sostenible.",
+    "title": "Cómo usar estadísticas para decidir qué publicar",
+    "description": "Cómo usar estadísticas para decidir publicaciones: consultas, impresiones, clics, CTR, páginas fuertes, huecos de contenido y decisiones editoriales.",
     "category": "Tecnología",
     "url": "/posts/usar-estadisticas-para-decidir-que-publicar.html",
-    "date": "2026-06-10",
+    "date": "2026-06-12",
     "image": "/assets/img/posts/tecnologia.svg",
     "tags": [
-      "tecnologia",
       "estadísticas",
-      "decidir",
-      "publicar"
+      "Search Console",
+      "SEO",
+      "decisión editorial"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "9–12 min"
   },
   {
     "title": "Crear una marca personal desde una notebook común",
@@ -606,18 +605,19 @@
     "readingTime": "10–14 min"
   },
   {
-    "title": "Crear un mini laboratorio de SEO casero",
-    "description": "Guía práctica para crear un mini laboratorio de seo casero: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y sostenible.",
+    "title": "Cómo crear un mini laboratorio de SEO casero",
+    "description": "Cómo crear un mini laboratorio SEO casero: hipótesis, páginas de prueba, cambios pequeños, Search Console, registro y decisiones sin fórmulas mágicas.",
     "category": "Tecnología",
     "url": "/posts/crear-un-mini-laboratorio-de-seo-casero.html",
-    "date": "2026-06-10",
+    "date": "2026-06-12",
     "image": "/assets/img/posts/tecnologia.svg",
     "tags": [
-      "tecnologia",
-      "laboratorio",
-      "casero"
+      "SEO",
+      "Search Console",
+      "experimentos",
+      "GitHub"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "9–12 min"
   },
   {
     "title": "Automatizar publicaciones sin perder calidad humana",
@@ -668,18 +668,19 @@
     "readingTime": "10–14 min"
   },
   {
-    "title": "Crear una web liviana para AdSense",
-    "description": "Guía práctica para crear una web liviana para adsense: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y sostenible.",
+    "title": "Cómo crear una web liviana para AdSense",
+    "description": "Cómo preparar una web liviana para AdSense: contenido útil, navegación clara, velocidad, políticas, ubicación razonable de anuncios y medición honesta.",
     "category": "Tecnología",
     "url": "/posts/crear-una-web-liviana-para-adsense.html",
-    "date": "2026-06-10",
+    "date": "2026-06-12",
     "image": "/assets/img/posts/tecnologia.svg",
     "tags": [
-      "tecnologia",
-      "liviana",
-      "AdSense"
+      "AdSense",
+      "monetización",
+      "web liviana",
+      "contenido útil"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "9–12 min"
   },
   {
     "title": "Trabajar con foco cuando la computadora no ayuda",
