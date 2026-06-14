@@ -1,0 +1,63 @@
+{
+  "name": "Pan y Circo 02",
+  "minimumWords": 1,
+  "files": [
+    "la-pantalla-como-premio-barato.html",
+    "consumo-digital-y-cansancio-invisible.html",
+    "noticias-que-informan-y-noticias-que-intoxican.html",
+    "famosos-escandalos-y-atencion-robada.html",
+    "la-cultura-del-clip-corto.html"
+  ],
+  "posts": [
+    {
+      "title": "La pantalla como premio barato",
+      "description": "La pantalla como premio barato aparece cuando cada esfuerzo se paga con un estímulo rápido que calma un minuto y cobra atención después.",
+      "category": "Pan y Circo",
+      "url": "/posts/la-pantalla-como-premio-barato.html",
+      "date": "2026-06-14",
+      "image": "/assets/img/posts/pan-y-circo.svg",
+      "tags": ["pan y circo", "pantallas", "recompensa", "atención"],
+      "readingTime": "8–11 min"
+    },
+    {
+      "title": "Consumo digital y cansancio invisible",
+      "description": "Consumo digital y cansancio invisible describe ese agotamiento que llega sin esfuerzo físico: demasiadas entradas, estímulos y microdecisiones.",
+      "category": "Pan y Circo",
+      "url": "/posts/consumo-digital-y-cansancio-invisible.html",
+      "date": "2026-06-14",
+      "image": "/assets/img/posts/pan-y-circo.svg",
+      "tags": ["pan y circo", "consumo digital", "cansancio", "atención"],
+      "readingTime": "8–11 min"
+    },
+    {
+      "title": "Noticias que informan y noticias que intoxican",
+      "description": "Noticias que informan y noticias que intoxican se diferencian por el efecto: una orienta, la otra repite urgencias hasta dejarte sin acción.",
+      "category": "Pan y Circo",
+      "url": "/posts/noticias-que-informan-y-noticias-que-intoxican.html",
+      "date": "2026-06-14",
+      "image": "/assets/img/posts/pan-y-circo.svg",
+      "tags": ["pan y circo", "noticias", "atención", "criterio"],
+      "readingTime": "8–11 min"
+    },
+    {
+      "title": "Famosos, escándalos y atención robada",
+      "description": "Famosos, escándalos y atención robada muestra cómo el espectáculo de vidas ajenas puede ocupar energía que necesitabas para lo propio.",
+      "category": "Pan y Circo",
+      "url": "/posts/famosos-escandalos-y-atencion-robada.html",
+      "date": "2026-06-14",
+      "image": "/assets/img/posts/pan-y-circo.svg",
+      "tags": ["pan y circo", "famosos", "escándalos", "atención"],
+      "readingTime": "8–11 min"
+    },
+    {
+      "title": "La cultura del clip corto",
+      "description": "La cultura del clip corto entrena la atención para esperar impacto inmediato y vuelve más difícil quedarse con ideas largas.",
+      "category": "Pan y Circo",
+      "url": "/posts/la-cultura-del-clip-corto.html",
+      "date": "2026-06-14",
+      "image": "/assets/img/posts/pan-y-circo.svg",
+      "tags": ["pan y circo", "clips cortos", "atención", "cultura digital"],
+      "readingTime": "8–11 min"
+    }
+  ]
+}
