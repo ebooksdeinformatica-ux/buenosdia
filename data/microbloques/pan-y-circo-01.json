@@ -1,0 +1,63 @@
+{
+  "name": "Pan y Circo 01",
+  "minimumWords": 1,
+  "files": [
+    "cuando-el-entretenimiento-se-vuelve-anestesia.html",
+    "series-que-descansan-y-series-que-te-vacian.html",
+    "el-scroll-infinito-y-la-manana-perdida.html",
+    "television-como-ruido-de-fondo-mental.html",
+    "mirar-menos-para-pensar-mejor.html"
+  ],
+  "posts": [
+    {
+      "title": "Cuando el entretenimiento se vuelve anestesia",
+      "description": "Cuando el entretenimiento se vuelve anestesia deja de descansar y empieza a borrar señales: cansancio, enojo, pendientes y ganas de cambiar algo.",
+      "category": "Pan y Circo",
+      "url": "/posts/cuando-el-entretenimiento-se-vuelve-anestesia.html",
+      "date": "2026-06-14",
+      "image": "/assets/img/posts/pan-y-circo.svg",
+      "tags": ["pan y circo", "entretenimiento", "atención", "descanso"],
+      "readingTime": "8–11 min"
+    },
+    {
+      "title": "Series que descansan y series que te vacían",
+      "description": "Series que descansan y series que te vacían se distinguen por el efecto posterior: calma elegida o consumo automático que deja más cansancio.",
+      "category": "Pan y Circo",
+      "url": "/posts/series-que-descansan-y-series-que-te-vacian.html",
+      "date": "2026-06-14",
+      "image": "/assets/img/posts/pan-y-circo.svg",
+      "tags": ["pan y circo", "series", "atención", "descanso"],
+      "readingTime": "8–11 min"
+    },
+    {
+      "title": "El scroll infinito y la mañana perdida",
+      "description": "El scroll infinito y la mañana perdida muestran cómo un gesto mínimo puede capturar el arranque del día antes de que decidas qué hacer.",
+      "category": "Pan y Circo",
+      "url": "/posts/el-scroll-infinito-y-la-manana-perdida.html",
+      "date": "2026-06-14",
+      "image": "/assets/img/posts/pan-y-circo.svg",
+      "tags": ["pan y circo", "scroll infinito", "atención", "mañana"],
+      "readingTime": "8–11 min"
+    },
+    {
+      "title": "Televisión como ruido de fondo mental",
+      "description": "Televisión como ruido de fondo mental habla de ese sonido constante que parece compañía, pero ocupa atención, silencio y descanso real.",
+      "category": "Pan y Circo",
+      "url": "/posts/television-como-ruido-de-fondo-mental.html",
+      "date": "2026-06-14",
+      "image": "/assets/img/posts/pan-y-circo.svg",
+      "tags": ["pan y circo", "televisión", "ruido mental", "atención"],
+      "readingTime": "8–11 min"
+    },
+    {
+      "title": "Mirar menos para pensar mejor",
+      "description": "Mirar menos para pensar mejor no es rechazar pantallas: es recuperar silencio, atención y criterio para que el día no venga pensado por otros.",
+      "category": "Pan y Circo",
+      "url": "/posts/mirar-menos-para-pensar-mejor.html",
+      "date": "2026-06-14",
+      "image": "/assets/img/posts/pan-y-circo.svg",
+      "tags": ["pan y circo", "atención", "pensamiento", "pantallas"],
+      "readingTime": "8–11 min"
+    }
+  ]
+}
