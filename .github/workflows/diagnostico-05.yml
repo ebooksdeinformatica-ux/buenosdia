@@ -1,0 +1,30 @@
+name: Diagnostico Tecnologia 05
+on:
+  push:
+    branches: [lote-1-tecnologia-real]
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  diagnostico:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: lote-1-tecnologia-real
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Diagnosticar contenido
+        run: |
+          set +e
+          node scripts/auditar-microbloque-contenido.mjs data/microbloques/tecnologia-05.json > data/microbloques/tecnologia-05-errors.txt 2>&1
+          cat data/microbloques/tecnologia-05-errors.txt
+          exit 0
+      - name: Guardar diagnostico
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/microbloques/tecnologia-05-errors.txt
+          git commit -m "Guardar diagnostico Tecnologia 05" || echo "Sin cambios"
+          git push
