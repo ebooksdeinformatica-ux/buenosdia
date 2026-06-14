@@ -1,0 +1,63 @@
+{
+  "name": "Pan y Circo 07",
+  "minimumWords": 1,
+  "files": [
+    "opiniones-rapidas-y-pensamiento-lento.html",
+    "dejar-de-regalar-atencion-por-aburrimiento.html",
+    "el-ocio-consciente-contra-el-consumo-automatico.html",
+    "cuando-mirar-todo-te-deja-sin-vivir-nada.html",
+    "la-industria-de-la-distraccion-cotidiana.html"
+  ],
+  "posts": [
+    {
+      "title": "Opiniones rápidas y pensamiento lento",
+      "description": "Opiniones rápidas y pensamiento lento muestra cómo la presión por reaccionar puede ocupar el lugar de una idea propia más cuidada.",
+      "category": "Pan y Circo",
+      "url": "/posts/opiniones-rapidas-y-pensamiento-lento.html",
+      "date": "2026-06-14",
+      "image": "/assets/img/posts/pan-y-circo.svg",
+      "tags": ["pan y circo", "opiniones", "pensamiento", "criterio"],
+      "readingTime": "8–11 min"
+    },
+    {
+      "title": "Dejar de regalar atención por aburrimiento",
+      "description": "Dejar de regalar atención por aburrimiento es aprender a no entregar cada pausa al feed, al ruido o al estímulo más cercano.",
+      "category": "Pan y Circo",
+      "url": "/posts/dejar-de-regalar-atencion-por-aburrimiento.html",
+      "date": "2026-06-14",
+      "image": "/assets/img/posts/pan-y-circo.svg",
+      "tags": ["pan y circo", "aburrimiento", "atención", "pantallas"],
+      "readingTime": "8–11 min"
+    },
+    {
+      "title": "El ocio consciente contra el consumo automático",
+      "description": "El ocio consciente contra el consumo automático propone descansar con elección propia, no caer por reflejo en cualquier pantalla disponible.",
+      "category": "Pan y Circo",
+      "url": "/posts/el-ocio-consciente-contra-el-consumo-automatico.html",
+      "date": "2026-06-14",
+      "image": "/assets/img/posts/pan-y-circo.svg",
+      "tags": ["pan y circo", "ocio", "descanso", "consumo automático"],
+      "readingTime": "8–11 min"
+    },
+    {
+      "title": "Cuando mirar todo te deja sin vivir nada",
+      "description": "Cuando mirar todo te deja sin vivir nada habla de ese consumo constante que llena los ojos pero deja poco cuerpo, acción y vida propia.",
+      "category": "Pan y Circo",
+      "url": "/posts/cuando-mirar-todo-te-deja-sin-vivir-nada.html",
+      "date": "2026-06-14",
+      "image": "/assets/img/posts/pan-y-circo.svg",
+      "tags": ["pan y circo", "pantallas", "vida propia", "atención"],
+      "readingTime": "8–11 min"
+    },
+    {
+      "title": "La industria de la distracción cotidiana",
+      "description": "La industria de la distracción cotidiana convierte pausas, aburrimiento y cansancio en oportunidades para capturar atención.",
+      "category": "Pan y Circo",
+      "url": "/posts/la-industria-de-la-distraccion-cotidiana.html",
+      "date": "2026-06-14",
+      "image": "/assets/img/posts/pan-y-circo.svg",
+      "tags": ["pan y circo", "distracción", "atención", "plataformas"],
+      "readingTime": "8–11 min"
+    }
+  ]
+}
