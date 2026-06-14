@@ -1006,80 +1006,78 @@
   },
   {
     "title": "Cuando la pantalla ocupa el lugar del proyecto",
-    "description": "Análisis práctico de cuando la pantalla ocupa el lugar del proyecto: disparadores, efectos sobre la atención y cambios concretos para recuperar tiempo y criterio.",
+    "description": "Cuando la pantalla ocupa el lugar del proyecto, el consumo parece descanso pero desplaza la accion minima que podia hacerlo avanzar.",
     "category": "Pan y Circo",
     "url": "/posts/cuando-la-pantalla-ocupa-el-lugar-del-proyecto.html",
-    "date": "2026-06-10",
+    "date": "2026-06-14",
     "image": "/assets/img/posts/pan-y-circo.svg",
     "tags": [
-      "pan-y-circo",
-      "cuando",
-      "pantalla",
-      "proyecto"
+      "pan y circo",
+      "proyectos",
+      "pantallas",
+      "atencion"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "8-11 min"
   },
   {
-    "title": "La dopamina rápida que te deja quieto",
-    "description": "Análisis práctico de la dopamina rápida que te deja quieto: disparadores, efectos sobre la atención y cambios concretos para recuperar tiempo y criterio.",
+    "title": "El estimulo rapido que te deja quieto",
+    "description": "El estimulo rapido que te deja quieto da sensacion de movimiento por unos segundos, pero puede desplazar accion real y continuidad.",
     "category": "Pan y Circo",
     "url": "/posts/la-dopamina-rapida-que-te-deja-quieto.html",
-    "date": "2026-06-10",
+    "date": "2026-06-14",
     "image": "/assets/img/posts/pan-y-circo.svg",
     "tags": [
-      "pan-y-circo",
-      "dopamina",
-      "rápida",
-      "quieto"
+      "pan y circo",
+      "estimulos",
+      "accion",
+      "atencion"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "8-11 min"
   },
   {
     "title": "Aprender a apagar sin sentir culpa",
-    "description": "Análisis práctico de aprender a apagar sin sentir culpa: disparadores, efectos sobre la atención y cambios concretos para recuperar tiempo y criterio.",
+    "description": "Aprender a apagar sin sentir culpa permite cerrar pantallas sin convertir el descanso, el silencio o el limite en una deuda personal.",
     "category": "Pan y Circo",
     "url": "/posts/aprender-a-apagar-sin-sentir-culpa.html",
-    "date": "2026-06-10",
+    "date": "2026-06-14",
     "image": "/assets/img/posts/pan-y-circo.svg",
     "tags": [
-      "pan-y-circo",
-      "aprender",
+      "pan y circo",
       "apagar",
-      "sentir"
+      "culpa",
+      "descanso"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "8-11 min"
   },
   {
     "title": "Consumir cultura sin entregar la cabeza",
-    "description": "Análisis práctico de consumir cultura sin entregar la cabeza: disparadores, efectos sobre la atención y cambios concretos para recuperar tiempo y criterio.",
+    "description": "Consumir cultura sin entregar la cabeza es mirar, leer y escuchar con criterio propio, sin dejar que cada tendencia decida por vos.",
     "category": "Pan y Circo",
     "url": "/posts/consumir-cultura-sin-entregar-la-cabeza.html",
-    "date": "2026-06-10",
+    "date": "2026-06-14",
     "image": "/assets/img/posts/pan-y-circo.svg",
     "tags": [
-      "pan-y-circo",
-      "consumir",
+      "pan y circo",
       "cultura",
-      "entregar",
-      "cabeza"
+      "criterio",
+      "atencion"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "8-11 min"
   },
   {
-    "title": "Películas series y criterio propio",
-    "description": "Análisis práctico de películas series y criterio propio: disparadores, efectos sobre la atención y cambios concretos para recuperar tiempo y criterio.",
+    "title": "Peliculas, series y criterio propio",
+    "description": "Peliculas, series y criterio propio propone mirar historias con atencion, disfrutar y quedarte con una lectura personal antes del ruido externo.",
     "category": "Pan y Circo",
     "url": "/posts/peliculas-series-y-criterio-propio.html",
-    "date": "2026-06-10",
+    "date": "2026-06-14",
     "image": "/assets/img/posts/pan-y-circo.svg",
     "tags": [
-      "pan-y-circo",
-      "películas",
+      "pan y circo",
+      "peliculas",
       "series",
-      "criterio",
-      "propio"
+      "criterio propio"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "8-11 min"
   },
   {
     "title": "La falsa urgencia de estar al día",
