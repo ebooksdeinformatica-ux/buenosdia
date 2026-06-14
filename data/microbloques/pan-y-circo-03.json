@@ -1,0 +1,63 @@
+{
+  "name": "Pan y Circo 03",
+  "minimumWords": 1,
+  "files": [
+    "como-recuperar-silencio-despues-de-tanto-ruido.html",
+    "entretenimiento-sin-culpa-pero-con-limite.html",
+    "el-celular-como-circo-de-bolsillo.html",
+    "redes-sociales-y-comparacion-diaria.html",
+    "ver-contenido-para-escapar-de-uno-mismo.html"
+  ],
+  "posts": [
+    {
+      "title": "Cómo recuperar silencio después de tanto ruido",
+      "description": "Cómo recuperar silencio después de tanto ruido empieza por bajar estímulos de a poco y dejar que la atención vuelva a escuchar algo propio.",
+      "category": "Pan y Circo",
+      "url": "/posts/como-recuperar-silencio-despues-de-tanto-ruido.html",
+      "date": "2026-06-14",
+      "image": "/assets/img/posts/pan-y-circo.svg",
+      "tags": ["pan y circo", "silencio", "ruido digital", "atención"],
+      "readingTime": "8–11 min"
+    },
+    {
+      "title": "Entretenimiento sin culpa pero con límite",
+      "description": "Entretenimiento sin culpa pero con límite propone disfrutar sin entregar todo el día: elegir, cortar y volver mejor a lo propio.",
+      "category": "Pan y Circo",
+      "url": "/posts/entretenimiento-sin-culpa-pero-con-limite.html",
+      "date": "2026-06-14",
+      "image": "/assets/img/posts/pan-y-circo.svg",
+      "tags": ["pan y circo", "entretenimiento", "límites", "descanso"],
+      "readingTime": "8–11 min"
+    },
+    {
+      "title": "El celular como circo de bolsillo",
+      "description": "El celular como circo de bolsillo muestra cómo una herramienta útil también puede convertirse en espectáculo portátil y atención fragmentada.",
+      "category": "Pan y Circo",
+      "url": "/posts/el-celular-como-circo-de-bolsillo.html",
+      "date": "2026-06-14",
+      "image": "/assets/img/posts/pan-y-circo.svg",
+      "tags": ["pan y circo", "celular", "atención", "pantallas"],
+      "readingTime": "8–11 min"
+    },
+    {
+      "title": "Redes sociales y comparación diaria",
+      "description": "Redes sociales y comparación diaria muestra cómo una mirada rápida puede volverse medida injusta contra tu propia vida.",
+      "category": "Pan y Circo",
+      "url": "/posts/redes-sociales-y-comparacion-diaria.html",
+      "date": "2026-06-14",
+      "image": "/assets/img/posts/pan-y-circo.svg",
+      "tags": ["pan y circo", "redes sociales", "comparación", "atención"],
+      "readingTime": "8–11 min"
+    },
+    {
+      "title": "Ver contenido para escapar de uno mismo",
+      "description": "Ver contenido para escapar de uno mismo empieza como alivio rápido, pero puede tapar cansancio, preguntas y decisiones que necesitan lugar.",
+      "category": "Pan y Circo",
+      "url": "/posts/ver-contenido-para-escapar-de-uno-mismo.html",
+      "date": "2026-06-14",
+      "image": "/assets/img/posts/pan-y-circo.svg",
+      "tags": ["pan y circo", "contenido digital", "fuga", "atención"],
+      "readingTime": "8–11 min"
+    }
+  ]
+}
