@@ -270,19 +270,19 @@
     "readingTime": "9–12 min"
   },
   {
-    "title": "Ordenar contraseñas y cuentas sin caos",
-    "description": "Guía práctica para ordenar contraseñas y cuentas sin caos: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y sostenible.",
+    "title": "Ordenar cuentas digitales sin caos",
+    "description": "Ordenar cuentas digitales sin caos ayuda a sostener proyectos: mapa de servicios, correo principal, recuperación, doble verificación y revisión sobria.",
     "category": "Tecnología",
     "url": "/posts/ordenar-contrasenas-y-cuentas-sin-caos.html",
-    "date": "2026-06-10",
+    "date": "2026-06-12",
     "image": "/assets/img/posts/tecnologia.svg",
     "tags": [
-      "tecnologia",
-      "ordenar",
-      "contraseñas",
-      "cuentas"
+      "cuentas digitales",
+      "seguridad básica",
+      "organización",
+      "proyectos online"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "8–11 min"
   },
   {
     "title": "Cómo hacer una web estática que cargue rápido",
@@ -586,19 +586,18 @@
   },
   {
     "title": "Hacer backups simples para no perder tu trabajo",
-    "description": "Guía práctica para hacer backups simples para no perder tu trabajo: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y sostenible.",
+    "description": "Hacer backups simples para no perder tu trabajo significa copiar lo importante, separarlo del equipo principal y probar que se puede recuperar.",
     "category": "Tecnología",
     "url": "/posts/hacer-backups-simples-para-no-perder-tu-trabajo.html",
-    "date": "2026-06-10",
+    "date": "2026-06-12",
     "image": "/assets/img/posts/tecnologia.svg",
     "tags": [
-      "tecnologia",
       "backups",
-      "simples",
-      "perder",
-      "trabajo"
+      "archivos",
+      "Git",
+      "respaldo digital"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "8–11 min"
   },
   {
     "title": "Cómo crear un mini laboratorio de SEO casero",
@@ -692,19 +691,18 @@
   },
   {
     "title": "Usar prompts para planificar un negocio digital",
-    "description": "Guía práctica para usar prompts para planificar un negocio digital: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y sostenible.",
+    "description": "Usar prompts para planificar un negocio digital sirve si ordena oferta, público, prueba, límites y próxima acción sin inventar certezas.",
     "category": "Tecnología",
     "url": "/posts/usar-prompts-para-planificar-un-negocio-digital.html",
-    "date": "2026-06-10",
+    "date": "2026-06-12",
     "image": "/assets/img/posts/tecnologia.svg",
     "tags": [
-      "tecnologia",
       "prompts",
-      "planificar",
-      "negocio",
-      "digital"
+      "negocio digital",
+      "IA",
+      "planificación"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "8–11 min"
   },
   {
     "title": "Cómo crear contenido evergreen con mirada propia",
@@ -723,34 +721,33 @@
   },
   {
     "title": "Levantar un proyecto abandonado con método",
-    "description": "Guía práctica para levantar un proyecto abandonado con método: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y sostenible.",
+    "description": "Levantar un proyecto abandonado con método exige abrirlo sin culpa, inventariar lo vivo, elegir una entrega mínima y decidir con evidencia.",
     "category": "Tecnología",
     "url": "/posts/levantar-un-proyecto-abandonado-con-metodo.html",
-    "date": "2026-06-10",
+    "date": "2026-06-12",
     "image": "/assets/img/posts/tecnologia.svg",
     "tags": [
-      "tecnologia",
-      "levantar",
-      "proyecto",
-      "abandonado",
-      "método"
+      "proyectos abandonados",
+      "reconstrucción",
+      "GitHub",
+      "organización digital"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "8–11 min"
   },
   {
     "title": "Crear una rutina de mantenimiento web semanal",
-    "description": "Guía práctica para crear una rutina de mantenimiento web semanal: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y sostenible.",
+    "description": "Crear una rutina de mantenimiento web semanal evita que el sitio se degrade: enlaces, velocidad, imágenes, publicaciones viejas y señales técnicas.",
     "category": "Tecnología",
     "url": "/posts/crear-una-rutina-de-mantenimiento-web-semanal.html",
-    "date": "2026-06-10",
+    "date": "2026-06-12",
     "image": "/assets/img/posts/tecnologia.svg",
     "tags": [
-      "tecnologia",
-      "rutina",
-      "mantenimiento",
-      "semanal"
+      "mantenimiento web",
+      "SEO técnico",
+      "Git",
+      "blog"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "8–11 min"
   },
   {
     "title": "Cuando el entretenimiento se vuelve anestesia",
