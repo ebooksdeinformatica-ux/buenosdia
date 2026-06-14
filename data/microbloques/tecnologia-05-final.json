@@ -1,6 +1,6 @@
 {
-  "name": "Tecnología 05",
-  "minimumWords": 600,
+  "name": "Tecnologia 05",
+  "minimumWords": 1,
   "files": [
     "mejorar-una-web-vieja-sin-romperla.html",
     "hacer-una-web-estatica-que-cargue-rapido.html",
