@@ -1,0 +1,52 @@
+{
+  "name": "Pan y Circo 08",
+  "minimumWords": 1,
+  "files": [
+    "consumir-menos-ruido-para-producir-mas-vida.html",
+    "la-fama-ajena-como-reemplazo-del-proyecto-propio.html",
+    "el-entretenimiento-util-y-el-entretenimiento-vacio.html",
+    "volver-a-elegir-que-entra-por-tus-ojos.html"
+  ],
+  "posts": [
+    {
+      "title": "Consumir menos ruido para producir más vida",
+      "description": "Consumir menos ruido para producir más vida significa dejar espacio para acciones reales, descanso y presencia propia.",
+      "category": "Pan y Circo",
+      "url": "/posts/consumir-menos-ruido-para-producir-mas-vida.html",
+      "date": "2026-06-14",
+      "image": "/assets/img/posts/pan-y-circo.svg",
+      "tags": ["pan y circo", "ruido digital", "vida propia", "atención"],
+      "readingTime": "8–11 min"
+    },
+    {
+      "title": "La fama ajena como reemplazo del proyecto propio",
+      "description": "La fama ajena como reemplazo del proyecto propio aparece cuando mirar logros de otros ocupa el lugar de avanzar en algo propio.",
+      "category": "Pan y Circo",
+      "url": "/posts/la-fama-ajena-como-reemplazo-del-proyecto-propio.html",
+      "date": "2026-06-14",
+      "image": "/assets/img/posts/pan-y-circo.svg",
+      "tags": ["pan y circo", "fama", "proyecto propio", "atención"],
+      "readingTime": "8–11 min"
+    },
+    {
+      "title": "El entretenimiento útil y el entretenimiento vacío",
+      "description": "El entretenimiento útil y el entretenimiento vacío se distinguen por el efecto que dejan: descanso con regreso o consumo que deja más dispersión.",
+      "category": "Pan y Circo",
+      "url": "/posts/el-entretenimiento-util-y-el-entretenimiento-vacio.html",
+      "date": "2026-06-14",
+      "image": "/assets/img/posts/pan-y-circo.svg",
+      "tags": ["pan y circo", "entretenimiento", "descanso", "criterio"],
+      "readingTime": "8–11 min"
+    },
+    {
+      "title": "Volver a elegir qué entra por tus ojos",
+      "description": "Volver a elegir qué entra por tus ojos es recuperar criterio sobre imágenes, pantallas y estímulos que forman el clima de tu día.",
+      "category": "Pan y Circo",
+      "url": "/posts/volver-a-elegir-que-entra-por-tus-ojos.html",
+      "date": "2026-06-14",
+      "image": "/assets/img/posts/pan-y-circo.svg",
+      "tags": ["pan y circo", "mirada", "contenido", "criterio"],
+      "readingTime": "8–11 min"
+    }
+  ]
+}
