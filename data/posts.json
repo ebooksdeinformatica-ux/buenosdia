@@ -1573,76 +1573,78 @@
   },
   {
     "title": "Comida real sin fanatismo",
-    "description": "Guía general sobre comida real sin fanatismo: hábitos, planificación, señales para observar y cambios sostenibles sin restricciones extremas.",
+    "description": "Comida real sin fanatismo es volver a alimentos simples sin convertir cada plato en una guerra ni cada elección en culpa.",
     "category": "Alimentación",
     "url": "/posts/comida-real-sin-fanatismo.html",
-    "date": "2026-06-10",
+    "date": "2026-06-14",
     "image": "/assets/img/posts/alimentacion.svg",
     "tags": [
-      "alimentacion",
-      "comida",
-      "fanatismo"
+      "alimentación",
+      "comida real",
+      "hábitos",
+      "sin fanatismo"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "8–11 min"
   },
   {
     "title": "Ordenar la alimentación cuando no hay ganas",
-    "description": "Guía general sobre ordenar la alimentación cuando no hay ganas: hábitos, planificación, señales para observar y cambios sostenibles sin restricciones extremas.",
+    "description": "Ordenar la alimentación cuando no hay ganas empieza por hacer más fácil lo básico, no por exigir una versión perfecta de vos.",
     "category": "Alimentación",
     "url": "/posts/ordenar-la-alimentacion-cuando-no-hay-ganas.html",
-    "date": "2026-06-10",
+    "date": "2026-06-14",
     "image": "/assets/img/posts/alimentacion.svg",
     "tags": [
-      "alimentacion",
-      "ordenar",
       "alimentación",
-      "cuando"
+      "comida simple",
+      "hábitos",
+      "cansancio"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "8–11 min"
   },
   {
     "title": "La cocina simple como acto de control",
-    "description": "Guía general sobre la cocina simple como acto de control: hábitos, planificación, señales para observar y cambios sostenibles sin restricciones extremas.",
+    "description": "La cocina simple como acto de control ayuda a recuperar una parte del día cuando todo viene apurado, caro o improvisado.",
     "category": "Alimentación",
     "url": "/posts/la-cocina-simple-como-acto-de-control.html",
-    "date": "2026-06-10",
+    "date": "2026-06-14",
     "image": "/assets/img/posts/alimentacion.svg",
     "tags": [
-      "alimentacion",
-      "cocina",
-      "simple",
-      "control"
+      "alimentación",
+      "cocina simple",
+      "hábitos",
+      "organización"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "8–11 min"
   },
   {
     "title": "Comer apurado y vivir acelerado",
-    "description": "Guía general sobre comer apurado y vivir acelerado: hábitos, planificación, señales para observar y cambios sostenibles sin restricciones extremas.",
+    "description": "Comer apurado y vivir acelerado muestra cómo el ritmo del día también entra al plato, a la digestión y a la relación con el cuerpo.",
     "category": "Alimentación",
     "url": "/posts/comer-apurado-y-vivir-acelerado.html",
-    "date": "2026-06-10",
+    "date": "2026-06-14",
     "image": "/assets/img/posts/alimentacion.svg",
     "tags": [
-      "alimentacion",
-      "apurado",
-      "acelerado"
+      "alimentación",
+      "comer lento",
+      "hábitos",
+      "ritmo"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "8–11 min"
   },
   {
     "title": "Hábitos pequeños que cambian el día",
-    "description": "Guía general sobre hábitos pequeños que cambian el día: hábitos, planificación, señales para observar y cambios sostenibles sin restricciones extremas.",
+    "description": "Hábitos pequeños que cambian el día muestra cómo agua, comida simple y menos apuro pueden ordenar la energía cotidiana sin extremos.",
     "category": "Alimentación",
     "url": "/posts/habitos-pequenos-que-cambian-el-dia.html",
-    "date": "2026-06-10",
+    "date": "2026-06-14",
     "image": "/assets/img/posts/alimentacion.svg",
     "tags": [
-      "alimentacion",
+      "alimentación",
       "hábitos",
-      "pequeños",
-      "cambian"
+      "agua",
+      "rutina"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "8–11 min"
   },
   {
     "title": "Proteína energía y decisiones mejores",
