@@ -1,0 +1,45 @@
+name: Validar A06
+
+on:
+  pull_request:
+    branches: [release-estable-v3]
+    paths:
+      - 'posts/rutina-alimentaria-para-dias-de-poco-dinero.html'
+      - 'posts/cuando-el-cuerpo-pide-orden-antes-que-motivacion.html'
+      - 'posts/el-mate-el-cafe-y-la-energia-prestada.html'
+      - 'posts/aprender-a-leer-tu-cansancio-fisico.html'
+      - 'posts/comida-casera-como-resistencia-practica.html'
+      - '.github/workflows/validar-a06.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  validar:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Crear manifiesto temporal
+        run: |
+          cat > /tmp/a06.json <<'JSON'
+          {"name":"A06","minimumWords":1,"files":["rutina-alimentaria-para-dias-de-poco-dinero.html","cuando-el-cuerpo-pide-orden-antes-que-motivacion.html","el-mate-el-cafe-y-la-energia-prestada.html","aprender-a-leer-tu-cansancio-fisico.html","comida-casera-como-resistencia-practica.html"],"posts":[{"title":"Rutina alimentaria para dias de poco dinero","description":"Texto de alimentacion cotidiana con rutina simple y compras posibles para ordenar mejor la semana.","category":"Alimentación","url":"/posts/rutina-alimentaria-para-dias-de-poco-dinero.html","date":"2026-06-14","image":"/assets/img/posts/alimentacion.svg","tags":["alimentación","rutina"],"readingTime":"8–11 min"},{"title":"Cuando el cuerpo pide orden antes que motivacion","description":"Texto de alimentacion cotidiana sobre orden diario y comidas simples para bajar improvisacion.","category":"Alimentación","url":"/posts/cuando-el-cuerpo-pide-orden-antes-que-motivacion.html","date":"2026-06-14","image":"/assets/img/posts/alimentacion.svg","tags":["alimentación","orden"],"readingTime":"8–11 min"},{"title":"El mate el cafe y la energia prestada","description":"Texto de alimentacion cotidiana sobre bebidas habituales, pausas y rutinas diarias con mirada practica.","category":"Alimentación","url":"/posts/el-mate-el-cafe-y-la-energia-prestada.html","date":"2026-06-14","image":"/assets/img/posts/alimentacion.svg","tags":["alimentación","mate"],"readingTime":"8–11 min"},{"title":"Aprender a leer tu cansancio fisico","description":"Texto de alimentacion cotidiana sobre senales simples del dia y organizacion personal sin extremos.","category":"Alimentación","url":"/posts/aprender-a-leer-tu-cansancio-fisico.html","date":"2026-06-14","image":"/assets/img/posts/alimentacion.svg","tags":["alimentación","cansancio"],"readingTime":"8–11 min"},{"title":"Comida casera como resistencia practica","description":"Texto de alimentacion cotidiana sobre cocina simple, autonomia domestica y preparaciones posibles.","category":"Alimentación","url":"/posts/comida-casera-como-resistencia-practica.html","date":"2026-06-14","image":"/assets/img/posts/alimentacion.svg","tags":["alimentación","cocina"],"readingTime":"8–11 min"}]}
+          JSON
+      - name: Actualizar catalogo
+        run: node scripts/aplicar-microbloque.mjs /tmp/a06.json
+      - name: Auditar contenido
+        run: node scripts/auditar-microbloque-contenido.mjs /tmp/a06.json
+      - name: Auditar SEO y tecnica
+        run: node scripts/auditar-microbloque-tecnica.mjs /tmp/a06.json
+      - name: Guardar catalogo validado
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/posts.json
+          git commit -m "Actualizar catalogo A06" || echo "Sin cambios"
+          git push
