@@ -3713,17 +3713,16 @@
   },
   {
     "title": "Empezar de cero sin fuerza",
-    "description": "Plan práctico para empezar de cero sin fuerza: entregas visibles, revisión semanal, obstáculos frecuentes y una forma realista de sostener avances.",
+    "description": "Empezar de cero sin fuerza no pide una revolucion enorme pide un primer gesto chico visible y posible para recuperar movimiento diario.",
     "category": "Saliendo de la Matrix",
     "url": "/posts/empezar-de-cero-sin-fuerza.html",
-    "date": "2026-06-10",
+    "date": "2026-06-14",
     "image": "/assets/img/posts/saliendo-de-la-matrix.svg",
     "tags": [
       "saliendo-de-la-matrix",
-      "empezar",
-      "fuerza"
+      "empezar"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "8–11 min"
   },
   {
     "title": "Reconstruir una vida con poco dinero",
@@ -3740,47 +3739,43 @@
     "readingTime": "10–14 min"
   },
   {
-    "title": "Volver a crear después de abandonar",
-    "description": "Plan práctico para volver a crear después de abandonar: entregas visibles, revisión semanal, obstáculos frecuentes y una forma realista de sostener avances.",
+    "title": "Volver a crear despues de abandonar",
+    "description": "Volver a crear despues de abandonar pide una entrega chica visible y posible para recuperar continuidad sin promesas enormes ni vueltas largas.",
     "category": "Saliendo de la Matrix",
     "url": "/posts/volver-a-crear-despues-de-abandonar.html",
-    "date": "2026-06-10",
+    "date": "2026-06-14",
     "image": "/assets/img/posts/saliendo-de-la-matrix.svg",
     "tags": [
       "saliendo-de-la-matrix",
-      "volver",
-      "después",
-      "abandonar"
+      "crear"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "8–11 min"
   },
   {
-    "title": "Ordenar proyectos que parecían muertos",
-    "description": "Plan práctico para ordenar proyectos que parecían muertos: entregas visibles, revisión semanal, obstáculos frecuentes y una forma realista de sostener avances.",
+    "title": "Ordenar proyectos que parecian muertos",
+    "description": "Ordenar proyectos que parecian muertos empieza separando lo vivo lo pendiente y lo que ya no necesita energia para encontrar un paso claro.",
     "category": "Saliendo de la Matrix",
     "url": "/posts/ordenar-proyectos-que-parecian-muertos.html",
-    "date": "2026-06-10",
+    "date": "2026-06-14",
     "image": "/assets/img/posts/saliendo-de-la-matrix.svg",
     "tags": [
       "saliendo-de-la-matrix",
-      "ordenar",
-      "proyectos",
-      "parecían",
-      "muertos"
+      "proyectos"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "8–11 min"
   },
   {
-    "title": "Hacer una cosa útil por día",
-    "description": "Plan práctico para hacer una cosa útil por día: entregas visibles, revisión semanal, obstáculos frecuentes y una forma realista de sostener avances.",
+    "title": "Hacer una cosa util por dia",
+    "description": "Hacer una cosa util por dia baja la ansiedad de cambiar todo y devuelve avance visible en una escala posible concreta y repetible.",
     "category": "Saliendo de la Matrix",
     "url": "/posts/hacer-una-cosa-util-por-dia.html",
-    "date": "2026-06-10",
+    "date": "2026-06-14",
     "image": "/assets/img/posts/saliendo-de-la-matrix.svg",
     "tags": [
-      "saliendo-de-la-matrix"
+      "saliendo-de-la-matrix",
+      "avance"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "8–11 min"
   },
   {
     "title": "Salir del pozo con rutina mínima",
@@ -3797,18 +3792,17 @@
     "readingTime": "10–14 min"
   },
   {
-    "title": "Recuperar foco después del caos",
-    "description": "Plan práctico para recuperar foco después del caos: entregas visibles, revisión semanal, obstáculos frecuentes y una forma realista de sostener avances.",
+    "title": "Recuperar foco despues del caos",
+    "description": "Recuperar foco despues del caos empieza por elegir una prioridad chica y protegerla con un bloque breve realista y facil de repetir.",
     "category": "Saliendo de la Matrix",
     "url": "/posts/recuperar-foco-despues-del-caos.html",
-    "date": "2026-06-10",
+    "date": "2026-06-14",
     "image": "/assets/img/posts/saliendo-de-la-matrix.svg",
     "tags": [
       "saliendo-de-la-matrix",
-      "recuperar",
-      "después"
+      "foco"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "8–11 min"
   },
   {
     "title": "Crear ingresos online sin humo",
