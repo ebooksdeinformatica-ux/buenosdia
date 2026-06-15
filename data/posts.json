@@ -1680,75 +1680,78 @@
   },
   {
     "title": "Comprar comida con más conciencia",
-    "description": "Guía general sobre comprar comida con más conciencia: hábitos, planificación, señales para observar y cambios sostenibles sin restricciones extremas.",
+    "description": "Comprar comida con más conciencia ayuda a gastar mejor, improvisar menos y dejar opciones reales disponibles para la semana.",
     "category": "Alimentación",
     "url": "/posts/comprar-comida-con-mas-conciencia.html",
-    "date": "2026-06-10",
+    "date": "2026-06-14",
     "image": "/assets/img/posts/alimentacion.svg",
     "tags": [
-      "alimentacion",
-      "comprar",
-      "comida",
-      "conciencia"
+      "alimentación",
+      "compras",
+      "comida simple",
+      "organización"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "8–11 min"
   },
   {
     "title": "El cuerpo como base del proyecto",
-    "description": "Guía general sobre el cuerpo como base del proyecto: hábitos, planificación, señales para observar y cambios sostenibles sin restricciones extremas.",
+    "description": "El cuerpo como base del proyecto recuerda que trabajar, crear y sostener ideas también depende de sueño, comida, agua y ritmo real.",
     "category": "Alimentación",
     "url": "/posts/el-cuerpo-como-base-del-proyecto.html",
-    "date": "2026-06-10",
+    "date": "2026-06-14",
     "image": "/assets/img/posts/alimentacion.svg",
     "tags": [
-      "alimentacion",
+      "alimentación",
       "cuerpo",
-      "proyecto"
+      "proyecto",
+      "energía"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "8–11 min"
   },
   {
     "title": "Alimentación y disciplina sin obsesión",
-    "description": "Guía general sobre alimentación y disciplina sin obsesión: hábitos, planificación, señales para observar y cambios sostenibles sin restricciones extremas.",
+    "description": "Alimentación y disciplina sin obsesión propone ordenar comidas con estructura amable, sin convertir cada plato en control extremo.",
     "category": "Alimentación",
     "url": "/posts/alimentacion-y-disciplina-sin-obsesion.html",
-    "date": "2026-06-10",
+    "date": "2026-06-14",
     "image": "/assets/img/posts/alimentacion.svg",
     "tags": [
-      "alimentacion",
       "alimentación",
       "disciplina",
-      "obsesión"
+      "hábitos",
+      "sin obsesión"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "8–11 min"
   },
   {
     "title": "Cuando el cansancio empieza en el plato",
-    "description": "Guía general sobre cuando el cansancio empieza en el plato: hábitos, planificación, señales para observar y cambios sostenibles sin restricciones extremas.",
+    "description": "Cuando el cansancio empieza en el plato no significa que la comida explique todo, pero sí que puede estar empujando el día hacia abajo.",
     "category": "Alimentación",
     "url": "/posts/cuando-el-cansancio-empieza-en-el-plato.html",
-    "date": "2026-06-10",
+    "date": "2026-06-14",
     "image": "/assets/img/posts/alimentacion.svg",
     "tags": [
-      "alimentacion",
-      "cuando",
+      "alimentación",
       "cansancio",
-      "empieza"
+      "energía",
+      "hábitos"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "8–11 min"
   },
   {
     "title": "Comer mejor con poco presupuesto",
-    "description": "Guía general sobre comer mejor con poco presupuesto: hábitos, planificación, señales para observar y cambios sostenibles sin restricciones extremas.",
+    "description": "Comer mejor con poco presupuesto no es comprar perfecto: es elegir bases simples, rendidoras y posibles para sostener la semana.",
     "category": "Alimentación",
     "url": "/posts/comer-mejor-con-poco-presupuesto.html",
-    "date": "2026-06-10",
+    "date": "2026-06-14",
     "image": "/assets/img/posts/alimentacion.svg",
     "tags": [
-      "alimentacion",
-      "presupuesto"
+      "alimentación",
+      "presupuesto",
+      "compras",
+      "comida simple"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "8–11 min"
   },
   {
     "title": "La ansiedad que se disfraza de antojo",
