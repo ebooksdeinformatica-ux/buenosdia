@@ -1755,77 +1755,78 @@
   },
   {
     "title": "La ansiedad que se disfraza de antojo",
-    "description": "Guía general sobre la ansiedad que se disfraza de antojo: hábitos, planificación, señales para observar y cambios sostenibles sin restricciones extremas.",
+    "description": "La ansiedad que se disfraza de antojo no siempre habla de hambre: a veces señala cansancio, estrés, poco descanso o falta de una base real.",
     "category": "Alimentación",
     "url": "/posts/la-ansiedad-que-se-disfraza-de-antojo.html",
-    "date": "2026-06-10",
+    "date": "2026-06-14",
     "image": "/assets/img/posts/alimentacion.svg",
     "tags": [
-      "alimentacion",
+      "alimentación",
       "ansiedad",
-      "disfraza",
-      "antojo"
+      "antojo",
+      "hábitos"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "8–11 min"
   },
   {
     "title": "Rutina de comida para mente clara",
-    "description": "Guía general sobre rutina de comida para mente clara: hábitos, planificación, señales para observar y cambios sostenibles sin restricciones extremas.",
+    "description": "Rutina de comida para mente clara propone horarios aproximados, compras simples y menos improvisación en la alimentación diaria.",
     "category": "Alimentación",
     "url": "/posts/rutina-de-comida-para-mente-clara.html",
-    "date": "2026-06-10",
+    "date": "2026-06-14",
     "image": "/assets/img/posts/alimentacion.svg",
     "tags": [
-      "alimentacion",
+      "alimentación",
       "rutina",
-      "comida"
+      "mente clara",
+      "hábitos"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "8–11 min"
   },
   {
     "title": "Menos paquete y más energía real",
-    "description": "Guía general sobre menos paquete y más energía real: hábitos, planificación, señales para observar y cambios sostenibles sin restricciones extremas.",
+    "description": "Menos paquete y más energía real propone sumar alimentos simples y reducir la dependencia cotidiana de productos listos para abrir.",
     "category": "Alimentación",
     "url": "/posts/menos-paquete-y-mas-energia-real.html",
-    "date": "2026-06-10",
+    "date": "2026-06-14",
     "image": "/assets/img/posts/alimentacion.svg",
     "tags": [
-      "alimentacion",
-      "paquete",
-      "energía"
+      "alimentación",
+      "ultraprocesados",
+      "energía",
+      "hábitos"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "8–11 min"
   },
   {
     "title": "Alimentarse para sostener trabajo digital",
-    "description": "Guía general sobre alimentarse para sostener trabajo digital: hábitos, planificación, señales para observar y cambios sostenibles sin restricciones extremas.",
+    "description": "Alimentarse para sostener trabajo digital ayuda a ordenar jornadas largas de computadora con pausas y comida simple.",
     "category": "Alimentación",
     "url": "/posts/alimentarse-para-sostener-trabajo-digital.html",
-    "date": "2026-06-10",
+    "date": "2026-06-14",
     "image": "/assets/img/posts/alimentacion.svg",
     "tags": [
-      "alimentacion",
-      "alimentarse",
-      "sostener",
-      "trabajo",
-      "digital"
+      "alimentación",
+      "trabajo digital",
+      "rutina",
+      "organización"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "8–11 min"
   },
   {
     "title": "La Matrix del consumo alimentario",
-    "description": "Guía general sobre la matrix del consumo alimentario: hábitos, planificación, señales para observar y cambios sostenibles sin restricciones extremas.",
+    "description": "La Matrix del consumo alimentario muestra cómo marketing, precio, apuro y disponibilidad empujan decisiones que parecen personales.",
     "category": "Alimentación",
     "url": "/posts/la-matrix-del-consumo-alimentario.html",
-    "date": "2026-06-10",
+    "date": "2026-06-14",
     "image": "/assets/img/posts/alimentacion.svg",
     "tags": [
-      "alimentacion",
+      "alimentación",
       "Matrix",
       "consumo",
-      "alimentario"
+      "compras"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "8–11 min"
   },
   {
     "title": "Volver a escuchar al cuerpo",
