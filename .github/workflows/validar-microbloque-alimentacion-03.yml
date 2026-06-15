@@ -1,0 +1,41 @@
+name: Validar microbloque Alimentacion 03
+
+on:
+  pull_request:
+    branches: [release-estable-v3]
+    paths:
+      - 'posts/comprar-comida-con-mas-conciencia.html'
+      - 'posts/el-cuerpo-como-base-del-proyecto.html'
+      - 'posts/alimentacion-y-disciplina-sin-obsesion.html'
+      - 'posts/cuando-el-cansancio-empieza-en-el-plato.html'
+      - 'posts/comer-mejor-con-poco-presupuesto.html'
+      - 'data/microbloques/alimentacion-03.json'
+      - '.github/workflows/validar-microbloque-alimentacion-03.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  validar:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Actualizar catalogo
+        run: node scripts/aplicar-microbloque.mjs data/microbloques/alimentacion-03.json
+      - name: Auditar contenido
+        run: node scripts/auditar-microbloque-contenido.mjs data/microbloques/alimentacion-03.json
+      - name: Auditar SEO y tecnica
+        run: node scripts/auditar-microbloque-tecnica.mjs data/microbloques/alimentacion-03.json
+      - name: Guardar catalogo validado
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/posts.json
+          git commit -m "Actualizar catalogo del microbloque Alimentacion 03" || echo "Sin cambios"
+          git push
