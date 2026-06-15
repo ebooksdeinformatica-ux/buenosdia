@@ -1,0 +1,63 @@
+{
+  "name": "Alimentacion 03",
+  "minimumWords": 1,
+  "files": [
+    "comprar-comida-con-mas-conciencia.html",
+    "el-cuerpo-como-base-del-proyecto.html",
+    "alimentacion-y-disciplina-sin-obsesion.html",
+    "cuando-el-cansancio-empieza-en-el-plato.html",
+    "comer-mejor-con-poco-presupuesto.html"
+  ],
+  "posts": [
+    {
+      "title": "Comprar comida con más conciencia",
+      "description": "Comprar comida con más conciencia ayuda a gastar mejor, improvisar menos y dejar opciones reales disponibles para la semana.",
+      "category": "Alimentación",
+      "url": "/posts/comprar-comida-con-mas-conciencia.html",
+      "date": "2026-06-14",
+      "image": "/assets/img/posts/alimentacion.svg",
+      "tags": ["alimentación", "compras", "comida simple", "organización"],
+      "readingTime": "8–11 min"
+    },
+    {
+      "title": "El cuerpo como base del proyecto",
+      "description": "El cuerpo como base del proyecto recuerda que trabajar, crear y sostener ideas también depende de sueño, comida, agua y ritmo real.",
+      "category": "Alimentación",
+      "url": "/posts/el-cuerpo-como-base-del-proyecto.html",
+      "date": "2026-06-14",
+      "image": "/assets/img/posts/alimentacion.svg",
+      "tags": ["alimentación", "cuerpo", "proyecto", "energía"],
+      "readingTime": "8–11 min"
+    },
+    {
+      "title": "Alimentación y disciplina sin obsesión",
+      "description": "Alimentación y disciplina sin obsesión propone ordenar comidas con estructura amable, sin convertir cada plato en control extremo.",
+      "category": "Alimentación",
+      "url": "/posts/alimentacion-y-disciplina-sin-obsesion.html",
+      "date": "2026-06-14",
+      "image": "/assets/img/posts/alimentacion.svg",
+      "tags": ["alimentación", "disciplina", "hábitos", "sin obsesión"],
+      "readingTime": "8–11 min"
+    },
+    {
+      "title": "Cuando el cansancio empieza en el plato",
+      "description": "Cuando el cansancio empieza en el plato no significa que la comida explique todo, pero sí que puede estar empujando el día hacia abajo.",
+      "category": "Alimentación",
+      "url": "/posts/cuando-el-cansancio-empieza-en-el-plato.html",
+      "date": "2026-06-14",
+      "image": "/assets/img/posts/alimentacion.svg",
+      "tags": ["alimentación", "cansancio", "energía", "hábitos"],
+      "readingTime": "8–11 min"
+    },
+    {
+      "title": "Comer mejor con poco presupuesto",
+      "description": "Comer mejor con poco presupuesto no es comprar perfecto: es elegir bases simples, rendidoras y posibles para sostener la semana.",
+      "category": "Alimentación",
+      "url": "/posts/comer-mejor-con-poco-presupuesto.html",
+      "date": "2026-06-14",
+      "image": "/assets/img/posts/alimentacion.svg",
+      "tags": ["alimentación", "presupuesto", "compras", "comida simple"],
+      "readingTime": "8–11 min"
+    }
+  ]
+}
