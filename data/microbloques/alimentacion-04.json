@@ -1,0 +1,63 @@
+{
+  "name": "Alimentacion 04",
+  "minimumWords": 1,
+  "files": [
+    "la-ansiedad-que-se-disfraza-de-antojo.html",
+    "rutina-de-comida-para-mente-clara.html",
+    "menos-paquete-y-mas-energia-real.html",
+    "alimentarse-para-sostener-trabajo-digital.html",
+    "la-matrix-del-consumo-alimentario.html"
+  ],
+  "posts": [
+    {
+      "title": "La ansiedad que se disfraza de antojo",
+      "description": "La ansiedad que se disfraza de antojo no siempre habla de hambre: a veces señala cansancio, estrés, poco descanso o falta de una base real.",
+      "category": "Alimentación",
+      "url": "/posts/la-ansiedad-que-se-disfraza-de-antojo.html",
+      "date": "2026-06-14",
+      "image": "/assets/img/posts/alimentacion.svg",
+      "tags": ["alimentación", "ansiedad", "antojo", "hábitos"],
+      "readingTime": "8–11 min"
+    },
+    {
+      "title": "Rutina de comida para mente clara",
+      "description": "Rutina de comida para mente clara propone horarios aproximados, compras simples y menos improvisación en la alimentación diaria.",
+      "category": "Alimentación",
+      "url": "/posts/rutina-de-comida-para-mente-clara.html",
+      "date": "2026-06-14",
+      "image": "/assets/img/posts/alimentacion.svg",
+      "tags": ["alimentación", "rutina", "mente clara", "hábitos"],
+      "readingTime": "8–11 min"
+    },
+    {
+      "title": "Menos paquete y más energía real",
+      "description": "Menos paquete y más energía real propone sumar alimentos simples y reducir la dependencia cotidiana de productos listos para abrir.",
+      "category": "Alimentación",
+      "url": "/posts/menos-paquete-y-mas-energia-real.html",
+      "date": "2026-06-14",
+      "image": "/assets/img/posts/alimentacion.svg",
+      "tags": ["alimentación", "ultraprocesados", "energía", "hábitos"],
+      "readingTime": "8–11 min"
+    },
+    {
+      "title": "Alimentarse para sostener trabajo digital",
+      "description": "Alimentarse para sostener trabajo digital ayuda a ordenar jornadas largas de computadora con pausas y comida simple.",
+      "category": "Alimentación",
+      "url": "/posts/alimentarse-para-sostener-trabajo-digital.html",
+      "date": "2026-06-14",
+      "image": "/assets/img/posts/alimentacion.svg",
+      "tags": ["alimentación", "trabajo digital", "rutina", "organización"],
+      "readingTime": "8–11 min"
+    },
+    {
+      "title": "La Matrix del consumo alimentario",
+      "description": "La Matrix del consumo alimentario muestra cómo marketing, precio, apuro y disponibilidad empujan decisiones que parecen personales.",
+      "category": "Alimentación",
+      "url": "/posts/la-matrix-del-consumo-alimentario.html",
+      "date": "2026-06-14",
+      "image": "/assets/img/posts/alimentacion.svg",
+      "tags": ["alimentación", "Matrix", "consumo", "compras"],
+      "readingTime": "8–11 min"
+    }
+  ]
+}
