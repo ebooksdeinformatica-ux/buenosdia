@@ -1,0 +1,29 @@
+name: Validar Saliendo 04
+
+on:
+  pull_request:
+    branches: [release-estable-v3]
+    paths:
+      - 'posts/salir-del-modo-victima-sin-negarte-dolor.html'
+      - 'posts/reconstruirte-sin-aplausos.html'
+      - 'posts/crear-un-sistema-personal-de-avance.html'
+      - 'posts/dejar-de-mirar-y-empezar-a-hacer.html'
+      - 'posts/internet-como-segunda-oportunidad.html'
+      - 'data/microbloques/saliendo-04.json'
+      - '.github/workflows/validar-saliendo-04.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  validar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Auditar contenido
+        run: node scripts/auditar-microbloque-contenido.mjs data/microbloques/saliendo-04.json
+      - name: Auditar estructura técnica
+        run: node scripts/auditar-microbloque-tecnica.mjs data/microbloques/saliendo-04.json
