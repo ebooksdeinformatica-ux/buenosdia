@@ -1,0 +1,39 @@
+name: Procesar S05
+on:
+  push:
+    branches: [lote-1-tecnologia-real]
+    paths:
+      - 'data/microbloques/saliendo-05-payload/**'
+      - '.github/workflows/s05-apply.yml'
+permissions:
+  contents: write
+jobs:
+  procesar:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Preparar archivos
+        run: |
+          cat data/microbloques/saliendo-05-payload/part-*.b64 | base64 -d > /tmp/s05.tgz
+          tar -xzf /tmp/s05.tgz -C .
+      - name: Actualizar catálogo
+        run: node scripts/aplicar-microbloque.mjs data/microbloques/saliendo-05.json
+      - name: Auditar contenido
+        run: node scripts/auditar-microbloque-contenido.mjs data/microbloques/saliendo-05.json
+      - name: Auditar técnica
+        run: node scripts/auditar-microbloque-tecnica.mjs data/microbloques/saliendo-05.json
+      - name: Guardar resultado
+        run: |
+          rm -rf data/microbloques/saliendo-05-payload
+          rm -f .github/workflows/s05-apply.yml
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          git commit -m 'Completar y validar Saliendo 05'
+          git push
