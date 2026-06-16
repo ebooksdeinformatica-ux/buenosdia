@@ -43,3 +43,5 @@ jobs:
           git add data/posts.json
           git commit -m "Actualizar catalogo Saliendo 03" || echo "Sin cambios"
           git push
+
+# revalidacion final
