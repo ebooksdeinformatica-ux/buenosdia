@@ -1,5 +1,1235 @@
 [
   {
+    "title": "Salir del modo víctima sin negarte el dolor",
+    "description": "Salir del modo víctima sin negar el dolor implica reconocer lo vivido, recuperar margen de decisión y elegir acciones pequeñas que devuelvan dirección.",
+    "category": "Saliendo de la Matrix",
+    "url": "/posts/salir-del-modo-victima-sin-negarte-dolor.html",
+    "date": "2026-06-16",
+    "image": "/assets/img/posts/saliendo-de-la-matrix.svg",
+    "tags": [
+      "saliendo-de-la-matrix",
+      "responsabilidad",
+      "dolor",
+      "decisión"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Reconstruirte sin aplausos",
+    "description": "Reconstruirte sin aplausos exige sostener acciones que nadie celebra todavía, registrar avances reales y dejar que la constancia hable antes que la opinión.",
+    "category": "Saliendo de la Matrix",
+    "url": "/posts/reconstruirte-sin-aplausos.html",
+    "date": "2026-06-16",
+    "image": "/assets/img/posts/saliendo-de-la-matrix.svg",
+    "tags": [
+      "saliendo-de-la-matrix",
+      "reconstrucción",
+      "constancia",
+      "autonomía"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Crear un sistema personal de avance",
+    "description": "Crear un sistema personal de avance convierte objetivos difusos en acciones visibles, revisiones breves y una continuidad posible incluso en semanas difíciles.",
+    "category": "Saliendo de la Matrix",
+    "url": "/posts/crear-un-sistema-personal-de-avance.html",
+    "date": "2026-06-16",
+    "image": "/assets/img/posts/saliendo-de-la-matrix.svg",
+    "tags": [
+      "saliendo-de-la-matrix",
+      "sistema personal",
+      "avance",
+      "revisión"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Dejar de mirar y empezar a hacer",
+    "description": "Dejar de mirar y empezar a hacer requiere cortar la espera, elegir una tarea concreta y producir una primera prueba que abra el camino a la siguiente.",
+    "category": "Saliendo de la Matrix",
+    "url": "/posts/dejar-de-mirar-y-empezar-a-hacer.html",
+    "date": "2026-06-16",
+    "image": "/assets/img/posts/saliendo-de-la-matrix.svg",
+    "tags": [
+      "saliendo-de-la-matrix",
+      "acción",
+      "atención",
+      "proyecto"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Internet como segunda oportunidad",
+    "description": "Internet como segunda oportunidad funciona cuando una habilidad concreta se transforma en servicio, contenido o producto sin promesas rápidas ni dependencia total.",
+    "category": "Saliendo de la Matrix",
+    "url": "/posts/internet-como-segunda-oportunidad.html",
+    "date": "2026-06-16",
+    "image": "/assets/img/posts/saliendo-de-la-matrix.svg",
+    "tags": [
+      "saliendo-de-la-matrix",
+      "internet",
+      "oficio digital",
+      "segunda oportunidad"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Cuando el entretenimiento se vuelve anestesia",
+    "description": "Cuando el entretenimiento se vuelve anestesia deja de descansar y empieza a borrar señales: cansancio, enojo, pendientes y ganas de cambiar algo.",
+    "category": "Pan y Circo",
+    "url": "/posts/cuando-el-entretenimiento-se-vuelve-anestesia.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/pan-y-circo.svg",
+    "tags": [
+      "pan y circo",
+      "entretenimiento",
+      "atención",
+      "descanso"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Series que descansan y series que te vacían",
+    "description": "Series que descansan y series que te vacían se distinguen por el efecto posterior: calma elegida o consumo automático que deja más cansancio.",
+    "category": "Pan y Circo",
+    "url": "/posts/series-que-descansan-y-series-que-te-vacian.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/pan-y-circo.svg",
+    "tags": [
+      "pan y circo",
+      "series",
+      "atención",
+      "descanso"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "El scroll infinito y la mañana perdida",
+    "description": "El scroll infinito y la mañana perdida muestran cómo un gesto mínimo puede capturar el arranque del día antes de que decidas qué hacer.",
+    "category": "Pan y Circo",
+    "url": "/posts/el-scroll-infinito-y-la-manana-perdida.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/pan-y-circo.svg",
+    "tags": [
+      "pan y circo",
+      "scroll infinito",
+      "atención",
+      "mañana"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Televisión como ruido de fondo mental",
+    "description": "Televisión como ruido de fondo mental habla de ese sonido constante que parece compañía, pero ocupa atención, silencio y descanso real.",
+    "category": "Pan y Circo",
+    "url": "/posts/television-como-ruido-de-fondo-mental.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/pan-y-circo.svg",
+    "tags": [
+      "pan y circo",
+      "televisión",
+      "ruido mental",
+      "atención"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Mirar menos para pensar mejor",
+    "description": "Mirar menos para pensar mejor no es rechazar pantallas: es recuperar silencio, atención y criterio para que el día no venga pensado por otros.",
+    "category": "Pan y Circo",
+    "url": "/posts/mirar-menos-para-pensar-mejor.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/pan-y-circo.svg",
+    "tags": [
+      "pan y circo",
+      "atención",
+      "pensamiento",
+      "pantallas"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "La pantalla como premio barato",
+    "description": "La pantalla como premio barato aparece cuando cada esfuerzo se paga con un estímulo rápido que calma un minuto y cobra atención después.",
+    "category": "Pan y Circo",
+    "url": "/posts/la-pantalla-como-premio-barato.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/pan-y-circo.svg",
+    "tags": [
+      "pan y circo",
+      "pantallas",
+      "recompensa",
+      "atención"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Consumo digital y cansancio invisible",
+    "description": "Consumo digital y cansancio invisible describe ese agotamiento que llega sin esfuerzo físico: demasiadas entradas, estímulos y microdecisiones.",
+    "category": "Pan y Circo",
+    "url": "/posts/consumo-digital-y-cansancio-invisible.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/pan-y-circo.svg",
+    "tags": [
+      "pan y circo",
+      "consumo digital",
+      "cansancio",
+      "atención"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Noticias que informan y noticias que intoxican",
+    "description": "Noticias que informan y noticias que intoxican se diferencian por el efecto: una orienta, la otra repite urgencias hasta dejarte sin acción.",
+    "category": "Pan y Circo",
+    "url": "/posts/noticias-que-informan-y-noticias-que-intoxican.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/pan-y-circo.svg",
+    "tags": [
+      "pan y circo",
+      "noticias",
+      "atención",
+      "criterio"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Famosos, escándalos y atención robada",
+    "description": "Famosos, escándalos y atención robada muestra cómo el espectáculo de vidas ajenas puede ocupar energía que necesitabas para lo propio.",
+    "category": "Pan y Circo",
+    "url": "/posts/famosos-escandalos-y-atencion-robada.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/pan-y-circo.svg",
+    "tags": [
+      "pan y circo",
+      "famosos",
+      "escándalos",
+      "atención"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "La cultura del clip corto",
+    "description": "La cultura del clip corto entrena la atención para esperar impacto inmediato y vuelve más difícil quedarse con ideas largas.",
+    "category": "Pan y Circo",
+    "url": "/posts/la-cultura-del-clip-corto.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/pan-y-circo.svg",
+    "tags": [
+      "pan y circo",
+      "clips cortos",
+      "atención",
+      "cultura digital"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Cómo recuperar silencio después de tanto ruido",
+    "description": "Cómo recuperar silencio después de tanto ruido empieza por bajar estímulos de a poco y dejar que la atención vuelva a escuchar algo propio.",
+    "category": "Pan y Circo",
+    "url": "/posts/como-recuperar-silencio-despues-de-tanto-ruido.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/pan-y-circo.svg",
+    "tags": [
+      "pan y circo",
+      "silencio",
+      "ruido digital",
+      "atención"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Entretenimiento sin culpa pero con límite",
+    "description": "Entretenimiento sin culpa pero con límite propone disfrutar sin entregar todo el día: elegir, cortar y volver mejor a lo propio.",
+    "category": "Pan y Circo",
+    "url": "/posts/entretenimiento-sin-culpa-pero-con-limite.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/pan-y-circo.svg",
+    "tags": [
+      "pan y circo",
+      "entretenimiento",
+      "límites",
+      "descanso"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "El celular como circo de bolsillo",
+    "description": "El celular como circo de bolsillo muestra cómo una herramienta útil también puede convertirse en espectáculo portátil y atención fragmentada.",
+    "category": "Pan y Circo",
+    "url": "/posts/el-celular-como-circo-de-bolsillo.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/pan-y-circo.svg",
+    "tags": [
+      "pan y circo",
+      "celular",
+      "atención",
+      "pantallas"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Redes sociales y comparación diaria",
+    "description": "Redes sociales y comparación diaria muestra cómo una mirada rápida puede volverse medida injusta contra tu propia vida.",
+    "category": "Pan y Circo",
+    "url": "/posts/redes-sociales-y-comparacion-diaria.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/pan-y-circo.svg",
+    "tags": [
+      "pan y circo",
+      "redes sociales",
+      "comparación",
+      "atención"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Ver contenido para escapar de uno mismo",
+    "description": "Ver contenido para escapar de uno mismo empieza como alivio rápido, pero puede tapar cansancio, preguntas y decisiones que necesitan lugar.",
+    "category": "Pan y Circo",
+    "url": "/posts/ver-contenido-para-escapar-de-uno-mismo.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/pan-y-circo.svg",
+    "tags": [
+      "pan y circo",
+      "contenido digital",
+      "fuga",
+      "atención"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Cuando la pantalla ocupa el lugar del proyecto",
+    "description": "Cuando la pantalla ocupa el lugar del proyecto, el consumo parece descanso pero desplaza la accion minima que podia hacerlo avanzar.",
+    "category": "Pan y Circo",
+    "url": "/posts/cuando-la-pantalla-ocupa-el-lugar-del-proyecto.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/pan-y-circo.svg",
+    "tags": [
+      "pan y circo",
+      "proyectos",
+      "pantallas",
+      "atencion"
+    ],
+    "readingTime": "8-11 min"
+  },
+  {
+    "title": "El estimulo rapido que te deja quieto",
+    "description": "El estimulo rapido que te deja quieto da sensacion de movimiento por unos segundos, pero puede desplazar accion real y continuidad.",
+    "category": "Pan y Circo",
+    "url": "/posts/la-dopamina-rapida-que-te-deja-quieto.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/pan-y-circo.svg",
+    "tags": [
+      "pan y circo",
+      "estimulos",
+      "accion",
+      "atencion"
+    ],
+    "readingTime": "8-11 min"
+  },
+  {
+    "title": "Aprender a apagar sin sentir culpa",
+    "description": "Aprender a apagar sin sentir culpa permite cerrar pantallas sin convertir el descanso, el silencio o el limite en una deuda personal.",
+    "category": "Pan y Circo",
+    "url": "/posts/aprender-a-apagar-sin-sentir-culpa.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/pan-y-circo.svg",
+    "tags": [
+      "pan y circo",
+      "apagar",
+      "culpa",
+      "descanso"
+    ],
+    "readingTime": "8-11 min"
+  },
+  {
+    "title": "Consumir cultura sin entregar la cabeza",
+    "description": "Consumir cultura sin entregar la cabeza es mirar, leer y escuchar con criterio propio, sin dejar que cada tendencia decida por vos.",
+    "category": "Pan y Circo",
+    "url": "/posts/consumir-cultura-sin-entregar-la-cabeza.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/pan-y-circo.svg",
+    "tags": [
+      "pan y circo",
+      "cultura",
+      "criterio",
+      "atencion"
+    ],
+    "readingTime": "8-11 min"
+  },
+  {
+    "title": "Peliculas, series y criterio propio",
+    "description": "Peliculas, series y criterio propio propone mirar historias con atencion, disfrutar y quedarte con una lectura personal antes del ruido externo.",
+    "category": "Pan y Circo",
+    "url": "/posts/peliculas-series-y-criterio-propio.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/pan-y-circo.svg",
+    "tags": [
+      "pan y circo",
+      "peliculas",
+      "series",
+      "criterio propio"
+    ],
+    "readingTime": "8-11 min"
+  },
+  {
+    "title": "Salir del ruido sin volverse ermitaño",
+    "description": "Salir del ruido sin volverse ermitaño no exige desaparecer: alcanza con crear bordes sanos para recuperar atención y vida propia.",
+    "category": "Pan y Circo",
+    "url": "/posts/salir-del-ruido-sin-volverse-ermitano.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/pan-y-circo.svg",
+    "tags": [
+      "pan y circo",
+      "ruido digital",
+      "silencio",
+      "atención"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "El entretenimiento que te roba la mañana sin violencia",
+    "description": "El entretenimiento que te roba la mañana sin violencia entra como pausa breve, pero puede quedarse con el primer impulso del día.",
+    "category": "Pan y Circo",
+    "url": "/posts/el-entretenimiento-que-te-roba-la-manana-sin-violencia.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/pan-y-circo.svg",
+    "tags": [
+      "pan y circo",
+      "mañana",
+      "entretenimiento",
+      "atención"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Cuando la televisión ocupa el lugar del silencio",
+    "description": "Cuando la televisión ocupa el lugar del silencio, la casa parece acompañada pero la cabeza pierde una pausa necesaria para ordenar el día.",
+    "category": "Pan y Circo",
+    "url": "/posts/cuando-la-television-ocupa-el-lugar-del-silencio.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/pan-y-circo.svg",
+    "tags": [
+      "pan y circo",
+      "televisión",
+      "silencio",
+      "atención"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Notificaciones como migas para no pensar",
+    "description": "Notificaciones como migas para no pensar muestra cómo avisos pequeños pueden cortar ideas, sostener reflejos y ocupar la atención de a pedazos.",
+    "category": "Pan y Circo",
+    "url": "/posts/notificaciones-como-migas-para-no-pensar.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/pan-y-circo.svg",
+    "tags": [
+      "pan y circo",
+      "notificaciones",
+      "atención",
+      "ruido digital"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Mirar realities para no mirar tu propia vida",
+    "description": "Mirar realities para no mirar tu propia vida puede ser una fuga suave: conflictos ajenos editados ocupan el lugar de preguntas propias.",
+    "category": "Pan y Circo",
+    "url": "/posts/mirar-realities-para-no-mirar-tu-propia-vida.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/pan-y-circo.svg",
+    "tags": [
+      "pan y circo",
+      "realities",
+      "atención",
+      "vida propia"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Elegir contenido que te deje mejor",
+    "description": "Elegir contenido que te deje mejor no es buscar perfección: es observar qué te deja más claro, más vivo y menos tomado por el ruido.",
+    "category": "Pan y Circo",
+    "url": "/posts/elegir-contenido-que-te-deje-mejor.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/pan-y-circo.svg",
+    "tags": [
+      "pan y circo",
+      "contenido",
+      "criterio",
+      "atención"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "La cultura del escándalo como alimento diario",
+    "description": "La cultura del escándalo como alimento diario convierte tensión, pelea y reacción en una dieta de atención que deja poco espacio para pensar.",
+    "category": "Pan y Circo",
+    "url": "/posts/la-cultura-del-escandalo-como-alimento-diario.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/pan-y-circo.svg",
+    "tags": [
+      "pan y circo",
+      "escándalo",
+      "atención",
+      "ruido digital"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Cuando el algoritmo decide tu estado de ánimo",
+    "description": "Cuando el algoritmo decide tu estado de ánimo, el feed puede empujar comparación, enojo o ansiedad antes de que elijas qué querés mirar.",
+    "category": "Pan y Circo",
+    "url": "/posts/cuando-el-algoritmo-decide-tu-estado-de-animo.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/pan-y-circo.svg",
+    "tags": [
+      "pan y circo",
+      "algoritmo",
+      "feed",
+      "atención"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Limpiar tu consumo digital una semana",
+    "description": "Limpiar tu consumo digital una semana ayuda a ver qué contenido te ordena, qué te agota y qué hábitos merecen salir de tu día.",
+    "category": "Pan y Circo",
+    "url": "/posts/limpiar-tu-consumo-digital-una-semana.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/pan-y-circo.svg",
+    "tags": [
+      "pan y circo",
+      "consumo digital",
+      "limpieza",
+      "atención"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "La pantalla encendida como compañía falsa",
+    "description": "La pantalla encendida como compañía falsa llena la casa de voces y movimiento, pero no siempre reemplaza presencia, calma o vínculo real.",
+    "category": "Pan y Circo",
+    "url": "/posts/la-pantalla-encendida-como-compania-falsa.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/pan-y-circo.svg",
+    "tags": [
+      "pan y circo",
+      "pantalla",
+      "compañía",
+      "silencio"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Opiniones rápidas y pensamiento lento",
+    "description": "Opiniones rápidas y pensamiento lento muestra cómo la presión por reaccionar puede ocupar el lugar de una idea propia más cuidada.",
+    "category": "Pan y Circo",
+    "url": "/posts/opiniones-rapidas-y-pensamiento-lento.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/pan-y-circo.svg",
+    "tags": [
+      "pan y circo",
+      "opiniones",
+      "pensamiento",
+      "criterio"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Dejar de regalar atención por aburrimiento",
+    "description": "Dejar de regalar atención por aburrimiento es aprender a no entregar cada pausa al feed, al ruido o al estímulo más cercano.",
+    "category": "Pan y Circo",
+    "url": "/posts/dejar-de-regalar-atencion-por-aburrimiento.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/pan-y-circo.svg",
+    "tags": [
+      "pan y circo",
+      "aburrimiento",
+      "atención",
+      "pantallas"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "El ocio consciente contra el consumo automático",
+    "description": "El ocio consciente contra el consumo automático propone descansar con elección propia, no caer por reflejo en cualquier pantalla disponible.",
+    "category": "Pan y Circo",
+    "url": "/posts/el-ocio-consciente-contra-el-consumo-automatico.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/pan-y-circo.svg",
+    "tags": [
+      "pan y circo",
+      "ocio",
+      "descanso",
+      "consumo automático"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Cuando mirar todo te deja sin vivir nada",
+    "description": "Cuando mirar todo te deja sin vivir nada habla de ese consumo constante que llena los ojos pero deja poco cuerpo, acción y vida propia.",
+    "category": "Pan y Circo",
+    "url": "/posts/cuando-mirar-todo-te-deja-sin-vivir-nada.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/pan-y-circo.svg",
+    "tags": [
+      "pan y circo",
+      "pantallas",
+      "vida propia",
+      "atención"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "La industria de la distracción cotidiana",
+    "description": "La industria de la distracción cotidiana convierte pausas, aburrimiento y cansancio en oportunidades para capturar atención.",
+    "category": "Pan y Circo",
+    "url": "/posts/la-industria-de-la-distraccion-cotidiana.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/pan-y-circo.svg",
+    "tags": [
+      "pan y circo",
+      "distracción",
+      "atención",
+      "plataformas"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Consumir menos ruido para producir más vida",
+    "description": "Consumir menos ruido para producir más vida significa dejar espacio para acciones reales, descanso y presencia propia.",
+    "category": "Pan y Circo",
+    "url": "/posts/consumir-menos-ruido-para-producir-mas-vida.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/pan-y-circo.svg",
+    "tags": [
+      "pan y circo",
+      "ruido digital",
+      "vida propia",
+      "atención"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "La fama ajena como reemplazo del proyecto propio",
+    "description": "La fama ajena como reemplazo del proyecto propio aparece cuando mirar logros de otros ocupa el lugar de avanzar en algo propio.",
+    "category": "Pan y Circo",
+    "url": "/posts/la-fama-ajena-como-reemplazo-del-proyecto-propio.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/pan-y-circo.svg",
+    "tags": [
+      "pan y circo",
+      "fama",
+      "proyecto propio",
+      "atención"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "El entretenimiento útil y el entretenimiento vacío",
+    "description": "El entretenimiento útil y el entretenimiento vacío se distinguen por el efecto que dejan: descanso con regreso o consumo que deja más dispersión.",
+    "category": "Pan y Circo",
+    "url": "/posts/el-entretenimiento-util-y-el-entretenimiento-vacio.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/pan-y-circo.svg",
+    "tags": [
+      "pan y circo",
+      "entretenimiento",
+      "descanso",
+      "criterio"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Volver a elegir qué entra por tus ojos",
+    "description": "Volver a elegir qué entra por tus ojos es recuperar criterio sobre imágenes, pantallas y estímulos que forman el clima de tu día.",
+    "category": "Pan y Circo",
+    "url": "/posts/volver-a-elegir-que-entra-por-tus-ojos.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/pan-y-circo.svg",
+    "tags": [
+      "pan y circo",
+      "mirada",
+      "contenido",
+      "criterio"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Comer mal y pensar con niebla",
+    "description": "Comer mal y pensar con niebla no siempre se nota en el plato: a veces aparece como cansancio, confusión y falta de ritmo durante el día.",
+    "category": "Alimentación",
+    "url": "/posts/comer-mal-y-pensar-con-niebla.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/alimentacion.svg",
+    "tags": [
+      "alimentación",
+      "claridad",
+      "hábitos",
+      "energía"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Desayunar mejor para empezar distinto",
+    "description": "Desayunar mejor para empezar distinto no es hacer una dieta perfecta: es darle al cuerpo una base más estable para entrar al día.",
+    "category": "Alimentación",
+    "url": "/posts/desayunar-mejor-para-empezar-distinto.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/alimentacion.svg",
+    "tags": [
+      "alimentación",
+      "desayuno",
+      "energía",
+      "hábitos"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Azúcar, ansiedad y energía prestada",
+    "description": "Azúcar, ansiedad y energía prestada habla de esos impulsos dulces que levantan rápido, pero a veces dejan más altibajo que sostén.",
+    "category": "Alimentación",
+    "url": "/posts/azucar-ansiedad-y-energia-prestada.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/alimentacion.svg",
+    "tags": [
+      "alimentación",
+      "azúcar",
+      "energía",
+      "hábitos"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Ultraprocesados y cansancio cotidiano",
+    "description": "Ultraprocesados y cansancio cotidiano mira cómo la comida de emergencia puede volverse rutina y dejar menos energía real durante el día.",
+    "category": "Alimentación",
+    "url": "/posts/ultraprocesados-y-cansancio-cotidiano.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/alimentacion.svg",
+    "tags": [
+      "alimentación",
+      "ultraprocesados",
+      "cansancio",
+      "hábitos"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Agua, cuerpo y claridad mental",
+    "description": "Agua, cuerpo y claridad mental mira una señal simple: a veces el cansancio y la confusión empiezan por no tomar agua durante horas.",
+    "category": "Alimentación",
+    "url": "/posts/agua-cuerpo-y-claridad-mental.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/alimentacion.svg",
+    "tags": [
+      "alimentación",
+      "agua",
+      "cuerpo",
+      "claridad"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Comida real sin fanatismo",
+    "description": "Comida real sin fanatismo es volver a alimentos simples sin convertir cada plato en una guerra ni cada elección en culpa.",
+    "category": "Alimentación",
+    "url": "/posts/comida-real-sin-fanatismo.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/alimentacion.svg",
+    "tags": [
+      "alimentación",
+      "comida real",
+      "hábitos",
+      "sin fanatismo"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Ordenar la alimentación cuando no hay ganas",
+    "description": "Ordenar la alimentación cuando no hay ganas empieza por hacer más fácil lo básico, no por exigir una versión perfecta de vos.",
+    "category": "Alimentación",
+    "url": "/posts/ordenar-la-alimentacion-cuando-no-hay-ganas.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/alimentacion.svg",
+    "tags": [
+      "alimentación",
+      "comida simple",
+      "hábitos",
+      "cansancio"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "La cocina simple como acto de control",
+    "description": "La cocina simple como acto de control ayuda a recuperar una parte del día cuando todo viene apurado, caro o improvisado.",
+    "category": "Alimentación",
+    "url": "/posts/la-cocina-simple-como-acto-de-control.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/alimentacion.svg",
+    "tags": [
+      "alimentación",
+      "cocina simple",
+      "hábitos",
+      "organización"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Comer apurado y vivir acelerado",
+    "description": "Comer apurado y vivir acelerado muestra cómo el ritmo del día también entra al plato, a la digestión y a la relación con el cuerpo.",
+    "category": "Alimentación",
+    "url": "/posts/comer-apurado-y-vivir-acelerado.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/alimentacion.svg",
+    "tags": [
+      "alimentación",
+      "comer lento",
+      "hábitos",
+      "ritmo"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Hábitos pequeños que cambian el día",
+    "description": "Hábitos pequeños que cambian el día muestra cómo agua, comida simple y menos apuro pueden ordenar la energía cotidiana sin extremos.",
+    "category": "Alimentación",
+    "url": "/posts/habitos-pequenos-que-cambian-el-dia.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/alimentacion.svg",
+    "tags": [
+      "alimentación",
+      "hábitos",
+      "agua",
+      "rutina"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Comprar comida con más conciencia",
+    "description": "Comprar comida con más conciencia ayuda a gastar mejor, improvisar menos y dejar opciones reales disponibles para la semana.",
+    "category": "Alimentación",
+    "url": "/posts/comprar-comida-con-mas-conciencia.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/alimentacion.svg",
+    "tags": [
+      "alimentación",
+      "compras",
+      "comida simple",
+      "organización"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "El cuerpo como base del proyecto",
+    "description": "El cuerpo como base del proyecto recuerda que trabajar, crear y sostener ideas también depende de sueño, comida, agua y ritmo real.",
+    "category": "Alimentación",
+    "url": "/posts/el-cuerpo-como-base-del-proyecto.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/alimentacion.svg",
+    "tags": [
+      "alimentación",
+      "cuerpo",
+      "proyecto",
+      "energía"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Alimentación y disciplina sin obsesión",
+    "description": "Alimentación y disciplina sin obsesión propone ordenar comidas con estructura amable, sin convertir cada plato en control extremo.",
+    "category": "Alimentación",
+    "url": "/posts/alimentacion-y-disciplina-sin-obsesion.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/alimentacion.svg",
+    "tags": [
+      "alimentación",
+      "disciplina",
+      "hábitos",
+      "sin obsesión"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Cuando el cansancio empieza en el plato",
+    "description": "Cuando el cansancio empieza en el plato no significa que la comida explique todo, pero sí que puede estar empujando el día hacia abajo.",
+    "category": "Alimentación",
+    "url": "/posts/cuando-el-cansancio-empieza-en-el-plato.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/alimentacion.svg",
+    "tags": [
+      "alimentación",
+      "cansancio",
+      "energía",
+      "hábitos"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Comer mejor con poco presupuesto",
+    "description": "Comer mejor con poco presupuesto no es comprar perfecto: es elegir bases simples, rendidoras y posibles para sostener la semana.",
+    "category": "Alimentación",
+    "url": "/posts/comer-mejor-con-poco-presupuesto.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/alimentacion.svg",
+    "tags": [
+      "alimentación",
+      "presupuesto",
+      "compras",
+      "comida simple"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "La ansiedad que se disfraza de antojo",
+    "description": "La ansiedad que se disfraza de antojo no siempre habla de hambre: a veces señala cansancio, estrés, poco descanso o falta de una base real.",
+    "category": "Alimentación",
+    "url": "/posts/la-ansiedad-que-se-disfraza-de-antojo.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/alimentacion.svg",
+    "tags": [
+      "alimentación",
+      "ansiedad",
+      "antojo",
+      "hábitos"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Rutina de comida para mente clara",
+    "description": "Rutina de comida para mente clara propone horarios aproximados, compras simples y menos improvisación en la alimentación diaria.",
+    "category": "Alimentación",
+    "url": "/posts/rutina-de-comida-para-mente-clara.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/alimentacion.svg",
+    "tags": [
+      "alimentación",
+      "rutina",
+      "mente clara",
+      "hábitos"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Menos paquete y más energía real",
+    "description": "Menos paquete y más energía real propone sumar alimentos simples y reducir la dependencia cotidiana de productos listos para abrir.",
+    "category": "Alimentación",
+    "url": "/posts/menos-paquete-y-mas-energia-real.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/alimentacion.svg",
+    "tags": [
+      "alimentación",
+      "ultraprocesados",
+      "energía",
+      "hábitos"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Alimentarse para sostener trabajo digital",
+    "description": "Alimentarse para sostener trabajo digital ayuda a ordenar jornadas largas de computadora con pausas y comida simple.",
+    "category": "Alimentación",
+    "url": "/posts/alimentarse-para-sostener-trabajo-digital.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/alimentacion.svg",
+    "tags": [
+      "alimentación",
+      "trabajo digital",
+      "rutina",
+      "organización"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "La Matrix del consumo alimentario",
+    "description": "La Matrix del consumo alimentario muestra cómo marketing, precio, apuro y disponibilidad empujan decisiones que parecen personales.",
+    "category": "Alimentación",
+    "url": "/posts/la-matrix-del-consumo-alimentario.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/alimentacion.svg",
+    "tags": [
+      "alimentación",
+      "Matrix",
+      "consumo",
+      "compras"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Preparar comida para no vivir improvisando",
+    "description": "Preparar comida para no vivir improvisando ayuda a dejar opciones simples listas antes de que el día se complique demasiado.",
+    "category": "Alimentación",
+    "url": "/posts/preparar-comida-para-no-vivir-improvisando.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/alimentacion.svg",
+    "tags": [
+      "alimentación",
+      "preparar comida",
+      "organización",
+      "hábitos"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Comer de noche y dormir peor",
+    "description": "Comer de noche y dormir peor puede ser una señal de horarios desordenados, cenas pesadas o hambre acumulada durante el día.",
+    "category": "Alimentación",
+    "url": "/posts/comer-de-noche-y-dormir-peor.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/alimentacion.svg",
+    "tags": [
+      "alimentación",
+      "noche",
+      "descanso",
+      "rutina"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Cuando el delivery se vuelve piloto automático",
+    "description": "Cuando el delivery se vuelve piloto automático conviene mirar hábito, gasto y falta de opciones simples antes del apuro.",
+    "category": "Alimentación",
+    "url": "/posts/cuando-el-delivery-se-vuelve-piloto-automatico.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/alimentacion.svg",
+    "tags": [
+      "alimentación",
+      "delivery",
+      "organización",
+      "hábitos"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Energía estable para trabajar mejor",
+    "description": "Energía estable para trabajar mejor habla de ordenar comidas, agua y pausas para no depender solo de impulsos durante la jornada.",
+    "category": "Alimentación",
+    "url": "/posts/energia-estable-para-trabajar-mejor.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/alimentacion.svg",
+    "tags": [
+      "alimentación",
+      "energía",
+      "trabajo",
+      "hábitos"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Alimentos simples para una semana más clara",
+    "description": "Alimentos simples para una semana más clara son bases posibles que ayudan a comprar, preparar y comer con menos improvisación.",
+    "category": "Alimentación",
+    "url": "/posts/alimentos-simples-para-una-semana-mas-clara.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/alimentacion.svg",
+    "tags": [
+      "alimentación",
+      "alimentos simples",
+      "semana",
+      "organización"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Rutina alimentaria para dias de poco dinero",
+    "description": "Texto de alimentacion cotidiana con rutina simple y compras posibles para ordenar mejor la semana.",
+    "category": "Alimentación",
+    "url": "/posts/rutina-alimentaria-para-dias-de-poco-dinero.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/alimentacion.svg",
+    "tags": [
+      "alimentación",
+      "rutina"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Cuando el cuerpo pide orden antes que motivacion",
+    "description": "Texto de alimentacion cotidiana sobre orden diario y comidas simples para bajar improvisacion.",
+    "category": "Alimentación",
+    "url": "/posts/cuando-el-cuerpo-pide-orden-antes-que-motivacion.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/alimentacion.svg",
+    "tags": [
+      "alimentación",
+      "orden"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "El mate el cafe y la energia prestada",
+    "description": "Texto de alimentacion cotidiana sobre bebidas habituales, pausas y rutinas diarias con mirada practica.",
+    "category": "Alimentación",
+    "url": "/posts/el-mate-el-cafe-y-la-energia-prestada.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/alimentacion.svg",
+    "tags": [
+      "alimentación",
+      "mate"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Aprender a leer tu cansancio fisico",
+    "description": "Texto de alimentacion cotidiana sobre senales simples del dia y organizacion personal sin extremos.",
+    "category": "Alimentación",
+    "url": "/posts/aprender-a-leer-tu-cansancio-fisico.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/alimentacion.svg",
+    "tags": [
+      "alimentación",
+      "cansancio"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Comida casera como resistencia practica",
+    "description": "Texto de alimentacion cotidiana sobre cocina simple, autonomia domestica y preparaciones posibles.",
+    "category": "Alimentación",
+    "url": "/posts/comida-casera-como-resistencia-practica.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/alimentacion.svg",
+    "tags": [
+      "alimentación",
+      "cocina"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Empezar de cero sin fuerza",
+    "description": "Empezar de cero sin fuerza no pide una revolucion enorme pide un primer gesto chico visible y posible para recuperar movimiento diario.",
+    "category": "Saliendo de la Matrix",
+    "url": "/posts/empezar-de-cero-sin-fuerza.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/saliendo-de-la-matrix.svg",
+    "tags": [
+      "saliendo-de-la-matrix",
+      "empezar"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Volver a crear despues de abandonar",
+    "description": "Volver a crear despues de abandonar pide una entrega chica visible y posible para recuperar continuidad sin promesas enormes ni vueltas largas.",
+    "category": "Saliendo de la Matrix",
+    "url": "/posts/volver-a-crear-despues-de-abandonar.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/saliendo-de-la-matrix.svg",
+    "tags": [
+      "saliendo-de-la-matrix",
+      "crear"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Ordenar proyectos que parecian muertos",
+    "description": "Ordenar proyectos que parecian muertos empieza separando lo vivo lo pendiente y lo que ya no necesita energia para encontrar un paso claro.",
+    "category": "Saliendo de la Matrix",
+    "url": "/posts/ordenar-proyectos-que-parecian-muertos.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/saliendo-de-la-matrix.svg",
+    "tags": [
+      "saliendo-de-la-matrix",
+      "proyectos"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Hacer una cosa util por dia",
+    "description": "Hacer una cosa util por dia baja la ansiedad de cambiar todo y devuelve avance visible en una escala posible concreta y repetible.",
+    "category": "Saliendo de la Matrix",
+    "url": "/posts/hacer-una-cosa-util-por-dia.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/saliendo-de-la-matrix.svg",
+    "tags": [
+      "saliendo-de-la-matrix",
+      "avance"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Recuperar foco despues del caos",
+    "description": "Recuperar foco despues del caos empieza por elegir una prioridad chica y protegerla con un bloque breve realista y facil de repetir.",
+    "category": "Saliendo de la Matrix",
+    "url": "/posts/recuperar-foco-despues-del-caos.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/saliendo-de-la-matrix.svg",
+    "tags": [
+      "saliendo-de-la-matrix",
+      "foco"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Dejar de esperar el momento perfecto",
+    "description": "Dejar de esperar el momento perfecto empieza por hacer una entrega imperfecta visible y posible antes de seguir postergando sin fin.",
+    "category": "Saliendo de la Matrix",
+    "url": "/posts/dejar-de-esperar-el-momento-perfecto.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/saliendo-de-la-matrix.svg",
+    "tags": [
+      "saliendo-de-la-matrix",
+      "empezar"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Crear una web como acto de rescate",
+    "description": "Crear una web como acto de rescate convierte una idea dispersa en un lugar propio visible posible de mejorar y ordenar con tiempo.",
+    "category": "Saliendo de la Matrix",
+    "url": "/posts/crear-una-web-como-acto-de-rescate.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/saliendo-de-la-matrix.svg",
+    "tags": [
+      "saliendo-de-la-matrix",
+      "web"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Volver a creer en tu oficio",
+    "description": "Volver a creer en tu oficio empieza por hacer una entrega concreta que te recuerde que todavia sabes construir algo real.",
+    "category": "Saliendo de la Matrix",
+    "url": "/posts/volver-a-creer-en-tu-oficio.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/saliendo-de-la-matrix.svg",
+    "tags": [
+      "saliendo-de-la-matrix",
+      "oficio"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Sostener esperanza sin vender fantasia",
+    "description": "Sostener esperanza sin vender fantasia es mirar la realidad de frente y aun asi dejar una accion posible para manana.",
+    "category": "Saliendo de la Matrix",
+    "url": "/posts/sostener-esperanza-sin-vender-fantasia.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/saliendo-de-la-matrix.svg",
+    "tags": [
+      "saliendo-de-la-matrix",
+      "esperanza"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Romper una etapa con acciones pequenas",
+    "description": "Romper una etapa con acciones pequenas empieza por cambiar una escena diaria no por esperar una transformacion total inmediata.",
+    "category": "Saliendo de la Matrix",
+    "url": "/posts/romper-una-etapa-con-acciones-pequenas.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/saliendo-de-la-matrix.svg",
+    "tags": [
+      "saliendo-de-la-matrix",
+      "etapa"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
     "title": "Cómo usar una computadora vieja para crear valor digital",
     "description": "Una computadora vieja todavía puede producir valor: cómo diagnosticarla, trabajar con herramientas livianas y decidir cuándo mejorarla o cambiarla.",
     "category": "Tecnología",
@@ -750,156 +1980,6 @@
     "readingTime": "8–11 min"
   },
   {
-    "title": "Cuando el entretenimiento se vuelve anestesia",
-    "description": "Cuando el entretenimiento se vuelve anestesia deja de descansar y empieza a borrar señales: cansancio, enojo, pendientes y ganas de cambiar algo.",
-    "category": "Pan y Circo",
-    "url": "/posts/cuando-el-entretenimiento-se-vuelve-anestesia.html",
-    "date": "2026-06-14",
-    "image": "/assets/img/posts/pan-y-circo.svg",
-    "tags": [
-      "pan y circo",
-      "entretenimiento",
-      "atención",
-      "descanso"
-    ],
-    "readingTime": "8–11 min"
-  },
-  {
-    "title": "Series que descansan y series que te vacían",
-    "description": "Series que descansan y series que te vacían se distinguen por el efecto posterior: calma elegida o consumo automático que deja más cansancio.",
-    "category": "Pan y Circo",
-    "url": "/posts/series-que-descansan-y-series-que-te-vacian.html",
-    "date": "2026-06-14",
-    "image": "/assets/img/posts/pan-y-circo.svg",
-    "tags": [
-      "pan y circo",
-      "series",
-      "atención",
-      "descanso"
-    ],
-    "readingTime": "8–11 min"
-  },
-  {
-    "title": "El scroll infinito y la mañana perdida",
-    "description": "El scroll infinito y la mañana perdida muestran cómo un gesto mínimo puede capturar el arranque del día antes de que decidas qué hacer.",
-    "category": "Pan y Circo",
-    "url": "/posts/el-scroll-infinito-y-la-manana-perdida.html",
-    "date": "2026-06-14",
-    "image": "/assets/img/posts/pan-y-circo.svg",
-    "tags": [
-      "pan y circo",
-      "scroll infinito",
-      "atención",
-      "mañana"
-    ],
-    "readingTime": "8–11 min"
-  },
-  {
-    "title": "Televisión como ruido de fondo mental",
-    "description": "Televisión como ruido de fondo mental habla de ese sonido constante que parece compañía, pero ocupa atención, silencio y descanso real.",
-    "category": "Pan y Circo",
-    "url": "/posts/television-como-ruido-de-fondo-mental.html",
-    "date": "2026-06-14",
-    "image": "/assets/img/posts/pan-y-circo.svg",
-    "tags": [
-      "pan y circo",
-      "televisión",
-      "ruido mental",
-      "atención"
-    ],
-    "readingTime": "8–11 min"
-  },
-  {
-    "title": "Mirar menos para pensar mejor",
-    "description": "Mirar menos para pensar mejor no es rechazar pantallas: es recuperar silencio, atención y criterio para que el día no venga pensado por otros.",
-    "category": "Pan y Circo",
-    "url": "/posts/mirar-menos-para-pensar-mejor.html",
-    "date": "2026-06-14",
-    "image": "/assets/img/posts/pan-y-circo.svg",
-    "tags": [
-      "pan y circo",
-      "atención",
-      "pensamiento",
-      "pantallas"
-    ],
-    "readingTime": "8–11 min"
-  },
-  {
-    "title": "La pantalla como premio barato",
-    "description": "La pantalla como premio barato aparece cuando cada esfuerzo se paga con un estímulo rápido que calma un minuto y cobra atención después.",
-    "category": "Pan y Circo",
-    "url": "/posts/la-pantalla-como-premio-barato.html",
-    "date": "2026-06-14",
-    "image": "/assets/img/posts/pan-y-circo.svg",
-    "tags": [
-      "pan y circo",
-      "pantallas",
-      "recompensa",
-      "atención"
-    ],
-    "readingTime": "8–11 min"
-  },
-  {
-    "title": "Consumo digital y cansancio invisible",
-    "description": "Consumo digital y cansancio invisible describe ese agotamiento que llega sin esfuerzo físico: demasiadas entradas, estímulos y microdecisiones.",
-    "category": "Pan y Circo",
-    "url": "/posts/consumo-digital-y-cansancio-invisible.html",
-    "date": "2026-06-14",
-    "image": "/assets/img/posts/pan-y-circo.svg",
-    "tags": [
-      "pan y circo",
-      "consumo digital",
-      "cansancio",
-      "atención"
-    ],
-    "readingTime": "8–11 min"
-  },
-  {
-    "title": "Noticias que informan y noticias que intoxican",
-    "description": "Noticias que informan y noticias que intoxican se diferencian por el efecto: una orienta, la otra repite urgencias hasta dejarte sin acción.",
-    "category": "Pan y Circo",
-    "url": "/posts/noticias-que-informan-y-noticias-que-intoxican.html",
-    "date": "2026-06-14",
-    "image": "/assets/img/posts/pan-y-circo.svg",
-    "tags": [
-      "pan y circo",
-      "noticias",
-      "atención",
-      "criterio"
-    ],
-    "readingTime": "8–11 min"
-  },
-  {
-    "title": "Famosos, escándalos y atención robada",
-    "description": "Famosos, escándalos y atención robada muestra cómo el espectáculo de vidas ajenas puede ocupar energía que necesitabas para lo propio.",
-    "category": "Pan y Circo",
-    "url": "/posts/famosos-escandalos-y-atencion-robada.html",
-    "date": "2026-06-14",
-    "image": "/assets/img/posts/pan-y-circo.svg",
-    "tags": [
-      "pan y circo",
-      "famosos",
-      "escándalos",
-      "atención"
-    ],
-    "readingTime": "8–11 min"
-  },
-  {
-    "title": "La cultura del clip corto",
-    "description": "La cultura del clip corto entrena la atención para esperar impacto inmediato y vuelve más difícil quedarse con ideas largas.",
-    "category": "Pan y Circo",
-    "url": "/posts/la-cultura-del-clip-corto.html",
-    "date": "2026-06-14",
-    "image": "/assets/img/posts/pan-y-circo.svg",
-    "tags": [
-      "pan y circo",
-      "clips cortos",
-      "atención",
-      "cultura digital"
-    ],
-    "readingTime": "8–11 min"
-  },
-  {
     "title": "Cuando todos opinan pero nadie piensa",
     "description": "Análisis práctico de cuando todos opinan pero nadie piensa: disparadores, efectos sobre la atención y cambios concretos para recuperar tiempo y criterio.",
     "category": "Pan y Circo",
@@ -930,156 +2010,6 @@
     "readingTime": "10–14 min"
   },
   {
-    "title": "Cómo recuperar silencio después de tanto ruido",
-    "description": "Cómo recuperar silencio después de tanto ruido empieza por bajar estímulos de a poco y dejar que la atención vuelva a escuchar algo propio.",
-    "category": "Pan y Circo",
-    "url": "/posts/como-recuperar-silencio-despues-de-tanto-ruido.html",
-    "date": "2026-06-14",
-    "image": "/assets/img/posts/pan-y-circo.svg",
-    "tags": [
-      "pan y circo",
-      "silencio",
-      "ruido digital",
-      "atención"
-    ],
-    "readingTime": "8–11 min"
-  },
-  {
-    "title": "Entretenimiento sin culpa pero con límite",
-    "description": "Entretenimiento sin culpa pero con límite propone disfrutar sin entregar todo el día: elegir, cortar y volver mejor a lo propio.",
-    "category": "Pan y Circo",
-    "url": "/posts/entretenimiento-sin-culpa-pero-con-limite.html",
-    "date": "2026-06-14",
-    "image": "/assets/img/posts/pan-y-circo.svg",
-    "tags": [
-      "pan y circo",
-      "entretenimiento",
-      "límites",
-      "descanso"
-    ],
-    "readingTime": "8–11 min"
-  },
-  {
-    "title": "El celular como circo de bolsillo",
-    "description": "El celular como circo de bolsillo muestra cómo una herramienta útil también puede convertirse en espectáculo portátil y atención fragmentada.",
-    "category": "Pan y Circo",
-    "url": "/posts/el-celular-como-circo-de-bolsillo.html",
-    "date": "2026-06-14",
-    "image": "/assets/img/posts/pan-y-circo.svg",
-    "tags": [
-      "pan y circo",
-      "celular",
-      "atención",
-      "pantallas"
-    ],
-    "readingTime": "8–11 min"
-  },
-  {
-    "title": "Redes sociales y comparación diaria",
-    "description": "Redes sociales y comparación diaria muestra cómo una mirada rápida puede volverse medida injusta contra tu propia vida.",
-    "category": "Pan y Circo",
-    "url": "/posts/redes-sociales-y-comparacion-diaria.html",
-    "date": "2026-06-14",
-    "image": "/assets/img/posts/pan-y-circo.svg",
-    "tags": [
-      "pan y circo",
-      "redes sociales",
-      "comparación",
-      "atención"
-    ],
-    "readingTime": "8–11 min"
-  },
-  {
-    "title": "Ver contenido para escapar de uno mismo",
-    "description": "Ver contenido para escapar de uno mismo empieza como alivio rápido, pero puede tapar cansancio, preguntas y decisiones que necesitan lugar.",
-    "category": "Pan y Circo",
-    "url": "/posts/ver-contenido-para-escapar-de-uno-mismo.html",
-    "date": "2026-06-14",
-    "image": "/assets/img/posts/pan-y-circo.svg",
-    "tags": [
-      "pan y circo",
-      "contenido digital",
-      "fuga",
-      "atención"
-    ],
-    "readingTime": "8–11 min"
-  },
-  {
-    "title": "Cuando la pantalla ocupa el lugar del proyecto",
-    "description": "Cuando la pantalla ocupa el lugar del proyecto, el consumo parece descanso pero desplaza la accion minima que podia hacerlo avanzar.",
-    "category": "Pan y Circo",
-    "url": "/posts/cuando-la-pantalla-ocupa-el-lugar-del-proyecto.html",
-    "date": "2026-06-14",
-    "image": "/assets/img/posts/pan-y-circo.svg",
-    "tags": [
-      "pan y circo",
-      "proyectos",
-      "pantallas",
-      "atencion"
-    ],
-    "readingTime": "8-11 min"
-  },
-  {
-    "title": "El estimulo rapido que te deja quieto",
-    "description": "El estimulo rapido que te deja quieto da sensacion de movimiento por unos segundos, pero puede desplazar accion real y continuidad.",
-    "category": "Pan y Circo",
-    "url": "/posts/la-dopamina-rapida-que-te-deja-quieto.html",
-    "date": "2026-06-14",
-    "image": "/assets/img/posts/pan-y-circo.svg",
-    "tags": [
-      "pan y circo",
-      "estimulos",
-      "accion",
-      "atencion"
-    ],
-    "readingTime": "8-11 min"
-  },
-  {
-    "title": "Aprender a apagar sin sentir culpa",
-    "description": "Aprender a apagar sin sentir culpa permite cerrar pantallas sin convertir el descanso, el silencio o el limite en una deuda personal.",
-    "category": "Pan y Circo",
-    "url": "/posts/aprender-a-apagar-sin-sentir-culpa.html",
-    "date": "2026-06-14",
-    "image": "/assets/img/posts/pan-y-circo.svg",
-    "tags": [
-      "pan y circo",
-      "apagar",
-      "culpa",
-      "descanso"
-    ],
-    "readingTime": "8-11 min"
-  },
-  {
-    "title": "Consumir cultura sin entregar la cabeza",
-    "description": "Consumir cultura sin entregar la cabeza es mirar, leer y escuchar con criterio propio, sin dejar que cada tendencia decida por vos.",
-    "category": "Pan y Circo",
-    "url": "/posts/consumir-cultura-sin-entregar-la-cabeza.html",
-    "date": "2026-06-14",
-    "image": "/assets/img/posts/pan-y-circo.svg",
-    "tags": [
-      "pan y circo",
-      "cultura",
-      "criterio",
-      "atencion"
-    ],
-    "readingTime": "8-11 min"
-  },
-  {
-    "title": "Peliculas, series y criterio propio",
-    "description": "Peliculas, series y criterio propio propone mirar historias con atencion, disfrutar y quedarte con una lectura personal antes del ruido externo.",
-    "category": "Pan y Circo",
-    "url": "/posts/peliculas-series-y-criterio-propio.html",
-    "date": "2026-06-14",
-    "image": "/assets/img/posts/pan-y-circo.svg",
-    "tags": [
-      "pan y circo",
-      "peliculas",
-      "series",
-      "criterio propio"
-    ],
-    "readingTime": "8-11 min"
-  },
-  {
     "title": "La falsa urgencia de estar al día",
     "description": "Análisis práctico de la falsa urgencia de estar al día: disparadores, efectos sobre la atención y cambios concretos para recuperar tiempo y criterio.",
     "category": "Pan y Circo",
@@ -1105,81 +2035,6 @@
       "arrastrado"
     ],
     "readingTime": "10–14 min"
-  },
-  {
-    "title": "Salir del ruido sin volverse ermitaño",
-    "description": "Salir del ruido sin volverse ermitaño no exige desaparecer: alcanza con crear bordes sanos para recuperar atención y vida propia.",
-    "category": "Pan y Circo",
-    "url": "/posts/salir-del-ruido-sin-volverse-ermitano.html",
-    "date": "2026-06-14",
-    "image": "/assets/img/posts/pan-y-circo.svg",
-    "tags": [
-      "pan y circo",
-      "ruido digital",
-      "silencio",
-      "atención"
-    ],
-    "readingTime": "8–11 min"
-  },
-  {
-    "title": "El entretenimiento que te roba la mañana sin violencia",
-    "description": "El entretenimiento que te roba la mañana sin violencia entra como pausa breve, pero puede quedarse con el primer impulso del día.",
-    "category": "Pan y Circo",
-    "url": "/posts/el-entretenimiento-que-te-roba-la-manana-sin-violencia.html",
-    "date": "2026-06-14",
-    "image": "/assets/img/posts/pan-y-circo.svg",
-    "tags": [
-      "pan y circo",
-      "mañana",
-      "entretenimiento",
-      "atención"
-    ],
-    "readingTime": "8–11 min"
-  },
-  {
-    "title": "Cuando la televisión ocupa el lugar del silencio",
-    "description": "Cuando la televisión ocupa el lugar del silencio, la casa parece acompañada pero la cabeza pierde una pausa necesaria para ordenar el día.",
-    "category": "Pan y Circo",
-    "url": "/posts/cuando-la-television-ocupa-el-lugar-del-silencio.html",
-    "date": "2026-06-14",
-    "image": "/assets/img/posts/pan-y-circo.svg",
-    "tags": [
-      "pan y circo",
-      "televisión",
-      "silencio",
-      "atención"
-    ],
-    "readingTime": "8–11 min"
-  },
-  {
-    "title": "Notificaciones como migas para no pensar",
-    "description": "Notificaciones como migas para no pensar muestra cómo avisos pequeños pueden cortar ideas, sostener reflejos y ocupar la atención de a pedazos.",
-    "category": "Pan y Circo",
-    "url": "/posts/notificaciones-como-migas-para-no-pensar.html",
-    "date": "2026-06-14",
-    "image": "/assets/img/posts/pan-y-circo.svg",
-    "tags": [
-      "pan y circo",
-      "notificaciones",
-      "atención",
-      "ruido digital"
-    ],
-    "readingTime": "8–11 min"
-  },
-  {
-    "title": "Mirar realities para no mirar tu propia vida",
-    "description": "Mirar realities para no mirar tu propia vida puede ser una fuga suave: conflictos ajenos editados ocupan el lugar de preguntas propias.",
-    "category": "Pan y Circo",
-    "url": "/posts/mirar-realities-para-no-mirar-tu-propia-vida.html",
-    "date": "2026-06-14",
-    "image": "/assets/img/posts/pan-y-circo.svg",
-    "tags": [
-      "pan y circo",
-      "realities",
-      "atención",
-      "vida propia"
-    ],
-    "readingTime": "8–11 min"
   },
   {
     "title": "La ansiedad de estar siempre actualizado",
@@ -1287,366 +2142,6 @@
     "readingTime": "10–14 min"
   },
   {
-    "title": "Elegir contenido que te deje mejor",
-    "description": "Elegir contenido que te deje mejor no es buscar perfección: es observar qué te deja más claro, más vivo y menos tomado por el ruido.",
-    "category": "Pan y Circo",
-    "url": "/posts/elegir-contenido-que-te-deje-mejor.html",
-    "date": "2026-06-14",
-    "image": "/assets/img/posts/pan-y-circo.svg",
-    "tags": [
-      "pan y circo",
-      "contenido",
-      "criterio",
-      "atención"
-    ],
-    "readingTime": "8–11 min"
-  },
-  {
-    "title": "La cultura del escándalo como alimento diario",
-    "description": "La cultura del escándalo como alimento diario convierte tensión, pelea y reacción en una dieta de atención que deja poco espacio para pensar.",
-    "category": "Pan y Circo",
-    "url": "/posts/la-cultura-del-escandalo-como-alimento-diario.html",
-    "date": "2026-06-14",
-    "image": "/assets/img/posts/pan-y-circo.svg",
-    "tags": [
-      "pan y circo",
-      "escándalo",
-      "atención",
-      "ruido digital"
-    ],
-    "readingTime": "8–11 min"
-  },
-  {
-    "title": "Cuando el algoritmo decide tu estado de ánimo",
-    "description": "Cuando el algoritmo decide tu estado de ánimo, el feed puede empujar comparación, enojo o ansiedad antes de que elijas qué querés mirar.",
-    "category": "Pan y Circo",
-    "url": "/posts/cuando-el-algoritmo-decide-tu-estado-de-animo.html",
-    "date": "2026-06-14",
-    "image": "/assets/img/posts/pan-y-circo.svg",
-    "tags": [
-      "pan y circo",
-      "algoritmo",
-      "feed",
-      "atención"
-    ],
-    "readingTime": "8–11 min"
-  },
-  {
-    "title": "Limpiar tu consumo digital una semana",
-    "description": "Limpiar tu consumo digital una semana ayuda a ver qué contenido te ordena, qué te agota y qué hábitos merecen salir de tu día.",
-    "category": "Pan y Circo",
-    "url": "/posts/limpiar-tu-consumo-digital-una-semana.html",
-    "date": "2026-06-14",
-    "image": "/assets/img/posts/pan-y-circo.svg",
-    "tags": [
-      "pan y circo",
-      "consumo digital",
-      "limpieza",
-      "atención"
-    ],
-    "readingTime": "8–11 min"
-  },
-  {
-    "title": "La pantalla encendida como compañía falsa",
-    "description": "La pantalla encendida como compañía falsa llena la casa de voces y movimiento, pero no siempre reemplaza presencia, calma o vínculo real.",
-    "category": "Pan y Circo",
-    "url": "/posts/la-pantalla-encendida-como-compania-falsa.html",
-    "date": "2026-06-14",
-    "image": "/assets/img/posts/pan-y-circo.svg",
-    "tags": [
-      "pan y circo",
-      "pantalla",
-      "compañía",
-      "silencio"
-    ],
-    "readingTime": "8–11 min"
-  },
-  {
-    "title": "Opiniones rápidas y pensamiento lento",
-    "description": "Opiniones rápidas y pensamiento lento muestra cómo la presión por reaccionar puede ocupar el lugar de una idea propia más cuidada.",
-    "category": "Pan y Circo",
-    "url": "/posts/opiniones-rapidas-y-pensamiento-lento.html",
-    "date": "2026-06-14",
-    "image": "/assets/img/posts/pan-y-circo.svg",
-    "tags": [
-      "pan y circo",
-      "opiniones",
-      "pensamiento",
-      "criterio"
-    ],
-    "readingTime": "8–11 min"
-  },
-  {
-    "title": "Dejar de regalar atención por aburrimiento",
-    "description": "Dejar de regalar atención por aburrimiento es aprender a no entregar cada pausa al feed, al ruido o al estímulo más cercano.",
-    "category": "Pan y Circo",
-    "url": "/posts/dejar-de-regalar-atencion-por-aburrimiento.html",
-    "date": "2026-06-14",
-    "image": "/assets/img/posts/pan-y-circo.svg",
-    "tags": [
-      "pan y circo",
-      "aburrimiento",
-      "atención",
-      "pantallas"
-    ],
-    "readingTime": "8–11 min"
-  },
-  {
-    "title": "El ocio consciente contra el consumo automático",
-    "description": "El ocio consciente contra el consumo automático propone descansar con elección propia, no caer por reflejo en cualquier pantalla disponible.",
-    "category": "Pan y Circo",
-    "url": "/posts/el-ocio-consciente-contra-el-consumo-automatico.html",
-    "date": "2026-06-14",
-    "image": "/assets/img/posts/pan-y-circo.svg",
-    "tags": [
-      "pan y circo",
-      "ocio",
-      "descanso",
-      "consumo automático"
-    ],
-    "readingTime": "8–11 min"
-  },
-  {
-    "title": "Cuando mirar todo te deja sin vivir nada",
-    "description": "Cuando mirar todo te deja sin vivir nada habla de ese consumo constante que llena los ojos pero deja poco cuerpo, acción y vida propia.",
-    "category": "Pan y Circo",
-    "url": "/posts/cuando-mirar-todo-te-deja-sin-vivir-nada.html",
-    "date": "2026-06-14",
-    "image": "/assets/img/posts/pan-y-circo.svg",
-    "tags": [
-      "pan y circo",
-      "pantallas",
-      "vida propia",
-      "atención"
-    ],
-    "readingTime": "8–11 min"
-  },
-  {
-    "title": "La industria de la distracción cotidiana",
-    "description": "La industria de la distracción cotidiana convierte pausas, aburrimiento y cansancio en oportunidades para capturar atención.",
-    "category": "Pan y Circo",
-    "url": "/posts/la-industria-de-la-distraccion-cotidiana.html",
-    "date": "2026-06-14",
-    "image": "/assets/img/posts/pan-y-circo.svg",
-    "tags": [
-      "pan y circo",
-      "distracción",
-      "atención",
-      "plataformas"
-    ],
-    "readingTime": "8–11 min"
-  },
-  {
-    "title": "Consumir menos ruido para producir más vida",
-    "description": "Consumir menos ruido para producir más vida significa dejar espacio para acciones reales, descanso y presencia propia.",
-    "category": "Pan y Circo",
-    "url": "/posts/consumir-menos-ruido-para-producir-mas-vida.html",
-    "date": "2026-06-14",
-    "image": "/assets/img/posts/pan-y-circo.svg",
-    "tags": [
-      "pan y circo",
-      "ruido digital",
-      "vida propia",
-      "atención"
-    ],
-    "readingTime": "8–11 min"
-  },
-  {
-    "title": "La fama ajena como reemplazo del proyecto propio",
-    "description": "La fama ajena como reemplazo del proyecto propio aparece cuando mirar logros de otros ocupa el lugar de avanzar en algo propio.",
-    "category": "Pan y Circo",
-    "url": "/posts/la-fama-ajena-como-reemplazo-del-proyecto-propio.html",
-    "date": "2026-06-14",
-    "image": "/assets/img/posts/pan-y-circo.svg",
-    "tags": [
-      "pan y circo",
-      "fama",
-      "proyecto propio",
-      "atención"
-    ],
-    "readingTime": "8–11 min"
-  },
-  {
-    "title": "El entretenimiento útil y el entretenimiento vacío",
-    "description": "El entretenimiento útil y el entretenimiento vacío se distinguen por el efecto que dejan: descanso con regreso o consumo que deja más dispersión.",
-    "category": "Pan y Circo",
-    "url": "/posts/el-entretenimiento-util-y-el-entretenimiento-vacio.html",
-    "date": "2026-06-14",
-    "image": "/assets/img/posts/pan-y-circo.svg",
-    "tags": [
-      "pan y circo",
-      "entretenimiento",
-      "descanso",
-      "criterio"
-    ],
-    "readingTime": "8–11 min"
-  },
-  {
-    "title": "Volver a elegir qué entra por tus ojos",
-    "description": "Volver a elegir qué entra por tus ojos es recuperar criterio sobre imágenes, pantallas y estímulos que forman el clima de tu día.",
-    "category": "Pan y Circo",
-    "url": "/posts/volver-a-elegir-que-entra-por-tus-ojos.html",
-    "date": "2026-06-14",
-    "image": "/assets/img/posts/pan-y-circo.svg",
-    "tags": [
-      "pan y circo",
-      "mirada",
-      "contenido",
-      "criterio"
-    ],
-    "readingTime": "8–11 min"
-  },
-  {
-    "title": "Comer mal y pensar con niebla",
-    "description": "Comer mal y pensar con niebla no siempre se nota en el plato: a veces aparece como cansancio, confusión y falta de ritmo durante el día.",
-    "category": "Alimentación",
-    "url": "/posts/comer-mal-y-pensar-con-niebla.html",
-    "date": "2026-06-14",
-    "image": "/assets/img/posts/alimentacion.svg",
-    "tags": [
-      "alimentación",
-      "claridad",
-      "hábitos",
-      "energía"
-    ],
-    "readingTime": "8–11 min"
-  },
-  {
-    "title": "Desayunar mejor para empezar distinto",
-    "description": "Desayunar mejor para empezar distinto no es hacer una dieta perfecta: es darle al cuerpo una base más estable para entrar al día.",
-    "category": "Alimentación",
-    "url": "/posts/desayunar-mejor-para-empezar-distinto.html",
-    "date": "2026-06-14",
-    "image": "/assets/img/posts/alimentacion.svg",
-    "tags": [
-      "alimentación",
-      "desayuno",
-      "energía",
-      "hábitos"
-    ],
-    "readingTime": "8–11 min"
-  },
-  {
-    "title": "Azúcar, ansiedad y energía prestada",
-    "description": "Azúcar, ansiedad y energía prestada habla de esos impulsos dulces que levantan rápido, pero a veces dejan más altibajo que sostén.",
-    "category": "Alimentación",
-    "url": "/posts/azucar-ansiedad-y-energia-prestada.html",
-    "date": "2026-06-14",
-    "image": "/assets/img/posts/alimentacion.svg",
-    "tags": [
-      "alimentación",
-      "azúcar",
-      "energía",
-      "hábitos"
-    ],
-    "readingTime": "8–11 min"
-  },
-  {
-    "title": "Ultraprocesados y cansancio cotidiano",
-    "description": "Ultraprocesados y cansancio cotidiano mira cómo la comida de emergencia puede volverse rutina y dejar menos energía real durante el día.",
-    "category": "Alimentación",
-    "url": "/posts/ultraprocesados-y-cansancio-cotidiano.html",
-    "date": "2026-06-14",
-    "image": "/assets/img/posts/alimentacion.svg",
-    "tags": [
-      "alimentación",
-      "ultraprocesados",
-      "cansancio",
-      "hábitos"
-    ],
-    "readingTime": "8–11 min"
-  },
-  {
-    "title": "Agua, cuerpo y claridad mental",
-    "description": "Agua, cuerpo y claridad mental mira una señal simple: a veces el cansancio y la confusión empiezan por no tomar agua durante horas.",
-    "category": "Alimentación",
-    "url": "/posts/agua-cuerpo-y-claridad-mental.html",
-    "date": "2026-06-14",
-    "image": "/assets/img/posts/alimentacion.svg",
-    "tags": [
-      "alimentación",
-      "agua",
-      "cuerpo",
-      "claridad"
-    ],
-    "readingTime": "8–11 min"
-  },
-  {
-    "title": "Comida real sin fanatismo",
-    "description": "Comida real sin fanatismo es volver a alimentos simples sin convertir cada plato en una guerra ni cada elección en culpa.",
-    "category": "Alimentación",
-    "url": "/posts/comida-real-sin-fanatismo.html",
-    "date": "2026-06-14",
-    "image": "/assets/img/posts/alimentacion.svg",
-    "tags": [
-      "alimentación",
-      "comida real",
-      "hábitos",
-      "sin fanatismo"
-    ],
-    "readingTime": "8–11 min"
-  },
-  {
-    "title": "Ordenar la alimentación cuando no hay ganas",
-    "description": "Ordenar la alimentación cuando no hay ganas empieza por hacer más fácil lo básico, no por exigir una versión perfecta de vos.",
-    "category": "Alimentación",
-    "url": "/posts/ordenar-la-alimentacion-cuando-no-hay-ganas.html",
-    "date": "2026-06-14",
-    "image": "/assets/img/posts/alimentacion.svg",
-    "tags": [
-      "alimentación",
-      "comida simple",
-      "hábitos",
-      "cansancio"
-    ],
-    "readingTime": "8–11 min"
-  },
-  {
-    "title": "La cocina simple como acto de control",
-    "description": "La cocina simple como acto de control ayuda a recuperar una parte del día cuando todo viene apurado, caro o improvisado.",
-    "category": "Alimentación",
-    "url": "/posts/la-cocina-simple-como-acto-de-control.html",
-    "date": "2026-06-14",
-    "image": "/assets/img/posts/alimentacion.svg",
-    "tags": [
-      "alimentación",
-      "cocina simple",
-      "hábitos",
-      "organización"
-    ],
-    "readingTime": "8–11 min"
-  },
-  {
-    "title": "Comer apurado y vivir acelerado",
-    "description": "Comer apurado y vivir acelerado muestra cómo el ritmo del día también entra al plato, a la digestión y a la relación con el cuerpo.",
-    "category": "Alimentación",
-    "url": "/posts/comer-apurado-y-vivir-acelerado.html",
-    "date": "2026-06-14",
-    "image": "/assets/img/posts/alimentacion.svg",
-    "tags": [
-      "alimentación",
-      "comer lento",
-      "hábitos",
-      "ritmo"
-    ],
-    "readingTime": "8–11 min"
-  },
-  {
-    "title": "Hábitos pequeños que cambian el día",
-    "description": "Hábitos pequeños que cambian el día muestra cómo agua, comida simple y menos apuro pueden ordenar la energía cotidiana sin extremos.",
-    "category": "Alimentación",
-    "url": "/posts/habitos-pequenos-que-cambian-el-dia.html",
-    "date": "2026-06-14",
-    "image": "/assets/img/posts/alimentacion.svg",
-    "tags": [
-      "alimentación",
-      "hábitos",
-      "agua",
-      "rutina"
-    ],
-    "readingTime": "8–11 min"
-  },
-  {
     "title": "Proteína energía y decisiones mejores",
     "description": "Guía general sobre proteína energía y decisiones mejores: hábitos, planificación, señales para observar y cambios sostenibles sin restricciones extremas.",
     "category": "Alimentación",
@@ -1677,156 +2172,6 @@
       "encendida"
     ],
     "readingTime": "10–14 min"
-  },
-  {
-    "title": "Comprar comida con más conciencia",
-    "description": "Comprar comida con más conciencia ayuda a gastar mejor, improvisar menos y dejar opciones reales disponibles para la semana.",
-    "category": "Alimentación",
-    "url": "/posts/comprar-comida-con-mas-conciencia.html",
-    "date": "2026-06-14",
-    "image": "/assets/img/posts/alimentacion.svg",
-    "tags": [
-      "alimentación",
-      "compras",
-      "comida simple",
-      "organización"
-    ],
-    "readingTime": "8–11 min"
-  },
-  {
-    "title": "El cuerpo como base del proyecto",
-    "description": "El cuerpo como base del proyecto recuerda que trabajar, crear y sostener ideas también depende de sueño, comida, agua y ritmo real.",
-    "category": "Alimentación",
-    "url": "/posts/el-cuerpo-como-base-del-proyecto.html",
-    "date": "2026-06-14",
-    "image": "/assets/img/posts/alimentacion.svg",
-    "tags": [
-      "alimentación",
-      "cuerpo",
-      "proyecto",
-      "energía"
-    ],
-    "readingTime": "8–11 min"
-  },
-  {
-    "title": "Alimentación y disciplina sin obsesión",
-    "description": "Alimentación y disciplina sin obsesión propone ordenar comidas con estructura amable, sin convertir cada plato en control extremo.",
-    "category": "Alimentación",
-    "url": "/posts/alimentacion-y-disciplina-sin-obsesion.html",
-    "date": "2026-06-14",
-    "image": "/assets/img/posts/alimentacion.svg",
-    "tags": [
-      "alimentación",
-      "disciplina",
-      "hábitos",
-      "sin obsesión"
-    ],
-    "readingTime": "8–11 min"
-  },
-  {
-    "title": "Cuando el cansancio empieza en el plato",
-    "description": "Cuando el cansancio empieza en el plato no significa que la comida explique todo, pero sí que puede estar empujando el día hacia abajo.",
-    "category": "Alimentación",
-    "url": "/posts/cuando-el-cansancio-empieza-en-el-plato.html",
-    "date": "2026-06-14",
-    "image": "/assets/img/posts/alimentacion.svg",
-    "tags": [
-      "alimentación",
-      "cansancio",
-      "energía",
-      "hábitos"
-    ],
-    "readingTime": "8–11 min"
-  },
-  {
-    "title": "Comer mejor con poco presupuesto",
-    "description": "Comer mejor con poco presupuesto no es comprar perfecto: es elegir bases simples, rendidoras y posibles para sostener la semana.",
-    "category": "Alimentación",
-    "url": "/posts/comer-mejor-con-poco-presupuesto.html",
-    "date": "2026-06-14",
-    "image": "/assets/img/posts/alimentacion.svg",
-    "tags": [
-      "alimentación",
-      "presupuesto",
-      "compras",
-      "comida simple"
-    ],
-    "readingTime": "8–11 min"
-  },
-  {
-    "title": "La ansiedad que se disfraza de antojo",
-    "description": "La ansiedad que se disfraza de antojo no siempre habla de hambre: a veces señala cansancio, estrés, poco descanso o falta de una base real.",
-    "category": "Alimentación",
-    "url": "/posts/la-ansiedad-que-se-disfraza-de-antojo.html",
-    "date": "2026-06-14",
-    "image": "/assets/img/posts/alimentacion.svg",
-    "tags": [
-      "alimentación",
-      "ansiedad",
-      "antojo",
-      "hábitos"
-    ],
-    "readingTime": "8–11 min"
-  },
-  {
-    "title": "Rutina de comida para mente clara",
-    "description": "Rutina de comida para mente clara propone horarios aproximados, compras simples y menos improvisación en la alimentación diaria.",
-    "category": "Alimentación",
-    "url": "/posts/rutina-de-comida-para-mente-clara.html",
-    "date": "2026-06-14",
-    "image": "/assets/img/posts/alimentacion.svg",
-    "tags": [
-      "alimentación",
-      "rutina",
-      "mente clara",
-      "hábitos"
-    ],
-    "readingTime": "8–11 min"
-  },
-  {
-    "title": "Menos paquete y más energía real",
-    "description": "Menos paquete y más energía real propone sumar alimentos simples y reducir la dependencia cotidiana de productos listos para abrir.",
-    "category": "Alimentación",
-    "url": "/posts/menos-paquete-y-mas-energia-real.html",
-    "date": "2026-06-14",
-    "image": "/assets/img/posts/alimentacion.svg",
-    "tags": [
-      "alimentación",
-      "ultraprocesados",
-      "energía",
-      "hábitos"
-    ],
-    "readingTime": "8–11 min"
-  },
-  {
-    "title": "Alimentarse para sostener trabajo digital",
-    "description": "Alimentarse para sostener trabajo digital ayuda a ordenar jornadas largas de computadora con pausas y comida simple.",
-    "category": "Alimentación",
-    "url": "/posts/alimentarse-para-sostener-trabajo-digital.html",
-    "date": "2026-06-14",
-    "image": "/assets/img/posts/alimentacion.svg",
-    "tags": [
-      "alimentación",
-      "trabajo digital",
-      "rutina",
-      "organización"
-    ],
-    "readingTime": "8–11 min"
-  },
-  {
-    "title": "La Matrix del consumo alimentario",
-    "description": "La Matrix del consumo alimentario muestra cómo marketing, precio, apuro y disponibilidad empujan decisiones que parecen personales.",
-    "category": "Alimentación",
-    "url": "/posts/la-matrix-del-consumo-alimentario.html",
-    "date": "2026-06-14",
-    "image": "/assets/img/posts/alimentacion.svg",
-    "tags": [
-      "alimentación",
-      "Matrix",
-      "consumo",
-      "compras"
-    ],
-    "readingTime": "8–11 min"
   },
   {
     "title": "Volver a escuchar al cuerpo",
@@ -1873,81 +2218,6 @@
       "cabeza"
     ],
     "readingTime": "10–14 min"
-  },
-  {
-    "title": "Preparar comida para no vivir improvisando",
-    "description": "Preparar comida para no vivir improvisando ayuda a dejar opciones simples listas antes de que el día se complique demasiado.",
-    "category": "Alimentación",
-    "url": "/posts/preparar-comida-para-no-vivir-improvisando.html",
-    "date": "2026-06-14",
-    "image": "/assets/img/posts/alimentacion.svg",
-    "tags": [
-      "alimentación",
-      "preparar comida",
-      "organización",
-      "hábitos"
-    ],
-    "readingTime": "8–11 min"
-  },
-  {
-    "title": "Comer de noche y dormir peor",
-    "description": "Comer de noche y dormir peor puede ser una señal de horarios desordenados, cenas pesadas o hambre acumulada durante el día.",
-    "category": "Alimentación",
-    "url": "/posts/comer-de-noche-y-dormir-peor.html",
-    "date": "2026-06-14",
-    "image": "/assets/img/posts/alimentacion.svg",
-    "tags": [
-      "alimentación",
-      "noche",
-      "descanso",
-      "rutina"
-    ],
-    "readingTime": "8–11 min"
-  },
-  {
-    "title": "Cuando el delivery se vuelve piloto automático",
-    "description": "Cuando el delivery se vuelve piloto automático conviene mirar hábito, gasto y falta de opciones simples antes del apuro.",
-    "category": "Alimentación",
-    "url": "/posts/cuando-el-delivery-se-vuelve-piloto-automatico.html",
-    "date": "2026-06-14",
-    "image": "/assets/img/posts/alimentacion.svg",
-    "tags": [
-      "alimentación",
-      "delivery",
-      "organización",
-      "hábitos"
-    ],
-    "readingTime": "8–11 min"
-  },
-  {
-    "title": "Energía estable para trabajar mejor",
-    "description": "Energía estable para trabajar mejor habla de ordenar comidas, agua y pausas para no depender solo de impulsos durante la jornada.",
-    "category": "Alimentación",
-    "url": "/posts/energia-estable-para-trabajar-mejor.html",
-    "date": "2026-06-14",
-    "image": "/assets/img/posts/alimentacion.svg",
-    "tags": [
-      "alimentación",
-      "energía",
-      "trabajo",
-      "hábitos"
-    ],
-    "readingTime": "8–11 min"
-  },
-  {
-    "title": "Alimentos simples para una semana más clara",
-    "description": "Alimentos simples para una semana más clara son bases posibles que ayudan a comprar, preparar y comer con menos improvisación.",
-    "category": "Alimentación",
-    "url": "/posts/alimentos-simples-para-una-semana-mas-clara.html",
-    "date": "2026-06-14",
-    "image": "/assets/img/posts/alimentacion.svg",
-    "tags": [
-      "alimentación",
-      "alimentos simples",
-      "semana",
-      "organización"
-    ],
-    "readingTime": "8–11 min"
   },
   {
     "title": "El hambre real y el hambre de ansiedad",
@@ -2050,71 +2320,6 @@
       "religión"
     ],
     "readingTime": "10–14 min"
-  },
-  {
-    "title": "Rutina alimentaria para dias de poco dinero",
-    "description": "Texto de alimentacion cotidiana con rutina simple y compras posibles para ordenar mejor la semana.",
-    "category": "Alimentación",
-    "url": "/posts/rutina-alimentaria-para-dias-de-poco-dinero.html",
-    "date": "2026-06-14",
-    "image": "/assets/img/posts/alimentacion.svg",
-    "tags": [
-      "alimentación",
-      "rutina"
-    ],
-    "readingTime": "8–11 min"
-  },
-  {
-    "title": "Cuando el cuerpo pide orden antes que motivacion",
-    "description": "Texto de alimentacion cotidiana sobre orden diario y comidas simples para bajar improvisacion.",
-    "category": "Alimentación",
-    "url": "/posts/cuando-el-cuerpo-pide-orden-antes-que-motivacion.html",
-    "date": "2026-06-14",
-    "image": "/assets/img/posts/alimentacion.svg",
-    "tags": [
-      "alimentación",
-      "orden"
-    ],
-    "readingTime": "8–11 min"
-  },
-  {
-    "title": "El mate el cafe y la energia prestada",
-    "description": "Texto de alimentacion cotidiana sobre bebidas habituales, pausas y rutinas diarias con mirada practica.",
-    "category": "Alimentación",
-    "url": "/posts/el-mate-el-cafe-y-la-energia-prestada.html",
-    "date": "2026-06-14",
-    "image": "/assets/img/posts/alimentacion.svg",
-    "tags": [
-      "alimentación",
-      "mate"
-    ],
-    "readingTime": "8–11 min"
-  },
-  {
-    "title": "Aprender a leer tu cansancio fisico",
-    "description": "Texto de alimentacion cotidiana sobre senales simples del dia y organizacion personal sin extremos.",
-    "category": "Alimentación",
-    "url": "/posts/aprender-a-leer-tu-cansancio-fisico.html",
-    "date": "2026-06-14",
-    "image": "/assets/img/posts/alimentacion.svg",
-    "tags": [
-      "alimentación",
-      "cansancio"
-    ],
-    "readingTime": "8–11 min"
-  },
-  {
-    "title": "Comida casera como resistencia practica",
-    "description": "Texto de alimentacion cotidiana sobre cocina simple, autonomia domestica y preparaciones posibles.",
-    "category": "Alimentación",
-    "url": "/posts/comida-casera-como-resistencia-practica.html",
-    "date": "2026-06-14",
-    "image": "/assets/img/posts/alimentacion.svg",
-    "tags": [
-      "alimentación",
-      "cocina"
-    ],
-    "readingTime": "8–11 min"
   },
   {
     "title": "Reducir ultraprocesados sin volverse extremo",
@@ -3712,19 +3917,6 @@
     "readingTime": "10–14 min"
   },
   {
-    "title": "Empezar de cero sin fuerza",
-    "description": "Empezar de cero sin fuerza no pide una revolucion enorme pide un primer gesto chico visible y posible para recuperar movimiento diario.",
-    "category": "Saliendo de la Matrix",
-    "url": "/posts/empezar-de-cero-sin-fuerza.html",
-    "date": "2026-06-14",
-    "image": "/assets/img/posts/saliendo-de-la-matrix.svg",
-    "tags": [
-      "saliendo-de-la-matrix",
-      "empezar"
-    ],
-    "readingTime": "8–11 min"
-  },
-  {
     "title": "Reconstruir una vida con poco dinero",
     "description": "Plan práctico para reconstruir una vida con poco dinero: entregas visibles, revisión semanal, obstáculos frecuentes y una forma realista de sostener avances.",
     "category": "Saliendo de la Matrix",
@@ -3739,45 +3931,6 @@
     "readingTime": "10–14 min"
   },
   {
-    "title": "Volver a crear despues de abandonar",
-    "description": "Volver a crear despues de abandonar pide una entrega chica visible y posible para recuperar continuidad sin promesas enormes ni vueltas largas.",
-    "category": "Saliendo de la Matrix",
-    "url": "/posts/volver-a-crear-despues-de-abandonar.html",
-    "date": "2026-06-14",
-    "image": "/assets/img/posts/saliendo-de-la-matrix.svg",
-    "tags": [
-      "saliendo-de-la-matrix",
-      "crear"
-    ],
-    "readingTime": "8–11 min"
-  },
-  {
-    "title": "Ordenar proyectos que parecian muertos",
-    "description": "Ordenar proyectos que parecian muertos empieza separando lo vivo lo pendiente y lo que ya no necesita energia para encontrar un paso claro.",
-    "category": "Saliendo de la Matrix",
-    "url": "/posts/ordenar-proyectos-que-parecian-muertos.html",
-    "date": "2026-06-14",
-    "image": "/assets/img/posts/saliendo-de-la-matrix.svg",
-    "tags": [
-      "saliendo-de-la-matrix",
-      "proyectos"
-    ],
-    "readingTime": "8–11 min"
-  },
-  {
-    "title": "Hacer una cosa util por dia",
-    "description": "Hacer una cosa util por dia baja la ansiedad de cambiar todo y devuelve avance visible en una escala posible concreta y repetible.",
-    "category": "Saliendo de la Matrix",
-    "url": "/posts/hacer-una-cosa-util-por-dia.html",
-    "date": "2026-06-14",
-    "image": "/assets/img/posts/saliendo-de-la-matrix.svg",
-    "tags": [
-      "saliendo-de-la-matrix",
-      "avance"
-    ],
-    "readingTime": "8–11 min"
-  },
-  {
     "title": "Salir del pozo con rutina mínima",
     "description": "Plan práctico para salir del pozo con rutina mínima: entregas visibles, revisión semanal, obstáculos frecuentes y una forma realista de sostener avances.",
     "category": "Saliendo de la Matrix",
@@ -3790,19 +3943,6 @@
       "mínima"
     ],
     "readingTime": "10–14 min"
-  },
-  {
-    "title": "Recuperar foco despues del caos",
-    "description": "Recuperar foco despues del caos empieza por elegir una prioridad chica y protegerla con un bloque breve realista y facil de repetir.",
-    "category": "Saliendo de la Matrix",
-    "url": "/posts/recuperar-foco-despues-del-caos.html",
-    "date": "2026-06-14",
-    "image": "/assets/img/posts/saliendo-de-la-matrix.svg",
-    "tags": [
-      "saliendo-de-la-matrix",
-      "foco"
-    ],
-    "readingTime": "8–11 min"
   },
   {
     "title": "Crear ingresos online sin humo",
@@ -3862,45 +4002,6 @@
     "readingTime": "10–14 min"
   },
   {
-    "title": "Dejar de esperar el momento perfecto",
-    "description": "Dejar de esperar el momento perfecto empieza por hacer una entrega imperfecta visible y posible antes de seguir postergando sin fin.",
-    "category": "Saliendo de la Matrix",
-    "url": "/posts/dejar-de-esperar-el-momento-perfecto.html",
-    "date": "2026-06-14",
-    "image": "/assets/img/posts/saliendo-de-la-matrix.svg",
-    "tags": [
-      "saliendo-de-la-matrix",
-      "empezar"
-    ],
-    "readingTime": "8–11 min"
-  },
-  {
-    "title": "Crear una web como acto de rescate",
-    "description": "Crear una web como acto de rescate convierte una idea dispersa en un lugar propio visible posible de mejorar y ordenar con tiempo.",
-    "category": "Saliendo de la Matrix",
-    "url": "/posts/crear-una-web-como-acto-de-rescate.html",
-    "date": "2026-06-14",
-    "image": "/assets/img/posts/saliendo-de-la-matrix.svg",
-    "tags": [
-      "saliendo-de-la-matrix",
-      "web"
-    ],
-    "readingTime": "8–11 min"
-  },
-  {
-    "title": "Volver a creer en tu oficio",
-    "description": "Volver a creer en tu oficio empieza por hacer una entrega concreta que te recuerde que todavia sabes construir algo real.",
-    "category": "Saliendo de la Matrix",
-    "url": "/posts/volver-a-creer-en-tu-oficio.html",
-    "date": "2026-06-14",
-    "image": "/assets/img/posts/saliendo-de-la-matrix.svg",
-    "tags": [
-      "saliendo-de-la-matrix",
-      "oficio"
-    ],
-    "readingTime": "8–11 min"
-  },
-  {
     "title": "Hacer dinero con habilidades digitales",
     "description": "Plan práctico para hacer dinero con habilidades digitales: entregas visibles, revisión semanal, obstáculos frecuentes y una forma realista de sostener avances.",
     "category": "Saliendo de la Matrix",
@@ -3912,103 +4013,6 @@
       "dinero",
       "habilidades",
       "digitales"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "Sostener esperanza sin vender fantasia",
-    "description": "Sostener esperanza sin vender fantasia es mirar la realidad de frente y aun asi dejar una accion posible para manana.",
-    "category": "Saliendo de la Matrix",
-    "url": "/posts/sostener-esperanza-sin-vender-fantasia.html",
-    "date": "2026-06-14",
-    "image": "/assets/img/posts/saliendo-de-la-matrix.svg",
-    "tags": [
-      "saliendo-de-la-matrix",
-      "esperanza"
-    ],
-    "readingTime": "8–11 min"
-  },
-  {
-    "title": "Romper una etapa con acciones pequenas",
-    "description": "Romper una etapa con acciones pequenas empieza por cambiar una escena diaria no por esperar una transformacion total inmediata.",
-    "category": "Saliendo de la Matrix",
-    "url": "/posts/romper-una-etapa-con-acciones-pequenas.html",
-    "date": "2026-06-14",
-    "image": "/assets/img/posts/saliendo-de-la-matrix.svg",
-    "tags": [
-      "saliendo-de-la-matrix",
-      "etapa"
-    ],
-    "readingTime": "8–11 min"
-  },
-  {
-    "title": "Salir del modo víctima sin negarte dolor",
-    "description": "Plan práctico para salir del modo víctima sin negarte dolor: entregas visibles, revisión semanal, obstáculos frecuentes y una forma realista de sostener avances.",
-    "category": "Saliendo de la Matrix",
-    "url": "/posts/salir-del-modo-victima-sin-negarte-dolor.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/saliendo-de-la-matrix.svg",
-    "tags": [
-      "saliendo-de-la-matrix",
-      "víctima",
-      "negarte"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "Reconstruirte sin aplausos",
-    "description": "Plan práctico para reconstruirte sin aplausos: entregas visibles, revisión semanal, obstáculos frecuentes y una forma realista de sostener avances.",
-    "category": "Saliendo de la Matrix",
-    "url": "/posts/reconstruirte-sin-aplausos.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/saliendo-de-la-matrix.svg",
-    "tags": [
-      "saliendo-de-la-matrix",
-      "reconstruirte",
-      "aplausos"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "Crear un sistema personal de avance",
-    "description": "Plan práctico para crear un sistema personal de avance: entregas visibles, revisión semanal, obstáculos frecuentes y una forma realista de sostener avances.",
-    "category": "Saliendo de la Matrix",
-    "url": "/posts/crear-un-sistema-personal-de-avance.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/saliendo-de-la-matrix.svg",
-    "tags": [
-      "saliendo-de-la-matrix",
-      "sistema",
-      "personal",
-      "avance"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "Dejar de mirar y empezar a hacer",
-    "description": "Plan práctico para dejar de mirar y empezar a hacer: entregas visibles, revisión semanal, obstáculos frecuentes y una forma realista de sostener avances.",
-    "category": "Saliendo de la Matrix",
-    "url": "/posts/dejar-de-mirar-y-empezar-a-hacer.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/saliendo-de-la-matrix.svg",
-    "tags": [
-      "saliendo-de-la-matrix",
-      "empezar"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "Internet como segunda oportunidad",
-    "description": "Plan práctico para internet como segunda oportunidad: entregas visibles, revisión semanal, obstáculos frecuentes y una forma realista de sostener avances.",
-    "category": "Saliendo de la Matrix",
-    "url": "/posts/internet-como-segunda-oportunidad.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/saliendo-de-la-matrix.svg",
-    "tags": [
-      "saliendo-de-la-matrix",
-      "internet",
-      "segunda",
-      "oportunidad"
     ],
     "readingTime": "10–14 min"
   },
