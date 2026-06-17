@@ -3993,75 +3993,78 @@
   },
   {
     "title": "Aprender otra vez desde abajo",
-    "description": "Plan práctico para aprender otra vez desde abajo: entregas visibles, revisión semanal, obstáculos frecuentes y una forma realista de sostener avances.",
+    "description": "Aprender otra vez desde abajo requiere aceptar la torpeza inicial, elegir una práctica visible y reconstruir criterio sin fingir que ya sabés todo.",
     "category": "Saliendo de la Matrix",
     "url": "/posts/aprender-otra-vez-desde-abajo.html",
-    "date": "2026-06-10",
+    "date": "2026-06-17",
     "image": "/assets/img/posts/saliendo-de-la-matrix.svg",
     "tags": [
       "saliendo-de-la-matrix",
-      "aprender"
+      "aprendizaje",
+      "principiante",
+      "práctica"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "8–11 min"
   },
   {
     "title": "Hacer dinero con habilidades digitales",
-    "description": "Plan práctico para hacer dinero con habilidades digitales: entregas visibles, revisión semanal, obstáculos frecuentes y una forma realista de sostener avances.",
+    "description": "Hacer dinero con habilidades digitales exige convertir conocimiento disperso en una entrega concreta, demostrable y fácil de comprar para alguien específico.",
     "category": "Saliendo de la Matrix",
     "url": "/posts/hacer-dinero-con-habilidades-digitales.html",
-    "date": "2026-06-10",
+    "date": "2026-06-17",
     "image": "/assets/img/posts/saliendo-de-la-matrix.svg",
     "tags": [
       "saliendo-de-la-matrix",
-      "dinero",
-      "habilidades",
-      "digitales"
+      "habilidades digitales",
+      "oferta",
+      "clientes"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "8–11 min"
   },
   {
     "title": "Ordenar la cabeza para ordenar la vida",
-    "description": "Plan práctico para ordenar la cabeza para ordenar la vida: entregas visibles, revisión semanal, obstáculos frecuentes y una forma realista de sostener avances.",
+    "description": "Ordenar la cabeza para ordenar la vida empieza por sacar pendientes de la memoria, separar decisiones y construir un sistema externo que reduzca ruido.",
     "category": "Saliendo de la Matrix",
     "url": "/posts/ordenar-la-cabeza-para-ordenar-la-vida.html",
-    "date": "2026-06-10",
+    "date": "2026-06-17",
     "image": "/assets/img/posts/saliendo-de-la-matrix.svg",
     "tags": [
       "saliendo-de-la-matrix",
-      "ordenar",
-      "cabeza",
-      "ordenar"
+      "claridad",
+      "pendientes",
+      "sistema externo"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "8–11 min"
   },
   {
     "title": "Trabajar en silencio hasta ver movimiento",
-    "description": "Plan práctico para trabajar en silencio hasta ver movimiento: entregas visibles, revisión semanal, obstáculos frecuentes y una forma realista de sostener avances.",
+    "description": "Trabajar en silencio hasta ver movimiento consiste en proteger una etapa frágil del proyecto sin aislarte, esconder errores ni esperar perfección.",
     "category": "Saliendo de la Matrix",
     "url": "/posts/trabajar-en-silencio-hasta-ver-movimiento.html",
-    "date": "2026-06-10",
+    "date": "2026-06-17",
     "image": "/assets/img/posts/saliendo-de-la-matrix.svg",
     "tags": [
       "saliendo-de-la-matrix",
-      "trabajar",
-      "silencio",
-      "movimiento"
+      "trabajo silencioso",
+      "evidencia",
+      "proyecto"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "8–11 min"
   },
   {
     "title": "Volver a subir sin caer abruptamente",
-    "description": "Plan práctico para volver a subir sin caer abruptamente: entregas visibles, revisión semanal, obstáculos frecuentes y una forma realista de sostener avances.",
+    "description": "Volver a subir sin caer abruptamente requiere aumentar carga con margen, observar señales tempranas y sostener una base antes de acelerar otra vez.",
     "category": "Saliendo de la Matrix",
     "url": "/posts/volver-a-subir-sin-caer-abruptamente.html",
-    "date": "2026-06-10",
+    "date": "2026-06-17",
     "image": "/assets/img/posts/saliendo-de-la-matrix.svg",
     "tags": [
       "saliendo-de-la-matrix",
-      "volver",
-      "abruptamente"
+      "recuperación",
+      "ritmo",
+      "margen"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "8–11 min"
   },
   {
     "title": "Convertir una mala etapa en método",
