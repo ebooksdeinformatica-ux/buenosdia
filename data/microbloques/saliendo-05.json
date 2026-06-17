@@ -1,0 +1,63 @@
+{
+  "name": "Saliendo 05",
+  "minimumWords": 750,
+  "files": [
+    "reconstruir-una-vida-con-poco-dinero.html",
+    "salir-del-pozo-con-rutina-minima.html",
+    "crear-ingresos-online-sin-humo.html",
+    "levantarte-aunque-nadie-te-empuje.html",
+    "convertir-bronca-en-trabajo.html"
+  ],
+  "posts": [
+    {
+      "title": "Reconstruir una vida con poco dinero",
+      "description": "Reconstruir una vida con poco dinero empieza por proteger lo básico, ordenar fugas y usar cada recurso para ganar estabilidad antes que apariencia.",
+      "category": "Saliendo de la Matrix",
+      "url": "/posts/reconstruir-una-vida-con-poco-dinero.html",
+      "date": "2026-06-16",
+      "image": "/assets/img/posts/saliendo-de-la-matrix.svg",
+      "tags": ["saliendo-de-la-matrix", "dinero", "reconstrucción", "prioridades"],
+      "readingTime": "8–11 min"
+    },
+    {
+      "title": "Salir del pozo con rutina mínima",
+      "description": "Salir del pozo con una rutina mínima consiste en recuperar señales básicas de continuidad cuando la energía no alcanza para sostener planes grandes.",
+      "category": "Saliendo de la Matrix",
+      "url": "/posts/salir-del-pozo-con-rutina-minima.html",
+      "date": "2026-06-16",
+      "image": "/assets/img/posts/saliendo-de-la-matrix.svg",
+      "tags": ["saliendo-de-la-matrix", "rutina mínima", "continuidad", "energía"],
+      "readingTime": "8–11 min"
+    },
+    {
+      "title": "Crear ingresos online sin humo",
+      "description": "Crear ingresos online sin humo exige una oferta entendible, pruebas de trabajo, conversaciones reales y números que sobrevivan al entusiasmo inicial.",
+      "category": "Saliendo de la Matrix",
+      "url": "/posts/crear-ingresos-online-sin-humo.html",
+      "date": "2026-06-16",
+      "image": "/assets/img/posts/saliendo-de-la-matrix.svg",
+      "tags": ["saliendo-de-la-matrix", "ingresos online", "oferta", "validación"],
+      "readingTime": "8–11 min"
+    },
+    {
+      "title": "Levantarte aunque nadie te empuje",
+      "description": "Levantarte aunque nadie te empuje no exige convertirte en máquina: implica crear apoyos propios para actuar sin esperar aprobación ni rescate.",
+      "category": "Saliendo de la Matrix",
+      "url": "/posts/levantarte-aunque-nadie-te-empuje.html",
+      "date": "2026-06-16",
+      "image": "/assets/img/posts/saliendo-de-la-matrix.svg",
+      "tags": ["saliendo-de-la-matrix", "autonomía", "inicio", "constancia"],
+      "readingTime": "8–11 min"
+    },
+    {
+      "title": "Convertir bronca en trabajo",
+      "description": "Convertir bronca en trabajo requiere enfriar la reacción, descubrir qué límite fue tocado y transformar esa energía en una acción que no te dañe.",
+      "category": "Saliendo de la Matrix",
+      "url": "/posts/convertir-bronca-en-trabajo.html",
+      "date": "2026-06-16",
+      "image": "/assets/img/posts/saliendo-de-la-matrix.svg",
+      "tags": ["saliendo-de-la-matrix", "bronca", "límites", "trabajo"],
+      "readingTime": "8–11 min"
+    }
+  ]
+}
