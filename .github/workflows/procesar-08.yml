@@ -1,8 +1,8 @@
 name: Procesar lote 08
 
 on:
-  push:
-    branches: [lote-1-tecnologia-real]
+  pull_request:
+    branches: [release-estable-v3]
     paths:
       - 'data/s08.bin'
       - '.github/workflows/procesar-08.yml'
@@ -17,6 +17,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
+          ref: ${{ github.head_ref }}
           fetch-depth: 0
       - uses: actions/setup-node@v4
         with:
@@ -36,5 +37,6 @@ jobs:
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add -A
+          git diff --cached --quiet && exit 0
           git commit -m 'Completar lote 08'
-          git push
+          git push origin HEAD:${{ github.head_ref }}
