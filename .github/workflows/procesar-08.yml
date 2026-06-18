@@ -23,7 +23,65 @@ jobs:
         with:
           node-version: '20'
       - name: Extraer archivos
-        run: tar -xzf data/s08.bin -C .
+        shell: bash
+        run: |
+          python <<'PY'
+          from pathlib import Path
+          import base64, gzip, io, tarfile, zipfile
+
+          source = Path('data/s08.bin')
+          raw = source.read_bytes()
+          candidates = [('raw', raw)]
+
+          try:
+              candidates.append(('base64', base64.b64decode(raw, validate=True)))
+          except Exception:
+              pass
+
+          expanded = list(candidates)
+          for name, data in candidates:
+              if data.startswith(b'\x1f\x8b'):
+                  try:
+                      expanded.append((name + '+gzip', gzip.decompress(data)))
+                  except Exception:
+                      pass
+
+          extracted = False
+          for name, data in expanded:
+              try:
+                  with tarfile.open(fileobj=io.BytesIO(data), mode='r:*') as archive:
+                      archive.extractall('.')
+                  print('Formato extraído:', name, 'tar')
+                  extracted = True
+                  break
+              except Exception:
+                  pass
+              try:
+                  with zipfile.ZipFile(io.BytesIO(data)) as archive:
+                      archive.extractall('.')
+                  print('Formato extraído:', name, 'zip')
+                  extracted = True
+                  break
+              except Exception:
+                  pass
+
+          if not extracted:
+              print('Cabecera:', raw[:32].hex())
+              print('Tamaño:', len(raw))
+              raise SystemExit('No se pudo reconocer el paquete')
+
+          required = [
+              Path('data/microbloques/saliendo-08.json'),
+              Path('posts/crear-una-rutina-para-reconstruirte.html'),
+              Path('posts/levantar-una-web-como-quien-levanta-una-casa.html'),
+              Path('posts/dejar-de-pedir-permiso-para-empezar.html'),
+              Path('posts/hacer-foco-cuando-todo-esta-roto.html'),
+              Path('posts/recuperar-confianza-con-pruebas-pequenas.html'),
+          ]
+          missing = [str(path) for path in required if not path.exists()]
+          if missing:
+              raise SystemExit('Faltan archivos: ' + ', '.join(missing))
+          PY
       - name: Actualizar catálogo
         run: node scripts/aplicar-microbloque.mjs data/microbloques/saliendo-08.json
       - name: Auditar contenido
