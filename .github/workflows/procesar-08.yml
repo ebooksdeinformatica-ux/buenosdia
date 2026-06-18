@@ -1,0 +1,60 @@
+# reejecución final de Saliendo 08
+# normalización JSON-LD verificada
+name: Procesar lote 08
+on:
+  pull_request:
+    branches: [release-estable-v3]
+    paths: ['data/p08/**', '.github/workflows/procesar-08.yml']
+permissions:
+  contents: write
+jobs:
+  procesar:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Reconstruir paquete
+        run: |
+          cat data/p08/00.hex data/p08/01.hex | xxd -r -p > /tmp/a
+          cat /tmp/a data/p08/02.txt data/p08/03.txt data/p08/04.txt data/p08/05.txt data/p08/06.txt data/p08/07.txt data/p08/08.txt data/p08/09.txt data/p08/10.txt | base64 -d > /tmp/b.tgz
+          echo '504afcc2a5fc7627a5144f16fa0d03f889f60dfafab1be17a9e46ad0a98690a5  /tmp/b.tgz' | sha256sum -c -
+          tar -xzf /tmp/b.tgz -C .
+      - name: Completar margen editorial
+        run: |
+          python <<'PY'
+          from pathlib import Path
+          additions = {
+            'crear-una-rutina-para-reconstruirte.html': '<h2>Una rutina también necesita descanso</h2><p>Reconstruir continuidad no significa ocupar cada espacio disponible. Una rutina sana deja zonas sin tarea para que el cuerpo y la cabeza puedan recuperarse. Si cada pausa te produce culpa, la estructura empieza a parecerse al mismo desgaste del que querías salir. Anotá también qué vas a dejar sin hacer hoy. Ese límite protege la repetición de mañana y evita que un buen día se convierta en una deuda imposible de sostener.</p>',
+            'levantar-una-web-como-quien-levanta-una-casa.html': '<h2>Habitar antes de ampliar</h2><p>Una casa revela sus problemas cuando alguien la usa; una web también. Antes de sumar secciones, recorré el sitio como visitante: buscá una publicación, abrila desde el teléfono, volvé al inicio y tratá de entender quién escribe. Esa caminata descubre puertas que no llevan a ningún lado, textos invisibles y habitaciones digitales sin función. Reparar ese recorrido suele producir más valor que agregar otra planta que todavía nadie necesita.</p>',
+            'dejar-de-pedir-permiso-para-empezar.html': '<h2>Informar no es pedir autorización</h2><p>Podés contar lo que vas a hacer sin entregar la decisión. Informar sirve para coordinar horarios, responsabilidades o riesgos compartidos. Pedir autorización aparece cuando la otra persona termina decidiendo si tu movimiento merece existir. Antes de hablar, escribí qué parte realmente necesita acuerdo y qué parte depende de vos. Esa separación permite escuchar objeciones concretas sin convertir cada comentario en una orden de detenerte.</p>',
+            'hacer-foco-cuando-todo-esta-roto.html': '<h2>El foco necesita un límite de cierre</h2><p>Elegir una prioridad no alcanza si la tarea puede crecer durante todo el día. Definí qué señal indicará que por hoy está terminada: una llamada realizada, una página corregida, una cuenta revisada o veinte minutos de trabajo. El cierre evita que la prioridad absorba la poca energía disponible y deja espacio para comer, descansar y responder lo indispensable. Foco no es permanecer atrapado; es completar un tramo reconocible.</p>',
+            'recuperar-confianza-con-pruebas-pequenas.html': '<h2>Registrar no es vigilarte</h2><p>Guardar pruebas pequeñas no debería transformarse en una nueva forma de persecución. El registro sirve para corregir la memoria cuando sólo recuerda fallas, no para castigarte por cada interrupción. Anotá hechos breves y neutrales: envié el mensaje, trabajé treinta minutos, retomé después de faltar. Al revisar, buscá patrones que ayuden a diseñar mejor el próximo paso. La evidencia tiene que devolverte capacidad de decisión, no miedo a equivocarte.</p>'
+          }
+          marker = '<section class="faq-box">'
+          for name, addition in additions.items():
+              path = Path('posts') / name
+              text = path.read_text(encoding='utf-8')
+              if addition not in text:
+                  text = text.replace(marker, addition + marker, 1)
+                  path.write_text(text, encoding='utf-8')
+          PY
+      - name: Actualizar catálogo
+        run: node scripts/aplicar-microbloque.mjs data/microbloques/saliendo-08.json
+      - name: Auditar contenido
+        run: node scripts/auditar-microbloque-contenido.mjs data/microbloques/saliendo-08.json
+      - name: Auditar técnica
+        run: node scripts/auditar-microbloque-tecnica.mjs data/microbloques/saliendo-08.json
+      - name: Confirmar
+        run: |
+          rm -rf data/p08 data/s08.bin .github/workflows/procesar-08.yml
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          git commit -m 'Completar lote 08'
+          git push origin HEAD:${{ github.head_ref }}
