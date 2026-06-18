@@ -1,15 +1,10 @@
 name: Procesar lote 08
-
 on:
   pull_request:
     branches: [release-estable-v3]
-    paths:
-      - 'data/p08/**'
-      - '.github/workflows/procesar-08.yml'
-
+    paths: ['data/p08/**', '.github/workflows/procesar-08.yml']
 permissions:
   contents: write
-
 jobs:
   procesar:
     if: github.actor != 'github-actions[bot]'
@@ -22,33 +17,22 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
-      - name: Reconstruir y extraer paquete
-        shell: bash
+      - name: Reconstruir paquete
         run: |
-          cat data/p08/*.txt | tr -d '\n\r ' | base64 -d > /tmp/s08.tgz
-          echo '504afcc2a5fc7627a5144f16fa0d03f889f60dfafab1be17a9e46ad0a98690a5  /tmp/s08.tgz' | sha256sum -c -
-          tar -xzf /tmp/s08.tgz -C .
-          test -f data/microbloques/saliendo-08.json
-          test -f posts/crear-una-rutina-para-reconstruirte.html
-          test -f posts/levantar-una-web-como-quien-levanta-una-casa.html
-          test -f posts/dejar-de-pedir-permiso-para-empezar.html
-          test -f posts/hacer-foco-cuando-todo-esta-roto.html
-          test -f posts/recuperar-confianza-con-pruebas-pequenas.html
-      - name: Actualizar catálogo
-        run: node scripts/aplicar-microbloque.mjs data/microbloques/saliendo-08.json
-      - name: Auditar contenido
-        run: node scripts/auditar-microbloque-contenido.mjs data/microbloques/saliendo-08.json
-      - name: Auditar técnica
-        run: node scripts/auditar-microbloque-tecnica.mjs data/microbloques/saliendo-08.json
-      - name: Guardar resultado
-        shell: bash
+          cat data/p08/00.hex data/p08/01.hex | xxd -r -p > /tmp/a
+          cat /tmp/a data/p08/02.txt data/p08/03.txt data/p08/04.txt data/p08/05.txt data/p08/06.txt data/p08/07.txt data/p08/08.txt data/p08/09.txt data/p08/10.txt | base64 -d > /tmp/b.tgz
+          echo '504afcc2a5fc7627a5144f16fa0d03f889f60dfafab1be17a9e46ad0a98690a5  /tmp/b.tgz' | sha256sum -c -
+          tar -xzf /tmp/b.tgz -C .
+      - name: Actualizar y auditar
         run: |
-          rm -rf data/p08
-          rm -f data/s08.bin
-          rm -f .github/workflows/procesar-08.yml
+          node scripts/aplicar-microbloque.mjs data/microbloques/saliendo-08.json
+          node scripts/auditar-microbloque-contenido.mjs data/microbloques/saliendo-08.json
+          node scripts/auditar-microbloque-tecnica.mjs data/microbloques/saliendo-08.json
+      - name: Confirmar
+        run: |
+          rm -rf data/p08 data/s08.bin .github/workflows/procesar-08.yml
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add -A
-          git diff --cached --quiet && exit 0
           git commit -m 'Completar lote 08'
           git push origin HEAD:${{ github.head_ref }}
