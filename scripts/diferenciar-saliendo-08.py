@@ -45,4 +45,6 @@ for filename, suffixes in SUFFIXES.items():
     text = path.read_text(encoding="utf-8")
     for paragraph, suffix in zip(COMMON, suffixes):
         text = text.replace(paragraph, f"{paragraph} {suffix}")
+    text = text.replace('"@type": "BlogPosting"', '"@type":"BlogPosting"')
+    text = text.replace('"@type": "BreadcrumbList"', '"@type":"BreadcrumbList"')
     path.write_text(text, encoding="utf-8")
