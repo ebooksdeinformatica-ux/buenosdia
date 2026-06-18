@@ -1,0 +1,50 @@
+name: Validar Saliendo 08
+
+on:
+  pull_request:
+    branches: [release-estable-v3]
+    paths:
+      - 'posts/crear-una-rutina-para-reconstruirte.html'
+      - 'posts/levantar-una-web-como-quien-levanta-una-casa.html'
+      - 'posts/dejar-de-pedir-permiso-para-empezar.html'
+      - 'posts/hacer-foco-cuando-todo-esta-roto.html'
+      - 'posts/recuperar-confianza-con-pruebas-pequenas.html'
+      - 'data/microbloques/saliendo-08.json'
+      - 'data/posts.json'
+      - 'scripts/auditar-microbloque-contenido.mjs'
+      - 'scripts/auditar-microbloque-tecnica.mjs'
+      - '.github/workflows/validar-saliendo-08.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  validar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Validar catálogo
+        run: |
+          node <<'NODE'
+          const fs=require('fs');
+          const manifest=JSON.parse(fs.readFileSync('data/microbloques/saliendo-08.json','utf8'));
+          const posts=JSON.parse(fs.readFileSync('data/posts.json','utf8'));
+          const byUrl=new Map(posts.map(post=>[post.url,post]));
+          const fields=['title','description','category','date','image','readingTime'];
+          const errors=[];
+          for(const expected of manifest.posts){
+            const current=byUrl.get(expected.url);
+            if(!current){errors.push(`${expected.url}: ausente del catálogo`);continue;}
+            for(const field of fields)if(current[field]!==expected[field])errors.push(`${expected.url}: ${field} no coincide`);
+            if(JSON.stringify(current.tags)!==JSON.stringify(expected.tags))errors.push(`${expected.url}: tags no coinciden`);
+          }
+          if(errors.length){console.error(errors.join('\n'));process.exit(1);}
+          console.log(`${manifest.name}: catálogo correcto para ${manifest.posts.length} artículos.`);
+          NODE
+      - name: Auditar contenido
+        run: node scripts/auditar-microbloque-contenido.mjs data/microbloques/saliendo-08.json
+      - name: Auditar técnica
+        run: node scripts/auditar-microbloque-tecnica.mjs data/microbloques/saliendo-08.json
