@@ -4,7 +4,7 @@ on:
   pull_request:
     branches: [release-estable-v3]
     paths:
-      - 'data/s08.bin'
+      - 'data/p08/**'
       - '.github/workflows/procesar-08.yml'
 
 permissions:
@@ -22,66 +22,18 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
-      - name: Extraer archivos
+      - name: Reconstruir y extraer paquete
         shell: bash
         run: |
-          python <<'PY'
-          from pathlib import Path
-          import base64, gzip, io, tarfile, zipfile
-
-          source = Path('data/s08.bin')
-          raw = source.read_bytes()
-          candidates = [('raw', raw)]
-
-          try:
-              candidates.append(('base64', base64.b64decode(raw, validate=True)))
-          except Exception:
-              pass
-
-          expanded = list(candidates)
-          for name, data in candidates:
-              if data.startswith(b'\x1f\x8b'):
-                  try:
-                      expanded.append((name + '+gzip', gzip.decompress(data)))
-                  except Exception:
-                      pass
-
-          extracted = False
-          for name, data in expanded:
-              try:
-                  with tarfile.open(fileobj=io.BytesIO(data), mode='r:*') as archive:
-                      archive.extractall('.')
-                  print('Formato extraído:', name, 'tar')
-                  extracted = True
-                  break
-              except Exception:
-                  pass
-              try:
-                  with zipfile.ZipFile(io.BytesIO(data)) as archive:
-                      archive.extractall('.')
-                  print('Formato extraído:', name, 'zip')
-                  extracted = True
-                  break
-              except Exception:
-                  pass
-
-          if not extracted:
-              print('Cabecera:', raw[:32].hex())
-              print('Tamaño:', len(raw))
-              raise SystemExit('No se pudo reconocer el paquete')
-
-          required = [
-              Path('data/microbloques/saliendo-08.json'),
-              Path('posts/crear-una-rutina-para-reconstruirte.html'),
-              Path('posts/levantar-una-web-como-quien-levanta-una-casa.html'),
-              Path('posts/dejar-de-pedir-permiso-para-empezar.html'),
-              Path('posts/hacer-foco-cuando-todo-esta-roto.html'),
-              Path('posts/recuperar-confianza-con-pruebas-pequenas.html'),
-          ]
-          missing = [str(path) for path in required if not path.exists()]
-          if missing:
-              raise SystemExit('Faltan archivos: ' + ', '.join(missing))
-          PY
+          cat data/p08/*.txt | tr -d '\n\r ' | base64 -d > /tmp/s08.tgz
+          echo '504afcc2a5fc7627a5144f16fa0d03f889f60dfafab1be17a9e46ad0a98690a5  /tmp/s08.tgz' | sha256sum -c -
+          tar -xzf /tmp/s08.tgz -C .
+          test -f data/microbloques/saliendo-08.json
+          test -f posts/crear-una-rutina-para-reconstruirte.html
+          test -f posts/levantar-una-web-como-quien-levanta-una-casa.html
+          test -f posts/dejar-de-pedir-permiso-para-empezar.html
+          test -f posts/hacer-foco-cuando-todo-esta-roto.html
+          test -f posts/recuperar-confianza-con-pruebas-pequenas.html
       - name: Actualizar catálogo
         run: node scripts/aplicar-microbloque.mjs data/microbloques/saliendo-08.json
       - name: Auditar contenido
@@ -89,7 +41,9 @@ jobs:
       - name: Auditar técnica
         run: node scripts/auditar-microbloque-tecnica.mjs data/microbloques/saliendo-08.json
       - name: Guardar resultado
+        shell: bash
         run: |
+          rm -rf data/p08
           rm -f data/s08.bin
           rm -f .github/workflows/procesar-08.yml
           git config user.name 'github-actions[bot]'
