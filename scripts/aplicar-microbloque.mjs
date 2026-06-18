@@ -1,5 +1,4 @@
 import fs from 'node:fs';
-import {execFileSync} from 'node:child_process';
 
 const manifestPath=process.argv[2];
 if(!manifestPath)throw new Error('Uso: node scripts/aplicar-microbloque.mjs <manifest.json>');
@@ -17,9 +16,3 @@ for(const post of posts){
 if(updated!==manifest.posts.length)throw new Error(`Se actualizaron ${updated} de ${manifest.posts.length} publicaciones.`);
 fs.writeFileSync(file,JSON.stringify(posts,null,2)+'\n');
 console.log(`${manifest.name}: ${updated} metadatos actualizados.`);
-
-if(manifest.name==='Saliendo 08'){
-  execFileSync('python',['scripts/diferenciar-saliendo-08.py'],{stdio:'inherit'});
-  fs.copyFileSync('scripts/aplicar-microbloque.base.mjs','scripts/aplicar-microbloque.mjs');
-  fs.unlinkSync('scripts/aplicar-microbloque.base.mjs');
-}
