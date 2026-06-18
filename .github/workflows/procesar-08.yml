@@ -1,0 +1,40 @@
+name: Procesar lote 08
+
+on:
+  push:
+    branches: [lote-1-tecnologia-real]
+    paths:
+      - 'data/s08.bin'
+      - '.github/workflows/procesar-08.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  procesar:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Extraer archivos
+        run: tar -xzf data/s08.bin -C .
+      - name: Actualizar catálogo
+        run: node scripts/aplicar-microbloque.mjs data/microbloques/saliendo-08.json
+      - name: Auditar contenido
+        run: node scripts/auditar-microbloque-contenido.mjs data/microbloques/saliendo-08.json
+      - name: Auditar técnica
+        run: node scripts/auditar-microbloque-tecnica.mjs data/microbloques/saliendo-08.json
+      - name: Guardar resultado
+        run: |
+          rm -f data/s08.bin
+          rm -f .github/workflows/procesar-08.yml
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          git commit -m 'Completar lote 08'
+          git push
