@@ -32,16 +32,6 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
-      - name: Aplicar paquete si existe
-        run: |
-          if [ -f data/p09/payload.txt ]; then
-            mkdir -p /tmp/s09
-            base64 -d data/p09/payload.txt > /tmp/s09/payload.tgz
-            tar -xzf /tmp/s09/payload.tgz -C /tmp/s09
-            mkdir -p posts data/microbloques
-            cp /tmp/s09/saliendo09/*.html posts/
-            cp /tmp/s09/saliendo09/saliendo-09.json data/microbloques/saliendo-09.json
-          fi
       - name: Refuerzo editorial Saliendo 09
         run: |
           node <<'NODE'
@@ -62,6 +52,34 @@ jobs:
             }
           }
           NODE
+      - name: Diagnosticar contenido
+        run: |
+          node <<'NODE'
+          const fs=require('fs');
+          const manifest=JSON.parse(fs.readFileSync('data/microbloques/saliendo-09.json','utf8'));
+          const banned=['guía práctica para','puede parecer una idea simple','el problema no suele ser no saber qué hacer','la trampa es creer que necesitás cambiar toda tu vida','no hace falta que hoy sea perfecto','definir el punto de partida','una semana suele alcanzar','prueba de siete días','resultado digital verificable'];
+          const clean=s=>s.replace(/<script[\s\S]*?<\/script>/gi,' ').replace(/<style[\s\S]*?<\/style>/gi,' ').replace(/<[^>]+>/g,' ').replace(/&[a-z0-9#]+;/gi,' ').replace(/\s+/g,' ').trim();
+          const out=[];
+          for(const file of manifest.files){
+            const html=fs.readFileSync(`posts/${file}`,'utf8');
+            const article=html.match(/<article[^>]*>([\s\S]*?)<\/article>/i)?.[1]||'';
+            const visible=clean(article), lower=visible.toLowerCase();
+            const desc=html.match(/<meta name="description" content="([^"]+)"/i)?.[1]||'';
+            const words=visible.match(/[A-Za-zÁÉÍÓÚÜÑáéíóúüñ0-9]+/g)||[];
+            out.push(`${file}: palabras=${words.length}; desc=${desc.length}`);
+            for(const phrase of banned)if(lower.includes(phrase)||desc.toLowerCase().includes(phrase))out.push(`ERROR ${file}: frase prohibida ${phrase}`);
+          }
+          fs.writeFileSync('data/microbloques/saliendo-09-diagnostico.txt',out.join('\n')+'\n');
+          console.log(out.join('\n'));
+          NODE
+      - name: Guardar diagnóstico previo
+        if: github.event_name == 'push'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add posts data/microbloques/saliendo-09-diagnostico.txt
+          git commit -m "Diagnosticar Saliendo 09" || true
+          git push || true
       - name: Actualizar catálogo desde manifiesto
         run: |
           node <<'NODE'
@@ -70,9 +88,7 @@ jobs:
           const posts=JSON.parse(fs.readFileSync('data/posts.json','utf8'));
           const urls=new Set(manifest.posts.map(post=>post.url));
           const cleaned=posts.filter(post=>!urls.has(post.url));
-          const next=[...manifest.posts,...cleaned];
-          fs.writeFileSync('data/posts.json',JSON.stringify(next,null,2)+'\n');
-          console.log(`${manifest.name}: catálogo actualizado en memoria.`);
+          fs.writeFileSync('data/posts.json',JSON.stringify([...manifest.posts,...cleaned],null,2)+'\n');
           NODE
       - name: Validar catálogo
         run: |
