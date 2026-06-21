@@ -1,5 +1,80 @@
 [
   {
+    "title": "Crear una vida menos dependiente del sistema",
+    "description": "Crear una vida menos dependiente del sistema empieza por bajar gastos invisibles, recuperar habilidades útiles y construir márgenes propios sin fantasía.",
+    "category": "Saliendo de la Matrix",
+    "url": "/posts/crear-una-vida-menos-dependiente-del-sistema.html",
+    "date": "2026-06-17",
+    "image": "/assets/img/posts/saliendo-de-la-matrix.svg",
+    "tags": [
+      "saliendo-de-la-matrix",
+      "autonomía",
+      "sistema",
+      "margen"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Usar tus conocimientos para rescatarte",
+    "description": "Usar tus conocimientos para rescatarte exige dejar de mirar lo que falta y convertir lo que ya sabés en una prueba útil, vendible o publicable.",
+    "category": "Saliendo de la Matrix",
+    "url": "/posts/usar-tus-conocimientos-para-rescatarte.html",
+    "date": "2026-06-17",
+    "image": "/assets/img/posts/saliendo-de-la-matrix.svg",
+    "tags": [
+      "saliendo-de-la-matrix",
+      "conocimiento",
+      "rescate",
+      "oficio"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Armar una agenda de supervivencia creativa",
+    "description": "Armar una agenda de supervivencia creativa permite ordenar lo básico, reservar energía y sostener producción propia sin esperar condiciones perfectas.",
+    "category": "Saliendo de la Matrix",
+    "url": "/posts/armar-una-agenda-de-supervivencia-creativa.html",
+    "date": "2026-06-17",
+    "image": "/assets/img/posts/saliendo-de-la-matrix.svg",
+    "tags": [
+      "saliendo-de-la-matrix",
+      "agenda",
+      "supervivencia",
+      "creatividad"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Trabajar aunque todavía no haya resultados",
+    "description": "Trabajar aunque todavía no haya resultados requiere distinguir evidencia de recompensa y sostener acciones que preparan el terreno antes de que se vea.",
+    "category": "Saliendo de la Matrix",
+    "url": "/posts/trabajar-aunque-todavia-no-haya-resultados.html",
+    "date": "2026-06-17",
+    "image": "/assets/img/posts/saliendo-de-la-matrix.svg",
+    "tags": [
+      "saliendo-de-la-matrix",
+      "trabajo",
+      "resultados",
+      "constancia"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Crear activos digitales en silencio",
+    "description": "Crear activos digitales en silencio ayuda a construir valor propio antes del aplauso: archivos, páginas, recursos y sistemas que puedan trabajar después.",
+    "category": "Saliendo de la Matrix",
+    "url": "/posts/crear-activos-digitales-en-silencio.html",
+    "date": "2026-06-17",
+    "image": "/assets/img/posts/saliendo-de-la-matrix.svg",
+    "tags": [
+      "saliendo-de-la-matrix",
+      "activos digitales",
+      "silencio",
+      "producción"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
     "title": "Salir del modo víctima sin negarte el dolor",
     "description": "Salir del modo víctima sin negar el dolor implica reconocer lo vivido, recuperar margen de decisión y elegir acciones pequeñas que devuelvan dirección.",
     "category": "Saliendo de la Matrix",
@@ -4209,80 +4284,6 @@
       "pruebas"
     ],
     "readingTime": "8–11 min"
-  },
-  {
-    "title": "Crear una vida menos dependiente del sistema",
-    "description": "Plan práctico para crear una vida menos dependiente del sistema: entregas visibles, revisión semanal, obstáculos frecuentes y una forma realista de sostener avances.",
-    "category": "Saliendo de la Matrix",
-    "url": "/posts/crear-una-vida-menos-dependiente-del-sistema.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/saliendo-de-la-matrix.svg",
-    "tags": [
-      "saliendo-de-la-matrix",
-      "dependiente",
-      "sistema"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "Usar tus conocimientos para rescatarte",
-    "description": "Plan práctico para usar tus conocimientos para rescatarte: entregas visibles, revisión semanal, obstáculos frecuentes y una forma realista de sostener avances.",
-    "category": "Saliendo de la Matrix",
-    "url": "/posts/usar-tus-conocimientos-para-rescatarte.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/saliendo-de-la-matrix.svg",
-    "tags": [
-      "saliendo-de-la-matrix",
-      "conocimientos",
-      "rescatarte"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "Armar una agenda de supervivencia creativa",
-    "description": "Plan práctico para armar una agenda de supervivencia creativa: entregas visibles, revisión semanal, obstáculos frecuentes y una forma realista de sostener avances.",
-    "category": "Saliendo de la Matrix",
-    "url": "/posts/armar-una-agenda-de-supervivencia-creativa.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/saliendo-de-la-matrix.svg",
-    "tags": [
-      "saliendo-de-la-matrix",
-      "agenda",
-      "supervivencia",
-      "creativa"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "Trabajar aunque todavía no haya resultados",
-    "description": "Plan práctico para trabajar aunque todavía no haya resultados: entregas visibles, revisión semanal, obstáculos frecuentes y una forma realista de sostener avances.",
-    "category": "Saliendo de la Matrix",
-    "url": "/posts/trabajar-aunque-todavia-no-haya-resultados.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/saliendo-de-la-matrix.svg",
-    "tags": [
-      "saliendo-de-la-matrix",
-      "trabajar",
-      "aunque",
-      "todavía",
-      "resultados"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "Crear activos digitales en silencio",
-    "description": "Plan práctico para crear activos digitales en silencio: entregas visibles, revisión semanal, obstáculos frecuentes y una forma realista de sostener avances.",
-    "category": "Saliendo de la Matrix",
-    "url": "/posts/crear-activos-digitales-en-silencio.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/saliendo-de-la-matrix.svg",
-    "tags": [
-      "saliendo-de-la-matrix",
-      "activos",
-      "digitales",
-      "silencio"
-    ],
-    "readingTime": "10–14 min"
   },
   {
     "title": "Ordenar tus días para ordenar tu destino",
