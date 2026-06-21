@@ -1,0 +1,39 @@
+name: A09
+
+on:
+  push:
+    branches: [lote-1-tecnologia-real]
+    paths:
+      - 'data/a09/**'
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: lote-1-tecnologia-real
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: write
+        run: |
+          node <<'NODE'
+          const fs=require('fs');
+          const manifest=JSON.parse(fs.readFileSync('data/microbloques/saliendo-09.json','utf8'));
+          const posts=JSON.parse(fs.readFileSync('data/posts.json','utf8'));
+          const urls=new Set(manifest.posts.map(x=>x.url));
+          const cleaned=posts.filter(x=>!urls.has(x.url));
+          fs.writeFileSync('data/posts.json',JSON.stringify([...manifest.posts,...cleaned],null,2)+'\n');
+          NODE
+      - name: save
+        run: |
+          git rm -f data/a09/* || true
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/posts.json data/a09 .github/workflows/a09.yml
+          git commit -m "A09" || true
+          git push || true
