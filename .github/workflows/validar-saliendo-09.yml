@@ -106,13 +106,19 @@ jobs:
         run: node scripts/auditar-microbloque-tecnica.mjs data/microbloques/saliendo-09.json
       - name: Confirmar cambios en rama
         run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git fetch origin lote-1-tecnologia-real
+          git reset --hard origin/lote-1-tecnologia-real
+          node <<'NODE'
+          const fs=require('fs');
+          const manifest=JSON.parse(fs.readFileSync('data/microbloques/saliendo-09.json','utf8'));
+          const posts=JSON.parse(fs.readFileSync('data/posts.json','utf8'));
+          const urls=new Set(manifest.posts.map(post=>post.url));
+          const cleaned=posts.filter(post=>!urls.has(post.url));
+          fs.writeFileSync('data/posts.json',JSON.stringify([...manifest.posts,...cleaned],null,2)+'\n');
+          NODE
           git rm -f data/p09/* || true
-          if git diff --quiet; then
-            echo "Sin cambios para confirmar."
-          else
-            git config user.name "github-actions[bot]"
-            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add posts data/microbloques data/posts.json .github/workflows/validar-saliendo-09.yml data/p09 || true
-            git commit -m "Cerrar Saliendo 09"
-            git push
-          fi
+          git add data/posts.json data/p09 .github/workflows/validar-saliendo-09.yml
+          git commit -m "Cerrar Saliendo 09" || true
+          git push || true
