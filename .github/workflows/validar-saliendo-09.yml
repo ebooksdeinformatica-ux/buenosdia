@@ -63,18 +63,14 @@ jobs:
         run: node scripts/auditar-microbloque-contenido.mjs data/microbloques/saliendo-09.json
       - name: Auditar técnica
         run: node scripts/auditar-microbloque-tecnica.mjs data/microbloques/saliendo-09.json
-      - name: Confirmar cambios en rama
+      - name: Persistir catálogo por API
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git rm -f data/p09/* || true
-          git add data/posts.json data/p09
-          git commit -m "Cerrar Saliendo 09" || true
-          for i in 1 2 3 4 5; do
-            git pull --rebase origin lote-1-tecnologia-real || true
-            if git push; then
-              exit 0
-            fi
-            sleep 4
-          done
-          exit 1
+          sha=$(gh api "repos/${{ github.repository }}/contents/data/posts.json?ref=lote-1-tecnologia-real" --jq .sha)
+          content=$(base64 -w0 data/posts.json)
+          gh api --method PUT "repos/${{ github.repository }}/contents/data/posts.json" \
+            -f message="Actualizar catalogo S09" \
+            -f content="$content" \
+            -f sha="$sha" \
+            -f branch="lote-1-tecnologia-real"
