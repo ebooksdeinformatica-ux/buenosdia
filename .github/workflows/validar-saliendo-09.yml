@@ -32,46 +32,6 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
-      - name: Refuerzo editorial Saliendo 09
-        run: |
-          node <<'NODE'
-          const fs=require('fs');
-          const extras={
-            'crear-una-vida-menos-dependiente-del-sistema.html':'<h2>Medir margen sin vender humo</h2><p data-s09-extra="autonomia">Un margen real se nota cuando una decisión deja de depender del susto del día. Puede ser una cuenta entendida, una herramienta aprendida, una compra evitada o una tarea propia terminada. No parece épico, pero cambia el lugar desde donde elegís. La autonomía práctica se junta así: una evidencia chica, después otra, hasta que el sistema ya no tiene todas las llaves de tu semana.</p>',
-            'usar-tus-conocimientos-para-rescatarte.html':'<h2>Convertir memoria en entrega</h2><p data-s09-extra="conocimiento">Lo que sabés necesita una forma concreta para poder ayudarte. Una explicación clara, una revisión simple, una plantilla o una página terminada convierten memoria en entrega. Ahí aparece otro tipo de confianza: no la confianza de sentirte listo, sino la de ver una pieza afuera de tu cabeza, corregible, mostrable y capaz de abrir una conversación real.</p>',
-            'armar-una-agenda-de-supervivencia-creativa.html':'<h2>Una semana que pueda repetirse</h2><p data-s09-extra="agenda">La agenda sirve cuando puede repetirse sin exigir una personalidad nueva. Una semana posible deja lugar para obligaciones, descanso y una pieza propia. Si todo queda apretado, el plan se vuelve otra carga. Si queda demasiado suelto, el día se escapa. El punto medio es una estructura honesta: pocas tareas cerrables, un horario reconocible y una revisión breve antes de volver a empezar.</p>',
-            'trabajar-aunque-todavia-no-haya-resultados.html':'<h2>La paciencia también se diseña</h2><p data-s09-extra="resultados">La paciencia no es quedarse quieto esperando milagros. Es diseñar una ventana donde el trabajo pueda mostrar datos. Durante esa ventana, la tarea es producir, medir y ajustar sin pedirle al primer intento que pague toda la historia. Cuando el período termina, revisás con más frialdad: qué tuvo tracción, qué no se entendió, qué debe cortarse y qué merece otra ronda.</p>',
-            'crear-activos-digitales-en-silencio.html':'<h2>Publicar cuando la pieza ya respira</h2><p data-s09-extra="activos">El silencio termina cuando la pieza puede cumplir una función. Una guía debe guiar, una plantilla debe ahorrar tiempo, una página debe explicar, un recurso debe resolver algo. Antes de eso, el taller protege. Después, publicar permite probar. La diferencia importa porque no se trata de esconderse: se trata de no entregar al ruido una idea que todavía necesitaba forma.</p>'
-          };
-          for(const [file,extra] of Object.entries(extras)){
-            const path=`posts/${file}`;
-            let html=fs.readFileSync(path,'utf8');
-            if(!html.includes('data-s09-extra=')){
-              html=html.replace('<section class="faq-box">',`${extra}<section class="faq-box">`);
-              fs.writeFileSync(path,html);
-            }
-          }
-          NODE
-      - name: Diagnosticar contenido
-        run: |
-          node <<'NODE'
-          const fs=require('fs');
-          const manifest=JSON.parse(fs.readFileSync('data/microbloques/saliendo-09.json','utf8'));
-          const banned=['guía práctica para','puede parecer una idea simple','el problema no suele ser no saber qué hacer','la trampa es creer que necesitás cambiar toda tu vida','no hace falta que hoy sea perfecto','definir el punto de partida','una semana suele alcanzar','prueba de siete días','resultado digital verificable'];
-          const clean=s=>s.replace(/<script[\s\S]*?<\/script>/gi,' ').replace(/<style[\s\S]*?<\/style>/gi,' ').replace(/<[^>]+>/g,' ').replace(/&[a-z0-9#]+;/gi,' ').replace(/\s+/g,' ').trim();
-          const out=[];
-          for(const file of manifest.files){
-            const html=fs.readFileSync(`posts/${file}`,'utf8');
-            const article=html.match(/<article[^>]*>([\s\S]*?)<\/article>/i)?.[1]||'';
-            const visible=clean(article), lower=visible.toLowerCase();
-            const desc=html.match(/<meta name="description" content="([^"]+)"/i)?.[1]||'';
-            const words=visible.match(/[A-Za-zÁÉÍÓÚÜÑáéíóúüñ0-9]+/g)||[];
-            out.push(`${file}: palabras=${words.length}; desc=${desc.length}`);
-            for(const phrase of banned)if(lower.includes(phrase)||desc.toLowerCase().includes(phrase))out.push(`ERROR ${file}: frase prohibida ${phrase}`);
-          }
-          fs.writeFileSync('data/microbloques/saliendo-09-diagnostico.txt',out.join('\n')+'\n');
-          console.log(out.join('\n'));
-          NODE
       - name: Actualizar catálogo desde manifiesto
         run: |
           node <<'NODE'
@@ -89,12 +49,11 @@ jobs:
           const manifest=JSON.parse(fs.readFileSync('data/microbloques/saliendo-09.json','utf8'));
           const posts=JSON.parse(fs.readFileSync('data/posts.json','utf8'));
           const byUrl=new Map(posts.map(post=>[post.url,post]));
-          const fields=['title','description','category','date','image','readingTime'];
           const errors=[];
           for(const expected of manifest.posts){
             const current=byUrl.get(expected.url);
             if(!current){errors.push(`${expected.url}: ausente del catálogo`);continue;}
-            for(const field of fields)if(current[field]!==expected[field])errors.push(`${expected.url}: ${field} no coincide`);
+            for(const field of ['title','description','category','date','image','readingTime'])if(current[field]!==expected[field])errors.push(`${expected.url}: ${field} no coincide`);
             if(JSON.stringify(current.tags)!==JSON.stringify(expected.tags))errors.push(`${expected.url}: tags no coinciden`);
           }
           if(errors.length){console.error(errors.join('\n'));process.exit(1);}
@@ -108,17 +67,14 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git fetch origin lote-1-tecnologia-real
-          git reset --hard origin/lote-1-tecnologia-real
-          node <<'NODE'
-          const fs=require('fs');
-          const manifest=JSON.parse(fs.readFileSync('data/microbloques/saliendo-09.json','utf8'));
-          const posts=JSON.parse(fs.readFileSync('data/posts.json','utf8'));
-          const urls=new Set(manifest.posts.map(post=>post.url));
-          const cleaned=posts.filter(post=>!urls.has(post.url));
-          fs.writeFileSync('data/posts.json',JSON.stringify([...manifest.posts,...cleaned],null,2)+'\n');
-          NODE
           git rm -f data/p09/* || true
-          git add data/posts.json data/p09 .github/workflows/validar-saliendo-09.yml
+          git add data/posts.json data/p09
           git commit -m "Cerrar Saliendo 09" || true
-          git push || true
+          for i in 1 2 3 4 5; do
+            git pull --rebase origin lote-1-tecnologia-real || true
+            if git push; then
+              exit 0
+            fi
+            sleep 4
+          done
+          exit 1
