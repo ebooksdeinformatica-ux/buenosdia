@@ -42,6 +42,26 @@ jobs:
             cp /tmp/s09/saliendo09/*.html posts/
             cp /tmp/s09/saliendo09/saliendo-09.json data/microbloques/saliendo-09.json
           fi
+      - name: Refuerzo editorial Saliendo 09
+        run: |
+          node <<'NODE'
+          const fs=require('fs');
+          const extras={
+            'crear-una-vida-menos-dependiente-del-sistema.html':'<h2>Medir margen sin vender humo</h2><p data-s09-extra="autonomia">Un margen real se nota cuando una decisión deja de depender del susto del día. Puede ser una cuenta entendida, una herramienta aprendida, una compra evitada o una tarea propia terminada. No parece épico, pero cambia el lugar desde donde elegís. La autonomía práctica se junta así: una evidencia chica, después otra, hasta que el sistema ya no tiene todas las llaves de tu semana.</p>',
+            'usar-tus-conocimientos-para-rescatarte.html':'<h2>Convertir memoria en entrega</h2><p data-s09-extra="conocimiento">Lo que sabés necesita una forma concreta para poder ayudarte. Una explicación clara, una revisión simple, una plantilla o una página terminada convierten memoria en entrega. Ahí aparece otro tipo de confianza: no la confianza de sentirte listo, sino la de ver una pieza afuera de tu cabeza, corregible, mostrable y capaz de abrir una conversación real.</p>',
+            'armar-una-agenda-de-supervivencia-creativa.html':'<h2>Una semana que pueda repetirse</h2><p data-s09-extra="agenda">La agenda sirve cuando puede repetirse sin exigir una personalidad nueva. Una semana posible deja lugar para obligaciones, descanso y una pieza propia. Si todo queda apretado, el plan se vuelve otra carga. Si queda demasiado suelto, el día se escapa. El punto medio es una estructura honesta: pocas tareas cerrables, un horario reconocible y una revisión breve antes de volver a empezar.</p>',
+            'trabajar-aunque-todavia-no-haya-resultados.html':'<h2>La paciencia también se diseña</h2><p data-s09-extra="resultados">La paciencia no es quedarse quieto esperando milagros. Es diseñar una ventana donde el trabajo pueda mostrar datos. Durante esa ventana, la tarea es producir, medir y ajustar sin pedirle al primer intento que pague toda la historia. Cuando el período termina, revisás con más frialdad: qué tuvo tracción, qué no se entendió, qué debe cortarse y qué merece otra ronda.</p>',
+            'crear-activos-digitales-en-silencio.html':'<h2>Publicar cuando la pieza ya respira</h2><p data-s09-extra="activos">El silencio termina cuando la pieza puede cumplir una función. Una guía debe guiar, una plantilla debe ahorrar tiempo, una página debe explicar, un recurso debe resolver algo. Antes de eso, el taller protege. Después, publicar permite probar. La diferencia importa porque no se trata de esconderse: se trata de no entregar al ruido una idea que todavía necesitaba forma.</p>'
+          };
+          for(const [file,extra] of Object.entries(extras)){
+            const path=`posts/${file}`;
+            let html=fs.readFileSync(path,'utf8');
+            if(!html.includes('data-s09-extra=')){
+              html=html.replace('<section class="faq-box">',`${extra}<section class="faq-box">`);
+              fs.writeFileSync(path,html);
+            }
+          }
+          NODE
       - name: Actualizar catálogo desde manifiesto
         run: |
           node <<'NODE'
@@ -79,7 +99,7 @@ jobs:
       - name: Confirmar cambios en rama
         if: github.event_name == 'push'
         run: |
-          git rm -f data/p09/payload.txt data/p09/trigger-final.txt || true
+          git rm -f data/p09/* || true
           if git diff --quiet; then
             echo "Sin cambios para confirmar."
           else
