@@ -72,14 +72,6 @@ jobs:
           fs.writeFileSync('data/microbloques/saliendo-09-diagnostico.txt',out.join('\n')+'\n');
           console.log(out.join('\n'));
           NODE
-      - name: Guardar diagnóstico previo
-        if: github.event_name == 'push'
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add posts data/microbloques/saliendo-09-diagnostico.txt
-          git commit -m "Diagnosticar Saliendo 09" || true
-          git push || true
       - name: Actualizar catálogo desde manifiesto
         run: |
           node <<'NODE'
@@ -113,7 +105,6 @@ jobs:
       - name: Auditar técnica
         run: node scripts/auditar-microbloque-tecnica.mjs data/microbloques/saliendo-09.json
       - name: Confirmar cambios en rama
-        if: github.event_name == 'push'
         run: |
           git rm -f data/p09/* || true
           if git diff --quiet; then
