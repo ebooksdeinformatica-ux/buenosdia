@@ -68,9 +68,14 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           sha=$(gh api "repos/${{ github.repository }}/contents/data/posts.json?ref=lote-1-tecnologia-real" --jq .sha)
-          content=$(base64 -w0 data/posts.json)
-          gh api --method PUT "repos/${{ github.repository }}/contents/data/posts.json" \
-            -f message="Actualizar catalogo S09" \
-            -f content="$content" \
-            -f sha="$sha" \
-            -f branch="lote-1-tecnologia-real"
+          SHA="$sha" node <<'NODE'
+          const fs=require('fs');
+          const payload={
+            message:'Actualizar catalogo S09',
+            content:fs.readFileSync('data/posts.json').toString('base64'),
+            sha:process.env.SHA,
+            branch:'lote-1-tecnologia-real'
+          };
+          fs.writeFileSync('/tmp/posts-payload.json',JSON.stringify(payload));
+          NODE
+          gh api --method PUT "repos/${{ github.repository }}/contents/data/posts.json" --input /tmp/posts-payload.json
