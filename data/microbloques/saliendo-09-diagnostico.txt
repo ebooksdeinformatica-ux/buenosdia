@@ -1,5 +1,5 @@
 crear-una-vida-menos-dependiente-del-sistema.html: palabras=830; desc=153
 usar-tus-conocimientos-para-rescatarte.html: palabras=783; desc=143
-armar-una-agenda-de-supervivencia-creativa.html: palabras=714; desc=150
-trabajar-aunque-todavia-no-haya-resultados.html: palabras=747; desc=151
+armar-una-agenda-de-supervivencia-creativa.html: palabras=766; desc=150
+trabajar-aunque-todavia-no-haya-resultados.html: palabras=796; desc=151
 crear-activos-digitales-en-silencio.html: palabras=754; desc=153
