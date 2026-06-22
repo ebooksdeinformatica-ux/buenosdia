@@ -1,0 +1,46 @@
+name: Cerrar Saliendo 07
+
+on:
+  push:
+    branches: [lote-1-tecnologia-real]
+  pull_request:
+    branches: [release-estable-v3]
+    types: [opened, synchronize, reopened]
+
+permissions:
+  contents: write
+
+jobs:
+  cerrar:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: lote-1-tecnologia-real
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Aplicar manifiesto
+        run: node scripts/aplicar-microbloque.mjs data/microbloques/saliendo-07.json
+      - name: Auditoria editorial
+        run: node scripts/auditar-microbloque-contenido.mjs data/microbloques/saliendo-07.json
+      - name: Auditoria tecnica
+        run: node scripts/auditar-microbloque-tecnica.mjs data/microbloques/saliendo-07.json
+      - name: Confirmar y limpiar
+        run: |
+          rm -f data/.revision-saliendo-07
+          rm -f data/.revision-saliendo-07-final
+          rm -f data/.revision-saliendo-07-clean
+          rm -f .github/workflows/validar-saliendo-07.yml
+          rm -f .github/workflows/finalizar-saliendo-07.yml
+          rm -f .github/workflows/limpiar-saliendo-07.yml
+          rm -f .github/workflows/cerrar-saliendo-07.yml
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          if ! git diff --cached --quiet; then
+            git commit -m 'Completar y validar Saliendo 07'
+            git push
+          fi

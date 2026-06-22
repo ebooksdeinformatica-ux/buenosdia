@@ -1,0 +1,63 @@
+{
+  "name": "Saliendo 07",
+  "minimumWords": 750,
+  "files": [
+    "convertir-una-mala-etapa-en-metodo.html",
+    "recuperar-tu-oficio-digital-paso-a-paso.html",
+    "hacer-un-plan-aunque-estes-cansado.html",
+    "salir-del-estancamiento-con-tareas-pequenas.html",
+    "volver-a-generar-dinero-desde-internet.html"
+  ],
+  "posts": [
+    {
+      "title": "Convertir una mala etapa en método",
+      "description": "Convertir una mala etapa en método implica separar el daño de las lecciones, registrar patrones y diseñar respuestas que sirvan cuando vuelva la presión.",
+      "category": "Saliendo de la Matrix",
+      "url": "/posts/convertir-una-mala-etapa-en-metodo.html",
+      "date": "2026-06-17",
+      "image": "/assets/img/posts/saliendo-de-la-matrix.svg",
+      "tags": ["saliendo-de-la-matrix", "método", "aprendizaje", "límites"],
+      "readingTime": "8–11 min"
+    },
+    {
+      "title": "Recuperar tu oficio digital paso a paso",
+      "description": "Recuperar tu oficio digital paso a paso exige inventariar lo que todavía sabés, actualizar una brecha concreta y volver a producir pruebas visibles.",
+      "category": "Saliendo de la Matrix",
+      "url": "/posts/recuperar-tu-oficio-digital-paso-a-paso.html",
+      "date": "2026-06-17",
+      "image": "/assets/img/posts/saliendo-de-la-matrix.svg",
+      "tags": ["saliendo-de-la-matrix", "oficio digital", "actualización", "portfolio"],
+      "readingTime": "8–11 min"
+    },
+    {
+      "title": "Hacer un plan aunque estés cansado",
+      "description": "Hacer un plan aunque estés cansado significa reducir decisiones, trabajar con energía real y dejar una ruta mínima que no dependa de sentirte inspirado.",
+      "category": "Saliendo de la Matrix",
+      "url": "/posts/hacer-un-plan-aunque-estes-cansado.html",
+      "date": "2026-06-17",
+      "image": "/assets/img/posts/saliendo-de-la-matrix.svg",
+      "tags": ["saliendo-de-la-matrix", "plan", "cansancio", "energía"],
+      "readingTime": "8–11 min"
+    },
+    {
+      "title": "Salir del estancamiento con tareas pequeñas",
+      "description": "Salir del estancamiento con tareas pequeñas exige reducir el tamaño de entrada, producir evidencia diaria y aumentar dificultad sólo cuando vuelve el movimiento.",
+      "category": "Saliendo de la Matrix",
+      "url": "/posts/salir-del-estancamiento-con-tareas-pequenas.html",
+      "date": "2026-06-17",
+      "image": "/assets/img/posts/saliendo-de-la-matrix.svg",
+      "tags": ["saliendo-de-la-matrix", "estancamiento", "tareas pequeñas", "tracción"],
+      "readingTime": "8–11 min"
+    },
+    {
+      "title": "Volver a generar dinero desde internet",
+      "description": "Volver a generar dinero desde internet requiere elegir un modelo, rescatar activos y habilidades previas, validar una oferta y sostener distribución medible.",
+      "category": "Saliendo de la Matrix",
+      "url": "/posts/volver-a-generar-dinero-desde-internet.html",
+      "date": "2026-06-17",
+      "image": "/assets/img/posts/saliendo-de-la-matrix.svg",
+      "tags": ["saliendo-de-la-matrix", "dinero online", "activos digitales", "oferta"],
+      "readingTime": "8–11 min"
+    }
+  ]
+}

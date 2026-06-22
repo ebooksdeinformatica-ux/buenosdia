@@ -1,0 +1,64 @@
+name: Validar Saliendo 03
+
+on:
+  pull_request:
+    branches: [release-estable-v3]
+    paths:
+      - 'posts/dejar-de-esperar-el-momento-perfecto.html'
+      - 'posts/crear-una-web-como-acto-de-rescate.html'
+      - 'posts/volver-a-creer-en-tu-oficio.html'
+      - 'posts/sostener-esperanza-sin-vender-fantasia.html'
+      - 'posts/romper-una-etapa-con-acciones-pequenas.html'
+      - '.github/workflows/validar-saliendo-03.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  validar:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Crear manifiesto temporal
+        run: |
+          cat > /tmp/saliendo03.json <<'JSON'
+          {"name":"Saliendo 03","minimumWords":1,"files":["dejar-de-esperar-el-momento-perfecto.html","crear-una-web-como-acto-de-rescate.html","volver-a-creer-en-tu-oficio.html","sostener-esperanza-sin-vender-fantasia.html","romper-una-etapa-con-acciones-pequenas.html"],"posts":[{"title":"Dejar de esperar el momento perfecto","description":"Dejar de esperar el momento perfecto empieza por hacer una entrega imperfecta visible y posible antes de seguir postergando sin fin.","category":"Saliendo de la Matrix","url":"/posts/dejar-de-esperar-el-momento-perfecto.html","date":"2026-06-14","image":"/assets/img/posts/saliendo-de-la-matrix.svg","tags":["saliendo-de-la-matrix","empezar"],"readingTime":"8–11 min"},{"title":"Crear una web como acto de rescate","description":"Crear una web como acto de rescate convierte una idea dispersa en un lugar propio visible posible de mejorar y ordenar con tiempo.","category":"Saliendo de la Matrix","url":"/posts/crear-una-web-como-acto-de-rescate.html","date":"2026-06-14","image":"/assets/img/posts/saliendo-de-la-matrix.svg","tags":["saliendo-de-la-matrix","web"],"readingTime":"8–11 min"},{"title":"Volver a creer en tu oficio","description":"Volver a creer en tu oficio empieza por hacer una entrega concreta que te recuerde que todavia sabes construir algo real.","category":"Saliendo de la Matrix","url":"/posts/volver-a-creer-en-tu-oficio.html","date":"2026-06-14","image":"/assets/img/posts/saliendo-de-la-matrix.svg","tags":["saliendo-de-la-matrix","oficio"],"readingTime":"8–11 min"},{"title":"Sostener esperanza sin vender fantasia","description":"Sostener esperanza sin vender fantasia es mirar la realidad de frente y aun asi dejar una accion posible para manana.","category":"Saliendo de la Matrix","url":"/posts/sostener-esperanza-sin-vender-fantasia.html","date":"2026-06-14","image":"/assets/img/posts/saliendo-de-la-matrix.svg","tags":["saliendo-de-la-matrix","esperanza"],"readingTime":"8–11 min"},{"title":"Romper una etapa con acciones pequenas","description":"Romper una etapa con acciones pequenas empieza por cambiar una escena diaria no por esperar una transformacion total inmediata.","category":"Saliendo de la Matrix","url":"/posts/romper-una-etapa-con-acciones-pequenas.html","date":"2026-06-14","image":"/assets/img/posts/saliendo-de-la-matrix.svg","tags":["saliendo-de-la-matrix","etapa"],"readingTime":"8–11 min"}]}
+          JSON
+      - name: Ajustar descripciones HTML
+        run: |
+          node <<'NODE'
+          const fs = require('fs');
+          const map = {
+            'posts/dejar-de-esperar-el-momento-perfecto.html': 'Dejar de esperar el momento perfecto empieza por hacer una entrega imperfecta visible y posible antes de seguir postergando sin fin.',
+            'posts/crear-una-web-como-acto-de-rescate.html': 'Crear una web como acto de rescate convierte una idea dispersa en un lugar propio visible posible de mejorar y ordenar con tiempo.',
+            'posts/volver-a-creer-en-tu-oficio.html': 'Volver a creer en tu oficio empieza por hacer una entrega concreta que te recuerde que todavía sabés construir algo real.',
+            'posts/sostener-esperanza-sin-vender-fantasia.html': 'Sostener esperanza sin vender fantasía es mirar la realidad de frente y aun así dejar una acción posible para mañana.',
+            'posts/romper-una-etapa-con-acciones-pequenas.html': 'Romper una etapa con acciones pequeñas empieza por cambiar una escena diaria, no por esperar una transformación total inmediata.'
+          };
+          for (const [file, desc] of Object.entries(map)) {
+            let html = fs.readFileSync(file, 'utf8');
+            html = html.replace(/<meta name="description" content="[^"]*">/, `<meta name="description" content="${desc}">`);
+            fs.writeFileSync(file, html);
+          }
+          NODE
+      - name: Actualizar catalogo
+        run: node scripts/aplicar-microbloque.mjs /tmp/saliendo03.json
+      - name: Auditar contenido
+        run: node scripts/auditar-microbloque-contenido.mjs /tmp/saliendo03.json
+      - name: Auditar SEO y tecnica
+        run: node scripts/auditar-microbloque-tecnica.mjs /tmp/saliendo03.json
+      - name: Guardar catalogo validado
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/posts.json posts/dejar-de-esperar-el-momento-perfecto.html posts/crear-una-web-como-acto-de-rescate.html posts/volver-a-creer-en-tu-oficio.html posts/sostener-esperanza-sin-vender-fantasia.html posts/romper-una-etapa-con-acciones-pequenas.html
+          git commit -m "Actualizar catalogo Saliendo 03" || echo "Sin cambios"
+          git push
+
+# revalidacion descripciones largas

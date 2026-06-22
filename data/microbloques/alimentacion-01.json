@@ -1,0 +1,63 @@
+{
+  "name": "Alimentacion 01 final",
+  "minimumWords": 1,
+  "files": [
+    "comer-mal-y-pensar-con-niebla.html",
+    "desayunar-mejor-para-empezar-distinto.html",
+    "azucar-ansiedad-y-energia-prestada.html",
+    "ultraprocesados-y-cansancio-cotidiano.html",
+    "agua-cuerpo-y-claridad-mental.html"
+  ],
+  "posts": [
+    {
+      "title": "Comer mal y pensar con niebla",
+      "description": "Comer mal y pensar con niebla no siempre se nota en el plato: a veces aparece como cansancio, confusión y falta de ritmo durante el día.",
+      "category": "Alimentación",
+      "url": "/posts/comer-mal-y-pensar-con-niebla.html",
+      "date": "2026-06-14",
+      "image": "/assets/img/posts/alimentacion.svg",
+      "tags": ["alimentación", "claridad", "hábitos", "energía"],
+      "readingTime": "8–11 min"
+    },
+    {
+      "title": "Desayunar mejor para empezar distinto",
+      "description": "Desayunar mejor para empezar distinto no es hacer una dieta perfecta: es darle al cuerpo una base más estable para entrar al día.",
+      "category": "Alimentación",
+      "url": "/posts/desayunar-mejor-para-empezar-distinto.html",
+      "date": "2026-06-14",
+      "image": "/assets/img/posts/alimentacion.svg",
+      "tags": ["alimentación", "desayuno", "energía", "hábitos"],
+      "readingTime": "8–11 min"
+    },
+    {
+      "title": "Azúcar, ansiedad y energía prestada",
+      "description": "Azúcar, ansiedad y energía prestada habla de esos impulsos dulces que levantan rápido, pero a veces dejan más altibajo que sostén.",
+      "category": "Alimentación",
+      "url": "/posts/azucar-ansiedad-y-energia-prestada.html",
+      "date": "2026-06-14",
+      "image": "/assets/img/posts/alimentacion.svg",
+      "tags": ["alimentación", "azúcar", "energía", "hábitos"],
+      "readingTime": "8–11 min"
+    },
+    {
+      "title": "Ultraprocesados y cansancio cotidiano",
+      "description": "Ultraprocesados y cansancio cotidiano mira cómo la comida de emergencia puede volverse rutina y dejar menos energía real durante el día.",
+      "category": "Alimentación",
+      "url": "/posts/ultraprocesados-y-cansancio-cotidiano.html",
+      "date": "2026-06-14",
+      "image": "/assets/img/posts/alimentacion.svg",
+      "tags": ["alimentación", "ultraprocesados", "cansancio", "hábitos"],
+      "readingTime": "8–11 min"
+    },
+    {
+      "title": "Agua, cuerpo y claridad mental",
+      "description": "Agua, cuerpo y claridad mental mira una señal simple: a veces el cansancio y la confusión empiezan por no tomar agua durante horas.",
+      "category": "Alimentación",
+      "url": "/posts/agua-cuerpo-y-claridad-mental.html",
+      "date": "2026-06-14",
+      "image": "/assets/img/posts/alimentacion.svg",
+      "tags": ["alimentación", "agua", "cuerpo", "claridad"],
+      "readingTime": "8–11 min"
+    }
+  ]
+}

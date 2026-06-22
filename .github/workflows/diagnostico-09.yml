@@ -1,0 +1,32 @@
+name: Diagnostico 09
+
+on:
+  pull_request:
+    branches: [release-estable-v3]
+
+permissions:
+  contents: write
+
+jobs:
+  diagnostico:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+          show-progress: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Guardar errores de auditoria
+        run: |
+          set +e
+          node scripts/auditar-microbloque-contenido.mjs data/microbloques/tecnologia-09.json > data/microbloques/tecnologia-09-errors.txt 2>&1
+          status=$?
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/microbloques/tecnologia-09-errors.txt
+          git commit -m "Registrar diagnostico bloque 09" || true
+          git push || true
+          exit $status

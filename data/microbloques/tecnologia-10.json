@@ -1,0 +1,63 @@
+{
+  "name": "Tecnologia 10 final",
+  "minimumWords": 1,
+  "files": [
+    "ordenar-contrasenas-y-cuentas-sin-caos.html",
+    "hacer-backups-simples-para-no-perder-tu-trabajo.html",
+    "usar-prompts-para-planificar-un-negocio-digital.html",
+    "levantar-un-proyecto-abandonado-con-metodo.html",
+    "crear-una-rutina-de-mantenimiento-web-semanal.html"
+  ],
+  "posts": [
+    {
+      "title": "Ordenar cuentas digitales sin caos",
+      "description": "Ordenar cuentas digitales sin caos ayuda a sostener proyectos: mapa de servicios, correo principal, recuperación, doble verificación y revisión sobria.",
+      "category": "Tecnología",
+      "url": "/posts/ordenar-contrasenas-y-cuentas-sin-caos.html",
+      "date": "2026-06-12",
+      "image": "/assets/img/posts/tecnologia.svg",
+      "tags": ["cuentas digitales", "seguridad básica", "organización", "proyectos online"],
+      "readingTime": "8–11 min"
+    },
+    {
+      "title": "Hacer backups simples para no perder tu trabajo",
+      "description": "Hacer backups simples para no perder tu trabajo significa copiar lo importante, separarlo del equipo principal y probar que se puede recuperar.",
+      "category": "Tecnología",
+      "url": "/posts/hacer-backups-simples-para-no-perder-tu-trabajo.html",
+      "date": "2026-06-12",
+      "image": "/assets/img/posts/tecnologia.svg",
+      "tags": ["backups", "archivos", "Git", "respaldo digital"],
+      "readingTime": "8–11 min"
+    },
+    {
+      "title": "Usar prompts para planificar un negocio digital",
+      "description": "Usar prompts para planificar un negocio digital sirve si ordena oferta, público, prueba, límites y próxima acción sin inventar certezas.",
+      "category": "Tecnología",
+      "url": "/posts/usar-prompts-para-planificar-un-negocio-digital.html",
+      "date": "2026-06-12",
+      "image": "/assets/img/posts/tecnologia.svg",
+      "tags": ["prompts", "negocio digital", "IA", "planificación"],
+      "readingTime": "8–11 min"
+    },
+    {
+      "title": "Levantar un proyecto abandonado con método",
+      "description": "Levantar un proyecto abandonado con método exige abrirlo sin culpa, inventariar lo vivo, elegir una entrega mínima y decidir con evidencia.",
+      "category": "Tecnología",
+      "url": "/posts/levantar-un-proyecto-abandonado-con-metodo.html",
+      "date": "2026-06-12",
+      "image": "/assets/img/posts/tecnologia.svg",
+      "tags": ["proyectos abandonados", "reconstrucción", "GitHub", "organización digital"],
+      "readingTime": "8–11 min"
+    },
+    {
+      "title": "Crear una rutina de mantenimiento web semanal",
+      "description": "Crear una rutina de mantenimiento web semanal evita que el sitio se degrade: enlaces, velocidad, imágenes, publicaciones viejas y señales técnicas.",
+      "category": "Tecnología",
+      "url": "/posts/crear-una-rutina-de-mantenimiento-web-semanal.html",
+      "date": "2026-06-12",
+      "image": "/assets/img/posts/tecnologia.svg",
+      "tags": ["mantenimiento web", "SEO técnico", "Git", "blog"],
+      "readingTime": "8–11 min"
+    }
+  ]
+}

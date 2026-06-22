@@ -1,0 +1,29 @@
+{
+  "name": "Tecnología 06b",
+  "posts": [
+    {
+      "url": "/posts/crear-una-web-liviana-para-adsense.html",
+      "title": "Cómo crear una web liviana para AdSense",
+      "description": "Cómo preparar una web liviana para AdSense: contenido útil, navegación clara, velocidad, políticas, ubicación razonable de anuncios y medición honesta.",
+      "date": "2026-06-12",
+      "readingTime": "9–12 min",
+      "tags": ["AdSense", "monetización", "web liviana", "contenido útil"]
+    },
+    {
+      "url": "/posts/usar-internet-para-recuperar-ingresos-perdidos.html",
+      "title": "Cómo usar internet para recuperar ingresos perdidos",
+      "description": "Cómo usar internet para reconstruir ingresos con criterio: inventario de habilidades, servicios simples, contenido propio, medición, límites y expectativas reales.",
+      "date": "2026-06-12",
+      "readingTime": "9–12 min",
+      "tags": ["ingresos online", "servicios digitales", "blog", "reconstrucción"]
+    },
+    {
+      "url": "/posts/crear-un-mini-laboratorio-de-seo-casero.html",
+      "title": "Cómo crear un mini laboratorio de SEO casero",
+      "description": "Cómo crear un mini laboratorio SEO casero: hipótesis, páginas de prueba, cambios pequeños, Search Console, registro y decisiones sin fórmulas mágicas.",
+      "date": "2026-06-12",
+      "readingTime": "9–12 min",
+      "tags": ["SEO", "Search Console", "experimentos", "GitHub"]
+    }
+  ]
+}

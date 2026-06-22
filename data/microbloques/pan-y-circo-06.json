@@ -1,0 +1,63 @@
+{
+  "name": "Pan y Circo 06",
+  "minimumWords": 1,
+  "files": [
+    "elegir-contenido-que-te-deje-mejor.html",
+    "la-cultura-del-escandalo-como-alimento-diario.html",
+    "cuando-el-algoritmo-decide-tu-estado-de-animo.html",
+    "limpiar-tu-consumo-digital-una-semana.html",
+    "la-pantalla-encendida-como-compania-falsa.html"
+  ],
+  "posts": [
+    {
+      "title": "Elegir contenido que te deje mejor",
+      "description": "Elegir contenido que te deje mejor no es buscar perfección: es observar qué te deja más claro, más vivo y menos tomado por el ruido.",
+      "category": "Pan y Circo",
+      "url": "/posts/elegir-contenido-que-te-deje-mejor.html",
+      "date": "2026-06-14",
+      "image": "/assets/img/posts/pan-y-circo.svg",
+      "tags": ["pan y circo", "contenido", "criterio", "atención"],
+      "readingTime": "8–11 min"
+    },
+    {
+      "title": "La cultura del escándalo como alimento diario",
+      "description": "La cultura del escándalo como alimento diario convierte tensión, pelea y reacción en una dieta de atención que deja poco espacio para pensar.",
+      "category": "Pan y Circo",
+      "url": "/posts/la-cultura-del-escandalo-como-alimento-diario.html",
+      "date": "2026-06-14",
+      "image": "/assets/img/posts/pan-y-circo.svg",
+      "tags": ["pan y circo", "escándalo", "atención", "ruido digital"],
+      "readingTime": "8–11 min"
+    },
+    {
+      "title": "Cuando el algoritmo decide tu estado de ánimo",
+      "description": "Cuando el algoritmo decide tu estado de ánimo, el feed puede empujar comparación, enojo o ansiedad antes de que elijas qué querés mirar.",
+      "category": "Pan y Circo",
+      "url": "/posts/cuando-el-algoritmo-decide-tu-estado-de-animo.html",
+      "date": "2026-06-14",
+      "image": "/assets/img/posts/pan-y-circo.svg",
+      "tags": ["pan y circo", "algoritmo", "feed", "atención"],
+      "readingTime": "8–11 min"
+    },
+    {
+      "title": "Limpiar tu consumo digital una semana",
+      "description": "Limpiar tu consumo digital una semana ayuda a ver qué contenido te ordena, qué te agota y qué hábitos merecen salir de tu día.",
+      "category": "Pan y Circo",
+      "url": "/posts/limpiar-tu-consumo-digital-una-semana.html",
+      "date": "2026-06-14",
+      "image": "/assets/img/posts/pan-y-circo.svg",
+      "tags": ["pan y circo", "consumo digital", "limpieza", "atención"],
+      "readingTime": "8–11 min"
+    },
+    {
+      "title": "La pantalla encendida como compañía falsa",
+      "description": "La pantalla encendida como compañía falsa llena la casa de voces y movimiento, pero no siempre reemplaza presencia, calma o vínculo real.",
+      "category": "Pan y Circo",
+      "url": "/posts/la-pantalla-encendida-como-compania-falsa.html",
+      "date": "2026-06-14",
+      "image": "/assets/img/posts/pan-y-circo.svg",
+      "tags": ["pan y circo", "pantalla", "compañía", "silencio"],
+      "readingTime": "8–11 min"
+    }
+  ]
+}

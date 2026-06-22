@@ -1,0 +1,47 @@
+name: Validar Matrix 01
+
+on:
+  pull_request:
+    branches: [release-estable-v3]
+    paths:
+      - 'posts/la-rutina-normal-que-te-va-apagando.html'
+      - 'posts/piloto-automatico-y-dias-repetidos.html'
+      - 'posts/cuando-la-comodidad-se-vuelve-jaula.html'
+      - 'posts/trabajar-consumir-y-dormir-sin-pensar.html'
+      - 'posts/la-agenda-que-no-elegiste.html'
+      - '.github/workflows/validar-matrix-01.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  validar:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Crear manifiesto temporal
+        run: |
+          cat > /tmp/matrix01.json <<'JSON'
+          {"name":"Matrix 01","minimumWords":1,"files":["la-rutina-normal-que-te-va-apagando.html","piloto-automatico-y-dias-repetidos.html","cuando-la-comodidad-se-vuelve-jaula.html","trabajar-consumir-y-dormir-sin-pensar.html","la-agenda-que-no-elegiste.html"],"posts":[{"title":"La rutina normal que te va apagando","description":"La rutina normal que te va apagando no siempre parece grave aparece como repeticion comoda y decisiones postergadas.","category":"Matrix","url":"/posts/la-rutina-normal-que-te-va-apagando.html","date":"2026-06-14","image":"/assets/img/posts/matrix.svg","tags":["matrix","rutina"],"readingTime":"8–11 min"},{"title":"Piloto automatico y dias repetidos","description":"Piloto automatico y dias repetidos muestra como la vida se llena de secuencias que hacemos sin mirar.","category":"Matrix","url":"/posts/piloto-automatico-y-dias-repetidos.html","date":"2026-06-14","image":"/assets/img/posts/matrix.svg","tags":["matrix","rutina"],"readingTime":"8–11 min"},{"title":"Cuando la comodidad se vuelve jaula","description":"Cuando la comodidad se vuelve jaula muestra como lo facil puede volverse una rutina que achica deseo y criterio propio.","category":"Matrix","url":"/posts/cuando-la-comodidad-se-vuelve-jaula.html","date":"2026-06-14","image":"/assets/img/posts/matrix.svg","tags":["matrix","comodidad"],"readingTime":"8–11 min"},{"title":"Trabajar consumir y dormir sin pensar","description":"Trabajar consumir y dormir sin pensar describe una rutina circular donde el dia se llena pero la vida propia queda esperando.","category":"Matrix","url":"/posts/trabajar-consumir-y-dormir-sin-pensar.html","date":"2026-06-14","image":"/assets/img/posts/matrix.svg","tags":["matrix","rutina"],"readingTime":"8–11 min"},{"title":"La agenda que no elegiste","description":"La agenda que no elegiste muestra como interrupciones y obligaciones pueden llenar el dia sin acercarte a lo propio.","category":"Matrix","url":"/posts/la-agenda-que-no-elegiste.html","date":"2026-06-14","image":"/assets/img/posts/matrix.svg","tags":["matrix","agenda"],"readingTime":"8–11 min"}]}
+          JSON
+      - name: Actualizar catalogo
+        run: node scripts/aplicar-microbloque.mjs /tmp/matrix01.json
+      - name: Auditar contenido
+        run: node scripts/auditar-microbloque-contenido.mjs /tmp/matrix01.json
+      - name: Auditar SEO y tecnica
+        run: node scripts/auditar-microbloque-tecnica.mjs /tmp/matrix01.json
+      - name: Guardar catalogo validado
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/posts.json
+          git commit -m "Actualizar catalogo Matrix 01" || echo "Sin cambios"
+          git push
+
+# revalidacion final

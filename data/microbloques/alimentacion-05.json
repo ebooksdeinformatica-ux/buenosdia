@@ -1,0 +1,63 @@
+{
+  "name": "Alimentacion 05 final validado",
+  "minimumWords": 1,
+  "files": [
+    "preparar-comida-para-no-vivir-improvisando.html",
+    "comer-de-noche-y-dormir-peor.html",
+    "cuando-el-delivery-se-vuelve-piloto-automatico.html",
+    "energia-estable-para-trabajar-mejor.html",
+    "alimentos-simples-para-una-semana-mas-clara.html"
+  ],
+  "posts": [
+    {
+      "title": "Preparar comida para no vivir improvisando",
+      "description": "Preparar comida para no vivir improvisando ayuda a dejar opciones simples listas antes de que el día se complique demasiado.",
+      "category": "Alimentación",
+      "url": "/posts/preparar-comida-para-no-vivir-improvisando.html",
+      "date": "2026-06-14",
+      "image": "/assets/img/posts/alimentacion.svg",
+      "tags": ["alimentación", "preparar comida", "organización", "hábitos"],
+      "readingTime": "8–11 min"
+    },
+    {
+      "title": "Comer de noche y dormir peor",
+      "description": "Comer de noche y dormir peor puede ser una señal de horarios desordenados, cenas pesadas o hambre acumulada durante el día.",
+      "category": "Alimentación",
+      "url": "/posts/comer-de-noche-y-dormir-peor.html",
+      "date": "2026-06-14",
+      "image": "/assets/img/posts/alimentacion.svg",
+      "tags": ["alimentación", "noche", "descanso", "rutina"],
+      "readingTime": "8–11 min"
+    },
+    {
+      "title": "Cuando el delivery se vuelve piloto automático",
+      "description": "Cuando el delivery se vuelve piloto automático conviene mirar hábito, gasto y falta de opciones simples antes del apuro.",
+      "category": "Alimentación",
+      "url": "/posts/cuando-el-delivery-se-vuelve-piloto-automatico.html",
+      "date": "2026-06-14",
+      "image": "/assets/img/posts/alimentacion.svg",
+      "tags": ["alimentación", "delivery", "organización", "hábitos"],
+      "readingTime": "8–11 min"
+    },
+    {
+      "title": "Energía estable para trabajar mejor",
+      "description": "Energía estable para trabajar mejor habla de ordenar comidas, agua y pausas para no depender solo de impulsos durante la jornada.",
+      "category": "Alimentación",
+      "url": "/posts/energia-estable-para-trabajar-mejor.html",
+      "date": "2026-06-14",
+      "image": "/assets/img/posts/alimentacion.svg",
+      "tags": ["alimentación", "energía", "trabajo", "hábitos"],
+      "readingTime": "8–11 min"
+    },
+    {
+      "title": "Alimentos simples para una semana más clara",
+      "description": "Alimentos simples para una semana más clara son bases posibles que ayudan a comprar, preparar y comer con menos improvisación.",
+      "category": "Alimentación",
+      "url": "/posts/alimentos-simples-para-una-semana-mas-clara.html",
+      "date": "2026-06-14",
+      "image": "/assets/img/posts/alimentacion.svg",
+      "tags": ["alimentación", "alimentos simples", "semana", "organización"],
+      "readingTime": "8–11 min"
+    }
+  ]
+}

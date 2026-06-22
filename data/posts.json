@@ -1,916 +1,2058 @@
 [
   {
-    "title": "Usar una computadora vieja para crear valor digital",
-    "description": "Guía práctica para usar una computadora vieja para crear valor digital: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y...",
-    "category": "Tecnología",
-    "url": "/posts/usar-una-computadora-vieja-para-crear-valor-digital.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/tecnologia.svg",
+    "title": "Crear una vida menos dependiente del sistema",
+    "description": "Crear una vida menos dependiente del sistema empieza por bajar gastos invisibles, recuperar habilidades útiles y construir márgenes propios sin fantasía.",
+    "category": "Saliendo de la Matrix",
+    "url": "/posts/crear-una-vida-menos-dependiente-del-sistema.html",
+    "date": "2026-06-17",
+    "image": "/assets/img/posts/saliendo-de-la-matrix.svg",
     "tags": [
-      "tecnologia",
-      "computadora",
-      "digital"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "Inteligencia artificial como herramienta de trabajo diario",
-    "description": "Guía práctica para inteligencia artificial como herramienta de trabajo diario: herramientas, riesgos, pasos y criterios para obtener un resultado digital...",
-    "category": "Tecnología",
-    "url": "/posts/inteligencia-artificial-como-herramienta-de-trabajo-diario.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/tecnologia.svg",
-    "tags": [
-      "tecnologia",
-      "inteligencia",
-      "artificial",
-      "herramienta",
-      "trabajo"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "Organizar archivos para no perder proyectos",
-    "description": "Guía práctica para organizar archivos para no perder proyectos: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y sostenible.",
-    "category": "Tecnología",
-    "url": "/posts/organizar-archivos-para-no-perder-proyectos.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/tecnologia.svg",
-    "tags": [
-      "tecnologia",
-      "organizar",
-      "archivos",
-      "perder",
-      "proyectos"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "Crear un blog aunque no tengas equipo perfecto",
-    "description": "Guía práctica para crear un blog aunque no tengas equipo perfecto: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y sostenible.",
-    "category": "Tecnología",
-    "url": "/posts/crear-un-blog-aunque-no-tengas-equipo-perfecto.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/tecnologia.svg",
-    "tags": [
-      "tecnologia",
-      "aunque",
-      "tengas",
-      "equipo",
-      "perfecto"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "Aprender programación cuando venís de cero",
-    "description": "Guía práctica para aprender programación cuando venís de cero: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y sostenible.",
-    "category": "Tecnología",
-    "url": "/posts/aprender-programacion-cuando-venis-de-cero.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/tecnologia.svg",
-    "tags": [
-      "tecnologia",
-      "aprender",
-      "programación",
-      "cuando"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "Automatizar tareas simples sin complicarte",
-    "description": "Guía práctica para automatizar tareas simples sin complicarte: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y sostenible.",
-    "category": "Tecnología",
-    "url": "/posts/automatizar-tareas-simples-sin-complicarte.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/tecnologia.svg",
-    "tags": [
-      "tecnologia",
-      "automatizar",
-      "tareas",
-      "simples",
-      "complicarte"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "Vender plantillas digitales a gente común",
-    "description": "Guía práctica para vender plantillas digitales a gente común: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y sostenible.",
-    "category": "Tecnología",
-    "url": "/posts/vender-plantillas-digitales-a-gente-comun.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/tecnologia.svg",
-    "tags": [
-      "tecnologia",
-      "vender",
-      "plantillas",
-      "digitales"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "Usar internet para recuperar ingresos perdidos",
-    "description": "Guía práctica para usar internet para recuperar ingresos perdidos: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y sostenible.",
-    "category": "Tecnología",
-    "url": "/posts/usar-internet-para-recuperar-ingresos-perdidos.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/tecnologia.svg",
-    "tags": [
-      "tecnologia",
-      "internet",
-      "recuperar",
-      "ingresos",
-      "perdidos"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "Crear contenido sin depender de redes sociales",
-    "description": "Guía práctica para crear contenido sin depender de redes sociales: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y sostenible.",
-    "category": "Tecnología",
-    "url": "/posts/crear-contenido-sin-depender-de-redes-sociales.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/tecnologia.svg",
-    "tags": [
-      "tecnologia",
-      "contenido",
-      "depender",
-      "sociales"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "Convertir ideas sueltas en publicaciones útiles",
-    "description": "Guía práctica para convertir ideas sueltas en publicaciones útiles: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y sostenible.",
-    "category": "Tecnología",
-    "url": "/posts/convertir-ideas-sueltas-en-publicaciones-utiles.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/tecnologia.svg",
-    "tags": [
-      "tecnologia",
-      "convertir",
-      "sueltas",
-      "publicaciones",
-      "útiles"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "Usar IA para ordenar un proyecto online",
-    "description": "Guía práctica para usar ia para ordenar un proyecto online: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y sostenible.",
-    "category": "Tecnología",
-    "url": "/posts/usar-ia-para-ordenar-un-proyecto-online.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/tecnologia.svg",
-    "tags": [
-      "tecnologia",
-      "ordenar",
-      "proyecto",
-      "online"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "Herramientas livianas para una notebook vieja",
-    "description": "Guía práctica para herramientas livianas para una notebook vieja: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y sostenible.",
-    "category": "Tecnología",
-    "url": "/posts/herramientas-livianas-para-una-notebook-vieja.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/tecnologia.svg",
-    "tags": [
-      "tecnologia",
-      "herramientas",
-      "livianas",
-      "notebook"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "Crear una rutina digital de una hora por día",
-    "description": "Guía práctica para crear una rutina digital de una hora por día: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y sostenible.",
-    "category": "Tecnología",
-    "url": "/posts/crear-una-rutina-digital-de-una-hora-por-dia.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/tecnologia.svg",
-    "tags": [
-      "tecnologia",
-      "rutina",
-      "digital"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "Hacer SEO sin volverse esclavo de los trucos",
-    "description": "Guía práctica para hacer seo sin volverse esclavo de los trucos: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y sostenible.",
-    "category": "Tecnología",
-    "url": "/posts/hacer-seo-sin-volverse-esclavo-de-los-trucos.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/tecnologia.svg",
-    "tags": [
-      "tecnologia",
-      "volverse",
-      "esclavo",
-      "trucos"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "Publicar mejor con pocos recursos",
-    "description": "Guía práctica para publicar mejor con pocos recursos: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y sostenible.",
-    "category": "Tecnología",
-    "url": "/posts/publicar-mejor-con-pocos-recursos.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/tecnologia.svg",
-    "tags": [
-      "tecnologia",
-      "publicar",
-      "recursos"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "Armar una base de conocimiento personal",
-    "description": "Guía práctica para armar una base de conocimiento personal: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y sostenible.",
-    "category": "Tecnología",
-    "url": "/posts/armar-una-base-de-conocimiento-personal.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/tecnologia.svg",
-    "tags": [
-      "tecnologia",
-      "conocimiento",
-      "personal"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "Usar la tecnología para salir del estancamiento",
-    "description": "Guía práctica para usar la tecnología para salir del estancamiento: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y sostenible.",
-    "category": "Tecnología",
-    "url": "/posts/usar-la-tecnologia-para-salir-del-estancamiento.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/tecnologia.svg",
-    "tags": [
-      "tecnologia",
-      "tecnología",
-      "estancamiento"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "Crear servicios digitales simples para vender",
-    "description": "Guía práctica para crear servicios digitales simples para vender: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y sostenible.",
-    "category": "Tecnología",
-    "url": "/posts/crear-servicios-digitales-simples-para-vender.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/tecnologia.svg",
-    "tags": [
-      "tecnologia",
-      "servicios",
-      "digitales",
-      "simples",
-      "vender"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "Ordenar contraseñas y cuentas sin caos",
-    "description": "Guía práctica para ordenar contraseñas y cuentas sin caos: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y sostenible.",
-    "category": "Tecnología",
-    "url": "/posts/ordenar-contrasenas-y-cuentas-sin-caos.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/tecnologia.svg",
-    "tags": [
-      "tecnologia",
-      "ordenar",
-      "contraseñas",
-      "cuentas"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "Hacer una web estática que cargue rápido",
-    "description": "Guía práctica para hacer una web estática que cargue rápido: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y sostenible.",
-    "category": "Tecnología",
-    "url": "/posts/hacer-una-web-estatica-que-cargue-rapido.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/tecnologia.svg",
-    "tags": [
-      "tecnologia",
-      "estática",
-      "cargue",
-      "rápido"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "Escribir mejores prompts con intención real",
-    "description": "Guía práctica para escribir mejores prompts con intención real: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y sostenible.",
-    "category": "Tecnología",
-    "url": "/posts/escribir-mejores-prompts-con-intencion-real.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/tecnologia.svg",
-    "tags": [
-      "tecnologia",
-      "escribir",
-      "mejores",
-      "prompts",
-      "intención"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "Usar GitHub como taller de proyectos",
-    "description": "Guía práctica para usar github como taller de proyectos: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y sostenible.",
-    "category": "Tecnología",
-    "url": "/posts/usar-github-como-taller-de-proyectos.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/tecnologia.svg",
-    "tags": [
-      "tecnologia",
-      "GitHub",
-      "taller",
-      "proyectos"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "Crear imágenes web limpias y livianas",
-    "description": "Guía práctica para crear imágenes web limpias y livianas: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y sostenible.",
-    "category": "Tecnología",
-    "url": "/posts/crear-imagenes-web-limpias-y-livianas.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/tecnologia.svg",
-    "tags": [
-      "tecnologia",
-      "imágenes",
-      "limpias",
-      "livianas"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "Transformar experiencia vieja en contenido nuevo",
-    "description": "Guía práctica para transformar experiencia vieja en contenido nuevo: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y...",
-    "category": "Tecnología",
-    "url": "/posts/transformar-experiencia-vieja-en-contenido-nuevo.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/tecnologia.svg",
-    "tags": [
-      "tecnologia",
-      "transformar",
-      "experiencia",
-      "contenido"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "Volver a vivir de internet sin nostalgia",
-    "description": "Guía práctica para volver a vivir de internet sin nostalgia: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y sostenible.",
-    "category": "Tecnología",
-    "url": "/posts/volver-a-vivir-de-internet-sin-nostalgia.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/tecnologia.svg",
-    "tags": [
-      "tecnologia",
-      "volver",
-      "internet",
-      "nostalgia"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "Crear un sistema de trabajo digital desde cero",
-    "description": "Guía práctica para crear un sistema de trabajo digital desde cero: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y sostenible.",
-    "category": "Tecnología",
-    "url": "/posts/crear-un-sistema-de-trabajo-digital-desde-cero.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/tecnologia.svg",
-    "tags": [
-      "tecnologia",
+      "saliendo-de-la-matrix",
+      "autonomía",
       "sistema",
+      "margen"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Usar tus conocimientos para rescatarte",
+    "description": "Usar tus conocimientos para rescatarte exige dejar de mirar lo que falta y convertir lo que ya sabés en una prueba útil, vendible o publicable.",
+    "category": "Saliendo de la Matrix",
+    "url": "/posts/usar-tus-conocimientos-para-rescatarte.html",
+    "date": "2026-06-17",
+    "image": "/assets/img/posts/saliendo-de-la-matrix.svg",
+    "tags": [
+      "saliendo-de-la-matrix",
+      "conocimiento",
+      "rescate",
+      "oficio"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Armar una agenda de supervivencia creativa",
+    "description": "Armar una agenda de supervivencia creativa permite ordenar lo básico, reservar energía y sostener producción propia sin esperar condiciones perfectas.",
+    "category": "Saliendo de la Matrix",
+    "url": "/posts/armar-una-agenda-de-supervivencia-creativa.html",
+    "date": "2026-06-17",
+    "image": "/assets/img/posts/saliendo-de-la-matrix.svg",
+    "tags": [
+      "saliendo-de-la-matrix",
+      "agenda",
+      "supervivencia",
+      "creatividad"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Trabajar aunque todavía no haya resultados",
+    "description": "Trabajar aunque todavía no haya resultados requiere distinguir evidencia de recompensa y sostener acciones que preparan el terreno antes de que se vea.",
+    "category": "Saliendo de la Matrix",
+    "url": "/posts/trabajar-aunque-todavia-no-haya-resultados.html",
+    "date": "2026-06-17",
+    "image": "/assets/img/posts/saliendo-de-la-matrix.svg",
+    "tags": [
+      "saliendo-de-la-matrix",
       "trabajo",
-      "digital"
+      "resultados",
+      "constancia"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "8–11 min"
   },
   {
-    "title": "Usar herramientas gratuitas para producir más",
-    "description": "Guía práctica para usar herramientas gratuitas para producir más: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y sostenible.",
-    "category": "Tecnología",
-    "url": "/posts/usar-herramientas-gratuitas-para-producir-mas.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/tecnologia.svg",
+    "title": "Crear activos digitales en silencio",
+    "description": "Crear activos digitales en silencio ayuda a construir valor propio antes del aplauso: archivos, páginas, recursos y sistemas que puedan trabajar después.",
+    "category": "Saliendo de la Matrix",
+    "url": "/posts/crear-activos-digitales-en-silencio.html",
+    "date": "2026-06-17",
+    "image": "/assets/img/posts/saliendo-de-la-matrix.svg",
     "tags": [
-      "tecnologia",
-      "herramientas",
-      "gratuitas",
-      "producir"
+      "saliendo-de-la-matrix",
+      "activos digitales",
+      "silencio",
+      "producción"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "8–11 min"
   },
   {
-    "title": "Hacer una página rápida que Google pueda entender",
-    "description": "Guía práctica para hacer una página rápida que google pueda entender: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y...",
-    "category": "Tecnología",
-    "url": "/posts/hacer-una-pagina-rapida-que-google-pueda-entender.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/tecnologia.svg",
+    "title": "Salir del modo víctima sin negarte el dolor",
+    "description": "Salir del modo víctima sin negar el dolor implica reconocer lo vivido, recuperar margen de decisión y elegir acciones pequeñas que devuelvan dirección.",
+    "category": "Saliendo de la Matrix",
+    "url": "/posts/salir-del-modo-victima-sin-negarte-dolor.html",
+    "date": "2026-06-16",
+    "image": "/assets/img/posts/saliendo-de-la-matrix.svg",
     "tags": [
-      "tecnologia",
-      "página",
-      "rápida",
-      "Google",
-      "entender"
+      "saliendo-de-la-matrix",
+      "responsabilidad",
+      "dolor",
+      "decisión"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "8–11 min"
   },
   {
-    "title": "Crear un archivo maestro para tus proyectos online",
-    "description": "Guía práctica para crear un archivo maestro para tus proyectos online: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y...",
-    "category": "Tecnología",
-    "url": "/posts/crear-un-archivo-maestro-para-tus-proyectos-online.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/tecnologia.svg",
+    "title": "Reconstruirte sin aplausos",
+    "description": "Reconstruirte sin aplausos exige sostener acciones que nadie celebra todavía, registrar avances reales y dejar que la constancia hable antes que la opinión.",
+    "category": "Saliendo de la Matrix",
+    "url": "/posts/reconstruirte-sin-aplausos.html",
+    "date": "2026-06-16",
+    "image": "/assets/img/posts/saliendo-de-la-matrix.svg",
     "tags": [
-      "tecnologia",
-      "archivo",
-      "maestro",
-      "proyectos",
-      "online"
+      "saliendo-de-la-matrix",
+      "reconstrucción",
+      "constancia",
+      "autonomía"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "8–11 min"
   },
   {
-    "title": "Convertir conocimientos informáticos en servicios simples",
-    "description": "Guía práctica para convertir conocimientos informáticos en servicios simples: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto...",
-    "category": "Tecnología",
-    "url": "/posts/convertir-conocimientos-informaticos-en-servicios-simples.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/tecnologia.svg",
+    "title": "Crear un sistema personal de avance",
+    "description": "Crear un sistema personal de avance convierte objetivos difusos en acciones visibles, revisiones breves y una continuidad posible incluso en semanas difíciles.",
+    "category": "Saliendo de la Matrix",
+    "url": "/posts/crear-un-sistema-personal-de-avance.html",
+    "date": "2026-06-16",
+    "image": "/assets/img/posts/saliendo-de-la-matrix.svg",
     "tags": [
-      "tecnologia",
-      "convertir",
-      "conocimientos",
-      "informáticos",
-      "servicios"
+      "saliendo-de-la-matrix",
+      "sistema personal",
+      "avance",
+      "revisión"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "8–11 min"
   },
   {
-    "title": "Usar IA para mejorar textos sin perder tu voz",
-    "description": "Guía práctica para usar ia para mejorar textos sin perder tu voz: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y sostenible.",
-    "category": "Tecnología",
-    "url": "/posts/usar-ia-para-mejorar-textos-sin-perder-tu-voz.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/tecnologia.svg",
+    "title": "Dejar de mirar y empezar a hacer",
+    "description": "Dejar de mirar y empezar a hacer requiere cortar la espera, elegir una tarea concreta y producir una primera prueba que abra el camino a la siguiente.",
+    "category": "Saliendo de la Matrix",
+    "url": "/posts/dejar-de-mirar-y-empezar-a-hacer.html",
+    "date": "2026-06-16",
+    "image": "/assets/img/posts/saliendo-de-la-matrix.svg",
     "tags": [
-      "tecnologia",
-      "mejorar",
-      "textos",
-      "perder"
+      "saliendo-de-la-matrix",
+      "acción",
+      "atención",
+      "proyecto"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "8–11 min"
   },
   {
-    "title": "Organizar una semana de producción digital",
-    "description": "Guía práctica para organizar una semana de producción digital: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y sostenible.",
-    "category": "Tecnología",
-    "url": "/posts/organizar-una-semana-de-produccion-digital.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/tecnologia.svg",
+    "title": "Internet como segunda oportunidad",
+    "description": "Internet como segunda oportunidad funciona cuando una habilidad concreta se transforma en servicio, contenido o producto sin promesas rápidas ni dependencia total.",
+    "category": "Saliendo de la Matrix",
+    "url": "/posts/internet-como-segunda-oportunidad.html",
+    "date": "2026-06-16",
+    "image": "/assets/img/posts/saliendo-de-la-matrix.svg",
     "tags": [
-      "tecnologia",
-      "organizar",
-      "semana",
-      "producción",
-      "digital"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "Crear recursos descargables para vender en internet",
-    "description": "Guía práctica para crear recursos descargables para vender en internet: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y...",
-    "category": "Tecnología",
-    "url": "/posts/crear-recursos-descargables-para-vender-en-internet.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/tecnologia.svg",
-    "tags": [
-      "tecnologia",
-      "recursos",
-      "descargables",
-      "vender",
-      "internet"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "Mejorar una web vieja sin romperla",
-    "description": "Guía práctica para mejorar una web vieja sin romperla: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y sostenible.",
-    "category": "Tecnología",
-    "url": "/posts/mejorar-una-web-vieja-sin-romperla.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/tecnologia.svg",
-    "tags": [
-      "tecnologia",
-      "mejorar",
-      "romperla"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "Usar una computadora lenta con inteligencia práctica",
-    "description": "Guía práctica para usar una computadora lenta con inteligencia práctica: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y...",
-    "category": "Tecnología",
-    "url": "/posts/usar-una-computadora-lenta-con-inteligencia-practica.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/tecnologia.svg",
-    "tags": [
-      "tecnologia",
-      "computadora",
-      "inteligencia",
-      "práctica"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "Crear un calendario editorial sin complicarte",
-    "description": "Guía práctica para crear un calendario editorial sin complicarte: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y sostenible.",
-    "category": "Tecnología",
-    "url": "/posts/crear-un-calendario-editorial-sin-complicarte.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/tecnologia.svg",
-    "tags": [
-      "tecnologia",
-      "calendario",
-      "editorial",
-      "complicarte"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "Probar ideas digitales antes de gastar dinero",
-    "description": "Guía práctica para probar ideas digitales antes de gastar dinero: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y sostenible.",
-    "category": "Tecnología",
-    "url": "/posts/probar-ideas-digitales-antes-de-gastar-dinero.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/tecnologia.svg",
-    "tags": [
-      "tecnologia",
-      "probar",
-      "digitales",
-      "gastar",
-      "dinero"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "Usar estadísticas para decidir qué publicar",
-    "description": "Guía práctica para usar estadísticas para decidir qué publicar: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y sostenible.",
-    "category": "Tecnología",
-    "url": "/posts/usar-estadisticas-para-decidir-que-publicar.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/tecnologia.svg",
-    "tags": [
-      "tecnologia",
-      "estadísticas",
-      "decidir",
-      "publicar"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "Crear una marca personal desde una notebook común",
-    "description": "Guía práctica para crear una marca personal desde una notebook común: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y...",
-    "category": "Tecnología",
-    "url": "/posts/crear-una-marca-personal-desde-una-notebook-comun.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/tecnologia.svg",
-    "tags": [
-      "tecnologia",
-      "personal",
-      "notebook"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "Hacer backups simples para no perder tu trabajo",
-    "description": "Guía práctica para hacer backups simples para no perder tu trabajo: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y sostenible.",
-    "category": "Tecnología",
-    "url": "/posts/hacer-backups-simples-para-no-perder-tu-trabajo.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/tecnologia.svg",
-    "tags": [
-      "tecnologia",
-      "backups",
-      "simples",
-      "perder",
-      "trabajo"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "Crear un mini laboratorio de SEO casero",
-    "description": "Guía práctica para crear un mini laboratorio de seo casero: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y sostenible.",
-    "category": "Tecnología",
-    "url": "/posts/crear-un-mini-laboratorio-de-seo-casero.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/tecnologia.svg",
-    "tags": [
-      "tecnologia",
-      "laboratorio",
-      "casero"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "Automatizar publicaciones sin perder calidad humana",
-    "description": "Guía práctica para automatizar publicaciones sin perder calidad humana: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y...",
-    "category": "Tecnología",
-    "url": "/posts/automatizar-publicaciones-sin-perder-calidad-humana.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/tecnologia.svg",
-    "tags": [
-      "tecnologia",
-      "automatizar",
-      "publicaciones",
-      "perder",
-      "calidad"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "Usar internet para encontrar oportunidades reales",
-    "description": "Guía práctica para usar internet para encontrar oportunidades reales: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y...",
-    "category": "Tecnología",
-    "url": "/posts/usar-internet-para-encontrar-oportunidades-reales.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/tecnologia.svg",
-    "tags": [
-      "tecnologia",
+      "saliendo-de-la-matrix",
       "internet",
-      "encontrar",
-      "oportunidades",
-      "reales"
+      "oficio digital",
+      "segunda oportunidad"
     ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "Convertir una habilidad vieja en producto digital",
-    "description": "Guía práctica para convertir una habilidad vieja en producto digital: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y...",
-    "category": "Tecnología",
-    "url": "/posts/convertir-una-habilidad-vieja-en-producto-digital.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/tecnologia.svg",
-    "tags": [
-      "tecnologia",
-      "convertir",
-      "habilidad",
-      "producto",
-      "digital"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "Crear una web liviana para AdSense",
-    "description": "Guía práctica para crear una web liviana para adsense: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y sostenible.",
-    "category": "Tecnología",
-    "url": "/posts/crear-una-web-liviana-para-adsense.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/tecnologia.svg",
-    "tags": [
-      "tecnologia",
-      "liviana",
-      "AdSense"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "Trabajar con foco cuando la computadora no ayuda",
-    "description": "Guía práctica para trabajar con foco cuando la computadora no ayuda: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y...",
-    "category": "Tecnología",
-    "url": "/posts/trabajar-con-foco-cuando-la-computadora-no-ayuda.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/tecnologia.svg",
-    "tags": [
-      "tecnologia",
-      "trabajar",
-      "cuando",
-      "computadora"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "Usar prompts para planificar un negocio digital",
-    "description": "Guía práctica para usar prompts para planificar un negocio digital: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y sostenible.",
-    "category": "Tecnología",
-    "url": "/posts/usar-prompts-para-planificar-un-negocio-digital.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/tecnologia.svg",
-    "tags": [
-      "tecnologia",
-      "prompts",
-      "planificar",
-      "negocio",
-      "digital"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "Crear contenido evergreen con mirada propia",
-    "description": "Guía práctica para crear contenido evergreen con mirada propia: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y sostenible.",
-    "category": "Tecnología",
-    "url": "/posts/crear-contenido-evergreen-con-mirada-propia.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/tecnologia.svg",
-    "tags": [
-      "tecnologia",
-      "contenido",
-      "evergreen",
-      "mirada",
-      "propia"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "Levantar un proyecto abandonado con método",
-    "description": "Guía práctica para levantar un proyecto abandonado con método: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y sostenible.",
-    "category": "Tecnología",
-    "url": "/posts/levantar-un-proyecto-abandonado-con-metodo.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/tecnologia.svg",
-    "tags": [
-      "tecnologia",
-      "levantar",
-      "proyecto",
-      "abandonado",
-      "método"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "Crear una rutina de mantenimiento web semanal",
-    "description": "Guía práctica para crear una rutina de mantenimiento web semanal: herramientas, riesgos, pasos y criterios para obtener un resultado digital concreto y sostenible.",
-    "category": "Tecnología",
-    "url": "/posts/crear-una-rutina-de-mantenimiento-web-semanal.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/tecnologia.svg",
-    "tags": [
-      "tecnologia",
-      "rutina",
-      "mantenimiento",
-      "semanal"
-    ],
-    "readingTime": "10–14 min"
+    "readingTime": "8–11 min"
   },
   {
     "title": "Cuando el entretenimiento se vuelve anestesia",
-    "description": "Análisis práctico de cuando el entretenimiento se vuelve anestesia: disparadores, efectos sobre la atención y cambios concretos para recuperar tiempo y criterio.",
+    "description": "Cuando el entretenimiento se vuelve anestesia deja de descansar y empieza a borrar señales: cansancio, enojo, pendientes y ganas de cambiar algo.",
     "category": "Pan y Circo",
     "url": "/posts/cuando-el-entretenimiento-se-vuelve-anestesia.html",
-    "date": "2026-06-10",
+    "date": "2026-06-14",
     "image": "/assets/img/posts/pan-y-circo.svg",
     "tags": [
-      "pan-y-circo",
-      "cuando",
+      "pan y circo",
       "entretenimiento",
-      "vuelve",
-      "anestesia"
+      "atención",
+      "descanso"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "8–11 min"
   },
   {
     "title": "Series que descansan y series que te vacían",
-    "description": "Análisis práctico de series que descansan y series que te vacían: disparadores, efectos sobre la atención y cambios concretos para recuperar tiempo y criterio.",
+    "description": "Series que descansan y series que te vacían se distinguen por el efecto posterior: calma elegida o consumo automático que deja más cansancio.",
     "category": "Pan y Circo",
     "url": "/posts/series-que-descansan-y-series-que-te-vacian.html",
-    "date": "2026-06-10",
+    "date": "2026-06-14",
     "image": "/assets/img/posts/pan-y-circo.svg",
     "tags": [
-      "pan-y-circo",
+      "pan y circo",
       "series",
-      "descansan",
-      "series",
-      "vacían"
+      "atención",
+      "descanso"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "8–11 min"
   },
   {
     "title": "El scroll infinito y la mañana perdida",
-    "description": "Análisis práctico de el scroll infinito y la mañana perdida: disparadores, efectos sobre la atención y cambios concretos para recuperar tiempo y criterio.",
+    "description": "El scroll infinito y la mañana perdida muestran cómo un gesto mínimo puede capturar el arranque del día antes de que decidas qué hacer.",
     "category": "Pan y Circo",
     "url": "/posts/el-scroll-infinito-y-la-manana-perdida.html",
-    "date": "2026-06-10",
+    "date": "2026-06-14",
     "image": "/assets/img/posts/pan-y-circo.svg",
     "tags": [
-      "pan-y-circo",
-      "scroll",
-      "infinito",
-      "mañana",
-      "perdida"
+      "pan y circo",
+      "scroll infinito",
+      "atención",
+      "mañana"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "8–11 min"
   },
   {
     "title": "Televisión como ruido de fondo mental",
-    "description": "Análisis práctico de televisión como ruido de fondo mental: disparadores, efectos sobre la atención y cambios concretos para recuperar tiempo y criterio.",
+    "description": "Televisión como ruido de fondo mental habla de ese sonido constante que parece compañía, pero ocupa atención, silencio y descanso real.",
     "category": "Pan y Circo",
     "url": "/posts/television-como-ruido-de-fondo-mental.html",
-    "date": "2026-06-10",
+    "date": "2026-06-14",
     "image": "/assets/img/posts/pan-y-circo.svg",
     "tags": [
-      "pan-y-circo",
+      "pan y circo",
       "televisión",
-      "mental"
+      "ruido mental",
+      "atención"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "8–11 min"
   },
   {
     "title": "Mirar menos para pensar mejor",
-    "description": "Análisis práctico de mirar menos para pensar mejor: disparadores, efectos sobre la atención y cambios concretos para recuperar tiempo y criterio.",
+    "description": "Mirar menos para pensar mejor no es rechazar pantallas: es recuperar silencio, atención y criterio para que el día no venga pensado por otros.",
     "category": "Pan y Circo",
     "url": "/posts/mirar-menos-para-pensar-mejor.html",
-    "date": "2026-06-10",
+    "date": "2026-06-14",
     "image": "/assets/img/posts/pan-y-circo.svg",
     "tags": [
-      "pan-y-circo",
-      "pensar"
+      "pan y circo",
+      "atención",
+      "pensamiento",
+      "pantallas"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "8–11 min"
   },
   {
     "title": "La pantalla como premio barato",
-    "description": "Análisis práctico de la pantalla como premio barato: disparadores, efectos sobre la atención y cambios concretos para recuperar tiempo y criterio.",
+    "description": "La pantalla como premio barato aparece cuando cada esfuerzo se paga con un estímulo rápido que calma un minuto y cobra atención después.",
     "category": "Pan y Circo",
     "url": "/posts/la-pantalla-como-premio-barato.html",
-    "date": "2026-06-10",
+    "date": "2026-06-14",
     "image": "/assets/img/posts/pan-y-circo.svg",
     "tags": [
-      "pan-y-circo",
-      "pantalla",
-      "premio",
-      "barato"
+      "pan y circo",
+      "pantallas",
+      "recompensa",
+      "atención"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "8–11 min"
   },
   {
     "title": "Consumo digital y cansancio invisible",
-    "description": "Análisis práctico de consumo digital y cansancio invisible: disparadores, efectos sobre la atención y cambios concretos para recuperar tiempo y criterio.",
+    "description": "Consumo digital y cansancio invisible describe ese agotamiento que llega sin esfuerzo físico: demasiadas entradas, estímulos y microdecisiones.",
     "category": "Pan y Circo",
     "url": "/posts/consumo-digital-y-cansancio-invisible.html",
-    "date": "2026-06-10",
+    "date": "2026-06-14",
     "image": "/assets/img/posts/pan-y-circo.svg",
     "tags": [
-      "pan-y-circo",
-      "consumo",
-      "digital",
+      "pan y circo",
+      "consumo digital",
       "cansancio",
-      "invisible"
+      "atención"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "8–11 min"
   },
   {
     "title": "Noticias que informan y noticias que intoxican",
-    "description": "Análisis práctico de noticias que informan y noticias que intoxican: disparadores, efectos sobre la atención y cambios concretos para recuperar tiempo y criterio.",
+    "description": "Noticias que informan y noticias que intoxican se diferencian por el efecto: una orienta, la otra repite urgencias hasta dejarte sin acción.",
     "category": "Pan y Circo",
     "url": "/posts/noticias-que-informan-y-noticias-que-intoxican.html",
-    "date": "2026-06-10",
+    "date": "2026-06-14",
     "image": "/assets/img/posts/pan-y-circo.svg",
     "tags": [
-      "pan-y-circo",
+      "pan y circo",
       "noticias",
-      "informan",
-      "noticias",
-      "intoxican"
+      "atención",
+      "criterio"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "8–11 min"
   },
   {
-    "title": "Famosos escándalos y atención robada",
-    "description": "Análisis práctico de famosos escándalos y atención robada: disparadores, efectos sobre la atención y cambios concretos para recuperar tiempo y criterio.",
+    "title": "Famosos, escándalos y atención robada",
+    "description": "Famosos, escándalos y atención robada muestra cómo el espectáculo de vidas ajenas puede ocupar energía que necesitabas para lo propio.",
     "category": "Pan y Circo",
     "url": "/posts/famosos-escandalos-y-atencion-robada.html",
-    "date": "2026-06-10",
+    "date": "2026-06-14",
     "image": "/assets/img/posts/pan-y-circo.svg",
     "tags": [
-      "pan-y-circo",
+      "pan y circo",
       "famosos",
       "escándalos",
-      "atención",
-      "robada"
+      "atención"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "8–11 min"
   },
   {
     "title": "La cultura del clip corto",
-    "description": "Análisis práctico de la cultura del clip corto: disparadores, efectos sobre la atención y cambios concretos para recuperar tiempo y criterio.",
+    "description": "La cultura del clip corto entrena la atención para esperar impacto inmediato y vuelve más difícil quedarse con ideas largas.",
     "category": "Pan y Circo",
     "url": "/posts/la-cultura-del-clip-corto.html",
-    "date": "2026-06-10",
+    "date": "2026-06-14",
     "image": "/assets/img/posts/pan-y-circo.svg",
     "tags": [
-      "pan-y-circo",
-      "cultura"
+      "pan y circo",
+      "clips cortos",
+      "atención",
+      "cultura digital"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Cómo recuperar silencio después de tanto ruido",
+    "description": "Cómo recuperar silencio después de tanto ruido empieza por bajar estímulos de a poco y dejar que la atención vuelva a escuchar algo propio.",
+    "category": "Pan y Circo",
+    "url": "/posts/como-recuperar-silencio-despues-de-tanto-ruido.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/pan-y-circo.svg",
+    "tags": [
+      "pan y circo",
+      "silencio",
+      "ruido digital",
+      "atención"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Entretenimiento sin culpa pero con límite",
+    "description": "Entretenimiento sin culpa pero con límite propone disfrutar sin entregar todo el día: elegir, cortar y volver mejor a lo propio.",
+    "category": "Pan y Circo",
+    "url": "/posts/entretenimiento-sin-culpa-pero-con-limite.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/pan-y-circo.svg",
+    "tags": [
+      "pan y circo",
+      "entretenimiento",
+      "límites",
+      "descanso"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "El celular como circo de bolsillo",
+    "description": "El celular como circo de bolsillo muestra cómo una herramienta útil también puede convertirse en espectáculo portátil y atención fragmentada.",
+    "category": "Pan y Circo",
+    "url": "/posts/el-celular-como-circo-de-bolsillo.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/pan-y-circo.svg",
+    "tags": [
+      "pan y circo",
+      "celular",
+      "atención",
+      "pantallas"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Redes sociales y comparación diaria",
+    "description": "Redes sociales y comparación diaria muestra cómo una mirada rápida puede volverse medida injusta contra tu propia vida.",
+    "category": "Pan y Circo",
+    "url": "/posts/redes-sociales-y-comparacion-diaria.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/pan-y-circo.svg",
+    "tags": [
+      "pan y circo",
+      "redes sociales",
+      "comparación",
+      "atención"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Ver contenido para escapar de uno mismo",
+    "description": "Ver contenido para escapar de uno mismo empieza como alivio rápido, pero puede tapar cansancio, preguntas y decisiones que necesitan lugar.",
+    "category": "Pan y Circo",
+    "url": "/posts/ver-contenido-para-escapar-de-uno-mismo.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/pan-y-circo.svg",
+    "tags": [
+      "pan y circo",
+      "contenido digital",
+      "fuga",
+      "atención"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Cuando la pantalla ocupa el lugar del proyecto",
+    "description": "Cuando la pantalla ocupa el lugar del proyecto, el consumo parece descanso pero desplaza la accion minima que podia hacerlo avanzar.",
+    "category": "Pan y Circo",
+    "url": "/posts/cuando-la-pantalla-ocupa-el-lugar-del-proyecto.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/pan-y-circo.svg",
+    "tags": [
+      "pan y circo",
+      "proyectos",
+      "pantallas",
+      "atencion"
+    ],
+    "readingTime": "8-11 min"
+  },
+  {
+    "title": "El estimulo rapido que te deja quieto",
+    "description": "El estimulo rapido que te deja quieto da sensacion de movimiento por unos segundos, pero puede desplazar accion real y continuidad.",
+    "category": "Pan y Circo",
+    "url": "/posts/la-dopamina-rapida-que-te-deja-quieto.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/pan-y-circo.svg",
+    "tags": [
+      "pan y circo",
+      "estimulos",
+      "accion",
+      "atencion"
+    ],
+    "readingTime": "8-11 min"
+  },
+  {
+    "title": "Aprender a apagar sin sentir culpa",
+    "description": "Aprender a apagar sin sentir culpa permite cerrar pantallas sin convertir el descanso, el silencio o el limite en una deuda personal.",
+    "category": "Pan y Circo",
+    "url": "/posts/aprender-a-apagar-sin-sentir-culpa.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/pan-y-circo.svg",
+    "tags": [
+      "pan y circo",
+      "apagar",
+      "culpa",
+      "descanso"
+    ],
+    "readingTime": "8-11 min"
+  },
+  {
+    "title": "Consumir cultura sin entregar la cabeza",
+    "description": "Consumir cultura sin entregar la cabeza es mirar, leer y escuchar con criterio propio, sin dejar que cada tendencia decida por vos.",
+    "category": "Pan y Circo",
+    "url": "/posts/consumir-cultura-sin-entregar-la-cabeza.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/pan-y-circo.svg",
+    "tags": [
+      "pan y circo",
+      "cultura",
+      "criterio",
+      "atencion"
+    ],
+    "readingTime": "8-11 min"
+  },
+  {
+    "title": "Peliculas, series y criterio propio",
+    "description": "Peliculas, series y criterio propio propone mirar historias con atencion, disfrutar y quedarte con una lectura personal antes del ruido externo.",
+    "category": "Pan y Circo",
+    "url": "/posts/peliculas-series-y-criterio-propio.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/pan-y-circo.svg",
+    "tags": [
+      "pan y circo",
+      "peliculas",
+      "series",
+      "criterio propio"
+    ],
+    "readingTime": "8-11 min"
+  },
+  {
+    "title": "Salir del ruido sin volverse ermitaño",
+    "description": "Salir del ruido sin volverse ermitaño no exige desaparecer: alcanza con crear bordes sanos para recuperar atención y vida propia.",
+    "category": "Pan y Circo",
+    "url": "/posts/salir-del-ruido-sin-volverse-ermitano.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/pan-y-circo.svg",
+    "tags": [
+      "pan y circo",
+      "ruido digital",
+      "silencio",
+      "atención"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "El entretenimiento que te roba la mañana sin violencia",
+    "description": "El entretenimiento que te roba la mañana sin violencia entra como pausa breve, pero puede quedarse con el primer impulso del día.",
+    "category": "Pan y Circo",
+    "url": "/posts/el-entretenimiento-que-te-roba-la-manana-sin-violencia.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/pan-y-circo.svg",
+    "tags": [
+      "pan y circo",
+      "mañana",
+      "entretenimiento",
+      "atención"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Cuando la televisión ocupa el lugar del silencio",
+    "description": "Cuando la televisión ocupa el lugar del silencio, la casa parece acompañada pero la cabeza pierde una pausa necesaria para ordenar el día.",
+    "category": "Pan y Circo",
+    "url": "/posts/cuando-la-television-ocupa-el-lugar-del-silencio.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/pan-y-circo.svg",
+    "tags": [
+      "pan y circo",
+      "televisión",
+      "silencio",
+      "atención"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Notificaciones como migas para no pensar",
+    "description": "Notificaciones como migas para no pensar muestra cómo avisos pequeños pueden cortar ideas, sostener reflejos y ocupar la atención de a pedazos.",
+    "category": "Pan y Circo",
+    "url": "/posts/notificaciones-como-migas-para-no-pensar.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/pan-y-circo.svg",
+    "tags": [
+      "pan y circo",
+      "notificaciones",
+      "atención",
+      "ruido digital"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Mirar realities para no mirar tu propia vida",
+    "description": "Mirar realities para no mirar tu propia vida puede ser una fuga suave: conflictos ajenos editados ocupan el lugar de preguntas propias.",
+    "category": "Pan y Circo",
+    "url": "/posts/mirar-realities-para-no-mirar-tu-propia-vida.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/pan-y-circo.svg",
+    "tags": [
+      "pan y circo",
+      "realities",
+      "atención",
+      "vida propia"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Elegir contenido que te deje mejor",
+    "description": "Elegir contenido que te deje mejor no es buscar perfección: es observar qué te deja más claro, más vivo y menos tomado por el ruido.",
+    "category": "Pan y Circo",
+    "url": "/posts/elegir-contenido-que-te-deje-mejor.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/pan-y-circo.svg",
+    "tags": [
+      "pan y circo",
+      "contenido",
+      "criterio",
+      "atención"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "La cultura del escándalo como alimento diario",
+    "description": "La cultura del escándalo como alimento diario convierte tensión, pelea y reacción en una dieta de atención que deja poco espacio para pensar.",
+    "category": "Pan y Circo",
+    "url": "/posts/la-cultura-del-escandalo-como-alimento-diario.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/pan-y-circo.svg",
+    "tags": [
+      "pan y circo",
+      "escándalo",
+      "atención",
+      "ruido digital"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Cuando el algoritmo decide tu estado de ánimo",
+    "description": "Cuando el algoritmo decide tu estado de ánimo, el feed puede empujar comparación, enojo o ansiedad antes de que elijas qué querés mirar.",
+    "category": "Pan y Circo",
+    "url": "/posts/cuando-el-algoritmo-decide-tu-estado-de-animo.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/pan-y-circo.svg",
+    "tags": [
+      "pan y circo",
+      "algoritmo",
+      "feed",
+      "atención"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Limpiar tu consumo digital una semana",
+    "description": "Limpiar tu consumo digital una semana ayuda a ver qué contenido te ordena, qué te agota y qué hábitos merecen salir de tu día.",
+    "category": "Pan y Circo",
+    "url": "/posts/limpiar-tu-consumo-digital-una-semana.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/pan-y-circo.svg",
+    "tags": [
+      "pan y circo",
+      "consumo digital",
+      "limpieza",
+      "atención"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "La pantalla encendida como compañía falsa",
+    "description": "La pantalla encendida como compañía falsa llena la casa de voces y movimiento, pero no siempre reemplaza presencia, calma o vínculo real.",
+    "category": "Pan y Circo",
+    "url": "/posts/la-pantalla-encendida-como-compania-falsa.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/pan-y-circo.svg",
+    "tags": [
+      "pan y circo",
+      "pantalla",
+      "compañía",
+      "silencio"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Opiniones rápidas y pensamiento lento",
+    "description": "Opiniones rápidas y pensamiento lento muestra cómo la presión por reaccionar puede ocupar el lugar de una idea propia más cuidada.",
+    "category": "Pan y Circo",
+    "url": "/posts/opiniones-rapidas-y-pensamiento-lento.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/pan-y-circo.svg",
+    "tags": [
+      "pan y circo",
+      "opiniones",
+      "pensamiento",
+      "criterio"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Dejar de regalar atención por aburrimiento",
+    "description": "Dejar de regalar atención por aburrimiento es aprender a no entregar cada pausa al feed, al ruido o al estímulo más cercano.",
+    "category": "Pan y Circo",
+    "url": "/posts/dejar-de-regalar-atencion-por-aburrimiento.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/pan-y-circo.svg",
+    "tags": [
+      "pan y circo",
+      "aburrimiento",
+      "atención",
+      "pantallas"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "El ocio consciente contra el consumo automático",
+    "description": "El ocio consciente contra el consumo automático propone descansar con elección propia, no caer por reflejo en cualquier pantalla disponible.",
+    "category": "Pan y Circo",
+    "url": "/posts/el-ocio-consciente-contra-el-consumo-automatico.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/pan-y-circo.svg",
+    "tags": [
+      "pan y circo",
+      "ocio",
+      "descanso",
+      "consumo automático"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Cuando mirar todo te deja sin vivir nada",
+    "description": "Cuando mirar todo te deja sin vivir nada habla de ese consumo constante que llena los ojos pero deja poco cuerpo, acción y vida propia.",
+    "category": "Pan y Circo",
+    "url": "/posts/cuando-mirar-todo-te-deja-sin-vivir-nada.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/pan-y-circo.svg",
+    "tags": [
+      "pan y circo",
+      "pantallas",
+      "vida propia",
+      "atención"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "La industria de la distracción cotidiana",
+    "description": "La industria de la distracción cotidiana convierte pausas, aburrimiento y cansancio en oportunidades para capturar atención.",
+    "category": "Pan y Circo",
+    "url": "/posts/la-industria-de-la-distraccion-cotidiana.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/pan-y-circo.svg",
+    "tags": [
+      "pan y circo",
+      "distracción",
+      "atención",
+      "plataformas"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Consumir menos ruido para producir más vida",
+    "description": "Consumir menos ruido para producir más vida significa dejar espacio para acciones reales, descanso y presencia propia.",
+    "category": "Pan y Circo",
+    "url": "/posts/consumir-menos-ruido-para-producir-mas-vida.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/pan-y-circo.svg",
+    "tags": [
+      "pan y circo",
+      "ruido digital",
+      "vida propia",
+      "atención"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "La fama ajena como reemplazo del proyecto propio",
+    "description": "La fama ajena como reemplazo del proyecto propio aparece cuando mirar logros de otros ocupa el lugar de avanzar en algo propio.",
+    "category": "Pan y Circo",
+    "url": "/posts/la-fama-ajena-como-reemplazo-del-proyecto-propio.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/pan-y-circo.svg",
+    "tags": [
+      "pan y circo",
+      "fama",
+      "proyecto propio",
+      "atención"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "El entretenimiento útil y el entretenimiento vacío",
+    "description": "El entretenimiento útil y el entretenimiento vacío se distinguen por el efecto que dejan: descanso con regreso o consumo que deja más dispersión.",
+    "category": "Pan y Circo",
+    "url": "/posts/el-entretenimiento-util-y-el-entretenimiento-vacio.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/pan-y-circo.svg",
+    "tags": [
+      "pan y circo",
+      "entretenimiento",
+      "descanso",
+      "criterio"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Volver a elegir qué entra por tus ojos",
+    "description": "Volver a elegir qué entra por tus ojos es recuperar criterio sobre imágenes, pantallas y estímulos que forman el clima de tu día.",
+    "category": "Pan y Circo",
+    "url": "/posts/volver-a-elegir-que-entra-por-tus-ojos.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/pan-y-circo.svg",
+    "tags": [
+      "pan y circo",
+      "mirada",
+      "contenido",
+      "criterio"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Comer mal y pensar con niebla",
+    "description": "Comer mal y pensar con niebla no siempre se nota en el plato: a veces aparece como cansancio, confusión y falta de ritmo durante el día.",
+    "category": "Alimentación",
+    "url": "/posts/comer-mal-y-pensar-con-niebla.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/alimentacion.svg",
+    "tags": [
+      "alimentación",
+      "claridad",
+      "hábitos",
+      "energía"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Desayunar mejor para empezar distinto",
+    "description": "Desayunar mejor para empezar distinto no es hacer una dieta perfecta: es darle al cuerpo una base más estable para entrar al día.",
+    "category": "Alimentación",
+    "url": "/posts/desayunar-mejor-para-empezar-distinto.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/alimentacion.svg",
+    "tags": [
+      "alimentación",
+      "desayuno",
+      "energía",
+      "hábitos"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Azúcar, ansiedad y energía prestada",
+    "description": "Azúcar, ansiedad y energía prestada habla de esos impulsos dulces que levantan rápido, pero a veces dejan más altibajo que sostén.",
+    "category": "Alimentación",
+    "url": "/posts/azucar-ansiedad-y-energia-prestada.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/alimentacion.svg",
+    "tags": [
+      "alimentación",
+      "azúcar",
+      "energía",
+      "hábitos"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Ultraprocesados y cansancio cotidiano",
+    "description": "Ultraprocesados y cansancio cotidiano mira cómo la comida de emergencia puede volverse rutina y dejar menos energía real durante el día.",
+    "category": "Alimentación",
+    "url": "/posts/ultraprocesados-y-cansancio-cotidiano.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/alimentacion.svg",
+    "tags": [
+      "alimentación",
+      "ultraprocesados",
+      "cansancio",
+      "hábitos"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Agua, cuerpo y claridad mental",
+    "description": "Agua, cuerpo y claridad mental mira una señal simple: a veces el cansancio y la confusión empiezan por no tomar agua durante horas.",
+    "category": "Alimentación",
+    "url": "/posts/agua-cuerpo-y-claridad-mental.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/alimentacion.svg",
+    "tags": [
+      "alimentación",
+      "agua",
+      "cuerpo",
+      "claridad"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Comida real sin fanatismo",
+    "description": "Comida real sin fanatismo es volver a alimentos simples sin convertir cada plato en una guerra ni cada elección en culpa.",
+    "category": "Alimentación",
+    "url": "/posts/comida-real-sin-fanatismo.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/alimentacion.svg",
+    "tags": [
+      "alimentación",
+      "comida real",
+      "hábitos",
+      "sin fanatismo"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Ordenar la alimentación cuando no hay ganas",
+    "description": "Ordenar la alimentación cuando no hay ganas empieza por hacer más fácil lo básico, no por exigir una versión perfecta de vos.",
+    "category": "Alimentación",
+    "url": "/posts/ordenar-la-alimentacion-cuando-no-hay-ganas.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/alimentacion.svg",
+    "tags": [
+      "alimentación",
+      "comida simple",
+      "hábitos",
+      "cansancio"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "La cocina simple como acto de control",
+    "description": "La cocina simple como acto de control ayuda a recuperar una parte del día cuando todo viene apurado, caro o improvisado.",
+    "category": "Alimentación",
+    "url": "/posts/la-cocina-simple-como-acto-de-control.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/alimentacion.svg",
+    "tags": [
+      "alimentación",
+      "cocina simple",
+      "hábitos",
+      "organización"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Comer apurado y vivir acelerado",
+    "description": "Comer apurado y vivir acelerado muestra cómo el ritmo del día también entra al plato, a la digestión y a la relación con el cuerpo.",
+    "category": "Alimentación",
+    "url": "/posts/comer-apurado-y-vivir-acelerado.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/alimentacion.svg",
+    "tags": [
+      "alimentación",
+      "comer lento",
+      "hábitos",
+      "ritmo"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Hábitos pequeños que cambian el día",
+    "description": "Hábitos pequeños que cambian el día muestra cómo agua, comida simple y menos apuro pueden ordenar la energía cotidiana sin extremos.",
+    "category": "Alimentación",
+    "url": "/posts/habitos-pequenos-que-cambian-el-dia.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/alimentacion.svg",
+    "tags": [
+      "alimentación",
+      "hábitos",
+      "agua",
+      "rutina"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Comprar comida con más conciencia",
+    "description": "Comprar comida con más conciencia ayuda a gastar mejor, improvisar menos y dejar opciones reales disponibles para la semana.",
+    "category": "Alimentación",
+    "url": "/posts/comprar-comida-con-mas-conciencia.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/alimentacion.svg",
+    "tags": [
+      "alimentación",
+      "compras",
+      "comida simple",
+      "organización"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "El cuerpo como base del proyecto",
+    "description": "El cuerpo como base del proyecto recuerda que trabajar, crear y sostener ideas también depende de sueño, comida, agua y ritmo real.",
+    "category": "Alimentación",
+    "url": "/posts/el-cuerpo-como-base-del-proyecto.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/alimentacion.svg",
+    "tags": [
+      "alimentación",
+      "cuerpo",
+      "proyecto",
+      "energía"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Alimentación y disciplina sin obsesión",
+    "description": "Alimentación y disciplina sin obsesión propone ordenar comidas con estructura amable, sin convertir cada plato en control extremo.",
+    "category": "Alimentación",
+    "url": "/posts/alimentacion-y-disciplina-sin-obsesion.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/alimentacion.svg",
+    "tags": [
+      "alimentación",
+      "disciplina",
+      "hábitos",
+      "sin obsesión"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Cuando el cansancio empieza en el plato",
+    "description": "Cuando el cansancio empieza en el plato no significa que la comida explique todo, pero sí que puede estar empujando el día hacia abajo.",
+    "category": "Alimentación",
+    "url": "/posts/cuando-el-cansancio-empieza-en-el-plato.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/alimentacion.svg",
+    "tags": [
+      "alimentación",
+      "cansancio",
+      "energía",
+      "hábitos"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Comer mejor con poco presupuesto",
+    "description": "Comer mejor con poco presupuesto no es comprar perfecto: es elegir bases simples, rendidoras y posibles para sostener la semana.",
+    "category": "Alimentación",
+    "url": "/posts/comer-mejor-con-poco-presupuesto.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/alimentacion.svg",
+    "tags": [
+      "alimentación",
+      "presupuesto",
+      "compras",
+      "comida simple"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "La ansiedad que se disfraza de antojo",
+    "description": "La ansiedad que se disfraza de antojo no siempre habla de hambre: a veces señala cansancio, estrés, poco descanso o falta de una base real.",
+    "category": "Alimentación",
+    "url": "/posts/la-ansiedad-que-se-disfraza-de-antojo.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/alimentacion.svg",
+    "tags": [
+      "alimentación",
+      "ansiedad",
+      "antojo",
+      "hábitos"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Rutina de comida para mente clara",
+    "description": "Rutina de comida para mente clara propone horarios aproximados, compras simples y menos improvisación en la alimentación diaria.",
+    "category": "Alimentación",
+    "url": "/posts/rutina-de-comida-para-mente-clara.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/alimentacion.svg",
+    "tags": [
+      "alimentación",
+      "rutina",
+      "mente clara",
+      "hábitos"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Menos paquete y más energía real",
+    "description": "Menos paquete y más energía real propone sumar alimentos simples y reducir la dependencia cotidiana de productos listos para abrir.",
+    "category": "Alimentación",
+    "url": "/posts/menos-paquete-y-mas-energia-real.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/alimentacion.svg",
+    "tags": [
+      "alimentación",
+      "ultraprocesados",
+      "energía",
+      "hábitos"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Alimentarse para sostener trabajo digital",
+    "description": "Alimentarse para sostener trabajo digital ayuda a ordenar jornadas largas de computadora con pausas y comida simple.",
+    "category": "Alimentación",
+    "url": "/posts/alimentarse-para-sostener-trabajo-digital.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/alimentacion.svg",
+    "tags": [
+      "alimentación",
+      "trabajo digital",
+      "rutina",
+      "organización"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "La Matrix del consumo alimentario",
+    "description": "La Matrix del consumo alimentario muestra cómo marketing, precio, apuro y disponibilidad empujan decisiones que parecen personales.",
+    "category": "Alimentación",
+    "url": "/posts/la-matrix-del-consumo-alimentario.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/alimentacion.svg",
+    "tags": [
+      "alimentación",
+      "Matrix",
+      "consumo",
+      "compras"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Preparar comida para no vivir improvisando",
+    "description": "Preparar comida para no vivir improvisando ayuda a dejar opciones simples listas antes de que el día se complique demasiado.",
+    "category": "Alimentación",
+    "url": "/posts/preparar-comida-para-no-vivir-improvisando.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/alimentacion.svg",
+    "tags": [
+      "alimentación",
+      "preparar comida",
+      "organización",
+      "hábitos"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Comer de noche y dormir peor",
+    "description": "Comer de noche y dormir peor puede ser una señal de horarios desordenados, cenas pesadas o hambre acumulada durante el día.",
+    "category": "Alimentación",
+    "url": "/posts/comer-de-noche-y-dormir-peor.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/alimentacion.svg",
+    "tags": [
+      "alimentación",
+      "noche",
+      "descanso",
+      "rutina"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Cuando el delivery se vuelve piloto automático",
+    "description": "Cuando el delivery se vuelve piloto automático conviene mirar hábito, gasto y falta de opciones simples antes del apuro.",
+    "category": "Alimentación",
+    "url": "/posts/cuando-el-delivery-se-vuelve-piloto-automatico.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/alimentacion.svg",
+    "tags": [
+      "alimentación",
+      "delivery",
+      "organización",
+      "hábitos"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Energía estable para trabajar mejor",
+    "description": "Energía estable para trabajar mejor habla de ordenar comidas, agua y pausas para no depender solo de impulsos durante la jornada.",
+    "category": "Alimentación",
+    "url": "/posts/energia-estable-para-trabajar-mejor.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/alimentacion.svg",
+    "tags": [
+      "alimentación",
+      "energía",
+      "trabajo",
+      "hábitos"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Alimentos simples para una semana más clara",
+    "description": "Alimentos simples para una semana más clara son bases posibles que ayudan a comprar, preparar y comer con menos improvisación.",
+    "category": "Alimentación",
+    "url": "/posts/alimentos-simples-para-una-semana-mas-clara.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/alimentacion.svg",
+    "tags": [
+      "alimentación",
+      "alimentos simples",
+      "semana",
+      "organización"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Rutina alimentaria para dias de poco dinero",
+    "description": "Texto de alimentacion cotidiana con rutina simple y compras posibles para ordenar mejor la semana.",
+    "category": "Alimentación",
+    "url": "/posts/rutina-alimentaria-para-dias-de-poco-dinero.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/alimentacion.svg",
+    "tags": [
+      "alimentación",
+      "rutina"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Cuando el cuerpo pide orden antes que motivacion",
+    "description": "Texto de alimentacion cotidiana sobre orden diario y comidas simples para bajar improvisacion.",
+    "category": "Alimentación",
+    "url": "/posts/cuando-el-cuerpo-pide-orden-antes-que-motivacion.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/alimentacion.svg",
+    "tags": [
+      "alimentación",
+      "orden"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "El mate el cafe y la energia prestada",
+    "description": "Texto de alimentacion cotidiana sobre bebidas habituales, pausas y rutinas diarias con mirada practica.",
+    "category": "Alimentación",
+    "url": "/posts/el-mate-el-cafe-y-la-energia-prestada.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/alimentacion.svg",
+    "tags": [
+      "alimentación",
+      "mate"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Aprender a leer tu cansancio fisico",
+    "description": "Texto de alimentacion cotidiana sobre senales simples del dia y organizacion personal sin extremos.",
+    "category": "Alimentación",
+    "url": "/posts/aprender-a-leer-tu-cansancio-fisico.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/alimentacion.svg",
+    "tags": [
+      "alimentación",
+      "cansancio"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Comida casera como resistencia practica",
+    "description": "Texto de alimentacion cotidiana sobre cocina simple, autonomia domestica y preparaciones posibles.",
+    "category": "Alimentación",
+    "url": "/posts/comida-casera-como-resistencia-practica.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/alimentacion.svg",
+    "tags": [
+      "alimentación",
+      "cocina"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Empezar de cero sin fuerza",
+    "description": "Empezar de cero sin fuerza no pide una revolucion enorme pide un primer gesto chico visible y posible para recuperar movimiento diario.",
+    "category": "Saliendo de la Matrix",
+    "url": "/posts/empezar-de-cero-sin-fuerza.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/saliendo-de-la-matrix.svg",
+    "tags": [
+      "saliendo-de-la-matrix",
+      "empezar"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Volver a crear despues de abandonar",
+    "description": "Volver a crear despues de abandonar pide una entrega chica visible y posible para recuperar continuidad sin promesas enormes ni vueltas largas.",
+    "category": "Saliendo de la Matrix",
+    "url": "/posts/volver-a-crear-despues-de-abandonar.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/saliendo-de-la-matrix.svg",
+    "tags": [
+      "saliendo-de-la-matrix",
+      "crear"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Ordenar proyectos que parecian muertos",
+    "description": "Ordenar proyectos que parecian muertos empieza separando lo vivo lo pendiente y lo que ya no necesita energia para encontrar un paso claro.",
+    "category": "Saliendo de la Matrix",
+    "url": "/posts/ordenar-proyectos-que-parecian-muertos.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/saliendo-de-la-matrix.svg",
+    "tags": [
+      "saliendo-de-la-matrix",
+      "proyectos"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Hacer una cosa util por dia",
+    "description": "Hacer una cosa util por dia baja la ansiedad de cambiar todo y devuelve avance visible en una escala posible concreta y repetible.",
+    "category": "Saliendo de la Matrix",
+    "url": "/posts/hacer-una-cosa-util-por-dia.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/saliendo-de-la-matrix.svg",
+    "tags": [
+      "saliendo-de-la-matrix",
+      "avance"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Recuperar foco despues del caos",
+    "description": "Recuperar foco despues del caos empieza por elegir una prioridad chica y protegerla con un bloque breve realista y facil de repetir.",
+    "category": "Saliendo de la Matrix",
+    "url": "/posts/recuperar-foco-despues-del-caos.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/saliendo-de-la-matrix.svg",
+    "tags": [
+      "saliendo-de-la-matrix",
+      "foco"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Dejar de esperar el momento perfecto",
+    "description": "Dejar de esperar el momento perfecto empieza por hacer una entrega imperfecta visible y posible antes de seguir postergando sin fin.",
+    "category": "Saliendo de la Matrix",
+    "url": "/posts/dejar-de-esperar-el-momento-perfecto.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/saliendo-de-la-matrix.svg",
+    "tags": [
+      "saliendo-de-la-matrix",
+      "empezar"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Crear una web como acto de rescate",
+    "description": "Crear una web como acto de rescate convierte una idea dispersa en un lugar propio visible posible de mejorar y ordenar con tiempo.",
+    "category": "Saliendo de la Matrix",
+    "url": "/posts/crear-una-web-como-acto-de-rescate.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/saliendo-de-la-matrix.svg",
+    "tags": [
+      "saliendo-de-la-matrix",
+      "web"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Volver a creer en tu oficio",
+    "description": "Volver a creer en tu oficio empieza por hacer una entrega concreta que te recuerde que todavia sabes construir algo real.",
+    "category": "Saliendo de la Matrix",
+    "url": "/posts/volver-a-creer-en-tu-oficio.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/saliendo-de-la-matrix.svg",
+    "tags": [
+      "saliendo-de-la-matrix",
+      "oficio"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Sostener esperanza sin vender fantasia",
+    "description": "Sostener esperanza sin vender fantasia es mirar la realidad de frente y aun asi dejar una accion posible para manana.",
+    "category": "Saliendo de la Matrix",
+    "url": "/posts/sostener-esperanza-sin-vender-fantasia.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/saliendo-de-la-matrix.svg",
+    "tags": [
+      "saliendo-de-la-matrix",
+      "esperanza"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Romper una etapa con acciones pequenas",
+    "description": "Romper una etapa con acciones pequenas empieza por cambiar una escena diaria no por esperar una transformacion total inmediata.",
+    "category": "Saliendo de la Matrix",
+    "url": "/posts/romper-una-etapa-con-acciones-pequenas.html",
+    "date": "2026-06-14",
+    "image": "/assets/img/posts/saliendo-de-la-matrix.svg",
+    "tags": [
+      "saliendo-de-la-matrix",
+      "etapa"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Cómo usar una computadora vieja para crear valor digital",
+    "description": "Una computadora vieja todavía puede producir valor: cómo diagnosticarla, trabajar con herramientas livianas y decidir cuándo mejorarla o cambiarla.",
+    "category": "Tecnología",
+    "url": "/posts/usar-una-computadora-vieja-para-crear-valor-digital.html",
+    "date": "2026-06-12",
+    "image": "/assets/img/posts/tecnologia.svg",
+    "tags": [
+      "computadoras viejas",
+      "trabajo digital",
+      "hardware",
+      "GitHub Pages"
+    ],
+    "readingTime": "12–15 min"
+  },
+  {
+    "title": "Cómo usar la inteligencia artificial en el trabajo diario",
+    "description": "Cómo integrar inteligencia artificial al trabajo sin delegar criterio: tareas útiles, verificación, privacidad, límites y un flujo que realmente ahorre tiempo.",
+    "category": "Tecnología",
+    "url": "/posts/inteligencia-artificial-como-herramienta-de-trabajo-diario.html",
+    "date": "2026-06-12",
+    "image": "/assets/img/posts/tecnologia.svg",
+    "tags": [
+      "inteligencia artificial",
+      "trabajo digital",
+      "verificación",
+      "privacidad"
+    ],
+    "readingTime": "12–15 min"
+  },
+  {
+    "title": "Cómo organizar archivos para no perder proyectos",
+    "description": "Un sistema simple para encontrar la versión correcta, separar trabajo activo, usar Git cuando corresponde y recuperar un proyecto sin depender de la memoria.",
+    "category": "Tecnología",
+    "url": "/posts/organizar-archivos-para-no-perder-proyectos.html",
+    "date": "2026-06-12",
+    "image": "/assets/img/posts/tecnologia.svg",
+    "tags": [
+      "organización digital",
+      "Git",
+      "backups",
+      "archivos"
+    ],
+    "readingTime": "12–15 min"
+  },
+  {
+    "title": "Cómo crear un blog sin una computadora perfecta",
+    "description": "Cómo crear y sostener un blog con una computadora común: estructura mínima, GitHub Pages, contenido útil, velocidad, SEO y publicación sin humo.",
+    "category": "Tecnología",
+    "url": "/posts/crear-un-blog-aunque-no-tengas-equipo-perfecto.html",
+    "date": "2026-06-12",
+    "image": "/assets/img/posts/tecnologia.svg",
+    "tags": [
+      "crear un blog",
+      "GitHub Pages",
+      "SEO",
+      "sitios estáticos"
+    ],
+    "readingTime": "10–13 min"
+  },
+  {
+    "title": "Cómo aprender programación cuando venís de cero",
+    "description": "Cómo empezar a programar sin perderte entre cursos: elegir una ruta, construir proyectos pequeños, entender errores y medir avances reales.",
+    "category": "Tecnología",
+    "url": "/posts/aprender-programacion-cuando-venis-de-cero.html",
+    "date": "2026-06-12",
+    "image": "/assets/img/posts/tecnologia.svg",
+    "tags": [
+      "aprender programación",
+      "Python",
+      "desarrollo web",
+      "GitHub"
+    ],
+    "readingTime": "11–14 min"
+  },
+  {
+    "title": "Cómo automatizar tareas simples sin complicarte",
+    "description": "Cómo elegir una tarea repetitiva, automatizarla con seguridad, probarla sobre copias y medir si realmente ahorra tiempo en lugar de crear otro problema.",
+    "category": "Tecnología",
+    "url": "/posts/automatizar-tareas-simples-sin-complicarte.html",
+    "date": "2026-06-12",
+    "image": "/assets/img/posts/tecnologia.svg",
+    "tags": [
+      "automatización",
+      "Python",
+      "GitHub Actions",
+      "productividad digital"
+    ],
+    "readingTime": "11–14 min"
+  },
+  {
+    "title": "Cómo vender plantillas digitales a gente común",
+    "description": "Cómo crear plantillas que una persona no técnica pueda abrir, entender y usar: problema, formato, instrucciones, licencia, prueba, precio y soporte.",
+    "category": "Tecnología",
+    "url": "/posts/vender-plantillas-digitales-a-gente-comun.html",
+    "date": "2026-06-12",
+    "image": "/assets/img/posts/tecnologia.svg",
+    "tags": [
+      "plantillas digitales",
+      "productos digitales",
+      "pequeños negocios",
+      "accesibilidad"
+    ],
+    "readingTime": "10–13 min"
+  },
+  {
+    "title": "Cómo usar internet para recuperar ingresos perdidos",
+    "description": "Cómo usar internet para reconstruir ingresos con criterio: inventario de habilidades, servicios simples, contenido propio, medición, límites y expectativas reales.",
+    "category": "Tecnología",
+    "url": "/posts/usar-internet-para-recuperar-ingresos-perdidos.html",
+    "date": "2026-06-12",
+    "image": "/assets/img/posts/tecnologia.svg",
+    "tags": [
+      "ingresos online",
+      "servicios digitales",
+      "blog",
+      "reconstrucción"
+    ],
+    "readingTime": "9–12 min"
+  },
+  {
+    "title": "Cómo crear contenido sin depender de redes sociales",
+    "description": "Cómo construir contenido en un dominio propio, atraer visitas desde buscadores, conservar archivos y usar redes como distribución sin entregarles todo.",
+    "category": "Tecnología",
+    "url": "/posts/crear-contenido-sin-depender-de-redes-sociales.html",
+    "date": "2026-06-12",
+    "image": "/assets/img/posts/tecnologia.svg",
+    "tags": [
+      "contenido propio",
+      "redes sociales",
+      "blog",
+      "distribución"
+    ],
+    "readingTime": "10–13 min"
+  },
+  {
+    "title": "Cómo convertir ideas sueltas en publicaciones útiles",
+    "description": "Cómo pasar de una nota dispersa a un artículo con intención, preguntas, experiencia, fuentes, estructura, edición y una razón real para publicarse.",
+    "category": "Tecnología",
+    "url": "/posts/convertir-ideas-sueltas-en-publicaciones-utiles.html",
+    "date": "2026-06-12",
+    "image": "/assets/img/posts/tecnologia.svg",
+    "tags": [
+      "ideas de contenido",
+      "escritura web",
+      "edición",
+      "SEO humano"
+    ],
+    "readingTime": "10–13 min"
+  },
+  {
+    "title": "Cómo usar IA para ordenar un proyecto online",
+    "description": "Cómo usar inteligencia artificial para inventariar archivos, aclarar objetivos, ordenar tareas y detectar huecos sin entregarle el control del proyecto.",
+    "category": "Tecnología",
+    "url": "/posts/usar-ia-para-ordenar-un-proyecto-online.html",
+    "date": "2026-06-12",
+    "image": "/assets/img/posts/tecnologia.svg",
+    "tags": [
+      "inteligencia artificial",
+      "gestión de proyectos",
+      "organización digital",
+      "productividad"
+    ],
+    "readingTime": "10–13 min"
+  },
+  {
+    "title": "Herramientas livianas para trabajar con una notebook vieja",
+    "description": "Cómo elegir programas livianos para una notebook vieja según la tarea, el consumo real, la seguridad, los formatos y la posibilidad de recuperar el trabajo.",
+    "category": "Tecnología",
+    "url": "/posts/herramientas-livianas-para-una-notebook-vieja.html",
+    "date": "2026-06-12",
+    "image": "/assets/img/posts/tecnologia.svg",
+    "tags": [
+      "software liviano",
+      "notebook vieja",
+      "rendimiento",
+      "herramientas digitales"
+    ],
+    "readingTime": "10–13 min"
+  },
+  {
+    "title": "Cómo crear una rutina digital de una hora por día",
+    "description": "Cómo convertir una hora diaria en una entrega concreta: preparar el entorno, producir sin multitarea, cerrar la sesión y retomar sin empezar de cero.",
+    "category": "Tecnología",
+    "url": "/posts/crear-una-rutina-digital-de-una-hora-por-dia.html",
+    "date": "2026-06-12",
+    "image": "/assets/img/posts/tecnologia.svg",
+    "tags": [
+      "rutina digital",
+      "trabajo profundo",
+      "productividad",
+      "proyectos online"
+    ],
+    "readingTime": "10–13 min"
+  },
+  {
+    "title": "Cómo hacer SEO sin volverte esclavo de los trucos",
+    "description": "Cómo trabajar SEO con intención, contenido útil, estructura, enlaces y medición sin perseguir fórmulas mágicas ni fabricar páginas para el algoritmo.",
+    "category": "Tecnología",
+    "url": "/posts/hacer-seo-sin-volverse-esclavo-de-los-trucos.html",
+    "date": "2026-06-12",
+    "image": "/assets/img/posts/tecnologia.svg",
+    "tags": [
+      "SEO",
+      "Google Search",
+      "contenido útil",
+      "Search Console"
+    ],
+    "readingTime": "10–13 min"
+  },
+  {
+    "title": "Cómo publicar mejor con pocos recursos",
+    "description": "Cómo publicar contenido sólido con recursos limitados y pocas horas: elegir prioridades, reutilizar trabajo, auditar y evitar herramientas innecesarias.",
+    "category": "Tecnología",
+    "url": "/posts/publicar-mejor-con-pocos-recursos.html",
+    "date": "2026-06-12",
+    "image": "/assets/img/posts/tecnologia.svg",
+    "tags": [
+      "publicación digital",
+      "pocos recursos",
+      "contenido web",
+      "herramientas gratuitas"
+    ],
+    "readingTime": "10–13 min"
+  },
+  {
+    "title": "Cómo armar una base de conocimiento personal",
+    "description": "Cómo guardar ideas, fuentes, decisiones y experiencia en una base de conocimiento portable, recuperable y conectada con proyectos reales.",
+    "category": "Tecnología",
+    "url": "/posts/armar-una-base-de-conocimiento-personal.html",
+    "date": "2026-06-12",
+    "image": "/assets/img/posts/tecnologia.svg",
+    "tags": [
+      "base de conocimiento",
+      "Markdown",
+      "notas personales",
+      "biblioteca digital"
+    ],
+    "readingTime": "10–13 min"
+  },
+  {
+    "title": "Cómo usar la tecnología para salir del estancamiento",
+    "description": "Cómo usar tecnología para convertir un proyecto trabado en una entrega concreta: elegir una tarea, usar herramientas simples, medir y cerrar la sesión.",
+    "category": "Tecnología",
+    "url": "/posts/usar-la-tecnologia-para-salir-del-estancamiento.html",
+    "date": "2026-06-12",
+    "image": "/assets/img/posts/tecnologia.svg",
+    "tags": [
+      "tecnología útil",
+      "proyectos digitales",
+      "acción concreta",
+      "trabajo online"
+    ],
+    "readingTime": "9–12 min"
+  },
+  {
+    "title": "Cómo crear servicios digitales simples para vender",
+    "description": "Cómo transformar una habilidad digital en un servicio vendible: problema concreto, alcance, entrega, precio, prueba, soporte y mejora.",
+    "category": "Tecnología",
+    "url": "/posts/crear-servicios-digitales-simples-para-vender.html",
+    "date": "2026-06-12",
+    "image": "/assets/img/posts/tecnologia.svg",
+    "tags": [
+      "servicios digitales",
+      "ventas",
+      "trabajo online",
+      "oferta simple"
+    ],
+    "readingTime": "9–12 min"
+  },
+  {
+    "title": "Ordenar cuentas digitales sin caos",
+    "description": "Ordenar cuentas digitales sin caos ayuda a sostener proyectos: mapa de servicios, correo principal, recuperación, doble verificación y revisión sobria.",
+    "category": "Tecnología",
+    "url": "/posts/ordenar-contrasenas-y-cuentas-sin-caos.html",
+    "date": "2026-06-12",
+    "image": "/assets/img/posts/tecnologia.svg",
+    "tags": [
+      "cuentas digitales",
+      "seguridad básica",
+      "organización",
+      "proyectos online"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Cómo hacer una web estática que cargue rápido",
+    "description": "Cómo crear una web estática rápida con HTML claro, CSS mínimo, imágenes livianas, pocos scripts, URLs simples y mantenimiento fácil.",
+    "category": "Tecnología",
+    "url": "/posts/hacer-una-web-estatica-que-cargue-rapido.html",
+    "date": "2026-06-12",
+    "image": "/assets/img/posts/tecnologia.svg",
+    "tags": [
+      "web estática",
+      "rendimiento web",
+      "HTML",
+      "GitHub Pages"
+    ],
+    "readingTime": "9–12 min"
+  },
+  {
+    "title": "Escribir mejores prompts con intención real",
+    "description": "Cómo escribir mejores prompts con intención real: contexto, objetivo, límites, formato, ejemplos, revisión y uso de IA sin perder criterio propio.",
+    "category": "Tecnología",
+    "url": "/posts/escribir-mejores-prompts-con-intencion-real.html",
+    "date": "2026-06-12",
+    "image": "/assets/img/posts/tecnologia.svg",
+    "tags": [
+      "prompts",
+      "inteligencia artificial",
+      "criterio",
+      "productividad"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Cómo usar GitHub como taller de proyectos",
+    "description": "Cómo usar GitHub como taller de proyectos: repositorios, ramas, commits, issues, pull requests, Pages y una forma simple de no perder avances.",
+    "category": "Tecnología",
+    "url": "/posts/usar-github-como-taller-de-proyectos.html",
+    "date": "2026-06-12",
+    "image": "/assets/img/posts/tecnologia.svg",
+    "tags": [
+      "GitHub",
+      "Git",
+      "proyectos digitales",
+      "GitHub Pages"
+    ],
+    "readingTime": "9–12 min"
+  },
+  {
+    "title": "Cómo crear imágenes web limpias y livianas",
+    "description": "Cómo preparar imágenes web limpias y livianas: tamaño correcto, compresión, formato, nombre de archivo, alt, portada social y respaldo del original.",
+    "category": "Tecnología",
+    "url": "/posts/crear-imagenes-web-limpias-y-livianas.html",
+    "date": "2026-06-12",
+    "image": "/assets/img/posts/tecnologia.svg",
+    "tags": [
+      "imágenes web",
+      "WebP",
+      "rendimiento",
+      "alt"
+    ],
+    "readingTime": "9–12 min"
+  },
+  {
+    "title": "Cómo transformar experiencia vieja en contenido nuevo",
+    "description": "Cómo convertir experiencia acumulada en artículos útiles: separar recuerdo, aprendizaje, dato verificable, ejemplo actual y una respuesta que sirva hoy.",
+    "category": "Tecnología",
+    "url": "/posts/transformar-experiencia-vieja-en-contenido-nuevo.html",
+    "date": "2026-06-12",
+    "image": "/assets/img/posts/tecnologia.svg",
+    "tags": [
+      "experiencia",
+      "contenido propio",
+      "blog",
+      "voz editorial"
+    ],
+    "readingTime": "9–12 min"
+  },
+  {
+    "title": "Volver a vivir de internet sin nostalgia",
+    "description": "Cómo volver a construir ingresos online sin copiar el pasado: experiencia, oferta actual, contenido útil, medición, paciencia y control de expectativas.",
+    "category": "Tecnología",
+    "url": "/posts/volver-a-vivir-de-internet-sin-nostalgia.html",
+    "date": "2026-06-12",
+    "image": "/assets/img/posts/tecnologia.svg",
+    "tags": [
+      "vivir de internet",
+      "negocio digital",
+      "reconstrucción",
+      "contenido propio"
+    ],
+    "readingTime": "9–12 min"
+  },
+  {
+    "title": "Cómo crear un sistema de trabajo digital desde cero",
+    "description": "Cómo armar un sistema de trabajo digital simple: carpeta, bandeja de entrada, tareas, versiones, respaldos, rutina y revisión semanal.",
+    "category": "Tecnología",
+    "url": "/posts/crear-un-sistema-de-trabajo-digital-desde-cero.html",
+    "date": "2026-06-12",
+    "image": "/assets/img/posts/tecnologia.svg",
+    "tags": [
+      "sistema digital",
+      "organización",
+      "Git",
+      "productividad"
+    ],
+    "readingTime": "9–12 min"
+  },
+  {
+    "title": "Usar herramientas gratuitas para producir más",
+    "description": "Cómo usar herramientas gratuitas para producir más sin llenarte de cuentas: elegir por tarea, probar con archivos reales, exportar y medir fricción.",
+    "category": "Tecnología",
+    "url": "/posts/usar-herramientas-gratuitas-para-producir-mas.html",
+    "date": "2026-06-12",
+    "image": "/assets/img/posts/tecnologia.svg",
+    "tags": [
+      "herramientas gratuitas",
+      "productividad",
+      "exportación",
+      "flujo digital"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Cómo hacer una página rápida que Google pueda entender",
+    "description": "Cómo crear una página rápida y entendible para Google: intención clara, HTML semántico, enlaces, datos estructurados, imágenes livianas y contenido útil.",
+    "category": "Tecnología",
+    "url": "/posts/hacer-una-pagina-rapida-que-google-pueda-entender.html",
+    "date": "2026-06-12",
+    "image": "/assets/img/posts/tecnologia.svg",
+    "tags": [
+      "SEO técnico",
+      "página rápida",
+      "Google Search",
+      "HTML semántico"
+    ],
+    "readingTime": "9–12 min"
+  },
+  {
+    "title": "Cómo crear un archivo maestro para tus proyectos online",
+    "description": "Cómo crear un archivo maestro para proyectos online: dominio, repositorio, plataforma, estado, tareas, enlaces, respaldo y revisión mensual.",
+    "category": "Tecnología",
+    "url": "/posts/crear-un-archivo-maestro-para-tus-proyectos-online.html",
+    "date": "2026-06-12",
+    "image": "/assets/img/posts/tecnologia.svg",
+    "tags": [
+      "archivo maestro",
+      "proyectos online",
+      "organización",
+      "repositorios"
+    ],
+    "readingTime": "9–12 min"
+  },
+  {
+    "title": "Cómo convertir conocimientos informáticos en servicios simples",
+    "description": "Cómo convertir conocimientos informáticos en entregas simples: problema concreto, resultado visible, alcance, ejemplo, instrucciones y mejora del proceso.",
+    "category": "Tecnología",
+    "url": "/posts/convertir-conocimientos-informaticos-en-servicios-simples.html",
+    "date": "2026-06-12",
+    "image": "/assets/img/posts/tecnologia.svg",
+    "tags": [
+      "servicios informáticos",
+      "entregas simples",
+      "trabajo digital",
+      "oferta clara"
+    ],
+    "readingTime": "9–12 min"
+  },
+  {
+    "title": "Usar IA para mejorar textos sin perder tu voz",
+    "description": "Cómo usar IA para mejorar textos sin perder tu voz: corregir estructura, detectar repeticiones, pedir críticas útiles y conservar criterio editorial.",
+    "category": "Tecnología",
+    "url": "/posts/usar-ia-para-mejorar-textos-sin-perder-tu-voz.html",
+    "date": "2026-06-12",
+    "image": "/assets/img/posts/tecnologia.svg",
+    "tags": [
+      "IA",
+      "escritura",
+      "voz propia",
+      "edición"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Cómo organizar una semana de producción digital",
+    "description": "Cómo organizar una semana de producción digital: selección de temas, escritura, edición, publicación, medición y mantenimiento sin mezclar etapas.",
+    "category": "Tecnología",
+    "url": "/posts/organizar-una-semana-de-produccion-digital.html",
+    "date": "2026-06-12",
+    "image": "/assets/img/posts/tecnologia.svg",
+    "tags": [
+      "producción digital",
+      "calendario",
+      "blog",
+      "organización"
+    ],
+    "readingTime": "9–12 min"
+  },
+  {
+    "title": "Crear recursos descargables para vender en internet",
+    "description": "Cómo crear recursos descargables vendibles: problema concreto, archivo usable, instrucciones, formato, prueba, licencia simple y mejora con usuarios reales.",
+    "category": "Tecnología",
+    "url": "/posts/crear-recursos-descargables-para-vender-en-internet.html",
+    "date": "2026-06-12",
+    "image": "/assets/img/posts/tecnologia.svg",
+    "tags": [
+      "recursos descargables",
+      "productos digitales",
+      "plantillas",
+      "venta online"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Cómo mejorar una web vieja sin romperla",
+    "description": "Cómo mejorar una web vieja con respaldo, auditoría inicial, cambios pequeños, control de versiones, pruebas y prioridad sobre lo que realmente afecta al usuario.",
+    "category": "Tecnología",
+    "url": "/posts/mejorar-una-web-vieja-sin-romperla.html",
+    "date": "2026-06-12",
+    "image": "/assets/img/posts/tecnologia.svg",
+    "tags": [
+      "web vieja",
+      "rediseño",
+      "Git",
+      "SEO técnico"
+    ],
+    "readingTime": "9–12 min"
+  },
+  {
+    "title": "Usar una computadora lenta con inteligencia práctica",
+    "description": "Cómo trabajar con una computadora lenta sin perder el día: diagnóstico, menos programas, tareas pequeñas, archivos livianos y cuándo conviene mejorar el equipo.",
+    "category": "Tecnología",
+    "url": "/posts/usar-una-computadora-lenta-con-inteligencia-practica.html",
+    "date": "2026-06-12",
+    "image": "/assets/img/posts/tecnologia.svg",
+    "tags": [
+      "computadora lenta",
+      "productividad",
+      "notebook vieja",
+      "herramientas livianas"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Cómo crear un calendario editorial sin complicarte",
+    "description": "Cómo crear un calendario editorial simple: temas, intención, estado, fecha, fuentes, enlaces internos, revisión y publicación sin convertirlo en una carga.",
+    "category": "Tecnología",
+    "url": "/posts/crear-un-calendario-editorial-sin-complicarte.html",
+    "date": "2026-06-12",
+    "image": "/assets/img/posts/tecnologia.svg",
+    "tags": [
+      "calendario editorial",
+      "blog",
+      "contenidos",
+      "organización"
+    ],
+    "readingTime": "9–12 min"
+  },
+  {
+    "title": "Probar ideas digitales antes de gastar dinero",
+    "description": "Cómo probar ideas digitales antes de gastar dinero: página simple, muestra, conversación real, lista de interesados, costo mínimo y decisión con datos.",
+    "category": "Tecnología",
+    "url": "/posts/probar-ideas-digitales-antes-de-gastar-dinero.html",
+    "date": "2026-06-12",
+    "image": "/assets/img/posts/tecnologia.svg",
+    "tags": [
+      "ideas digitales",
+      "validación",
+      "producto digital",
+      "negocio online"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Cómo usar estadísticas para decidir qué publicar",
+    "description": "Cómo usar estadísticas para decidir publicaciones: consultas, impresiones, clics, CTR, páginas fuertes, huecos de contenido y decisiones editoriales.",
+    "category": "Tecnología",
+    "url": "/posts/usar-estadisticas-para-decidir-que-publicar.html",
+    "date": "2026-06-12",
+    "image": "/assets/img/posts/tecnologia.svg",
+    "tags": [
+      "estadísticas",
+      "Search Console",
+      "SEO",
+      "decisión editorial"
+    ],
+    "readingTime": "9–12 min"
+  },
+  {
+    "title": "Crear una marca personal desde una notebook común",
+    "description": "Cómo crear una marca personal desde una notebook común: tema claro, prueba de trabajo, archivo propio, constancia, límites y publicaciones útiles.",
+    "category": "Tecnología",
+    "url": "/posts/crear-una-marca-personal-desde-una-notebook-comun.html",
+    "date": "2026-06-12",
+    "image": "/assets/img/posts/tecnologia.svg",
+    "tags": [
+      "marca personal",
+      "notebook común",
+      "contenido propio",
+      "trabajo digital"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Hacer backups simples para no perder tu trabajo",
+    "description": "Hacer backups simples para no perder tu trabajo significa copiar lo importante, separarlo del equipo principal y probar que se puede recuperar.",
+    "category": "Tecnología",
+    "url": "/posts/hacer-backups-simples-para-no-perder-tu-trabajo.html",
+    "date": "2026-06-12",
+    "image": "/assets/img/posts/tecnologia.svg",
+    "tags": [
+      "backups",
+      "archivos",
+      "Git",
+      "respaldo digital"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Cómo crear un mini laboratorio de SEO casero",
+    "description": "Cómo crear un mini laboratorio SEO casero: hipótesis, páginas de prueba, cambios pequeños, Search Console, registro y decisiones sin fórmulas mágicas.",
+    "category": "Tecnología",
+    "url": "/posts/crear-un-mini-laboratorio-de-seo-casero.html",
+    "date": "2026-06-12",
+    "image": "/assets/img/posts/tecnologia.svg",
+    "tags": [
+      "SEO",
+      "Search Console",
+      "experimentos",
+      "GitHub"
+    ],
+    "readingTime": "9–12 min"
+  },
+  {
+    "title": "Automatizar publicaciones sin perder calidad humana",
+    "description": "Cómo automatizar publicaciones sin perder calidad humana: separar tareas técnicas, revisión editorial, fuentes, enlaces, auditoría y aprobación antes de publicar.",
+    "category": "Tecnología",
+    "url": "/posts/automatizar-publicaciones-sin-perder-calidad-humana.html",
+    "date": "2026-06-12",
+    "image": "/assets/img/posts/tecnologia.svg",
+    "tags": [
+      "automatización",
+      "publicaciones",
+      "calidad humana",
+      "GitHub Actions"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Usar internet para encontrar oportunidades reales",
+    "description": "Cómo usar internet para encontrar oportunidades reales: observar problemas, validar demanda, evitar promesas fáciles y convertir señales en acciones concretas.",
+    "category": "Tecnología",
+    "url": "/posts/usar-internet-para-encontrar-oportunidades-reales.html",
+    "date": "2026-06-12",
+    "image": "/assets/img/posts/tecnologia.svg",
+    "tags": [
+      "oportunidades online",
+      "validación",
+      "negocio digital",
+      "investigación"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Convertir una habilidad vieja en producto digital",
+    "description": "Cómo convertir una habilidad vieja en producto digital: detectar valor real, crear una entrega pequeña, probarla, mejorarla y venderla sin humo.",
+    "category": "Tecnología",
+    "url": "/posts/convertir-una-habilidad-vieja-en-producto-digital.html",
+    "date": "2026-06-12",
+    "image": "/assets/img/posts/tecnologia.svg",
+    "tags": [
+      "producto digital",
+      "habilidades",
+      "plantillas",
+      "validación"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Cómo crear una web liviana para AdSense",
+    "description": "Cómo preparar una web liviana para AdSense: contenido útil, navegación clara, velocidad, políticas, ubicación razonable de anuncios y medición honesta.",
+    "category": "Tecnología",
+    "url": "/posts/crear-una-web-liviana-para-adsense.html",
+    "date": "2026-06-12",
+    "image": "/assets/img/posts/tecnologia.svg",
+    "tags": [
+      "AdSense",
+      "monetización",
+      "web liviana",
+      "contenido útil"
+    ],
+    "readingTime": "9–12 min"
+  },
+  {
+    "title": "Cómo trabajar con foco cuando la computadora no ayuda",
+    "description": "Cómo trabajar con foco en una computadora limitada: reducir programas, preparar archivos, elegir una entrega pequeña y cerrar cada sesión con claridad.",
+    "category": "Tecnología",
+    "url": "/posts/trabajar-con-foco-cuando-la-computadora-no-ayuda.html",
+    "date": "2026-06-12",
+    "image": "/assets/img/posts/tecnologia.svg",
+    "tags": [
+      "foco",
+      "notebook vieja",
+      "productividad",
+      "herramientas livianas"
+    ],
+    "readingTime": "9–12 min"
+  },
+  {
+    "title": "Usar prompts para planificar un negocio digital",
+    "description": "Usar prompts para planificar un negocio digital sirve si ordena oferta, público, prueba, límites y próxima acción sin inventar certezas.",
+    "category": "Tecnología",
+    "url": "/posts/usar-prompts-para-planificar-un-negocio-digital.html",
+    "date": "2026-06-12",
+    "image": "/assets/img/posts/tecnologia.svg",
+    "tags": [
+      "prompts",
+      "negocio digital",
+      "IA",
+      "planificación"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Cómo crear contenido evergreen con mirada propia",
+    "description": "Cómo crear contenido evergreen que siga sirviendo con el tiempo: pregunta estable, experiencia propia, fuentes, actualización y voz humana.",
+    "category": "Tecnología",
+    "url": "/posts/crear-contenido-evergreen-con-mirada-propia.html",
+    "date": "2026-06-12",
+    "image": "/assets/img/posts/tecnologia.svg",
+    "tags": [
+      "evergreen",
+      "contenido útil",
+      "voz propia",
+      "SEO humano"
+    ],
+    "readingTime": "9–12 min"
+  },
+  {
+    "title": "Levantar un proyecto abandonado con método",
+    "description": "Levantar un proyecto abandonado con método exige abrirlo sin culpa, inventariar lo vivo, elegir una entrega mínima y decidir con evidencia.",
+    "category": "Tecnología",
+    "url": "/posts/levantar-un-proyecto-abandonado-con-metodo.html",
+    "date": "2026-06-12",
+    "image": "/assets/img/posts/tecnologia.svg",
+    "tags": [
+      "proyectos abandonados",
+      "reconstrucción",
+      "GitHub",
+      "organización digital"
+    ],
+    "readingTime": "8–11 min"
+  },
+  {
+    "title": "Crear una rutina de mantenimiento web semanal",
+    "description": "Crear una rutina de mantenimiento web semanal evita que el sitio se degrade: enlaces, velocidad, imágenes, publicaciones viejas y señales técnicas.",
+    "category": "Tecnología",
+    "url": "/posts/crear-una-rutina-de-mantenimiento-web-semanal.html",
+    "date": "2026-06-12",
+    "image": "/assets/img/posts/tecnologia.svg",
+    "tags": [
+      "mantenimiento web",
+      "SEO técnico",
+      "Git",
+      "blog"
+    ],
+    "readingTime": "8–11 min"
   },
   {
     "title": "Cuando todos opinan pero nadie piensa",
@@ -943,155 +2085,6 @@
     "readingTime": "10–14 min"
   },
   {
-    "title": "Cómo recuperar silencio después de tanto ruido",
-    "description": "Análisis práctico de cómo recuperar silencio después de tanto ruido: disparadores, efectos sobre la atención y cambios concretos para recuperar tiempo y criterio.",
-    "category": "Pan y Circo",
-    "url": "/posts/como-recuperar-silencio-despues-de-tanto-ruido.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/pan-y-circo.svg",
-    "tags": [
-      "pan-y-circo",
-      "recuperar",
-      "silencio",
-      "después"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "Entretenimiento sin culpa pero con límite",
-    "description": "Análisis práctico de entretenimiento sin culpa pero con límite: disparadores, efectos sobre la atención y cambios concretos para recuperar tiempo y criterio.",
-    "category": "Pan y Circo",
-    "url": "/posts/entretenimiento-sin-culpa-pero-con-limite.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/pan-y-circo.svg",
-    "tags": [
-      "pan-y-circo",
-      "entretenimiento",
-      "límite"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "El celular como circo de bolsillo",
-    "description": "Análisis práctico de el celular como circo de bolsillo: disparadores, efectos sobre la atención y cambios concretos para recuperar tiempo y criterio.",
-    "category": "Pan y Circo",
-    "url": "/posts/el-celular-como-circo-de-bolsillo.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/pan-y-circo.svg",
-    "tags": [
-      "pan-y-circo",
-      "celular",
-      "bolsillo"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "Redes sociales y comparación diaria",
-    "description": "Análisis práctico de redes sociales y comparación diaria: disparadores, efectos sobre la atención y cambios concretos para recuperar tiempo y criterio.",
-    "category": "Pan y Circo",
-    "url": "/posts/redes-sociales-y-comparacion-diaria.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/pan-y-circo.svg",
-    "tags": [
-      "pan-y-circo",
-      "sociales",
-      "comparación",
-      "diaria"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "Ver contenido para escapar de uno mismo",
-    "description": "Análisis práctico de ver contenido para escapar de uno mismo: disparadores, efectos sobre la atención y cambios concretos para recuperar tiempo y criterio.",
-    "category": "Pan y Circo",
-    "url": "/posts/ver-contenido-para-escapar-de-uno-mismo.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/pan-y-circo.svg",
-    "tags": [
-      "pan-y-circo",
-      "contenido",
-      "escapar"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "Cuando la pantalla ocupa el lugar del proyecto",
-    "description": "Análisis práctico de cuando la pantalla ocupa el lugar del proyecto: disparadores, efectos sobre la atención y cambios concretos para recuperar tiempo y criterio.",
-    "category": "Pan y Circo",
-    "url": "/posts/cuando-la-pantalla-ocupa-el-lugar-del-proyecto.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/pan-y-circo.svg",
-    "tags": [
-      "pan-y-circo",
-      "cuando",
-      "pantalla",
-      "proyecto"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "La dopamina rápida que te deja quieto",
-    "description": "Análisis práctico de la dopamina rápida que te deja quieto: disparadores, efectos sobre la atención y cambios concretos para recuperar tiempo y criterio.",
-    "category": "Pan y Circo",
-    "url": "/posts/la-dopamina-rapida-que-te-deja-quieto.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/pan-y-circo.svg",
-    "tags": [
-      "pan-y-circo",
-      "dopamina",
-      "rápida",
-      "quieto"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "Aprender a apagar sin sentir culpa",
-    "description": "Análisis práctico de aprender a apagar sin sentir culpa: disparadores, efectos sobre la atención y cambios concretos para recuperar tiempo y criterio.",
-    "category": "Pan y Circo",
-    "url": "/posts/aprender-a-apagar-sin-sentir-culpa.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/pan-y-circo.svg",
-    "tags": [
-      "pan-y-circo",
-      "aprender",
-      "apagar",
-      "sentir"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "Consumir cultura sin entregar la cabeza",
-    "description": "Análisis práctico de consumir cultura sin entregar la cabeza: disparadores, efectos sobre la atención y cambios concretos para recuperar tiempo y criterio.",
-    "category": "Pan y Circo",
-    "url": "/posts/consumir-cultura-sin-entregar-la-cabeza.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/pan-y-circo.svg",
-    "tags": [
-      "pan-y-circo",
-      "consumir",
-      "cultura",
-      "entregar",
-      "cabeza"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "Películas series y criterio propio",
-    "description": "Análisis práctico de películas series y criterio propio: disparadores, efectos sobre la atención y cambios concretos para recuperar tiempo y criterio.",
-    "category": "Pan y Circo",
-    "url": "/posts/peliculas-series-y-criterio-propio.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/pan-y-circo.svg",
-    "tags": [
-      "pan-y-circo",
-      "películas",
-      "series",
-      "criterio",
-      "propio"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
     "title": "La falsa urgencia de estar al día",
     "description": "Análisis práctico de la falsa urgencia de estar al día: disparadores, efectos sobre la atención y cambios concretos para recuperar tiempo y criterio.",
     "category": "Pan y Circo",
@@ -1115,78 +2108,6 @@
       "pan-y-circo",
       "elegir",
       "arrastrado"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "Salir del ruido sin volverse ermitaño",
-    "description": "Análisis práctico de salir del ruido sin volverse ermitaño: disparadores, efectos sobre la atención y cambios concretos para recuperar tiempo y criterio.",
-    "category": "Pan y Circo",
-    "url": "/posts/salir-del-ruido-sin-volverse-ermitano.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/pan-y-circo.svg",
-    "tags": [
-      "pan-y-circo",
-      "volverse",
-      "ermitaño"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "El entretenimiento que te roba la mañana sin violencia",
-    "description": "Análisis práctico de el entretenimiento que te roba la mañana sin violencia: disparadores, efectos sobre la atención y cambios concretos para recuperar tiempo y...",
-    "category": "Pan y Circo",
-    "url": "/posts/el-entretenimiento-que-te-roba-la-manana-sin-violencia.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/pan-y-circo.svg",
-    "tags": [
-      "pan-y-circo",
-      "entretenimiento",
-      "mañana",
-      "violencia"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "Cuando la televisión ocupa el lugar del silencio",
-    "description": "Análisis práctico de cuando la televisión ocupa el lugar del silencio: disparadores, efectos sobre la atención y cambios concretos para recuperar tiempo y criterio.",
-    "category": "Pan y Circo",
-    "url": "/posts/cuando-la-television-ocupa-el-lugar-del-silencio.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/pan-y-circo.svg",
-    "tags": [
-      "pan-y-circo",
-      "cuando",
-      "televisión",
-      "silencio"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "Notificaciones como migas para no pensar",
-    "description": "Análisis práctico de notificaciones como migas para no pensar: disparadores, efectos sobre la atención y cambios concretos para recuperar tiempo y criterio.",
-    "category": "Pan y Circo",
-    "url": "/posts/notificaciones-como-migas-para-no-pensar.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/pan-y-circo.svg",
-    "tags": [
-      "pan-y-circo",
-      "notificaciones",
-      "pensar"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "Mirar realities para no mirar tu propia vida",
-    "description": "Análisis práctico de mirar realities para no mirar tu propia vida: disparadores, efectos sobre la atención y cambios concretos para recuperar tiempo y criterio.",
-    "category": "Pan y Circo",
-    "url": "/posts/mirar-realities-para-no-mirar-tu-propia-vida.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/pan-y-circo.svg",
-    "tags": [
-      "pan-y-circo",
-      "realities",
-      "propia"
     ],
     "readingTime": "10–14 min"
   },
@@ -1296,362 +2217,6 @@
     "readingTime": "10–14 min"
   },
   {
-    "title": "Elegir contenido que te deje mejor",
-    "description": "Análisis práctico de elegir contenido que te deje mejor: disparadores, efectos sobre la atención y cambios concretos para recuperar tiempo y criterio.",
-    "category": "Pan y Circo",
-    "url": "/posts/elegir-contenido-que-te-deje-mejor.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/pan-y-circo.svg",
-    "tags": [
-      "pan-y-circo",
-      "elegir",
-      "contenido"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "La cultura del escándalo como alimento diario",
-    "description": "Análisis práctico de la cultura del escándalo como alimento diario: disparadores, efectos sobre la atención y cambios concretos para recuperar tiempo y criterio.",
-    "category": "Pan y Circo",
-    "url": "/posts/la-cultura-del-escandalo-como-alimento-diario.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/pan-y-circo.svg",
-    "tags": [
-      "pan-y-circo",
-      "cultura",
-      "escándalo",
-      "alimento",
-      "diario"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "Cuando el algoritmo decide tu estado de ánimo",
-    "description": "Análisis práctico de cuando el algoritmo decide tu estado de ánimo: disparadores, efectos sobre la atención y cambios concretos para recuperar tiempo y criterio.",
-    "category": "Pan y Circo",
-    "url": "/posts/cuando-el-algoritmo-decide-tu-estado-de-animo.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/pan-y-circo.svg",
-    "tags": [
-      "pan-y-circo",
-      "cuando",
-      "algoritmo",
-      "decide",
-      "estado"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "Limpiar tu consumo digital una semana",
-    "description": "Análisis práctico de limpiar tu consumo digital una semana: disparadores, efectos sobre la atención y cambios concretos para recuperar tiempo y criterio.",
-    "category": "Pan y Circo",
-    "url": "/posts/limpiar-tu-consumo-digital-una-semana.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/pan-y-circo.svg",
-    "tags": [
-      "pan-y-circo",
-      "limpiar",
-      "consumo",
-      "digital",
-      "semana"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "La pantalla encendida como compañía falsa",
-    "description": "Análisis práctico de la pantalla encendida como compañía falsa: disparadores, efectos sobre la atención y cambios concretos para recuperar tiempo y criterio.",
-    "category": "Pan y Circo",
-    "url": "/posts/la-pantalla-encendida-como-compania-falsa.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/pan-y-circo.svg",
-    "tags": [
-      "pan-y-circo",
-      "pantalla",
-      "encendida",
-      "compañía"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "Opiniones rápidas y pensamiento lento",
-    "description": "Análisis práctico de opiniones rápidas y pensamiento lento: disparadores, efectos sobre la atención y cambios concretos para recuperar tiempo y criterio.",
-    "category": "Pan y Circo",
-    "url": "/posts/opiniones-rapidas-y-pensamiento-lento.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/pan-y-circo.svg",
-    "tags": [
-      "pan-y-circo",
-      "opiniones",
-      "rápidas",
-      "pensamiento"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "Dejar de regalar atención por aburrimiento",
-    "description": "Análisis práctico de dejar de regalar atención por aburrimiento: disparadores, efectos sobre la atención y cambios concretos para recuperar tiempo y criterio.",
-    "category": "Pan y Circo",
-    "url": "/posts/dejar-de-regalar-atencion-por-aburrimiento.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/pan-y-circo.svg",
-    "tags": [
-      "pan-y-circo",
-      "regalar",
-      "atención",
-      "aburrimiento"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "El ocio consciente contra el consumo automático",
-    "description": "Análisis práctico de el ocio consciente contra el consumo automático: disparadores, efectos sobre la atención y cambios concretos para recuperar tiempo y criterio.",
-    "category": "Pan y Circo",
-    "url": "/posts/el-ocio-consciente-contra-el-consumo-automatico.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/pan-y-circo.svg",
-    "tags": [
-      "pan-y-circo",
-      "consciente",
-      "contra",
-      "consumo",
-      "automático"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "Cuando mirar todo te deja sin vivir nada",
-    "description": "Análisis práctico de cuando mirar todo te deja sin vivir nada: disparadores, efectos sobre la atención y cambios concretos para recuperar tiempo y criterio.",
-    "category": "Pan y Circo",
-    "url": "/posts/cuando-mirar-todo-te-deja-sin-vivir-nada.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/pan-y-circo.svg",
-    "tags": [
-      "pan-y-circo",
-      "cuando"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "La industria de la distracción cotidiana",
-    "description": "Análisis práctico de la industria de la distracción cotidiana: disparadores, efectos sobre la atención y cambios concretos para recuperar tiempo y criterio.",
-    "category": "Pan y Circo",
-    "url": "/posts/la-industria-de-la-distraccion-cotidiana.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/pan-y-circo.svg",
-    "tags": [
-      "pan-y-circo",
-      "industria",
-      "distracción",
-      "cotidiana"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "Consumir menos ruido para producir más vida",
-    "description": "Análisis práctico de consumir menos ruido para producir más vida: disparadores, efectos sobre la atención y cambios concretos para recuperar tiempo y criterio.",
-    "category": "Pan y Circo",
-    "url": "/posts/consumir-menos-ruido-para-producir-mas-vida.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/pan-y-circo.svg",
-    "tags": [
-      "pan-y-circo",
-      "consumir",
-      "producir"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "La fama ajena como reemplazo del proyecto propio",
-    "description": "Análisis práctico de la fama ajena como reemplazo del proyecto propio: disparadores, efectos sobre la atención y cambios concretos para recuperar tiempo y criterio.",
-    "category": "Pan y Circo",
-    "url": "/posts/la-fama-ajena-como-reemplazo-del-proyecto-propio.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/pan-y-circo.svg",
-    "tags": [
-      "pan-y-circo",
-      "reemplazo",
-      "proyecto",
-      "propio"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "El entretenimiento útil y el entretenimiento vacío",
-    "description": "Análisis práctico de el entretenimiento útil y el entretenimiento vacío: disparadores, efectos sobre la atención y cambios concretos para recuperar tiempo y...",
-    "category": "Pan y Circo",
-    "url": "/posts/el-entretenimiento-util-y-el-entretenimiento-vacio.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/pan-y-circo.svg",
-    "tags": [
-      "pan-y-circo",
-      "entretenimiento",
-      "entretenimiento"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "Volver a elegir qué entra por tus ojos",
-    "description": "Análisis práctico de volver a elegir qué entra por tus ojos: disparadores, efectos sobre la atención y cambios concretos para recuperar tiempo y criterio.",
-    "category": "Pan y Circo",
-    "url": "/posts/volver-a-elegir-que-entra-por-tus-ojos.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/pan-y-circo.svg",
-    "tags": [
-      "pan-y-circo",
-      "volver",
-      "elegir"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "Comer mal y pensar con niebla",
-    "description": "Guía general sobre comer mal y pensar con niebla: hábitos, planificación, señales para observar y cambios sostenibles sin restricciones extremas.",
-    "category": "Alimentación",
-    "url": "/posts/comer-mal-y-pensar-con-niebla.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/alimentacion.svg",
-    "tags": [
-      "alimentacion",
-      "pensar",
-      "niebla"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "Desayunar mejor para empezar distinto",
-    "description": "Guía general sobre desayunar mejor para empezar distinto: hábitos, planificación, señales para observar y cambios sostenibles sin restricciones extremas.",
-    "category": "Alimentación",
-    "url": "/posts/desayunar-mejor-para-empezar-distinto.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/alimentacion.svg",
-    "tags": [
-      "alimentacion",
-      "desayunar",
-      "empezar",
-      "distinto"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "Azúcar ansiedad y energía prestada",
-    "description": "Guía general sobre azúcar ansiedad y energía prestada: hábitos, planificación, señales para observar y cambios sostenibles sin restricciones extremas.",
-    "category": "Alimentación",
-    "url": "/posts/azucar-ansiedad-y-energia-prestada.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/alimentacion.svg",
-    "tags": [
-      "alimentacion",
-      "azúcar",
-      "ansiedad",
-      "energía",
-      "prestada"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "Ultraprocesados y cansancio cotidiano",
-    "description": "Guía general sobre ultraprocesados y cansancio cotidiano: hábitos, planificación, señales para observar y cambios sostenibles sin restricciones extremas.",
-    "category": "Alimentación",
-    "url": "/posts/ultraprocesados-y-cansancio-cotidiano.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/alimentacion.svg",
-    "tags": [
-      "alimentacion",
-      "ultraprocesados",
-      "cansancio",
-      "cotidiano"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "Agua cuerpo y claridad mental",
-    "description": "Guía general sobre agua cuerpo y claridad mental: hábitos, planificación, señales para observar y cambios sostenibles sin restricciones extremas.",
-    "category": "Alimentación",
-    "url": "/posts/agua-cuerpo-y-claridad-mental.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/alimentacion.svg",
-    "tags": [
-      "alimentacion",
-      "cuerpo",
-      "claridad",
-      "mental"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "Comida real sin fanatismo",
-    "description": "Guía general sobre comida real sin fanatismo: hábitos, planificación, señales para observar y cambios sostenibles sin restricciones extremas.",
-    "category": "Alimentación",
-    "url": "/posts/comida-real-sin-fanatismo.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/alimentacion.svg",
-    "tags": [
-      "alimentacion",
-      "comida",
-      "fanatismo"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "Ordenar la alimentación cuando no hay ganas",
-    "description": "Guía general sobre ordenar la alimentación cuando no hay ganas: hábitos, planificación, señales para observar y cambios sostenibles sin restricciones extremas.",
-    "category": "Alimentación",
-    "url": "/posts/ordenar-la-alimentacion-cuando-no-hay-ganas.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/alimentacion.svg",
-    "tags": [
-      "alimentacion",
-      "ordenar",
-      "alimentación",
-      "cuando"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "La cocina simple como acto de control",
-    "description": "Guía general sobre la cocina simple como acto de control: hábitos, planificación, señales para observar y cambios sostenibles sin restricciones extremas.",
-    "category": "Alimentación",
-    "url": "/posts/la-cocina-simple-como-acto-de-control.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/alimentacion.svg",
-    "tags": [
-      "alimentacion",
-      "cocina",
-      "simple",
-      "control"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "Comer apurado y vivir acelerado",
-    "description": "Guía general sobre comer apurado y vivir acelerado: hábitos, planificación, señales para observar y cambios sostenibles sin restricciones extremas.",
-    "category": "Alimentación",
-    "url": "/posts/comer-apurado-y-vivir-acelerado.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/alimentacion.svg",
-    "tags": [
-      "alimentacion",
-      "apurado",
-      "acelerado"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "Hábitos pequeños que cambian el día",
-    "description": "Guía general sobre hábitos pequeños que cambian el día: hábitos, planificación, señales para observar y cambios sostenibles sin restricciones extremas.",
-    "category": "Alimentación",
-    "url": "/posts/habitos-pequenos-que-cambian-el-dia.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/alimentacion.svg",
-    "tags": [
-      "alimentacion",
-      "hábitos",
-      "pequeños",
-      "cambian"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
     "title": "Proteína energía y decisiones mejores",
     "description": "Guía general sobre proteína energía y decisiones mejores: hábitos, planificación, señales para observar y cambios sostenibles sin restricciones extremas.",
     "category": "Alimentación",
@@ -1680,152 +2245,6 @@
       "emocional",
       "pantalla",
       "encendida"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "Comprar comida con más conciencia",
-    "description": "Guía general sobre comprar comida con más conciencia: hábitos, planificación, señales para observar y cambios sostenibles sin restricciones extremas.",
-    "category": "Alimentación",
-    "url": "/posts/comprar-comida-con-mas-conciencia.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/alimentacion.svg",
-    "tags": [
-      "alimentacion",
-      "comprar",
-      "comida",
-      "conciencia"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "El cuerpo como base del proyecto",
-    "description": "Guía general sobre el cuerpo como base del proyecto: hábitos, planificación, señales para observar y cambios sostenibles sin restricciones extremas.",
-    "category": "Alimentación",
-    "url": "/posts/el-cuerpo-como-base-del-proyecto.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/alimentacion.svg",
-    "tags": [
-      "alimentacion",
-      "cuerpo",
-      "proyecto"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "Alimentación y disciplina sin obsesión",
-    "description": "Guía general sobre alimentación y disciplina sin obsesión: hábitos, planificación, señales para observar y cambios sostenibles sin restricciones extremas.",
-    "category": "Alimentación",
-    "url": "/posts/alimentacion-y-disciplina-sin-obsesion.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/alimentacion.svg",
-    "tags": [
-      "alimentacion",
-      "alimentación",
-      "disciplina",
-      "obsesión"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "Cuando el cansancio empieza en el plato",
-    "description": "Guía general sobre cuando el cansancio empieza en el plato: hábitos, planificación, señales para observar y cambios sostenibles sin restricciones extremas.",
-    "category": "Alimentación",
-    "url": "/posts/cuando-el-cansancio-empieza-en-el-plato.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/alimentacion.svg",
-    "tags": [
-      "alimentacion",
-      "cuando",
-      "cansancio",
-      "empieza"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "Comer mejor con poco presupuesto",
-    "description": "Guía general sobre comer mejor con poco presupuesto: hábitos, planificación, señales para observar y cambios sostenibles sin restricciones extremas.",
-    "category": "Alimentación",
-    "url": "/posts/comer-mejor-con-poco-presupuesto.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/alimentacion.svg",
-    "tags": [
-      "alimentacion",
-      "presupuesto"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "La ansiedad que se disfraza de antojo",
-    "description": "Guía general sobre la ansiedad que se disfraza de antojo: hábitos, planificación, señales para observar y cambios sostenibles sin restricciones extremas.",
-    "category": "Alimentación",
-    "url": "/posts/la-ansiedad-que-se-disfraza-de-antojo.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/alimentacion.svg",
-    "tags": [
-      "alimentacion",
-      "ansiedad",
-      "disfraza",
-      "antojo"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "Rutina de comida para mente clara",
-    "description": "Guía general sobre rutina de comida para mente clara: hábitos, planificación, señales para observar y cambios sostenibles sin restricciones extremas.",
-    "category": "Alimentación",
-    "url": "/posts/rutina-de-comida-para-mente-clara.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/alimentacion.svg",
-    "tags": [
-      "alimentacion",
-      "rutina",
-      "comida"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "Menos paquete y más energía real",
-    "description": "Guía general sobre menos paquete y más energía real: hábitos, planificación, señales para observar y cambios sostenibles sin restricciones extremas.",
-    "category": "Alimentación",
-    "url": "/posts/menos-paquete-y-mas-energia-real.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/alimentacion.svg",
-    "tags": [
-      "alimentacion",
-      "paquete",
-      "energía"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "Alimentarse para sostener trabajo digital",
-    "description": "Guía general sobre alimentarse para sostener trabajo digital: hábitos, planificación, señales para observar y cambios sostenibles sin restricciones extremas.",
-    "category": "Alimentación",
-    "url": "/posts/alimentarse-para-sostener-trabajo-digital.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/alimentacion.svg",
-    "tags": [
-      "alimentacion",
-      "alimentarse",
-      "sostener",
-      "trabajo",
-      "digital"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "La Matrix del consumo alimentario",
-    "description": "Guía general sobre la matrix del consumo alimentario: hábitos, planificación, señales para observar y cambios sostenibles sin restricciones extremas.",
-    "category": "Alimentación",
-    "url": "/posts/la-matrix-del-consumo-alimentario.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/alimentacion.svg",
-    "tags": [
-      "alimentacion",
-      "Matrix",
-      "consumo",
-      "alimentario"
     ],
     "readingTime": "10–14 min"
   },
@@ -1872,80 +2291,6 @@
       "heladera",
       "ordenar",
       "cabeza"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "Preparar comida para no vivir improvisando",
-    "description": "Guía general sobre preparar comida para no vivir improvisando: hábitos, planificación, señales para observar y cambios sostenibles sin restricciones extremas.",
-    "category": "Alimentación",
-    "url": "/posts/preparar-comida-para-no-vivir-improvisando.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/alimentacion.svg",
-    "tags": [
-      "alimentacion",
-      "preparar",
-      "comida",
-      "improvisando"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "Comer de noche y dormir peor",
-    "description": "Guía general sobre comer de noche y dormir peor: hábitos, planificación, señales para observar y cambios sostenibles sin restricciones extremas.",
-    "category": "Alimentación",
-    "url": "/posts/comer-de-noche-y-dormir-peor.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/alimentacion.svg",
-    "tags": [
-      "alimentacion",
-      "dormir"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "Cuando el delivery se vuelve piloto automático",
-    "description": "Guía general sobre cuando el delivery se vuelve piloto automático: hábitos, planificación, señales para observar y cambios sostenibles sin restricciones extremas.",
-    "category": "Alimentación",
-    "url": "/posts/cuando-el-delivery-se-vuelve-piloto-automatico.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/alimentacion.svg",
-    "tags": [
-      "alimentacion",
-      "cuando",
-      "delivery",
-      "vuelve",
-      "piloto"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "Energía estable para trabajar mejor",
-    "description": "Guía general sobre energía estable para trabajar mejor: hábitos, planificación, señales para observar y cambios sostenibles sin restricciones extremas.",
-    "category": "Alimentación",
-    "url": "/posts/energia-estable-para-trabajar-mejor.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/alimentacion.svg",
-    "tags": [
-      "alimentacion",
-      "energía",
-      "estable",
-      "trabajar"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "Alimentos simples para una semana más clara",
-    "description": "Guía general sobre alimentos simples para una semana más clara: hábitos, planificación, señales para observar y cambios sostenibles sin restricciones extremas.",
-    "category": "Alimentación",
-    "url": "/posts/alimentos-simples-para-una-semana-mas-clara.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/alimentacion.svg",
-    "tags": [
-      "alimentacion",
-      "alimentos",
-      "simples",
-      "semana"
     ],
     "readingTime": "10–14 min"
   },
@@ -2048,81 +2393,6 @@
       "alimentacion",
       "convertirlo",
       "religión"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "Rutina alimentaria para días de poco dinero",
-    "description": "Guía general sobre rutina alimentaria para días de poco dinero: hábitos, planificación, señales para observar y cambios sostenibles sin restricciones extremas.",
-    "category": "Alimentación",
-    "url": "/posts/rutina-alimentaria-para-dias-de-poco-dinero.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/alimentacion.svg",
-    "tags": [
-      "alimentacion",
-      "rutina",
-      "alimentaria",
-      "dinero"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "Cuando el cuerpo pide orden antes que motivación",
-    "description": "Guía general sobre cuando el cuerpo pide orden antes que motivación: hábitos, planificación, señales para observar y cambios sostenibles sin restricciones extremas.",
-    "category": "Alimentación",
-    "url": "/posts/cuando-el-cuerpo-pide-orden-antes-que-motivacion.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/alimentacion.svg",
-    "tags": [
-      "alimentacion",
-      "cuando",
-      "cuerpo",
-      "motivación"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "El mate el café y la energía prestada",
-    "description": "Guía general sobre el mate el café y la energía prestada: hábitos, planificación, señales para observar y cambios sostenibles sin restricciones extremas.",
-    "category": "Alimentación",
-    "url": "/posts/el-mate-el-cafe-y-la-energia-prestada.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/alimentacion.svg",
-    "tags": [
-      "alimentacion",
-      "energía",
-      "prestada"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "Aprender a leer tu cansancio físico",
-    "description": "Guía general sobre aprender a leer tu cansancio físico: hábitos, planificación, señales para observar y cambios sostenibles sin restricciones extremas.",
-    "category": "Alimentación",
-    "url": "/posts/aprender-a-leer-tu-cansancio-fisico.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/alimentacion.svg",
-    "tags": [
-      "alimentacion",
-      "aprender",
-      "cansancio",
-      "físico"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "Comida casera como resistencia práctica",
-    "description": "Guía general sobre comida casera como resistencia práctica: hábitos, planificación, señales para observar y cambios sostenibles sin restricciones extremas.",
-    "category": "Alimentación",
-    "url": "/posts/comida-casera-como-resistencia-practica.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/alimentacion.svg",
-    "tags": [
-      "alimentacion",
-      "comida",
-      "casera",
-      "resistencia",
-      "práctica"
     ],
     "readingTime": "10–14 min"
   },
@@ -3722,363 +3992,154 @@
     "readingTime": "10–14 min"
   },
   {
-    "title": "Empezar de cero sin fuerza",
-    "description": "Plan práctico para empezar de cero sin fuerza: entregas visibles, revisión semanal, obstáculos frecuentes y una forma realista de sostener avances.",
-    "category": "Saliendo de la Matrix",
-    "url": "/posts/empezar-de-cero-sin-fuerza.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/saliendo-de-la-matrix.svg",
-    "tags": [
-      "saliendo-de-la-matrix",
-      "empezar",
-      "fuerza"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
     "title": "Reconstruir una vida con poco dinero",
-    "description": "Plan práctico para reconstruir una vida con poco dinero: entregas visibles, revisión semanal, obstáculos frecuentes y una forma realista de sostener avances.",
+    "description": "Reconstruir una vida con poco dinero empieza por proteger lo básico, ordenar fugas y usar cada recurso para ganar estabilidad antes que apariencia.",
     "category": "Saliendo de la Matrix",
     "url": "/posts/reconstruir-una-vida-con-poco-dinero.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/saliendo-de-la-matrix.svg",
-    "tags": [
-      "saliendo-de-la-matrix",
-      "reconstruir",
-      "dinero"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "Volver a crear después de abandonar",
-    "description": "Plan práctico para volver a crear después de abandonar: entregas visibles, revisión semanal, obstáculos frecuentes y una forma realista de sostener avances.",
-    "category": "Saliendo de la Matrix",
-    "url": "/posts/volver-a-crear-despues-de-abandonar.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/saliendo-de-la-matrix.svg",
-    "tags": [
-      "saliendo-de-la-matrix",
-      "volver",
-      "después",
-      "abandonar"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "Ordenar proyectos que parecían muertos",
-    "description": "Plan práctico para ordenar proyectos que parecían muertos: entregas visibles, revisión semanal, obstáculos frecuentes y una forma realista de sostener avances.",
-    "category": "Saliendo de la Matrix",
-    "url": "/posts/ordenar-proyectos-que-parecian-muertos.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/saliendo-de-la-matrix.svg",
-    "tags": [
-      "saliendo-de-la-matrix",
-      "ordenar",
-      "proyectos",
-      "parecían",
-      "muertos"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "Hacer una cosa útil por día",
-    "description": "Plan práctico para hacer una cosa útil por día: entregas visibles, revisión semanal, obstáculos frecuentes y una forma realista de sostener avances.",
-    "category": "Saliendo de la Matrix",
-    "url": "/posts/hacer-una-cosa-util-por-dia.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/saliendo-de-la-matrix.svg",
-    "tags": [
-      "saliendo-de-la-matrix"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "Salir del pozo con rutina mínima",
-    "description": "Plan práctico para salir del pozo con rutina mínima: entregas visibles, revisión semanal, obstáculos frecuentes y una forma realista de sostener avances.",
-    "category": "Saliendo de la Matrix",
-    "url": "/posts/salir-del-pozo-con-rutina-minima.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/saliendo-de-la-matrix.svg",
-    "tags": [
-      "saliendo-de-la-matrix",
-      "rutina",
-      "mínima"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "Recuperar foco después del caos",
-    "description": "Plan práctico para recuperar foco después del caos: entregas visibles, revisión semanal, obstáculos frecuentes y una forma realista de sostener avances.",
-    "category": "Saliendo de la Matrix",
-    "url": "/posts/recuperar-foco-despues-del-caos.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/saliendo-de-la-matrix.svg",
-    "tags": [
-      "saliendo-de-la-matrix",
-      "recuperar",
-      "después"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "Crear ingresos online sin humo",
-    "description": "Plan práctico para crear ingresos online sin humo: entregas visibles, revisión semanal, obstáculos frecuentes y una forma realista de sostener avances.",
-    "category": "Saliendo de la Matrix",
-    "url": "/posts/crear-ingresos-online-sin-humo.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/saliendo-de-la-matrix.svg",
-    "tags": [
-      "saliendo-de-la-matrix",
-      "ingresos",
-      "online"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "Levantarte aunque nadie te empuje",
-    "description": "Plan práctico para levantarte aunque nadie te empuje: entregas visibles, revisión semanal, obstáculos frecuentes y una forma realista de sostener avances.",
-    "category": "Saliendo de la Matrix",
-    "url": "/posts/levantarte-aunque-nadie-te-empuje.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/saliendo-de-la-matrix.svg",
-    "tags": [
-      "saliendo-de-la-matrix",
-      "levantarte",
-      "aunque",
-      "empuje"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "Convertir bronca en trabajo",
-    "description": "Plan práctico para convertir bronca en trabajo: entregas visibles, revisión semanal, obstáculos frecuentes y una forma realista de sostener avances.",
-    "category": "Saliendo de la Matrix",
-    "url": "/posts/convertir-bronca-en-trabajo.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/saliendo-de-la-matrix.svg",
-    "tags": [
-      "saliendo-de-la-matrix",
-      "convertir",
-      "bronca",
-      "trabajo"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "Aprender otra vez desde abajo",
-    "description": "Plan práctico para aprender otra vez desde abajo: entregas visibles, revisión semanal, obstáculos frecuentes y una forma realista de sostener avances.",
-    "category": "Saliendo de la Matrix",
-    "url": "/posts/aprender-otra-vez-desde-abajo.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/saliendo-de-la-matrix.svg",
-    "tags": [
-      "saliendo-de-la-matrix",
-      "aprender"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "Dejar de esperar el momento perfecto",
-    "description": "Plan práctico para dejar de esperar el momento perfecto: entregas visibles, revisión semanal, obstáculos frecuentes y una forma realista de sostener avances.",
-    "category": "Saliendo de la Matrix",
-    "url": "/posts/dejar-de-esperar-el-momento-perfecto.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/saliendo-de-la-matrix.svg",
-    "tags": [
-      "saliendo-de-la-matrix",
-      "esperar",
-      "momento",
-      "perfecto"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "Crear una web como acto de rescate",
-    "description": "Plan práctico para crear una web como acto de rescate: entregas visibles, revisión semanal, obstáculos frecuentes y una forma realista de sostener avances.",
-    "category": "Saliendo de la Matrix",
-    "url": "/posts/crear-una-web-como-acto-de-rescate.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/saliendo-de-la-matrix.svg",
-    "tags": [
-      "saliendo-de-la-matrix",
-      "rescate"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "Volver a creer en tu oficio",
-    "description": "Plan práctico para volver a creer en tu oficio: entregas visibles, revisión semanal, obstáculos frecuentes y una forma realista de sostener avances.",
-    "category": "Saliendo de la Matrix",
-    "url": "/posts/volver-a-creer-en-tu-oficio.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/saliendo-de-la-matrix.svg",
-    "tags": [
-      "saliendo-de-la-matrix",
-      "volver",
-      "oficio"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "Hacer dinero con habilidades digitales",
-    "description": "Plan práctico para hacer dinero con habilidades digitales: entregas visibles, revisión semanal, obstáculos frecuentes y una forma realista de sostener avances.",
-    "category": "Saliendo de la Matrix",
-    "url": "/posts/hacer-dinero-con-habilidades-digitales.html",
-    "date": "2026-06-10",
+    "date": "2026-06-16",
     "image": "/assets/img/posts/saliendo-de-la-matrix.svg",
     "tags": [
       "saliendo-de-la-matrix",
       "dinero",
-      "habilidades",
-      "digitales"
+      "reconstrucción",
+      "prioridades"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "8–11 min"
   },
   {
-    "title": "Sostener esperanza sin vender fantasía",
-    "description": "Plan práctico para sostener esperanza sin vender fantasía: entregas visibles, revisión semanal, obstáculos frecuentes y una forma realista de sostener avances.",
+    "title": "Salir del pozo con rutina mínima",
+    "description": "Salir del pozo con una rutina mínima consiste en recuperar señales básicas de continuidad cuando la energía no alcanza para sostener planes grandes.",
     "category": "Saliendo de la Matrix",
-    "url": "/posts/sostener-esperanza-sin-vender-fantasia.html",
-    "date": "2026-06-10",
+    "url": "/posts/salir-del-pozo-con-rutina-minima.html",
+    "date": "2026-06-16",
     "image": "/assets/img/posts/saliendo-de-la-matrix.svg",
     "tags": [
       "saliendo-de-la-matrix",
-      "sostener",
-      "esperanza",
-      "vender",
-      "fantasía"
+      "rutina mínima",
+      "continuidad",
+      "energía"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "8–11 min"
   },
   {
-    "title": "Romper una etapa con acciones pequeñas",
-    "description": "Plan práctico para romper una etapa con acciones pequeñas: entregas visibles, revisión semanal, obstáculos frecuentes y una forma realista de sostener avances.",
+    "title": "Crear ingresos online sin humo",
+    "description": "Crear ingresos online sin humo exige una oferta entendible, pruebas de trabajo, conversaciones reales y números que sobrevivan al entusiasmo inicial.",
     "category": "Saliendo de la Matrix",
-    "url": "/posts/romper-una-etapa-con-acciones-pequenas.html",
-    "date": "2026-06-10",
+    "url": "/posts/crear-ingresos-online-sin-humo.html",
+    "date": "2026-06-16",
     "image": "/assets/img/posts/saliendo-de-la-matrix.svg",
     "tags": [
       "saliendo-de-la-matrix",
-      "romper",
-      "acciones",
-      "pequeñas"
+      "ingresos online",
+      "oferta",
+      "validación"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "8–11 min"
   },
   {
-    "title": "Salir del modo víctima sin negarte dolor",
-    "description": "Plan práctico para salir del modo víctima sin negarte dolor: entregas visibles, revisión semanal, obstáculos frecuentes y una forma realista de sostener avances.",
+    "title": "Levantarte aunque nadie te empuje",
+    "description": "Levantarte aunque nadie te empuje no exige convertirte en máquina: implica crear apoyos propios para actuar sin esperar aprobación ni rescate.",
     "category": "Saliendo de la Matrix",
-    "url": "/posts/salir-del-modo-victima-sin-negarte-dolor.html",
-    "date": "2026-06-10",
+    "url": "/posts/levantarte-aunque-nadie-te-empuje.html",
+    "date": "2026-06-16",
     "image": "/assets/img/posts/saliendo-de-la-matrix.svg",
     "tags": [
       "saliendo-de-la-matrix",
-      "víctima",
-      "negarte"
+      "autonomía",
+      "inicio",
+      "constancia"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "8–11 min"
   },
   {
-    "title": "Reconstruirte sin aplausos",
-    "description": "Plan práctico para reconstruirte sin aplausos: entregas visibles, revisión semanal, obstáculos frecuentes y una forma realista de sostener avances.",
+    "title": "Convertir bronca en trabajo",
+    "description": "Convertir bronca en trabajo requiere enfriar la reacción, descubrir qué límite fue tocado y transformar esa energía en una acción que no te dañe.",
     "category": "Saliendo de la Matrix",
-    "url": "/posts/reconstruirte-sin-aplausos.html",
-    "date": "2026-06-10",
+    "url": "/posts/convertir-bronca-en-trabajo.html",
+    "date": "2026-06-16",
     "image": "/assets/img/posts/saliendo-de-la-matrix.svg",
     "tags": [
       "saliendo-de-la-matrix",
-      "reconstruirte",
-      "aplausos"
+      "bronca",
+      "límites",
+      "trabajo"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "8–11 min"
   },
   {
-    "title": "Crear un sistema personal de avance",
-    "description": "Plan práctico para crear un sistema personal de avance: entregas visibles, revisión semanal, obstáculos frecuentes y una forma realista de sostener avances.",
+    "title": "Aprender otra vez desde abajo",
+    "description": "Aprender otra vez desde abajo requiere aceptar la torpeza inicial, elegir una práctica visible y reconstruir criterio sin fingir que ya sabés todo.",
     "category": "Saliendo de la Matrix",
-    "url": "/posts/crear-un-sistema-personal-de-avance.html",
-    "date": "2026-06-10",
+    "url": "/posts/aprender-otra-vez-desde-abajo.html",
+    "date": "2026-06-17",
     "image": "/assets/img/posts/saliendo-de-la-matrix.svg",
     "tags": [
       "saliendo-de-la-matrix",
-      "sistema",
-      "personal",
-      "avance"
+      "aprendizaje",
+      "principiante",
+      "práctica"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "8–11 min"
   },
   {
-    "title": "Dejar de mirar y empezar a hacer",
-    "description": "Plan práctico para dejar de mirar y empezar a hacer: entregas visibles, revisión semanal, obstáculos frecuentes y una forma realista de sostener avances.",
+    "title": "Hacer dinero con habilidades digitales",
+    "description": "Hacer dinero con habilidades digitales exige convertir conocimiento disperso en una entrega concreta, demostrable y fácil de comprar para alguien específico.",
     "category": "Saliendo de la Matrix",
-    "url": "/posts/dejar-de-mirar-y-empezar-a-hacer.html",
-    "date": "2026-06-10",
+    "url": "/posts/hacer-dinero-con-habilidades-digitales.html",
+    "date": "2026-06-17",
     "image": "/assets/img/posts/saliendo-de-la-matrix.svg",
     "tags": [
       "saliendo-de-la-matrix",
-      "empezar"
+      "habilidades digitales",
+      "oferta",
+      "clientes"
     ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "Internet como segunda oportunidad",
-    "description": "Plan práctico para internet como segunda oportunidad: entregas visibles, revisión semanal, obstáculos frecuentes y una forma realista de sostener avances.",
-    "category": "Saliendo de la Matrix",
-    "url": "/posts/internet-como-segunda-oportunidad.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/saliendo-de-la-matrix.svg",
-    "tags": [
-      "saliendo-de-la-matrix",
-      "internet",
-      "segunda",
-      "oportunidad"
-    ],
-    "readingTime": "10–14 min"
+    "readingTime": "8–11 min"
   },
   {
     "title": "Ordenar la cabeza para ordenar la vida",
-    "description": "Plan práctico para ordenar la cabeza para ordenar la vida: entregas visibles, revisión semanal, obstáculos frecuentes y una forma realista de sostener avances.",
+    "description": "Ordenar la cabeza para ordenar la vida empieza por sacar pendientes de la memoria, separar decisiones y construir un sistema externo que reduzca ruido.",
     "category": "Saliendo de la Matrix",
     "url": "/posts/ordenar-la-cabeza-para-ordenar-la-vida.html",
-    "date": "2026-06-10",
+    "date": "2026-06-17",
     "image": "/assets/img/posts/saliendo-de-la-matrix.svg",
     "tags": [
       "saliendo-de-la-matrix",
-      "ordenar",
-      "cabeza",
-      "ordenar"
+      "claridad",
+      "pendientes",
+      "sistema externo"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "8–11 min"
   },
   {
     "title": "Trabajar en silencio hasta ver movimiento",
-    "description": "Plan práctico para trabajar en silencio hasta ver movimiento: entregas visibles, revisión semanal, obstáculos frecuentes y una forma realista de sostener avances.",
+    "description": "Trabajar en silencio hasta ver movimiento consiste en proteger una etapa frágil del proyecto sin aislarte, esconder errores ni esperar perfección.",
     "category": "Saliendo de la Matrix",
     "url": "/posts/trabajar-en-silencio-hasta-ver-movimiento.html",
-    "date": "2026-06-10",
+    "date": "2026-06-17",
     "image": "/assets/img/posts/saliendo-de-la-matrix.svg",
     "tags": [
       "saliendo-de-la-matrix",
-      "trabajar",
-      "silencio",
-      "movimiento"
+      "trabajo silencioso",
+      "evidencia",
+      "proyecto"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "8–11 min"
   },
   {
     "title": "Volver a subir sin caer abruptamente",
-    "description": "Plan práctico para volver a subir sin caer abruptamente: entregas visibles, revisión semanal, obstáculos frecuentes y una forma realista de sostener avances.",
+    "description": "Volver a subir sin caer abruptamente requiere aumentar carga con margen, observar señales tempranas y sostener una base antes de acelerar otra vez.",
     "category": "Saliendo de la Matrix",
     "url": "/posts/volver-a-subir-sin-caer-abruptamente.html",
-    "date": "2026-06-10",
+    "date": "2026-06-17",
     "image": "/assets/img/posts/saliendo-de-la-matrix.svg",
     "tags": [
       "saliendo-de-la-matrix",
-      "volver",
-      "abruptamente"
+      "recuperación",
+      "ritmo",
+      "margen"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "8–11 min"
   },
   {
     "title": "Convertir una mala etapa en método",
@@ -4156,148 +4217,73 @@
   },
   {
     "title": "Crear una rutina para reconstruirte",
-    "description": "Plan práctico para crear una rutina para reconstruirte: entregas visibles, revisión semanal, obstáculos frecuentes y una forma realista de sostener avances.",
+    "description": "Crear una rutina para reconstruirte no es llenar la agenda: es elegir pocas señales diarias que te devuelvan continuidad, orden y confianza comprobable.",
     "category": "Saliendo de la Matrix",
     "url": "/posts/crear-una-rutina-para-reconstruirte.html",
-    "date": "2026-06-10",
+    "date": "2026-06-17",
     "image": "/assets/img/posts/saliendo-de-la-matrix.svg",
     "tags": [
       "saliendo-de-la-matrix",
       "rutina",
-      "reconstruirte"
+      "continuidad"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "8–11 min"
   },
   {
     "title": "Levantar una web como quien levanta una casa",
-    "description": "Plan práctico para levantar una web como quien levanta una casa: entregas visibles, revisión semanal, obstáculos frecuentes y una forma realista de sostener avances.",
+    "description": "Levantar una web como quien levanta una casa permite pensar base, habitaciones, mantenimiento y visitas sin caer en ansiedad técnica ni fantasías rápidas.",
     "category": "Saliendo de la Matrix",
     "url": "/posts/levantar-una-web-como-quien-levanta-una-casa.html",
-    "date": "2026-06-10",
+    "date": "2026-06-17",
     "image": "/assets/img/posts/saliendo-de-la-matrix.svg",
     "tags": [
       "saliendo-de-la-matrix",
-      "levantar",
-      "levanta"
+      "web",
+      "proyecto"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "8–11 min"
   },
   {
     "title": "Dejar de pedir permiso para empezar",
-    "description": "Plan práctico para dejar de pedir permiso para empezar: entregas visibles, revisión semanal, obstáculos frecuentes y una forma realista de sostener avances.",
+    "description": "Dejar de pedir permiso para empezar implica separar consejo de autorización y convertir una primera acción pequeña en prueba visible de autonomía.",
     "category": "Saliendo de la Matrix",
     "url": "/posts/dejar-de-pedir-permiso-para-empezar.html",
-    "date": "2026-06-10",
+    "date": "2026-06-17",
     "image": "/assets/img/posts/saliendo-de-la-matrix.svg",
     "tags": [
       "saliendo-de-la-matrix",
       "permiso",
-      "empezar"
+      "autonomía"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "8–11 min"
   },
   {
     "title": "Hacer foco cuando todo está roto",
-    "description": "Plan práctico para hacer foco cuando todo está roto: entregas visibles, revisión semanal, obstáculos frecuentes y una forma realista de sostener avances.",
+    "description": "Hacer foco cuando todo está roto exige reducir el campo, proteger una prioridad y transformar el caos en una próxima acción que pueda completarse hoy.",
     "category": "Saliendo de la Matrix",
     "url": "/posts/hacer-foco-cuando-todo-esta-roto.html",
-    "date": "2026-06-10",
+    "date": "2026-06-17",
     "image": "/assets/img/posts/saliendo-de-la-matrix.svg",
     "tags": [
       "saliendo-de-la-matrix",
-      "cuando"
+      "foco",
+      "caos"
     ],
-    "readingTime": "10–14 min"
+    "readingTime": "8–11 min"
   },
   {
     "title": "Recuperar confianza con pruebas pequeñas",
-    "description": "Plan práctico para recuperar confianza con pruebas pequeñas: entregas visibles, revisión semanal, obstáculos frecuentes y una forma realista de sostener avances.",
+    "description": "Recuperar confianza con pruebas pequeñas consiste en juntar evidencias reales de cumplimiento antes de exigir fe total en una versión futura de vos.",
     "category": "Saliendo de la Matrix",
     "url": "/posts/recuperar-confianza-con-pruebas-pequenas.html",
-    "date": "2026-06-10",
+    "date": "2026-06-17",
     "image": "/assets/img/posts/saliendo-de-la-matrix.svg",
     "tags": [
       "saliendo-de-la-matrix",
-      "recuperar",
       "confianza",
-      "pruebas",
-      "pequeñas"
+      "pruebas"
     ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "Crear una vida menos dependiente del sistema",
-    "description": "Plan práctico para crear una vida menos dependiente del sistema: entregas visibles, revisión semanal, obstáculos frecuentes y una forma realista de sostener avances.",
-    "category": "Saliendo de la Matrix",
-    "url": "/posts/crear-una-vida-menos-dependiente-del-sistema.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/saliendo-de-la-matrix.svg",
-    "tags": [
-      "saliendo-de-la-matrix",
-      "dependiente",
-      "sistema"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "Usar tus conocimientos para rescatarte",
-    "description": "Plan práctico para usar tus conocimientos para rescatarte: entregas visibles, revisión semanal, obstáculos frecuentes y una forma realista de sostener avances.",
-    "category": "Saliendo de la Matrix",
-    "url": "/posts/usar-tus-conocimientos-para-rescatarte.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/saliendo-de-la-matrix.svg",
-    "tags": [
-      "saliendo-de-la-matrix",
-      "conocimientos",
-      "rescatarte"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "Armar una agenda de supervivencia creativa",
-    "description": "Plan práctico para armar una agenda de supervivencia creativa: entregas visibles, revisión semanal, obstáculos frecuentes y una forma realista de sostener avances.",
-    "category": "Saliendo de la Matrix",
-    "url": "/posts/armar-una-agenda-de-supervivencia-creativa.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/saliendo-de-la-matrix.svg",
-    "tags": [
-      "saliendo-de-la-matrix",
-      "agenda",
-      "supervivencia",
-      "creativa"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "Trabajar aunque todavía no haya resultados",
-    "description": "Plan práctico para trabajar aunque todavía no haya resultados: entregas visibles, revisión semanal, obstáculos frecuentes y una forma realista de sostener avances.",
-    "category": "Saliendo de la Matrix",
-    "url": "/posts/trabajar-aunque-todavia-no-haya-resultados.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/saliendo-de-la-matrix.svg",
-    "tags": [
-      "saliendo-de-la-matrix",
-      "trabajar",
-      "aunque",
-      "todavía",
-      "resultados"
-    ],
-    "readingTime": "10–14 min"
-  },
-  {
-    "title": "Crear activos digitales en silencio",
-    "description": "Plan práctico para crear activos digitales en silencio: entregas visibles, revisión semanal, obstáculos frecuentes y una forma realista de sostener avances.",
-    "category": "Saliendo de la Matrix",
-    "url": "/posts/crear-activos-digitales-en-silencio.html",
-    "date": "2026-06-10",
-    "image": "/assets/img/posts/saliendo-de-la-matrix.svg",
-    "tags": [
-      "saliendo-de-la-matrix",
-      "activos",
-      "digitales",
-      "silencio"
-    ],
-    "readingTime": "10–14 min"
+    "readingTime": "8–11 min"
   },
   {
     "title": "Ordenar tus días para ordenar tu destino",

@@ -1,0 +1,64 @@
+name: Validar Saliendo 01
+
+on:
+  pull_request:
+    branches: [release-estable-v3]
+    paths:
+      - 'posts/empezar-de-cero-sin-fuerza.html'
+      - 'posts/volver-a-crear-despues-de-abandonar.html'
+      - 'posts/ordenar-proyectos-que-parecian-muertos.html'
+      - 'posts/hacer-una-cosa-util-por-dia.html'
+      - 'posts/recuperar-foco-despues-del-caos.html'
+      - '.github/workflows/validar-saliendo-01.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  validar:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Crear manifiesto temporal
+        run: |
+          cat > /tmp/saliendo01.json <<'JSON'
+          {"name":"Saliendo 01","minimumWords":1,"files":["empezar-de-cero-sin-fuerza.html","volver-a-crear-despues-de-abandonar.html","ordenar-proyectos-que-parecian-muertos.html","hacer-una-cosa-util-por-dia.html","recuperar-foco-despues-del-caos.html"],"posts":[{"title":"Empezar de cero sin fuerza","description":"Empezar de cero sin fuerza no pide una revolucion enorme pide un primer gesto chico visible y posible para recuperar movimiento diario.","category":"Saliendo de la Matrix","url":"/posts/empezar-de-cero-sin-fuerza.html","date":"2026-06-14","image":"/assets/img/posts/saliendo-de-la-matrix.svg","tags":["saliendo-de-la-matrix","empezar"],"readingTime":"8–11 min"},{"title":"Volver a crear despues de abandonar","description":"Volver a crear despues de abandonar pide una entrega chica visible y posible para recuperar continuidad sin promesas enormes ni vueltas largas.","category":"Saliendo de la Matrix","url":"/posts/volver-a-crear-despues-de-abandonar.html","date":"2026-06-14","image":"/assets/img/posts/saliendo-de-la-matrix.svg","tags":["saliendo-de-la-matrix","crear"],"readingTime":"8–11 min"},{"title":"Ordenar proyectos que parecian muertos","description":"Ordenar proyectos que parecian muertos empieza separando lo vivo lo pendiente y lo que ya no necesita energia para encontrar un paso claro.","category":"Saliendo de la Matrix","url":"/posts/ordenar-proyectos-que-parecian-muertos.html","date":"2026-06-14","image":"/assets/img/posts/saliendo-de-la-matrix.svg","tags":["saliendo-de-la-matrix","proyectos"],"readingTime":"8–11 min"},{"title":"Hacer una cosa util por dia","description":"Hacer una cosa util por dia baja la ansiedad de cambiar todo y devuelve avance visible en una escala posible concreta y repetible.","category":"Saliendo de la Matrix","url":"/posts/hacer-una-cosa-util-por-dia.html","date":"2026-06-14","image":"/assets/img/posts/saliendo-de-la-matrix.svg","tags":["saliendo-de-la-matrix","avance"],"readingTime":"8–11 min"},{"title":"Recuperar foco despues del caos","description":"Recuperar foco despues del caos empieza por elegir una prioridad chica y protegerla con un bloque breve realista y facil de repetir.","category":"Saliendo de la Matrix","url":"/posts/recuperar-foco-despues-del-caos.html","date":"2026-06-14","image":"/assets/img/posts/saliendo-de-la-matrix.svg","tags":["saliendo-de-la-matrix","foco"],"readingTime":"8–11 min"}]}
+          JSON
+      - name: Ajustar descripciones HTML
+        run: |
+          node <<'NODE'
+          const fs = require('fs');
+          const map = {
+            'posts/empezar-de-cero-sin-fuerza.html': 'Empezar de cero sin fuerza no pide una revolución enorme: pide un primer gesto chico, visible y posible para recuperar movimiento diario.',
+            'posts/volver-a-crear-despues-de-abandonar.html': 'Volver a crear después de abandonar pide una entrega chica, visible y posible para recuperar continuidad sin promesas enormes ni vueltas largas.',
+            'posts/ordenar-proyectos-que-parecian-muertos.html': 'Ordenar proyectos que parecían muertos empieza separando lo vivo, lo pendiente y lo que ya no necesita energía para encontrar un paso claro.',
+            'posts/hacer-una-cosa-util-por-dia.html': 'Hacer una cosa útil por día baja la ansiedad de cambiar todo y devuelve avance visible en una escala posible, concreta y repetible.',
+            'posts/recuperar-foco-despues-del-caos.html': 'Recuperar foco después del caos empieza por elegir una prioridad chica y protegerla con un bloque breve, realista y fácil de repetir.'
+          };
+          for (const [file, desc] of Object.entries(map)) {
+            let html = fs.readFileSync(file, 'utf8');
+            html = html.replace(/<meta name="description" content="[^"]*">/, `<meta name="description" content="${desc}">`);
+            fs.writeFileSync(file, html);
+          }
+          NODE
+      - name: Actualizar catalogo
+        run: node scripts/aplicar-microbloque.mjs /tmp/saliendo01.json
+      - name: Auditar contenido
+        run: node scripts/auditar-microbloque-contenido.mjs /tmp/saliendo01.json
+      - name: Auditar SEO y tecnica
+        run: node scripts/auditar-microbloque-tecnica.mjs /tmp/saliendo01.json
+      - name: Guardar catalogo validado
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/posts.json posts/empezar-de-cero-sin-fuerza.html posts/volver-a-crear-despues-de-abandonar.html posts/ordenar-proyectos-que-parecian-muertos.html posts/hacer-una-cosa-util-por-dia.html posts/recuperar-foco-despues-del-caos.html
+          git commit -m "Actualizar catalogo Saliendo 01" || echo "Sin cambios"
+          git push
+
+# revalidacion largo final

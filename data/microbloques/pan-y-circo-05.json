@@ -1,0 +1,63 @@
+{
+  "name": "Pan y Circo 05 final",
+  "minimumWords": 1,
+  "files": [
+    "salir-del-ruido-sin-volverse-ermitano.html",
+    "el-entretenimiento-que-te-roba-la-manana-sin-violencia.html",
+    "cuando-la-television-ocupa-el-lugar-del-silencio.html",
+    "notificaciones-como-migas-para-no-pensar.html",
+    "mirar-realities-para-no-mirar-tu-propia-vida.html"
+  ],
+  "posts": [
+    {
+      "title": "Salir del ruido sin volverse ermitaño",
+      "description": "Salir del ruido sin volverse ermitaño no exige desaparecer: alcanza con crear bordes sanos para recuperar atención y vida propia.",
+      "category": "Pan y Circo",
+      "url": "/posts/salir-del-ruido-sin-volverse-ermitano.html",
+      "date": "2026-06-14",
+      "image": "/assets/img/posts/pan-y-circo.svg",
+      "tags": ["pan y circo", "ruido digital", "silencio", "atención"],
+      "readingTime": "8–11 min"
+    },
+    {
+      "title": "El entretenimiento que te roba la mañana sin violencia",
+      "description": "El entretenimiento que te roba la mañana sin violencia entra como pausa breve, pero puede quedarse con el primer impulso del día.",
+      "category": "Pan y Circo",
+      "url": "/posts/el-entretenimiento-que-te-roba-la-manana-sin-violencia.html",
+      "date": "2026-06-14",
+      "image": "/assets/img/posts/pan-y-circo.svg",
+      "tags": ["pan y circo", "mañana", "entretenimiento", "atención"],
+      "readingTime": "8–11 min"
+    },
+    {
+      "title": "Cuando la televisión ocupa el lugar del silencio",
+      "description": "Cuando la televisión ocupa el lugar del silencio, la casa parece acompañada pero la cabeza pierde una pausa necesaria para ordenar el día.",
+      "category": "Pan y Circo",
+      "url": "/posts/cuando-la-television-ocupa-el-lugar-del-silencio.html",
+      "date": "2026-06-14",
+      "image": "/assets/img/posts/pan-y-circo.svg",
+      "tags": ["pan y circo", "televisión", "silencio", "atención"],
+      "readingTime": "8–11 min"
+    },
+    {
+      "title": "Notificaciones como migas para no pensar",
+      "description": "Notificaciones como migas para no pensar muestra cómo avisos pequeños pueden cortar ideas, sostener reflejos y ocupar la atención de a pedazos.",
+      "category": "Pan y Circo",
+      "url": "/posts/notificaciones-como-migas-para-no-pensar.html",
+      "date": "2026-06-14",
+      "image": "/assets/img/posts/pan-y-circo.svg",
+      "tags": ["pan y circo", "notificaciones", "atención", "ruido digital"],
+      "readingTime": "8–11 min"
+    },
+    {
+      "title": "Mirar realities para no mirar tu propia vida",
+      "description": "Mirar realities para no mirar tu propia vida puede ser una fuga suave: conflictos ajenos editados ocupan el lugar de preguntas propias.",
+      "category": "Pan y Circo",
+      "url": "/posts/mirar-realities-para-no-mirar-tu-propia-vida.html",
+      "date": "2026-06-14",
+      "image": "/assets/img/posts/pan-y-circo.svg",
+      "tags": ["pan y circo", "realities", "atención", "vida propia"],
+      "readingTime": "8–11 min"
+    }
+  ]
+}

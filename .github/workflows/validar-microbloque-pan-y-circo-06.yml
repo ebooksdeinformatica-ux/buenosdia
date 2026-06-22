@@ -1,0 +1,41 @@
+name: Validar microbloque Pan y Circo 06
+
+on:
+  pull_request:
+    branches: [release-estable-v3]
+    paths:
+      - 'posts/elegir-contenido-que-te-deje-mejor.html'
+      - 'posts/la-cultura-del-escandalo-como-alimento-diario.html'
+      - 'posts/cuando-el-algoritmo-decide-tu-estado-de-animo.html'
+      - 'posts/limpiar-tu-consumo-digital-una-semana.html'
+      - 'posts/la-pantalla-encendida-como-compania-falsa.html'
+      - 'data/microbloques/pan-y-circo-06.json'
+      - '.github/workflows/validar-microbloque-pan-y-circo-06.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  validar:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Actualizar catalogo
+        run: node scripts/aplicar-microbloque.mjs data/microbloques/pan-y-circo-06.json
+      - name: Auditar contenido
+        run: node scripts/auditar-microbloque-contenido.mjs data/microbloques/pan-y-circo-06.json
+      - name: Auditar SEO y tecnica
+        run: node scripts/auditar-microbloque-tecnica.mjs data/microbloques/pan-y-circo-06.json
+      - name: Guardar catalogo validado
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/posts.json
+          git commit -m "Actualizar catalogo del microbloque Pan y Circo 06" || echo "Sin cambios"
+          git push

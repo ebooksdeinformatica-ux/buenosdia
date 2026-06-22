@@ -1,0 +1,63 @@
+{
+  "name": "Alimentacion 02",
+  "minimumWords": 1,
+  "files": [
+    "comida-real-sin-fanatismo.html",
+    "ordenar-la-alimentacion-cuando-no-hay-ganas.html",
+    "la-cocina-simple-como-acto-de-control.html",
+    "comer-apurado-y-vivir-acelerado.html",
+    "habitos-pequenos-que-cambian-el-dia.html"
+  ],
+  "posts": [
+    {
+      "title": "Comida real sin fanatismo",
+      "description": "Comida real sin fanatismo es volver a alimentos simples sin convertir cada plato en una guerra ni cada elección en culpa.",
+      "category": "Alimentación",
+      "url": "/posts/comida-real-sin-fanatismo.html",
+      "date": "2026-06-14",
+      "image": "/assets/img/posts/alimentacion.svg",
+      "tags": ["alimentación", "comida real", "hábitos", "sin fanatismo"],
+      "readingTime": "8–11 min"
+    },
+    {
+      "title": "Ordenar la alimentación cuando no hay ganas",
+      "description": "Ordenar la alimentación cuando no hay ganas empieza por hacer más fácil lo básico, no por exigir una versión perfecta de vos.",
+      "category": "Alimentación",
+      "url": "/posts/ordenar-la-alimentacion-cuando-no-hay-ganas.html",
+      "date": "2026-06-14",
+      "image": "/assets/img/posts/alimentacion.svg",
+      "tags": ["alimentación", "comida simple", "hábitos", "cansancio"],
+      "readingTime": "8–11 min"
+    },
+    {
+      "title": "La cocina simple como acto de control",
+      "description": "La cocina simple como acto de control ayuda a recuperar una parte del día cuando todo viene apurado, caro o improvisado.",
+      "category": "Alimentación",
+      "url": "/posts/la-cocina-simple-como-acto-de-control.html",
+      "date": "2026-06-14",
+      "image": "/assets/img/posts/alimentacion.svg",
+      "tags": ["alimentación", "cocina simple", "hábitos", "organización"],
+      "readingTime": "8–11 min"
+    },
+    {
+      "title": "Comer apurado y vivir acelerado",
+      "description": "Comer apurado y vivir acelerado muestra cómo el ritmo del día también entra al plato, a la digestión y a la relación con el cuerpo.",
+      "category": "Alimentación",
+      "url": "/posts/comer-apurado-y-vivir-acelerado.html",
+      "date": "2026-06-14",
+      "image": "/assets/img/posts/alimentacion.svg",
+      "tags": ["alimentación", "comer lento", "hábitos", "ritmo"],
+      "readingTime": "8–11 min"
+    },
+    {
+      "title": "Hábitos pequeños que cambian el día",
+      "description": "Hábitos pequeños que cambian el día muestra cómo agua, comida simple y menos apuro pueden ordenar la energía cotidiana sin extremos.",
+      "category": "Alimentación",
+      "url": "/posts/habitos-pequenos-que-cambian-el-dia.html",
+      "date": "2026-06-14",
+      "image": "/assets/img/posts/alimentacion.svg",
+      "tags": ["alimentación", "hábitos", "agua", "rutina"],
+      "readingTime": "8–11 min"
+    }
+  ]
+}

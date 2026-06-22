@@ -1,0 +1,81 @@
+name: Validar Saliendo 09
+
+on:
+  push:
+    branches: [lote-1-tecnologia-real]
+    paths:
+      - 'data/p09/**'
+  pull_request:
+    branches: [release-estable-v3]
+    paths:
+      - 'posts/crear-una-vida-menos-dependiente-del-sistema.html'
+      - 'posts/usar-tus-conocimientos-para-rescatarte.html'
+      - 'posts/armar-una-agenda-de-supervivencia-creativa.html'
+      - 'posts/trabajar-aunque-todavia-no-haya-resultados.html'
+      - 'posts/crear-activos-digitales-en-silencio.html'
+      - 'data/microbloques/saliendo-09.json'
+      - 'data/posts.json'
+      - 'scripts/auditar-microbloque-contenido.mjs'
+      - 'scripts/auditar-microbloque-tecnica.mjs'
+      - '.github/workflows/validar-saliendo-09.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  validar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: lote-1-tecnologia-real
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Actualizar catálogo desde manifiesto
+        run: |
+          node <<'NODE'
+          const fs=require('fs');
+          const manifest=JSON.parse(fs.readFileSync('data/microbloques/saliendo-09.json','utf8'));
+          const posts=JSON.parse(fs.readFileSync('data/posts.json','utf8'));
+          const urls=new Set(manifest.posts.map(post=>post.url));
+          const cleaned=posts.filter(post=>!urls.has(post.url));
+          fs.writeFileSync('data/posts.json',JSON.stringify([...manifest.posts,...cleaned],null,2)+'\n');
+          NODE
+      - name: Validar catálogo
+        run: |
+          node <<'NODE'
+          const fs=require('fs');
+          const manifest=JSON.parse(fs.readFileSync('data/microbloques/saliendo-09.json','utf8'));
+          const posts=JSON.parse(fs.readFileSync('data/posts.json','utf8'));
+          const byUrl=new Map(posts.map(post=>[post.url,post]));
+          const errors=[];
+          for(const expected of manifest.posts){
+            const current=byUrl.get(expected.url);
+            if(!current){errors.push(`${expected.url}: ausente del catálogo`);continue;}
+            for(const field of ['title','description','category','date','image','readingTime'])if(current[field]!==expected[field])errors.push(`${expected.url}: ${field} no coincide`);
+            if(JSON.stringify(current.tags)!==JSON.stringify(expected.tags))errors.push(`${expected.url}: tags no coinciden`);
+          }
+          if(errors.length){console.error(errors.join('\n'));process.exit(1);}
+          console.log(`${manifest.name}: catálogo correcto para ${manifest.posts.length} artículos.`);
+          NODE
+      - name: Auditar contenido
+        run: node scripts/auditar-microbloque-contenido.mjs data/microbloques/saliendo-09.json
+      - name: Auditar técnica
+        run: node scripts/auditar-microbloque-tecnica.mjs data/microbloques/saliendo-09.json
+      - name: Persistir catálogo por API
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          sha=$(gh api "repos/${{ github.repository }}/contents/data/posts.json?ref=lote-1-tecnologia-real" --jq .sha)
+          SHA="$sha" node <<'NODE'
+          const fs=require('fs');
+          const payload={
+            message:'Actualizar catalogo S09',
+            content:fs.readFileSync('data/posts.json').toString('base64'),
+            sha:process.env.SHA,
+            branch:'lote-1-tecnologia-real'
+          };
+          fs.writeFileSync('/tmp/posts-payload.json',JSON.stringify(payload));
+          NODE
+          gh api --method PUT "repos/${{ github.repository }}/contents/data/posts.json" --input /tmp/posts-payload.json

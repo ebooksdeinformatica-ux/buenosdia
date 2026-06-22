@@ -1,0 +1,21 @@
+{
+  "name": "Tecnología 05a",
+  "posts": [
+    {
+      "url": "/posts/mejorar-una-web-vieja-sin-romperla.html",
+      "title": "Cómo mejorar una web vieja sin romperla",
+      "description": "Cómo mejorar una web vieja con respaldo, auditoría inicial, cambios pequeños, control de versiones, pruebas y prioridad sobre lo que realmente afecta al usuario.",
+      "date": "2026-06-12",
+      "readingTime": "9–12 min",
+      "tags": ["web vieja", "rediseño", "Git", "SEO técnico"]
+    },
+    {
+      "url": "/posts/hacer-una-web-estatica-que-cargue-rapido.html",
+      "title": "Cómo hacer una web estática que cargue rápido",
+      "description": "Cómo crear una web estática rápida con HTML claro, CSS mínimo, imágenes livianas, pocos scripts, URLs simples y mantenimiento fácil.",
+      "date": "2026-06-12",
+      "readingTime": "9–12 min",
+      "tags": ["web estática", "rendimiento web", "HTML", "GitHub Pages"]
+    }
+  ]
+}

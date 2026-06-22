@@ -1,0 +1,63 @@
+{
+  "name": "Saliendo 04",
+  "minimumWords": 750,
+  "files": [
+    "salir-del-modo-victima-sin-negarte-dolor.html",
+    "reconstruirte-sin-aplausos.html",
+    "crear-un-sistema-personal-de-avance.html",
+    "dejar-de-mirar-y-empezar-a-hacer.html",
+    "internet-como-segunda-oportunidad.html"
+  ],
+  "posts": [
+    {
+      "title": "Salir del modo víctima sin negarte el dolor",
+      "description": "Salir del modo víctima sin negar el dolor implica reconocer lo vivido, recuperar margen de decisión y elegir acciones pequeñas que devuelvan dirección.",
+      "category": "Saliendo de la Matrix",
+      "url": "/posts/salir-del-modo-victima-sin-negarte-dolor.html",
+      "date": "2026-06-16",
+      "image": "/assets/img/posts/saliendo-de-la-matrix.svg",
+      "tags": ["saliendo-de-la-matrix", "responsabilidad", "dolor", "decisión"],
+      "readingTime": "8–11 min"
+    },
+    {
+      "title": "Reconstruirte sin aplausos",
+      "description": "Reconstruirte sin aplausos exige sostener acciones que nadie celebra todavía, registrar avances reales y dejar que la constancia hable antes que la opinión.",
+      "category": "Saliendo de la Matrix",
+      "url": "/posts/reconstruirte-sin-aplausos.html",
+      "date": "2026-06-16",
+      "image": "/assets/img/posts/saliendo-de-la-matrix.svg",
+      "tags": ["saliendo-de-la-matrix", "reconstrucción", "constancia", "autonomía"],
+      "readingTime": "8–11 min"
+    },
+    {
+      "title": "Crear un sistema personal de avance",
+      "description": "Crear un sistema personal de avance convierte objetivos difusos en acciones visibles, revisiones breves y una continuidad posible incluso en semanas difíciles.",
+      "category": "Saliendo de la Matrix",
+      "url": "/posts/crear-un-sistema-personal-de-avance.html",
+      "date": "2026-06-16",
+      "image": "/assets/img/posts/saliendo-de-la-matrix.svg",
+      "tags": ["saliendo-de-la-matrix", "sistema personal", "avance", "revisión"],
+      "readingTime": "8–11 min"
+    },
+    {
+      "title": "Dejar de mirar y empezar a hacer",
+      "description": "Dejar de mirar y empezar a hacer requiere cortar la espera, elegir una tarea concreta y producir una primera prueba que abra el camino a la siguiente.",
+      "category": "Saliendo de la Matrix",
+      "url": "/posts/dejar-de-mirar-y-empezar-a-hacer.html",
+      "date": "2026-06-16",
+      "image": "/assets/img/posts/saliendo-de-la-matrix.svg",
+      "tags": ["saliendo-de-la-matrix", "acción", "atención", "proyecto"],
+      "readingTime": "8–11 min"
+    },
+    {
+      "title": "Internet como segunda oportunidad",
+      "description": "Internet como segunda oportunidad funciona cuando una habilidad concreta se transforma en servicio, contenido o producto sin promesas rápidas ni dependencia total.",
+      "category": "Saliendo de la Matrix",
+      "url": "/posts/internet-como-segunda-oportunidad.html",
+      "date": "2026-06-16",
+      "image": "/assets/img/posts/saliendo-de-la-matrix.svg",
+      "tags": ["saliendo-de-la-matrix", "internet", "oficio digital", "segunda oportunidad"],
+      "readingTime": "8–11 min"
+    }
+  ]
+}
