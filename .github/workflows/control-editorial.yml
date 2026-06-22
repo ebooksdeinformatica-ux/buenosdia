@@ -24,9 +24,9 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Auditoría anti-repetición y tags limpios
-        run: npm run audit
-      - name: Build SEO estático
+      - name: Build SEO estático e interlinks
         run: npm run build
+      - name: Auditoría anti-repetición, tags limpios e interlinks
+        run: npm run audit
       - name: Confirmar build limpio
         run: git diff --exit-code
