@@ -20,3 +20,5 @@ npm run check
 ## Regla
 
 No se publica contenido que suene repetido, genérico o fabricado en serie.
+
+Commit aplicado: 78707cb55365c097abdf3a6afb9ac0d11663c3b8.
