@@ -11,6 +11,8 @@ BuenosDia.com mezcla SEO, humanidad, símbolo, calle, internet y reconstrucción
 - No generar tags basura para Google.
 - No copiar libros ni PDFs: usarlos solo como atmósfera, símbolo, mirada y profundidad.
 - Cada publicación debe tener intención de búsqueda, emoción dominante, ángulo propio y utilidad real.
+- Nunca publicar cocina interna del proyecto: no mencionar workflow, auditorías, etiquetas basura, plantillas, SEO interno, reseteos, archivos, ramas, motores, automatizaciones o decisiones técnicas dentro del texto visible para lectores.
+- Lo técnico queda en documentación interna; el artículo publicado debe hablarle al lector y resolver su búsqueda.
 
 ## Formatos
 
@@ -34,3 +36,5 @@ Cada publicación debe tener entre 3 y 7 tags. Deben ser concretos, buscables y 
 ## Filtro final
 
 ¿Este texto podría confundirse con otros 100 artículos de internet? Si la respuesta es sí, no se publica.
+
+¿Este texto está explicando el funcionamiento interno del sitio en vez de hablarle al lector? Si la respuesta es sí, se reescribe antes de publicar.
