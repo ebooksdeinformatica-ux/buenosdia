@@ -1,0 +1,32 @@
+name: Control editorial anti-repetición
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'posts/**'
+      - 'data/**'
+      - 'scripts/**'
+      - 'package.json'
+  pull_request:
+    branches: [ main ]
+    paths:
+      - 'posts/**'
+      - 'data/**'
+      - 'scripts/**'
+      - 'package.json'
+
+jobs:
+  auditar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Auditoría anti-repetición y tags limpios
+        run: npm run audit
+      - name: Build SEO estático
+        run: npm run build
+      - name: Confirmar build limpio
+        run: git diff --exit-code

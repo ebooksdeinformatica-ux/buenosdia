@@ -1,104 +1,23 @@
 import fs from 'node:fs';
 import path from 'node:path';
-
-const POSTS_DIR = 'posts';
-const MIN_WORDS = 850;
-const INTERNAL_PATTERNS = [
-  /Buenosdia\.com trabaja estos temas/i,
-  /Este sitio no separa el contenido/i,
-  /Esta publicación (?:está|fue|se encuentra|conecta)/i,
-  /cómo se conecta con SEO/i,
-  /en términos de SEO/i,
-  /SEO moderno/i,
-  /SEO para la vida real/i,
-  /por qué se conecta con otros posts/i,
-  /construir una red de textos/i,
-  /identidad editorial/i,
-  /nuestra estrategia/i,
-  /nuestro SEO/i,
-  /cómo hacemos/i,
-  /generador de publicaciones/i
-];
-
-function plainText(html) {
-  return html
-    .replace(/<script[\s\S]*?<\/script>/gi, ' ')
-    .replace(/<style[\s\S]*?<\/style>/gi, ' ')
-    .replace(/<[^>]+>/g, ' ')
-    .replace(/&[a-z0-9#]+;/gi, ' ')
-    .replace(/\s+/g, ' ')
-    .trim();
-}
-
-function words(text) {
-  return text.match(/[A-Za-zÁÉÍÓÚÜÑáéíóúüñ0-9]+/g) || [];
-}
-
-function paragraphSet(html) {
-  return new Set(
-    [...html.matchAll(/<p[^>]*>([\s\S]*?)<\/p>/gi)]
-      .map(m => plainText(m[1]).toLowerCase())
-      .filter(p => p.length > 80)
-  );
-}
-
-const errors = [];
-const warnings = [];
-const files = fs.existsSync(POSTS_DIR)
-  ? fs.readdirSync(POSTS_DIR).filter(f => f.endsWith('.html')).sort()
-  : [];
-
-if (!files.length) errors.push('No se encontraron publicaciones HTML.');
-
-const paragraphsByFile = new Map();
-
-for (const file of files) {
-  const full = path.join(POSTS_DIR, file);
-  const html = fs.readFileSync(full, 'utf8');
-  const text = plainText(html);
-  const count = words(text).length;
-  paragraphsByFile.set(file, paragraphSet(html));
-
-  if (count < MIN_WORDS) errors.push(`${file}: solo ${count} palabras; mínimo ${MIN_WORDS}.`);
-  if (!/<link rel="canonical" href="https:\/\/www\.buenosdia\.com\/posts\//i.test(html)) errors.push(`${file}: falta canonical correcto.`);
-  if (!/"@type":"BlogPosting"/.test(html)) errors.push(`${file}: falta JSON-LD BlogPosting.`);
-  if (!/max-image-preview:large/.test(html)) errors.push(`${file}: falta max-image-preview:large.`);
-  if (!/sc_project=12058975/.test(html) || !/sc_security="49f17e11"/.test(html)) errors.push(`${file}: falta Statcounter oficial.`);
-  if (/sc_project=13215021/.test(html)) errors.push(`${file}: conserva contador Statcounter viejo.`);
-  if (!/<h1 class="post-title">[^<]{15,}<\/h1>/.test(html)) errors.push(`${file}: H1 ausente o demasiado corto.`);
-  if (!/<meta name="description" content="[^\"]{90,170}"/.test(html)) warnings.push(`${file}: meta description fuera del rango recomendado.`);
-  if (!/<section class="related-box">/.test(html)) warnings.push(`${file}: falta bloque relacionado.`);
-  if (!/data-value-block="true"/.test(html)) warnings.push(`${file}: falta bloque de valor específico de categoría.`);
-
-  for (const pattern of INTERNAL_PATTERNS) {
-    if (pattern.test(text)) errors.push(`${file}: contiene cocina interna: ${pattern}.`);
-  }
-}
-
-const shared = new Map();
-for (const [file, set] of paragraphsByFile) {
-  for (const paragraph of set) {
-    if (!shared.has(paragraph)) shared.set(paragraph, []);
-    shared.get(paragraph).push(file);
-  }
-}
-
-for (const [paragraph, owners] of shared) {
-  if (owners.length >= 20) {
-    errors.push(`Párrafo repetido en ${owners.length} publicaciones: "${paragraph.slice(0, 110)}..."`);
-  } else if (owners.length >= 8) {
-    warnings.push(`Párrafo repetido en ${owners.length} publicaciones: "${paragraph.slice(0, 110)}..."`);
-  }
-}
-
-console.log(`Auditadas ${files.length} publicaciones.`);
-console.log(`Advertencias: ${warnings.length}`);
-for (const warning of warnings.slice(0, 100)) console.warn(`WARN: ${warning}`);
-
-if (errors.length) {
-  console.error(`Errores: ${errors.length}`);
-  for (const error of errors.slice(0, 200)) console.error(`ERROR: ${error}`);
-  process.exit(1);
-}
-
-console.log('Auditoría aprobada: contenido extenso, limpio y técnicamente completo.');
+const POSTS_DIR='posts';
+const STOP=new Set('a al algo ante con contra como de del desde donde durante el ella en entre era es esa ese eso esta este esto ha hay la las lo los mas más me mi mis muy no o para pero por que se sin sobre su sus te tu un una y ya'.split(' '));
+const BAD_TAGS=new Set(['cuando','aunque','siempre','tambien','también','sistema','cosa','forma','dia','día','vida','hacer','empezar','mejor','mucho','poco','persona','gente','algo','todo','nada']);
+function strip(s=''){return s.replace(/<script[\s\S]*?<\/script>/gi,' ').replace(/<style[\s\S]*?<\/style>/gi,' ').replace(/<[^>]+>/g,' ').replace(/&nbsp;/g,' ')}
+function norm(s=''){return strip(s).toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9ñ\s]/g,' ').replace(/\s+/g,' ').trim()}
+function words(s=''){return norm(s).split(' ').filter(w=>w.length>3&&!STOP.has(w))}
+function setWords(s){return new Set(words(s))}
+function dice(a,b){const A=setWords(a),B=setWords(b);if(!A.size||!B.size)return 0;let i=0;for(const x of A)if(B.has(x))i++;return 2*i/(A.size+B.size)}
+function shingles(s,n=6){const w=words(s),r=new Set;for(let i=0;i<=w.length-n;i++)r.add(w.slice(i,i+n).join(' '));return r}
+function jac(A,B){if(!A.size||!B.size)return 0;let i=0;for(const x of A)if(B.has(x))i++;return i/(A.size+B.size-i)}
+function ex(re,h){const m=h.match(re);return m?strip(m[1]).trim():''}
+function intro(h){return [...h.matchAll(/<p[^>]*>([\s\S]*?)<\/p>/gi)].slice(0,3).map(m=>strip(m[1]).trim()).join(' ')}
+function fail(m){console.error('✗ '+m);process.exitCode=1}
+const files=fs.existsSync(POSTS_DIR)?fs.readdirSync(POSTS_DIR).filter(f=>f.endsWith('.html')):[];
+const posts=files.map(file=>{const h=fs.readFileSync(path.join(POSTS_DIR,file),'utf8');return{file,html:h,title:ex(/<h1[^>]*>([\s\S]*?)<\/h1>/i,h)||ex(/<title[^>]*>([\s\S]*?)<\/title>/i,h),desc:ex(/<meta[^>]+name=["']description["'][^>]+content=["']([^"']+)/i,h),intro:intro(h),text:strip(h)}});
+if(!posts.length)fail('No hay publicaciones en /posts.');
+for(const p of posts){if(!p.title||p.title.length<35)fail(`${p.file}: título débil.`);if(!p.desc||p.desc.length<90||p.desc.length>180)fail(`${p.file}: description fuera de rango.`);if(/en este artículo vamos a ver|hoy vamos a hablar|en esta guía veremos/i.test(p.intro))fail(`${p.file}: arranque de plantilla.`)}
+for(let i=0;i<posts.length;i++)for(let j=i+1;j<posts.length;j++){const a=posts[i],b=posts[j];if(dice(a.title,b.title)>.72)fail(`Títulos parecidos: ${a.file} / ${b.file}`);if(jac(shingles(a.intro,4),shingles(b.intro,4))>.38)fail(`Arranques parecidos: ${a.file} / ${b.file}`);if(jac(shingles(a.text,7),shingles(b.text,7))>.30)fail(`Cuerpos parecidos: ${a.file} / ${b.file}`)}
+const meta=JSON.parse(fs.readFileSync('data/posts.json','utf8'));for(const p of meta){if(!Array.isArray(p.tags)||p.tags.length<3||p.tags.length>7)fail(`${p.title}: tags deben ser 3 a 7.`);for(const t of p.tags){if(BAD_TAGS.has(norm(t)))fail(`${p.title}: tag basura: ${t}`)}}
+if(process.exitCode){console.error('Auditoría editorial fallida. Reescribir antes de publicar.');process.exit(process.exitCode)}
+console.log(`✓ Auditoría editorial OK: ${posts.length} publicación(es).`);

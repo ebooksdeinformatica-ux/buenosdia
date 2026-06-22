@@ -1,0 +1,13 @@
+{
+  "name": "buenosdia-modelo-blog-github-v2",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "audit": "node scripts/auditar-publicaciones.mjs",
+    "build": "node scripts/build.mjs",
+    "check": "npm run audit && npm run build"
+  },
+  "description": "BuenosDia.com con auditoría anti-repetición y tags limpios.",
+  "engines": { "node": ">=20" }
+}

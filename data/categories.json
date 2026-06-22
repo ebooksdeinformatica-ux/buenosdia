@@ -1,8 +1,13 @@
 [
-  {"name":"Tecnología","slug":"tecnologia","icon":"/assets/img/categories/tecnologia.svg","description":"Inteligencia artificial, apps, internet, herramientas, plataformas y oportunidades digitales para la vida real."},
-  {"name":"Pan y Circo","slug":"pan-y-circo","icon":"/assets/img/categories/pan-y-circo.svg","description":"Televisión, películas, series, realities y entretenimiento masivo mirado con mirada crítica."},
-  {"name":"Alimentación","slug":"alimentacion","icon":"/assets/img/categories/alimentacion.svg","description":"Comida real, ultraprocesados, energía, hábitos, cuerpo y claridad mental."},
-  {"name":"Deportes","slug":"deportes","icon":"/assets/img/categories/deportes.svg","description":"Fútbol, gimnasio, combate, cuerpo, competencia y mentalidad."},
-  {"name":"Matrix","slug":"matrix","icon":"/assets/img/categories/matrix.svg","description":"Algoritmos, consumo, pantalla, publicidad, rutinas y piloto automático."},
-  {"name":"Saliendo de la Matrix","slug":"saliendo-de-la-matrix","icon":"/assets/img/categories/saliendo-de-la-matrix.svg","description":"Proyectos, internet, IA, foco, hábitos y libertad práctica."}
+  {"name":"Saliendo de la Matrix","slug":"saliendo-de-la-matrix","core":true,"description":"Núcleo editorial: reconstrucción personal, internet, IA, hábitos, criterio propio y libertad práctica."},
+  {"name":"Autoestima y Reconstrucción","slug":"autoestima-y-reconstruccion","description":"Autoestima, dignidad, heridas y recomienzo sin frases vacías."},
+  {"name":"Motivación sin Humo","slug":"motivacion-sin-humo","description":"Impulso real y humano para actuar sin prometer milagros."},
+  {"name":"Frases para Compartir","slug":"frases-para-compartir","description":"Frases y textos breves con emoción real."},
+  {"name":"Emociones Reales","slug":"emociones-reales","description":"Ansiedad, cansancio, bronca, tristeza y esperanza sin maquillaje."},
+  {"name":"Calma y Claridad Mental","slug":"calma-y-claridad-mental","description":"Ideas para bajar el ruido y pensar mejor."},
+  {"name":"Hábitos y Rutinas","slug":"habitos-y-rutinas","description":"Rutinas simples y sistemas humanos para sostener el día."},
+  {"name":"Relaciones y Vínculos","slug":"relaciones-y-vinculos","description":"Amor, amistad, familia, límites y conversaciones reales."},
+  {"name":"Productividad Humana","slug":"productividad-humana","description":"Organización y foco sin convertir la vida en máquina."},
+  {"name":"Internet, IA y Vida Digital","slug":"internet-ia-y-vida-digital","description":"Herramientas digitales, IA, blogs y autonomía tecnológica."},
+  {"name":"Historias Cortas y Reflexiones","slug":"historias-cortas-y-reflexiones","description":"Relatos breves, escenas cotidianas y reflexión humana."}
 ]
