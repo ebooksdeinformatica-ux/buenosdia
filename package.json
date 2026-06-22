@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "audit": "node scripts/auditar-publicaciones.mjs",
+    "audit": "node scripts/auditar-activas.mjs",
     "build": "node scripts/build.mjs",
     "check": "npm run audit && npm run build"
   },
