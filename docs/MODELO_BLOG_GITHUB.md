@@ -40,6 +40,8 @@ Cada publicación debe tener entre 3 y 7 tags. Deben ser concretos, buscables y 
 - Negritas cortas y útiles: no usar `<strong>` o `<b>` con más de 70 caracteres. La negrita debe resaltar una idea breve, no una frase entera.
 - Enlaces internos: cuando el sitio tenga suficientes URLs relacionadas, cada publicación debe incluir enlaces internos contextuales dentro del texto y un bloque relacionado. No forzar enlaces irrelevantes.
 - En posts comunes, objetivo mínimo cuando haya contenido suficiente: 4 a 8 enlaces internos contextuales. En guías grandes o páginas pilar: 10 a 20 enlaces internos naturales.
+- Interlinking bidireccional: cuando se publique un post nuevo, el nuevo debe enlazar a posts viejos relacionados y los posts viejos relacionados deben actualizar su bloque `Te puede interesar` para enlazar al nuevo.
+- No se reemplaza el texto viejo completo por cada publicación nueva. Se actualizan enlaces internos, bloque relacionado, categoría, home y sitemap cuando corresponda.
 - Backlinks: no se inventan ni se simulan dentro del HTML. Se trabajan con activos enlazables, publicaciones útiles, difusión legítima, perfiles reales, menciones, recursos compartibles y contacto externo.
 
 ## Filtro final
@@ -49,3 +51,5 @@ Cada publicación debe tener entre 3 y 7 tags. Deben ser concretos, buscables y 
 ¿Este texto está explicando el funcionamiento interno del sitio en vez de hablarle al lector? Si la respuesta es sí, se reescribe antes de publicar.
 
 ¿La página falla por frases demasiado cortas, falta de Apple Touch Icon, negritas largas o pocos enlaces internos cuando ya existen páginas relacionadas? Si la respuesta es sí, se corrige antes de publicar.
+
+¿El post nuevo quedó aislado o los posts viejos relevantes no lo enlazan? Si la respuesta es sí, se corrige antes de publicar.
