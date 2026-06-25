@@ -6,8 +6,12 @@
   "scripts": {
     "audit": "node scripts/auditar-activas.mjs",
     "build": "node scripts/build.mjs",
-    "check": "npm run audit && npm run build"
+    "check": "npm run build && npm run audit",
+    "google:search-console": "node scripts/google/search-console-opportunities.mjs",
+    "google:pagespeed": "node scripts/google/pagespeed-check.mjs",
+    "google:ideas": "node scripts/google/generar-ideas-seo.mjs",
+    "google:seo": "node scripts/google/actualizar-datos-google.mjs"
   },
-  "description": "BuenosDia.com con auditoría anti-repetición y tags limpios.",
+  "description": "BuenosDia.com con auditoría anti-repetición, interlinks y datos SEO de Google.",
   "engines": { "node": ">=20" }
 }
