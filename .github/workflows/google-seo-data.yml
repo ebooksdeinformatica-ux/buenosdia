@@ -1,0 +1,37 @@
+name: Google SEO Data
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '20 8 * * 1'
+
+permissions:
+  contents: write
+
+jobs:
+  google-seo-data:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Generar datos SEO desde Google
+        env:
+          GOOGLE_CLIENT_ID: ${{ secrets.GOOGLE_CLIENT_ID }}
+          GOOGLE_CLIENT_SECRET: ${{ secrets.GOOGLE_CLIENT_SECRET }}
+          GOOGLE_REFRESH_TOKEN: ${{ secrets.GOOGLE_REFRESH_TOKEN }}
+          GOOGLE_SEARCH_CONSOLE_SITE: ${{ secrets.GOOGLE_SEARCH_CONSOLE_SITE }}
+          PAGESPEED_API_KEY: ${{ secrets.PAGESPEED_API_KEY }}
+        run: npm run google:seo
+      - name: Commit de datos generados
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/google/*.json
+          if git diff --cached --quiet; then
+            echo "Sin cambios en datos Google."
+          else
+            git commit -m "Actualizar datos SEO de Google"
+            git push
+          fi
