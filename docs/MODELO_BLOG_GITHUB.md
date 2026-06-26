@@ -14,6 +14,15 @@ BuenosDia.com mezcla SEO, humanidad, símbolo, calle, internet y reconstrucción
 - Nunca publicar cocina interna del proyecto: no mencionar workflow, auditorías, etiquetas basura, plantillas, SEO interno, reseteos, archivos, ramas, motores, automatizaciones o decisiones técnicas dentro del texto visible para lectores.
 - Lo técnico queda en documentación interna; el artículo publicado debe hablarle al lector y resolver su búsqueda.
 
+## Estrategia de publicación
+
+- Las publicaciones no se eligen al azar. Se trabajan por clusters temáticos: una categoría o intención fuerte recibe varias piezas conectadas para construir profundidad.
+- No publicar sin límite dentro de una sola categoría. La categoría núcleo puede tener más peso, pero el sitio debe crecer con rotación editorial.
+- Regla práctica inicial: después de 3 a 5 publicaciones en el núcleo, abrir o reforzar otra categoría cercana.
+- Prioridad de expansión: Saliendo de la Matrix → Calma y Claridad Mental → Autoestima y Reconstrucción → Motivación sin Humo → Internet, IA y Vida Digital → Hábitos y Rutinas.
+- Cada nueva categoría debe tener una página propia, aparecer enlazada desde home cuando corresponda y entrar en sitemap si contiene publicaciones.
+- Un post nuevo debe enlazar al cluster existente si comparte intención, pero no debe forzar enlaces irrelevantes solo para sumar cantidad.
+
 ## Formatos
 
 - Reflexión emocional real: 600 a 900 palabras.
