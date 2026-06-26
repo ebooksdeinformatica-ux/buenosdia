@@ -8,6 +8,7 @@ const norm=s=>String(s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u03
 const words=s=>new Set(norm(s).split(' ').filter(w=>w.length>4));
 const overlap=(a,b)=>{let n=0;for(const x of a)if(b.has(x))n++;return n};
 const escape=s=>String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+const unique=arr=>[...new Set(arr.filter(Boolean))];
 
 function score(a,b){
   let s=0;
@@ -53,6 +54,7 @@ for(const post of posts){
   fs.writeFileSync(file,html);
 }
 
-const urls=['/',...posts.map(p=>p.url),'/categorias/saliendo-de-la-matrix/','/autor/aspf.html','/contacto/','/privacidad/','/cookies/','/terminos/','/aviso-legal/'];
+const categoryUrls=unique(posts.map(p=>p.categorySlug).map(slug=>'/categorias/'+slug+'/'));
+const urls=unique(['/',...posts.map(p=>p.url),...categoryUrls,'/autor/aspf.html','/contacto/','/privacidad/','/cookies/','/terminos/','/aviso-legal/']);
 fs.writeFileSync('sitemap.xml','<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'+urls.map(u=>'  <url><loc>'+SITE+u+'</loc><lastmod>'+latest+'</lastmod></url>').join('\n')+'\n</urlset>\n');
 console.log('Build OK: '+posts.length+' publicación(es), sitemap e interlinks actualizados.');
