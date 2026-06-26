@@ -39,10 +39,9 @@ function ensureAppleIcon(html){
 }
 
 function ensureRelatedBlock(html,post){
-  const block=relatedHtml(post);
   const re=/<section[^>]*class=["'][^"']*card[^"']*[^"']*["'][^>]*>\s*<h2>Te puede interesar<\/h2>[\s\S]*?<\/section>/i;
-  if(re.test(html))return html.replace(re,block);
-  return html.replace('</article>',block+'</article>');
+  if(re.test(html))return html;
+  return html.replace('</article>',relatedHtml(post)+'</article>');
 }
 
 for(const post of posts){
