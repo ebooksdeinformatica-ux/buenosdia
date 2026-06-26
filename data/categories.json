@@ -1,13 +1,90 @@
 [
-  {"name":"Saliendo de la Matrix","slug":"saliendo-de-la-matrix","core":true,"description":"Núcleo editorial: reconstrucción personal, internet, IA, hábitos, criterio propio y libertad práctica."},
-  {"name":"Autoestima y Reconstrucción","slug":"autoestima-y-reconstruccion","description":"Autoestima, dignidad, heridas y recomienzo sin frases vacías."},
-  {"name":"Motivación sin Humo","slug":"motivacion-sin-humo","description":"Impulso real y humano para actuar sin prometer milagros."},
-  {"name":"Frases para Compartir","slug":"frases-para-compartir","description":"Frases y textos breves con emoción real."},
-  {"name":"Emociones Reales","slug":"emociones-reales","description":"Ansiedad, cansancio, bronca, tristeza y esperanza sin maquillaje."},
-  {"name":"Calma y Claridad Mental","slug":"calma-y-claridad-mental","description":"Ideas para bajar el ruido y pensar mejor."},
-  {"name":"Hábitos y Rutinas","slug":"habitos-y-rutinas","description":"Rutinas simples y sistemas humanos para sostener el día."},
-  {"name":"Relaciones y Vínculos","slug":"relaciones-y-vinculos","description":"Amor, amistad, familia, límites y conversaciones reales."},
-  {"name":"Productividad Humana","slug":"productividad-humana","description":"Organización y foco sin convertir la vida en máquina."},
-  {"name":"Internet, IA y Vida Digital","slug":"internet-ia-y-vida-digital","description":"Herramientas digitales, IA, blogs y autonomía tecnológica."},
-  {"name":"Historias Cortas y Reflexiones","slug":"historias-cortas-y-reflexiones","description":"Relatos breves, escenas cotidianas y reflexión humana."}
+  {
+    "name":"Saliendo de la Matrix",
+    "slug":"saliendo-de-la-matrix",
+    "core":true,
+    "active":true,
+    "description":"Núcleo editorial sobre criterio propio, vida interior, libertad práctica y formas de no vivir completamente tomado por la repetición cotidiana.",
+    "editorialUse":"Textos de mirada simbólica, autonomía mental, automatismos, despertar cotidiano y lectura crítica del ruido externo e interno."
+  },
+  {
+    "name":"Autoestima y Reconstrucción",
+    "slug":"autoestima-y-reconstruccion",
+    "core":false,
+    "active":false,
+    "description":"Textos sobre dignidad, heridas, recomienzo y reconstrucción personal sin frases vacías ni promesas de transformación instantánea.",
+    "editorialUse":"Para publicaciones sobre volver a levantarse, recuperar respeto propio, ordenar la identidad después de golpes y reconstruir desde lo real."
+  },
+  {
+    "name":"Motivación sin Humo",
+    "slug":"motivacion-sin-humo",
+    "core":false,
+    "active":false,
+    "description":"Impulso concreto para actuar cuando no sobra energía, sin vender épica falsa ni positivismo de cartón.",
+    "editorialUse":"Para textos directos, secos y útiles sobre acción, disciplina, dinero, proyectos, constancia y movimiento real."
+  },
+  {
+    "name":"Frases para Compartir",
+    "slug":"frases-para-compartir",
+    "core":false,
+    "active":false,
+    "description":"Frases breves con fondo humano, pensadas para compartir sin sonar prefabricadas ni copiadas de una postal vacía.",
+    "editorialUse":"Para piezas cortas, imágenes, estados, frases de mañana, noche, calma, vínculo, ánimo y reflexión."
+  },
+  {
+    "name":"Emociones Reales",
+    "slug":"emociones-reales",
+    "core":false,
+    "active":false,
+    "description":"Ansiedad, bronca, tristeza, cansancio, esperanza y contradicciones tratadas con voz humana, sin maquillaje emocional.",
+    "editorialUse":"Para textos íntimos sobre estados concretos, escenas emocionales, conflictos internos y lenguaje cotidiano del sentir."
+  },
+  {
+    "name":"Calma y Claridad Mental",
+    "slug":"calma-y-claridad-mental",
+    "core":false,
+    "active":true,
+    "description":"Lecturas para separar lo mezclado, leer mejor los días difíciles y transformar un estado pesado en una acción posible.",
+    "editorialUse":"Para métodos simples, mapas internos, alquimia cotidiana, pausas, orden mental y formas prácticas de bajar la carga."
+  },
+  {
+    "name":"Hábitos y Rutinas",
+    "slug":"habitos-y-rutinas",
+    "core":false,
+    "active":false,
+    "description":"Rutinas simples, sistemas humanos y gestos repetibles para sostener el día sin convertir la vida en una fábrica.",
+    "editorialUse":"Para guías prácticas sobre mañana, noche, orden, trabajo, cuerpo, escritura, estudio, proyectos y continuidad."
+  },
+  {
+    "name":"Relaciones y Vínculos",
+    "slug":"relaciones-y-vinculos",
+    "core":false,
+    "active":false,
+    "description":"Amor, amistad, familia, límites y conversaciones difíciles vistos desde una voz directa, sensible y sin idealización.",
+    "editorialUse":"Para textos sobre límites, distancia, apego, cuidado, rupturas, silencios, expectativas y vínculos reales."
+  },
+  {
+    "name":"Productividad Humana",
+    "slug":"productividad-humana",
+    "core":false,
+    "active":false,
+    "description":"Organización, foco y trabajo propio sin tratar a la persona como una máquina ni medir la vida solo por rendimiento.",
+    "editorialUse":"Para publicaciones sobre foco, proyectos, dinero online, listas, bloqueos, ejecución, trabajo profundo y sistemas personales."
+  },
+  {
+    "name":"Internet, IA y Vida Digital",
+    "slug":"internet-ia-y-vida-digital",
+    "core":false,
+    "active":false,
+    "description":"Herramientas digitales, inteligencia artificial, blogs, automatización y autonomía tecnológica explicadas desde la vida real.",
+    "editorialUse":"Para contenidos sobre IA, SEO, blogs, GitHub, programas, Windows, automatización, AdSense y uso consciente de tecnología."
+  },
+  {
+    "name":"Historias Cortas y Reflexiones",
+    "slug":"historias-cortas-y-reflexiones",
+    "core":false,
+    "active":false,
+    "description":"Relatos breves, escenas cotidianas y pequeñas piezas narrativas que dejan una reflexión sin explicar de más.",
+    "editorialUse":"Para variar el formato con cuentos cortos, escenas de barrio, diálogos, imágenes simbólicas y cierres abiertos."
+  }
 ]
