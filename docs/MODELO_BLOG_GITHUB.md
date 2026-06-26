@@ -23,6 +23,27 @@ BuenosDia.com mezcla SEO, humanidad, símbolo, calle, internet y reconstrucción
 - Cada nueva categoría debe tener una página propia, aparecer enlazada desde home cuando corresponda y entrar en sitemap si contiene publicaciones.
 - Un post nuevo debe enlazar al cluster existente si comparte intención, pero no debe forzar enlaces irrelevantes solo para sumar cantidad.
 
+## Control anti-patrón de voz
+
+El sitio debe evitar que todos los textos parezcan escritos desde el mismo mecanismo de análisis. No alcanza con cambiar el título o la categoría: también debe variar la forma de mirar, narrar y desarrollar.
+
+Patrones a evitar si se repiten de forma seguida:
+
+- Diagnóstico repetido: “no estás mal, estás saturado”, “no falta capacidad, falta espacio”, “no es X, es Y”.
+- Misma arquitectura emocional: problema invisible → ruido/pantalla → recuperar presencia → acción mínima → cierre reflexivo.
+- Vocabulario comodín repetido: ruido, pantalla, presencia, automático, claridad, cabeza, volver a vos, recuperar mando.
+- Cierres demasiado parecidos: puerta abierta, pequeño paso, día no perdido, volver a uno mismo.
+- Tono siempre explicativo desde arriba. Alternar con escena, historia corta, diálogo interno, imagen concreta, lista útil, contraste social, observación callejera o mini ensayo.
+
+Antes de publicar, definir explícitamente una variable de forma:
+
+- Punto de vista: primera persona, segunda persona, tercera persona, escena narrativa o voz colectiva.
+- Motor del texto: historia, problema práctico, contradicción, lista, imagen simbólica, pregunta del lector, frase disparadora o situación cotidiana.
+- Ritmo: íntimo, práctico, seco, narrativo, conversacional, poético moderado o directo de taller.
+- Estructura: no repetir siempre apertura diagnóstica, desarrollo en bloques y cierre esperanzador.
+
+Regla práctica: si los últimos 3 posts usan el mismo ojo de análisis, el siguiente debe cambiar de forma, categoría o motor narrativo.
+
 ## Formatos
 
 - Reflexión emocional real: 600 a 900 palabras.
@@ -62,3 +83,5 @@ Cada publicación debe tener entre 3 y 7 tags. Deben ser concretos, buscables y 
 ¿La página falla por frases demasiado cortas, falta de Apple Touch Icon, negritas largas o pocos enlaces internos cuando ya existen páginas relacionadas? Si la respuesta es sí, se corrige antes de publicar.
 
 ¿El post nuevo quedó aislado o los posts viejos relevantes no lo enlazan? Si la respuesta es sí, se corrige antes de publicar.
+
+¿El texto usa el mismo ojo de análisis, las mismas palabras comodín o el mismo cierre emocional que los últimos posts? Si la respuesta es sí, cambiar forma antes de publicar.
