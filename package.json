@@ -4,10 +4,11 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "audit": "node scripts/auditar-activas.mjs",
+    "audit": "node scripts/auditar-activas.mjs && node scripts/auditar-voz.mjs",
     "build": "node scripts/build.mjs",
-    "check": "npm run build && npm run audit"
+    "check": "npm run build && npm run audit",
+    "voice": "node scripts/auditar-voz.mjs"
   },
-  "description": "BuenosDia.com con auditoría anti-repetición, interlinks y control editorial.",
+  "description": "BuenosDia.com con auditoría anti-repetición, interlinks, voz editorial y control de calidad.",
   "engines": { "node": ">=20" }
 }
