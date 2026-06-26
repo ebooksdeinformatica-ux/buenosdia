@@ -5,7 +5,7 @@
     "core":true,
     "active":true,
     "description":"Núcleo editorial sobre criterio propio, vida interior, libertad práctica y formas de no vivir completamente tomado por la repetición cotidiana.",
-    "editorialUse":"Textos de mirada simbólica, autonomía mental, automatismos, despertar cotidiano y lectura crítica del ruido externo e interno."
+    "editorialUse":"Textos sobre autonomía mental, automatismos cotidianos, despertar práctico y lectura crítica del ruido externo e interno."
   },
   {
     "name":"Autoestima y Reconstrucción",
@@ -44,8 +44,8 @@
     "slug":"calma-y-claridad-mental",
     "core":false,
     "active":true,
-    "description":"Lecturas para separar lo mezclado, leer mejor los días difíciles y transformar un estado pesado en una acción posible.",
-    "editorialUse":"Para métodos simples, mapas internos, alquimia cotidiana, pausas, orden mental y formas prácticas de bajar la carga."
+    "description":"Lecturas para separar lo mezclado, leer mejor los días difíciles y convertir un estado pesado en una acción posible.",
+    "editorialUse":"Para métodos simples, pausas, orden mental, escenas prácticas y formas concretas de bajar la carga."
   },
   {
     "name":"Hábitos y Rutinas",
@@ -85,6 +85,6 @@
     "core":false,
     "active":false,
     "description":"Relatos breves, escenas cotidianas y pequeñas piezas narrativas que dejan una reflexión sin explicar de más.",
-    "editorialUse":"Para variar el formato con cuentos cortos, escenas de barrio, diálogos, imágenes simbólicas y cierres abiertos."
+    "editorialUse":"Para variar el formato con cuentos cortos, escenas de barrio, diálogos, imágenes concretas y cierres abiertos."
   }
 ]
