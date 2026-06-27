@@ -9,6 +9,7 @@ Este archivo guarda aprendizaje para futuras publicaciones.
 - Usar radar externo solo para forma.
 - Consultar la fuente unica antes de escribir.
 - Diferenciar cada post de los anteriores.
+- Un post rehabilitado debe ganar cuerpo, ejemplos y acciones visibles, no solo mas palabras.
 
 ## Antes de publicar
 
@@ -21,9 +22,18 @@ Este archivo guarda aprendizaje para futuras publicaciones.
 
 ## Avance
 
-Puntaje inicial: 120.
-Nivel inicial: 2.
+Puntaje actual: 180.
+Nivel actual: 2.
 Publicaciones revisadas: 4.
+Publicaciones rehabilitadas: 1.
+
+## Ultima mejora aplicada
+
+2026-06-27: rehabilitacion del post "Como ordenar la cabeza cuando todo parece demasiado".
+
+Aprendizaje: el formato elegido fue guia practica con taller cotidiano. Funciono mejor que el texto atmosferico corto porque obliga a desarrollar escenas, pasos, ejemplos y cierre operativo.
+
+Puntos sumados: +60.
 
 ## Puntos
 
