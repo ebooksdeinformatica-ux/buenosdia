@@ -1,0 +1,22 @@
+name: THOT Radar editorial
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '20 9 * * *'
+
+jobs:
+  radar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Ejecutar THOT Radar
+        run: npm run thot:radar
+      - name: Subir informe THOT
+        uses: actions/upload-artifact@v4
+        with:
+          name: thot-radar
+          path: thot/
