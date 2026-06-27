@@ -1,0 +1,37 @@
+[
+  {
+    "name": "Backlinko",
+    "url": "https://backlinko.com/blog",
+    "role": "guias-seo-largas-frameworks-checklists-ai-search",
+    "scanLast": 5,
+    "copyPolicy": "solo estructura, no ideas ni texto"
+  },
+  {
+    "name": "HubSpot Marketing Blog",
+    "url": "https://blog.hubspot.com/marketing",
+    "role": "marketing-contenido-temas-amplios-intencion-de-busqueda",
+    "scanLast": 5,
+    "copyPolicy": "solo estructura, no ideas ni texto"
+  },
+  {
+    "name": "Search Engine Journal",
+    "url": "https://www.searchenginejournal.com/",
+    "role": "actualidad-seo-ai-search-noticias-formatos-cortos-y-medios",
+    "scanLast": 5,
+    "copyPolicy": "solo estructura, no ideas ni texto"
+  },
+  {
+    "name": "Ahrefs Blog",
+    "url": "https://ahrefs.com/blog/",
+    "role": "seo-practico-investigacion-keywords-backlinks-contenido",
+    "scanLast": 5,
+    "copyPolicy": "solo estructura, no ideas ni texto"
+  },
+  {
+    "name": "Copyblogger",
+    "url": "https://copyblogger.com/blog/",
+    "role": "copywriting-titulares-voz-persuasiva-estructura-editorial",
+    "scanLast": 5,
+    "copyPolicy": "solo estructura, no ideas ni texto"
+  }
+]
