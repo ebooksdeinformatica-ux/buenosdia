@@ -10,6 +10,8 @@ Este archivo guarda aprendizaje para futuras publicaciones.
 - Consultar la fuente unica antes de escribir.
 - Diferenciar cada post de los anteriores.
 - Un post rehabilitado debe ganar cuerpo, ejemplos y acciones visibles, no solo mas palabras.
+- No repetir el mismo formato entre publicaciones cercanas.
+- Evitar subtitulos formulaicos.
 
 ## Antes de publicar
 
@@ -22,18 +24,15 @@ Este archivo guarda aprendizaje para futuras publicaciones.
 
 ## Avance
 
-Puntaje actual: 180.
+Puntaje actual: 240.
 Nivel actual: 2.
 Publicaciones revisadas: 4.
-Publicaciones rehabilitadas: 1.
+Publicaciones rehabilitadas: 2.
 
-## Ultima mejora aplicada
+## Ultimas mejoras
 
-2026-06-27: rehabilitacion del post "Como ordenar la cabeza cuando todo parece demasiado".
-
-Aprendizaje: el formato elegido fue guia practica con taller cotidiano. Funciono mejor que el texto atmosferico corto porque obliga a desarrollar escenas, pasos, ejemplos y cierre operativo.
-
-Puntos sumados: +60.
+- 2026-06-27: post de ordenar la cabeza convertido en guia practica con taller cotidiano.
+- 2026-06-27: post de automatico convertido en ensayo con escenas y presencia cotidiana.
 
 ## Puntos
 
