@@ -44,12 +44,14 @@ No copia estructuras. Extrae modelos.
 - Un mapa de conceptos puede generar mejores interlinks que tags manuales.
 - Los articulos puente pueden aumentar profundidad de sesion.
 - Detectar vacios tematicos antes de escribir reduce canibalizacion futura.
+- Un articulo puente entre atencion, ocupacion, piloto automatico y claridad mental puede fortalecer varias rutas sin crear categoria nueva.
 
 ## Avance
 
-Puntaje actual: 0.
+Puntaje actual: 70.
 Nivel actual: 1.
 
 ## Registro
 
 - 2026-06-28: Mnemosine creada como memoria conceptual del sitio.
+- 2026-06-28: ubicado `estar-ocupado-no-es-estar-presente` como pieza puente entre claridad mental, presencia cotidiana, piloto automatico, dia dificil y manana pesada.
