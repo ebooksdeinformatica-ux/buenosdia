@@ -1,0 +1,39 @@
+{
+  "thot": {
+    "role": "editorial-seo-contenido",
+    "sources": [
+      {"name":"Backlinko","url":"https://backlinko.com/blog","use":"seo-ai-search-frameworks"},
+      {"name":"Ahrefs Blog","url":"https://ahrefs.com/blog/","use":"seo-investigacion-keywords-contenido"},
+      {"name":"Search Engine Journal","url":"https://www.searchenginejournal.com/","use":"actualidad-seo-ai-search"},
+      {"name":"Copyblogger","url":"https://copyblogger.com/blog/","use":"copywriting-voz-editorial"},
+      {"name":"Semrush Blog","url":"https://www.semrush.com/blog/","use":"seo-research-content-strategy"}
+    ]
+  },
+  "morfeo": {
+    "role": "retencion-experiencia-lectura",
+    "sources": [
+      {"name":"Nielsen Norman Group","url":"https://www.nngroup.com/articles/","use":"ux-usabilidad-lectura"},
+      {"name":"Baymard Institute","url":"https://baymard.com/blog","use":"ux-investigacion-comportamiento"},
+      {"name":"Smashing Magazine UX","url":"https://www.smashingmagazine.com/category/ux/","use":"ux-interaccion-componentes"},
+      {"name":"Growth Design","url":"https://growth.design/case-studies","use":"retencion-comportamiento-producto"}
+    ]
+  },
+  "mnemosine": {
+    "role": "mapa-conocimiento-conceptos",
+    "sources": [
+      {"name":"Wikipedia Architecture","url":"https://en.wikipedia.org/wiki/Portal:Contents","use":"organizacion-conocimiento"},
+      {"name":"Schema.org","url":"https://schema.org/docs/schemas.html","use":"entidades-relaciones-estructura"},
+      {"name":"Notion Blog","url":"https://www.notion.com/blog","use":"organizacion-conocimiento-productividad"},
+      {"name":"Obsidian Blog","url":"https://obsidian.md/blog/","use":"notas-conectadas-grafos"}
+    ]
+  },
+  "leonardo": {
+    "role": "diseno-ux-visual-confianza",
+    "sources": [
+      {"name":"A List Apart","url":"https://alistapart.com/articles/","use":"diseno-web-accesibilidad-contenido"},
+      {"name":"Smashing Magazine Design","url":"https://www.smashingmagazine.com/category/design/","use":"diseno-componentes-ux"},
+      {"name":"Material Design","url":"https://m3.material.io/","use":"sistema-diseno-componentes"},
+      {"name":"Apple Human Interface Guidelines","url":"https://developer.apple.com/design/human-interface-guidelines/","use":"interfaz-claridad-accesibilidad"}
+    ]
+  }
+}
