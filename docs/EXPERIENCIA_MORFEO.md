@@ -46,12 +46,14 @@ No copia componentes. Extrae principios.
 - Un Modo Explorador con opciones de intencion puede reducir rebote mas que un bloque clasico de relacionados.
 - Las rutas de lectura pueden aumentar paginas por sesion si mezclan continuidad y sorpresa.
 - Un final con decision del lector puede funcionar mejor que un final cerrado.
+- El cierre con cuatro puertas de intencion puede conectar mejor que una lista generica de relacionados.
 
 ## Avance
 
-Puntaje actual: 0.
+Puntaje actual: 70.
 Nivel actual: 1.
 
 ## Registro
 
 - 2026-06-28: Morfeo creado como director de experiencia del lector.
+- 2026-06-28: primer Modo Explorador aplicado en `estar-ocupado-no-es-estar-presente`, con puertas segun necesidad del lector: ordenar ruido, entender rutina, atravesar dia dificil o recuperar mirada de manana.
