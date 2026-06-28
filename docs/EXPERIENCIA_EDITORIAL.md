@@ -12,6 +12,7 @@ Este archivo guarda aprendizaje para futuras publicaciones.
 - Un post rehabilitado debe ganar cuerpo, ejemplos y acciones visibles, no solo mas palabras.
 - No repetir el mismo formato entre publicaciones cercanas.
 - Evitar subtitulos formulaicos.
+- Cambiar la forma del articulo puede mejorar la voz sin perder utilidad.
 
 ## Antes de publicar
 
@@ -24,15 +25,16 @@ Este archivo guarda aprendizaje para futuras publicaciones.
 
 ## Avance
 
-Puntaje actual: 240.
-Nivel actual: 2.
+Puntaje actual: 300.
+Nivel actual: 3.
 Publicaciones revisadas: 4.
-Publicaciones rehabilitadas: 2.
+Publicaciones rehabilitadas: 3.
 
 ## Ultimas mejoras
 
 - 2026-06-27: post de ordenar la cabeza convertido en guia practica con taller cotidiano.
 - 2026-06-27: post de automatico convertido en ensayo con escenas y presencia cotidiana.
+- 2026-06-27: post de dia torcido convertido en bitacora diaria con horas, escenas y decisiones pequenas.
 
 ## Puntos
 
