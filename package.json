@@ -4,10 +4,11 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "audit": "node scripts/auditar-activas.mjs && node scripts/auditar-voz.mjs && node scripts/auditar-statcounter.mjs",
+    "audit": "node scripts/auditar-activas.mjs && node scripts/auditar-voz.mjs && node scripts/auditar-variedad.mjs && node scripts/auditar-statcounter.mjs",
     "build": "node scripts/build.mjs",
     "check": "npm run build && npm run audit",
     "voice": "node scripts/auditar-voz.mjs",
+    "variety": "node scripts/auditar-variedad.mjs",
     "statcounter": "node scripts/auditar-statcounter.mjs",
     "thot:radar": "node scripts/thot-radar.mjs"
   },
