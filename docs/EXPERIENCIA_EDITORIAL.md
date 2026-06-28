@@ -13,6 +13,7 @@ Este archivo guarda aprendizaje para futuras publicaciones.
 - No repetir el mismo formato entre publicaciones cercanas.
 - Evitar subtitulos formulaicos.
 - Cambiar la forma del articulo puede mejorar la voz sin perder utilidad.
+- Una tanda inicial necesita variedad real de formatos para que el sitio no parezca hecho con molde.
 
 ## Antes de publicar
 
@@ -25,16 +26,17 @@ Este archivo guarda aprendizaje para futuras publicaciones.
 
 ## Avance
 
-Puntaje actual: 300.
+Puntaje actual: 360.
 Nivel actual: 3.
 Publicaciones revisadas: 4.
-Publicaciones rehabilitadas: 3.
+Publicaciones rehabilitadas: 4.
 
 ## Ultimas mejoras
 
 - 2026-06-27: post de ordenar la cabeza convertido en guia practica con taller cotidiano.
 - 2026-06-27: post de automatico convertido en ensayo con escenas y presencia cotidiana.
 - 2026-06-27: post de dia torcido convertido en bitacora diaria con horas, escenas y decisiones pequenas.
+- 2026-06-27: post de manana pesada convertido en cronica de manana real.
 
 ## Puntos
 
