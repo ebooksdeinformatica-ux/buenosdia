@@ -2,6 +2,11 @@ document.documentElement.classList.add('js');
 
 const i18nGroups=[
   {
+    es:'/posts/estar-ocupado-no-es-estar-presente.html',
+    en:'/en/posts/being-busy-is-not-being-present.html',
+    fr:'/fr/posts/etre-occupe-ce-nest-pas-etre-present.html'
+  },
+  {
     es:'/posts/como-ordenar-la-cabeza-cuando-todo-parece-demasiado.html',
     en:'/en/posts/how-to-clear-your-head-when-everything-feels-too-much.html',
     fr:'/fr/posts/comment-remettre-de-lordre-dans-sa-tete-quand-tout-deborde.html'
