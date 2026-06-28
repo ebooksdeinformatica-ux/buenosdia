@@ -18,13 +18,17 @@ Este archivo guarda aprendizaje para futuras publicaciones.
 - Ingles y frances amplian alcance, pero solo suman calidad si el texto suena natural en cada idioma.
 - Categorias y tags internacionales no deben multiplicarse hasta que haya volumen real.
 - Si una version internacional suena pobre, generica o mecanica, se reescribe completa o no se publica.
+- El usuario no debe tener que marcar patrones repetidos: THOT debe detectarlos antes.
+- El radar externo debe rotar funcion y fuentes para no producir siempre la misma respiracion editorial.
 
 ## Antes de publicar
 
 - Revisar fuente unica.
 - Revisar radar THOT.
 - Revisar experiencia editorial.
-- Definir formato.
+- Revisar control de variacion editorial.
+- Definir formato propio antes de escribir.
+- Comparar con las tres publicaciones anteriores.
 - Revisar secciones.
 - Pasar auditoria.
 - Si aplica, generar version inglesa y francesa adaptadas.
@@ -33,7 +37,7 @@ Este archivo guarda aprendizaje para futuras publicaciones.
 
 ## Avance
 
-Puntaje actual: 520.
+Puntaje actual: 560.
 Nivel actual: 3.
 Publicaciones revisadas: 4.
 Publicaciones rehabilitadas: 4.
@@ -47,6 +51,7 @@ Sistema internacional activo: ES / EN / FR.
 - 2026-06-27: post de manana pesada convertido en cronica de manana real.
 - 2026-06-27: sistema THOT GLOBAL HREFLANG agregado con ingles y frances para posts activos.
 - 2026-06-28: versiones EN y FR reescritas para corregir traduccion fria y mejorar voz editorial.
+- 2026-06-28: control de variacion editorial agregado para evitar respiracion repetida entre posts.
 
 ## Puntos
 
@@ -58,6 +63,7 @@ Sistema internacional activo: ES / EN / FR.
 - Auditoria pasada: +15.
 - Sistema internacional controlado: +70.
 - Reescritura internacional de calidad: +90.
+- Control de variacion editorial: +40.
 
 ## Rangos
 
