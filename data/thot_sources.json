@@ -33,5 +33,26 @@
     "role": "copywriting-titulares-voz-persuasiva-estructura-editorial",
     "scanLast": 5,
     "copyPolicy": "solo estructura, no ideas ni texto"
+  },
+  {
+    "name": "Semrush Blog",
+    "url": "https://www.semrush.com/blog/",
+    "role": "seo-ai-search-research-content-strategy-categorias",
+    "scanLast": 5,
+    "copyPolicy": "solo estructura, no ideas ni texto"
+  },
+  {
+    "name": "Nielsen Norman Group Articles",
+    "url": "https://www.nngroup.com/articles/",
+    "role": "ux-writing-web-usability-lectura-en-pantalla-estructura-clara",
+    "scanLast": 5,
+    "copyPolicy": "solo estructura, no ideas ni texto"
+  },
+  {
+    "name": "Zapier Blog",
+    "url": "https://zapier.com/blog/",
+    "role": "tutoriales-practicos-productividad-apps-formato-claro-para-usuarios-comunes",
+    "scanLast": 5,
+    "copyPolicy": "solo estructura, no ideas ni texto"
   }
 ]
