@@ -27,6 +27,21 @@ Antes de escribir, CAPITAN THOT debe mirar:
 5. que estructura evita repetir moldes;
 6. como sostener profundidad real.
 
+## Radar multi fuente
+
+CAPITAN THOT no depende de una sola fuente.
+
+Las fuentes se dividen por funcion:
+
+- SEO tecnico y AI Search;
+- investigacion y tendencias;
+- copywriting y titulares;
+- UX, lectura web y claridad;
+- marketing de contenidos;
+- tutoriales practicos para usuarios comunes.
+
+Ahrefs es solo una fuente dentro del radar, no la fuente principal.
+
 ## Regla de oro
 
 No copiar textos, ideas ni ejemplos de otros blogs.
