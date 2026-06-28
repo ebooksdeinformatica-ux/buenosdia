@@ -17,6 +17,7 @@ Este archivo guarda aprendizaje para futuras publicaciones.
 - Las versiones internacionales deben ser adaptaciones editoriales, no traducciones frias.
 - Ingles y frances amplian alcance, pero solo suman calidad si el texto suena natural en cada idioma.
 - Categorias y tags internacionales no deben multiplicarse hasta que haya volumen real.
+- Si una version internacional suena pobre, generica o mecanica, se reescribe completa o no se publica.
 
 ## Antes de publicar
 
@@ -27,11 +28,12 @@ Este archivo guarda aprendizaje para futuras publicaciones.
 - Revisar secciones.
 - Pasar auditoria.
 - Si aplica, generar version inglesa y francesa adaptadas.
+- Revisar versiones internacionales como textos propios, no como traducciones.
 - Actualizar `data/i18n_posts.json` y `sitemap-i18n.xml`.
 
 ## Avance
 
-Puntaje actual: 430.
+Puntaje actual: 520.
 Nivel actual: 3.
 Publicaciones revisadas: 4.
 Publicaciones rehabilitadas: 4.
@@ -44,6 +46,7 @@ Sistema internacional activo: ES / EN / FR.
 - 2026-06-27: post de dia torcido convertido en bitacora diaria con horas, escenas y decisiones pequenas.
 - 2026-06-27: post de manana pesada convertido en cronica de manana real.
 - 2026-06-27: sistema THOT GLOBAL HREFLANG agregado con ingles y frances para posts activos.
+- 2026-06-28: versiones EN y FR reescritas para corregir traduccion fria y mejorar voz editorial.
 
 ## Puntos
 
@@ -54,6 +57,7 @@ Sistema internacional activo: ES / EN / FR.
 - Radar usado antes de redactar: +15.
 - Auditoria pasada: +15.
 - Sistema internacional controlado: +70.
+- Reescritura internacional de calidad: +90.
 
 ## Rangos
 
