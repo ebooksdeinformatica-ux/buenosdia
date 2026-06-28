@@ -46,12 +46,14 @@ No copia disenos. Extrae criterios.
 - Un selector de idioma visible mejora confianza internacional.
 - Un Modo Explorador bien disenado puede aumentar profundidad de navegacion.
 - Menos elementos pero mejor jerarquia puede mejorar lectura y permanencia.
+- Una pieza larga necesita bloques de respiracion, pero no debe romperse en demasiados subtitulos iguales.
 
 ## Avance
 
-Puntaje actual: 0.
+Puntaje actual: 60.
 Nivel actual: 1.
 
 ## Registro
 
 - 2026-06-28: Leonardo creado como director visual y UX del sitio.
+- 2026-06-28: `estar-ocupado-no-es-estar-presente` usa estructura larga con bloques claros, selector de idioma, tarjetas de Modo Explorador y lectura sin componentes pesados.
