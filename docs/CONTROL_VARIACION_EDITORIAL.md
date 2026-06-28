@@ -59,6 +59,22 @@ Cada consulta externa debe usarse para una sola funcion:
 No usar siempre la misma funcion.
 No mirar siempre las mismas fuentes.
 
+## Auditoria automatica
+
+Existe una auditoria ejecutable:
+
+`scripts/auditar-variedad.mjs`
+
+Comando directo:
+
+`npm run variety`
+
+Tambien corre dentro de:
+
+`npm run audit`
+
+La auditoria revisa formatos repetidos, aperturas parecidas, cierres parecidos, simbolos repetidos y ritmos demasiado uniformes.
+
 ## Prueba final
 
 Si el texto parece una version de otro post con diferente titulo, vuelve a taller.
