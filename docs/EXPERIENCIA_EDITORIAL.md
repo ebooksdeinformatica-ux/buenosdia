@@ -14,6 +14,9 @@ Este archivo guarda aprendizaje para futuras publicaciones.
 - Evitar subtitulos formulaicos.
 - Cambiar la forma del articulo puede mejorar la voz sin perder utilidad.
 - Una tanda inicial necesita variedad real de formatos para que el sitio no parezca hecho con molde.
+- Las versiones internacionales deben ser adaptaciones editoriales, no traducciones frias.
+- Ingles y frances amplian alcance, pero solo suman calidad si el texto suena natural en cada idioma.
+- Categorias y tags internacionales no deben multiplicarse hasta que haya volumen real.
 
 ## Antes de publicar
 
@@ -23,13 +26,16 @@ Este archivo guarda aprendizaje para futuras publicaciones.
 - Definir formato.
 - Revisar secciones.
 - Pasar auditoria.
+- Si aplica, generar version inglesa y francesa adaptadas.
+- Actualizar `data/i18n_posts.json` y `sitemap-i18n.xml`.
 
 ## Avance
 
-Puntaje actual: 360.
+Puntaje actual: 430.
 Nivel actual: 3.
 Publicaciones revisadas: 4.
 Publicaciones rehabilitadas: 4.
+Sistema internacional activo: ES / EN / FR.
 
 ## Ultimas mejoras
 
@@ -37,6 +43,7 @@ Publicaciones rehabilitadas: 4.
 - 2026-06-27: post de automatico convertido en ensayo con escenas y presencia cotidiana.
 - 2026-06-27: post de dia torcido convertido en bitacora diaria con horas, escenas y decisiones pequenas.
 - 2026-06-27: post de manana pesada convertido en cronica de manana real.
+- 2026-06-27: sistema THOT GLOBAL HREFLANG agregado con ingles y frances para posts activos.
 
 ## Puntos
 
@@ -46,6 +53,7 @@ Publicaciones rehabilitadas: 4.
 - Formato nuevo probado: +30.
 - Radar usado antes de redactar: +15.
 - Auditoria pasada: +15.
+- Sistema internacional controlado: +70.
 
 ## Rangos
 
