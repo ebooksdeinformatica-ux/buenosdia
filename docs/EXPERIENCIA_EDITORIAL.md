@@ -22,6 +22,7 @@ Este archivo guarda aprendizaje para futuras publicaciones.
 - El radar externo debe rotar funcion y fuentes para no producir siempre la misma respiracion editorial.
 - Una publicacion corta puede funcionar, pero si no genera valor acumulado vuelve al taller.
 - La pieza sobre ocupacion y presencia marco una regla: no publicar textos correctos pero olvidables.
+- Los enlaces internos son parte del valor editorial: no deben apuntar a 404 ni depender de redirects viejos.
 
 ## Antes de publicar
 
@@ -39,10 +40,11 @@ Este archivo guarda aprendizaje para futuras publicaciones.
 - Revisar si Morfeo necesita Modo Explorador especifico.
 - Revisar si Mnemosine detecta articulo puente.
 - Revisar si Leonardo necesita ajuste visual.
+- Revisar enlaces internos con `npm run links`.
 
 ## Avance
 
-Puntaje actual: 650.
+Puntaje actual: 685.
 Nivel actual: 3.
 Publicaciones revisadas: 5.
 Publicaciones rehabilitadas: 4.
@@ -58,6 +60,7 @@ Sistema internacional activo: ES / EN / FR.
 - 2026-06-28: versiones EN y FR reescritas para corregir traduccion fria y mejorar voz editorial.
 - 2026-06-28: control de variacion editorial agregado para evitar respiracion repetida entre posts.
 - 2026-06-28: publicada pieza puente `estar-ocupado-no-es-estar-presente` con formato ensayo-mapa-practico y Modo Explorador.
+- 2026-06-28: agregada auditoria de enlaces internos y restaurado redirect seguro para slug viejo de claridad mental.
 
 ## Puntos
 
@@ -71,6 +74,7 @@ Sistema internacional activo: ES / EN / FR.
 - Reescritura internacional de calidad: +90.
 - Control de variacion editorial: +40.
 - Pieza puente con ES / EN / FR y Modo Explorador: +90.
+- Auditoria enlaces internos: +35.
 
 ## Rangos
 
