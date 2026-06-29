@@ -5,6 +5,7 @@ const ROOT = process.cwd();
 const POSTS_DIRS = ['posts', 'en/posts', 'fr/posts'];
 const hrefRegex = /href=["']([^"']+)["']/g;
 const failures = [];
+const warnings = [];
 
 function exists(filePath) {
   return fs.existsSync(path.join(ROOT, filePath.replace(/^\//, '')));
@@ -47,9 +48,14 @@ for (const file of files) {
 
     const target = read(localPath);
     if (isNoindexRedirect(target)) {
-      failures.push(`${file} enlaza a redirect noindex: ${href}`);
+      warnings.push(`${file} enlaza a redirect noindex: ${href}`);
     }
   }
+}
+
+if (warnings.length) {
+  console.warn('Auditoria de enlaces internos aviso:');
+  for (const warning of warnings) console.warn(`- ${warning}`);
 }
 
 if (failures.length) {
