@@ -23,6 +23,8 @@ Este archivo guarda aprendizaje para futuras publicaciones.
 - Una publicacion corta puede funcionar, pero si no genera valor acumulado vuelve al taller.
 - La pieza sobre ocupacion y presencia marco una regla: no publicar textos correctos pero olvidables.
 - Los enlaces internos son parte del valor editorial: no deben apuntar a 404 ni depender de redirects viejos.
+- Antes de publicar otra pieza, el Consejo debe revisar `data/concept_map.json` y `docs/MODO_EXPLORADOR.md`.
+- La portada y las categorias no pueden quedar congeladas cuando `data/posts.json` ya cambio.
 
 ## Antes de publicar
 
@@ -30,13 +32,16 @@ Este archivo guarda aprendizaje para futuras publicaciones.
 - Revisar radar THOT.
 - Revisar experiencia editorial.
 - Revisar control de variacion editorial.
+- Revisar `data/concept_map.json`.
+- Revisar `docs/MODO_EXPLORADOR.md`.
 - Definir formato propio antes de escribir.
 - Comparar con las tres publicaciones anteriores.
 - Revisar secciones.
 - Pasar auditoria.
 - Si aplica, generar version inglesa y francesa adaptadas.
 - Revisar versiones internacionales como textos propios, no como traducciones.
-- Actualizar `data/i18n_posts.json` y `sitemap-i18n.xml`.
+- Actualizar `data/posts.json` y `data/i18n_posts.json`.
+- Ejecutar `npm run build` para regenerar home, categorias y sitemaps.
 - Revisar si Morfeo necesita Modo Explorador especifico.
 - Revisar si Mnemosine detecta articulo puente.
 - Revisar si Leonardo necesita ajuste visual.
@@ -44,11 +49,14 @@ Este archivo guarda aprendizaje para futuras publicaciones.
 
 ## Avance
 
-Puntaje actual: 685.
+Puntaje actual: 770.
 Nivel actual: 3.
 Publicaciones revisadas: 5.
 Publicaciones rehabilitadas: 4.
 Sistema internacional activo: ES / EN / FR.
+Mapa conceptual activo: si.
+Modo Explorador documentado: si.
+Build de home/categorias activo: si.
 
 ## Ultimas mejoras
 
@@ -61,6 +69,10 @@ Sistema internacional activo: ES / EN / FR.
 - 2026-06-28: control de variacion editorial agregado para evitar respiracion repetida entre posts.
 - 2026-06-28: publicada pieza puente `estar-ocupado-no-es-estar-presente` con formato ensayo-mapa-practico y Modo Explorador.
 - 2026-06-28: agregada auditoria de enlaces internos y restaurado redirect seguro para slug viejo de claridad mental.
+- 2026-06-28: creado `data/concept_map.json` para que MNEMOSINE guie conceptos, rutas, huecos y proximas publicaciones.
+- 2026-06-28: creado `docs/MODO_EXPLORADOR.md` para que MORFEO no repita cierres genericos.
+- 2026-06-28: `scripts/build.mjs` ahora regenera portada, categorias, sitemap principal y sitemap internacional desde datos.
+- 2026-06-28: portada y categoria Calma actualizadas para mostrar el ultimo post real.
 
 ## Puntos
 
@@ -75,6 +87,9 @@ Sistema internacional activo: ES / EN / FR.
 - Control de variacion editorial: +40.
 - Pieza puente con ES / EN / FR y Modo Explorador: +90.
 - Auditoria enlaces internos: +35.
+- Mapa conceptual MNEMOSINE: +45.
+- Documento Modo Explorador MORFEO: +25.
+- Build de home/categorias/sitemaps: +15.
 
 ## Rangos
 
