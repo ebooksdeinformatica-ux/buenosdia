@@ -52,27 +52,27 @@ Actualizar siempre:
 - `sitemap.xml`
 - `sitemap-i18n.xml`
 
-`assets/js/app.js` lee `data/i18n_posts.json` de forma dinamica para el selector de idioma. Ya no hay que editarlo manualmente por cada post salvo que cambie el comportamiento del selector.
+`assets/js/app.js` lee `data/i18n_posts.json` de forma dinamica para el selector de idioma.
 
 ## Ultima publicacion creada
 
 Titulo:
 
-`Carta a la parte de vos que cree que ya es tarde`
+`Cuaderno de campo para avanzar cuando no tenés épica`
 
 Formato:
 
-- `carta-abierta-anatomia-emocional`
+- `cuaderno-de-campo-productividad-humana`
 
 Categoria:
 
-- `Autoestima y Reconstrucción`
+- `Productividad Humana`
 
 Archivos:
 
-- `posts/carta-a-la-parte-de-vos-que-cree-que-ya-es-tarde.html`
-- `en/posts/a-letter-to-the-part-of-you-that-thinks-it-is-too-late.html`
-- `fr/posts/lettre-a-la-part-de-toi-qui-croit-quil-est-trop-tard.html`
+- `posts/cuaderno-de-campo-para-avanzar-cuando-no-tenes-epica.html`
+- `en/posts/field-notes-for-moving-forward-without-heroic-energy.html`
+- `fr/posts/carnet-de-terrain-pour-avancer-sans-energie-heroique.html`
 
 Tambien se actualizo:
 
@@ -83,10 +83,24 @@ Tambien se actualizo:
 - `index.html`
 - `sitemap.xml`
 - `sitemap-i18n.xml`
-- `categorias/autoestima-y-reconstruccion/index.html`
+- `categorias/productividad-humana/index.html`
 - `docs/EXPERIENCIA_EDITORIAL.md`
-- `scripts/auditar-activas.mjs`
-- `scripts/auditar-variedad.mjs`
+
+## Publicacion anterior
+
+Titulo:
+
+`Carta a la parte de vos que cree que ya es tarde`
+
+Categoria:
+
+- `Autoestima y Reconstrucción`
+
+Archivos:
+
+- `posts/carta-a-la-parte-de-vos-que-cree-que-ya-es-tarde.html`
+- `en/posts/a-letter-to-the-part-of-you-that-thinks-it-is-too-late.html`
+- `fr/posts/lettre-a-la-part-de-toi-qui-croit-quil-est-trop-tard.html`
 
 ## Bloque prepublicacion activo
 
@@ -113,7 +127,7 @@ Funcion:
 - enlaces internos;
 - Statcounter.
 
-Se ajusto:
+Se ajusto previamente:
 
 - `scripts/auditar-activas.mjs` para no tratar el Modo Explorador como seccion debil.
 - `scripts/auditar-variedad.mjs` para excluir bloques relacionados del calculo de respiracion editorial.
@@ -134,15 +148,15 @@ Objetivo: evitar 404 mientras se limpian enlaces viejos.
 
 `docs/EXPERIENCIA_EDITORIAL.md` quedo con:
 
-- Puntaje actual: 900.
+- Puntaje actual: 1030.
 - Nivel actual: 3.
-- Publicaciones revisadas: 6.
+- Publicaciones revisadas: 7.
 - Publicaciones rehabilitadas: 4.
 - Sistema internacional activo: ES / EN / FR.
 - Mapa conceptual activo: si.
 - Modo Explorador documentado: si.
 - Build de home/categorias activo: si.
-- Categorias activas: 3.
+- Categorias activas: 4.
 
 ## Flujo para volver a publicar
 
@@ -165,13 +179,13 @@ Antes de escribir otro post:
 
 ## Proximo paso recomendado
 
-El sitio ya publico la primera pieza de Autoestima y Reconstruccion.
+El sitio ya abrio Productividad Humana.
 
 Prioridad editorial sugerida:
 
-- abrir `Productividad Humana` con cuaderno de campo;
-- o abrir `Internet, IA y Vida Digital` con una pieza humana sobre autonomia tecnologica;
-- o crear una segunda pieza de Autoestima solo si aborda una sensacion distinta, no otra carta sobre edad o llegar tarde.
+- abrir `Internet, IA y Vida Digital` con una pieza humana sobre autonomia tecnologica;
+- o abrir `Frases para Compartir` con manifiesto breve o lista comentada;
+- o reforzar `Productividad Humana` solo si el enfoque es muy distinto al cuaderno de campo.
 
 Evitar por ahora:
 
@@ -179,4 +193,4 @@ Evitar por ahora:
 - otra guia de ordenar la cabeza;
 - otra cronica de manana con cocina, telefono o cuerpo lento;
 - otra carta sobre llegar tarde o verguenza;
-- otro cierre con las mismas puertas del ultimo post.
+- otro cuaderno de campo sobre tareas y registro semanal.
