@@ -21,6 +21,7 @@ Este archivo guarda aprendizaje para futuras publicaciones.
 - Antes de publicar otra pieza, el Consejo debe revisar `data/concept_map.json` y `docs/MODO_EXPLORADOR.md`.
 - La portada y las categorias no pueden quedar congeladas cuando `data/posts.json` ya cambio.
 - Abrir una categoria nueva con una forma nueva fortalece el sitio mas que sumar otra pieza parecida al nucleo inicial.
+- Productividad Humana debe evitar el tono de maquina: utilidad concreta, si, pero con cuerpo, cansancio y realidad.
 
 ## Antes de publicar
 
@@ -44,15 +45,15 @@ Este archivo guarda aprendizaje para futuras publicaciones.
 
 ## Avance
 
-Puntaje actual: 900.
+Puntaje actual: 1030.
 Nivel actual: 3.
-Publicaciones revisadas: 6.
+Publicaciones revisadas: 7.
 Publicaciones rehabilitadas: 4.
 Sistema internacional activo: ES / EN / FR.
 Mapa conceptual activo: si.
 Modo Explorador documentado: si.
 Build de home/categorias activo: si.
-Categorias activas: 3.
+Categorias activas: 4.
 
 ## Ultimas mejoras
 
@@ -73,6 +74,10 @@ Categorias activas: 3.
 - 2026-06-29: activada categoria `autoestima-y-reconstruccion` y creada su pagina de categoria.
 - 2026-06-29: actualizado mapa conceptual con nueva ruta `volver-a-levantarse`.
 - 2026-06-29: ajustadas auditorias para reconocer el Modo Explorador como bloque de recorrido.
+- 2026-06-29: publicada `cuaderno-de-campo-para-avanzar-cuando-no-tenes-epica` como primera pieza de Productividad Humana.
+- 2026-06-29: creadas adaptaciones EN y FR del cuaderno de productividad.
+- 2026-06-29: activada categoria `productividad-humana` y creada su pagina de categoria.
+- 2026-06-29: actualizado mapa conceptual con nueva ruta `avanzar-sin-epica`.
 
 ## Puntos
 
