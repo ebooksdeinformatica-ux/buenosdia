@@ -1,4 +1,4 @@
-# CONTINUAR AQUI - BuenosDia.com - 2026-06-28
+# CONTINUAR AQUI - BuenosDia.com - 2026-06-29
 
 Usar este archivo para seguir en otro chat.
 
@@ -52,73 +52,71 @@ Actualizar siempre:
 - `sitemap.xml`
 - `sitemap-i18n.xml`
 
-Nota nueva: `assets/js/app.js` ahora lee `data/i18n_posts.json` de forma dinamica para el selector de idioma. Ya no hay que editarlo manualmente por cada post salvo que cambie el comportamiento del selector.
+`assets/js/app.js` lee `data/i18n_posts.json` de forma dinamica para el selector de idioma. Ya no hay que editarlo manualmente por cada post salvo que cambie el comportamiento del selector.
 
 ## Ultima publicacion creada
 
 Titulo:
 
-`Estar ocupado no es estar presente: cómo recuperar atención cuando el día te arrastra`
+`Carta a la parte de vos que cree que ya es tarde`
+
+Formato:
+
+- `carta-abierta-anatomia-emocional`
+
+Categoria:
+
+- `Autoestima y Reconstrucción`
 
 Archivos:
 
-- `posts/estar-ocupado-no-es-estar-presente.html`
-- `en/posts/being-busy-is-not-being-present.html`
-- `fr/posts/etre-occupe-ce-nest-pas-etre-present.html`
+- `posts/carta-a-la-parte-de-vos-que-cree-que-ya-es-tarde.html`
+- `en/posts/a-letter-to-the-part-of-you-that-thinks-it-is-too-late.html`
+- `fr/posts/lettre-a-la-part-de-toi-qui-croit-quil-est-trop-tard.html`
 
 Tambien se actualizo:
 
 - `data/posts.json`
 - `data/i18n_posts.json`
+- `data/categories.json`
+- `data/concept_map.json`
+- `index.html`
 - `sitemap.xml`
 - `sitemap-i18n.xml`
-- `assets/js/app.js`
-- experiencia de THOT, MORFEO, MNEMOSINE y LEONARDO.
+- `categorias/autoestima-y-reconstruccion/index.html`
+- `docs/EXPERIENCIA_EDITORIAL.md`
+- `scripts/auditar-activas.mjs`
+- `scripts/auditar-variedad.mjs`
 
-## Auditoria agregada previamente
+## Bloque prepublicacion activo
 
-Existe:
-
-- `scripts/auditar-enlaces-internos.mjs`
-
-Comando:
-
-- `npm run links`
-
-Tambien corre dentro de `npm run audit`.
-
-Funcion:
-
-- detectar enlaces internos rotos;
-- avisar enlaces hacia redirects noindex;
-- evitar fugas SEO internas.
-
-## Nuevo bloque prepublicacion creado
-
-Se creo:
+Se mantiene:
 
 - `data/concept_map.json`
 - `docs/MODO_EXPLORADOR.md`
 
-Se actualizo:
+Funcion:
 
-- `scripts/build.mjs`
-- `assets/js/app.js`
-- `index.html`
-- `categorias/calma-y-claridad-mental/index.html`
-- `categorias/saliendo-de-la-matrix/index.html`
-- `docs/EXPERIENCIA_EDITORIAL.md`
-- `docs/EXPERIENCIA_MORFEO.md`
-- `docs/EXPERIENCIA_MNEMOSINE.md`
-- `docs/EXPERIENCIA_LEONARDO.md`
+- MNEMOSINE guia conceptos, rutas, huecos y proximas publicaciones.
+- MORFEO define recorridos de lectura sin finales muertos.
+- LEONARDO mantiene home y categorias alineadas con `data/posts.json`.
+- THOT controla forma, SEO, variacion y valor acumulado.
+- `scripts/build.mjs` regenera portada, categorias, sitemap principal y sitemap i18n desde datos.
 
-Funcion nueva:
+## Auditorias
 
-- MNEMOSINE ya tiene mapa conceptual con galaxias, posts, rutas, huecos y guardia previa.
-- MORFEO ya tiene documento del Modo Explorador.
-- LEONARDO dejo home y categorias visibles alineadas con `data/posts.json`.
-- THOT dejo el flujo listo para volver a publicar sin repetir molde.
-- `scripts/build.mjs` ahora regenera portada, categorias, sitemap principal y sitemap i18n desde datos.
+`npm run audit` corre:
+
+- publicaciones activas;
+- voz editorial;
+- variedad;
+- enlaces internos;
+- Statcounter.
+
+Se ajusto:
+
+- `scripts/auditar-activas.mjs` para no tratar el Modo Explorador como seccion debil.
+- `scripts/auditar-variedad.mjs` para excluir bloques relacionados del calculo de respiracion editorial.
 
 ## Redirect restaurado
 
@@ -136,14 +134,15 @@ Objetivo: evitar 404 mientras se limpian enlaces viejos.
 
 `docs/EXPERIENCIA_EDITORIAL.md` quedo con:
 
-- Puntaje actual: 770.
+- Puntaje actual: 900.
 - Nivel actual: 3.
-- Publicaciones revisadas: 5.
+- Publicaciones revisadas: 6.
 - Publicaciones rehabilitadas: 4.
 - Sistema internacional activo: ES / EN / FR.
 - Mapa conceptual activo: si.
 - Modo Explorador documentado: si.
 - Build de home/categorias activo: si.
+- Categorias activas: 3.
 
 ## Flujo para volver a publicar
 
@@ -166,17 +165,18 @@ Antes de escribir otro post:
 
 ## Proximo paso recomendado
 
-El proyecto ya puede volver a publicar, pero no conviene otro texto de claridad/presencia todavia.
+El sitio ya publico la primera pieza de Autoestima y Reconstruccion.
 
 Prioridad editorial sugerida:
 
-- abrir `Autoestima y Reconstrucción` con carta abierta o anatomia de una sensacion;
-- o abrir `Productividad Humana` con cuaderno de campo;
-- o abrir `Internet, IA y Vida Digital` con una pieza humana sobre autonomia tecnologica.
+- abrir `Productividad Humana` con cuaderno de campo;
+- o abrir `Internet, IA y Vida Digital` con una pieza humana sobre autonomia tecnologica;
+- o crear una segunda pieza de Autoestima solo si aborda una sensacion distinta, no otra carta sobre edad o llegar tarde.
 
 Evitar por ahora:
 
 - otro ensayo largo sobre presencia;
 - otra guia de ordenar la cabeza;
 - otra cronica de manana con cocina, telefono o cuerpo lento;
+- otra carta sobre llegar tarde o verguenza;
 - otro cierre con las mismas puertas del ultimo post.
