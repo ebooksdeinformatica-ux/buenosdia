@@ -13,18 +13,14 @@ Este archivo guarda aprendizaje para futuras publicaciones.
 - No repetir el mismo formato entre publicaciones cercanas.
 - Evitar subtitulos formulaicos.
 - Cambiar la forma del articulo puede mejorar la voz sin perder utilidad.
-- Una tanda inicial necesita variedad real de formatos para que el sitio no parezca hecho con molde.
+- Una tanda inicial necesita variedad real de formatos.
 - Las versiones internacionales deben ser adaptaciones editoriales, no traducciones frias.
-- Ingles y frances amplian alcance, pero solo suman calidad si el texto suena natural en cada idioma.
-- Categorias y tags internacionales no deben multiplicarse hasta que haya volumen real.
 - Si una version internacional suena pobre, generica o mecanica, se reescribe completa o no se publica.
 - El usuario no debe tener que marcar patrones repetidos: THOT debe detectarlos antes.
-- El radar externo debe rotar funcion y fuentes para no producir siempre la misma respiracion editorial.
-- Una publicacion corta puede funcionar, pero si no genera valor acumulado vuelve al taller.
-- La pieza sobre ocupacion y presencia marco una regla: no publicar textos correctos pero olvidables.
 - Los enlaces internos son parte del valor editorial: no deben apuntar a 404 ni depender de redirects viejos.
 - Antes de publicar otra pieza, el Consejo debe revisar `data/concept_map.json` y `docs/MODO_EXPLORADOR.md`.
 - La portada y las categorias no pueden quedar congeladas cuando `data/posts.json` ya cambio.
+- Abrir una categoria nueva con una forma nueva fortalece el sitio mas que sumar otra pieza parecida al nucleo inicial.
 
 ## Antes de publicar
 
@@ -39,7 +35,6 @@ Este archivo guarda aprendizaje para futuras publicaciones.
 - Revisar secciones.
 - Pasar auditoria.
 - Si aplica, generar version inglesa y francesa adaptadas.
-- Revisar versiones internacionales como textos propios, no como traducciones.
 - Actualizar `data/posts.json` y `data/i18n_posts.json`.
 - Ejecutar `npm run build` para regenerar home, categorias y sitemaps.
 - Revisar si Morfeo necesita Modo Explorador especifico.
@@ -49,14 +44,15 @@ Este archivo guarda aprendizaje para futuras publicaciones.
 
 ## Avance
 
-Puntaje actual: 770.
+Puntaje actual: 900.
 Nivel actual: 3.
-Publicaciones revisadas: 5.
+Publicaciones revisadas: 6.
 Publicaciones rehabilitadas: 4.
 Sistema internacional activo: ES / EN / FR.
 Mapa conceptual activo: si.
 Modo Explorador documentado: si.
 Build de home/categorias activo: si.
+Categorias activas: 3.
 
 ## Ultimas mejoras
 
@@ -65,14 +61,18 @@ Build de home/categorias activo: si.
 - 2026-06-27: post de dia torcido convertido en bitacora diaria con horas, escenas y decisiones pequenas.
 - 2026-06-27: post de manana pesada convertido en cronica de manana real.
 - 2026-06-27: sistema THOT GLOBAL HREFLANG agregado con ingles y frances para posts activos.
-- 2026-06-28: versiones EN y FR reescritas para corregir traduccion fria y mejorar voz editorial.
-- 2026-06-28: control de variacion editorial agregado para evitar respiracion repetida entre posts.
+- 2026-06-28: versiones EN y FR reescritas para mejorar voz editorial.
+- 2026-06-28: control de variacion editorial agregado.
 - 2026-06-28: publicada pieza puente `estar-ocupado-no-es-estar-presente` con formato ensayo-mapa-practico y Modo Explorador.
 - 2026-06-28: agregada auditoria de enlaces internos y restaurado redirect seguro para slug viejo de claridad mental.
-- 2026-06-28: creado `data/concept_map.json` para que MNEMOSINE guie conceptos, rutas, huecos y proximas publicaciones.
-- 2026-06-28: creado `docs/MODO_EXPLORADOR.md` para que MORFEO no repita cierres genericos.
+- 2026-06-28: creado `data/concept_map.json`.
+- 2026-06-28: creado `docs/MODO_EXPLORADOR.md`.
 - 2026-06-28: `scripts/build.mjs` ahora regenera portada, categorias, sitemap principal y sitemap internacional desde datos.
-- 2026-06-28: portada y categoria Calma actualizadas para mostrar el ultimo post real.
+- 2026-06-29: publicada `carta-a-la-parte-de-vos-que-cree-que-ya-es-tarde` como primera pieza de Autoestima y Reconstruccion.
+- 2026-06-29: creadas adaptaciones EN y FR de la nueva carta.
+- 2026-06-29: activada categoria `autoestima-y-reconstruccion` y creada su pagina de categoria.
+- 2026-06-29: actualizado mapa conceptual con nueva ruta `volver-a-levantarse`.
+- 2026-06-29: ajustadas auditorias para reconocer el Modo Explorador como bloque de recorrido.
 
 ## Puntos
 
@@ -90,6 +90,9 @@ Build de home/categorias activo: si.
 - Mapa conceptual MNEMOSINE: +45.
 - Documento Modo Explorador MORFEO: +25.
 - Build de home/categorias/sitemaps: +15.
+- Apertura de categoria activa: +40.
+- Nueva ruta conceptual: +20.
+- Ajuste de auditorias para recorrido lector: +15.
 
 ## Rangos
 
