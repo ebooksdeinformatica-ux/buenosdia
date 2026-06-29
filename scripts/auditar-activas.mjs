@@ -10,7 +10,7 @@ const dice=(a,b)=>{const A=new Set(words(a)),B=new Set(words(b));if(!A.size||!B.
 const avgWordsPerSentence=s=>{const sentences=visibleText(s).split(/[.!?¡¿]+/).map(x=>x.trim()).filter(Boolean);const total=sentences.reduce((n,x)=>n+clean(x).split(' ').filter(Boolean).length,0);return sentences.length?total/sentences.length:0};
 const countInternalLinks=h=>[...h.matchAll(/<a\s+[^>]*href=["']([^"']+)["']/gi)].filter(m=>m[1].startsWith('/')&&!m[1].startsWith('//')).length;
 const strongTooLong=h=>[...h.matchAll(/<(strong|b)[^>]*>([\s\S]*?)<\/\1>/gi)].map(m=>visibleText(m[2]).trim()).filter(t=>t.length>70);
-const sections=h=>{const parts=h.split(/(<h2[\s\S]*?<\/h2>|<h3[\s\S]*?<\/h3>)/i);const out=[];for(let i=1;i<parts.length;i+=2){const heading=visibleText(parts[i]).trim();const body=parts[i+1]||'';if(/te puede interesar|compartir|tags/i.test(heading))continue;out.push({heading,body});}return out};
+const sections=h=>{const parts=h.split(/(<h2[\s\S]*?<\/h2>|<h3[\s\S]*?<\/h3>)/i);const out=[];for(let i=1;i<parts.length;i+=2){const heading=visibleText(parts[i]).trim();const key=clean(heading);const body=parts[i+1]||'';if(/te puede interesar|compartir|tags/i.test(heading))continue;if(['elegi por donde seguir','elegir por donde seguir'].includes(key))continue;out.push({heading,body});}return out};
 const paragraphCount=h=>[...h.matchAll(/<p\b[^>]*>([\s\S]*?)<\/p>/gi)].map(m=>visibleText(m[1]).trim()).filter(Boolean).length;
 const posts=JSON.parse(fs.readFileSync('data/posts.json','utf8'));
 function fail(m){console.error('✗ '+m);process.exitCode=1}
