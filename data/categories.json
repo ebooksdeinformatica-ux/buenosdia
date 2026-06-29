@@ -11,7 +11,7 @@
     "name":"Autoestima y Reconstrucción",
     "slug":"autoestima-y-reconstruccion",
     "core":false,
-    "active":false,
+    "active":true,
     "description":"Textos sobre dignidad, heridas, recomienzo y reconstrucción personal sin frases vacías ni promesas de transformación instantánea.",
     "editorialUse":"Para publicaciones sobre volver a levantarse, recuperar respeto propio, ordenar la identidad después de golpes y reconstruir desde lo real."
   },
