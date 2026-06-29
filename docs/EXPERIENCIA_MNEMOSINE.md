@@ -23,6 +23,7 @@ Mantener vivo y coherente el universo conceptual de BuenosDia.com.
 - No crear categorias internacionales hasta que haya volumen real.
 - Cada post debe tener lugar dentro del mapa.
 - Si una pieza no agrega conocimiento, vuelve al taller.
+- Antes de publicar, revisar `data/concept_map.json`.
 
 ## Radar externo
 
@@ -39,19 +40,21 @@ Mnemosine puede estudiar:
 
 No copia estructuras. Extrae modelos.
 
-## Hipotesis iniciales
+## Hipotesis activas
 
 - Un mapa de conceptos puede generar mejores interlinks que tags manuales.
 - Los articulos puente pueden aumentar profundidad de sesion.
 - Detectar vacios tematicos antes de escribir reduce canibalizacion futura.
-- Un articulo puente entre atencion, ocupacion, piloto automatico y claridad mental puede fortalecer varias rutas sin crear categoria nueva.
+- Un articulo puente entre atencion, ocupacion, piloto automatico y claridad mental fortalece varias rutas sin crear categoria nueva.
+- Abrir categorias dormidas evita que el sitio gire siempre sobre claridad, ruido, presencia y manana pesada.
 
 ## Avance
 
-Puntaje actual: 70.
-Nivel actual: 1.
+Puntaje actual: 150.
+Nivel actual: 2.
 
 ## Registro
 
 - 2026-06-28: Mnemosine creada como memoria conceptual del sitio.
 - 2026-06-28: ubicado `estar-ocupado-no-es-estar-presente` como pieza puente entre claridad mental, presencia cotidiana, piloto automatico, dia dificil y manana pesada.
+- 2026-06-28: creado `data/concept_map.json` con galaxias, rutas, posts mapeados, huecos editoriales y guardia previa para nuevas publicaciones.
