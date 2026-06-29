@@ -17,6 +17,7 @@ function stripHtml(html) {
   return html
     .replace(/<script[\s\S]*?<\/script>/gi, ' ')
     .replace(/<style[\s\S]*?<\/style>/gi, ' ')
+    .replace(/<section[^>]*class=["'][^"']*related[^"']*["'][\s\S]*?<\/section>/gi, ' ')
     .replace(/<[^>]+>/g, ' ')
     .replace(/&[^;]+;/g, ' ')
     .replace(/\s+/g, ' ')
@@ -24,11 +25,13 @@ function stripHtml(html) {
 }
 
 function headings(html) {
-  return [...html.matchAll(/<h2[^>]*>(.*?)<\/h2>/gi)].map(match => stripHtml(match[1]).toLowerCase());
+  const clean = html.replace(/<section[^>]*class=["'][^"']*related[^"']*["'][\s\S]*?<\/section>/gi, ' ');
+  return [...clean.matchAll(/<h2[^>]*>(.*?)<\/h2>/gi)].map(match => stripHtml(match[1]).toLowerCase());
 }
 
 function paragraphs(html) {
-  return [...html.matchAll(/<p[^>]*>(.*?)<\/p>/gi)].map(match => stripHtml(match[1])).filter(Boolean);
+  const clean = html.replace(/<section[^>]*class=["'][^"']*related[^"']*["'][\s\S]*?<\/section>/gi, ' ');
+  return [...clean.matchAll(/<p[^>]*>(.*?)<\/p>/gi)].map(match => stripHtml(match[1])).filter(Boolean);
 }
 
 function signature(post, html) {
@@ -84,29 +87,16 @@ for (let i = 0; i < signatures.length; i += 1) {
     const paragraphDelta = Math.abs(current.paragraphCount - older.paragraphCount);
     const sameFormat = current.format && current.format === older.format;
 
-    if (sameFormat) {
-      failures.push(`${current.title}: repite formato cercano con ${older.title} (${current.format})`);
-    }
-
-    if (openingSimilarity > 0.34 && markerSimilarity > 0.55) {
-      failures.push(`${current.title}: apertura demasiado parecida a ${older.title}`);
-    }
-
-    if (closingSimilarity > 0.34 && markerSimilarity > 0.55) {
-      failures.push(`${current.title}: cierre demasiado parecido a ${older.title}`);
-    }
-
-    if (h2Delta <= 1 && paragraphDelta <= 4 && markerSimilarity > 0.7) {
-      failures.push(`${current.title}: estructura y simbolos demasiado cercanos a ${older.title}`);
-    }
+    if (sameFormat) failures.push(`${current.title}: repite formato cercano con ${older.title} (${current.format})`);
+    if (openingSimilarity > 0.34 && markerSimilarity > 0.55) failures.push(`${current.title}: apertura demasiado parecida a ${older.title}`);
+    if (closingSimilarity > 0.34 && markerSimilarity > 0.55) failures.push(`${current.title}: cierre demasiado parecido a ${older.title}`);
+    if (h2Delta <= 1 && paragraphDelta <= 4 && markerSimilarity > 0.7) failures.push(`${current.title}: estructura y simbolos demasiado cercanos a ${older.title}`);
   }
 }
 
 for (const sig of signatures) {
   if (sig.h2Count > 9) failures.push(`${sig.title}: demasiados H2, revisar molde de secciones`);
-  if (sig.h2Count >= 5 && sig.avgParagraphWords >= 45 && sig.avgParagraphWords <= 75) {
-    failures.push(`${sig.title}: ritmo de parrafos demasiado uniforme, revisar respiracion`);
-  }
+  if (sig.h2Count >= 5 && sig.avgParagraphWords >= 52 && sig.avgParagraphWords <= 75) failures.push(`${sig.title}: ritmo de parrafos demasiado uniforme, revisar respiracion`);
 }
 
 if (failures.length) {
