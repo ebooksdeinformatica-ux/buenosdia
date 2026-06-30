@@ -9,6 +9,107 @@ function normalizeLocalUrl(url){
   }
 }
 
+const BD_CATEGORIES=[
+  ['Calma y Claridad Mental','/categorias/calma-y-claridad-mental/'],
+  ['Productividad Humana','/categorias/productividad-humana/'],
+  ['Internet, IA y Vida Digital','/categorias/internet-ia-y-vida-digital/'],
+  ['Hábitos y Rutinas','/categorias/habitos-y-rutinas/'],
+  ['Frases para Compartir','/categorias/frases-para-compartir/'],
+  ['Emociones Reales','/categorias/emociones-reales/'],
+  ['Autoestima y Reconstrucción','/categorias/autoestima-y-reconstruccion/'],
+  ['Saliendo de la Matrix','/categorias/saliendo-de-la-matrix/']
+];
+
+const BD_MAIN_LINKS=[
+  ['Inicio','/'],
+  ['Explorar','/explorar/'],
+  ['Publicaciones','/#publicaciones'],
+  ['Autor','/autor/aspf.html'],
+  ['Contacto','/contacto/']
+];
+
+function isActiveUrl(url){
+  const current=window.location.pathname.replace(/\/index\.html$/,'/');
+  const target=normalizeLocalUrl(url).replace(/\/index\.html$/,'/');
+  if(target==='/'&&current==='/')return true;
+  return target!=='/'&&current===target;
+}
+
+function ensureHeader(){
+  let header=document.querySelector('header');
+  if(header)return header;
+  header=document.createElement('header');
+  header.innerHTML='<div class="wrap nav"><a class="brand" href="/"><b>BuenosDia.com</b><small>Buenos días de verdad</small></a></div>';
+  document.body.insertAdjacentElement('afterbegin',header);
+  return header;
+}
+
+function renderSiteMenu(){
+  const header=ensureHeader();
+  const navWrap=header.querySelector('.nav')||header;
+  if(navWrap.querySelector('.menu-toggle'))return;
+
+  const oldNav=navWrap.querySelector('nav');
+  if(oldNav)oldNav.remove();
+
+  const button=document.createElement('button');
+  button.className='menu-toggle';
+  button.type='button';
+  button.setAttribute('aria-expanded','false');
+  button.setAttribute('aria-controls','site-menu');
+  button.innerHTML='<span class="bars" aria-hidden="true">☰</span><span>Menú</span>';
+
+  const menu=document.createElement('nav');
+  menu.id='site-menu';
+  menu.className='site-menu';
+  menu.setAttribute('aria-label','Menú principal');
+
+  const mainLinks=BD_MAIN_LINKS.map(([label,url])=>{
+    const active=isActiveUrl(url)?' aria-current="page"':'';
+    return '<a href="'+url+'"'+active+'>'+label+'</a>';
+  }).join('');
+
+  const categoryLinks=BD_CATEGORIES.map(([label,url])=>{
+    const active=isActiveUrl(url)?' aria-current="page"':'';
+    return '<a href="'+url+'"'+active+'><span>'+label+'</span></a>';
+  }).join('');
+
+  menu.innerHTML='<div class="menu-main">'+mainLinks+'</div><div class="menu-title">Categorías</div><div class="menu-cats">'+categoryLinks+'</div><p class="menu-note">Menú visible en toda la web. Tocá fuera o Esc para cerrar.</p>';
+
+  navWrap.appendChild(button);
+  navWrap.appendChild(menu);
+
+  function closeMenu(){
+    document.body.classList.remove('menu-open');
+    menu.classList.remove('open');
+    button.setAttribute('aria-expanded','false');
+  }
+  function openMenu(){
+    document.body.classList.add('menu-open');
+    menu.classList.add('open');
+    button.setAttribute('aria-expanded','true');
+  }
+  function toggleMenu(){
+    const isOpen=button.getAttribute('aria-expanded')==='true';
+    isOpen?closeMenu():openMenu();
+  }
+
+  button.addEventListener('click',event=>{
+    event.stopPropagation();
+    toggleMenu();
+  });
+  menu.addEventListener('click',event=>{
+    if(event.target.closest('a'))closeMenu();
+    event.stopPropagation();
+  });
+  document.addEventListener('click',event=>{
+    if(!header.contains(event.target))closeMenu();
+  });
+  document.addEventListener('keydown',event=>{
+    if(event.key==='Escape')closeMenu();
+  });
+}
+
 function groupFromAlternates(){
   const links=[...document.querySelectorAll('link[rel="alternate"][hreflang]')];
   const group={};
@@ -39,6 +140,8 @@ function renderLangSwitch(group){
   else if(lead)lead.insertAdjacentElement('afterend',box);
   else article.insertAdjacentElement('afterbegin',box);
 }
+
+renderSiteMenu();
 
 fetch('/data/i18n_posts.json')
   .then(response=>response.ok?response.json():[])
