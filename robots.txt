@@ -3,3 +3,4 @@ Allow: /
 
 Sitemap: https://www.buenosdia.com/sitemap.xml
 Sitemap: https://www.buenosdia.com/sitemap-i18n.xml
+Sitemap: https://www.buenosdia.com/sitemap-extra.xml
