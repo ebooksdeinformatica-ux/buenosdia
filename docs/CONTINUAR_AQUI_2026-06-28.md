@@ -29,6 +29,7 @@ Cada publicacion nueva debe salir con:
 - home actualizada.
 - categoria publica si abre territorio.
 - enlaces internos contextuales.
+- ruta Morfeo / Modo Explorador definida.
 
 Si falta una pieza, no esta terminado.
 
@@ -36,6 +37,27 @@ Si falta una pieza, no esta terminado.
 
 - `https://www.buenosdia.com/sitemap.xml`
 - `https://www.buenosdia.com/sitemap-i18n.xml`
+
+## Modo Explorador
+
+Pagina publica creada:
+
+- `https://www.buenosdia.com/explorar/`
+
+Funcion:
+
+- Guiar al lector por necesidad real, no por lista automatica de posts.
+- Rutas visibles: ordenar ruido, salir del automatico, avanzar sin epica, volver a vos, autonomia digital y volver a levantarse.
+- Home actualizada con enlace a `Explorar` en el menu y boton `Modo Explorador`.
+- `sitemap.xml` actualizado con `/explorar/`.
+
+Archivos actualizados:
+
+- `explorar/index.html`
+- `docs/MODO_EXPLORADOR.md`
+- `data/concept_map.json`
+- `index.html`
+- `sitemap.xml`
 
 ## Ultima publicacion creada
 
@@ -57,17 +79,6 @@ Archivos:
 - `en/posts/phrases-for-coming-back-to-yourself-without-performing.html`
 - `fr/posts/phrases-pour-revenir-a-toi-sans-jouer-un-role.html`
 
-Actualizado:
-
-- `data/posts.json`
-- `data/i18n_posts.json`
-- `data/categories.json`
-- `index.html`
-- `sitemap.xml`
-- `sitemap-i18n.xml`
-- `categorias/frases-para-compartir/index.html`
-- `docs/EXPERIENCIA_EDITORIAL.md`
-
 ## Publicacion anterior corregida
 
 Titulo:
@@ -85,6 +96,7 @@ Correccion realizada:
 Publicaciones activas en `data/posts.json`: 9.
 Categorias activas: 6.
 Sistema internacional activo: ES / EN / FR.
+Modo Explorador publico: si.
 
 Categorias con pagina publica:
 
