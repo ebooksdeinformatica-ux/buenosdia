@@ -1,0 +1,41 @@
+[
+  {
+    "title": "Rutina simple para cerrar la jornada",
+    "es": "/posts/rutina-simple-para-cerrar-la-jornada.html",
+    "en": "/en/posts/simple-routine-to-close-the-workday.html",
+    "fr": "/fr/posts/routine-simple-pour-terminer-la-journee.html",
+    "category": "Hábitos y Rutinas",
+    "status": "pending-expansion",
+    "reason": "EN y FR existen, pero deben ampliarse para conservar profundidad proporcional al articulo ES.",
+    "priority": 1,
+    "updated": "2026-07-01"
+  },
+  {
+    "title": "Guía breve para aclarar ideas",
+    "es": "/posts/guia-breve-para-aclarar-ideas.html",
+    "status": "review-needed",
+    "priority": 2,
+    "updated": "2026-07-01"
+  },
+  {
+    "title": "Cómo ordenar tus archivos digitales para trabajar mejor",
+    "es": "/posts/como-ordenar-tus-archivos-digitales-para-trabajar-mejor.html",
+    "status": "review-needed",
+    "priority": 2,
+    "updated": "2026-07-01"
+  },
+  {
+    "title": "Cómo planificar una semana de trabajo sin llenarte de tareas",
+    "es": "/posts/como-planificar-una-semana-de-trabajo-sin-llenarte-de-tareas.html",
+    "status": "review-needed",
+    "priority": 2,
+    "updated": "2026-07-01"
+  },
+  {
+    "title": "Cómo organizar una mañana de trabajo en casa",
+    "es": "/posts/como-organizar-una-manana-de-trabajo-en-casa.html",
+    "status": "review-needed",
+    "priority": 2,
+    "updated": "2026-07-01"
+  }
+]
